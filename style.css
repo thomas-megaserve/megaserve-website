@@ -1,25 +1,80 @@
-body {
-  font-family: sans-serif;
+/* -------------------
+   1. Global Reset
+-------------------- */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #222;
+  box-sizing: border-box;
 }
 
+/* -------------------
+   2. Root Variables
+-------------------- */
+:root {
+  --color-primary: #c60000;
+  --color-secondary: #7c7c7c;
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 16px;
+}
+
+/* -------------------
+   3. Global Styles
+-------------------- */
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* -------------------
+   4. Layout Containers
+-------------------- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* -------------------
+   5. Header & Nav
+-------------------- */
 header {
-  background-color: #a10000;
+  background-color: var(--color-primary);
+  padding: 1rem 0;
   color: white;
-  padding: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
   text-align: center;
 }
 
+/* -------------------
+   6. Sections
+-------------------- */
 section {
-  padding: 2rem;
+  margin: 4rem 0;
 }
 
-footer {
-  background-color: #333;
-  color: white;
-  padding: 1rem;
+section h2 {
   text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* -------------------
+   7. Footer
+-------------------- */
+footer {
+  background-color: var(--color-secondary);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
 }
