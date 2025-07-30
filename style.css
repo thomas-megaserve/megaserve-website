@@ -41,6 +41,44 @@ body {
   padding: 2rem 0;
 }
 
+/* Hero Section */
+.hero {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #a00;
+}
+
 /* -------------------
    5. Header & Nav
 -------------------- */
