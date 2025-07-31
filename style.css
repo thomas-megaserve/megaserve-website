@@ -24,6 +24,10 @@
 /* -------------------
    3. Global Styles
 -------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-main);
   font-size: var(--font-size-base);
@@ -58,7 +62,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 20px;
 }
 
