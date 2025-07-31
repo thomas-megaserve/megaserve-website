@@ -184,3 +184,63 @@ footer {
 .service-card li {
   margin-bottom: 0.5rem;
 }
+
+/* -------------------
+   11. Trust Section
+-------------------- */
+#trust {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.trust-intro {
+  font-size: 1.1rem;
+  margin: 0 auto 2rem;
+  max-width: 700px;
+  color: var(--color-text);
+}
+
+.trust-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.trust-logos img {
+  max-height: 60px;
+  max-width: 150px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.trust-logos img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.trust-points {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.trust-points li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.trust-points li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
