@@ -283,3 +283,42 @@ footer {
   font-style: normal;
 }
 
+/* -------------------
+   13. Contact CTA Section
+-------------------- */
+#contact-cta {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#contact-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+
+#contact-cta .btn-primary {
+  background-color: #fff;
+  color: var(--color-primary);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#contact-cta .btn-primary:hover {
+  background-color: #e6e6e6;
+}
+
