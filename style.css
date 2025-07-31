@@ -323,7 +323,37 @@ footer {
 }
 
 /* -------------------
-   14. Footer Section
+   14. Navigation
+-------------------- */
+#main-nav {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#main-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#main-nav a:hover {
+  color: #ffdede;
+}
+
+
+/* -------------------
+   15. Footer Section
 -------------------- */
 #site-footer {
   background-color: var(--color-secondary);
