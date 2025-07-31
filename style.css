@@ -244,3 +244,42 @@ footer {
   left: 0;
   color: var(--color-primary);
 }
+
+/* -------------------
+   12. Testimonial Section
+-------------------- */
+#testimonial {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  font-style: italic;
+}
+
+.testimonial p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.client-name {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-style: normal;
+}
+
