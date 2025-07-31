@@ -32,6 +32,22 @@ body {
   line-height: 1.6;
 }
 
+/* Typography Enhancements */
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+ul {
+  margin-bottom: 1rem;
+}
+
 /* -------------------
    4. Layout Containers
 -------------------- */
@@ -67,6 +83,7 @@ body {
   margin-bottom: 30px;
 }
 
+/* Button Refinement */
 .btn-primary {
   background-color: var(--accent-color);
   color: #fff;
@@ -75,11 +92,18 @@ body {
   border-radius: 4px;
   font-size: 1rem;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-primary:hover {
   background-color: #a00;
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
 }
 
 /* -------------------
@@ -351,7 +375,6 @@ footer {
   color: #ffdede;
 }
 
-
 /* -------------------
    15. Footer Section
 -------------------- */
@@ -371,4 +394,3 @@ footer {
 #site-footer a:hover {
   color: #dddddd;
 }
-
