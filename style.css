@@ -322,3 +322,23 @@ footer {
   background-color: #e6e6e6;
 }
 
+/* -------------------
+   14. Footer Section
+-------------------- */
+#site-footer {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+#site-footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+#site-footer a:hover {
+  color: #dddddd;
+}
+
