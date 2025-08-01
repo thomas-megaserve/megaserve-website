@@ -433,13 +433,13 @@ footer {
 
 #main-nav a {
   text-decoration: none;
-  color: white;
+  color: var(--color-primary); /* red text for visibility */
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 #main-nav a:hover {
-  color: #ffdede;
+  color: #a00; /* darker red on hover */
 }
 
 /* -------------------
