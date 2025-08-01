@@ -109,20 +109,90 @@ ul {
 /* -------------------
    6. Header
 -------------------- */
-.site-title {
-  font-size: 2.5rem;
-  color: white;
-  text-align: center;
-}
-
 header {
   background-color: var(--color-primary);
   padding: 1rem 0;
   color: white;
 }
 
+.site-title {
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+}
+
+/* Logo Styles */
+.logo-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.site-logo {
+  height: 50px; /* Adjust as needed */
+  width: auto;
+  display: block;
+}
+
 /* -------------------
-   7. Sections
+   7. Header Flex Layout
+-------------------- */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  gap: 1rem;
+}
+
+.logo-link {
+  display: inline-block;
+}
+
+.site-logo {
+  height: 50px; /* adjust as needed */
+  width: auto;
+  display: block;
+}
+
+/* Navigation adjustments for flex header */
+#main-nav {
+  margin-top: 0;
+}
+
+#main-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+#main-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#main-nav a:hover {
+  color: #ffdede;
+}
+
+/* -------------------
+   Mobile Responsive
+-------------------- */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #main-nav ul {
+    justify-content: center;
+  }
+}
+
+
+/* -------------------
+   8. Sections
 -------------------- */
 section {
   margin: 4rem 0;
@@ -135,7 +205,7 @@ section h2 {
 }
 
 /* -------------------
-   8. Footer
+   9. Footer
 -------------------- */
 footer {
   background-color: var(--color-secondary);
@@ -146,7 +216,7 @@ footer {
 }
 
 /* -------------------
-   9. Stats Section
+   10. Stats Section
 -------------------- */
 .stats-section {
   background-color: #f7f7f7;
@@ -178,7 +248,7 @@ footer {
 }
 
 /* -------------------
-   10. Services Section
+   11. Services Section
 -------------------- */
 .services-grid {
   display: grid;
@@ -210,7 +280,7 @@ footer {
 }
 
 /* -------------------
-   11. Trust Section
+   12. Trust Section
 -------------------- */
 #trust {
   background-color: #ffffff;
@@ -270,7 +340,7 @@ footer {
 }
 
 /* -------------------
-   12. Testimonial Section
+   13. Testimonial Section
 -------------------- */
 #testimonial {
   background-color: #ffffff;
@@ -308,7 +378,7 @@ footer {
 }
 
 /* -------------------
-   13. Contact CTA Section
+   14. Contact CTA Section
 -------------------- */
 #contact-cta {
   background-color: var(--color-primary);
@@ -347,7 +417,7 @@ footer {
 }
 
 /* -------------------
-   14. Navigation
+   15. Navigation
 -------------------- */
 #main-nav {
   margin-top: 1rem;
@@ -376,7 +446,7 @@ footer {
 }
 
 /* -------------------
-   15. Footer Section
+   16. Footer Section
 -------------------- */
 #site-footer {
   background-color: var(--color-secondary);
