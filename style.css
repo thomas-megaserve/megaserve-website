@@ -62,10 +62,8 @@ ul {
    5. Hero Section
 -------------------- */
 .hero {
-  background-color: var(--color-primary);
-  color: #fff;
-  padding: 100px 20px;
-  text-align: center;
+  background-color: #f7f7f7; /* Light grey for contrast */
+  color: var(--color-text);
 }
 
 .hero .container {
@@ -110,9 +108,8 @@ ul {
    6. Header
 -------------------- */
 header {
-  background-color: var(--color-primary);
-  padding: 1rem 0;
-  color: white;
+  background-color: #ffffff; /* White */
+  color: var(--color-primary);
 }
 
 .site-title {
@@ -131,6 +128,7 @@ header {
   height: 50px; /* Adjust as needed */
   width: auto;
   display: block;
+
 }
 
 /* -------------------
@@ -166,14 +164,13 @@ header {
 }
 
 #main-nav a {
-  text-decoration: none;
-  color: white;
+  color: var(--color-primary);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 #main-nav a:hover {
-  color: #ffdede;
+  color: #a00;
 }
 
 /* -------------------
