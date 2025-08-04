@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>MegaServe – Corporate Services Cyprus</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <meta name="description" content="MegaServe provides expert corporate, banking, accounting, and immigration services in Cyprus and CEE markets. Trusted advisors with 15+ years' experience.">
+  <link rel="stylesheet" href="style.css?v=3">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
 </head>
 <body>
 
-<header id="site-header" class="fade-up">
+<header id="site-header" class="fade-up" data-anim-delay="0">
   <div class="container header-flex">
-    <a href="index.html" class="logo-link">
+    <a href="index.html" class="logo-link" aria-label="MegaServe Home">
       <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
 
@@ -28,7 +29,7 @@
   </div>
 </header>
 
-<section class="hero fade-up">
+<section class="hero fade-up" data-anim-delay="0.1">
   <div class="container">
     <h1>Corporate & Wealth Services in Cyprus & CEE</h1>
     <p>Multilingual in‑house advisors for company establishment, compliance, banking and financial consulting.</p>
@@ -36,22 +37,26 @@
   </div>
 </section>
 
-<section id="stats" class="stats-section fade-up">
+<section id="stats" class="stats-section fade-up" data-anim-delay="0.2">
   <div class="container">
     <div class="stats-grid">
       <div class="stat">
+        <div class="stat-icon">🏢</div>
         <div id="clients" class="stat-number">0</div>
         <div class="stat-label">Happy Clients</div>
       </div>
       <div class="stat">
+        <div class="stat-icon">💬</div>
         <div id="questions" class="stat-number">0</div>
         <div class="stat-label">Client Questions Answered</div>
       </div>
       <div class="stat">
+        <div class="stat-icon">📂</div>
         <div id="projects" class="stat-number">0</div>
         <div class="stat-label">Projects Finished</div>
       </div>
       <div class="stat">
+        <div class="stat-icon">🤝</div>
         <div id="meetings" class="stat-number">0</div>
         <div class="stat-label">Client Meetings</div>
       </div>
@@ -59,11 +64,11 @@
   </div>
 </section>
 
-<section id="services" class="fade-up">
+<section id="services" class="fade-up" data-anim-delay="0.3">
   <div class="container">
     <h2>Our Services</h2>
     <div class="services-grid">
-      <div class="service-card">
+      <div class="service-card hover-card">
         <h3>Business Services</h3>
         <ul>
           <li>Company Formation</li>
@@ -73,7 +78,7 @@
         </ul>
       </div>
 
-      <div class="service-card">
+      <div class="service-card hover-card">
         <h3>Accounting Services</h3>
         <ul>
           <li>Bookkeeping & Payroll</li>
@@ -83,7 +88,7 @@
         </ul>
       </div>
 
-      <div class="service-card">
+      <div class="service-card hover-card">
         <h3>Banking Support</h3>
         <ul>
           <li>Bank Account Opening (Cyprus & EU)</li>
@@ -92,7 +97,7 @@
         </ul>
       </div>
 
-      <div class="service-card">
+      <div class="service-card hover-card">
         <h3>Financial Licensing</h3>
         <ul>
           <li>EMI, Forex, Crypto Licensing</li>
@@ -100,7 +105,7 @@
         </ul>
       </div>
 
-      <div class="service-card">
+      <div class="service-card hover-card">
         <h3>Immigration Services</h3>
         <ul>
           <li>Residency Permits</li>
@@ -112,16 +117,17 @@
   </div>
 </section>
 
-<section id="trust" class="fade-up">
+<section id="trust" class="fade-up" data-anim-delay="0.4">
   <div class="container">
     <h2>Trusted by Industry Leaders</h2>
     <p class="trust-intro">MegaServe collaborates with top-tier financial institutions, legal experts, and local authorities to ensure seamless client operations across Cyprus and the EU.</p>
     <div class="trust-logos">
-      <img src="assets/logo-boc.png" alt="Bank of Cyprus">
-      <img src="assets/logo-hfsa.png" alt="Hellenic Financial Services Authority">
-      <img src="assets/logo-eu.png" alt="EU Compliance">
-      <img src="assets/logo-cysec.png" alt="CySEC Registered">
+      <img src="assets/logo-boc.png" alt="Bank of Cyprus" loading="lazy">
+      <img src="assets/logo-hfsa.png" alt="Hellenic Financial Services Authority" loading="lazy">
+      <img src="assets/logo-eu.png" alt="EU Compliance" loading="lazy">
+      <img src="assets/logo-cysec.png" alt="CySEC Registered" loading="lazy">
     </div>
+    <hr class="trust-separator">
     <ul class="trust-points">
       <li>Fully compliant with Cyprus company law & EU directives</li>
       <li>Established banking relationships with major institutions</li>
@@ -131,19 +137,19 @@
   </div>
 </section>
 
-<section id="testimonial" class="fade-up">
+<section id="testimonial" class="fade-up" data-anim-delay="0.5">
   <div class="container">
     <h2>What Our Clients Say</h2>
     <div class="testimonial-grid">
-      <div class="testimonial">
+      <div class="testimonial quote-style">
         <p>“MegaServe has handled our cross-border company setup with absolute professionalism. Their multilingual team made the process seamless.”</p>
         <span class="client-name">— Elena P., CEO, FinBridge Solutions</span>
       </div>
-      <div class="testimonial">
+      <div class="testimonial quote-style">
         <p>“Their understanding of local compliance and banking is unmatched. We've had peace of mind since day one.”</p>
         <span class="client-name">— Andras M., Director, CEE Holdings</span>
       </div>
-      <div class="testimonial">
+      <div class="testimonial quote-style">
         <p>“Fast, responsive, and highly competent. I trust MegaServe with all my company’s administrative needs in Cyprus.”</p>
         <span class="client-name">— Christos K., Partner, Kyros & Co.</span>
       </div>
@@ -151,13 +157,13 @@
   </div>
 </section>
 
-<section id="contact-cta" class="fade-up">
+<section id="contact-cta" class="fade-up" data-anim-delay="0.6">
   <div class="container">
     <h2>Start Your Cyprus Business Journey</h2>
     <p class="contact-intro">
       Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
     </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Contact Us Now</a>
+    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
   </div>
 </section>
 
@@ -185,12 +191,14 @@
     }
   });
 
-  /* Fade-up animation on scroll */
+  /* Fade-up animation on scroll with delay support */
   document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".fade-up");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          const delay = entry.target.getAttribute("data-anim-delay") || "0";
+          entry.target.style.transitionDelay = `${delay}s`;
           entry.target.classList.add("visible");
           observer.unobserve(entry.target);
         }

@@ -47,6 +47,11 @@ ul {
   margin-bottom: 1rem;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* -------------------
    4. Layout Containers
 -------------------- */
@@ -61,8 +66,9 @@ ul {
    5. Hero Section
 -------------------- */
 .hero {
-  background-color: #f7f7f7;
+  background: linear-gradient(135deg, #fafafa, #f3f3f3);
   color: var(--color-text);
+  text-align: center;
   opacity: 0;
   transform: translateY(20px);
   animation: heroFade 1s ease forwards;
@@ -90,7 +96,9 @@ ul {
   }
 }
 
-/* Button Refinement */
+/* -------------------
+   6. Buttons
+-------------------- */
 .btn-primary {
   background-color: var(--accent-color);
   color: #fff;
@@ -113,35 +121,31 @@ ul {
   transform: translateY(0);
 }
 
+/* Pulse effect for Contact button */
+.pulse-on-hover:hover {
+  animation: pulse 0.6s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 /* -------------------
-   6. Header
+   7. Header
 -------------------- */
 header {
   background-color: #ffffff;
   color: var(--color-primary);
 }
 
-.site-title {
-  font-size: 2.5rem;
-  color: white;
-  text-align: center;
-}
-
-/* Logo Styles */
-.logo-link {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .site-logo {
-  height: 50px;
+  height: 55px;
   width: auto;
   display: block;
 }
 
-/* -------------------
-   7. Header Flex Layout
--------------------- */
 .header-flex {
   display: flex;
   justify-content: space-between;
@@ -150,13 +154,8 @@ header {
   gap: 1rem;
 }
 
-/* Navigation adjustments for flex header */
-#main-nav {
-  margin-top: 0;
-}
-
 #main-nav ul {
-  list-style: none; /* <-- removes nav bullets */
+  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
@@ -189,20 +188,17 @@ header {
 }
 
 /* -------------------
-   Mobile Responsive
+   Mobile Responsive Nav
 -------------------- */
 @media (max-width: 768px) {
   .header-flex {
     flex-direction: column;
     align-items: center;
   }
-  #main-nav ul {
-    justify-content: center;
-  }
 }
 
 /* -------------------
-   8. Sections
+   8. Fade-up Animation
 -------------------- */
 .fade-up {
   opacity: 0;
@@ -215,29 +211,8 @@ header {
   transform: translateY(0);
 }
 
-section {
-  margin: 4rem 0;
-}
-
-section h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-}
-
 /* -------------------
-   9. Footer
--------------------- */
-footer {
-  background-color: var(--color-secondary);
-  color: white;
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 0.9rem;
-}
-
-/* -------------------
-   10. Stats Section
+   9. Stats Section
 -------------------- */
 .stats-section {
   background-color: #f7f7f7;
@@ -254,6 +229,16 @@ footer {
 .stat {
   text-align: center;
   min-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .stat-number {
@@ -264,12 +249,11 @@ footer {
 
 .stat-label {
   font-size: 1rem;
-  margin-top: 0.5rem;
   color: var(--color-text);
 }
 
 /* -------------------
-   11. Services Section
+   10. Services Section
 -------------------- */
 .services-grid {
   display: grid;
@@ -278,30 +262,36 @@ footer {
   margin-top: 2rem;
 }
 
-.service-card {
+.hover-card {
   background-color: #f8f8f8;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card h3 {
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hover-card h3 {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
   color: var(--color-primary);
 }
 
-.service-card ul {
+.hover-card ul {
   list-style-type: disc;
   padding-left: 1.2rem;
 }
 
-.service-card li {
+.hover-card li {
   margin-bottom: 0.5rem;
 }
 
 /* -------------------
-   12. Trust Section
+   11. Trust Section
 -------------------- */
 #trust {
   background-color: #ffffff;
@@ -313,7 +303,6 @@ footer {
   font-size: 1.1rem;
   margin: 0 auto 2rem;
   max-width: 700px;
-  color: var(--color-text);
 }
 
 .trust-logos {
@@ -321,7 +310,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .trust-logos img {
@@ -338,8 +327,15 @@ footer {
   filter: grayscale(0%);
 }
 
+.trust-separator {
+  border: none;
+  border-top: 1px solid #eaeaea;
+  margin: 2rem auto;
+  width: 80%;
+}
+
 .trust-points {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   max-width: 800px;
   margin: 0 auto;
@@ -361,14 +357,8 @@ footer {
 }
 
 /* -------------------
-   13. Testimonial Section
+   12. Testimonials
 -------------------- */
-#testimonial {
-  background-color: #ffffff;
-  padding: 4rem 0;
-  text-align: center;
-}
-
 .testimonial-grid {
   display: flex;
   flex-wrap: wrap;
@@ -377,16 +367,27 @@ footer {
   margin-top: 2rem;
 }
 
-.testimonial {
+.quote-style {
   background-color: #f9f9f9;
   padding: 2rem;
   max-width: 300px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   font-style: italic;
+  position: relative;
 }
 
-.testimonial p {
+.quote-style::before {
+  content: "“";
+  font-size: 3rem;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: var(--color-primary);
+  opacity: 0.2;
+}
+
+.quote-style p {
   margin-bottom: 1rem;
   font-size: 1rem;
   color: #333;
@@ -399,7 +400,7 @@ footer {
 }
 
 /* -------------------
-   14. Contact CTA Section
+   13. Contact CTA
 -------------------- */
 #contact-cta {
   background-color: var(--color-primary);
@@ -419,26 +420,10 @@ footer {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  color: #fff;
-}
-
-#contact-cta .btn-primary {
-  background-color: #fff;
-  color: var(--color-primary);
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-#contact-cta .btn-primary:hover {
-  background-color: #e6e6e6;
 }
 
 /* -------------------
-   15. Footer Section
+   14. Footer
 -------------------- */
 #site-footer {
   background-color: var(--color-secondary);
