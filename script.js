@@ -1,12 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* Mobile menu toggle */
+
+  /* -------------------
+     Mobile menu toggle
+  -------------------- */
   const navToggle = document.getElementById("nav-toggle");
   const mainNav = document.getElementById("main-nav");
   navToggle.addEventListener("click", () => {
     mainNav.classList.toggle("active");
   });
 
-  /* CountUp animations */
+  /* -------------------
+     Sticky header shadow on scroll
+  -------------------- */
+  const siteHeader = document.getElementById("site-header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      siteHeader.classList.add("scrolled");
+    } else {
+      siteHeader.classList.remove("scrolled");
+    }
+  });
+
+  /* -------------------
+     CountUp animations
+  -------------------- */
   const options = { duration: 3 };
   const stats = [
     { id: 'clients', value: 832 },
@@ -32,7 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* Fade-up animation with delay support */
+  /* -------------------
+     Fade-up animation with delay support
+  -------------------- */
   const elements = document.querySelectorAll(".fade-up");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -46,4 +65,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.1 });
 
   elements.forEach(el => observer.observe(el));
+
 });
