@@ -50,20 +50,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* -------------------
-     Fade-up animation with delay support
+     Fade-up animation with smoother ease
   -------------------- */
   const elements = document.querySelectorAll(".fade-up");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const delay = entry.target.getAttribute("data-anim-delay") || "0";
+        entry.target.style.transition = `opacity 0.9s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1)`;
         entry.target.style.transitionDelay = `${delay}s`;
         entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.15 });
 
   elements.forEach(el => observer.observe(el));
+
+  /* -------------------
+     Parallax effect for hero background
+  -------------------- */
+  const heroSection = document.querySelector(".hero");
+  if (heroSection) {
+    window.addEventListener("scroll", () => {
+      const offset = window.scrollY * 0.3;
+      heroSection.style.backgroundPosition = `center calc(50% + ${offset}px)`;
+    });
+  }
+
+  /* -------------------
+     Gold shimmer on CTA buttons
+  -------------------- */
+  const ctaButtons = document.querySelectorAll(".btn-primary");
+  ctaButtons.forEach(btn => {
+    btn.addEventListener("mouseenter", () => {
+      btn.style.boxShadow = "0 0 10px rgba(176, 141, 87, 0.6), 0 3px 6px rgba(0,0,0,0.2)";
+    });
+    btn.addEventListener("mouseleave", () => {
+      btn.style.boxShadow = "0 3px 6px rgba(0,0,0,0.2)";
+    });
+  });
 
 });
