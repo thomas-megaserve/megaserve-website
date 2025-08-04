@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<header id="site-header">
+<header id="site-header" class="fade-up">
   <div class="container header-flex">
     <a href="index.html" class="logo-link">
       <img src="../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
@@ -29,7 +29,7 @@
 </header>
 
 
-  <section class="hero">
+  <section class="hero" class="fade-up">
     <div class="container">
       <h1>Corporate & Wealth Services in Cyprus & CEE</h1>
       <p>Multilingual in‑house advisors for company establishment, compliance, banking and financial consulting.</p>
@@ -37,7 +37,7 @@
     </div>
   </section>
 
-  <section id="stats" class="stats-section">
+  <section id="stats" class="stats-section" class="fade-up">
     <div class="container">
       <div class="stats-grid">
         <div class="stat">
@@ -60,7 +60,7 @@
     </div>
   </section>
 
-<section id="services">
+<section id="services" class="fade-up">
   <div class="container">
     <h2>Our Services</h2>
     <div class="services-grid">
@@ -116,7 +116,7 @@
 </section>
 
 
-<section id="trust">
+<section id="trust" class="fade-up">
   <div class="container">
     <h2>Trusted by Industry Leaders</h2>
     <p class="trust-intro">MegaServe collaborates with top-tier financial institutions, legal experts, and local authorities to ensure seamless client operations across Cyprus and the EU.</p>
@@ -137,7 +137,7 @@
   </div>
 </section>
 
-<section id="testimonial">
+<section id="testimonial" class="fade-up">
   <div class="container">
     <h2>What Our Clients Say</h2>
     <div class="testimonial-grid">
@@ -158,7 +158,7 @@
 </section>
 
 
-<section id="contact-cta">
+<section id="contact-cta" class="fade-up">
   <div class="container">
     <h2>Start Your Cyprus Business Journey</h2>
     <p class="contact-intro">
@@ -196,6 +196,23 @@
       }
     });
   </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade-up");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+});
+</script>
 
 </body>
 </html>
