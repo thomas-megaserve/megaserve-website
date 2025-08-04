@@ -9,22 +9,21 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
 </head>
 <body>
 
+<!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
     <a href="index.html" class="logo-link" aria-label="MegaServe Home">
       <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
-
     <!-- Hamburger Button for Mobile -->
     <button id="nav-toggle" aria-label="Open Menu">
       <span></span><span></span><span></span>
     </button>
-
     <nav id="main-nav">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
@@ -39,18 +38,28 @@
   </div>
 </header>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero fade-up" data-anim-delay="0.1">
   <div class="hero-overlay"></div>
   <div class="container">
-    <h1>Corporate Advisory & Cross‑Border Structuring — Cyprus & International Markets</h1>
+    <h1>Strategic Corporate Solutions — Cyprus & Cross‑Jurisdictional Expertise</h1>
     <p>Multilingual in‑house advisors for company establishment, compliance, banking and financial consulting.</p>
     <a class="btn-primary" href="#contact-cta">Get in Touch</a>
   </div>
 </section>
 
-<div class="section-divider"></div>
+<!-- TRUST BAR (NEW PLACEMENT) -->
+<section id="trust-bar" class="fade-up" data-anim-delay="0.2">
+  <div class="container trust-grid">
+    <div class="trust-item">✔ Fully compliant with Cyprus company law & EU directives</div>
+    <div class="trust-item">✔ Established banking relationships with major institutions</div>
+    <div class="trust-item">✔ Transparent and audited internal procedures</div>
+    <div class="trust-item">✔ Over 15 years of experience in CEE markets</div>
+  </div>
+</section>
 
-<section id="stats" class="stats-section">
+<!-- STATS -->
+<section id="stats" class="stats-section fade-up" data-anim-delay="0.3">
   <div class="container">
     <div class="stats-grid">
       <!-- Happy Clients -->
@@ -67,7 +76,6 @@
         <div id="clients" class="stat-number">0</div>
         <div class="stat-label">Happy Clients</div>
       </div>
-
       <!-- Assets Under Administration -->
       <div class="stat">
         <div class="stat-icon">
@@ -80,7 +88,6 @@
         <div id="assets" class="stat-number">0</div>
         <div class="stat-label">Assets Under Administration</div>
       </div>
-
       <!-- Corporate Structures Delivered -->
       <div class="stat">
         <div class="stat-icon">
@@ -92,7 +99,6 @@
         <div id="projects" class="stat-number">0</div>
         <div class="stat-label">Corporate Structures Delivered</div>
       </div>
-
       <!-- Companies Incorporated -->
       <div class="stat">
         <div class="stat-icon">
@@ -110,9 +116,8 @@
   </div>
 </section>
 
-<div class="section-divider light"></div>
-
-<section id="services">
+<!-- SERVICES -->
+<section id="services" class="fade-up" data-anim-delay="0.4">
   <div class="container">
     <h2>Our Services</h2>
     <div class="services-grid">
@@ -125,7 +130,6 @@
           <li>Nominee Directorships</li>
         </ul>
       </div>
-
       <div class="service-card hover-card">
         <h3>Accounting Services</h3>
         <ul>
@@ -135,7 +139,6 @@
           <li>Tax Compliance</li>
         </ul>
       </div>
-
       <div class="service-card hover-card">
         <h3>Banking Support</h3>
         <ul>
@@ -144,7 +147,6 @@
           <li>Merchant Accounts</li>
         </ul>
       </div>
-
       <div class="service-card hover-card">
         <h3>Financial Licensing</h3>
         <ul>
@@ -152,7 +154,6 @@
           <li>EU Regulatory Jurisdictions</li>
         </ul>
       </div>
-
       <div class="service-card hover-card">
         <h3>Immigration Services</h3>
         <ul>
@@ -165,9 +166,8 @@
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<section id="trust">
+<!-- TRUST LOGOS -->
+<section id="trust" class="fade-up" data-anim-delay="0.5">
   <div class="container">
     <h2>Trusted by Industry Leaders</h2>
     <p class="trust-intro">MegaServe collaborates with top-tier financial institutions, legal experts, and local authorities to ensure seamless client operations across Cyprus and the EU.</p>
@@ -187,9 +187,8 @@
   </div>
 </section>
 
-<div class="section-divider light"></div>
-
-<section id="testimonial">
+<!-- TESTIMONIALS -->
+<section id="testimonial" class="fade-up" data-anim-delay="0.6">
   <div class="container">
     <h2>What Our Clients Say</h2>
     <div class="testimonial-grid">
@@ -209,9 +208,8 @@
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<section id="contact-cta">
+<!-- CONTACT CTA -->
+<section id="contact-cta" class="fade-up" data-anim-delay="0.7">
   <div class="container">
     <h2>Start Your Cyprus Business Journey</h2>
     <p class="contact-intro">
@@ -221,6 +219,7 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer id="site-footer">
   <div class="container">
     <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
@@ -229,6 +228,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=6"></script>
+<script src="script.js?v=7"></script>
 </body>
 </html>

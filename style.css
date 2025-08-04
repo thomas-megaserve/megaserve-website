@@ -122,7 +122,6 @@ img {
   width: 100%;
 }
 
-/* Mobile nav toggle */
 #nav-toggle {
   display: none;
   background: none;
@@ -163,7 +162,7 @@ img {
 }
 
 /* -------------------
-   Hero Section (Grey‑White‑Orange Friendly)
+   6. Hero Section (Grey‑White‑Orange Friendly)
 -------------------- */
 .hero {
   position: relative;
@@ -176,20 +175,17 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-
-  /* Slight darken for text clarity without dulling whites/oranges */
   filter: brightness(0.92) contrast(1.05);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  /* Neutral grey‑charcoal gradient – no heavy reds or blacks */
   background: linear-gradient(
     to bottom,
-    rgba(20, 20, 20, 0.55), /* Soft dark grey at top */
-    rgba(20, 20, 20, 0.35), /* Medium at mid */
-    rgba(20, 20, 20, 0.15)  /* Very light at bottom */
+    rgba(20, 20, 20, 0.55),
+    rgba(20, 20, 20, 0.35),
+    rgba(20, 20, 20, 0.15)
   );
   z-index: 1;
 }
@@ -204,17 +200,16 @@ img {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #ffffff; /* Crisp white for clarity */
+  color: #ffffff;
   text-shadow: 0 3px 8px rgba(0,0,0,0.65);
 }
 
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 30px;
-  color: #f0f0f0; /* Soft grey-white */
+  color: #f0f0f0;
   text-shadow: 0 2px 6px rgba(0,0,0,0.55);
 }
-
 
 @media (max-width: 768px) {
   .hero {
@@ -230,7 +225,30 @@ img {
 }
 
 /* -------------------
-   7. Buttons
+   7. Trust Bar (Optional Horizontal Accent)
+-------------------- */
+#trust-bar {
+  background-color: #f7f7f7;
+  padding: 1.5rem 0;
+  border-top: 2px solid var(--color-gold);
+  border-bottom: 2px solid var(--color-gold);
+}
+
+.trust-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.trust-item {
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+/* -------------------
+   8. Buttons
 -------------------- */
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), #8b0000);
@@ -262,7 +280,7 @@ img {
 }
 
 /* -------------------
-   8. Section Dividers
+   9. Section Dividers
 -------------------- */
 .section-divider {
   height: 50px;
@@ -275,7 +293,7 @@ img {
 }
 
 /* -------------------
-   9. Stats Section
+   10. Stats Section
 -------------------- */
 .stats-section {
   background-color: #f7f7f7;
@@ -328,7 +346,7 @@ img {
 }
 
 /* -------------------
-   10. Services
+   11. Services
 -------------------- */
 .services-grid {
   display: grid;
@@ -355,7 +373,7 @@ img {
 }
 
 /* -------------------
-   11. Trust Section
+   12. Trust Section
 -------------------- */
 #trust {
   background-color: #fff;
@@ -414,7 +432,7 @@ img {
 }
 
 /* -------------------
-   12. Testimonials
+   13. Testimonials
 -------------------- */
 .testimonial-grid {
   display: flex;
@@ -443,7 +461,7 @@ img {
 }
 
 /* -------------------
-   13. Contact CTA
+   14. Contact CTA
 -------------------- */
 #contact-cta {
   background-color: var(--color-primary);
@@ -463,7 +481,7 @@ img {
 }
 
 /* -------------------
-   14. Footer
+   15. Footer
 -------------------- */
 #site-footer {
   background-color: var(--color-secondary);
