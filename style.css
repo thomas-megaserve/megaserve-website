@@ -212,7 +212,7 @@ header {
 }
 
 /* -------------------
-   9. Stats Section
+   9. Stats Section (Refined for SVG icons)
 -------------------- */
 .stats-section {
   background-color: #f7f7f7;
@@ -228,7 +228,7 @@ header {
 
 .stat {
   text-align: center;
-  min-width: 150px;
+  min-width: 180px; /* slightly wider for better balance */
   transition: transform 0.3s ease;
 }
 
@@ -237,20 +237,40 @@ header {
 }
 
 .stat-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-icon svg {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.8;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+}
+
+.stat:hover .stat-icon svg {
+  color: #a00; /* darker brand red on hover */
 }
 
 .stat-number {
   font-size: 2.5rem;
   font-weight: bold;
   color: var(--color-primary);
+  line-height: 1.2;
 }
 
 .stat-label {
   font-size: 1rem;
   color: var(--color-text);
+  line-height: 1.3;
+  max-width: 140px;
+  margin: 0 auto;
+  word-break: break-word;
 }
+
 
 /* -------------------
    10. Services Section
