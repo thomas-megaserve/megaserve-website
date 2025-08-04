@@ -32,7 +32,6 @@ body {
   line-height: 1.6;
 }
 
-/* Typography Enhancements */
 h1, h2, h3 {
   font-weight: 600;
   line-height: 1.2;
@@ -62,8 +61,11 @@ ul {
    5. Hero Section
 -------------------- */
 .hero {
-  background-color: #f7f7f7; /* Light grey for contrast */
+  background-color: #f7f7f7;
   color: var(--color-text);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFade 1s ease forwards;
 }
 
 .hero .container {
@@ -81,19 +83,12 @@ ul {
   margin-bottom: 30px;
 }
 
-.hero {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: heroFade 1s ease forwards;
-}
-
 @keyframes heroFade {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 
 /* Button Refinement */
 .btn-primary {
@@ -122,7 +117,7 @@ ul {
    6. Header
 -------------------- */
 header {
-  background-color: #ffffff; /* White */
+  background-color: #ffffff;
   color: var(--color-primary);
 }
 
@@ -139,10 +134,9 @@ header {
 }
 
 .site-logo {
-  height: 50px; /* Adjust as needed */
+  height: 50px;
   width: auto;
   display: block;
-
 }
 
 /* -------------------
@@ -152,18 +146,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* allows stacking on small screens */
+  flex-wrap: wrap;
   gap: 1rem;
-}
-
-.logo-link {
-  display: inline-block;
-}
-
-.site-logo {
-  height: 50px; /* adjust as needed */
-  width: auto;
-  display: block;
 }
 
 /* Navigation adjustments for flex header */
@@ -200,7 +184,6 @@ header {
   width: 100%;
 }
 
-
 /* -------------------
    Mobile Responsive
 -------------------- */
@@ -209,12 +192,10 @@ header {
     flex-direction: column;
     align-items: center;
   }
-
   #main-nav ul {
     justify-content: center;
   }
 }
-
 
 /* -------------------
    8. Sections
@@ -239,18 +220,6 @@ section h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 /* -------------------
    9. Footer
@@ -465,36 +434,7 @@ footer {
 }
 
 /* -------------------
-   15. Navigation
--------------------- */
-#main-nav {
-  margin-top: 1rem;
-  text-align: center;
-}
-
-#main-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-#main-nav a {
-  text-decoration: none;
-  color: var(--color-primary); /* red text for visibility */
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-#main-nav a:hover {
-  color: #a00; /* darker red on hover */
-}
-
-/* -------------------
-   16. Footer Section
+   15. Footer Section
 -------------------- */
 #site-footer {
   background-color: var(--color-secondary);

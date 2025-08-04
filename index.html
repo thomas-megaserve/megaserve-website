@@ -11,7 +11,7 @@
 <header id="site-header" class="fade-up">
   <div class="container header-flex">
     <a href="index.html" class="logo-link">
-      <img src="../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
 
     <nav id="main-nav">
@@ -28,43 +28,41 @@
   </div>
 </header>
 
+<section class="hero fade-up">
+  <div class="container">
+    <h1>Corporate & Wealth Services in Cyprus & CEE</h1>
+    <p>Multilingual in‑house advisors for company establishment, compliance, banking and financial consulting.</p>
+    <a class="btn-primary" href="#contact-cta">Get in Touch</a>
+  </div>
+</section>
 
-  <section class="hero" class="fade-up">
-    <div class="container">
-      <h1>Corporate & Wealth Services in Cyprus & CEE</h1>
-      <p>Multilingual in‑house advisors for company establishment, compliance, banking and financial consulting.</p>
-      <a class="btn-primary" href="#contact-cta">Get in Touch</a>
-    </div>
-  </section>
-
-  <section id="stats" class="stats-section" class="fade-up">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat">
-          <div id="clients" class="stat-number">0</div>
-          <div class="stat-label">Happy Clients</div>
-        </div>
-        <div class="stat">
-          <div id="questions" class="stat-number">0</div>
-          <div class="stat-label">Client Questions Answered</div>
-        </div>
-        <div class="stat">
-          <div id="projects" class="stat-number">0</div>
-          <div class="stat-label">Projects Finished</div>
-        </div>
-        <div class="stat">
-          <div id="meetings" class="stat-number">0</div>
-          <div class="stat-label">Client Meetings</div>
-        </div>
+<section id="stats" class="stats-section fade-up">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div id="clients" class="stat-number">0</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat">
+        <div id="questions" class="stat-number">0</div>
+        <div class="stat-label">Client Questions Answered</div>
+      </div>
+      <div class="stat">
+        <div id="projects" class="stat-number">0</div>
+        <div class="stat-label">Projects Finished</div>
+      </div>
+      <div class="stat">
+        <div id="meetings" class="stat-number">0</div>
+        <div class="stat-label">Client Meetings</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <section id="services" class="fade-up">
   <div class="container">
     <h2>Our Services</h2>
     <div class="services-grid">
-
       <div class="service-card">
         <h3>Business Services</h3>
         <ul>
@@ -110,24 +108,20 @@
           <li>Naturalization Support</li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
-
 
 <section id="trust" class="fade-up">
   <div class="container">
     <h2>Trusted by Industry Leaders</h2>
     <p class="trust-intro">MegaServe collaborates with top-tier financial institutions, legal experts, and local authorities to ensure seamless client operations across Cyprus and the EU.</p>
-
     <div class="trust-logos">
       <img src="assets/logo-boc.png" alt="Bank of Cyprus">
       <img src="assets/logo-hfsa.png" alt="Hellenic Financial Services Authority">
       <img src="assets/logo-eu.png" alt="EU Compliance">
       <img src="assets/logo-cysec.png" alt="CySEC Registered">
     </div>
-
     <ul class="trust-points">
       <li>Fully compliant with Cyprus company law & EU directives</li>
       <li>Established banking relationships with major institutions</li>
@@ -157,7 +151,6 @@
   </div>
 </section>
 
-
 <section id="contact-cta" class="fade-up">
   <div class="container">
     <h2>Start Your Cyprus Business Journey</h2>
@@ -168,7 +161,6 @@
   </div>
 </section>
 
-
 <footer id="site-footer">
   <div class="container">
     <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
@@ -177,41 +169,35 @@
   </div>
 </footer>
 
-  <script>
-    const options = { duration: 3 };
-
-    const stats = [
-      { id: 'clients', value: 832 },
-      { id: 'questions', value: 8172 },
-      { id: 'projects', value: 2394 },
-      { id: 'meetings', value: 9721 }
-    ];
-
-    stats.forEach(stat => {
-      const counter = new countUp.CountUp(stat.id, stat.value, options);
-      if (!counter.error) {
-        counter.start();
-      } else {
-        console.error(counter.error);
-      }
-    });
-  </script>
-
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".fade-up");
+  /* CountUp animations */
+  const options = { duration: 3 };
+  const stats = [
+    { id: 'clients', value: 832 },
+    { id: 'questions', value: 8172 },
+    { id: 'projects', value: 2394 },
+    { id: 'meetings', value: 9721 }
+  ];
+  stats.forEach(stat => {
+    const counter = new countUp.CountUp(stat.id, stat.value, options);
+    if (!counter.error) {
+      counter.start();
+    }
+  });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  elements.forEach(el => observer.observe(el));
-});
+  /* Fade-up animation on scroll */
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-up");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+  });
 </script>
 
 </body>
