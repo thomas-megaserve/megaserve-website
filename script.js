@@ -1,12 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* --------------------
-     CountUp Animations
-  -------------------- */
-  const options = { duration: 3 };
+  /* Mobile menu toggle */
+  const navToggle = document.getElementById("nav-toggle");
+  const mainNav = document.getElementById("main-nav");
+  navToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
+  });
 
+  /* CountUp animations */
+  const options = { duration: 3 };
   const stats = [
     { id: 'clients', value: 832 },
-    { id: 'assets', value: 2.1, isCurrency: true, suffix: 'B' }, // €2.1B
+    { id: 'assets', value: 2.1, isCurrency: true, suffix: 'B' },
     { id: 'projects', value: 2394 },
     { id: 'companies', value: 470 }
   ];
@@ -23,15 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       counter = new countUp.CountUp(stat.id, stat.value, options);
     }
-
     if (!counter.error) {
       counter.start();
     }
   });
 
-  /* --------------------
-     Fade-up Animation
-  -------------------- */
+  /* Fade-up animation with delay support */
   const elements = document.querySelectorAll(".fade-up");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
