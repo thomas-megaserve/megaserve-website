@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroCTA = document.querySelector(".hero .btn-primary");
 
   if (heroHeading && heroSubheading && heroCTA) {
-    // Initial hidden state
     [heroHeading, heroSubheading, heroCTA].forEach(el => {
       el.style.opacity = 0;
       el.style.transform = "translateY(20px)";
@@ -98,6 +97,14 @@ document.addEventListener("DOMContentLoaded", () => {
       heroCTA.style.opacity = 1;
       heroCTA.style.transform = "translateY(0)";
     }, 800);
+
+    /* Auto shimmer once after load */
+    setTimeout(() => {
+      heroCTA.classList.add("shimmer");
+      setTimeout(() => {
+        heroCTA.classList.remove("shimmer");
+      }, 1200);
+    }, 1400);
   }
 
   /* -------------------
@@ -112,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* -------------------
-     Gold shimmer on CTA buttons
+     Gold shimmer & hover glow for all CTA buttons
   -------------------- */
   const ctaButtons = document.querySelectorAll(".btn-primary");
   ctaButtons.forEach(btn => {

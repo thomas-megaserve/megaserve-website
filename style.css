@@ -122,6 +122,7 @@ img {
   width: 100%;
 }
 
+/* Mobile nav toggle */
 #nav-toggle {
   display: none;
   background: none;
@@ -162,7 +163,7 @@ img {
 }
 
 /* -------------------
-   6. Hero Section (With Animations)
+   6. Hero Section (Using Office Image)
 -------------------- */
 .hero {
   position: relative;
@@ -175,13 +176,8 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  filter: brightness(0.92) contrast(1.05);
-  animation: heroZoom 8s ease-in-out forwards;
-}
 
-@keyframes heroZoom {
-  from { background-size: 100%; }
-  to { background-size: 105%; }
+  filter: brightness(0.92) contrast(1.05);
 }
 
 .hero-overlay {
@@ -203,40 +199,18 @@ img {
   padding: 0 1rem;
 }
 
-.hero h1,
-.hero p,
-.hero .btn-primary {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.65);
 }
 
-.hero.animate h1 {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.2s;
-}
-
-.hero.animate p {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.5s;
-}
-
-.hero.animate .btn-primary {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.8s;
-}
-
-.btn-primary.pulse-once {
-  animation: pulseOnce 0.6s ease forwards;
-}
-
-@keyframes pulseOnce {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.55);
 }
 
 @media (max-width: 768px) {
@@ -305,6 +279,20 @@ img {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
+}
+
+/* Shimmer animation for CTA */
+@keyframes shimmerSweep {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.btn-primary.shimmer {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover)) padding-box,
+              linear-gradient(120deg, rgba(255,255,255,0.25) 0%, var(--color-gold) 50%, rgba(255,255,255,0.25) 100%) border-box;
+  background-size: 200% auto;
+  animation: shimmerSweep 1.2s ease-out forwards;
+  border: 1px solid var(--color-gold);
 }
 
 /* -------------------
