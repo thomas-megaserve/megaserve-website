@@ -68,6 +68,39 @@ document.addEventListener("DOMContentLoaded", () => {
   elements.forEach(el => observer.observe(el));
 
   /* -------------------
+     Hero text load animation
+  -------------------- */
+  const heroHeading = document.querySelector(".hero h1");
+  const heroSubheading = document.querySelector(".hero p");
+  const heroCTA = document.querySelector(".hero .btn-primary");
+
+  if (heroHeading && heroSubheading && heroCTA) {
+    // Initial hidden state
+    [heroHeading, heroSubheading, heroCTA].forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = "translateY(20px)";
+    });
+
+    setTimeout(() => {
+      heroHeading.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+      heroHeading.style.opacity = 1;
+      heroHeading.style.transform = "translateY(0)";
+    }, 200);
+
+    setTimeout(() => {
+      heroSubheading.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+      heroSubheading.style.opacity = 1;
+      heroSubheading.style.transform = "translateY(0)";
+    }, 500);
+
+    setTimeout(() => {
+      heroCTA.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+      heroCTA.style.opacity = 1;
+      heroCTA.style.transform = "translateY(0)";
+    }, 800);
+  }
+
+  /* -------------------
      Parallax effect for hero background
   -------------------- */
   const heroSection = document.querySelector(".hero");
