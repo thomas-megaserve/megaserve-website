@@ -9,7 +9,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
 </head>
 <body>
@@ -43,14 +43,26 @@
   <div class="hero-overlay"></div>
   <div class="container">
     <h1>
-  Strategic Corporate Solutions —<br>Cyprus & Cross‑Jurisdictional Expertise
-</h1>
+      <span class="hero-heading-main">Strategic Corporate Solutions</span>
+      <span class="hero-heading-sub">Cyprus & Cross‑Jurisdictional Expertise</span>
+    </h1>
+    <div class="hero-underline"></div>
     <p>Multilingual in‑house advisors for company establishment, compliance, banking and financial consulting.</p>
     <a class="btn-primary" href="#contact-cta">Get in Touch</a>
   </div>
 </section>
 
-<!-- TRUST BAR (NEW PLACEMENT) -->
+<!-- TRUST LOGOS – new above-the-fold row -->
+<section id="trust-logos-top" class="fade-up" data-anim-delay="0.15">
+  <div class="container trust-logos-row">
+    <img src="assets/logo-boc.png" alt="Bank of Cyprus" loading="lazy">
+    <img src="assets/logo-hfsa.png" alt="Hellenic Financial Services Authority" loading="lazy">
+    <img src="assets/logo-eu.png" alt="EU Compliance" loading="lazy">
+    <img src="assets/logo-cysec.png" alt="CySEC Registered" loading="lazy">
+  </div>
+</section>
+
+<!-- TRUST BAR -->
 <section id="trust-bar" class="fade-up" data-anim-delay="0.2">
   <div class="container trust-grid">
     <div class="trust-item">✔ Fully compliant with Cyprus company law & EU directives</div>
@@ -64,7 +76,6 @@
 <section id="stats" class="stats-section fade-up" data-anim-delay="0.3">
   <div class="container">
     <div class="stats-grid">
-      <!-- Happy Clients -->
       <div class="stat">
         <div class="stat-icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +89,6 @@
         <div id="clients" class="stat-number">0</div>
         <div class="stat-label">Happy Clients</div>
       </div>
-      <!-- Assets Under Administration -->
       <div class="stat">
         <div class="stat-icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +100,6 @@
         <div id="assets" class="stat-number">0</div>
         <div class="stat-label">Assets Under Administration</div>
       </div>
-      <!-- Corporate Structures Delivered -->
       <div class="stat">
         <div class="stat-icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,14 +110,11 @@
         <div id="projects" class="stat-number">0</div>
         <div class="stat-label">Corporate Structures Delivered</div>
       </div>
-      <!-- Companies Incorporated -->
       <div class="stat">
         <div class="stat-icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
           </svg>
         </div>
         <div id="companies" class="stat-number">0</div>
@@ -168,7 +174,7 @@
   </div>
 </section>
 
-<!-- TRUST LOGOS -->
+<!-- TRUST SECTION (full original preserved) -->
 <section id="trust" class="fade-up" data-anim-delay="0.5">
   <div class="container">
     <h2>Trusted by Industry Leaders</h2>
@@ -223,13 +229,21 @@
 
 <!-- FOOTER -->
 <footer id="site-footer">
-  <div class="container">
-    <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-    <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-    <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+  <div class="container footer-flex">
+    <div class="footer-left">
+      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
+      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+    </div>
+    <div class="footer-nav">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#contact-cta">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
   </div>
 </footer>
 
-<script src="script.js?v=7"></script>
+<script src="script.js?v=8"></script>
 </body>
 </html>

@@ -178,6 +178,7 @@ img {
   overflow: hidden;
 
   filter: brightness(0.92) contrast(1.05);
+  transition: background-image 1s ease-in-out; /* NEW: for multi-slide hero */
 }
 
 .hero-overlay {
@@ -213,6 +214,25 @@ img {
   text-shadow: 0 2px 6px rgba(0,0,0,0.55);
 }
 
+/* NEW: Hero heading refinements */
+.hero-heading-main {
+  display: block;
+  font-size: 3.2rem;
+}
+
+.hero-heading-sub {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.hero-underline {
+  width: 80px;
+  height: 3px;
+  background-color: var(--color-gold);
+  margin: 10px auto 20px;
+}
+
 @media (max-width: 768px) {
   .hero {
     height: 60vh;
@@ -224,10 +244,39 @@ img {
   .hero p {
     font-size: 1rem;
   }
+  .hero-heading-main {
+    font-size: 2.2rem;
+  }
+  .hero-heading-sub {
+    font-size: 1.4rem;
+  }
 }
 
 /* -------------------
-   7. Trust Bar
+   7. Trust Logos Row (Above the Fold)
+-------------------- */
+.trust-logos-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.trust-logos-row img {
+  max-height: 50px;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+.trust-logos-row img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* -------------------
+   8. Trust Bar
 -------------------- */
 #trust-bar {
   background-color: #f7f7f7;
@@ -250,7 +299,7 @@ img {
 }
 
 /* -------------------
-   8. Buttons
+   9. Buttons
 -------------------- */
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), #8b0000);
@@ -271,41 +320,15 @@ img {
   box-shadow: 0 5px 12px rgba(0,0,0,0.3);
 }
 
-.pulse-on-hover:hover {
-  animation: pulse 0.6s ease;
+/* NEW: CTA pulse effect */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 rgba(176, 141, 87, 0.6); }
+  50% { box-shadow: 0 0 15px rgba(176, 141, 87, 0.9); }
+  100% { box-shadow: 0 0 0 rgba(176, 141, 87, 0.6); }
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-/* Shimmer animation for CTA */
-@keyframes shimmerSweep {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-.btn-primary.shimmer {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover)) padding-box,
-              linear-gradient(120deg, rgba(255,255,255,0.25) 0%, var(--color-gold) 50%, rgba(255,255,255,0.25) 100%) border-box;
-  background-size: 200% auto;
-  animation: shimmerSweep 1.2s ease-out forwards;
-  border: 1px solid var(--color-gold);
-}
-
-/* -------------------
-   9. Section Dividers
--------------------- */
-.section-divider {
-  height: 50px;
-  background: var(--color-bg);
-  clip-path: polygon(0 100%, 100% 0, 100% 100%);
-}
-
-.section-divider.light {
-  background: #f7f7f7;
+.btn-pulse {
+  animation: pulseGlow 1.5s ease-in-out;
 }
 
 /* -------------------
@@ -380,7 +403,7 @@ img {
 }
 
 .hover-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) rotateX(1deg) rotateY(1deg); /* NEW tilt effect */
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
@@ -504,8 +527,25 @@ img {
   color: white;
   text-align: center;
   padding: 2rem 0;
+  border-top: 2px solid var(--color-gold); /* NEW border */
 }
 
 #site-footer a {
   color: #fff;
+}
+
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-nav a {
+  font-size: 0.9rem;
 }

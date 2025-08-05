@@ -46,6 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (!counter.error) {
       counter.start();
+
+      /* NEW: Gold glow effect on stat icons when count starts */
+      const statEl = document.getElementById(stat.id)?.closest('.stat');
+      if (statEl) {
+        const icon = statEl.querySelector('svg');
+        if (icon) {
+          icon.style.color = 'var(--color-gold)';
+          setTimeout(() => { icon.style.color = 'var(--color-primary)'; }, 1500);
+        }
+      }
     }
   });
 
@@ -105,12 +115,34 @@ document.addEventListener("DOMContentLoaded", () => {
         heroCTA.classList.remove("shimmer");
       }, 1200);
     }, 1400);
+
+    /* NEW: Periodic CTA pulse every 10 seconds */
+    setInterval(() => {
+      heroCTA.classList.add("btn-pulse");
+      setTimeout(() => heroCTA.classList.remove("btn-pulse"), 1500);
+    }, 10000);
+  }
+
+  /* -------------------
+     NEW: Multi-slide hero background rotation
+  -------------------- */
+  const heroSection = document.querySelector(".hero");
+  if (heroSection) {
+    const heroImages = [
+      "assets/hero-office.png",
+      "assets/hero-building.jpg", // example second slide
+      "assets/hero-city.jpg"      // example third slide
+    ];
+    let currentIndex = 0;
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % heroImages.length;
+      heroSection.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
+    }, 8000);
   }
 
   /* -------------------
      Parallax effect for hero background
   -------------------- */
-  const heroSection = document.querySelector(".hero");
   if (heroSection) {
     window.addEventListener("scroll", () => {
       const offset = window.scrollY * 0.3;
@@ -130,5 +162,26 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.style.boxShadow = "0 3px 6px rgba(0,0,0,0.2)";
     });
   });
+
+  /* -------------------
+     NEW: Staggered testimonial reveal
+  -------------------- */
+  const testimonialCards = document.querySelectorAll(".testimonial");
+  const testimonialObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        testimonialCards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("visible");
+          }, index * 300);
+        });
+        testimonialObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.2 });
+
+  if (testimonialCards.length > 0) {
+    testimonialObserver.observe(testimonialCards[0]);
+  }
 
 });
