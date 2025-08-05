@@ -176,15 +176,12 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-
-  /* Enhance clarity for text */
   filter: brightness(0.92) contrast(1.05);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  /* Neutral overlay to improve text legibility */
   background: linear-gradient(
     to bottom,
     rgba(20, 20, 20, 0.55),
@@ -215,6 +212,24 @@ img {
   text-shadow: 0 2px 6px rgba(0,0,0,0.55);
 }
 
+/* Hero Button Contrast Fix */
+.hero .btn-primary {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .btn-primary::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  z-index: -1;
+}
+
 @media (max-width: 768px) {
   .hero {
     height: 60vh;
@@ -229,7 +244,7 @@ img {
 }
 
 /* -------------------
-   7. Trust Bar (Optional)
+   7. Trust Bar
 -------------------- */
 #trust-bar {
   background-color: #f7f7f7;
