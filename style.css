@@ -163,7 +163,7 @@ img {
 }
 
 /* -------------------
-   6. Hero Section (Smooth Cross‑Fade Slideshow)
+   6. Hero Section (Fixed Smooth Cross‑Fade Slideshow)
 -------------------- */
 .hero {
   position: relative;
@@ -209,20 +209,28 @@ img {
   animation-name: fadeSlide3;
 }
 
+/* Fixed cross-fade timing — prevents white flash & short slide glitch */
 @keyframes fadeSlide1 {
-  0%, 20% { opacity: 1; }
-  33.33%, 100% { opacity: 0; }
+  0% { opacity: 1; }
+  27% { opacity: 1; }
+  33% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 @keyframes fadeSlide2 {
-  0%, 33.33% { opacity: 0; }
-  33.34%, 53.33% { opacity: 1; }
-  66.66%, 100% { opacity: 0; }
+  0% { opacity: 0; }
+  27% { opacity: 0; }
+  33% { opacity: 1; }
+  60% { opacity: 1; }
+  66% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 @keyframes fadeSlide3 {
-  0%, 66.66% { opacity: 0; }
-  66.67%, 86.66% { opacity: 1; }
+  0% { opacity: 0; }
+  60% { opacity: 0; }
+  66% { opacity: 1; }
+  93% { opacity: 1; }
   100% { opacity: 0; }
 }
 
