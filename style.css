@@ -163,7 +163,7 @@ img {
 }
 
 /* -------------------
-   6. Hero Section (Fixed Smooth Cross‑Fade Slideshow)
+   6. Hero Section (Always‑Visible Base Slide)
 -------------------- */
 .hero {
   position: relative;
@@ -177,10 +177,23 @@ img {
   overflow: hidden;
 }
 
-.hero::before,
+/* Base slide (always visible) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/hero-office.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.92) contrast(1.05);
+  opacity: 1;
+  z-index: 0; /* Always behind fades */
+}
+
+/* Animated overlay slides */
 .hero .slide-2,
 .hero .slide-3 {
-  content: "";
   position: absolute;
   inset: 0;
   background-size: cover;
@@ -191,12 +204,7 @@ img {
   animation-iteration-count: infinite;
   animation-duration: 18s;
   opacity: 0;
-  z-index: 0;
-}
-
-.hero::before {
-  background-image: url("assets/hero-office.png");
-  animation-name: fadeSlide1;
+  z-index: 1;
 }
 
 .hero .slide-2 {
@@ -209,14 +217,7 @@ img {
   animation-name: fadeSlide3;
 }
 
-/* Fixed cross-fade timing — prevents white flash & short slide glitch */
-@keyframes fadeSlide1 {
-  0% { opacity: 1; }
-  27% { opacity: 1; }
-  33% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
+/* Overlay animations — fade in/out smoothly */
 @keyframes fadeSlide2 {
   0% { opacity: 0; }
   27% { opacity: 0; }
@@ -243,12 +244,12 @@ img {
     rgba(20, 20, 20, 0.35),
     rgba(20, 20, 20, 0.15)
   );
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero .container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 800px;
   padding: 0 1rem;
 }
