@@ -163,11 +163,10 @@ img {
 }
 
 /* -------------------
-   6. Hero Section (Using Office Image)
+   6. Hero Section (Smooth Cross‑Fade Slideshow)
 -------------------- */
 .hero {
   position: relative;
-  background: url("assets/hero-office.png") center center / cover no-repeat;
   text-align: center;
   color: #fff;
   height: 80vh;
@@ -176,9 +175,55 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
 
+.hero::before,
+.hero .slide-2,
+.hero .slide-3 {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   filter: brightness(0.92) contrast(1.05);
-  transition: background-image 1s ease-in-out; /* NEW: for multi-slide hero */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 18s;
+  opacity: 0;
+  z-index: 0;
+}
+
+.hero::before {
+  background-image: url("assets/hero-office.png");
+  animation-name: fadeSlide1;
+}
+
+.hero .slide-2 {
+  background-image: url("assets/hero-meeting.png");
+  animation-name: fadeSlide2;
+}
+
+.hero .slide-3 {
+  background-image: url("assets/hero-sofa.png");
+  animation-name: fadeSlide3;
+}
+
+@keyframes fadeSlide1 {
+  0%, 20% { opacity: 1; }
+  33.33%, 100% { opacity: 0; }
+}
+
+@keyframes fadeSlide2 {
+  0%, 33.33% { opacity: 0; }
+  33.34%, 53.33% { opacity: 1; }
+  66.66%, 100% { opacity: 0; }
+}
+
+@keyframes fadeSlide3 {
+  0%, 66.66% { opacity: 0; }
+  66.67%, 86.66% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 .hero-overlay {
@@ -214,7 +259,6 @@ img {
   text-shadow: 0 2px 6px rgba(0,0,0,0.55);
 }
 
-/* NEW: Hero heading refinements */
 .hero-heading-main {
   display: block;
   font-size: 3.2rem;
@@ -320,7 +364,6 @@ img {
   box-shadow: 0 5px 12px rgba(0,0,0,0.3);
 }
 
-/* NEW: CTA pulse effect */
 @keyframes pulseGlow {
   0% { box-shadow: 0 0 0 rgba(176, 141, 87, 0.6); }
   50% { box-shadow: 0 0 15px rgba(176, 141, 87, 0.9); }
@@ -403,7 +446,7 @@ img {
 }
 
 .hover-card:hover {
-  transform: translateY(-5px) rotateX(1deg) rotateY(1deg); /* NEW tilt effect */
+  transform: translateY(-5px) rotateX(1deg) rotateY(1deg);
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
@@ -527,7 +570,7 @@ img {
   color: white;
   text-align: center;
   padding: 2rem 0;
-  border-top: 2px solid var(--color-gold); /* NEW border */
+  border-top: 2px solid var(--color-gold);
 }
 
 #site-footer a {
