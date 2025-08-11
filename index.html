@@ -27,11 +27,16 @@
     }
 
     /* Tight tick alignment ONLY for the bottom "Trusted by Industry Leaders" list */
+    #trust .trust-points { 
+      text-align: center;            /* center multiline text within each li */
+    }
     #trust .trust-points li { 
       padding-left: 0; 
       display: flex; 
       align-items: baseline; 
+      justify-content: center;       /* center the tick + text group */
       gap: .4rem; 
+      text-align: center;            /* ensure wrapped lines are centered */
     }
     #trust .trust-points li::before { content: none; }
     #trust .trust-points .tick { color: var(--color-gold); line-height: 1; }
