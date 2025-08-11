@@ -25,6 +25,16 @@
       flex: 1 1 250px;
       max-width: 420px;
     }
+
+    /* Tight tick alignment ONLY for the bottom "Trusted by Industry Leaders" list */
+    #trust .trust-points li { 
+      padding-left: 0; 
+      display: flex; 
+      align-items: baseline; 
+      gap: .4rem; 
+    }
+    #trust .trust-points li::before { content: none; }
+    #trust .trust-points .tick { color: var(--color-gold); line-height: 1; }
   </style>
 </head>
 <body>
@@ -125,10 +135,10 @@
   <div class="container">
     <h1>
       <span class="hero-heading-main">Strategic Corporate Solutions</span>
-      <span class="hero-heading-sub">Cyprus & Cross‑Jurisdictional Expertise</span>
+      <span class="hero-heading-sub">Cyprus & Cross-Jurisdictional Expertise</span>
     </h1>
     <div class="hero-underline"></div>
-    <p>Multilingual in‑house advisors for company establishment, compliance, banking and financial consulting.</p>
+    <p>Multilingual in-house advisors for company establishment, compliance, banking and financial consulting.</p>
     <a class="btn-primary" href="#contact-cta">Get in Touch</a>
   </div>
 </section>
@@ -217,7 +227,7 @@
         <h3>Corporate Services</h3>
         <ul>
           <li><a href="company-formation-services.html">Company Formation Services</a></li>
-          <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re‑Structuring Services</a></li>
+          <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
           <li><a href="administrative-services.html">Administrative Services</a></li>
           <li><a href="banking-administration-services.html">Banking Administration Services</a></li>
           <li><a href="escrow-assistance-services.html">Escrow Assistance Services</a></li>
@@ -277,7 +287,7 @@
           <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
           <li><a href="client-screening-services.html">Client Screening Services</a></li>
           <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-          <li><a href="aml-procedures-manuals.html">Anti‑Money Laundering (AML) Procedures &amp; Manuals</a></li>
+          <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
           <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
         </ul>
       </div>
@@ -299,10 +309,10 @@
     </div>
     <hr class="trust-separator">
     <ul class="trust-points">
-      <li>Fully compliant with Cyprus company law & EU directives</li>
-      <li>Established banking relationships with major institutions</li>
-      <li>Transparent and audited internal procedures</li>
-      <li>Over 15 years of experience in CEE markets</li>
+      <li><span class="tick">✔</span>Fully compliant with Cyprus company law & EU directives</li>
+      <li><span class="tick">✔</span>Established banking relationships with major institutions</li>
+      <li><span class="tick">✔</span>Transparent and audited internal procedures</li>
+      <li><span class="tick">✔</span>Over 15 years of experience in CEE markets</li>
     </ul>
   </div>
 </section>
