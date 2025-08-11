@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   -------------------- */
   const navToggle = document.getElementById("nav-toggle");
   const mainNav = document.getElementById("main-nav");
-  navToggle.addEventListener("click", () => {
+  navToggle?.addEventListener("click", () => {
     mainNav.classList.toggle("active");
   });
 
@@ -196,44 +196,85 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* -------------------
-     NEW: Multi-slide hero background rotation
+     Simple crossfade slideshow with manual controls
   -------------------- */
-  const heroSection = document.querySelector(".hero");
-  if (heroSection) {
-    const heroImages = [
+  const hero = document.querySelector(".hero");
+  const fader = document.querySelector(".hero .hero-fader");
+  const prevBtn = document.querySelector(".hero .hero-nav.prev");
+  const nextBtn = document.querySelector(".hero .hero-nav.next");
+
+  if (hero && fader && prevBtn && nextBtn) {
+    const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // Keep the three images you already use in /assets
+    const slides = [
       "assets/hero-office.png",
-      "assets/hero-building.jpg", // example second slide
-      "assets/hero-city.jpg"      // example third slide
+      "assets/hero-meeting.png",
+      "assets/hero-sofa.png"
     ];
-    let currentIndex = 0;
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % heroImages.length;
-      heroSection.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
-    }, 8000);
+    let current = 0;
+    let timer = null;
+    const INTERVAL = 8000;
+
+    // Set initial slide onto the base layer (::before via CSS var)
+    hero.style.setProperty("--hero-bg", `url('${slides[current]}')`);
+
+    function goTo(index) {
+      const next = (index + slides.length) % slides.length;
+      if (next === current) return;
+
+      // Prepare fader with target image
+      fader.style.backgroundImage = `url('${slides[next]}')`;
+      // Crossfade in
+      fader.classList.add("show");
+
+      // After fade completes, swap base and hide fader
+      const onEnd = () => {
+        hero.style.setProperty("--hero-bg", `url('${slides[next]}')`);
+        fader.classList.remove("show");
+        fader.removeEventListener("transitionend", onEnd);
+        current = next;
+      };
+      // In case transitionend doesn’t fire (very rare), fallback
+      fader.addEventListener("transitionend", onEnd, { once: true });
+      setTimeout(onEnd, 1100);
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function start() {
+      if (reduceMotion) return;
+      stop();
+      timer = setInterval(next, INTERVAL);
+    }
+    function stop() {
+      if (timer) clearInterval(timer);
+      timer = null;
+    }
+
+    nextBtn.addEventListener("click", () => { next(); start(); });
+    prevBtn.addEventListener("click", () => { prev(); start(); });
+
+    // Pause on hover/focus for better control
+    hero.addEventListener("mouseenter", stop);
+    hero.addEventListener("mouseleave", start);
+    hero.addEventListener("focusin", stop);
+    hero.addEventListener("focusout", start);
+
+    // Keyboard arrows
+    hero.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") { e.preventDefault(); next(); start(); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); prev(); start(); }
+    });
+    hero.setAttribute("tabindex", "-1"); // allow focus if needed
+
+    start();
   }
 
   /* -------------------
-     Parallax effect for hero background
+     (Removed) Old background-rotation & parallax code to avoid conflicts
   -------------------- */
-  if (heroSection) {
-    window.addEventListener("scroll", () => {
-      const offset = window.scrollY * 0.3;
-      heroSection.style.backgroundPosition = `center calc(50% + ${offset}px)`;
-    });
-  }
-
-  /* -------------------
-     Gold shimmer & hover glow for all CTA buttons
-  -------------------- */
-  const ctaButtons = document.querySelectorAll(".btn-primary");
-  ctaButtons.forEach(btn => {
-    btn.addEventListener("mouseenter", () => {
-      btn.style.boxShadow = "0 0 10px rgba(176, 141, 87, 0.6), 0 3px 6px rgba(0,0,0,0.2)";
-    });
-    btn.addEventListener("mouseleave", () => {
-      btn.style.boxShadow = "0 3px 6px rgba(0,0,0,0.2)";
-    });
-  });
 
   /* -------------------
      NEW: Staggered testimonial reveal

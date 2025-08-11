@@ -41,18 +41,18 @@ h1, h2, h3 {
   color: var(--color-primary);
 }
 
-h1 {
-  letter-spacing: 0.5px;
-}
+h1 { letter-spacing: 0.5px; }
 
-p {
-  margin-bottom: 1rem;
-}
+p { margin-bottom: 1rem; }
 
 img {
   max-width: 100%;
   height: auto;
 }
+
+/* Fade-up helper (JS toggles .visible) */
+.fade-up { opacity: 0; transform: translateY(14px); }
+.fade-up.visible { opacity: 1; transform: none; }
 
 /* -------------------
    4. Layout Containers
@@ -75,9 +75,7 @@ img {
   transition: box-shadow 0.3s ease;
 }
 
-#site-header.scrolled {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
+#site-header.scrolled { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
 
 /* tighten header container to push logo visually left and add breathing room */
 #site-header .container {
@@ -87,9 +85,7 @@ img {
   padding-right: 0;
 }
 
-.site-logo {
-  height: 55px;
-}
+.site-logo { height: 55px; }
 
 .logo-link { margin-right: 1.5rem; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
@@ -108,9 +104,7 @@ img {
   transition: color 0.3s ease;
 }
 
-#main-nav a.active {
-  font-weight: 600;
-}
+#main-nav a.active { font-weight: 600; }
 
 #main-nav a::after {
   content: "";
@@ -123,9 +117,7 @@ img {
   transition: width 0.3s ease;
 }
 
-#main-nav a:hover::after {
-  width: 100%;
-}
+#main-nav a:hover::after { width: 100%; }
 
 /* --- Dropdown (Desktop & Mobile) --- */
 #main-nav li.has-dropdown { position: relative; }
@@ -230,7 +222,7 @@ img {
 }
 
 /* -------------------
-   6. Hero Section (Always‑Visible Base Slide)
+   6. Hero Section (Crossfade slideshow)
 -------------------- */
 .hero {
   position: relative;
@@ -244,56 +236,33 @@ img {
   overflow: hidden;
 }
 
-/* Base slide (always visible) */
+/* Use CSS var so JS can swap the base slide */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("assets/hero-office.png");
+  background-image: var(--hero-bg, url("assets/hero-office.png"));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   filter: brightness(0.92) contrast(1.05);
   opacity: 1;
-  z-index: 0; /* Always behind fades */
+  z-index: 0;
 }
 
-/* Animated overlay slides */
-.hero .slide-2,
-.hero .slide-3 {
+/* Crossfade layer controlled by JS */
+.hero .hero-fader {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   filter: brightness(0.92) contrast(1.05);
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 18s;
   opacity: 0;
+  transition: opacity 0.9s ease-in-out;
   z-index: 1;
 }
-
-.hero .slide-2 { background-image: url("assets/hero-meeting.png"); animation-name: fadeSlide2; }
-.hero .slide-3 { background-image: url("assets/hero-sofa.png");    animation-name: fadeSlide3; }
-
-/* Overlay animations — fade in/out smoothly */
-@keyframes fadeSlide2 {
-  0% { opacity: 0; }
-  27% { opacity: 0; }
-  33% { opacity: 1; }
-  60% { opacity: 1; }
-  66% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-@keyframes fadeSlide3 {
-  0% { opacity: 0; }
-  60% { opacity: 0; }
-  66% { opacity: 1; }
-  93% { opacity: 1; }
-  100% { opacity: 0; }
-}
+.hero .hero-fader.show { opacity: 1; }
 
 .hero-overlay {
   position: absolute;
@@ -337,6 +306,30 @@ img {
   background-color: var(--color-gold);
   margin: 10px auto 20px;
 }
+
+/* Manual nav buttons */
+.hero .hero-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.7);
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+  font-size: 26px;
+  line-height: 42px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  backdrop-filter: blur(2px);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.hero .hero-nav:hover { background: rgba(0,0,0,0.4); transform: translateY(calc(-50% + -1px)); }
+.hero .hero-nav.prev { left: 14px; }
+.hero .hero-nav.next { right: 14px; }
 
 @media (max-width: 768px) {
   .hero { height: 60vh; min-height: 400px; }
@@ -411,12 +404,25 @@ img {
   box-shadow: 0 5px 12px rgba(0,0,0,0.3);
 }
 
+/* One-time shimmer effect the JS toggles */
+.btn-primary.shimmer { position: relative; overflow: hidden; }
+.btn-primary.shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.6) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  animation: shimmerMove 1.2s ease-out forwards;
+}
+@keyframes shimmerMove { to { left: 150%; } }
+
 @keyframes pulseGlow {
   0% { box-shadow: 0 0 0 rgba(176, 141, 87, 0.6); }
   50% { box-shadow: 0 0 15px rgba(176, 141, 87, 0.9); }
   100% { box-shadow: 0 0 0 rgba(176, 141, 87, 0.6); }
 }
-
 .btn-pulse { animation: pulseGlow 1.5s ease-in-out; }
 
 /* -------------------
@@ -494,6 +500,13 @@ img {
 #services .service-card ul { margin-left: 1rem; }
 #services .service-card li { margin: 0.25rem 0; }
 
+/* NEW: center the 2nd services row */
+#services .centered-row {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 2rem; margin-top: 2rem;
+}
+#services .centered-row .service-card { flex: 1 1 250px; max-width: 420px; }
+
 /* -------------------
    12. Trust Section
 -------------------- */
@@ -532,15 +545,26 @@ img {
 }
 
 .trust-points { list-style: none; padding: 0; max-width: 800px; margin: 0 auto; }
-
+/* default tick for other pages */
 .trust-points li { padding-left: 1.5rem; position: relative; }
-
 .trust-points li::before {
   content: "✔";
   position: absolute;
   left: 0;
   color: var(--color-gold);
 }
+/* override for the homepage where we render an inline <span class="tick"> */
+#trust .trust-points { text-align: center; }
+#trust .trust-points li {
+  padding-left: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: .4rem;
+  text-align: center;
+}
+#trust .trust-points li::before { content: none; }
+#trust .trust-points .tick { color: var(--color-gold); line-height: 1; }
 
 /* -------------------
    13. Testimonials
@@ -609,3 +633,5 @@ img {
 .footer-nav { display: flex; gap: 1rem; }
 
 .footer-nav a { font-size: 0.9rem; }
+
+/* (Legacy: slide-2/slide-3 CSS kept intentionally unused; can remove later) */

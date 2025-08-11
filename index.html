@@ -9,34 +9,23 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
 
-  <!-- Minimal scoped tweak: center the 2nd services row -->
+  <!-- Minimal scoped tweaks -->
   <style>
+    /* Center the 2nd services row */
     #services .centered-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 2rem; margin-top: 2rem;
     }
-    #services .centered-row .service-card {
-      flex: 1 1 250px;
-      max-width: 420px;
-    }
+    #services .centered-row .service-card { flex: 1 1 250px; max-width: 420px; }
 
     /* Tight tick alignment ONLY for the bottom "Trusted by Industry Leaders" list */
-    #trust .trust-points { 
-      text-align: center;            /* center multiline text within each li */
-    }
-    #trust .trust-points li { 
-      padding-left: 0; 
-      display: flex; 
-      align-items: baseline; 
-      justify-content: center;       /* center the tick + text group */
-      gap: .4rem; 
-      text-align: center;            /* ensure wrapped lines are centered */
+    #trust .trust-points { text-align: center; }
+    #trust .trust-points li {
+      padding-left: 0; display: flex; align-items: baseline; justify-content: center;
+      gap: .4rem; text-align: center;
     }
     #trust .trust-points li::before { content: none; }
     #trust .trust-points .tick { color: var(--color-gold); line-height: 1; }
@@ -125,6 +114,8 @@
           </ul>
         </li>
 
+        <!-- Simple pages -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -132,11 +123,11 @@
 </header>
 
 <!-- HERO -->
-<section class="hero fade-up" data-anim-delay="0.1">
-  <!-- Always-visible base slide is handled by CSS ::before -->
-  <div class="slide-2"></div>
-  <div class="slide-3"></div>
+<section class="hero fade-up" data-anim-delay="0.1" aria-label="Hero slideshow">
+  <!-- Crossfade layer (managed by JS) -->
+  <div class="hero-fader" aria-hidden="true"></div>
   <div class="hero-overlay"></div>
+
   <div class="container">
     <h1>
       <span class="hero-heading-main">Strategic Corporate Solutions</span>
@@ -146,6 +137,10 @@
     <p>Multilingual in-house advisors for company establishment, compliance, banking and financial consulting.</p>
     <a class="btn-primary" href="#contact-cta">Get in Touch</a>
   </div>
+
+  <!-- Manual controls -->
+  <button class="hero-nav prev" aria-label="Previous slide">‹</button>
+  <button class="hero-nav next" aria-label="Next slide">›</button>
 </section>
 
 <!-- TRUST LOGOS – new above-the-fold row -->
@@ -364,13 +359,13 @@
     </div>
     <div class="footer-nav">
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
+      <a href="index.html#services">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<script src="script.js?v=12"></script>
 </body>
 </html>
