@@ -11,6 +11,21 @@
 
   <link rel="stylesheet" href="style.css?v=11">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Minimal scoped tweak: center the 2nd services row -->
+  <style>
+    #services .centered-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    #services .centered-row .service-card {
+      flex: 1 1 250px;
+      max-width: 420px;
+    }
+  </style>
 </head>
 <body>
 
@@ -194,6 +209,8 @@
 <section id="services" class="fade-up" data-anim-delay="0.4">
   <div class="container">
     <h2>Our Services</h2>
+
+    <!-- Row 1: Four cards -->
     <div class="services-grid">
       <!-- Corporate Services -->
       <div class="service-card hover-card">
@@ -239,7 +256,10 @@
           <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
         </ul>
       </div>
+    </div>
 
+    <!-- Row 2: Two centered cards -->
+    <div class="centered-row">
       <!-- Corporate Consultancy -->
       <div class="service-card hover-card">
         <h3>Corporate Consultancy</h3>
@@ -262,6 +282,7 @@
         </ul>
       </div>
     </div>
+
   </div>
 </section>
 
