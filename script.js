@@ -10,6 +10,78 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* -------------------
+     NEW: Dropdown (click/tap on mobile, hover on desktop)
+  -------------------- */
+  const DROPDOWN_BREAKPOINT = 768; // match CSS
+  const dropdownParents = document.querySelectorAll("#main-nav .has-dropdown > a");
+
+  dropdownParents.forEach(anchor => {
+    const parentLi = anchor.parentElement;
+
+    // Improve a11y: set proper ARIA state initially
+    anchor.setAttribute("aria-expanded", "false");
+
+    anchor.addEventListener("click", (e) => {
+      const isMobile = window.innerWidth <= DROPDOWN_BREAKPOINT || mainNav.classList.contains("active");
+      if (isMobile) {
+        e.preventDefault();
+
+        // close siblings
+        const siblings = parentLi.parentElement.querySelectorAll(".has-dropdown.open");
+        siblings.forEach(sib => {
+          if (sib !== parentLi) {
+            sib.classList.remove("open");
+            const a = sib.querySelector(":scope > a");
+            if (a) a.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        // toggle this one
+        const willOpen = !parentLi.classList.contains("open");
+        parentLi.classList.toggle("open", willOpen);
+        anchor.setAttribute("aria-expanded", String(willOpen));
+      }
+    });
+
+    // keyboard accessibility (Enter/Space) for desktop users
+    anchor.addEventListener("keydown", (e) => {
+      const key = e.key;
+      if (key === "Enter" || key === " ") {
+        const isMobile = window.innerWidth <= DROPDOWN_BREAKPOINT || mainNav.classList.contains("active");
+        if (isMobile) {
+          e.preventDefault();
+          anchor.click();
+        }
+      }
+    });
+  });
+
+  // Close open dropdowns when clicking outside on mobile
+  document.addEventListener("click", (e) => {
+    const isMobile = window.innerWidth <= DROPDOWN_BREAKPOINT || mainNav.classList.contains("active");
+    if (!isMobile) return;
+    const nav = document.getElementById("site-header");
+    if (nav && !nav.contains(e.target)) {
+      document.querySelectorAll("#main-nav .has-dropdown.open").forEach(li => {
+        li.classList.remove("open");
+        const a = li.querySelector(":scope > a");
+        if (a) a.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+
+  // Reset state on resize up to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > DROPDOWN_BREAKPOINT) {
+      document.querySelectorAll("#main-nav .has-dropdown.open").forEach(li => {
+        li.classList.remove("open");
+        const a = li.querySelector(":scope > a");
+        if (a) a.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+
+  /* -------------------
      Sticky header shadow on scroll
   -------------------- */
   const siteHeader = document.getElementById("site-header");
