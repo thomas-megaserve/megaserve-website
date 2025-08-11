@@ -94,60 +94,81 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* -------------------
-     CountUp animations
+     SAFE CountUp animations (won’t crash on pages without the lib)
   -------------------- */
-  const options = { duration: 3 };
-  const stats = [
-    { id: 'clients', value: 832 },
-    { id: 'assets', value: 2.1, isCurrency: true, suffix: 'B' },
-    { id: 'projects', value: 2394 },
-    { id: 'companies', value: 470 }
-  ];
+  try {
+    const hasCountUp = typeof window.countUp !== "undefined" && typeof window.countUp.CountUp === "function";
+    const options = { duration: 3 };
+    const stats = [
+      { id: 'clients', value: 832 },
+      { id: 'assets', value: 2.1, isCurrency: true, suffix: 'B' },
+      { id: 'projects', value: 2394 },
+      { id: 'companies', value: 470 }
+    ];
 
-  stats.forEach(stat => {
-    let counter;
-    if (stat.isCurrency) {
-      counter = new countUp.CountUp(stat.id, stat.value, {
-        ...options,
-        prefix: '€',
-        suffix: stat.suffix || '',
-        decimalPlaces: 1
-      });
-    } else {
-      counter = new countUp.CountUp(stat.id, stat.value, options);
-    }
-    if (!counter.error) {
-      counter.start();
+    stats.forEach(stat => {
+      const el = document.getElementById(stat.id);
+      if (!el) return; // element not on this page
 
-      /* NEW: Gold glow effect on stat icons when count starts */
-      const statEl = document.getElementById(stat.id)?.closest('.stat');
-      if (statEl) {
-        const icon = statEl.querySelector('svg');
-        if (icon) {
-          icon.style.color = 'var(--color-gold)';
-          setTimeout(() => { icon.style.color = 'var(--color-primary)'; }, 1500);
+      if (hasCountUp) {
+        const counter = new countUp.CountUp(stat.id, stat.value, stat.isCurrency ? {
+          ...options,
+          prefix: '€',
+          suffix: stat.suffix || '',
+          decimalPlaces: 1
+        } : options);
+
+        if (!counter.error) {
+          counter.start();
+
+          /* NEW: Gold glow effect on stat icons when count starts */
+          const statEl = el.closest('.stat');
+          if (statEl) {
+            const icon = statEl.querySelector('svg');
+            if (icon) {
+              icon.style.color = 'var(--color-gold)';
+              setTimeout(() => { icon.style.color = 'var(--color-primary)'; }, 1500);
+            }
+          }
         }
-      }
-    }
-  });
-
-  /* -------------------
-     Fade-up animation with smoother ease
-  -------------------- */
-  const elements = document.querySelectorAll(".fade-up");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const delay = entry.target.getAttribute("data-anim-delay") || "0";
-        entry.target.style.transition = `opacity 0.9s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1)`;
-        entry.target.style.transitionDelay = `${delay}s`;
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+      } else {
+        // Graceful fallback so page doesn’t look empty
+        el.textContent = stat.isCurrency ? `€${stat.value}${stat.suffix || ''}` : String(stat.value);
       }
     });
-  }, { threshold: 0.15 });
+  } catch (e) {
+    // swallow; don't block the rest of the scripts
+  }
 
-  elements.forEach(el => observer.observe(el));
+  /* -------------------
+     Fade-up animation with smoother ease (+ fallback)
+  -------------------- */
+  const REDUCE_MOTION = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const elements = document.querySelectorAll(".fade-up");
+
+  const makeVisible = (el) => {
+    const delay = el.getAttribute("data-anim-delay") || "0";
+    el.style.transition = `opacity 0.9s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1)`;
+    el.style.transitionDelay = `${delay}s`;
+    el.classList.add("visible");
+  };
+
+  if (REDUCE_MOTION) {
+    elements.forEach(el => el.classList.add("visible"));
+  } else if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          makeVisible(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    elements.forEach(el => observer.observe(el));
+  } else {
+    // ancient fallback: just show them
+    elements.forEach(el => makeVisible(el));
+  }
 
   /* -------------------
      Hero text load animation
@@ -204,9 +225,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.querySelector(".hero .hero-nav.next");
 
   if (hero && fader && prevBtn && nextBtn) {
-    const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    // Keep the three images you already use in /assets
     const slides = [
       "assets/hero-office.png",
       "assets/hero-meeting.png",
@@ -235,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fader.removeEventListener("transitionend", onEnd);
         current = next;
       };
-      // In case transitionend doesn’t fire (very rare), fallback
+      // Fallback if transitionend doesn’t fire
       fader.addEventListener("transitionend", onEnd, { once: true });
       setTimeout(onEnd, 1100);
     }
@@ -244,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function prev() { goTo(current - 1); }
 
     function start() {
-      if (reduceMotion) return;
+      if (REDUCE_MOTION) return;
       stop();
       timer = setInterval(next, INTERVAL);
     }
@@ -265,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Keyboard arrows
     hero.addEventListener("keydown", (e) => {
       if (e.key === "ArrowRight") { e.preventDefault(); next(); start(); }
-      if (e.key === "ArrowLeft") { e.preventDefault(); prev(); start(); }
+      if (e.key === "ArrowLeft")  { e.preventDefault(); prev(); start(); }
     });
     hero.setAttribute("tabindex", "-1"); // allow focus if needed
 
@@ -280,20 +298,20 @@ document.addEventListener("DOMContentLoaded", () => {
      NEW: Staggered testimonial reveal
   -------------------- */
   const testimonialCards = document.querySelectorAll(".testimonial");
-  const testimonialObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        testimonialCards.forEach((card, index) => {
-          setTimeout(() => {
-            card.classList.add("visible");
-          }, index * 300);
-        });
-        testimonialObserver.disconnect();
-      }
-    });
-  }, { threshold: 0.2 });
+  if (testimonialCards.length) {
+    const testimonialObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          testimonialCards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add("visible");
+            }, index * 300);
+          });
+          testimonialObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.2 });
 
-  if (testimonialCards.length > 0) {
     testimonialObserver.observe(testimonialCards[0]);
   }
 

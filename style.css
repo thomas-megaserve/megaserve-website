@@ -634,4 +634,12 @@ img {
 
 .footer-nav a { font-size: 0.9rem; }
 
+/* -------------------
+   16. Reduced motion tweaks
+-------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { opacity: 1 !important; transform: none !important; }
+  .hero .hero-fader { transition: none !important; }
+}
+
 /* (Legacy: slide-2/slide-3 CSS kept intentionally unused; can remove later) */
