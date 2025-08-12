@@ -64,6 +64,9 @@ img {
   padding: 2rem 0;
 }
 
+/* Utility */
+.content-narrow { max-width: 900px; margin: 0 auto; }
+
 /* -------------------
    5. Sticky Header & Navigation
 -------------------- */
@@ -606,8 +609,17 @@ img {
   border-top: 2px solid var(--color-gold);
 }
 
-#contact-cta h2 { margin-bottom: 1rem; }
+/* Centering + narrow width for consistency */
+#contact-cta .container { max-width: 900px; margin: 0 auto; }
+#contact-cta .cta-row { display: flex; justify-content: center; align-items: center; gap: .75rem; flex-wrap: wrap; }
 
+/* High-contrast button styles on red strip */
+#contact-cta .btn-primary { background:#fff; color: var(--color-primary); border:1px solid #fff; box-shadow: 0 3px 6px rgba(0,0,0,0.2); }
+#contact-cta .btn-primary:hover { background:#f7f7f7; border-color:#f7f7f7; }
+#contact-cta .btn-secondary { border-color:#fff; color:#fff; background:transparent; }
+#contact-cta .btn-secondary:hover { background:rgba(255,255,255,.12); color:#fff; }
+
+#contact-cta h2 { margin-bottom: 1rem; }
 .contact-intro { max-width: 600px; margin: 0 auto 2rem; }
 
 /* -------------------

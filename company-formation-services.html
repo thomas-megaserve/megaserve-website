@@ -8,7 +8,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="stylesheet" href="style.css?v=13" />
 
   <style>
     /* Page-scoped styles (non-destructive) */
@@ -34,11 +34,16 @@
     .muted{color:#666}
     .section-spaced{margin-top:2rem}
 
-    /* Bottom CTA contrast fix (assumes section has a red background in global CSS) */
+    /* Bottom CTA contrast fix (kept page-scoped for certainty) */
     #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
     #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
     #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
     #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+
+    /* Bottom CTA centering (safety net; also in global CSS) */
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
 
     /* Fallback fade-up in case not defined globally */
     .fade-up{opacity:0; transform: translateY(14px);}
@@ -244,7 +249,7 @@
 </section>
 
 <section id="contact-cta" class="fade-up" data-anim-delay="0.3">
-  <div class="container">
+  <div class="container content-narrow">
     <h2>Start Your Incorporation</h2>
     <p class="contact-intro">Send your details and we’ll return a tailored checklist and timeline within one business day.</p>
     <div class="cta-row">
