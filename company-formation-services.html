@@ -33,6 +33,13 @@
     .faq summary{cursor:pointer;font-weight:600}
     .muted{color:#666}
     .section-spaced{margin-top:2rem}
+
+    /* Bottom CTA contrast fix (assumes section has a red background in global CSS) */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+
     /* Fallback fade-up in case not defined globally */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
@@ -141,9 +148,9 @@
       <li>Company name clearance and constitutional documents (MoA/AoA)</li>
       <li>Registrar filings (HE forms) and full certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
       <li>Beneficial ownership register filing (as applicable)</li>
-      <li>Post-incorporation pack and bank/KYB documentation preparation</li>
-      <li>Registered address and corporate secretarial arrangements (if engaged)</li>
-      <li>Optional: TIC/TIN and VAT registrations, apostille/legalisation</li>
+      <li>Post-incorporation pack and bank/KYB documentation preparation (<a href="banking-administration-services.html">details</a>)</li>
+      <li>Engagement handover to <a href="corporate-secretarial-services.html">Corporate Secretarial</a> and <a href="registered-address-services.html">Registered Address</a> (if required)</li>
+      <li>Related add-ons (scoped separately): <a href="tic-tin-registration-services.html">TIC/TIN</a>, <a href="vat-registration-services.html">VAT</a>, apostille/legalisation via <a href="administrative-services.html">Administrative Services</a></li>
     </ul>
 
     <div class="proof-strip" aria-label="Service proof points">
@@ -159,7 +166,7 @@
       <li><strong>Name approval &amp; drafting</strong> — MoA/AoA and HE forms prepared (typically ~1–3 business days)</li>
       <li><strong>Registrar filing</strong> — incorporation and certificate issuance (commonly ~3–7 business days, dependent on registrar workload)</li>
       <li><strong>Post-incorporation</strong> — company pack delivered; bank/KYB pack readied (typically ~1–3 business days)</li>
-      <li><strong>Optional registrations</strong> — TIC/TIN, VAT, EORI as needed (timelines vary by authority)</li>
+      <li><strong>Optional handover</strong> — to Tax &amp; VAT team for TIC/TIN, VAT, EORI (timelines vary by authority)</li>
     </ol>
     <p><strong>Overall guide:</strong> many standard incorporations complete in <strong>~5–10 business days</strong>, subject to due diligence and authority/registrar timing.</p>
 
@@ -201,17 +208,26 @@
       </details>
       <details>
         <summary>Is a local director or secretary required?</summary>
-        <p>A corporate secretary and registered office are required. A resident director is not strictly mandated, but substance expectations may apply depending on your activities. We can arrange services where appropriate.</p>
+        <p>A corporate secretary and registered office are required. A resident director is not strictly mandated, but substance expectations may apply depending on your activities. We can arrange these via our <a href="corporate-secretarial-services.html">Corporate Secretarial</a> and <a href="directorship-management-services.html">Directorship</a> services.</p>
       </details>
       <details>
         <summary>Can you handle TIC/TIN and VAT registrations?</summary>
-        <p>Yes—optionally. We coordinate tax number (TIC/TIN) and VAT registration post-incorporation where required for your trading model.</p>
+        <p>Yes—coordinated through our <a href="tic-tin-registration-services.html">Tax &amp; VAT Administration</a> pages post-incorporation.</p>
       </details>
       <details>
         <summary>Do you support redomiciliation or restructuring?</summary>
-        <p>Yes. See our related pages for company structuring/re-structuring and migration support, or request a proposal and we’ll scope it with formation.</p>
+        <p>Yes. See our related pages for company structuring/re-structuring and migrations, or request a proposal and we’ll scope it alongside your formation.</p>
       </details>
     </div>
+
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="banking-administration-services.html">Banking Administration</a> ·
+      <a href="corporate-secretarial-services.html">Corporate Secretarial</a> ·
+      <a href="tic-tin-registration-services.html">TIC/TIN Registration</a> ·
+      <a href="vat-registration-services.html">VAT Registration</a> ·
+      <a href="administrative-services.html">Administrative Services</a>
+    </p>
 
     <h2 class="section-spaced">Other Jurisdictions (on request)</h2>
     <p class="muted">In addition to Cyprus, we coordinate formations through vetted associates in selected jurisdictions:</p>
@@ -279,8 +295,8 @@
     {"@type":"Question","name":"Do I need to visit Cyprus to incorporate?","acceptedAnswer":{"@type":"Answer","text":"No. Incorporation can typically be completed remotely. Banks may require in-person verification depending on the institution and risk profile."}},
     {"@type":"Question","name":"How long does incorporation take?","acceptedAnswer":{"@type":"Answer","text":"Standard cases often complete in ~5–10 business days from final KYC and name approval. Timings depend on registrar workload and document readiness."}},
     {"@type":"Question","name":"Can you guarantee a bank account?","acceptedAnswer":{"@type":"Answer","text":"No. We provide introductions and onboarding support, but approval rests solely with the bank. We pre-triage your profile to avoid mismatches."}},
-    {"@type":"Question","name":"Is a local director or secretary required?","acceptedAnswer":{"@type":"Answer","text":"A corporate secretary and registered office are required. A resident director is not strictly mandated, but substance expectations may apply depending on your activities. We can arrange services where appropriate."}},
-    {"@type":"Question","name":"Can you handle TIC/TIN and VAT registrations?","acceptedAnswer":{"@type":"Answer","text":"Yes—optionally. We coordinate tax number (TIC/TIN) and VAT registration post-incorporation where required for your trading model."}},
+    {"@type":"Question","name":"Is a local director or secretary required?","acceptedAnswer":{"@type":"Answer","text":"A corporate secretary and registered office are required. A resident director is not strictly mandated, but substance expectations may apply depending on your activities. We can arrange these via our Corporate Secretarial and Directorship services."}},
+    {"@type":"Question","name":"Can you handle TIC/TIN and VAT registrations?","acceptedAnswer":{"@type":"Answer","text":"Yes—coordinated through our Tax & VAT Administration pages post-incorporation."}},
     {"@type":"Question","name":"Do you support redomiciliation or restructuring?","acceptedAnswer":{"@type":"Answer","text":"Yes. We handle company structuring/re-structuring and migrations as a related service, or scope these alongside your formation."}}
   ]
 }
