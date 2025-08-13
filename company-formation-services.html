@@ -57,13 +57,11 @@
     .muted{color:#666}
     .section-spaced{margin-top:2rem}
 
-    /* Bottom CTA contrast fix */
+    /* Bottom CTA contrast + centering */
     #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
     #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
     #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
     #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
-
-    /* Bottom CTA centering */
     #contact-cta { text-align: center; }
     #contact-cta .container { max-width: 900px; margin: 0 auto; }
     #contact-cta .cta-row { justify-content: center; align-items: center; }
@@ -83,11 +81,12 @@
     <nav id="main-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
 
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a aria-current="page" href="company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="company-formation-services.html">Company Formation Services</a></li>
             <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
             <li><a href="administrative-services.html">Administrative Services</a></li>
             <li><a href="banking-administration-services.html">Banking Administration Services</a></li>
@@ -293,7 +292,6 @@
       <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Formation" class="btn-secondary" data-cta="book-call" data-page="company-formation">Book a Call</a>
       <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Company%20Formation" class="btn-secondary" data-cta="book-visit" data-page="company-formation">Book a Visit (Nicosia)</a>
     </div>
-    <p class="muted" style="margin-top:.75rem">Information on this page is general guidance and not legal or tax advice.</p>
   </div>
 </section>
 
@@ -330,7 +328,7 @@
     {"@type":"ServiceChannel","serviceUrl":"mailto:megaserve@megaserve.eu","name":"Online"},
     {"@type":"ServiceChannel","name":"In person (Nicosia)"}
   ],
-  "termsOfService": "Banking approval is at the sole discretion of the institution. Information provided is general guidance, not legal or tax advice."
+  "termsOfService": "Banking approval is at the sole discretion of the institution."
 }
 </script>
 
@@ -398,5 +396,30 @@
 </script>
 
 <script src="script.js?v=12"></script>
+<script>
+/* Mobile nav toggle */
+const navToggle = document.getElementById('nav-toggle');
+const mainNav = document.getElementById('main-nav');
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
+}
+
+/* Auto-highlight current nav item (including About) */
+(function highlightCurrentNav() {
+  const currentPath = (location.pathname.replace(/\/$/, '') || '/index.html').toLowerCase();
+  document.querySelectorAll('#main-nav a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+    const url = new URL(href, location.origin);
+    let path = url.pathname.replace(/\/$/, '').toLowerCase() || '/index.html';
+    if (currentPath.endsWith(path)) {
+      a.setAttribute('aria-current', 'page');
+      a.classList.add('active');
+      const dd = a.closest('li.has-dropdown');
+      if (dd) dd.classList.add('open');
+    }
+  });
+})();
+</script>
 </body>
 </html>
