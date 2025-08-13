@@ -81,7 +81,6 @@
     <nav id="main-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
 
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
@@ -133,6 +132,8 @@
           </ul>
         </li>
 
+        <!-- About now sits just before Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -404,19 +405,46 @@ if (navToggle && mainNav) {
   navToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
 }
 
-/* Auto-highlight current nav item (including About) */
+/* Mobile-only dropdown toggles (prevents default jump and toggles .open) */
+document.querySelectorAll('#main-nav li.has-dropdown > a').forEach(trigger => {
+  trigger.addEventListener('click', (e) => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) {
+      e.preventDefault();
+      const li = trigger.parentElement;
+      const nowOpen = !li.classList.contains('open');
+      li.classList.toggle('open', nowOpen);
+      trigger.setAttribute('aria-expanded', String(nowOpen));
+    }
+  });
+});
+
+/* Close any mobile-open dropdowns if resizing up to desktop */
+let wasMobile = window.matchMedia('(max-width: 768px)').matches;
+window.addEventListener('resize', () => {
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  if (!isMobile && wasMobile) {
+    document.querySelectorAll('#main-nav li.has-dropdown.open').forEach(li => {
+      li.classList.remove('open');
+      const a = li.querySelector(':scope > a');
+      if (a) a.setAttribute('aria-expanded', 'false');
+    });
+  }
+  wasMobile = isMobile;
+});
+
+/* Auto-highlight current nav item WITHOUT forcing dropdown open */
 (function highlightCurrentNav() {
   const currentPath = (location.pathname.replace(/\/$/, '') || '/index.html').toLowerCase();
   document.querySelectorAll('#main-nav a[href]').forEach(a => {
     const href = a.getAttribute('href');
     if (!href || href.startsWith('#')) return;
     const url = new URL(href, location.origin);
-    let path = url.pathname.replace(/\/$/, '').toLowerCase() || '/index.html';
+    const path = (url.pathname.replace(/\/$/, '') || '/index.html').toLowerCase();
     if (currentPath.endsWith(path)) {
       a.setAttribute('aria-current', 'page');
       a.classList.add('active');
-      const dd = a.closest('li.has-dropdown');
-      if (dd) dd.classList.add('open');
+      /* no dropdown opening here */
     }
   });
 })();
