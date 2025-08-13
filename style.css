@@ -446,6 +446,9 @@ img {
   transform: skewX(-25deg);
   animation: shimmerMove 1.2s ease-out forwards;
 }
+@keyframes shimmerMove { to { left: 150%); } }
+
+/* fallback if previous keyframes typo */
 @keyframes shimmerMove { to { left: 150%; } }
 
 @keyframes pulseGlow {
@@ -646,7 +649,22 @@ img {
 #contact-cta .btn-secondary { border-color:#fff; color:#fff; background:transparent; }
 #contact-cta .btn-secondary:hover { background:rgba(255,255,255,.12); color:#fff; }
 
-#contact-cta h2 { margin-bottom: 1rem; }
+/* Bottom CTA heading + link contrast fix */
+#contact-cta h1,
+#contact-cta h2,
+#contact-cta h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+#contact-cta a:not(.btn-primary):not(.btn-secondary) {
+  color: #fff;
+  text-decoration: underline;
+}
+#contact-cta a:not(.btn-primary):not(.btn-secondary):hover {
+  opacity: .9;
+}
+
 .contact-intro { max-width: 600px; margin: 0 auto 2rem; }
 
 /* -------------------
