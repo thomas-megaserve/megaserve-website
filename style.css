@@ -50,6 +50,27 @@ img {
   height: auto;
 }
 
+/* Accessibility: skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: .5rem .75rem;
+  background: #fff;
+  color: #000;
+  border: 2px solid var(--color-primary);
+  z-index: 10000;
+}
+
 /* Fade-up helper (JS toggles .visible) */
 .fade-up { opacity: 0; transform: translateY(14px); }
 .fade-up.visible { opacity: 1; transform: none; }

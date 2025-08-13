@@ -8,6 +8,32 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Performance: speed up Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.megaserve.eu/company-formation-services.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cyprus Company Formation – Fast, Compliant Setup | MegaServe">
+  <meta property="og:description" content="Clean incorporation with registrar filings, post-incorporation pack, and banking introductions. Cyprus-based team with 30+ years’ experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/company-formation-services.html">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/company-formation-og.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cyprus Company Formation – Fast, Compliant Setup | MegaServe">
+  <meta name="twitter:description" content="Clean incorporation with registrar filings, post-incorporation pack, and banking introductions. Cyprus-based team with 30+ years’ experience.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/company-formation-og.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
+
   <link rel="stylesheet" href="style.css?v=13" />
 
   <style>
@@ -45,12 +71,23 @@
     #contact-cta .container { max-width: 900px; margin: 0 auto; }
     #contact-cta .cta-row { justify-content: center; align-items: center; }
 
+    /* Skip link for accessibility */
+    .skip-link {
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip-link:focus {
+      left:16px; top:16px; width:auto; height:auto; padding:.5rem .75rem;
+      background:#fff; color:#000; border:2px solid var(--color-primary); z-index:10000;
+    }
+
     /* Fallback fade-up in case not defined globally */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
 <header id="site-header">
   <div class="container header-flex">
     <a href="index.html" class="logo-link" aria-label="MegaServe Home"><img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo" /></a>
@@ -131,15 +168,16 @@
     <h1>Company Formation (Cyprus)</h1>
     <p>Clean, compliant incorporation with registrar filings, post-incorporation pack, and banking introductions—sequenced to avoid rework and delays.</p>
     <div class="micro-trust">Cyprus-based team · <strong>30+ years’ experience</strong> · Multilingual corporate services</div>
+    <div class="muted" style="margin-top:.25rem">Updated: August 2025</div>
     <div class="cta-row">
-      <a href="mailto:megaserve@megaserve.eu?subject=Cyprus%20Company%20Formation%20-%20Proposal%20Request" class="btn-primary">Request Proposal</a>
-      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Formation" class="btn-secondary">Book a Call</a>
-      <a href="#download-checklist" class="btn-secondary">Download Checklist</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Cyprus%20Company%20Formation%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="company-formation">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Formation" class="btn-secondary" data-cta="book-call" data-page="company-formation">Book a Call</a>
+      <a href="#download-checklist" class="btn-secondary" data-cta="download-checklist" data-page="company-formation">Download Checklist</a>
     </div>
   </div>
 </section>
 
-<section class="container fade-up" data-anim-delay="0.2">
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
   <div class="content-narrow">
     <h2>Who It’s For</h2>
     <ul class="feature-list">
@@ -148,7 +186,7 @@
       <li>Founders needing bank-ready documentation and post-incorporation support</li>
     </ul>
 
-    <h2 class="section-spaced">What You Get (Deliverables)</h2>
+    <h2 id="deliverables" class="section-spaced">What You Get (Deliverables)</h2>
     <ul class="feature-list">
       <li>Company name clearance and constitutional documents (MoA/AoA)</li>
       <li>Registrar filings (HE forms) and full certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
@@ -165,7 +203,7 @@
     </div>
     <p class="muted" style="margin-top:-.5rem">*Bank account approval is always at the bank’s discretion; we pre-triage and support onboarding but do not guarantee outcomes.</p>
 
-    <h2 class="section-spaced">Process &amp; Typical Timeline</h2>
+    <h2 id="process" class="section-spaced">Process &amp; Typical Timeline</h2>
     <ol class="process-steps">
       <li><strong>Discovery &amp; KYC pre-screen</strong> — scope, sector/geo review, initial document list (~1–2 business days)</li>
       <li><strong>Name approval &amp; drafting</strong> — MoA/AoA and HE forms prepared (typically ~1–3 business days)</li>
@@ -175,7 +213,7 @@
     </ol>
     <p><strong>Overall guide:</strong> many standard incorporations complete in <strong>~5–10 business days</strong>, subject to due diligence and authority/registrar timing.</p>
 
-    <h2 class="section-spaced">Requirements (Client Checklist)</h2>
+    <h2 id="requirements" class="section-spaced">Requirements (Client Checklist)</h2>
     <ul class="feature-list">
       <li>Certified passports/IDs for UBOs, directors, and shareholders</li>
       <li>Recent proof of address (≤ 3 months)</li>
@@ -186,7 +224,7 @@
       <li>Power of Attorney (if required for signing)</li>
     </ul>
     <div id="download-checklist" class="cta-box">
-      Prefer a printable list? <a href="assets/checklists/cyprus-ltd-formation-checklist.pdf">Download the one-page checklist (PDF)</a>.
+      Prefer a printable list? <a href="assets/checklists/cyprus-ltd-formation-checklist.pdf" data-cta="download-checklist" data-page="company-formation">Download the one-page checklist (PDF)</a>.
     </div>
 
     <h2 class="section-spaced">Risk &amp; Mitigations</h2>
@@ -197,7 +235,7 @@
       <li><strong>Name restrictions:</strong> we pre-check for sensitive words and conflicts to avoid registrar rejections.</li>
     </ul>
 
-    <h2 class="section-spaced">FAQs</h2>
+    <h2 id="faqs" class="section-spaced">FAQs</h2>
     <div class="faq">
       <details>
         <summary>Do I need to visit Cyprus to incorporate?</summary>
@@ -253,9 +291,9 @@
     <h2>Start Your Incorporation</h2>
     <p class="contact-intro">Send your details and we’ll return a tailored checklist and timeline within one business day.</p>
     <div class="cta-row">
-      <a href="mailto:megaserve@megaserve.eu?subject=Cyprus%20Company%20Formation%20-%20Proposal%20Request" class="btn-primary">Request Proposal</a>
-      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Formation" class="btn-secondary">Book a Call</a>
-      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Company%20Formation" class="btn-secondary">Book a Visit (Nicosia)</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Cyprus%20Company%20Formation%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="company-formation">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Formation" class="btn-secondary" data-cta="book-call" data-page="company-formation">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Company%20Formation" class="btn-secondary" data-cta="book-visit" data-page="company-formation">Book a Visit (Nicosia)</a>
     </div>
     <p class="muted" style="margin-top:.75rem">Information on this page is general guidance and not legal or tax advice.</p>
   </div>
@@ -315,6 +353,54 @@
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.megaserve.eu/"},
     {"@type":"ListItem","position":2,"name":"Corporate Services","item":"https://www.megaserve.eu/corporate-services/"},
     {"@type":"ListItem","position":3,"name":"Company Formation","item":"https://www.megaserve.eu/company-formation-services.html"}
+  ]
+}
+</script>
+
+<!-- Organization / ProfessionalService schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"MegaServe Ltd",
+  "url":"https://www.megaserve.eu/",
+  "logo":"https://www.megaserve.eu/assets/logo.svg",
+  "image":"https://www.megaserve.eu/assets/og/company-formation-og.jpg",
+  "email":"info@megaserve.eu",
+  "telephone":"+35722000000",
+  "address":{
+    "@type":"PostalAddress",
+    "addressCountry":"CY"
+  },
+  "areaServed":{"@type":"Country","name":"Cyprus"},
+  "sameAs":[
+    "https://www.linkedin.com/company/your-company",
+    "https://www.facebook.com/your-page"
+  ],
+  "contactPoint":[{
+    "@type":"ContactPoint",
+    "contactType":"Customer Service",
+    "telephone":"+35722000000",
+    "email":"info@megaserve.eu",
+    "areaServed":"CY"
+  }]
+}
+</script>
+
+<!-- HowTo schema for process -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HowTo",
+  "name":"How to incorporate a company in Cyprus",
+  "mainEntityOfPage":"https://www.megaserve.eu/company-formation-services.html",
+  "totalTime":"P10D",
+  "step":[
+    {"@type":"HowToStep","name":"Discovery & KYC pre-screen","text":"Scope, sector/geo review, initial document list.","url":"https://www.megaserve.eu/company-formation-services.html#process"},
+    {"@type":"HowToStep","name":"Name approval & drafting","text":"Prepare MoA/AoA and HE forms for filing.","url":"https://www.megaserve.eu/company-formation-services.html#process"},
+    {"@type":"HowToStep","name":"Registrar filing","text":"File incorporation and obtain certificate set.","url":"https://www.megaserve.eu/company-formation-services.html#process"},
+    {"@type":"HowToStep","name":"Post-incorporation","text":"Deliver company pack; prepare bank/KYB set.","url":"https://www.megaserve.eu/company-formation-services.html#process"},
+    {"@type":"HowToStep","name":"Optional handover","text":"TIC/TIN, VAT, EORI via Tax & VAT team.","url":"https://www.megaserve.eu/company-formation-services.html#process"}
   ]
 }
 </script>
