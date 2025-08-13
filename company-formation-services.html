@@ -34,7 +34,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
   <meta name="theme-color" content="#a00000">
 
-  <link rel="stylesheet" href="style.css?v=13" />
+  <link rel="stylesheet" href="style.css?v=14" />
 
   <style>
     /* Page-scoped styles (non-destructive) */
@@ -44,9 +44,6 @@
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
-    .process-steps{counter-reset:step;list-style:none;padding:0}
-    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
-    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
     .cta-box{background:#f7f7f7;border:1px solid rgba(0,0,0,.05);border-left:3px solid var(--color-gold);padding:1rem 1.25rem;border-radius:6px}
     .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
     .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
@@ -56,36 +53,27 @@
     .proof-strip{display:flex;gap:1rem;flex-wrap:wrap;background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:.75rem 1rem;margin:1rem 0}
     .proof-item{display:flex;align-items:center;gap:.5rem;font-size:.95rem}
     .faq details{border:1px solid #eee;border-radius:6px;padding: .85rem 1rem;margin:.6rem 0;background:#fff}
-    .faq summary{cursor:pointer;font-weight:600}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
     .muted{color:#666}
     .section-spaced{margin-top:2rem}
 
-    /* Bottom CTA contrast fix (kept page-scoped for certainty) */
+    /* Bottom CTA contrast fix */
     #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
     #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
     #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
     #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
 
-    /* Bottom CTA centering (safety net; also in global CSS) */
+    /* Bottom CTA centering */
     #contact-cta { text-align: center; }
     #contact-cta .container { max-width: 900px; margin: 0 auto; }
     #contact-cta .cta-row { justify-content: center; align-items: center; }
 
-    /* Skip link for accessibility */
-    .skip-link {
-      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
-    }
-    .skip-link:focus {
-      left:16px; top:16px; width:auto; height:auto; padding:.5rem .75rem;
-      background:#fff; color:#000; border:2px solid var(--color-primary); z-index:10000;
-    }
-
-    /* Fallback fade-up in case not defined globally */
+    /* Fallback fade-up */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
   </style>
 </head>
-<body>
+<body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <header id="site-header">
@@ -146,17 +134,6 @@
           </ul>
         </li>
 
-        <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
-          <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
-          </ul>
-        </li>
-
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -177,23 +154,44 @@
   </div>
 </section>
 
+<!-- Anchor sub-nav (sticks beneath header on scroll) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">Deliverables</a>
+    <a href="#process">Process</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
 <section id="main-content" class="container fade-up" data-anim-delay="0.2">
   <div class="content-narrow">
-    <h2>Who It’s For</h2>
+    <h2 id="who">Who It’s For</h2>
     <ul class="feature-list">
       <li>Entrepreneurs and SMEs seeking an EU operating vehicle in Cyprus</li>
       <li>Groups relocating functions to optimise operations and compliance footprint</li>
       <li>Founders needing bank-ready documentation and post-incorporation support</li>
     </ul>
 
+    <!-- At a glance cards -->
+    <div class="glance-grid" aria-label="At a glance">
+      <div class="glance-card"><span class="glance-kicker">Timeline</span><strong>~5–10 business days</strong><span>subject to due diligence</span></div>
+      <div class="glance-card"><span class="glance-kicker">Remote</span><strong>Full remote setup</strong><span>in-person only if bank requires</span></div>
+      <div class="glance-card"><span class="glance-kicker">Banking</span><strong>Introductions & KYB</strong><span>no guarantees; pre-triage</span></div>
+      <div class="glance-card"><span class="glance-kicker">Experience</span><strong>30+ years</strong><span>Cyprus-first team</span></div>
+      <div class="glance-card"><span class="glance-kicker">Languages</span><strong>EN/GR/RU</strong><span>others on request</span></div>
+    </div>
+
     <h2 id="deliverables" class="section-spaced">What You Get (Deliverables)</h2>
-    <ul class="feature-list">
-      <li>Company name clearance and constitutional documents (MoA/AoA)</li>
-      <li>Registrar filings (HE forms) and full certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
-      <li>Beneficial ownership register filing (as applicable)</li>
-      <li>Post-incorporation pack and bank/KYB documentation preparation (<a href="banking-administration-services.html">details</a>)</li>
-      <li>Engagement handover to <a href="corporate-secretarial-services.html">Corporate Secretarial</a> and <a href="registered-address-services.html">Registered Address</a> (if required)</li>
-      <li>Related add-ons (scoped separately): <a href="tic-tin-registration-services.html">TIC/TIN</a>, <a href="vat-registration-services.html">VAT</a>, apostille/legalisation via <a href="administrative-services.html">Administrative Services</a></li>
+    <ul class="feature-list feature-grid">
+      <li class="card">Company name clearance and constitutional documents (MoA/AoA)</li>
+      <li class="card">Registrar filings (HE forms) and full certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
+      <li class="card">Beneficial ownership register filing (as applicable)</li>
+      <li class="card">Post-incorporation pack and bank/KYB documentation preparation (<a href="banking-administration-services.html">details</a>)</li>
+      <li class="card">Engagement handover to <a href="corporate-secretarial-services.html">Corporate Secretarial</a> and <a href="registered-address-services.html">Registered Address</a> (if required)</li>
+      <li class="card">Related add-ons: <a href="tic-tin-registration-services.html">TIC/TIN</a>, <a href="vat-registration-services.html">VAT</a>, apostille/legalisation via <a href="administrative-services.html">Administrative Services</a></li>
     </ul>
 
     <div class="proof-strip" aria-label="Service proof points">
@@ -204,7 +202,7 @@
     <p class="muted" style="margin-top:-.5rem">*Bank account approval is always at the bank’s discretion; we pre-triage and support onboarding but do not guarantee outcomes.</p>
 
     <h2 id="process" class="section-spaced">Process &amp; Typical Timeline</h2>
-    <ol class="process-steps">
+    <ol class="process-steps stepper">
       <li><strong>Discovery &amp; KYC pre-screen</strong> — scope, sector/geo review, initial document list (~1–2 business days)</li>
       <li><strong>Name approval &amp; drafting</strong> — MoA/AoA and HE forms prepared (typically ~1–3 business days)</li>
       <li><strong>Registrar filing</strong> — incorporation and certificate issuance (commonly ~3–7 business days, dependent on registrar workload)</li>
@@ -314,6 +312,12 @@
   </div>
 </footer>
 
+<!-- Mobile sticky CTA (shows on small screens only) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Cyprus%20Company%20Formation%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="company-formation">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Formation" class="btn-secondary" data-cta="sticky-book-call" data-page="company-formation">Book a Call</a>
+</div>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -368,22 +372,10 @@
   "image":"https://www.megaserve.eu/assets/og/company-formation-og.jpg",
   "email":"info@megaserve.eu",
   "telephone":"+35722000000",
-  "address":{
-    "@type":"PostalAddress",
-    "addressCountry":"CY"
-  },
+  "address":{"@type":"PostalAddress","addressCountry":"CY"},
   "areaServed":{"@type":"Country","name":"Cyprus"},
-  "sameAs":[
-    "https://www.linkedin.com/company/your-company",
-    "https://www.facebook.com/your-page"
-  ],
-  "contactPoint":[{
-    "@type":"ContactPoint",
-    "contactType":"Customer Service",
-    "telephone":"+35722000000",
-    "email":"info@megaserve.eu",
-    "areaServed":"CY"
-  }]
+  "sameAs":["https://www.linkedin.com/company/your-company","https://www.facebook.com/your-page"],
+  "contactPoint":[{"@type":"ContactPoint","contactType":"Customer Service","telephone":"+35722000000","email":"info@megaserve.eu","areaServed":"CY"}]
 }
 </script>
 
