@@ -53,6 +53,9 @@ img {
   height: auto;
 }
 
+/* Utility note style (used across pages) */
+.note { font-size: .95rem; color: #666; }
+
 /* Accessibility: skip link */
 .skip-link {
   position: absolute;
@@ -769,6 +772,14 @@ img {
 .faq details[open] summary::after {
   transform: rotate(90deg);
   color: var(--color-primary);
+}
+
+/* FAQ notes: improve contrast and spacing */
+#faq .note{
+  color:#333;
+  opacity:1;
+  font-weight:500;
+  margin-bottom:1.25rem;
 }
 
 /* Mobile sticky CTA (appears on small screens) */
