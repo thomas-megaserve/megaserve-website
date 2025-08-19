@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Administrative Services – MegaServe Cyprus</title>
-  <meta name="description" content="Ongoing administrative support: corporate record-keeping, resolutions, filings, renewals, and day-to-day coordination with authorities and banks." />
+  <meta name="description" content="Day-to-day Cyprus corporate administration done cleanly: records, resolutions, filings, renewals, banking and authority liaison, certifications, apostilles, and ongoing compliance cadence." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
@@ -16,6 +16,24 @@
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    /* New helpers for this page */
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+    .process-steps{counter-reset: step;list-style:none;padding-left:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+    .table-wrap{overflow-x:auto}
+    table.service{width:100%;border-collapse:collapse}
+    table.service th,table.service td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th{background:#fafafa}
+    .doc-list{list-style:none;padding-left:0}
+    .doc-list li{padding:.35rem 0}
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+
+    /* Ensure CTA fine print is legible if banner uses a dark/red background */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
@@ -80,17 +98,8 @@
           </ul>
         </li>
 
-        <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
-          <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
-          </ul>
-        </li>
-
+        <!-- NEW: About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -100,28 +109,156 @@
 <section class="page-hero fade-up" data-anim-delay="0.1">
   <div class="container">
     <h1>Administrative Services</h1>
-    <p class="content-narrow">Day-to-day corporate administration so your Cyprus entity stays organised, compliant, and responsive.</p>
+    <p class="content-narrow">Day-to-day corporate administration so your Cyprus entity stays organised, compliant, bankable, and responsive to counterparties and authorities.</p>
   </div>
 </section>
 
-<section class="container fade-up" data-anim-delay="0.2">
+<section class="container fade-up" data-anim-delay="0.15" id="scope">
   <div class="content-narrow">
     <h2>Scope</h2>
     <ul class="feature-list">
-      <li>Corporate record-keeping & minute books</li>
-      <li>Board & shareholder resolutions, POAs</li>
-      <li>Registrar updates, annual returns, renewals</li>
-      <li>Liaison with banks, auditors, and authorities</li>
-      <li>Document certifications, apostilles, translations</li>
+      <li>Corporate record-keeping &amp; minute books (digital + physical, where required)</li>
+      <li>Board &amp; shareholder resolutions, PoAs, incumbency &amp; good-standing docs</li>
+      <li>Registrar updates (officers, UBO/BoR, share capital), annual returns &amp; renewals</li>
+      <li>Liaison with banks/EMIs, auditors, notaries, and authorities (Tax/VAT/Registrar)</li>
+      <li>Certifications, apostilles, legalised translations, couriering and document routing</li>
+      <li>Register management: directors, shareholders, charges, significant controllers</li>
+      <li>KYC refresh cycles, policy implementation, and light compliance housekeeping</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2>Service Levels &amp; Cadence</h2>
+    <div class="table-wrap">
+      <table class="service">
+        <thead>
+          <tr>
+            <th>Activity</th>
+            <th>Typical Cadence</th>
+            <th>Target Response</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Routine corporate certificates / extracts</td>
+            <td>As requested</td>
+            <td>1–3 business days</td>
+            <td>Dependent on registrar queues and courier selection</td>
+          </tr>
+          <tr>
+            <td>Board / shareholder resolution drafting</td>
+            <td>Ad hoc</td>
+            <td>1–2 business days</td>
+            <td>Same-day available for straightforward templates</td>
+          </tr>
+          <tr>
+            <td>Registrar change filings</td>
+            <td>Ad hoc</td>
+            <td>2–5 business days</td>
+            <td>Processing time varies by change type and workload</td>
+          </tr>
+          <tr>
+            <td>KYC refresh / information requests</td>
+            <td>Quarterly / Annual</td>
+            <td>Same–2 business days</td>
+            <td>Aligned to bank/auditor cycles to avoid repetition</td>
+          </tr>
+          <tr>
+            <td>Authority liaison (Tax/VAT/Registrar)</td>
+            <td>Ad hoc</td>
+            <td>Same–2 business days</td>
+            <td>We provide status notes until matter is closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Targets reflect typical handling; statutory or third-party turnaround can affect completion time.</p>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.2" id="handover">
+  <div class="content-narrow">
+    <h2>Handover &amp; Onboarding</h2>
+    <ol class="process-steps">
+      <li><strong>Intake:</strong> short call to map entities, signatories, banks, auditors, and current issues.</li>
+      <li><strong>Data Room:</strong> we create a secure folder structure and import key corporate records.</li>
+      <li><strong>Access:</strong> read-only access to banking/auditor portals where applicable (or proxy via PDFs).</li>
+      <li><strong>Calendar:</strong> we build a filings/renewals calendar (annual return, UBO/BoR, VAT/TIC, licenses).</li>
+      <li><strong>Templates:</strong> resolution/PoA templates aligned to your decision rights and governance style.</li>
+      <li><strong>Go-Live:</strong> confirm points of contact; begin handling daily requests under agreed targets.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.25" id="deliverables">
+  <div class="content-narrow">
+    <h2>Deliverables</h2>
+    <ul class="feature-list">
+      <li>Up-to-date corporate registers and minute books (verifiable trail)</li>
+      <li>Resolution and PoA template pack customised to your structure</li>
+      <li>Annual filings &amp; renewals calendar with reminders</li>
+      <li>Authority correspondences archived and indexed</li>
+      <li>Banking dossier folder (KYC basics, activity narrative, signatory map)</li>
+      <li>Quarterly status note (open items, risks, upcoming renewals)</li>
     </ul>
   </div>
 </section>
 
-<section id="contact-cta" class="fade-up" data-anim-delay="0.3">
+<section class="container fade-up" data-anim-delay="0.3" id="coverage">
+  <div class="content-narrow">
+    <h2>Authorities &amp; Systems We Handle</h2>
+    <ul class="feature-list">
+      <li>Registrar of Companies (officer changes, annual return, BoR/UBO submissions)</li>
+      <li>Tax Department (TIC/TIN changes, basic communications)</li>
+      <li>VAT Service (registrations/updates coordination with your tax advisor)</li>
+      <li>Banks/EMIs (KYC refresh, signatory updates, reference letters, basic onboarding support)</li>
+      <li>Auditors &amp; accountants (requests, confirmations, document packs)</li>
+      <li>Notaries / Ministry of Justice / MFA for apostilles and legalisations</li>
+      <li>Certified translations and couriering (tracked, with delivery proofs)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.35" id="checklist">
+  <div class="content-narrow">
+    <h2>Documents Checklist (Onboarding)</h2>
+    <ul class="doc-list">
+      <li>Certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
+      <li>Memorandum &amp; Articles, current registers, minute book snapshots</li>
+      <li>IDs/PoAs for directors and UBOs; proof of address</li>
+      <li>Latest annual return and any recent registrar filings</li>
+      <li>Auditor details, bank details, and recent KYC requests (if any)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.4" id="faq">
+  <div class="content-narrow">
+    <h2>FAQ</h2>
+    <dl class="faq">
+      <dt>Can you work alongside our existing accountants and auditors?</dt>
+      <dd>Yes. We coordinate documents and requests so your advisors receive what they need on time.</dd>
+
+      <dt>Do you provide certified copies and apostilles?</dt>
+      <dd>Yes. We arrange certifications and apostilles/legalisations and manage couriering end-to-end.</dd>
+
+      <dt>What if our records are incomplete?</dt>
+      <dd>We can reconstruct minute books and registers from registrar records and historical documents.</dd>
+
+      <dt>Can you manage multiple Cyprus entities?</dt>
+      <dd>Yes. We maintain separate calendars and registers, and provide consolidated status updates.</dd>
+    </dl>
+    <p class="note">Have an unusual requirement? Include a short background when you contact us—we’ll factor it into onboarding.</p>
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.45">
   <div class="container">
     <h2>Outsource Your Admin</h2>
     <p class="contact-intro">We can take over immediately with a simple handover checklist.</p>
     <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Get an Admin Quote</a>
+    <p class="note">Prefer a quick kickoff? Email the certificate set + current issues, and we’ll reply with an intake slot.</p>
   </div>
 </section>
 
@@ -134,11 +271,54 @@
     </div>
     <div class="footer-nav">
       <a href="index.html#services">Services</a>
+      <a href="about.html">About</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
+
+<!-- Optional: FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you work alongside our existing accountants and auditors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We coordinate documents and requests so your advisors receive what they need on time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide certified copies and apostilles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We arrange certifications and apostilles/legalisations and manage couriering end-to-end."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if our records are incomplete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can reconstruct minute books and registers from registrar records and historical documents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you manage multiple Cyprus entities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We maintain separate calendars and registers, and provide consolidated status updates."
+      }
+    }
+  ]
+}
+</script>
 
 <script src="script.js?v=12"></script>
 </body>
