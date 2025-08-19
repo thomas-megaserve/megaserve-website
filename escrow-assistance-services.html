@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Escrow Assistance Services – MegaServe Cyprus</title>
-  <meta name="description" content="Neutral escrow coordination for M&A and project transactions: account setup, KYC, milestone releases, and documentation oversight." />
+  <meta name="description" content="Neutral, bankable escrow coordination for M&A and project transactions: provider selection, account setup, KYC/KYB, release mechanics, confirmations, and a clean closing pack." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
@@ -13,12 +13,23 @@
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
     .content-narrow{max-width:900px;margin:0 auto}
+
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
     .process-steps{counter-reset: step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .table-wrap{overflow-x:auto}
+    table.matrix, table.service{width:100%;border-collapse:collapse}
+    table.matrix th,table.matrix td,table.service th,table.service td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.matrix th,table.service th{background:#fafafa}
+
+    /* Keep note text legible on the red CTA strip */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
@@ -83,17 +94,8 @@
           </ul>
         </li>
 
-        <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
-          <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
-          </ul>
-        </li>
-
+        <!-- NEW: About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -103,35 +105,200 @@
 <section class="page-hero fade-up" data-anim-delay="0.1">
   <div class="container">
     <h1>Escrow Assistance Services</h1>
-    <p class="content-narrow">Independent coordination of escrow accounts and releases for M&amp;A, project milestones, and high-value transactions.</p>
+    <p class="content-narrow">Independent, neutral coordination of escrow accounts and releases for M&amp;A, project milestones, and high-value transactions—bankable processes, clear triggers, and complete audit trails.</p>
   </div>
 </section>
 
-<section class="container fade-up" data-anim-delay="0.2">
+<section class="container fade-up" data-anim-delay="0.15" id="overview">
   <div class="content-narrow">
-    <h2>How We Help</h2>
+    <h2>Where We Fit</h2>
     <ul class="feature-list">
-      <li>Escrow provider selection & account setup</li>
-      <li>KYC & documentation coordination</li>
-      <li>Milestone definition & release conditions</li>
-      <li>Funds movement scheduling & confirmations</li>
-      <li>Audit trail & closing documentation</li>
+      <li>Shortlist and selection of an appropriate escrow provider (bank, specialist, or notary/attorney client account)</li>
+      <li>Escrow Agreement support: drafting inputs, review coordination with counsel, and practical release mechanics</li>
+      <li>KYC/KYB orchestration across parties; document collection, verification, and secure data room structure</li>
+      <li>Milestone/condition design: objective triggers, evidence standards, sign-off roles, and fallback pathways</li>
+      <li>Operationalising instructions: standard forms, dual-control signatory maps, and confirmation workflows</li>
+      <li>Funds movement scheduling, SWIFT/transfer confirmations, and reconciliations</li>
+      <li>Closing pack: final confirmations, certificate of release, audit trail, and indexed archive</li>
     </ul>
 
-    <h2>Use Cases</h2>
+    <div class="keyline"></div>
+
+    <h2>Common Use Cases</h2>
     <ul class="feature-list">
-      <li>M&amp;A consideration protection</li>
-      <li>Project delivery & performance guarantees</li>
-      <li>Asset transfers and staged payments</li>
+      <li><strong>M&amp;A consideration protection:</strong> holdback, earn-out, or indemnity escrows</li>
+      <li><strong>Project delivery:</strong> staged releases against completion certificates or acceptance tests</li>
+      <li><strong>Asset transfers:</strong> real estate, IP, or equipment—title/perfection evidence drives releases</li>
+      <li><strong>Dispute-sensitive transactions:</strong> neutral account with predefined adjudication/arbitration steps</li>
     </ul>
   </div>
 </section>
 
-<section id="contact-cta" class="fade-up" data-anim-delay="0.3">
+<section class="container fade-up" data-anim-delay="0.2" id="models">
+  <div class="content-narrow">
+    <h2>Escrow Models Compared</h2>
+    <div class="table-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Typical Use</th>
+            <th>Strengths</th>
+            <th>Considerations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bank Escrow Account</td>
+            <td>Larger transactions; preference for bank-grade custody</td>
+            <td>High counterparty comfort; robust processes &amp; auditability</td>
+            <td>Stricter onboarding; templated agreements; booking timelines apply</td>
+          </tr>
+          <tr>
+            <td>Specialist Escrow Provider</td>
+            <td>Cross-border, complex triggers, or fast deployment needs</td>
+            <td>Flexible mechanics; experience with varied evidence standards</td>
+            <td>Service model varies; confirm jurisdictional enforceability</td>
+          </tr>
+          <tr>
+            <td>Notary/Attorney Client Account</td>
+            <td>Domestic deals; title/perfection driven releases</td>
+            <td>Local familiarity; streamlined for specific asset classes</td>
+            <td>Capacity limits; scope often confined to local law</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Eligibility and final terms sit with the chosen provider. We prepare and steer the file to maximise acceptance and clarity.</p>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.25" id="flow">
+  <div class="content-narrow">
+    <h2>Set-Up &amp; Operations Flow</h2>
+    <ol class="process-steps">
+      <li><strong>Scoping:</strong> deal profile, parties, currencies, milestones, governing law, and timing.</li>
+      <li><strong>Provider Shortlist:</strong> identify candidates; compare onboarding, agreement templates, and rails.</li>
+      <li><strong>Agreement &amp; KYC:</strong> refine release mechanics with counsel; run KYC/KYB and data room intake.</li>
+      <li><strong>Account Opening:</strong> signatures, portal access, instruction templates, and value-date plan.</li>
+      <li><strong>Live Administration:</strong> receive evidence, validate against triggers, coordinate releases, confirm SWIFT/transfer.</li>
+      <li><strong>Close &amp; Archive:</strong> final confirmations, residuals handling, certificate of completion, indexed archive.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.3" id="terms">
+  <div class="content-narrow">
+    <h2>Controls &amp; Release Mechanics</h2>
+    <ul class="feature-list">
+      <li><strong>Objective triggers:</strong> delivery certificates, registration extracts, auditor letters, or escrow agent attestations</li>
+      <li><strong>Dual-control:</strong> pre-agreed signatory matrix and countersign requirements for instructions</li>
+      <li><strong>Evidence standards:</strong> who issues, acceptable formats, notarisation/apostille needs, translations</li>
+      <li><strong>Disputes:</strong> escalation path, timeout rules, and governing adjudication/arbitration forum</li>
+      <li><strong>Fallbacks:</strong> partial releases, interest accrual, and long-stop provisions</li>
+      <li><strong>Data handling:</strong> secure channels, encryption, access controls, and retention periods</li>
+    </ul>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.35" id="deliverables">
+  <div class="content-narrow">
+    <h2>Deliverables</h2>
+    <ul class="feature-list">
+      <li>Provider shortlist with pros/cons and onboarding notes</li>
+      <li>Escrow Agreement inputs pack (release clause options and evidence schedule)</li>
+      <li>KYC/KYB dossier and structured data room</li>
+      <li>Instruction templates (deposit, release, amendment) with signatory matrix</li>
+      <li>Milestone tracker and communications plan</li>
+      <li>Closing pack (confirmations, certificate of release, audit-ready archive)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.4" id="timelines">
+  <div class="content-narrow">
+    <h2>Indicative Lead Times</h2>
+    <div class="table-wrap">
+      <table class="service">
+        <thead>
+          <tr>
+            <th>Work Package</th>
+            <th>Typical Timeline</th>
+            <th>Outputs</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Scoping &amp; Shortlist</td>
+            <td>3–5 business days</td>
+            <td>Deal profile, provider shortlist, onboarding map</td>
+            <td>Faster if parties &amp; jurisdictions are known</td>
+          </tr>
+          <tr>
+            <td>Agreement &amp; KYC Intake</td>
+            <td>1–2 weeks</td>
+            <td>Draft release mechanics, evidence schedule, KYC/KYB dossier</td>
+            <td>Legal review cadence can influence duration</td>
+          </tr>
+          <tr>
+            <td>Account Opening</td>
+            <td>1–3 weeks</td>
+            <td>Executed agreement, account live, instruction templates</td>
+            <td>Provider processing windows vary</td>
+          </tr>
+          <tr>
+            <td>Live Administration &amp; Close</td>
+            <td>Deal-dependent</td>
+            <td>Release confirmations, reconciliations, closing pack</td>
+            <td>Based on milestones and evidence flow</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">We sequence steps to avoid bottlenecks—e.g., running KYC intake in parallel with agreement refinement where appropriate.</p>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.45" id="checklist">
+  <div class="content-narrow">
+    <h2>Documents Checklist (Typical)</h2>
+    <ul class="feature-list">
+      <li>Corporate certificate set, registers, and signatory IDs/PoAs</li>
+      <li>Deal summary: parties, consideration, milestones, governing law</li>
+      <li>Evidence standards: who issues, formatting, notarisation/translations</li>
+      <li>Banking coordinates and expected currencies/flows</li>
+      <li>Contact matrix: legal, finance, and authorised signers per party</li>
+    </ul>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.5" id="faq">
+  <div class="content-narrow">
+    <h2>FAQ</h2>
+    <dl class="faq">
+      <dt>Do you act as the escrow agent or hold client funds?</dt>
+      <dd>No. We coordinate licensed providers and banks; we do not hold client monies.</dd>
+
+      <dt>Can you work on cross-border transactions?</dt>
+      <dd>Yes. We align providers, counsel, and evidence standards across jurisdictions and manage translations/apostilles where needed.</dd>
+
+      <dt>Can you help if parties anticipate disputes?</dt>
+      <dd>Yes. We structure clear triggers, escalation paths, and timeouts so the agreement handles edge cases predictably.</dd>
+
+      <dt>Will you monitor milestones and evidence?</dt>
+      <dd>Yes. We operate a tracker, validate evidence against agreed standards, and coordinate releases with formal confirmations.</dd>
+    </dl>
+    <p class="note">Share any unusual aspects early (jurisdictions, evidence types, third-party approvals). We’ll reflect them in the agreement inputs and provider selection.</p>
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.55">
   <div class="container">
     <h2>Set Up an Escrow</h2>
-    <p class="contact-intro">We’ll propose a secure, cost-effective escrow workflow for your transaction.</p>
+    <p class="contact-intro">We’ll propose a secure, practical escrow workflow aligned to your transaction and timeline.</p>
     <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Talk to an Advisor</a>
+    <p class="note">Prefer a quick kickoff? Email the deal summary + parties &amp; jurisdictions. We’ll reply with a shortlist/intake slot.</p>
   </div>
 </section>
 
@@ -144,11 +311,54 @@
     </div>
     <div class="footer-nav">
       <a href="index.html#services">Services</a>
+      <a href="about.html">About</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
+
+<!-- Optional: FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you act as the escrow agent or hold client funds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We coordinate licensed providers and banks; we do not hold client monies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you work on cross-border transactions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We align providers, counsel, and evidence standards across jurisdictions and manage translations/apostilles where needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help if parties anticipate disputes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We structure clear triggers, escalation paths, and timeouts so the agreement handles edge cases predictably."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will you monitor milestones and evidence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We operate a tracker, validate evidence against agreed standards, and coordinate releases with formal confirmations."
+      }
+    }
+  ]
+}
+</script>
 
 <script src="script.js?v=12"></script>
 </body>
