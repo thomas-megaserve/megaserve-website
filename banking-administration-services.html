@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Banking Administration Services – MegaServe Cyprus</title>
-  <meta name="description" content="Bank account opening, KYC/KYB packs, banking relationship management, payment rails, and ongoing account administration." />
+  <meta name="description" content="Cyprus & EU banking administration: bank/EMI selection, account opening, KYC/KYB dossiers, relationship management, payment rails, user access, reviews, and ongoing compliance scheduling." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
@@ -19,6 +19,20 @@
     .process-steps{counter-reset: step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    /* Page helpers */
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+    .table-wrap{overflow-x:auto}
+    table.matrix, table.service, table.scope{width:100%;border-collapse:collapse}
+    table.matrix th, table.matrix td,
+    table.service th, table.service td,
+    table.scope th, table.scope td {border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.matrix th, table.service th, table.scope th{background:#fafafa}
+    .badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.2rem .6rem;font-size:.8rem;margin:.15rem .35rem 0 0}
+
+    /* Ensure CTA note is legible if banner uses a dark/red background */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
@@ -83,17 +97,8 @@
           </ul>
         </li>
 
-        <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
-          <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
-          </ul>
-        </li>
-
+        <!-- NEW: About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -103,36 +108,224 @@
 <section class="page-hero fade-up" data-anim-delay="0.1">
   <div class="container">
     <h1>Banking Administration Services</h1>
-    <p class="content-narrow">Open, maintain, and optimise your banking footprint in Cyprus & the EU. We manage KYC/KYB, relationships, and payment rails.</p>
+    <p class="content-narrow">Open, maintain, and optimise your banking footprint in Cyprus and the EU. We handle selection, onboarding, KYC/KYB, user access, reviews, and ongoing relationship management.</p>
   </div>
 </section>
 
-<section class="container fade-up" data-anim-delay="0.2">
+<section class="container fade-up" data-anim-delay="0.15" id="overview">
   <div class="content-narrow">
-    <h2>Services</h2>
+    <h2>What We Manage</h2>
     <ul class="feature-list">
-      <li>Account opening with Cyprus/EU banks & EMIs</li>
-      <li>KYC/KYB pack preparation and reviews</li>
-      <li>Bank relationship management & updates</li>
-      <li>Merchant account & gateway introductions</li>
-      <li>Compliance responses, periodic reviews</li>
+      <li>Bank/EMI shortlist aligned to activity profile, jurisdictions, and counterparties</li>
+      <li>KYC/KYB dossier: corporate docs, activity narrative, flow mapping, beneficial ownership</li>
+      <li>Account opening: forms, portal uploads, interviews, clarifications, approvals</li>
+      <li>Payment rails: SEPA/SCT Inst, SWIFT, Faster Payments, local corridors where available</li>
+      <li>Merchant acquiring &amp; PSP introductions; gateway settings &amp; MCC alignment</li>
+      <li>User access &amp; controls: signatory matrix, roles, limits, and 2FA policy</li>
+      <li>Ongoing administration: signatory changes, reference letters, statements, attestations</li>
+      <li>Periodic reviews: KYC refresh cycles, alerts, remediation, and status notes</li>
     </ul>
 
+    <div class="keyline"></div>
+
+    <h2>Footprint Options</h2>
+    <div class="table-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>Channel</th>
+            <th>Typical Use</th>
+            <th>Strengths</th>
+            <th>Considerations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cyprus / EU Bank</td>
+            <td>Primary operating account; payroll; vendor payments</td>
+            <td>Broad rails; credibility with auditors &amp; counterparties</td>
+            <td>More stringent onboarding; review cycles can be formal</td>
+          </tr>
+          <tr>
+            <td>EU EMI (E-money)</td>
+            <td>Multi-currency collections; fast onboarding adjunct</td>
+            <td>Speed; API-friendly; virtual IBANs</td>
+            <td>Limits/features vary; settlement and tiering policies apply</td>
+          </tr>
+          <tr>
+            <td>Merchant Acquirer / PSP</td>
+            <td>Card processing and gateway routing</td>
+            <td>Higher approval ratios; risk tools &amp; dashboards</td>
+            <td>MCC fit; chargeback handling; reserve/rolling terms</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Final eligibility remains at the discretion of the bank/EMI/acquirer. We position the file to maximise acceptance probability.</p>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.2" id="opening-flow">
+  <div class="content-narrow">
     <h2>Opening Flow</h2>
     <ol class="process-steps">
-      <li>Banking profile & risk fit assessment</li>
-      <li>Document pack assembly & submission</li>
-      <li>Interviews/queries and approvals</li>
-      <li>Activation, limits, and user setups</li>
+      <li><strong>Fit Assessment:</strong> activity, jurisdictions, counterparties, projected volumes, and beneficial owners.</li>
+      <li><strong>Dossier Build:</strong> corporate certificates, registers, IDs/PoAs, activity narrative, flow &amp; corridor map.</li>
+      <li><strong>Submission &amp; Interviews:</strong> portal forms, clarifications, compliance interviews, risk notes.</li>
+      <li><strong>Activation:</strong> user setup, signatory matrix, limits, 2FA, test payments, card &amp; FX settings.</li>
     </ol>
   </div>
 </section>
 
-<section id="contact-cta" class="fade-up" data-anim-delay="0.3">
+<section class="container fade-up" data-anim-delay="0.25" id="deliverables">
+  <div class="content-narrow">
+    <h2>Deliverables</h2>
+    <ul class="feature-list">
+      <li>Banking shortlist with pros/cons, dependencies, and sequence of applications</li>
+      <li>KYC/KYB dossier ready for upload (structured file tree + PDFs)</li>
+      <li>Activity narrative and payment flow diagram for compliance reviews</li>
+      <li>Signatory matrix &amp; user access plan (roles, limits, dual-control options)</li>
+      <li>Merchant/PSP intake pack and gateway settings checklist</li>
+      <li>Banking maintenance calendar (reviews, attestations, card/limit refresh dates)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.3" id="service-levels">
+  <div class="content-narrow">
+    <h2>Service Levels &amp; Frequency</h2>
+    <div class="table-wrap">
+      <table class="service">
+        <thead>
+          <tr>
+            <th>Activity</th>
+            <th>Typical Frequency</th>
+            <th>Target Response</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beneficiary / user access updates</td>
+            <td>Ad hoc</td>
+            <td>Same–2 business days</td>
+            <td>Subject to bank portal processing/approvals</td>
+          </tr>
+          <tr>
+            <td>Bank reference letters / attestations</td>
+            <td>As requested</td>
+            <td>1–3 business days</td>
+            <td>Dependent on bank/EMI turnaround</td>
+          </tr>
+          <tr>
+            <td>KYC refresh &amp; periodic reviews</td>
+            <td>Annual / biennial</td>
+            <td>Same–2 business days</td>
+            <td>We stage documents to prevent back-and-forth</td>
+          </tr>
+          <tr>
+            <td>Limits / corridor adjustments</td>
+            <td>Ad hoc</td>
+            <td>1–5 business days</td>
+            <td>Requires usage data &amp; rationale; sometimes board resolution</td>
+          </tr>
+          <tr>
+            <td>Merchant/PSP onboarding support</td>
+            <td>Ad hoc</td>
+            <td>2–5 business days</td>
+            <td>MCC mapping and reserve terms can extend timelines</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Targets reflect typical handling; third-party processing and enhanced due diligence may extend completion.</p>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.35" id="scope-timelines">
+  <div class="content-narrow">
+    <h2>Indicative Timelines &amp; Scope</h2>
+    <div class="table-wrap">
+      <table class="scope">
+        <thead>
+          <tr>
+            <th>Work Package</th>
+            <th>Typical Timeline</th>
+            <th>Outputs</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bank/EMI Shortlist &amp; Plan</td>
+            <td>3–7 business days</td>
+            <td>Fit analysis, shortlist (2–3), sequence, dossier checklist</td>
+            <td>Based on activity profile &amp; counterparties</td>
+          </tr>
+          <tr>
+            <td>Dossier Build &amp; Submission</td>
+            <td>1–2 weeks</td>
+            <td>KYC/KYB pack, activity narrative, flow diagram, portal submission</td>
+            <td>Assumes corporate docs are available/current</td>
+          </tr>
+          <tr>
+            <td>Onboarding &amp; Activation</td>
+            <td>2–6 weeks</td>
+            <td>Approvals, user setup, limits, test payments, cards &amp; FX settings</td>
+            <td>Timing varies by institution and risk tier</td>
+          </tr>
+          <tr>
+            <td>Ongoing Administration</td>
+            <td>Quarterly / Ad hoc</td>
+            <td>Reviews, updates, letters, audits support, issue triage</td>
+            <td>Calendar maintained with reminders</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Final scope is confirmed after initial assessment. We can bundle packages once dependencies are clear.</p>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.4" id="checklist">
+  <div class="content-narrow">
+    <h2>Documents Checklist (Typical)</h2>
+    <ul class="feature-list">
+      <li>Certificate set, registers, Memorandum &amp; Articles, minute book snapshots</li>
+      <li>UBO/director IDs &amp; PoAs; proof of address; CVs if requested</li>
+      <li>Business activity narrative; counterparties &amp; jurisdictions list</li>
+      <li>Projected volumes (monthly), currencies, and example invoices/contracts</li>
+      <li>Existing accounts and pain points (if any); auditor details</li>
+    </ul>
+  </div>
+</section>
+
+<section class="container fade-up" data-anim-delay="0.45" id="faq">
+  <div class="content-narrow">
+    <h2>FAQ</h2>
+    <dl class="faq">
+      <dt>Can you guarantee account opening?</dt>
+      <dd>No firm can guarantee approvals. We position the file, sequence applications, and escalate appropriately to maximise acceptance.</dd>
+
+      <dt>Do you work with both banks and EMIs?</dt>
+      <dd>Yes. We maintain options across Cyprus/EU banks and reputable EMIs to balance credibility, speed, and feature set.</dd>
+
+      <dt>What if our business has historical issues?</dt>
+      <dd>We prepare a candid compliance narrative, address past items directly, and propose clean payment flows and controls.</dd>
+
+      <dt>Can you support card acquiring and PSP setup?</dt>
+      <dd>Yes. We prepare merchant packs, map MCCs, and coordinate with PSPs/gateways for a smooth go-live.</dd>
+    </dl>
+    <p class="note">Share any unique aspects early (jurisdictions, counterparties, products). We’ll reflect them in the shortlist and narrative.</p>
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5">
   <div class="container">
     <h2>Need Banking Support?</h2>
-    <p class="contact-intro">We’ll shortlist suitable banks/EMIs and guide you through approval.</p>
+    <p class="contact-intro">We’ll shortlist suitable banks/EMIs and guide you through approval and activation.</p>
     <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Start Banking Setup</a>
+    <p class="note">Prefer a quick kickoff? Email your certificate set + activity narrative draft; we’ll reply with an intake slot.</p>
   </div>
 </section>
 
@@ -145,11 +338,54 @@
     </div>
     <div class="footer-nav">
       <a href="index.html#services">Services</a>
+      <a href="about.html">About</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
+
+<!-- Optional: FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you guarantee account opening?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No firm can guarantee approvals. We position the file, sequence applications, and escalate appropriately to maximise acceptance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with both banks and EMIs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We maintain options across Cyprus/EU banks and reputable EMIs to balance credibility, speed, and feature set."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if our business has historical issues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We prepare a candid compliance narrative, address past items directly, and propose clean payment flows and controls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you support card acquiring and PSP setup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We prepare merchant packs, map MCCs, and coordinate with PSPs/gateways for a smooth go-live."
+      }
+    }
+  ]
+}
+</script>
 
 <script src="script.js?v=12"></script>
 </body>
