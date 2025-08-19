@@ -3,14 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <title>Directorship & Management Services — MegaServe Cyprus</title>
-  <meta name="description" content="Professional resident directors and management support to demonstrate substance.">
+  <meta name="description" content="Resident professional directors and corporate officers in Cyprus. Governance setup, board management, substance support, decision records, risk oversight, and bankable operations.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <link rel="stylesheet" href="style.css?v=12">
+
+  <!-- Page-local helpers -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+
+    .table-wrap{overflow-x:auto}
+    table.matrix, table.service{width:100%;border-collapse:collapse}
+    table.matrix th,table.matrix td,table.service th,table.service td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.matrix th,table.service th{background:#fafafa}
+
+    /* CTA fine print legible on dark strip */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -44,7 +71,7 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a aria-current="page" href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
             <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
             <li><a href="registered-address-services.html">Registered Address Services</a></li>
             <li><a href="virtual-office-services.html">Virtual Office Services</a></li>
@@ -83,18 +110,8 @@
           </ul>
         </li>
 
-        <!-- Compliance Services -->
-        <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
-          <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
-          </ul>
-        </li>
-
+        <!-- NEW: About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +119,219 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
-      <h1>Directorship & Management Services</h1>
-      <p>Experienced resident directors and corporate officers to support control and substance.</p>
-      <ul><li>Provision of resident corporate/individual directors</li><li>Board calendar, approvals and governance cadence</li><li>Substance support (meetings in Cyprus, records, premises)</li><li>Fiduciary duties observed with clear service standards</li></ul>
+      <h1>Directorship &amp; Management Services</h1>
+      <p class="content-narrow">Resident professional directors and corporate officers to establish control and substance in Cyprus—governance that counterparties, banks, and auditors recognise.</p>
+    </div>
+  </section>
+
+  <!-- WHAT WE PROVIDE -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Provide</h2>
+      <ul class="feature-list">
+        <li>Appointment of resident professional directors and, where appropriate, corporate officers</li>
+        <li>Board calendar &amp; approvals schedule; meeting organisation (agenda, packs, minutes)</li>
+        <li>Decision records and registers: resolutions, delegations, powers of attorney</li>
+        <li>Substance support: meetings in Cyprus, document custody, premises coordination</li>
+        <li>Bank signatory frameworks, user roles/limits, and dual-control arrangements</li>
+        <li>Policy framework: conflicts, related-party matters, and information barriers</li>
+        <li>Counterparty &amp; auditor interface: structured responses and confirmations</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>Roles &amp; Responsibilities</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>What We Do</th>
+              <th>Boundaries</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Director (Resident)</td>
+              <td>Attend/lead board meetings; review/approve matters within agreed delegations; maintain decision records; ensure filings are initiated.</td>
+              <td>Not a “rubber stamp”; no decisions outside authority; no shadow direction from non-board parties.</td>
+            </tr>
+            <tr>
+              <td>Corporate Officer</td>
+              <td>Execute filings, maintain registers/minute books, coordinate with registrar, banks, auditors, and authorities.</td>
+              <td>Does not replace regulated advisors (tax/legal/audit); escalates non-routine matters to the board.</td>
+            </tr>
+            <tr>
+              <td>Bank Signatory</td>
+              <td>Implement role/limit matrix; operate dual control; maintain user access list and updates.</td>
+              <td>No personal custody of client funds; actions only per board-approved mandates.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note">We work within clear delegations approved by your board. Independence and documented decision-making are central to our appointments.</p>
+    </div>
+  </section>
+
+  <!-- GOVERNANCE SETUP -->
+  <section class="container fade-up" data-anim-delay="0.2" id="governance">
+    <div class="content-narrow">
+      <h2>Governance Setup</h2>
+      <ul class="feature-list">
+        <li>Board composition review and role definitions (chair, director, officer, company secretary)</li>
+        <li>Decision inventory and delegated authority matrix (financial, banking, contracts, HR)</li>
+        <li>Meeting logistics: Cyprus venue/virtual, agenda sequence, and supporting papers</li>
+        <li>Policy set: conflicts of interest, related-party transactions, approval thresholds</li>
+        <li>Registers &amp; books: directors, shareholders, charges, and minute books (digital + physical)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ONBOARDING PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.25" id="onboarding">
+    <div class="content-narrow">
+      <h2>Onboarding Process</h2>
+      <ol class="process-steps">
+        <li><strong>Intake:</strong> corporate history, business model, counterparties, existing mandates.</li>
+        <li><strong>Diligence:</strong> KYC/KYB for proposed appointees; conflicts check; insurance alignment if applicable.</li>
+        <li><strong>Mandates:</strong> prepare/update board resolutions, PoAs, and bank signatory matrices.</li>
+        <li><strong>Calendar:</strong> set annual board schedule, recurring approvals, and filings reminders.</li>
+        <li><strong>Go-Live:</strong> first meeting held; minutes issued; action log opened and tracked.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SERVICE LEVELS -->
+  <section class="container fade-up" data-anim-delay="0.3" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Frequency</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Board meeting scheduling &amp; packs</td>
+              <td>Quarterly / Ad hoc</td>
+              <td>Draft agenda within 2–3 business days</td>
+              <td>Includes action log and decision register update</td>
+            </tr>
+            <tr>
+              <td>Minutes &amp; resolutions circulation</td>
+              <td>Per meeting</td>
+              <td>Within 3–5 business days</td>
+              <td>Expedited same-day available for simple items</td>
+            </tr>
+            <tr>
+              <td>Bank signatory/user updates</td>
+              <td>Ad hoc</td>
+              <td>Same–2 business days</td>
+              <td>Subject to bank processing windows</td>
+            </tr>
+            <tr>
+              <td>Officer/registrar filings</td>
+              <td>Ad hoc</td>
+              <td>2–5 business days</td>
+              <td>Timing varies by change type and workload</td>
+            </tr>
+            <tr>
+              <td>KYC refresh for officers/directors</td>
+              <td>Annual / Biennial</td>
+              <td>Same–2 business days</td>
+              <td>Aligned to bank/auditor cycles to avoid repetition</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Targets reflect typical handling; statutory or third-party turnaround can affect completion time.</p>
+    </div>
+  </section>
+
+  <!-- SUBSTANCE SUPPORT -->
+  <section class="container fade-up" data-anim-delay="0.35" id="substance">
+    <div class="content-narrow">
+      <h2>Substance Support</h2>
+      <ul class="feature-list">
+        <li>Board meetings held in Cyprus; attendance records and venue documentation</li>
+        <li>Document custody and minute books (verifiable trail)</li>
+        <li>Registered/physical office and VO options coordinated with our team</li>
+        <li>Travel &amp; logistics assistance for non-resident directors</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.4" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Appointment documents and updated corporate registers</li>
+        <li>Board calendar and annual approvals schedule</li>
+        <li>Delegated authority &amp; signatory matrix (banking/user roles/limits)</li>
+        <li>Board packs, minutes, resolutions, and decision register</li>
+        <li>Compliance &amp; filings calendar (annual return, UBO/BoR, licenses)</li>
+        <li>Quarterly status note: open actions, risks, upcoming approvals</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="container fade-up" data-anim-delay="0.45" id="checklist">
+    <div class="content-narrow">
+      <h2>Documents Checklist (Onboarding)</h2>
+      <ul class="feature-list">
+        <li>Certificate set, Memorandum &amp; Articles, current registers, minute book snapshot</li>
+        <li>Shareholder and group structure (current &amp; any intended changes)</li>
+        <li>Existing bank mandates and user lists</li>
+        <li>Delegation of authority / approval thresholds (if any)</li>
+        <li>Key contracts and counterparties summary</li>
+        <li>Policy set (conflicts, related-party, signing policy) if available</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container fade-up" data-anim-delay="0.5" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <dl class="faq">
+        <dt>Will directors be genuinely involved or only sign documents?</dt>
+        <dd>They participate in scheduled meetings, review packs, ask questions, and approve within agreed delegations. We document the decision process.</dd>
+
+        <dt>How are conflicts of interest handled?</dt>
+        <dd>Conflicts are declared in advance; conflicted directors recuse from decisions as needed. We maintain a conflicts register.</dd>
+
+        <dt>Do you provide bank signatories?</dt>
+        <dd>Yes, within board-approved mandates. We operate dual control and maintain an up-to-date access list.</dd>
+
+        <dt>Can you work with our existing advisors?</dt>
+        <dd>Yes. We coordinate with your tax, legal, audit, and finance teams; we do not replace them.</dd>
+      </dl>
+      <p class="note">Share any unusual constraints early (counterparties, jurisdictions, approval thresholds). We’ll reflect them in the authority matrix and meeting plan.</p>
     </div>
   </section>
 
   <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+    <div class="container">
+      <h2>Start Your Cyprus Governance Right</h2>
+      <p class="contact-intro">
+        Appoint resident professionals, organise your board, and make your structure bankable to counterparties and auditors.
+      </p>
+      <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Discuss Appointments</a>
+      <p class="note">Prefer a quick kickoff? Email your certificate set + current mandates. We’ll reply with an intake slot.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +343,56 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- Optional: FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will directors be genuinely involved or only sign documents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They participate in scheduled meetings, review packs, ask questions, and approve within agreed delegations. We document the decision process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are conflicts of interest handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conflicts are declared in advance; conflicted directors recuse from decisions as needed. A conflicts register is maintained."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide bank signatories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, within board-approved mandates. Dual control is used and an up-to-date access list is maintained."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you work with our existing advisors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We coordinate with your tax, legal, audit, and finance teams; we do not replace them."
+      }
+    }
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
