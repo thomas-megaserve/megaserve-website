@@ -3,14 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>VAT Registration Services — MegaServe Cyprus</title>
-  <meta name="description" content="Cyprus VAT registration and post‑registration support.">
+  <meta name="description" content="Cyprus VAT registration done cleanly: eligibility review, application pack, authority liaison, certificates, e-Services activation, and post-registration compliance setup.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (consistent with other service pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on red strip */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -68,7 +97,7 @@
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
             <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a aria-current="page" href="vat-registration-services.html">VAT Registration Services</a></li>
             <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
@@ -95,6 +124,8 @@
           </ul>
         </li>
 
+        <!-- NEW: About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +133,283 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
       <h1>VAT Registration Services</h1>
-      <p>Get VAT‑ready with correct registration and process setup.</p>
-      <ul><li>Threshold and activity assessment</li><li>Application pack, EORI (if required)</li><li>Post‑registration compliance calendar</li><li>Set‑up for VAT returns and record‑keeping</li></ul>
+      <p class="content-narrow">Get VAT-ready in Cyprus with a clean application, correct evidencing, and a post-registration setup that banks, auditors, and counterparties recognise.</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Handle</h2>
+      <ul class="feature-list">
+        <li>Eligibility check: thresholds, fixed establishment, place-of-supply and activity profile</li>
+        <li>Registration type selection (domestic, non-established, group, special schemes where applicable)</li>
+        <li>Application pack preparation and authority liaison</li>
+        <li>EORI (if needed for imports) and VIES (intra-EU) setup notes</li>
+        <li>e-Services activation and handover to your tax advisor</li>
+        <li>Post-registration calendar: return periods, VIES/Intrastat (if thresholds apply), reminders</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>When Registration Is Typically Required</h2>
+      <ul class="feature-list">
+        <li>Local supplies of goods/services in Cyprus reaching or expected to reach statutory thresholds</li>
+        <li>Intra-EU acquisitions or supplies and distance-selling scenarios</li>
+        <li>Importing goods into the EU via Cyprus or holding stock locally</li>
+        <li>Voluntary registration to recover input VAT (subject to rules)</li>
+      </ul>
+      <p class="note">We avoid fixed thresholds in writing here—your tax advisor confirms exact numeric tests and effective dates.</p>
+    </div>
+  </section>
+
+  <!-- REGISTRATION OPTIONS MATRIX -->
+  <section class="container fade-up" data-anim-delay="0.2" id="options">
+    <div class="content-narrow">
+      <h2>Registration Options (At a Glance)</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Typical Use</th>
+              <th>Strengths</th>
+              <th>Considerations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Domestic VAT Number</td>
+              <td>Cyprus-based trading with local inputs/outputs</td>
+              <td>Standard compliance baseline; bank/auditor familiarity</td>
+              <td>Regular returns; VIES/Intrastat if applicable</td>
+            </tr>
+            <tr>
+              <td>Non-Established Registration</td>
+              <td>No fixed establishment, but taxable supplies in Cyprus</td>
+              <td>Enables local charging/recovery where allowed</td>
+              <td>Representation or local address may be needed</td>
+            </tr>
+            <tr>
+              <td>VAT Group (where eligible)</td>
+              <td>Related entities seeking internal supply simplification</td>
+              <td>Simplifies filings; potential cash-flow benefits</td>
+              <td>Eligibility and governance requirements apply</td>
+            </tr>
+            <tr>
+              <td>OSS / IOSS (EU Schemes)</td>
+              <td>Cross-border B2C supplies of services/goods</td>
+              <td>Single return for multiple EU states (scope-dependent)</td>
+              <td>Scheme scope is specific—coordinate with tax advisor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">We’ll outline viable paths and coordinate with your advisors to confirm the optimal route.</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.25" id="process">
+    <div class="content-narrow">
+      <h2>Process &amp; Typical Timeline</h2>
+      <ol class="process-steps">
+        <li><strong>Scoping &amp; Pre-check:</strong> activity profile, supply chains, and documents list.</li>
+        <li><strong>Drafting &amp; Evidence:</strong> forms, supporting contracts/invoices, and certification instructions.</li>
+        <li><strong>Submission &amp; Clarifications:</strong> lodge application; respond to queries; arrange e-Services.</li>
+        <li><strong>Issuance &amp; Handover:</strong> VAT number/certificate provided; bank/auditor confirmations sent.</li>
+        <li><strong>Stabilise:</strong> calendar setup, VIES/Intrastat notes, user access guide, and first-return checklist.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SERVICE LEVELS -->
+  <section class="container fade-up" data-anim-delay="0.3" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Timing</th>
+              <th>Who Signs</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eligibility &amp; documents pre-check</td>
+              <td>Same–2 business days</td>
+              <td>—</td>
+              <td>We flag gaps and certification formats early</td>
+            </tr>
+            <tr>
+              <td>Forms &amp; evidence preparation</td>
+              <td>2–5 business days</td>
+              <td>Director/authorised signatory</td>
+              <td>Includes optional EORI/VIES notes</td>
+            </tr>
+            <tr>
+              <td>Submission &amp; clarifications</td>
+              <td>Authority-dependent</td>
+              <td>Authorised representative</td>
+              <td>Subject to workload and any enhanced checks</td>
+            </tr>
+            <tr>
+              <td>Issuance &amp; confirmations</td>
+              <td>Prompt after issuance</td>
+              <td>—</td>
+              <td>We notify banks/auditors on request</td>
+            </tr>
+            <tr>
+              <td>e-Services activation (optional)</td>
+              <td>1–3 business days</td>
+              <td>Director/authorised user</td>
+              <td>Includes role setup and basic orientation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timings reflect typical handling; authority queues and enhanced due diligence may extend completion.</p>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.35" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>VAT number and registration certificate</li>
+        <li>Copy of filed application and supporting evidence</li>
+        <li>Authority correspondence archived and indexed</li>
+        <li>Post-registration calendar (returns, VIES/Intrastat if applicable)</li>
+        <li>Optional: e-Services access setup and user guide</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHECKLISTS -->
+  <section class="container fade-up" data-anim-delay="0.4" id="checklist">
+    <div class="content-narrow">
+      <h2>Documents Checklist</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Cyprus Entity</th>
+              <th>Non-Established Entity</th>
+              <th>Supporting Evidence (Typical)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <ul class="feature-list">
+                  <li>Certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
+                  <li>Memorandum &amp; Articles (latest)</li>
+                  <li>Directors’ IDs/PoAs; authorised signatory ID</li>
+                  <li>Contact details and activity overview</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="feature-list">
+                  <li>Parent/home-country registration extract</li>
+                  <li>Authorised representative/PoA</li>
+                  <li>Registered address evidence</li>
+                  <li>Local contact/agent details (if applicable)</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="feature-list">
+                  <li>Draft/customer contracts or invoices</li>
+                  <li>Supply chain/flows narrative; stock or service locations</li>
+                  <li>Import/export plans; logistics/VIES expectations</li>
+                  <li>Bank details (for authority records)</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">We’ll provide certification formats and samples. Translations/apostilles arranged where required.</p>
+    </div>
+  </section>
+
+  <!-- POST-REGISTRATION OBLIGATIONS -->
+  <section class="container fade-up" data-anim-delay="0.45" id="post-reg">
+    <div class="content-narrow">
+      <h2>After Registration</h2>
+      <ul class="feature-list">
+        <li>Return periods and payment channels confirmed</li>
+        <li>VIES recapitulative statements (if applicable)</li>
+        <li>Intrastat arrivals/dispatches (if thresholds apply)</li>
+        <li>Record-keeping format and retention guidance</li>
+        <li>Change notifications (officers, address, activity) to keep files current</li>
+      </ul>
+      <p class="note">We coordinate with your accountants for filings. Information here is general and not tax advice.</p>
+    </div>
+  </section>
+
+  <!-- RELATED SERVICES -->
+  <section class="container fade-up" data-anim-delay="0.5" id="related">
+    <div class="content-narrow">
+      <h2>Related Services</h2>
+      <ul class="feature-list">
+        <li><a href="tic-tin-registration-services.html">TIC / TIN Registration</a></li>
+        <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+        <li><a href="corporate-secretarial-services.html">Corporate Secretarial</a> (for ongoing changes &amp; annual return)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.55" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>Cyprus-based team with 30+ years’ corporate services experience. We align registrar, tax, and banking workflows so your VAT profile is credible to counterparties from day one.</p>
+      <ul class="feature-list">
+        <li>EN/GR/RU service; others on request</li>
+        <li>Bank-ready confirmations for onboarding</li>
+        <li>Clear handover to your accountants for returns</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container fade-up" data-anim-delay="0.6" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <dl class="faq">
+        <dt>How long does VAT registration take?</dt>
+        <dd>Timing depends on authority workload and file complexity. We focus on clean, complete submissions to avoid rework.</dd>
+
+        <dt>Can we register voluntarily?</dt>
+        <dd>Often yes—subject to rules and your facts. We coordinate with your tax advisor to confirm eligibility and implications.</dd>
+
+        <dt>Do we need OSS/IOSS as well?</dt>
+        <dd>Only for specific cross-border B2C scenarios. We’ll flag if your activity suggests exploring these schemes.</dd>
+
+        <dt>Will you notify our bank and auditor?</dt>
+        <dd>Yes—on request we issue a confirmation pack and update your corporate file.</dd>
+      </dl>
+      <p class="note">This page is informational, not tax advice. Your advisors confirm technical positions and thresholds.</p>
     </div>
   </section>
 
   <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.65">
+    <div class="container">
+      <h2>Register for VAT</h2>
+      <p class="contact-intro">Email your certificate set (or non-established evidence) and a short activity summary— we’ll reply with a checklist and timeline within one business day.</p>
+      <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Start VAT Registration</a>
+      <p class="note">Prefer a quick kickoff? Send draft contracts/invoices if available; we’ll reflect them in the application pack.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +421,28 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- Optional: FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How long does VAT registration take?","acceptedAnswer":{"@type":"Answer","text":"Timing depends on authority workload and file complexity. We focus on clean, complete submissions to avoid rework."}},
+    {"@type":"Question","name":"Can we register voluntarily?","acceptedAnswer":{"@type":"Answer","text":"Often yes—subject to rules and your facts. We coordinate with your tax advisor to confirm eligibility and implications."}},
+    {"@type":"Question","name":"Do we need OSS/IOSS as well?","acceptedAnswer":{"@type":"Answer","text":"Only for specific cross-border B2C scenarios. We flag if your activity suggests exploring these schemes."}},
+    {"@type":"Question","name":"Will you notify our bank and auditor?","acceptedAnswer":{"@type":"Answer","text":"Yes—on request we issue a confirmation pack and update your corporate file."}}
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
