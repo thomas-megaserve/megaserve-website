@@ -3,14 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>TIC / TIN Registration Services — MegaServe Cyprus</title>
-  <meta name="description" content="Tax Identification Code (TIC/TIN) registration support for entities and individuals.">
+  <meta name="description" content="Cyprus Tax Identification Code (TIC/TIN) registration for companies and individuals: eligibility guidance, documents, authority liaison, submissions, confirmations, and e-services activation.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (consistent with other service pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on red strip */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -67,7 +96,7 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a aria-current="page" href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
             <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
             <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
@@ -95,6 +124,8 @@
           </ul>
         </li>
 
+        <!-- NEW: About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +133,213 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
       <h1>TIC / TIN Registration Services</h1>
-      <p>We obtain TIC/TIN quickly with accurate documentation and filings.</p>
-      <ul><li>Eligibility guidance and forms preparation</li><li>Registrar/Tax Department liaison</li><li>Document certification and submissions</li><li>Tracking and confirmation delivery</li></ul>
+      <p class="content-narrow">Obtain a Cyprus Tax Identification Code (TIC/TIN) cleanly—documents prepared correctly, filings sequenced to avoid rework, and confirmations delivered to your bank, auditors, and advisors.</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Handle</h2>
+      <ul class="feature-list">
+        <li>Entity TIC/TIN for newly incorporated Cyprus companies and branches</li>
+        <li>Individual TIC/TIN for directors, officers, and foreign shareholders where required</li>
+        <li>Updates to records (registered office, directors, contact details) to keep tax files current</li>
+        <li>Authority liaison and portal submissions; certified copies and translations if needed</li>
+        <li>e-Services activation (where applicable) and handover to your tax advisor</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>When You’ll Need It</h2>
+      <ul class="feature-list">
+        <li>Immediately post-incorporation (required by banks, auditors, and for VAT/CIT processes)</li>
+        <li>When opening or re-onboarding bank/EMI accounts</li>
+        <li>Before VAT registration or other tax filings</li>
+        <li>On director/UBO changes or a change of registered office</li>
+      </ul>
+      <p class="note">We coordinate with your accountants to ensure numbering aligns with downstream filings and reporting cycles.</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.2" id="process">
+    <div class="content-narrow">
+      <h2>Process &amp; Typical Timeline</h2>
+      <ol class="process-steps">
+        <li><strong>Intake &amp; Pre-check:</strong> verify eligibility, confirm entity/individual details, and compile document list.</li>
+        <li><strong>Drafting &amp; Signatures:</strong> prepare forms, resolutions/PoAs if required, and certification instructions.</li>
+        <li><strong>Submission:</strong> lodge with the Tax Department; handle clarifications and any supplementary evidence.</li>
+        <li><strong>Issuance &amp; Confirmation:</strong> obtain TIC/TIN, update your records, and send confirmations to banks/auditors.</li>
+        <li><strong>Optional Add-ons:</strong> e-Services activation, VAT registration handover, and calendar reminders.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SERVICE LEVELS -->
+  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Timing</th>
+              <th>Who Signs</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Document pre-check &amp; eligibility</td>
+              <td>Same–2 business days</td>
+              <td>—</td>
+              <td>We flag gaps and certification formats up front</td>
+            </tr>
+            <tr>
+              <td>Forms preparation</td>
+              <td>1–3 business days</td>
+              <td>Director/authorised signatory / individual</td>
+              <td>Templates aligned to authority standards</td>
+            </tr>
+            <tr>
+              <td>Submission &amp; clarifications</td>
+              <td>2–7 business days</td>
+              <td>Authorised representative</td>
+              <td>Timing depends on authority workload and file complexity</td>
+            </tr>
+            <tr>
+              <td>Issuance &amp; confirmations</td>
+              <td>Same day after issuance</td>
+              <td>—</td>
+              <td>We issue a confirmation pack to banks/auditors on request</td>
+            </tr>
+            <tr>
+              <td>e-Services activation (optional)</td>
+              <td>1–3 business days</td>
+              <td>Director/authorised user</td>
+              <td>Includes access setup and basic orientation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timings reflect typical handling; authority queues and enhanced checks may extend completion.</p>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>TIC/TIN confirmation and reference details</li>
+        <li>Copy of filed forms and supporting documents</li>
+        <li>Authority correspondence archived and indexed</li>
+        <li>Update note for banks, auditors, and counterparties</li>
+        <li>Optional: e-Services login activation &amp; handover guide</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHECKLISTS -->
+  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
+    <div class="content-narrow">
+      <h2>Documents Checklist</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Entity (Company/Branch)</th>
+              <th>Individual (Director/UBO/Investor)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <ul class="feature-list">
+                  <li>Certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
+                  <li>Memorandum &amp; Articles (latest)</li>
+                  <li>Directors’ IDs/PoAs; company authorised signatory ID</li>
+                  <li>Registered office proof (agreement/confirmation)</li>
+                  <li>Contact details (emails, phones) and activity overview</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="feature-list">
+                  <li>Valid passport/ID (certified as required)</li>
+                  <li>Recent proof of address (≤ 3 months)</li>
+                  <li>Contact details and role/relationship to the entity</li>
+                  <li>Local contact point (if applicable)</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">We’ll provide certification formats and samples to avoid resubmissions. Translations/apostilles arranged where required.</p>
+    </div>
+  </section>
+
+  <!-- INTEGRATIONS / NEXT STEPS -->
+  <section class="container fade-up" data-anim-delay="0.4" id="integrations">
+    <div class="content-narrow">
+      <h2>Related Services</h2>
+      <ul class="feature-list">
+        <li><a href="vat-registration-services.html">VAT Registration</a> and updates</li>
+        <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submissions</a> coordination with your advisors</li>
+        <li><a href="corporate-secretarial-services.html">Corporate Secretarial</a> for ongoing changes and annual returns</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.45" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>Cyprus-based team with 30+ years’ corporate services experience. We coordinate registrar, tax, and banking workflows so your file is credible to counterparties and auditors from day one.</p>
+      <ul class="feature-list">
+        <li>EN/GR/RU service; other languages on request</li>
+        <li>Bank-ready documentation and confirmations</li>
+        <li>Clean handover to VAT registration and filings</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container fade-up" data-anim-delay="0.5" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <dl class="faq">
+        <dt>What’s the difference between TIC and TIN?</dt>
+        <dd>Both terms refer to a taxpayer identification number used by the Cyprus Tax Department. We use TIC/TIN interchangeably for clarity.</dd>
+
+        <dt>Do directors or foreign shareholders need a personal TIC/TIN?</dt>
+        <dd>Sometimes—banks or authorities may request it depending on your activities and filings. We’ll confirm at intake.</dd>
+
+        <dt>Can you fast-track the number?</dt>
+        <dd>We can’t control authority queues, but we pre-check documents, format certifications properly, and respond to clarifications quickly to avoid delays.</dd>
+
+        <dt>Will you share the TIC/TIN with our bank and auditor?</dt>
+        <dd>Yes—on request we send a confirmation pack directly and update your corporate records.</dd>
+      </dl>
+      <p class="note">Information here is general and not tax advice. We’re happy to work alongside your tax advisors.</p>
     </div>
   </section>
 
   <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+    <div class="container">
+      <h2>Get Your TIC/TIN</h2>
+      <p class="contact-intro">Send your certificate set (or personal ID + proof of address) and we’ll return a document checklist and timeline within one business day.</p>
+      <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Request TIC/TIN Setup</a>
+      <p class="note">Prefer a quick kickoff? Email the certificate set + signatory details (for entities) or ID + proof of address (for individuals).</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +351,28 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- Optional: FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What’s the difference between TIC and TIN?","acceptedAnswer":{"@type":"Answer","text":"Both terms refer to a taxpayer identification number used by the Cyprus Tax Department. We use TIC/TIN interchangeably for clarity."}},
+    {"@type":"Question","name":"Do directors or foreign shareholders need a personal TIC/TIN?","acceptedAnswer":{"@type":"Answer","text":"Sometimes—banks or authorities may request it depending on activities and filings. We confirm at intake."}},
+    {"@type":"Question","name":"Can you fast-track the number?","acceptedAnswer":{"@type":"Answer","text":"We can’t control authority queues, but we pre-check documents, format certifications properly, and respond to clarifications quickly to avoid delays."}},
+    {"@type":"Question","name":"Will you share the TIC/TIN with our bank and auditor?","acceptedAnswer":{"@type":"Answer","text":"Yes—on request we send a confirmation pack directly and update corporate records."}}
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
