@@ -3,14 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>Tax & VAT Filing / Submission Services — MegaServe Cyprus</title>
-  <meta name="description" content="Preparation and submission of periodic returns and annual obligations.">
+  <meta name="description" content="Cyprus tax & VAT filing handled cleanly: data intake, reconciliations, e-Services submissions, payment references, authority liaison, and a rolling compliance calendar that auditors and banks can rely on.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (kept consistent with other pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on a red/dark banner */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -69,7 +101,7 @@
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
             <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
             <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a aria-current="page" href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -95,6 +127,8 @@
           </ul>
         </li>
 
+        <!-- NEW: About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +136,256 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
-      <h1>Tax & VAT Filing / Submission Services</h1>
-      <p>Accurate, timely filings that stand up to scrutiny.</p>
-      <ul><li>Monthly/quarterly VAT returns and VIES</li><li>Provisional tax, annual returns coordination</li><li>Record‑keeping and audit support</li><li>Reminder system and status visibility</li></ul>
+      <h1>Tax &amp; VAT Filing / Submission Services</h1>
+      <p class="content-narrow">Accurate, timely filings with clean audit trails—so banks, auditors, and authorities are comfortable and your team has clarity every period.</p>
+    </div>
+  </section>
+
+  <!-- WHAT WE HANDLE -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Handle</h2>
+      <ul class="feature-list">
+        <li>Periodic VAT returns and VIES recapitulative statements</li>
+        <li>Intrastat coordination where thresholds apply (with your accountants)</li>
+        <li>Provisional/estimated tax coordination and annual compliance support</li>
+        <li>e-Services portal submissions &amp; payment instructions/reference notes</li>
+        <li>Reconciliations: sales/purchase ledgers ↔ bank ↔ VAT control accounts</li>
+        <li>Authority liaison: clarifications, queries, and verifications</li>
+        <li>Rolling compliance calendar with reminders and status visibility</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>Filing Calendar at a Glance</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Filing</th>
+              <th>Typical Cycle</th>
+              <th>Inputs We Use</th>
+              <th>Output You Receive</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>VAT Return</td>
+              <td>Monthly / Quarterly</td>
+              <td>Sales &amp; purchase ledgers, bank extracts, adjustments</td>
+              <td>Filed return, payment reference, reconciliation pack</td>
+            </tr>
+            <tr>
+              <td>VIES Statement</td>
+              <td>Monthly (if applicable)</td>
+              <td>EU B2B supplies summary</td>
+              <td>Submission receipt, variance check to VAT return</td>
+            </tr>
+            <tr>
+              <td>Intrastat</td>
+              <td>Monthly (thresholds)</td>
+              <td>Dispatches/arrivals data</td>
+              <td>File(s) lodged via accountant; confirmation archived</td>
+            </tr>
+            <tr>
+              <td>Provisional / Annual Tax</td>
+              <td>Per statutory calendar</td>
+              <td>Management accounts / advisor inputs</td>
+              <td>Payment schedules &amp; submission confirmations</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">We coordinate closely with your accountants. This page is informational and not tax advice.</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.2" id="process">
+    <div class="content-narrow">
+      <h2>Process &amp; Cadence</h2>
+      <ol class="process-steps">
+        <li><strong>Intake:</strong> ledger exports, bank statements, adjustments, and supporting docs via secure data room.</li>
+        <li><strong>Reconcile:</strong> cross-checks (ledger↔bank↔VAT control), variance analysis, exceptions list.</li>
+        <li><strong>Prepare:</strong> draft returns, VIES, and any Intrastat data (with your accountants where relevant).</li>
+        <li><strong>Approve:</strong> brief sign-off note highlighting movements and any assumptions.</li>
+        <li><strong>Submit &amp; Pay:</strong> lodge on e-Services; provide payment references and cut-off guidance.</li>
+        <li><strong>Archive:</strong> receipts, working papers, and a period pack stored and indexed for audit.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SERVICE LEVELS -->
+  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Period intake check</td>
+              <td>Per cycle start</td>
+              <td>Same–1 business day</td>
+              <td>We flag any missing ledgers/evidence early</td>
+            </tr>
+            <tr>
+              <td>Draft return &amp; sign-off note</td>
+              <td>Within cycle window</td>
+              <td>1–3 business days</td>
+              <td>Assumes complete inputs and stable transaction volume</td>
+            </tr>
+            <tr>
+              <td>Submission &amp; receipts</td>
+              <td>Before deadline</td>
+              <td>Same day</td>
+              <td>Payment references shared promptly after lodging</td>
+            </tr>
+            <tr>
+              <td>Authority clarifications</td>
+              <td>Ad hoc</td>
+              <td>Same–2 business days</td>
+              <td>Status notes until closed</td>
+            </tr>
+            <tr>
+              <td>Audit support / packs</td>
+              <td>As requested</td>
+              <td>2–5 business days</td>
+              <td>Depends on scope and period range</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timings reflect typical handling; authority queues and enhanced checks may extend completion.</p>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Filed VAT returns and VIES receipts (PDF)</li>
+        <li>Payment references and cut-off guidance</li>
+        <li>Reconciliation pack (ledgers ↔ bank ↔ return)</li>
+        <li>Exception log and resolution notes</li>
+        <li>Rolling compliance calendar with reminders</li>
+        <li>Audit-ready archive (period folders, working papers, correspondence)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <section class="container fade-up" data-anim-delay="0.35" id="controls">
+    <div class="content-narrow">
+      <h2>Controls &amp; Quality</h2>
+      <ul class="feature-list">
+        <li>Two-person check on returns and payment instructions</li>
+        <li>Variance thresholds trigger additional review</li>
+        <li>Documented assumptions and adjustments</li>
+        <li>Restricted e-Services access per user role</li>
+        <li>Change log for post-submission corrections</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="container fade-up" data-anim-delay="0.4" id="checklist">
+    <div class="content-narrow">
+      <h2>Documents Checklist (Per Period)</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Sales</th>
+              <th>Purchases</th>
+              <th>Bank &amp; Adjustments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <ul class="feature-list">
+                  <li>Sales ledger/export</li>
+                  <li>Credit notes</li>
+                  <li>Intra-EU supplies summary (if any)</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="feature-list">
+                  <li>Purchase ledger/export</li>
+                  <li>Import VAT/customs docs (if any)</li>
+                  <li>Asset/input adjustments</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="feature-list">
+                  <li>Bank statement(s)</li>
+                  <li>Manual journals (if applicable)</li>
+                  <li>Prior-period corrections/notes</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Formats: CSV/XLSX or system exports preferred. We’ll share templates if helpful.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.45" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>Cyprus-based operations team used to working across banks, auditors, and the Tax/VAT portals. We keep filings predictable and documentation bankable.</p>
+      <ul class="feature-list">
+        <li>EN/GR/RU service; other languages on request</li>
+        <li>Clear handover with your accountants for sign-off and year-end</li>
+        <li>Quarterly status notes flagging risks and upcoming deadlines</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container fade-up" data-anim-delay="0.5" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <dl class="faq">
+        <dt>Do you replace our accountants?</dt>
+        <dd>No. We handle administration, reconciliations, submissions, and liaison. Tax technical positions remain with your advisors.</dd>
+
+        <dt>Can you help with late or corrective filings?</dt>
+        <dd>Yes. We assemble prior-period packs, coordinate adjustments with your accountants, and submit corrections per authority rules.</dd>
+
+        <dt>Will you manage payments?</dt>
+        <dd>We provide payment references and timing guidance. Execution remains with your authorised banking users under dual-control.</dd>
+
+        <dt>Can you work across multiple entities?</dt>
+        <dd>Yes. We maintain separate calendars and archives, and can share a consolidated dashboard/status note.</dd>
+      </dl>
+      <p class="note">Nothing here is tax advice; thresholds and positions are confirmed by your tax advisors.</p>
     </div>
   </section>
 
   <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+    <div class="container">
+      <h2>Stay Compliant Every Period</h2>
+      <p class="contact-intro">Send your latest ledgers and bank extracts—we’ll reply with a checklist and cut-off dates for the current cycle.</p>
+      <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Arrange Filing Support</a>
+      <p class="note">Prefer a quick kickoff? Share your last filed return &amp; any open authority queries; we’ll incorporate them into the plan.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +397,28 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- Optional: FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Do you replace our accountants?","acceptedAnswer":{"@type":"Answer","text":"No. We handle administration, reconciliations, submissions, and liaison. Tax technical positions remain with your advisors."}},
+    {"@type":"Question","name":"Can you help with late or corrective filings?","acceptedAnswer":{"@type":"Answer","text":"Yes. We assemble prior-period packs, coordinate adjustments with your accountants, and submit corrections per authority rules."}},
+    {"@type":"Question","name":"Will you manage payments?","acceptedAnswer":{"@type":"Answer","text":"We provide payment references and timing guidance. Execution remains with your authorised banking users under dual-control."}},
+    {"@type":"Question","name":"Can you work across multiple entities?","acceptedAnswer":{"@type":"Answer","text":"Yes. We maintain separate calendars and archives, and can share a consolidated dashboard/status note."}}
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
