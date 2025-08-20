@@ -3,14 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Registered Address Services — MegaServe Cyprus</title>
-  <meta name="description" content="Registered office and mail handling compliant with local regulations.">
+  <meta name="description" content="Compliant Cyprus registered office with secure mail handling, statutory display, document custody, and audit-ready trails—integrated with your secretarial & banking workflows.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-scoped helpers -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+    .muted{color:#666}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding-left:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .table-wrap{overflow-x:auto}
+    table.matrix, table.service{width:100%;border-collapse:collapse}
+    table.matrix th,table.matrix td,table.service th,table.service td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.matrix th,table.service th{background:#fafafa}
+
+    .badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.2rem .6rem;font-size:.8rem;margin:.15rem .35rem 0 0}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    /* Keep CTA fine print legible if banner is dark/red */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+
+    /* Fallback animation */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -46,7 +79,7 @@
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
             <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
             <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="registered-address-services.html">Registered Address Services</a></li>
+            <li><a aria-current="page" href="registered-address-services.html">Registered Address Services</a></li>
             <li><a href="virtual-office-services.html">Virtual Office Services</a></li>
             <li><a href="physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
@@ -95,6 +128,8 @@
           </ul>
         </li>
 
+        <!-- NEW: About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +137,201 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
-    <div class="container">
+  <!-- HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
+    <div class="container content-narrow">
       <h1>Registered Address Services</h1>
-      <p>A compliant registered office address with secure mail and document handling.</p>
-      <ul><li>Registered office address in Cyprus</li><li>Mail receipt, scanning and forwarding</li><li>Name plate and statutory display requirements</li><li>Optional dedicated storage for originals</li></ul>
+      <p>A compliant registered office address with secure mail/document handling and statutory display—integrated with your corporate secretarial and banking workflows.</p>
+      <p class="muted">Note: A registered office alone does not constitute operational “substance”. For premises and staffing options, see <a href="physical-office-rental-services.html">Physical Office Rental</a> and <a href="virtual-office-services.html">Virtual Office</a>.</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What’s Included</h2>
+      <ul class="feature-list">
+        <li>Registered office address in Cyprus with name plate/statutory display</li>
+        <li>Mail handling: receipt, scanning (PDF/OCR), and forwarding per instructions</li>
+        <li>Courier management for originals; tracked dispatch with delivery proofs</li>
+        <li>Secure custody for corporate records and originals (optional dedicated storage)</li>
+        <li>Authority/bank correspondence handling with timestamped index</li>
+        <li>Integration with <a href="corporate-secretarial-services.html">Corporate Secretarial</a> for filings and registers</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>Address Options</h2>
+      <div class="table-wrap">
+        <table class="matrix" aria-label="Registered address options">
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Use Case</th>
+              <th>What You Get</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Registered Office (Core)</td>
+              <td>Statutory compliance only</td>
+              <td>Registered address, name plate, mail receipt + monthly scan bundle</td>
+              <td>Not for meetings or daily business use</td>
+            </tr>
+            <tr>
+              <td>Registered Office + Mail Suite</td>
+              <td>Heavier mail flow or multi-entity groups</td>
+              <td>Core + priority scanning, recipient rules, forwarding schedule</td>
+              <td>Entity-level tagging and index provided</td>
+            </tr>
+            <tr>
+              <td>Registered Office + Custody</td>
+              <td>Originals custody/audit readiness</td>
+              <td>Core + dedicated storage, inventory list, retrieval SLAs</td>
+              <td>Chain-of-custody receipts for checkouts</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Meeting rooms and operational desks are available via <a href="physical-office-rental-services.html">Physical Office Rental Services</a>.</p>
+    </div>
+  </section>
+
+  <!-- MAIL & COMPLIANCE -->
+  <section class="container fade-up" data-anim-delay="0.2" id="handling">
+    <div class="content-narrow">
+      <h2>Mail Handling &amp; Compliance</h2>
+      <ul class="feature-list">
+        <li>Intake protocol with sender/recipient capture; oversized/secured items flagged</li>
+        <li>Scanning standards: searchable PDFs, date-stamped; sensitive items by exception only</li>
+        <li>Forwarding rules: weekly batch, ad hoc express, or on-trigger (e.g., “bank”, “authority”)</li>
+        <li>Retention: digital index kept; physical items stored per your policy (default 12 months)</li>
+        <li>GDPR: access limited to your named contacts; encryption at-rest and in transit</li>
+        <li>Statutory display: company name and number; signage maintained and photographed on install</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICE LEVELS -->
+  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Turnaround</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mail receipt &amp; logging</td>
+              <td>Daily (business days)</td>
+              <td>Same day</td>
+              <td>Timestamped in index; sender/subject captured where available</td>
+            </tr>
+            <tr>
+              <td>Standard scanning</td>
+              <td>Batch or per-rule</td>
+              <td>Same–1 business day</td>
+              <td>Searchable PDF to named recipients</td>
+            </tr>
+            <tr>
+              <td>Express forwarding</td>
+              <td>Ad hoc</td>
+              <td>Dispatch within 1 business day</td>
+              <td>Tracked courier; customs docs prepared if needed</td>
+            </tr>
+            <tr>
+              <td>Originals retrieval (custody)</td>
+              <td>Ad hoc</td>
+              <td>Same–2 business days</td>
+              <td>Chain-of-custody document issued</td>
+            </tr>
+            <tr>
+              <td>Signage/name plate</td>
+              <td>On setup / change</td>
+              <td>Within 3–5 business days</td>
+              <td>Photo confirmation on install</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Targets reflect typical handling; courier and third-party schedules can affect completion.</p>
+    </div>
+  </section>
+
+  <!-- ONBOARDING -->
+  <section class="container fade-up" data-anim-delay="0.3" id="onboarding">
+    <div class="content-narrow">
+      <h2>Onboarding Steps</h2>
+      <ol class="process-steps">
+        <li><strong>Intake:</strong> entity details, directors/UBOs, mail rules, forwarding addresses.</li>
+        <li><strong>Resolutions &amp; updates:</strong> registered office change (if applicable) and bank/authority notifications.</li>
+        <li><strong>Signage &amp; setup:</strong> name plate installed; mail rules tested; index created.</li>
+        <li><strong>Go-live:</strong> mail handling begins; custody (if selected) inventory created.</li>
+      </ol>
+
+      <h3>Documents Checklist</h3>
+      <ul class="feature-list">
+        <li>Certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
+        <li>Memorandum &amp; Articles; current registers</li>
+        <li>Authorised contacts &amp; forwarding addresses</li>
+        <li>Any bank/authority templates for address change (if required)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RELATED / SEE ALSO -->
+  <section class="container fade-up" data-anim-delay="0.35" id="related">
+    <div class="content-narrow">
+      <h2>Related Services</h2>
+      <p class="muted">
+        <a href="corporate-secretarial-services.html">Corporate Secretarial</a> ·
+        <a href="directorship-management-services.html">Directorship &amp; Management</a> ·
+        <a href="virtual-office-services.html">Virtual Office</a> ·
+        <a href="physical-office-rental-services.html">Physical Office Rental</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container fade-up" data-anim-delay="0.4" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <div class="table-wrap" aria-hidden="true" style="display:none"></div>
+      <dl class="faq">
+        <dt>Is the registered office enough for banking and auditors?</dt>
+        <dd>It meets statutory requirements. Some banks/auditors may expect substance (board activity, premises, staff). We can coordinate <a href="directorship-management-services.html">governance</a> and <a href="physical-office-rental-services.html">premises</a> if needed.</dd>
+
+        <dt>Can multiple entities share the same registered office?</dt>
+        <dd>Yes, with clear mail rules and separate indices. Group discounts may apply depending on volume.</dd>
+
+        <dt>What happens with sensitive mail?</dt>
+        <dd>We follow your rules: scan subject/cover only, scan nothing, or scan everything. Sensitive items default to “no scan” unless authorised.</dd>
+
+        <dt>Do you hold minute books and originals?</dt>
+        <dd>Yes. Dedicated custody provides an inventory and chain-of-custody receipts for checkouts.</dd>
+
+        <dt>How fast can you switch our registered office?</dt>
+        <dd>Often within 2–5 business days from receipt of documents and approvals; banks/authorities updates may vary by institution.</dd>
+      </dl>
     </div>
   </section>
 
   <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.45">
+    <div class="container">
+      <h2>Set Your Cyprus Registered Office</h2>
+      <p class="contact-intro">Get a compliant address with reliable mail handling and clean audit trails—ready for banks and authorities.</p>
+      <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Request Setup</a>
+      <p class="note">Prefer a quick kickoff? Email your certificate set and forwarding rules; we’ll reply with a short intake slot.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -139,6 +351,21 @@
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- Optional: FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Is the registered office enough for banking and auditors?","acceptedAnswer":{"@type":"Answer","text":"It meets statutory requirements. Some banks/auditors may expect substance (board activity, premises, staff). Related services can be added."}},
+    {"@type":"Question","name":"Can multiple entities share the same registered office?","acceptedAnswer":{"@type":"Answer","text":"Yes, with clear mail rules and separate indices. Group discounts may apply depending on volume."}},
+    {"@type":"Question","name":"What happens with sensitive mail?","acceptedAnswer":{"@type":"Answer","text":"We follow your rules: scan subject/cover only, scan nothing, or scan everything. Sensitive items default to “no scan” unless authorised."}},
+    {"@type":"Question","name":"Do you hold minute books and originals?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dedicated custody provides an inventory and chain-of-custody receipts for checkouts."}},
+    {"@type":"Question","name":"How fast can you switch our registered office?","acceptedAnswer":{"@type":"Answer","text":"Often within 2–5 business days from receipt of documents and approvals; banks/authorities updates may vary by institution."}}
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
