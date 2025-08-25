@@ -3,14 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Project Management Services — MegaServe Cyprus</title>
-  <meta name="description" content="Dedicated PMO for regulatory and cross‑functional corporate projects.">
+  <meta name="description" content="Dedicated PMO for regulatory and cross-functional projects: charter & plan, RAID governance, vendor coordination, cutover runbooks, and post-implementation reviews with clear reporting cadence.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (kept consistent with other pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -79,7 +112,7 @@
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
             <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
             <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="project-management-services.html">Project Management Services</a></li>
+            <li><a aria-current="page" href="project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -95,6 +128,8 @@
           </ul>
         </li>
 
+        <!-- About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +137,259 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- 1) HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
       <h1>Project Management Services</h1>
-      <p>Deliver critical initiatives on time with clear governance and reporting.</p>
-      <ul><li>Charter, plan and RAID setup</li><li>Stakeholder cadence and steering packs</li><li>Risk, dependency and vendor management</li><li>Benefits tracking and closure</li></ul>
+      <p class="content-narrow">Deliver regulatory and cross-functional initiatives on time with disciplined governance: chartered scope, RAID control, vendor management, and clear reporting to owners and boards.</p>
     </div>
   </section>
 
-  <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <!-- 2) OVERVIEW -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Do</h2>
+      <ul class="feature-list">
+        <li>Project chartering: objectives, scope, success criteria, constraints.</li>
+        <li>Integrated plan &amp; schedule: critical path, dependencies, buffers.</li>
+        <li>RAID governance: risks, assumptions, issues, decisions with owners.</li>
+        <li>Stakeholder cadence: stand-ups, workstream reviews, and SteerCo.</li>
+        <li>Vendor coordination: SOWs, deliverables, and acceptance criteria.</li>
+        <li>Regulatory/authority liaison tracking (where applicable).</li>
+        <li>Change control: CRs, impact analysis, and approval gates.</li>
+        <li>Cutover &amp; post-implementation: rehearsals, Day-1 support, PIR.</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>Governance &amp; Cadence Matrix</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Layer</th>
+              <th>Core Responsibilities</th>
+              <th>Cadence / Outputs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Steering Committee</td>
+              <td>Approve scope, budget, major changes; unblock escalations.</td>
+              <td>Monthly / Decision log, gate approvals, headline KPIs.</td>
+            </tr>
+            <tr>
+              <td>PMO (MegaServe)</td>
+              <td>Maintain plan, RAID, comms; coordinate vendors and owners.</td>
+              <td>Weekly / Status pack, RAID updates, actions tracker.</td>
+            </tr>
+            <tr>
+              <td>Workstream Leads</td>
+              <td>Own deliverables; manage resources; report variances.</td>
+              <td>Weekly / Workstream minutes, burnup/burndown.</td>
+            </tr>
+            <tr>
+              <td>Vendors</td>
+              <td>Deliver per SOW; surface risks; provide test evidence.</td>
+              <td>Per milestone / Deliverable approvals, test reports.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">We coordinate with your advisors and vendors; specialist engineering, legal, or tax advice remains with licensed providers.</p>
+    </div>
+  </section>
+
+  <!-- 3) PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.2" id="process">
+    <div class="content-narrow">
+      <h2>Process</h2>
+      <ol class="process-steps">
+        <li><strong>Charter:</strong> Define objectives, scope, stakeholders, success metrics, and constraints. Establish RACI and comms channels.</li>
+        <li><strong>Plan:</strong> Build integrated schedule, dependencies, and resources. Baseline RAID and acceptance criteria.</li>
+        <li><strong>Execute:</strong> Drive workstreams, manage vendors, run stand-ups, and maintain status packs.</li>
+        <li><strong>Control:</strong> Change requests, variance analysis, risk responses, and decision logging.</li>
+        <li><strong>Cutover:</strong> Rehearsals, go/no-go gates, access &amp; controls, and Day-1 support.</li>
+        <li><strong>Close:</strong> Post-Implementation Review (PIR), lessons learned, and benefits validation.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5) SERVICE LEVELS & TIMING -->
+  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency/Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Project Charter &amp; Baseline Plan</td>
+              <td>Week 1–2</td>
+              <td>48–72h iteration loop</td>
+              <td>Depends on clarity of scope and constraints.</td>
+            </tr>
+            <tr>
+              <td>Weekly Status Pack</td>
+              <td>Weekly</td>
+              <td>Next-day minutes</td>
+              <td>RAID + KPIs + actions tracker.</td>
+            </tr>
+            <tr>
+              <td>Steering Committee Pack</td>
+              <td>Monthly or per gate</td>
+              <td>3–5 business days pre-meeting</td>
+              <td>Decision requests and risk posture.</td>
+            </tr>
+            <tr>
+              <td>Change Requests (CRs)</td>
+              <td>Ad hoc</td>
+              <td>24–48h impact note</td>
+              <td>Scope/cost/schedule &amp; risk analysis.</td>
+            </tr>
+            <tr>
+              <td>Cutover Runbook &amp; Rehearsals</td>
+              <td>~2–4 weeks pre-go-live</td>
+              <td>Same-day critical updates</td>
+              <td>Go/no-go and rollback steps documented.</td>
+            </tr>
+            <tr>
+              <td>Post-Implementation Review</td>
+              <td>+2–6 weeks post go-live</td>
+              <td>5 business days</td>
+              <td>Lessons learned and benefits validation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timelines vary with vendor lead times, data quality, and authority queues. We set realistic gates to avoid rushed delivery.</p>
+    </div>
+  </section>
+
+  <!-- 6) DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Project Charter (objectives, scope, KPIs, constraints).</li>
+        <li>Integrated Master Schedule &amp; dependency map.</li>
+        <li>RAID register and decision log with owners/dates.</li>
+        <li>RACI matrix and stakeholder communications plan.</li>
+        <li>Vendor SOW tracker and acceptance criteria.</li>
+        <li>Cutover rehearsal scripts &amp; Day-1 runbook.</li>
+        <li>Post-Implementation Review &amp; benefits note.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7) CHECKLIST -->
+  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
+    <div class="content-narrow">
+      <h2>Onboarding Documents Checklist</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Scope &amp; Governance</th>
+              <th>Technical &amp; Operations</th>
+              <th>Vendors &amp; Compliance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Business case, objectives, success criteria.</td>
+              <td>Architecture diagrams, environments, data flows.</td>
+              <td>SOWs/MSAs, vendor contacts, SLAs.</td>
+            </tr>
+            <tr>
+              <td>Org chart, RACI, key stakeholders.</td>
+              <td>Process maps &amp; SOPs; non-functional requirements.</td>
+              <td>Licenses, access lists, audit requirements.</td>
+            </tr>
+            <tr>
+              <td>Constraints, risks, dependencies.</td>
+              <td>Test strategy, evidence expectations.</td>
+              <td>Regulatory/authority touchpoints and deadlines.</td>
+            </tr>
+            <tr>
+              <td>Prior decisions &amp; assumptions.</td>
+              <td>Data migration or integration notes.</td>
+              <td>Change control board (CCB) members.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Please share via VDR. We provide an index and permission model at kickoff.</p>
+    </div>
+  </section>
+
+  <!-- 8) CONTROLS / QUALITY -->
+  <section class="container fade-up" data-anim-delay="0.4">
+    <div class="content-narrow">
+      <h2>Controls &amp; Quality</h2>
+      <ul class="feature-list">
+        <li>Two-person control on critical approvals and production changes.</li>
+        <li>Document control: versioning, redlines, and approval trails.</li>
+        <li>Change Control Board (CCB) with defined gates.</li>
+        <li>Risk thresholds and escalation paths documented.</li>
+        <li>Independent PIR with actions and owners.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9) ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.45" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>Cyprus-based corporate team focused on practical PMO execution. We align owners, managers, advisors, and vendors to deliver predictable outcomes.</p>
+      <ul class="feature-list">
+        <li>EN/GR/RU service; other languages on request.</li>
+        <li>Close coordination with accountants, counsel, IT vendors, and banks.</li>
+        <li>Clear cadence: weekly status, RAID review, and SteerCo packs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10) FAQ -->
+  <section class="container fade-up" data-anim-delay="0.5" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <p class="note" role="note">This page is informational and not legal, tax, investment, or engineering advice. We coordinate with licensed professionals and vendors where required.</p>
+      <dl class="faq">
+        <dt>Do you replace internal project managers or consultants?</dt>
+        <dd>No. We operate the PMO and governance, integrate with your team, and coordinate vendors. Specialist design/build tasks remain with internal teams or appointed firms.</dd>
+
+        <dt>What tools do you use for scheduling and tracking?</dt>
+        <dd>We adapt to the client’s toolset and provide lightweight templates for plan, RAID, actions, and decision logs. We avoid tool sprawl and keep exports shareable.</dd>
+
+        <dt>Can you help with projects that involve regulators or banks?</dt>
+        <dd>Yes. We manage timelines, evidence lists, and liaison notes. Regulatory positions and submissions are owned by your licensed advisors; we coordinate the work.</dd>
+
+        <dt>How do you handle change requests without derailing timelines?</dt>
+        <dd>CRs are logged with impact on scope/cost/schedule and risk posture, reviewed by the CCB/SteerCo, and scheduled against available buffers and priorities.</dd>
+
+        <dt>Do you guarantee deadlines?</dt>
+        <dd>No guarantees—delivery depends on third-party responsiveness and data quality. We set realistic gates, highlight risks early, and maintain clear decision logs.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 11) CONTACT CTA -->
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+    <div class="container">
+      <h2>Stand Up a Project PMO</h2>
+      <p class="contact-intro">We’ll propose a tailored governance model, cadence, and first-week deliverables within 48 hours.</p>
+      <a href="mailto:megaserve@megaserve.eu?subject=Project%20PMO%20Kickoff" class="btn-primary">Request PMO Kickoff</a>
+      <p class="note">For fastest turnaround, email: business case &amp; objective, scope draft, constraints, target timeline, org chart, vendor/SOW list, and any regulatory deadlines.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +401,49 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- 12) FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Do you replace internal project managers or consultants?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. We operate the PMO and governance, integrate with your team, and coordinate vendors. Specialist design/build tasks remain with internal teams or appointed firms."}
+    },
+    {
+      "@type":"Question",
+      "name":"What tools do you use for scheduling and tracking?",
+      "acceptedAnswer":{"@type":"Answer","text":"We adapt to the client’s toolset and provide lightweight templates for plan, RAID, actions, and decision logs. We avoid tool sprawl and keep exports shareable."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can you help with projects that involve regulators or banks?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. We manage timelines, evidence lists, and liaison notes. Regulatory positions and submissions are owned by your licensed advisors; we coordinate the work."}
+    },
+    {
+      "@type":"Question",
+      "name":"How do you handle change requests without derailing timelines?",
+      "acceptedAnswer":{"@type":"Answer","text":"Change requests are logged with the impact on scope, cost, schedule, and risk posture, reviewed by the CCB/SteerCo, and scheduled against buffers and priorities."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do you guarantee deadlines?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. Delivery depends on third-party responsiveness and data quality. We set realistic gates, highlight risks early, and maintain clear decision logs."}
+    }
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
