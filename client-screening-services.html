@@ -3,14 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Client Screening Services — MegaServe Cyprus</title>
-  <meta name="description" content="Screening programmes for sanctions, PEPs and adverse media.">
+  <meta name="description" content="Design, calibrate, and operate sanctions, PEP, and adverse-media screening: list coverage, name-matching tuning, alert triage, escalation notes, and audit-ready records aligned to your policy and jurisdictions.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (kept consistent with other pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -88,13 +121,15 @@
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
             <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
+            <li><a aria-current="page" href="client-screening-services.html">Client Screening Services</a></li>
             <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
             <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
             <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
+        <!-- About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +137,265 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- 1) HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
       <h1>Client Screening Services</h1>
-      <p>Implement and operate effective client screening frameworks.</p>
-      <ul><li>Sanctions/PEP database configuration</li><li>Adverse media monitoring and triage</li><li>Alert remediation workflows</li><li>Periodic review schedules</li></ul>
+      <p class="content-narrow">Stand up or optimise sanctions, PEP, and adverse-media screening with clear playbooks—reducing false positives while preserving control, documentation, and auditability.</p>
     </div>
   </section>
 
-  <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <!-- 2) OVERVIEW -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Do</h2>
+      <ul class="feature-list">
+        <li>Policy mapping to lists/jurisdictions (UN, EU, UK, OFAC, local, sectoral).</li>
+        <li>Name-matching calibration: thresholds, tokenisation, transliteration, fuzzy rules.</li>
+        <li>PEP classification and close-associate logic aligned to your risk tiers.</li>
+        <li>Adverse media queries, sources, and triage criteria with evidence capture.</li>
+        <li>Alert handling workflows: disposition notes, approvals, escalations, and QA.</li>
+        <li>Periodic refresh schedules by risk (12/24/36m) and event-driven triggers.</li>
+        <li>Vendor/tool administration: list updates, user roles, and change logs.</li>
+        <li>MI &amp; reporting: volumes, hit rates, ageing, and exceptions/registers.</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>Screening Modes &amp; Triggers</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Mode</th>
+              <th>When Used</th>
+              <th>Data Sources</th>
+              <th>Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Onboarding</td>
+              <td>Pre-approval for new clients/signatories/UBOs</td>
+              <td>IDs, names/aliases, DOB, nationality, addresses</td>
+              <td>Pass/Refer decision with memo &amp; evidence pack</td>
+            </tr>
+            <tr>
+              <td>Periodic Refresh</td>
+              <td>Per policy by risk tier (12/24/36m)</td>
+              <td>Client master + latest IDs</td>
+              <td>Refreshed screening report &amp; approvals</td>
+            </tr>
+            <tr>
+              <td>Trigger-Based</td>
+              <td>Material change (ownership, geography, negative news)</td>
+              <td>Change requests, monitoring alerts</td>
+              <td>Targeted re-screen note &amp; decision</td>
+            </tr>
+            <tr>
+              <td>Bulk Portfolio Sweep</td>
+              <td>List update or regulatory event</td>
+              <td>Full portfolio extract</td>
+              <td>Exception list with dispositional actions</td>
+            </tr>
+            <tr>
+              <td>Ongoing Adverse Media</td>
+              <td>Continuous monitoring for defined sources</td>
+              <td>News feeds/DBs, watchwords</td>
+              <td>Hits triaged to cases with references</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">We align configuration and evidence standards to your policy and the receiving bank/authority expectations.</p>
+    </div>
+  </section>
+
+  <!-- 3) PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.2" id="process">
+    <div class="content-narrow">
+      <h2>Process</h2>
+      <ol class="process-steps">
+        <li><strong>Policy &amp; Scope:</strong> Confirm lists, jurisdictions, risk tiers, and approval thresholds; define records and retention.</li>
+        <li><strong>Calibrate:</strong> Configure vendor/tool settings (match scores, aliases, transliteration), user roles, and change control.</li>
+        <li><strong>Pilot &amp; QA:</strong> Run sample batches, tune thresholds, document exceptions, and approve the configuration.</li>
+        <li><strong>Operate:</strong> Triage alerts, capture evidence, escalate potential true positives, and maintain registers.</li>
+        <li><strong>Report:</strong> Weekly/Monthly MI on volumes, hit rates, ageing, and QA findings with actions.</li>
+        <li><strong>Refresh &amp; Audit:</strong> Schedule periodic reviews, perform portfolio sweeps, and compile exam/audit packs.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5) SERVICE LEVELS & TIMING -->
+  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency/Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Initial Calibration Note</td>
+              <td>1–3 business days</td>
+              <td>24–48h iterations</td>
+              <td>Based on policy and sample data set.</td>
+            </tr>
+            <tr>
+              <td>Onboarding Screening Result</td>
+              <td>Per new client</td>
+              <td>Same day (standard)</td>
+              <td>Complex/EDD cases add time.</td>
+            </tr>
+            <tr>
+              <td>Alert Triage (Standard Hit)</td>
+              <td>As alerts arise</td>
+              <td>&lt;24h</td>
+              <td>Evidence and disposition note filed.</td>
+            </tr>
+            <tr>
+              <td>Potential True Positive Escalation</td>
+              <td>Ad hoc</td>
+              <td>4–8 business hours</td>
+              <td>Escalate to Compliance/MLRO with dossier.</td>
+            </tr>
+            <tr>
+              <td>Periodic Portfolio Refresh</td>
+              <td>Monthly/Quarterly per risk tier</td>
+              <td>Within cycle window</td>
+              <td>Register and approvals updated.</td>
+            </tr>
+            <tr>
+              <td>Audit/Exam Response Pack</td>
+              <td>On request</td>
+              <td>2–5 business days</td>
+              <td>Scope dependent; includes logs and samples.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timings assume tool access and complete inputs. Notarisation/legalisation and third-party response times can extend completion.</p>
+    </div>
+  </section>
+
+  <!-- 6) DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Screening policy mapping note (lists, jurisdictions, frequencies).</li>
+        <li>Name-matching tuning sheet (thresholds, alias rules, transliteration).</li>
+        <li>PEP/adverse-media triage criteria and templates.</li>
+        <li>Case pack: evidence captures, disposition notes, and approvals.</li>
+        <li>Exceptions &amp; decision log with rationale.</li>
+        <li>Change log for configuration and list updates.</li>
+        <li>Monthly MI/dashboard: volumes, hit rates, SLA, QA findings.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7) CHECKLIST -->
+  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
+    <div class="content-narrow">
+      <h2>Onboarding Documents Checklist</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Inputs</th>
+              <th>Access &amp; Tools</th>
+              <th>Evidence &amp; Records</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Policy/risk tiers; jurisdictions; list coverage expectations.</td>
+              <td>Vendor/tool accounts; list update schedule; user roles.</td>
+              <td>Disposition templates; escalation paths; approval limits.</td>
+            </tr>
+            <tr>
+              <td>Sample client data (names, aliases, DOB, IDs).</td>
+              <td>VDR folder structure and naming standards.</td>
+              <td>Change log format; QA checklist; register templates.</td>
+            </tr>
+            <tr>
+              <td>Adverse media sources and keywords (if defined).</td>
+              <td>API/batch import details (if used).</td>
+              <td>Data retention rules and privacy notices.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Sensitive data should be shared via VDR only. We provide an index and permissions model at kickoff.</p>
+    </div>
+  </section>
+
+  <!-- 8) CONTROLS / QUALITY -->
+  <section class="container fade-up" data-anim-delay="0.4">
+    <div class="content-narrow">
+      <h2>Controls &amp; Quality</h2>
+      <ul class="feature-list">
+        <li>Two-person control for configuration/list changes and true-positive decisions.</li>
+        <li>Role-based access; least-privilege enforced across tools and VDR.</li>
+        <li>QA sampling on dispositions with corrective actions tracked.</li>
+        <li>Comprehensive audit trail: evidence captures, timestamps, and approvers.</li>
+        <li>Assumptions &amp; exceptions register maintained and reviewed monthly.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9) ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.45" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>We run practical screening operations that withstand bank and auditor scrutiny. Our Cyprus-based team coordinates with your compliance function and vendors to keep files clean and decisions defensible.</p>
+      <ul class="feature-list">
+        <li>EN/GR/RU service; other languages on request.</li>
+        <li>Close coordination with compliance/MLRO, counsel, and banks.</li>
+        <li>Clear cadence: weekly status, registers, and monthly MI.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10) FAQ -->
+  <section class="container fade-up" data-anim-delay="0.5" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <p class="note" role="note">This page is informational and not legal or regulatory advice. Final decisions rest with your Compliance/MLRO and relevant authorities/banks.</p>
+      <dl class="faq">
+        <dt>Which lists do you screen against?</dt>
+        <dd>We align to your policy (e.g., UN, EU, UK, OFAC) and any local/sectoral regimes you specify. Coverage and refresh schedules are documented in the mapping note.</dd>
+
+        <dt>Do you replace our Compliance/MLRO?</dt>
+        <dd>No. We operate the workflow and documentation. Regulatory positions and final approvals remain with your designated officers.</dd>
+
+        <dt>Can you guarantee zero false negatives?</dt>
+        <dd>No. Screening is risk-based. We tune thresholds, enforce QA, and document assumptions to reduce error while avoiding excessive false positives.</dd>
+
+        <dt>How do you handle adverse-media alerts?</dt>
+        <dd>We apply defined sources/keywords, triage hits to cases with evidence links, and escalate material items per policy.</dd>
+
+        <dt>What about data privacy?</dt>
+        <dd>We work within your retention policy, minimise data shared, restrict access via roles, and keep an audit trail of who accessed what and when.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 11) CONTACT CTA -->
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+    <div class="container">
+      <h2>Deploy a Screening Programme</h2>
+      <p class="contact-intro">We’ll return a calibration note and first operating templates within 24–48 hours.</p>
+      <a href="mailto:megaserve@megaserve.eu?subject=Client%20Screening%20Programme%20Kickoff" class="btn-primary">Request Screening Kickoff</a>
+      <p class="note">For fastest turnaround, email: compliance policy &amp; risk tiers, jurisdictions, tool/vendor access, sample (anonymised) names/IDs, preferred match settings, adverse-media sources, and audit/MI expectations.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +407,49 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- 12) FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Which lists do you screen against?",
+      "acceptedAnswer":{"@type":"Answer","text":"We align to your policy (e.g., UN, EU, UK, OFAC) and any local or sectoral regimes you specify. Coverage and refresh schedules are documented in the mapping note."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do you replace our Compliance/MLRO?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. We operate the workflow and documentation. Regulatory positions and final approvals remain with your designated officers."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can you guarantee zero false negatives?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. Screening is risk-based. We tune thresholds, enforce QA, and document assumptions to reduce error while avoiding excessive false positives."}
+    },
+    {
+      "@type":"Question",
+      "name":"How do you handle adverse-media alerts?",
+      "acceptedAnswer":{"@type":"Answer","text":"We apply defined sources and keywords, triage hits to cases with evidence links, and escalate material items per policy."}
+    },
+    {
+      "@type":"Question",
+      "name":"What about data privacy?",
+      "acceptedAnswer":{"@type":"Answer","text":"We work within your retention policy, minimise data shared, restrict access via roles, and keep an audit trail of who accessed what and when."}
+    }
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
