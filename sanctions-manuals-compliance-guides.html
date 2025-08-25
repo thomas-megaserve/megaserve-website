@@ -3,14 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Sanctions Manuals & Compliance Guides — MegaServe Cyprus</title>
-  <meta name="description" content="Actionable guidance for fast‑moving sanctions regimes.">
+  <meta name="description" content="Practical sanctions manuals and guides: regime mapping (UN/EU/UK/OFAC & local), list update SOPs, 50% ownership rules, screening calibration, escalation/licensing workflows, and audit-ready records.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (kept consistent with other pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -91,10 +124,12 @@
             <li><a href="client-screening-services.html">Client Screening Services</a></li>
             <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
             <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a aria-current="page" href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
+        <!-- About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +137,271 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- 1) HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
-      <h1>Sanctions Manuals & Compliance Guides</h1>
-      <p>Stay current with sanctions obligations and screening controls.</p>
-      <ul><li>List management and update procedures</li><li>False positive reduction techniques</li><li>Escalation paths and reporting</li><li>Periodic effectiveness testing</li></ul>
+      <h1>Sanctions Manuals &amp; Compliance Guides</h1>
+      <p class="content-narrow">Implement sanctions controls that teams can execute daily—clear regime coverage, list-update routines, 50% ownership rules, calibrated screening, and defensible escalation notes.</p>
     </div>
   </section>
 
-  <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <!-- 2) OVERVIEW -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Do</h2>
+      <ul class="feature-list">
+        <li>Regime mapping: UN, EU, UK, OFAC, and local regimes relevant to your footprint.</li>
+        <li>List management SOPs: update sources, backfills, release handling, and proofs.</li>
+        <li>Name-matching calibration: thresholds, fuzzy/alias rules, transliteration (non-Latin).</li>
+        <li>Ownership &amp; control rules: 50% aggregation, acting-on-behalf, and control indicators.</li>
+        <li>Sectoral/territorial measures and circumvention red flags incorporated into flows.</li>
+        <li>Screening scope: customers, UBOs, signatories, counterparties, vessels/entities.</li>
+        <li>Escalation &amp; licensing: decision trees, counsel/bank coordination, and records.</li>
+        <li>Registers &amp; MI: hits, true positives, exceptions, change log, and board/MLRO reporting.</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>Coverage &amp; Update Cadence</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Regime</th>
+              <th>Primary Update Source</th>
+              <th>Default Refresh Cadence</th>
+              <th>Trigger Examples</th>
+              <th>Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UN</td>
+              <td>UN Security Council updates</td>
+              <td>Daily pull / on change</td>
+              <td>New resolutions; list amendments</td>
+              <td>List sync log + portfolio sweep</td>
+            </tr>
+            <tr>
+              <td>EU</td>
+              <td>Official Journal / consolidated list</td>
+              <td>Daily pull / on change</td>
+              <td>Package updates; FAQs revisions</td>
+              <td>Change note + alert run</td>
+            </tr>
+            <tr>
+              <td>UK</td>
+              <td>OFSI consolidated list</td>
+              <td>Daily pull / on change</td>
+              <td>List additions; ownership guidance</td>
+              <td>Update proof + exceptions review</td>
+            </tr>
+            <tr>
+              <td>OFAC (US)</td>
+              <td>SDN/NS-PLC lists, FAQs</td>
+              <td>Daily pull / on change</td>
+              <td>SDN additions; 50% rule guidance</td>
+              <td>Backfill sweep + memo</td>
+            </tr>
+            <tr>
+              <td>Local / Sectoral</td>
+              <td>National/sector authority sites</td>
+              <td>Weekly or per-event</td>
+              <td>New sectoral bans; licensing notes</td>
+              <td>Impact note + control update</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">We align manuals to your policy and counterpart expectations. This page is informational; it is not legal or regulatory advice.</p>
+    </div>
+  </section>
+
+  <!-- 3) PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.2" id="process">
+    <div class="content-narrow">
+      <h2>Process</h2>
+      <ol class="process-steps">
+        <li><strong>Scope &amp; Baseline:</strong> Confirm regimes, jurisdictions, products, risk appetite, and current tooling.</li>
+        <li><strong>Map Obligations:</strong> Translate regime requirements into screening, ownership, and monitoring controls.</li>
+        <li><strong>Configure &amp; Calibrate:</strong> Tune lists, match thresholds, aliases/transliteration, and user roles.</li>
+        <li><strong>Train &amp; Roll Out:</strong> Playbooks, desk guides, and role-based training with attestations.</li>
+        <li><strong>Operate &amp; Report:</strong> Triage hits, escalate potential TPs, maintain registers and MI.</li>
+        <li><strong>Review &amp; Update:</strong> Periodic effectiveness testing, change log, and audit/exam support.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5) SERVICE LEVELS & TIMING -->
+  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency/Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Regime Mapping Note</td>
+              <td>1–3 business days</td>
+              <td>24–48h iterations</td>
+              <td>Lists scope and applicability by product/jurisdiction.</td>
+            </tr>
+            <tr>
+              <td>List Management SOP &amp; Tuning</td>
+              <td>Within first week</td>
+              <td>24–48h</td>
+              <td>Includes thresholds, alias rules, and proofs of update.</td>
+            </tr>
+            <tr>
+              <td>Training &amp; Desk Guides</td>
+              <td>At go-live</td>
+              <td>Next-day slides &amp; attendance log</td>
+              <td>Role-based modules with quick-reference cards.</td>
+            </tr>
+            <tr>
+              <td>Alert Escalation (Standard)</td>
+              <td>As alerts arise</td>
+              <td>&lt;24h triage</td>
+              <td>Case pack with evidence and disposition note.</td>
+            </tr>
+            <tr>
+              <td>List Update Rollout</td>
+              <td>On change</td>
+              <td>Same day</td>
+              <td>Sync log, impact note, portfolio sweep where relevant.</td>
+            </tr>
+            <tr>
+              <td>Audit/Exam Evidence Pack</td>
+              <td>On request</td>
+              <td>2–5 business days</td>
+              <td>Registers, samples, approvals, and change logs.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timings assume tool access and clear scope. External licensing/legal opinions and third-party queues may extend completion.</p>
+    </div>
+  </section>
+
+  <!-- 6) DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Sanctions policy mapping note (regimes, applicability, and refresh).</li>
+        <li>List management SOP with update proofs and backfill routine.</li>
+        <li>Name-matching tuning sheet (thresholds, alias/transliteration rules).</li>
+        <li>Escalation &amp; licensing workflow with decision trees and templates.</li>
+        <li>Registers: hits/TPs, exceptions, change log, and access register.</li>
+        <li>Training pack: slides, quick-reference guide, attendance/attestations.</li>
+        <li>Monthly MI pack: volumes, hit rates, ageing, QA findings.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7) CHECKLIST -->
+  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
+    <div class="content-narrow">
+      <h2>Inputs Checklist</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Policy &amp; Scope</th>
+              <th>Tools &amp; Data</th>
+              <th>Governance &amp; Records</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Risk appetite; regimes/jurisdictions; products &amp; channels.</td>
+              <td>Screening tool access; list sources; match settings; user roles.</td>
+              <td>Approval matrix; escalation contacts (Compliance/MLRO/counsel).</td>
+            </tr>
+            <tr>
+              <td>Counterparty/bank expectations (if any).</td>
+              <td>Sample (anonymised) alerts/exports for tuning.</td>
+              <td>Registers (hits/TPs, exceptions) and retention rules.</td>
+            </tr>
+            <tr>
+              <td>Known high-risk geographies/partners.</td>
+              <td>VDR structure and naming standards.</td>
+              <td>Change control owner and review cadence.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Share sensitive materials via VDR only. We provide an index and permissions model at kickoff.</p>
+    </div>
+  </section>
+
+  <!-- 8) CONTROLS / QUALITY -->
+  <section class="container fade-up" data-anim-delay="0.4" id="controls">
+    <div class="content-narrow">
+      <h2>Controls &amp; Quality</h2>
+      <ul class="feature-list">
+        <li>Two-person control for list changes and true-positive decisions.</li>
+        <li>Segregation of duties between configuration and dispositions.</li>
+        <li>QA sampling on dispositions and effectiveness testing per schedule.</li>
+        <li>Assumptions &amp; exceptions register with documented rationale.</li>
+        <li>Role-based access, least privilege, and full audit trail in the VDR.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9) ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.45" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>We build sanctions guides that are usable day-to-day and credible to banks, auditors, and regulators. Cyprus-based team coordinating with compliance, counsel, and counterpart banks to keep decisions defensible.</p>
+      <ul class="feature-list">
+        <li>Languages: EN/GR/RU; others on request.</li>
+        <li>Close coordination with Compliance/MLRO, counsel, and banks for escalations/licensing.</li>
+        <li>Clear cadence: weekly status, registers, and monthly MI.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10) FAQ -->
+  <section class="container fade-up" data-anim-delay="0.5" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <p class="note" role="note">Informational only—this is not legal or regulatory advice. Final positions rest with your Compliance/MLRO, counsel, and relevant authorities/banks.</p>
+      <dl class="faq">
+        <dt>Which regimes do you cover?</dt>
+        <dd>UN, EU, UK, OFAC (US), and any local/sectoral regimes relevant to your footprint—documented in the mapping note with refresh cadence.</dd>
+
+        <dt>Do you provide legal advice or licensing services?</dt>
+        <dd>No. We document and operate processes and evidence. Legal interpretations and licensing/derogation requests are handled by your counsel and authorities.</dd>
+
+        <dt>How quickly are list updates deployed?</dt>
+        <dd>Same day for major regimes where tools allow automated sync; manual proofs and impact notes are filed when automation isn’t available.</dd>
+
+        <dt>Can you guarantee zero sanctions exposure?</dt>
+        <dd>No. We implement risk-based controls, QA, and documentation to reduce error and demonstrate diligence, but cannot eliminate risk.</dd>
+
+        <dt>How do you handle the “50% rule” and complex ownership?</dt>
+        <dd>We apply aggregation and control tests per policy, capture rationale, and escalate edge cases with supporting evidence for MLRO/counsel review.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 11) CONTACT CTA -->
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+    <div class="container">
+      <h2>Request a Sanctions Manual Pack</h2>
+      <p class="contact-intro">We’ll return a regime mapping outline, list-update SOP draft, and first tuning sheet within 24–48 hours.</p>
+      <a href="mailto:megaserve@megaserve.eu?subject=Sanctions%20Manual%20Pack%20Request" class="btn-primary">Start Sanctions Manual</a>
+      <p class="note">For fastest turnaround, email: policy/risk appetite, regimes/jurisdictions in scope, products/channels, screening tool access, sample (anonymised) alerts/exports, bank/counterparty expectations, and escalation/approver list.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +413,49 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- 12) FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Which regimes do you cover?",
+      "acceptedAnswer":{"@type":"Answer","text":"UN, EU, UK, OFAC (US), and any local or sectoral regimes relevant to your footprint—documented in the mapping note with refresh cadence."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do you provide legal advice or licensing services?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. We document and operate processes and evidence. Legal interpretations and licensing or derogation requests are handled by your counsel and authorities."}
+    },
+    {
+      "@type":"Question",
+      "name":"How quickly are list updates deployed?",
+      "acceptedAnswer":{"@type":"Answer","text":"Same day for major regimes where tools allow automated sync; manual proofs and impact notes are filed when automation isn’t available."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can you guarantee zero sanctions exposure?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. We implement risk-based controls, QA, and documentation to reduce error and demonstrate diligence, but cannot eliminate risk."}
+    },
+    {
+      "@type":"Question",
+      "name":"How do you handle the “50% rule” and complex ownership?",
+      "acceptedAnswer":{"@type":"Answer","text":"We apply aggregation and control tests per policy, capture rationale, and escalate edge cases with supporting evidence for MLRO or counsel review."}
+    }
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
