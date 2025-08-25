@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Mergers & Acquisitions (M&A) Advisory Services — MegaServe Cyprus</title>
-  <meta name="description" content="Buy‑side and sell‑side advisory with cross‑border coordination.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyprus-based M&A advisory for buy-side and sell-side mandates: target screening, indicative valuation, VDR/Q&A PMO, SPA/APA coordination with counsel, closing mechanics, and day-1 integration planning for cross-border deals." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=11">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <link rel="stylesheet" href="style.css?v=12" />
+
+  <!-- Page-local helpers -->
+  <style>
+    /* Section framing */
+    .page-hero { padding: 3.5rem 0 2.25rem; border-bottom: 1px solid rgba(0,0,0,.06); }
+    .content-narrow { max-width: 860px; margin: 0 auto; }
+    .keyline { border-top: 1px solid rgba(0,0,0,.08); margin: 2rem 0; }
+    .note { background: #f6f8fb; border-left: 3px solid #d0d7de; padding: .85rem 1rem; border-radius: .325rem; font-size: .95rem; }
+    /* Feature list */
+    .feature-list { display: grid; gap: .75rem 1.25rem; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); margin: 1rem 0 0; padding: 0; list-style: none; }
+    .feature-list li { padding-left: 1.25rem; position: relative; }
+    .feature-list li::before { content: "•"; position: absolute; left: 0; color: #a00000; font-weight: 700; }
+    /* Process counter */
+    .process-steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
+    .process-steps li { padding-left: 2.75rem; position: relative; }
+    .process-steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute; left: 0; top: .1rem;
+      width: 2rem; height: 2rem; border-radius: 999px;
+      display: inline-grid; place-items: center;
+      background: #a00000; color: #fff; font-weight: 700;
+    }
+    /* Tables */
+    .table-wrap { overflow: auto; }
+    table.matrix, table.service { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    table.matrix th, table.matrix td, table.service th, table.service td { padding: .65rem .6rem; border: 1px solid rgba(0,0,0,.08); vertical-align: top; }
+    table.matrix thead th, table.service thead th { background: #fafafa; text-align: left; font-weight: 600; }
+    table.service td:nth-child(3) { white-space: nowrap; }
+    .badge { display: inline-block; padding: .15rem .5rem; font-size: .8rem; border-radius: .5rem; background: #f0f4ff; }
+    /* FAQ */
+    .faq dt { font-weight: 700; margin-top: 1rem; }
+    .faq dd { margin: .35rem 0 0 0; }
+    /* CTA note contrast */
+    #contact-cta .note { color:#fff; opacity:1; font-weight:600; font-size:1rem; margin-top:.75rem }
+  </style>
 </head>
 <body>
 
@@ -18,7 +53,7 @@
 <header id="site-header">
   <div class="container header-flex">
     <a href="index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
     <!-- Hamburger Button for Mobile -->
     <button id="nav-toggle" aria-label="Open Menu">
@@ -77,7 +112,7 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="ma-advisory-services.html" aria-current="page">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
             <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
             <li><a href="project-management-services.html">Project Management Services</a></li>
           </ul>
@@ -95,6 +130,7 @@
           </ul>
         </li>
 
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +138,297 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
-    <div class="container">
-      <h1>Mergers & Acquisitions (M&A) Advisory Services</h1>
-      <p>Hands‑on deal support from teaser to signing and post‑close integration.</p>
-      <ul><li>Target screening and indicative valuations</li><li>Deal structuring, SPA/APA coordination with counsel</li><li>Data room, Q&A and workstream PMO</li><li>Closing mechanics and post‑merger integration</li></ul>
+  <!-- 1) HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.05">
+    <div class="container content-narrow">
+      <h1>Mergers &amp; Acquisitions (M&amp;A) Advisory Services</h1>
+      <p>Buy-side and sell-side support from mandate to post-close: market mapping, indicative valuation, diligence PMO, SPA/APA coordination with counsel, and Cyprus-based execution for cross-border transactions.</p>
     </div>
   </section>
 
-  <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <!-- 2) OVERVIEW -->
+  <section id="overview" class="fade-up" data-anim-delay="0.1">
+    <div class="container content-narrow">
+      <h2>What We Do</h2>
+      <ul class="feature-list">
+        <li>Mandate scoping, workplan, and critical path for buy-side/sell-side or carve-outs.</li>
+        <li>Target search, longlist/shortlist, outreach tracking, and confidentiality workflows.</li>
+        <li>Indicative valuation (comps/precedents/simple DCF) and decision memos.</li>
+        <li>Teaser/IM and management presentation drafting, QC, and version control.</li>
+        <li>Virtual data room (VDR) build: structure, permissions, indexing, and Q&amp;A cadence.</li>
+        <li>Diligence PMO: financial/tax/legal/tech workstream coordination with advisors.</li>
+        <li>Term sheet &amp; SPA/APA issues list management and redline loop support.</li>
+        <li>Closing mechanics, funds flow, filings, and day-1/post-close integration planning.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3) PROCESS -->
+  <section id="process" class="fade-up" data-anim-delay="0.15">
+    <div class="container content-narrow">
+      <h2>Process</h2>
+      <ol class="process-steps">
+        <li><strong>Scope &amp; Readiness:</strong> Define objectives, constraints, deal perimeter, and data hygiene. Set roles, comms channels, and reporting cadence.</li>
+        <li><strong>Market &amp; Valuation:</strong> Map targets/buyers, create longlist/shortlist, initiate outreach. Prepare indicative valuation &amp; decision notes.</li>
+        <li><strong>Diligence PMO:</strong> Stand-up VDR, Q&amp;A tracker, and standing agendas. Coordinate advisors, issue logs, and weekly status.</li>
+        <li><strong>Docs &amp; Approvals:</strong> Term sheet to SPA/APA: manage issues list with counsel, align conditions precedent, and stakeholder approvals.</li>
+        <li><strong>Closing &amp; Funds Flow:</strong> Execute signing/closing checklists, filings, and settlements. Compile closing binder.</li>
+        <li><strong>Integration Day-1:</strong> Mobilise Day-1 plan, owner comms, access/controls, and first-90-days KPIs.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4) MATRIX / TABLES -->
+  <section class="fade-up" data-anim-delay="0.18">
+    <div class="container content-narrow">
+      <h2>Scope Matrix</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Buy-Side</th>
+              <th>Sell-Side</th>
+              <th>Primary Owner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mandate &amp; Critical Path</td>
+              <td>Lead</td>
+              <td>Lead</td>
+              <td>Client + MegaServe PMO</td>
+            </tr>
+            <tr>
+              <td>Target/Bidder Mapping &amp; Outreach</td>
+              <td>Lead</td>
+              <td>Support</td>
+              <td>MegaServe</td>
+            </tr>
+            <tr>
+              <td>Indicative Valuation Note</td>
+              <td>Lead</td>
+              <td>Support</td>
+              <td>MegaServe (with finance advisor)</td>
+            </tr>
+            <tr>
+              <td>Teaser / IM Preparation</td>
+              <td>Support</td>
+              <td>Lead</td>
+              <td>Client + MegaServe</td>
+            </tr>
+            <tr>
+              <td>VDR Build &amp; Q&amp;A Workflow</td>
+              <td>Lead</td>
+              <td>Lead</td>
+              <td>MegaServe</td>
+            </tr>
+            <tr>
+              <td>SPA/APA Issues List &amp; Redlines</td>
+              <td>Support</td>
+              <td>Support</td>
+              <td>External Counsel</td>
+            </tr>
+            <tr>
+              <td>Closing Mechanics &amp; Funds Flow</td>
+              <td>Lead</td>
+              <td>Lead</td>
+              <td>MegaServe + Counsel</td>
+            </tr>
+            <tr>
+              <td>Day-1 / Post-Close Integration</td>
+              <td>Lead</td>
+              <td>Lead</td>
+              <td>Client + MegaServe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">“Lead” indicates primary coordination and document control. Counsel remains document author for legal instruments; finance/tax advisors author specialist reports.</p>
+    </div>
+  </section>
+
+  <!-- 5) SERVICE LEVELS & TIMING -->
+  <section id="service-levels" class="fade-up" data-anim-delay="0.2">
+    <div class="container content-narrow">
+      <h2>Service Levels &amp; Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency / Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Target Screening &amp; Longlist</td>
+              <td>1–2 weeks from mandate</td>
+              <td>48–72h iterations</td>
+              <td>Includes sector filters and contactability assessment.</td>
+            </tr>
+            <tr>
+              <td>Indicative Valuation Memo</td>
+              <td>5–10 business days</td>
+              <td>48h comments loop</td>
+              <td>Comps/precedents; management sensitivities optional.</td>
+            </tr>
+            <tr>
+              <td>VDR Build &amp; Q&amp;A</td>
+              <td>Continuous during diligence</td>
+              <td>Same-day critical; 24–48h standard</td>
+              <td>Role-based permissions and audit logs maintained.</td>
+            </tr>
+            <tr>
+              <td>Workstream PMO &amp; Status</td>
+              <td>Weekly cadence (or bi-weekly)</td>
+              <td>Next-day minutes</td>
+              <td>Actions/issues tracker with owners and due dates.</td>
+            </tr>
+            <tr>
+              <td>SPA/APA Redline Support</td>
+              <td>As drafts issued</td>
+              <td>24–48h</td>
+              <td>Issues list + decision log; counsel leads drafting.</td>
+            </tr>
+            <tr>
+              <td>Closing Pack &amp; Funds Flow</td>
+              <td>1–2 weeks pre-close</td>
+              <td>Same-day changes</td>
+              <td>Signature packets, filings, and settlement timetable.</td>
+            </tr>
+            <tr>
+              <td>Day-1 / Integration Sprint</td>
+              <td>First 30–90 days post-close</td>
+              <td>Weekly checkpoints</td>
+              <td>Access, controls, comms, KPIs, and risk items.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="keyline"></div>
+    </div>
+  </section>
+
+  <!-- 6) DELIVERABLES -->
+  <section id="deliverables" class="fade-up" data-anim-delay="0.22">
+    <div class="container content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Mandate brief &amp; critical path workplan.</li>
+        <li>Target mapping workbook (longlist/shortlist &amp; outreach log).</li>
+        <li>Indicative valuation memo (assumptions + sensitivities).</li>
+        <li>Teaser/IM pack with version control.</li>
+        <li>VDR index, permissions register &amp; Q&amp;A tracker.</li>
+        <li>SPA/APA issues list &amp; decision log.</li>
+        <li>Closing binder (signatures, filings, funds flow, announcements).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7) CHECKLIST -->
+  <section id="checklist" class="fade-up" data-anim-delay="0.24">
+    <div class="container content-narrow">
+      <h2>Onboarding Checklist</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Corporate</th>
+              <th>Financial</th>
+              <th>Operations &amp; Legal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Certificate set, articles, group chart, cap table.</td>
+              <td>Last 3 years FS + YTD, trial balance, debt schedule.</td>
+              <td>Top 20 customer/supplier list &amp; contracts.</td>
+            </tr>
+            <tr>
+              <td>Shareholders/BO registers, option plans.</td>
+              <td>Cash flow &amp; working capital profile.</td>
+              <td>Key IP list, licenses, and renewals.</td>
+            </tr>
+            <tr>
+              <td>Board minutes/resolutions (material items).</td>
+              <td>Tax filings &amp; rulings (if any).</td>
+              <td>Employment roster &amp; templates; open disputes.</td>
+            </tr>
+            <tr>
+              <td>Bank/KYC contacts and account lists.</td>
+              <td>Budget/forecast (12–24m) if available.</td>
+              <td>Litigation/claims log and insurance certificates.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Sensitive data should be shared only via the VDR once established. We provide a structured index and permissioning on kickoff.</p>
+    </div>
+  </section>
+
+  <!-- 8) CONTROLS / QUALITY -->
+  <section class="fade-up" data-anim-delay="0.26">
+    <div class="container content-narrow">
+      <h2>Controls &amp; Quality</h2>
+      <ul class="feature-list">
+        <li>Dual control on critical filings, funds flow, and signature packets.</li>
+        <li>Assumptions &amp; decision logs maintained for auditability.</li>
+        <li>Role-based access in VDR with time-boxed links and access logs.</li>
+        <li>Redline discipline: version naming, comparison sets, and approval gates.</li>
+        <li>Weekly status with RAG risks, owners, and due dates.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9) ABOUT -->
+  <section id="about" class="fade-up" data-anim-delay="0.28">
+    <div class="container content-narrow">
+      <h2>About MegaServe</h2>
+      <p>We are a Cyprus-based corporate services team coordinating cross-border transactions with practical, document-first execution. We partner with your counsel and advisors to keep momentum and reduce surprises.</p>
+      <ul class="feature-list">
+        <li>Languages: English, Greek, Russian (others on request).</li>
+        <li>Close coordination with accountants, tax/legal counsel, and banks.</li>
+        <li>Clear cadence: weekly status, issues list, and next-step owners.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10) FAQ -->
+  <section id="faq" class="fade-up" data-anim-delay="0.3">
+    <div class="container content-narrow">
+      <h2>FAQ</h2>
+      <p class="note" role="note">Information here is general and not legal, tax, or investment advice. We coordinate with licensed professionals where required.</p>
+      <dl class="faq">
+        <dt>Do you replace legal counsel or investment banks?</dt>
+        <dd>No. We act as a corporate/M&amp;A PMO and execution partner. Counsel drafts legal instruments (term sheet, SPA/APA), and any regulated placement or investment services are handled by licensed firms.</dd>
+
+        <dt>What deal sizes and sectors do you support?</dt>
+        <dd>Primarily SME and mid-market transactions (≈€1m–€50m enterprise value), across Cyprus and CEE, with cross-border coordination. We adapt to earlier or larger stages if scope is well-defined.</dd>
+
+        <dt>What is a typical timeline for an SME deal involving Cyprus?</dt>
+        <dd>Indicative: 8–16 weeks from mandate to signing, plus 2–6 weeks to close depending on approvals and conditions precedent. Actual timing depends on diligence complexity and third-party responsiveness.</dd>
+
+        <dt>How do you protect confidentiality and data?</dt>
+        <dd>Mutual NDAs, segregated VDR with role-based permissions, access logs, and structured Q&amp;A. Sensitive documents are shared only via the VDR, not email.</dd>
+
+        <dt>How are fees structured?</dt>
+        <dd>Fixed-fee modules or monthly retainer for PMO, with optional success components via separate agreement. Disbursements (filings, notarisation, translations) are billed at cost.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 11) CONTACT CTA -->
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.32">
+    <div class="container content-narrow">
+      <h2>Kick Off Your M&amp;A Mandate</h2>
+      <p class="contact-intro">Set up a short scoping call and we’ll propose a workplan, cadence, and first deliverables within 48 hours.</p>
+      <a href="mailto:megaserve@megaserve.eu?subject=M%26A%20Mandate%20Scoping%20Call" class="btn-primary pulse-on-hover">Request M&amp;A Scoping Call</a>
+      <p class="note">For fastest turnaround, email: objective (buy/sell/carve-out), group chart &amp; cap table, last 2–3 years FS (or management pack), target list (if any), preferred timeline, and advisor contacts.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -139,6 +448,56 @@
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<script src="script.js?v=12"></script>
+
+<!-- 12) FAQ JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you replace legal counsel or investment banks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We operate as a corporate/M&A PMO and execution partner. Legal drafting is led by counsel, and any regulated placement or investment services are provided by licensed firms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What deal sizes and sectors do you support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Primarily SME and mid-market transactions of approximately €1m–€50m enterprise value across Cyprus and CEE, with cross-border coordination. We can adapt to other sizes if scope is clear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a typical timeline for an SME deal involving Cyprus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Indicative timing is 8–16 weeks from mandate to signing, plus 2–6 weeks to close depending on approvals and conditions precedent. Actual timing depends on diligence complexity and third-party responsiveness."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you protect confidentiality and data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use mutual NDAs, a segregated VDR with role-based permissions and access logs, and a structured Q&A process. Sensitive documents are shared only via the VDR."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are fees structured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fixed-fee modules or a monthly retainer for PMO, with optional success components via separate agreement. Disbursements such as filings and notarisation are billed at cost."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>
