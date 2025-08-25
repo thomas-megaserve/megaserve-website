@@ -3,14 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Business Synergy Development & Integration Services — MegaServe Cyprus</title>
-  <meta name="description" content="Design and realise synergies across finance, ops and go‑to‑market.">
+  <meta name="description" content="Practical synergy design and integration execution: operating model harmonisation, systems roadmap, change & comms, cutover runbooks, and benefits tracking across Cyprus and cross-border teams.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (kept consistent with other pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -78,7 +111,7 @@
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
             <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a aria-current="page" href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
             <li><a href="project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
@@ -95,6 +128,8 @@
           </ul>
         </li>
 
+        <!-- About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +137,276 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- 1) HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
-      <h1>Business Synergy Development & Integration Services</h1>
-      <p>Practical synergy identification and integration planning.</p>
-      <ul><li>Operating model and process harmonisation</li><li>Systems/integration roadmap and KPIs</li><li>Change management and communications</li><li>Realisation tracking and benefits governance</li></ul>
+      <h1>Business Synergy Development &amp; Integration Services</h1>
+      <p class="content-narrow">Identify, prioritise, and realise synergies with a disciplined integration plan—covering operating model, systems, cutover, and measurable benefits.</p>
     </div>
   </section>
 
-  <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <!-- 2) OVERVIEW -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Do</h2>
+      <ul class="feature-list">
+        <li>Synergy hypothesis framing (revenue, cost, working capital).</li>
+        <li>Operating model design: roles, spans, RACI, decision rights.</li>
+        <li>Process harmonisation: order-to-cash, procure-to-pay, record-to-report, hire-to-retire.</li>
+        <li>Systems &amp; data roadmap: ERP/CRM/MES inventory, interfaces, and migration approach.</li>
+        <li>Cutover planning: rehearsals, go/no-go gates, and contingency paths.</li>
+        <li>Change management: stakeholder map, comms calendar, training packs.</li>
+        <li>Benefits tracking: baselines, KPI definitions, dashboards, and governance.</li>
+        <li>Day-1 &amp; first-90-days execution with risk/issue management (RAID).</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>Synergy Scope Matrix</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Workstream</th>
+              <th>Typical Levers</th>
+              <th>Primary Stakeholders</th>
+              <th>KPIs / Benefits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Revenue</td>
+              <td>Cross-sell bundles, pricing alignment, channel consolidation.</td>
+              <td>Commercial lead, product, finance business partner.</td>
+              <td>Run-rate uplift, margin %, churn/retention, pipeline velocity.</td>
+            </tr>
+            <tr>
+              <td>Procurement</td>
+              <td>Supplier consolidation, category strategies, volume rebates.</td>
+              <td>Procurement head, ops, legal.</td>
+              <td>Unit cost ↓, contract coverage, on-time delivery.</td>
+            </tr>
+            <tr>
+              <td>Operations</td>
+              <td>Throughput balancing, footprint optimisation, SOP standardisation.</td>
+              <td>Ops lead, QA/HS, plant managers.</td>
+              <td>OEE, lead time, scrap/rework %, service level.</td>
+            </tr>
+            <tr>
+              <td>G&amp;A</td>
+              <td>Span/layer review, shared services, policy alignment.</td>
+              <td>HR, finance, IT.</td>
+              <td>FTE per function, cost-to-serve, cycle times.</td>
+            </tr>
+            <tr>
+              <td>IT / Systems</td>
+              <td>ERP/CRM rationalisation, data migration, interface cleanup.</td>
+              <td>IT lead, data owner, vendors.</td>
+              <td>License cost ↓, defect rate, time-to-close period.</td>
+            </tr>
+            <tr>
+              <td>Working Capital</td>
+              <td>Terms alignment, inventory policies, dispute reduction.</td>
+              <td>Finance, sales ops, supply chain.</td>
+              <td>DSO/DPO/DIO, cash conversion cycle, write-offs.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">We work alongside your advisors; specialist tax/legal/IT engineering is led by licensed or vendor teams as applicable.</p>
+    </div>
+  </section>
+
+  <!-- 3) PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.2" id="process">
+    <div class="content-narrow">
+      <h2>Process</h2>
+      <ol class="process-steps">
+        <li><strong>Diagnose:</strong> Gather baselines, map systems/processes, draft synergy hypotheses, and define guardrails.</li>
+        <li><strong>Design:</strong> Target operating model, workstream charters, and dependency map; confirm KPIs and measurement.</li>
+        <li><strong>Plan:</strong> Integration Master Plan (IMP), RAID and RACI, cutover strategy, training &amp; comms calendar.</li>
+        <li><strong>Build &amp; Rehearse:</strong> Configure processes/systems, data migration approach, and run cutover drills.</li>
+        <li><strong>Cutover &amp; Day-1:</strong> Execute runbook with go/no-go criteria, access &amp; controls, and owner comms.</li>
+        <li><strong>Stabilise &amp; Track:</strong> 30/60/90-day checkpoints, benefit realisation dashboard, and lessons learned.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5) SERVICE LEVELS & TIMING -->
+  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency/Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Diagnostic &amp; Hypotheses Pack</td>
+              <td>1–3 weeks</td>
+              <td>48–72h iteration loop</td>
+              <td>Baseline data dependent.</td>
+            </tr>
+            <tr>
+              <td>Workstream Stand-up</td>
+              <td>Week 2–4</td>
+              <td>Next-day minutes</td>
+              <td>Charters, RACI, and cadence confirmed.</td>
+            </tr>
+            <tr>
+              <td>Integration Master Plan (IMP)</td>
+              <td>2–4 weeks</td>
+              <td>24–48h on comments</td>
+              <td>Cross-dependencies and milestones.</td>
+            </tr>
+            <tr>
+              <td>Change &amp; Comms Pack</td>
+              <td>Rolling, weekly</td>
+              <td>Same–1 business day</td>
+              <td>Stakeholder map, scripts, training plan.</td>
+            </tr>
+            <tr>
+              <td>Cutover Rehearsal &amp; Runbook</td>
+              <td>~2 weeks pre-Day-1</td>
+              <td>Same-day critical updates</td>
+              <td>Go/no-go gates and rollback defined.</td>
+            </tr>
+            <tr>
+              <td>Benefits Tracking</td>
+              <td>Monthly</td>
+              <td>Next-day KPI refresh</td>
+              <td>Dashboard, variance commentary, actions.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timelines vary with data quality, vendor lead times, and regulatory approvals. We set realistic gates to avoid rushed cutovers.</p>
+    </div>
+  </section>
+
+  <!-- 6) DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Synergy hypotheses &amp; benefit baseline pack.</li>
+        <li>Target Operating Model (TOM) &amp; RACI.</li>
+        <li>Integration Master Plan (IMP) with RAID register.</li>
+        <li>Systems inventory &amp; interface/data migration map.</li>
+        <li>Change &amp; communications calendar with materials.</li>
+        <li>Cutover rehearsal scripts &amp; Day-1 runbook.</li>
+        <li>Benefits dashboard and monthly realisation notes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7) CHECKLIST -->
+  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
+    <div class="content-narrow">
+      <h2>Onboarding Documents Checklist</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Corporate &amp; People</th>
+              <th>Processes &amp; Ops</th>
+              <th>Systems &amp; Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Org charts, role descriptions, decision rights.</td>
+              <td>Process maps (OTC, P2P, R2R, H2R), SOPs.</td>
+              <td>ERP/CRM list, integrations, data owners.</td>
+            </tr>
+            <tr>
+              <td>KPIs by function, incentive schemes.</td>
+              <td>Vendor list, major contracts, SLAs.</td>
+              <td>Key reports, data quality issues, extracts.</td>
+            </tr>
+            <tr>
+              <td>Location footprint, shared service scope.</td>
+              <td>Inventory policy, order lead times.</td>
+              <td>Access model, license counts, environments.</td>
+            </tr>
+            <tr>
+              <td>Change history, open disputes.</td>
+              <td>Risk/controls, audit findings.</td>
+              <td>Migration constraints, vendor contacts.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Share via VDR only. We provide an index and permissioning model at kickoff.</p>
+    </div>
+  </section>
+
+  <!-- 8) CONTROLS / QUALITY -->
+  <section class="container fade-up" data-anim-delay="0.4">
+    <div class="content-narrow">
+      <h2>Controls &amp; Quality</h2>
+      <ul class="feature-list">
+        <li>Change Control Board (CCB) with documented go/no-go criteria.</li>
+        <li>Dual-control for access changes and cutover steps.</li>
+        <li>RAID register with owners and due dates; weekly RAG status.</li>
+        <li>Role-based permissions; least-privilege enforced in VDR and systems.</li>
+        <li>Audit trail: decisions, redlines, versions, and approvals archived.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9) ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.45" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>Cyprus-based corporate team focused on execution. We connect owners, managers, advisors, and vendors to deliver clean integrations with measurable benefits.</p>
+      <ul class="feature-list">
+        <li>EN/GR/RU service; other languages on request.</li>
+        <li>Coordination with accountants, counsel, IT vendors, and banks.</li>
+        <li>Clear cadence: weekly status, RAID review, KPI updates.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10) FAQ -->
+  <section class="container fade-up" data-anim-delay="0.5" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <p class="note" role="note">This page is informational and not legal, tax, investment, or engineering advice. We coordinate with licensed professionals and vendors as required.</p>
+      <dl class="faq">
+        <dt>Do you replace management consultants or IT integrators?</dt>
+        <dd>No. We run the integration PMO and synergy governance. Specialist design/build work is performed by your appointed consultants or vendors; we coordinate and quality-control timelines and deliverables.</dd>
+
+        <dt>What’s the typical timeline for a synergy programme?</dt>
+        <dd>Diagnostics in 1–3 weeks, planning 2–4 weeks, Day-1 within 4–12 weeks (deal-dependent), and stabilisation over 30/60/90 days. Larger ERP changes extend timelines.</dd>
+
+        <dt>Can you work if both companies use different ERPs/CRMs?</dt>
+        <dd>Yes. We map systems, define interim interfaces, and sequence migrations by risk. Vendor lead times and data quality materially impact duration.</dd>
+
+        <dt>Who owns benefits realisation?</dt>
+        <dd>Functional owners. We provide the baseline, KPI definitions, dashboard, and cadence; budget impacts are signed off by finance.</dd>
+
+        <dt>Will you manage communications to staff and customers?</dt>
+        <dd>We prepare the plan, scripts, and assets and can deliver internal briefings. Customer communications are issued by your authorised owners.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 11) CONTACT CTA -->
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+    <div class="container">
+      <h2>Launch a Synergy Diagnostic</h2>
+      <p class="contact-intro">We’ll return a proposed workplan, workstreams, and first deliverables within 48 hours.</p>
+      <a href="mailto:megaserve@megaserve.eu?subject=Synergy%20Diagnostic%20Kickoff" class="btn-primary">Request Synergy Kickoff</a>
+      <p class="note">For fastest turnaround, email: org charts &amp; roles, process maps (OTC/P2P/R2R), systems inventory, last 12m KPIs, top vendors/contracts, and any synergy hypotheses you already have.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +418,49 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- 12) FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Do you replace management consultants or IT integrators?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. We run the integration PMO and synergy governance. Specialist design/build work is performed by your appointed consultants or vendors; we coordinate and quality-control timelines and deliverables."}
+    },
+    {
+      "@type":"Question",
+      "name":"What’s the typical timeline for a synergy programme?",
+      "acceptedAnswer":{"@type":"Answer","text":"Diagnostics in 1–3 weeks, planning 2–4 weeks, Day-1 within 4–12 weeks depending on deal context, and stabilisation over 30/60/90 days. Larger ERP changes extend timelines."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can you work if both companies use different ERPs/CRMs?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. We map systems, define interim interfaces, and sequence migrations by risk. Vendor lead times and data quality materially impact duration."}
+    },
+    {
+      "@type":"Question",
+      "name":"Who owns benefits realisation?",
+      "acceptedAnswer":{"@type":"Answer","text":"Functional owners. We provide the baseline, KPI definitions, dashboard, and cadence; budget impacts are signed off by finance."}
+    },
+    {
+      "@type":"Question",
+      "name":"Will you manage communications to staff and customers?",
+      "acceptedAnswer":{"@type":"Answer","text":"We prepare the plan, scripts, and assets and can deliver internal briefings. Customer communications are issued by your authorised owners."}
+    }
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
