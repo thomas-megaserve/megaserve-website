@@ -3,14 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Know Your Client (KYC) Procedures — MegaServe Cyprus</title>
-  <meta name="description" content="Documented KYC procedures aligned to risk appetite and regulation.">
+  <meta name="description" content="Risk-based KYC procedures your teams can execute: CDD/EDD/SDD standards, identification & verification, UBO mapping, triggers & refresh cycles, record retention/GDPR, and approvals with audit-ready templates.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (kept consistent with other pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -89,12 +122,14 @@
           <ul class="dropdown" aria-label="Compliance Services Submenu">
             <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
             <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a aria-current="page" href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
             <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
             <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
+        <!-- About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +137,304 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- 1) HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
       <h1>Know Your Client (KYC) Procedures</h1>
-      <p>Clear, auditable KYC procedures your teams can follow.</p>
-      <ul><li>CDD/EDD procedures and templates</li><li>Beneficial ownership verification steps</li><li>Trigger events and refresh cycles</li><li>Record retention and GDPR alignment</li></ul>
+      <p class="content-narrow">Documented, risk-based procedures your teams can execute: CDD/EDD/SDD flows, identification &amp; verification, UBO mapping, triggers &amp; refresh cycles, and GDPR-aligned recordkeeping.</p>
     </div>
   </section>
 
-  <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <!-- 2) OVERVIEW -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Do</h2>
+      <ul class="feature-list">
+        <li>Define KYC policy scope: customer types, jurisdictions, products, and risk appetite.</li>
+        <li>Codify CDD/EDD/SDD procedures with clear evidence thresholds and templates.</li>
+        <li>Identification &amp; verification steps (certification/legalisation rules included).</li>
+        <li>Ownership &amp; control mapping: multi-layer UBO tracing and documentation.</li>
+        <li>Screening linkages to sanctions/PEP/adverse media and approval routing.</li>
+        <li>Trigger events &amp; periodic refresh schedules by risk tier (e.g., 12/24/36 months).</li>
+        <li>Record retention, privacy notices, and access controls aligned to GDPR/policy.</li>
+        <li>Governance: exception handling, change control, and versioned approvals.</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>KYC Levels &amp; Evidence at a Glance</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Level / Scenario</th>
+              <th>Identification</th>
+              <th>Ownership &amp; Control</th>
+              <th>Screening</th>
+              <th>Approvals &amp; Refresh</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Simplified Due Diligence (SDD)</td>
+              <td>Basic ID &amp; address; certification if policy requires</td>
+              <td>N/A or minimal confirmation</td>
+              <td>Sanctions/PEP baseline</td>
+              <td>Line manager sign-off; 36m refresh</td>
+            </tr>
+            <tr>
+              <td>Customer Due Diligence (CDD)</td>
+              <td>Verified IDs for client &amp; signatories; PoA ≤3–6m</td>
+              <td>Shareholder/BO registers; org chart; ≥25% UBOs</td>
+              <td>Sanctions/PEP + adverse media</td>
+              <td>Compliance approval; 24m refresh</td>
+            </tr>
+            <tr>
+              <td>Enhanced Due Diligence (EDD)</td>
+              <td>Certified IDs; notarisation/legalisation if required</td>
+              <td>Full multi-layer UBO tracing; SoW/SoF with evidence</td>
+              <td>Expanded adverse media sources; heightened checks</td>
+              <td>MLRO sign-off; 12m refresh</td>
+            </tr>
+            <tr>
+              <td>Trigger Event (change/negative news)</td>
+              <td>Re-confirm affected identities</td>
+              <td>Update ownership where relevant</td>
+              <td>Targeted re-screening</td>
+              <td>Out-of-cycle review &amp; memo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Exact levels/evidence depend on your policy and counterpart requirements. We implement your standards and document exceptions.</p>
+    </div>
+  </section>
+
+  <!-- 3) PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.2" id="process">
+    <div class="content-narrow">
+      <h2>Process</h2>
+      <ol class="process-steps">
+        <li><strong>Scope &amp; Baseline:</strong> Confirm customer types, jurisdictions, risk appetite, and current practices.</li>
+        <li><strong>Design Procedures:</strong> Draft CDD/EDD/SDD flows, evidence thresholds, and approval routing with templates.</li>
+        <li><strong>Integrate Screening:</strong> Map sanctions/PEP/adverse-media steps and escalation notes into the flow.</li>
+        <li><strong>Pilot &amp; Train:</strong> Run sample files, refine thresholds, publish playbooks, and brief teams.</li>
+        <li><strong>Approve &amp; Publish:</strong> Versioned sign-offs, change log, and distribution to users.</li>
+        <li><strong>Review &amp; Refresh:</strong> Set periodic reviews and register of exceptions/assumptions for audits.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4) ROLES / OUTPUTS MATRIX -->
+  <section class="container fade-up" data-anim-delay="0.22" id="roles">
+    <div class="content-narrow">
+      <h2>Roles &amp; Records</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Responsibilities</th>
+              <th>Primary Records</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Frontline Owner</td>
+              <td>Collect evidence, complete checklist, draft SoW/SoF narrative.</td>
+              <td>Checklist, SoW/SoF memo, certification copies.</td>
+            </tr>
+            <tr>
+              <td>Compliance</td>
+              <td>Review file, apply risk score, disposition screening, approve or escalate.</td>
+              <td>Risk assessment, screening notes, approval memo.</td>
+            </tr>
+            <tr>
+              <td>MLRO</td>
+              <td>Approve EDD/exceptions, set refresh tier, maintain registers.</td>
+              <td>EDD approval, exceptions &amp; assumptions register.</td>
+            </tr>
+            <tr>
+              <td>MegaServe (PMO)</td>
+              <td>Procedure drafting, templates, VDR structure, change control.</td>
+              <td>Procedures manual, template pack, version/change log.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5) SERVICE LEVELS & TIMING -->
+  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency/Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>KYC Policy Outline</td>
+              <td>1–3 business days</td>
+              <td>24–48h iterations</td>
+              <td>Based on your risk appetite &amp; scope.</td>
+            </tr>
+            <tr>
+              <td>Procedures Manual (CDD/EDD/SDD)</td>
+              <td>1–2 weeks</td>
+              <td>48–72h comments loop</td>
+              <td>Includes flows, thresholds, and approvals.</td>
+            </tr>
+            <tr>
+              <td>Template Pack &amp; Checklists</td>
+              <td>Within manual timeline</td>
+              <td>24–48h</td>
+              <td>Editable formats, versioned.</td>
+            </tr>
+            <tr>
+              <td>Training / Walk-through</td>
+              <td>At publication</td>
+              <td>Next-day slides &amp; minutes</td>
+              <td>Recording and Q&amp;A log provided.</td>
+            </tr>
+            <tr>
+              <td>Annual Policy Review</td>
+              <td>Yearly or regulatory change</td>
+              <td>5 business days</td>
+              <td>Change log and updated approvals.</td>
+            </tr>
+            <tr>
+              <td>Audit/Exam Response Pack</td>
+              <td>On request</td>
+              <td>2–5 business days</td>
+              <td>Indices, samples, approvals, registers.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timings assume tool access and clear scope. External certifications/legalisations and third-party queries may extend completion.</p>
+    </div>
+  </section>
+
+  <!-- 6) DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>KYC Policy outline and risk-tier framework.</li>
+        <li>Procedures manual (CDD/EDD/SDD) with flowcharts.</li>
+        <li>Template pack: checklists, approval memos, SoW/SoF forms.</li>
+        <li>UBO mapping guide &amp; ownership documentation template.</li>
+        <li>Exceptions &amp; assumptions register with governance.</li>
+        <li>Record retention schedule &amp; privacy notice annex.</li>
+        <li>Refresh calendar and roles/RACI summary.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7) CHECKLIST -->
+  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
+    <div class="content-narrow">
+      <h2>Inputs Checklist for KYC Procedures Build</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Policy Inputs</th>
+              <th>Systems &amp; Tools</th>
+              <th>Governance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Customer types, jurisdictions, products, risk appetite.</td>
+              <td>Screening tools &amp; list coverage; VDR structure.</td>
+              <td>Approval matrix (line/compliance/MLRO), exception policy.</td>
+            </tr>
+            <tr>
+              <td>Current checklists/templates (if any), regulator guidance.</td>
+              <td>Certification/legalisation requirements by market.</td>
+              <td>Record retention &amp; privacy notices; access controls.</td>
+            </tr>
+            <tr>
+              <td>Counterparty/bank requirements (if relevant).</td>
+              <td>Data fields available in client master.</td>
+              <td>Change control owner and review cadence.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Share sensitive materials via VDR only. We provide an index and permissions model at kickoff.</p>
+    </div>
+  </section>
+
+  <!-- 8) CONTROLS / QUALITY -->
+  <section class="container fade-up" data-anim-delay="0.4" id="controls">
+    <div class="content-narrow">
+      <h2>Controls &amp; Quality</h2>
+      <ul class="feature-list">
+        <li>Dual control for EDD approvals and exceptions.</li>
+        <li>Role-based permissions and access register.</li>
+        <li>Document control: versioning, redlines, change log.</li>
+        <li>QA sampling with corrective actions tracked to close.</li>
+        <li>Audit trail of decisions, approvers, and timestamps.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9) ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.45" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>We document practical KYC procedures that stand up to bank and auditor review. Cyprus-based team coordinating owners, compliance, and counsel to keep standards clear and executable.</p>
+      <ul class="feature-list">
+        <li>Languages: EN/GR/RU; others on request.</li>
+        <li>Coordination with compliance/MLRO, counsel, and banks.</li>
+        <li>Clear cadence: weekly status, registers, and updates.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10) FAQ -->
+  <section class="container fade-up" data-anim-delay="0.5" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <p class="note" role="note">This page is informational and not legal or regulatory advice. Final positions rest with your Compliance/MLRO and advisors.</p>
+      <dl class="faq">
+        <dt>Are the procedures templates or tailored?</dt>
+        <dd>Tailored. We start from proven structures and align to your policy, jurisdictions, products, and counterpart expectations.</dd>
+
+        <dt>Do you provide legal/regulatory advice?</dt>
+        <dd>No. We document and operate procedures aligned to your advisors’ guidance and applicable rules. Regulatory interpretations remain with licensed professionals.</dd>
+
+        <dt>How often should KYC be refreshed?</dt>
+        <dd>Typically by risk tier (e.g., 12/24/36 months) and on trigger events. Your policy sets exact intervals.</dd>
+
+        <dt>Can procedures integrate with screening and onboarding?</dt>
+        <dd>Yes. We embed sanctions/PEP/adverse-media steps and link to onboarding files, approvals, and bank pack requirements.</dd>
+
+        <dt>Who approves exceptions?</dt>
+        <dd>Per your approval matrix (e.g., Compliance or MLRO for EDD). We document rationale in the exceptions register.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 11) CONTACT CTA -->
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+    <div class="container">
+      <h2>Request a KYC Procedures Pack</h2>
+      <p class="contact-intro">We’ll return a policy outline, procedure table of contents, and template set within 48 hours.</p>
+      <a href="mailto:megaserve@megaserve.eu?subject=KYC%20Procedures%20Pack%20Request" class="btn-primary">Start KYC Procedures</a>
+      <p class="note">For fastest turnaround, email: current policy (if any), jurisdictions &amp; customer types, risk appetite, screening tools, certification/legalisation rules, record-retention policy, and approval matrix.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +446,49 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- 12) FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Are the procedures templates or tailored?",
+      "acceptedAnswer":{"@type":"Answer","text":"Tailored. We start from proven structures and align to your policy, jurisdictions, products, and counterpart expectations."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do you provide legal/regulatory advice?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. We document and operate procedures aligned to your advisors’ guidance and applicable rules. Regulatory interpretations remain with licensed professionals."}
+    },
+    {
+      "@type":"Question",
+      "name":"How often should KYC be refreshed?",
+      "acceptedAnswer":{"@type":"Answer","text":"Typically by risk tier (e.g., 12/24/36 months) and on trigger events. Your policy sets exact intervals."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can procedures integrate with screening and onboarding?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. We embed sanctions/PEP/adverse-media steps and link to onboarding files, approvals, and bank pack requirements."}
+    },
+    {
+      "@type":"Question",
+      "name":"Who approves exceptions?",
+      "acceptedAnswer":{"@type":"Answer","text":"Per your approval matrix (e.g., Compliance or MLRO for EDD). We document rationale in the exceptions register."}
+    }
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
