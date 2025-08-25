@@ -3,14 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Client Onboarding Assistance Services — MegaServe Cyprus</title>
-  <meta name="description" content="Friction‑light onboarding with strong documentation and checks.">
+  <meta name="description" content="Friction-light client onboarding with strong documentation and checks: tailored checklists by client type, secure intake portals, ID verification, PEP/sanctions/adverse media screening, risk scoring, approval memos, and bank-ready packs.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (kept consistent with other pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+  </style>
 </head>
 <body>
 
@@ -87,7 +120,7 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a aria-current="page" href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
             <li><a href="client-screening-services.html">Client Screening Services</a></li>
             <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
             <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
@@ -95,6 +128,8 @@
           </ul>
         </li>
 
+        <!-- About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +137,283 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- 1) HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
       <h1>Client Onboarding Assistance Services</h1>
-      <p>We streamline onboarding while maintaining robust compliance.</p>
-      <ul><li>Document collection portals and checklists</li><li>Identity verification and PEP screening setup</li><li>Policy‑based risk scoring and workflows</li><li>Audit trail and reporting</li></ul>
+      <p class="content-narrow">Set up intake, verification, and approvals so new clients clear KYC/AML expectations on the first pass—without sacrificing control or auditability.</p>
     </div>
   </section>
 
-  <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <!-- 2) OVERVIEW -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Do</h2>
+      <ul class="feature-list">
+        <li>Tailored checklists by client type: individual, corporate, trust/foundation, UBOs, signatories.</li>
+        <li>Secure VDR/portal setup with file naming, version control, and permissions.</li>
+        <li>Identity verification workflows: passports/IDs, proof of address, liveness (where applicable).</li>
+        <li>PEP/sanctions/adverse media screening using your approved tools and providers.</li>
+        <li>Ownership &amp; control mapping (cap tables/BO registers) and SoW/SoF narrative templates.</li>
+        <li>Risk assessment methodology and scoring with clear approval notes.</li>
+        <li>Exceptions handling &amp; escalation paths with documented rationale.</li>
+        <li>Bank/account opening packs and periodic KYC refresh calendar.</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>Evidence Matrix by Client Type</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Client Type</th>
+              <th>Identity</th>
+              <th>Address</th>
+              <th>Ownership &amp; Control</th>
+              <th>Additional (SoW/SoF)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Individual</td>
+              <td>Passport/ID (certified if required); liveness (if used)</td>
+              <td>Utility/bank/statement ≤3–6m</td>
+              <td>N/A</td>
+              <td>Source of Funds/Wealth statement + supporting docs</td>
+            </tr>
+            <tr>
+              <td>Corporate (EU/Cyprus)</td>
+              <td>Director/signatory IDs</td>
+              <td>Registered office proof</td>
+              <td>Certificate set, register of shareholders/UBOs, org chart</td>
+              <td>Purpose of relationship; activity narrative</td>
+            </tr>
+            <tr>
+              <td>Corporate (Non-EU/High-risk)</td>
+              <td>Director/signatory IDs (certified)</td>
+              <td>Registered office proof (certified)</td>
+              <td>Corporate tree with ultimate owners; enhanced verification</td>
+              <td>SoW/SoF with evidence; adverse media review</td>
+            </tr>
+            <tr>
+              <td>Trust / Foundation</td>
+              <td>Trustees/Foundation officers IDs</td>
+              <td>Registered address</td>
+              <td>Deed/charter; beneficiaries/Protectors; control provisions</td>
+              <td>Purpose statements; funding history</td>
+            </tr>
+            <tr>
+              <td>UBO of Corporate</td>
+              <td>UBO ID (certified if required)</td>
+              <td>Proof of address</td>
+              <td>Ownership % confirmation</td>
+              <td>SoW/SoF evidence proportional to risk</td>
+            </tr>
+            <tr>
+              <td>Authorised Signatory</td>
+              <td>ID + specimen signature</td>
+              <td>Proof of address</td>
+              <td>Board resolution / mandate</td>
+              <td>Role description; access scope</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Requirements vary by institution and jurisdiction. We align checklists to your compliance policy and the receiving bank’s standards.</p>
+    </div>
+  </section>
+
+  <!-- 3) PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.2" id="process">
+    <div class="content-narrow">
+      <h2>Process</h2>
+      <ol class="process-steps">
+        <li><strong>Scope &amp; Policy Align:</strong> Confirm risk appetite, client types, jurisdictions, and evidence thresholds.</li>
+        <li><strong>Intake &amp; Completeness:</strong> Share tailored checklist; set up VDR/portal; perform completeness and quality checks.</li>
+        <li><strong>Verify &amp; Screen:</strong> ID/authenticity checks; PEP/sanctions/adverse media hits recorded with references.</li>
+        <li><strong>Assess &amp; Approve:</strong> Apply risk scoring, draft approval memo, and log decisions/assumptions.</li>
+        <li><strong>Bank/Account Pack:</strong> Assemble forms, resolutions, signatures, and submit via agreed channel.</li>
+        <li><strong>Archive &amp; Refresh:</strong> Index the KYC file, set review dates (e.g., 12/24/36 months), and add to the calendar.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5) SERVICE LEVELS & TIMING -->
+  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency/Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Onboarding Checklist Draft</td>
+              <td>Within 1–2 business days</td>
+              <td>24–48h iterations</td>
+              <td>Per client type/jurisdiction; bank-specific if needed.</td>
+            </tr>
+            <tr>
+              <td>Screening (PEP/Sanctions/Adverse Media)</td>
+              <td>On receipt of IDs</td>
+              <td>Same day</td>
+              <td>Using your approved tools; evidence saved to file.</td>
+            </tr>
+            <tr>
+              <td>Risk Assessment &amp; Approval Memo</td>
+              <td>Once file complete</td>
+              <td>24–48h</td>
+              <td>Enhanced due diligence adds time.</td>
+            </tr>
+            <tr>
+              <td>Bank/Account Opening Pack</td>
+              <td>After approvals</td>
+              <td>24–72h</td>
+              <td>Bank queues/queries affect total time.</td>
+            </tr>
+            <tr>
+              <td>KYC File Archive &amp; Index</td>
+              <td>Immediately post-approval</td>
+              <td>Same day</td>
+              <td>Version-controlled with access register.</td>
+            </tr>
+            <tr>
+              <td>Periodic KYC Refresh</td>
+              <td>12/24/36m by risk tier</td>
+              <td>Reminder weekly until closed</td>
+              <td>Calendar + status note issued.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timings assume complete inputs. Third-party verifications, notarisation/legalisation, or bank reviews may extend the cycle.</p>
+    </div>
+  </section>
+
+  <!-- 6) DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Tailored onboarding checklist &amp; client communication template.</li>
+        <li>VDR index and permissions register.</li>
+        <li>ID verification pack with screening evidence (PEP/sanctions/adverse media).</li>
+        <li>Ownership &amp; control chart (UBO map) with registers.</li>
+        <li>Risk assessment &amp; approval memo with decision log.</li>
+        <li>Bank/account opening pack (forms, resolutions, signatures).</li>
+        <li>KYC archive and rolling refresh calendar.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7) CHECKLIST -->
+  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
+    <div class="content-narrow">
+      <h2>Onboarding Documents Checklist</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Individuals</th>
+              <th>Corporate Shareholders / UBOs</th>
+              <th>Entity Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Passport/ID (certified if required); proof of address; SoW/SoF narrative.</td>
+              <td>UBO IDs &amp; address proofs; ownership % confirmation; SoW/SoF evidence.</td>
+              <td>Certificate set (incorporation, directors/secretary, registered office), articles, good standing (if applicable).</td>
+            </tr>
+            <tr>
+              <td>CV/profile (for higher-risk cases).</td>
+              <td>Adverse media/PEP/sanctions screening evidence.</td>
+              <td>Shareholder &amp; BO registers; cap table; org chart.</td>
+            </tr>
+            <tr>
+              <td>PEP/sanctions screening evidence.</td>
+              <td>Board/mandate confirming authorised signatories.</td>
+              <td>Tax/VAT numbers; licenses; principal contracts (if relevant).</td>
+            </tr>
+            <tr>
+              <td>Signed declarations/consents.</td>
+              <td>Bank reference or professional reference (if required).</td>
+              <td>Resolutions/forms for bank/account opening.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Share sensitive documents via the VDR only. We provide a structured index and access model at kickoff.</p>
+    </div>
+  </section>
+
+  <!-- 8) CONTROLS / QUALITY -->
+  <section class="container fade-up" data-anim-delay="0.4">
+    <div class="content-narrow">
+      <h2>Controls &amp; Quality</h2>
+      <ul class="feature-list">
+        <li>Dual-control on onboarding approvals and bank submissions.</li>
+        <li>Full audit trail: versioning, redlines, screening refs, and decision logs.</li>
+        <li>Role-based permissions (least privilege) with access register.</li>
+        <li>Exceptions &amp; assumptions log with documented rationale.</li>
+        <li>Data retention &amp; privacy notices aligned to your policy.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9) ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.45" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>We run practical onboarding that stands up to bank and auditor review. Our Cyprus-based team coordinates owners, counsel, and banks to keep files complete and approvals moving.</p>
+      <ul class="feature-list">
+        <li>Languages: EN/GR/RU; others on request.</li>
+        <li>Close coordination with accountants, compliance officers/MLROs, and banks.</li>
+        <li>Clear cadence: weekly status, issues tracker, and refresh calendar.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10) FAQ -->
+  <section class="container fade-up" data-anim-delay="0.5" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <p class="note" role="note">This page is informational and not legal or regulatory advice. Final decisions rest with your appointed compliance officer/MLRO, advisors, and the receiving bank.</p>
+      <dl class="faq">
+        <dt>Do you replace our compliance officer or MLRO?</dt>
+        <dd>No. We prepare, organise, and track files, using your policies and approved tools. Approvals and regulatory positions remain with your compliance function.</dd>
+
+        <dt>How long does onboarding usually take?</dt>
+        <dd>With complete documents, 2–5 business days is typical. Enhanced due diligence, notarisation/legalisation, or bank clarifications can extend timelines.</dd>
+
+        <dt>Can you prepare files for multiple banks/jurisdictions?</dt>
+        <dd>Yes. We tailor checklists and packs to each bank’s format and jurisdictional requirements. We cannot guarantee bank approvals.</dd>
+
+        <dt>How do you handle PEP or sanctions hits?</dt>
+        <dd>We document the hit, gather supporting evidence, escalate per policy, and record the decision and rationale. In some cases we may advise not to proceed.</dd>
+
+        <dt>What tools do you work with?</dt>
+        <dd>We use your screening/KYC platforms where available, or operate agreed vendor tools. Files are stored in the VDR with role-based access.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 11) CONTACT CTA -->
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+    <div class="container">
+      <h2>Request Your Onboarding Checklist</h2>
+      <p class="contact-intro">We’ll return a tailored checklist and VDR index within 24–48 hours.</p>
+      <a href="mailto:megaserve@megaserve.eu?subject=Client%20Onboarding%20Kickoff" class="btn-primary">Start Onboarding</a>
+      <p class="note">For fastest turnaround, email: certificate set &amp; org chart, BO/shareholder registers, IDs &amp; proof of address (key persons), purpose of relationship, expected activity/volumes, and target bank(s)/jurisdictions.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +425,29 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- 12) FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Do you replace our compliance officer or MLRO?","acceptedAnswer":{"@type":"Answer","text":"No. We prepare, organise, and track files, using your policies and approved tools. Approvals and regulatory positions remain with your compliance function."}},
+    {"@type":"Question","name":"How long does onboarding usually take?","acceptedAnswer":{"@type":"Answer","text":"With complete documents, 2–5 business days is typical. Enhanced due diligence, notarisation/legalisation, or bank clarifications can extend timelines."}},
+    {"@type":"Question","name":"Can you prepare files for multiple banks/jurisdictions?","acceptedAnswer":{"@type":"Answer","text":"Yes. We tailor checklists and packs to each bank’s format and jurisdictional requirements. We cannot guarantee bank approvals."}},
+    {"@type":"Question","name":"How do you handle PEP or sanctions hits?","acceptedAnswer":{"@type":"Answer","text":"We document the hit, gather supporting evidence, escalate per policy, and record the decision and rationale. In some cases we may advise not to proceed."}},
+    {"@type":"Question","name":"What tools do you work with?","acceptedAnswer":{"@type":"Answer","text":"We use your screening/KYC platforms where available, or operate agreed vendor tools. Files are stored in the VDR with role-based access."}}
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
