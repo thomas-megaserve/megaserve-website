@@ -9,7 +9,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
 
   <!-- Minimal scoped tweaks -->
@@ -75,31 +75,52 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Category Hubs -->
-            <li><a href="residency-by-employment-permit-services.html">Residency by Employment Permit Services</a></li>
-            <li><a href="residency-by-investment-permit-services.html">Residency by Investment Permit Services</a></li>
-            <li><a href="visitor-residency-permit-services.html">Visitor Residency Permit Services</a></li>
-            <li><a href="naturalisation-citizenship-services.html">Naturalisation &amp; Citizenship Services</a></li>
+            <!-- Employment hub with flyout -->
+            <li class="has-flyout">
+              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Employment permit routes">
+                <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="general-employment-permit.html">General Employment</a></li>
+                <li><a href="eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+              </ul>
+            </li>
 
-            <!-- Inline grouping labels + specific routes -->
-            <li class="menu-label"><span class="badge">Employment</span></li>
-            <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-            <li><a href="general-employment-permit.html">General Employment</a></li>
-            <li><a href="eu-blue-card.html">EU Blue Card</a></li>
-            <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
-            <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+            <!-- Investment hub with flyout -->
+            <li class="has-flyout">
+              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Investment routes">
+                <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="categories-a-f.html">Categories A–F</a></li>
+                <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+              </ul>
+            </li>
 
-            <li class="menu-label"><span class="badge">Investment</span></li>
-            <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-            <li><a href="categories-a-f.html">Categories A–F</a></li>
-            <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+            <!-- Visitor hub with flyout -->
+            <li class="has-flyout">
+              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Visitor routes">
+                <li><a href="visitors-permit.html">Visitors Permit</a></li>
+              </ul>
+            </li>
 
-            <li class="menu-label"><span class="badge">Visitor</span></li>
-            <li><a href="visitors-permit.html">Visitors Permit</a></li>
-
-            <li class="menu-label"><span class="badge">Citizenship</span></li>
-            <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-            <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+            <!-- Citizenship hub with flyout -->
+            <li class="has-flyout">
+              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+                Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Citizenship routes">
+                <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
@@ -387,6 +408,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=12"></script>
+<script src="script.js?v=13"></script>
 </body>
 </html>

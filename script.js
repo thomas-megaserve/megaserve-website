@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* -------------------
+     Constants
+  -------------------- */
+  const DROPDOWN_BREAKPOINT = 768; // keep in sync with CSS
+
+  /* -------------------
      Mobile menu toggle
   -------------------- */
   const navToggle = document.getElementById("nav-toggle");
@@ -10,9 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* -------------------
-     NEW: Dropdown (click/tap on mobile, hover on desktop)
+     Dropdowns (level 1) – click/tap on mobile, hover via CSS on desktop
   -------------------- */
-  const DROPDOWN_BREAKPOINT = 768; // match CSS
   const dropdownParents = document.querySelectorAll("#main-nav .has-dropdown > a");
 
   dropdownParents.forEach(anchor => {
@@ -23,30 +27,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     anchor.addEventListener("click", (e) => {
       const isMobile = window.innerWidth <= DROPDOWN_BREAKPOINT || mainNav.classList.contains("active");
-      if (isMobile) {
-        e.preventDefault();
+      if (!isMobile) return; // desktop handled by CSS hover
+      e.preventDefault();
 
-        // close siblings
-        const siblings = parentLi.parentElement.querySelectorAll(".has-dropdown.open");
-        siblings.forEach(sib => {
-          if (sib !== parentLi) {
-            sib.classList.remove("open");
-            const a = sib.querySelector(":scope > a");
-            if (a) a.setAttribute("aria-expanded", "false");
-          }
-        });
+      // close sibling dropdowns
+      parentLi.parentElement.querySelectorAll(":scope > .has-dropdown.open").forEach(sib => {
+        if (sib !== parentLi) {
+          sib.classList.remove("open");
+          const a = sib.querySelector(":scope > a");
+          if (a) a.setAttribute("aria-expanded", "false");
+          // also collapse any open flyouts inside the sibling
+          sib.querySelectorAll(".has-flyout.open").forEach(f => {
+            f.classList.remove("open");
+            const fa = f.querySelector(":scope > a");
+            if (fa) fa.setAttribute("aria-expanded", "false");
+          });
+        }
+      });
 
-        // toggle this one
-        const willOpen = !parentLi.classList.contains("open");
-        parentLi.classList.toggle("open", willOpen);
-        anchor.setAttribute("aria-expanded", String(willOpen));
-      }
+      // toggle this dropdown
+      const willOpen = !parentLi.classList.contains("open");
+      parentLi.classList.toggle("open", willOpen);
+      anchor.setAttribute("aria-expanded", String(willOpen));
     });
 
-    // keyboard accessibility (Enter/Space) for desktop users
+    // keyboard accessibility (Enter/Space) for mobile behavior
     anchor.addEventListener("keydown", (e) => {
-      const key = e.key;
-      if (key === "Enter" || key === " ") {
+      if (e.key === "Enter" || e.key === " ") {
         const isMobile = window.innerWidth <= DROPDOWN_BREAKPOINT || mainNav.classList.contains("active");
         if (isMobile) {
           e.preventDefault();
@@ -56,13 +63,96 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Close open dropdowns when clicking outside on mobile
+  /* -------------------
+     Flyouts (level 2) – nested menus inside dropdowns
+     - Desktop: CSS hover shows them.
+     - Mobile: click to expand under parent row like an accordion.
+  -------------------- */
+  const flyoutTriggers = document.querySelectorAll("#main-nav .dropdown li.has-flyout > a");
+
+  flyoutTriggers.forEach(anchor => {
+    const li = anchor.parentElement;
+    const flyout = li.querySelector(":scope > .flyout");
+
+    // ARIA
+    anchor.setAttribute("aria-expanded", "false");
+
+    // Desktop overflow guard: flip to .align-right if spilling off-screen
+    function alignFlyoutIfNeeded() {
+      if (!flyout) return;
+      // only attempt on desktop
+      const isDesktop = window.innerWidth > DROPDOWN_BREAKPOINT && !mainNav.classList.contains("active");
+      flyout.classList.remove("align-right");
+      if (!isDesktop) return;
+      // temporarily show to measure without flicker
+      const wasHidden = getComputedStyle(flyout).visibility === "hidden";
+      if (wasHidden) {
+        flyout.style.visibility = "hidden";
+        flyout.style.opacity = "0";
+        flyout.style.transform = "translateY(0)";
+        flyout.style.display = "block";
+      }
+      const rect = flyout.getBoundingClientRect();
+      if (rect.right > window.innerWidth) {
+        flyout.classList.add("align-right");
+      }
+      if (wasHidden) {
+        flyout.style.removeProperty("visibility");
+        flyout.style.removeProperty("opacity");
+        flyout.style.removeProperty("transform");
+        flyout.style.removeProperty("display");
+      }
+    }
+
+    // Re-check alignment when first hovered/focused (desktop)
+    li.addEventListener("mouseenter", alignFlyoutIfNeeded);
+    anchor.addEventListener("focus", alignFlyoutIfNeeded);
+
+    // Mobile click toggle
+    anchor.addEventListener("click", (e) => {
+      const isMobile = window.innerWidth <= DROPDOWN_BREAKPOINT || mainNav.classList.contains("active");
+      if (!isMobile) return; // desktop via CSS
+      e.preventDefault();
+
+      // close sibling flyouts under the same dropdown list
+      const siblings = li.parentElement.querySelectorAll(":scope > .has-flyout.open");
+      siblings.forEach(sib => {
+        if (sib !== li) {
+          sib.classList.remove("open");
+          const a = sib.querySelector(":scope > a");
+          if (a) a.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      const willOpen = !li.classList.contains("open");
+      li.classList.toggle("open", willOpen);
+      anchor.setAttribute("aria-expanded", String(willOpen));
+    });
+
+    // Keyboard a11y for mobile behavior
+    anchor.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        const isMobile = window.innerWidth <= DROPDOWN_BREAKPOINT || mainNav.classList.contains("active");
+        if (isMobile) {
+          e.preventDefault();
+          anchor.click();
+        }
+      }
+    });
+  });
+
+  // Close open dropdowns/flyouts when clicking outside (mobile only)
   document.addEventListener("click", (e) => {
     const isMobile = window.innerWidth <= DROPDOWN_BREAKPOINT || mainNav.classList.contains("active");
     if (!isMobile) return;
-    const nav = document.getElementById("site-header");
-    if (nav && !nav.contains(e.target)) {
+    const header = document.getElementById("site-header");
+    if (header && !header.contains(e.target)) {
       document.querySelectorAll("#main-nav .has-dropdown.open").forEach(li => {
+        li.classList.remove("open");
+        const a = li.querySelector(":scope > a");
+        if (a) a.setAttribute("aria-expanded", "false");
+      });
+      document.querySelectorAll("#main-nav .has-flyout.open").forEach(li => {
         li.classList.remove("open");
         const a = li.querySelector(":scope > a");
         if (a) a.setAttribute("aria-expanded", "false");
@@ -70,10 +160,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Reset state on resize up to desktop
+  // Reset states when resizing up to desktop
   window.addEventListener("resize", () => {
-    if (window.innerWidth > DROPDOWN_BREAKPOINT) {
-      document.querySelectorAll("#main-nav .has-dropdown.open").forEach(li => {
+    if (window.innerWidth > DROPDOWN_BREAKPOINT && !mainNav.classList.contains("active")) {
+      document.querySelectorAll("#main-nav .has-dropdown.open, #main-nav .has-flyout.open").forEach(li => {
         li.classList.remove("open");
         const a = li.querySelector(":scope > a");
         if (a) a.setAttribute("aria-expanded", "false");
@@ -94,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* -------------------
-     SAFE CountUp animations (won’t crash on pages without the lib)
+     SAFE CountUp animations
   -------------------- */
   try {
     const hasCountUp = typeof window.countUp !== "undefined" && typeof window.countUp.CountUp === "function";
@@ -108,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     stats.forEach(stat => {
       const el = document.getElementById(stat.id);
-      if (!el) return; // element not on this page
+      if (!el) return;
 
       if (hasCountUp) {
         const counter = new countUp.CountUp(stat.id, stat.value, stat.isCurrency ? {
@@ -121,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!counter.error) {
           counter.start();
 
-          /* NEW: Gold glow effect on stat icons when count starts */
+          // Gold glow effect on stat icon when count starts
           const statEl = el.closest('.stat');
           if (statEl) {
             const icon = statEl.querySelector('svg');
@@ -132,16 +222,14 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       } else {
-        // Graceful fallback so page doesn’t look empty
+        // Fallback text so page doesn’t look empty
         el.textContent = stat.isCurrency ? `€${stat.value}${stat.suffix || ''}` : String(stat.value);
       }
     });
-  } catch (e) {
-    // swallow; don't block the rest of the scripts
-  }
+  } catch { /* ignore */ }
 
   /* -------------------
-     Fade-up animation with smoother ease (+ fallback)
+     Fade-up animation
   -------------------- */
   const REDUCE_MOTION = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const elements = document.querySelectorAll(".fade-up");
@@ -166,12 +254,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.15 });
     elements.forEach(el => observer.observe(el));
   } else {
-    // ancient fallback: just show them
     elements.forEach(el => makeVisible(el));
   }
 
   /* -------------------
-     Hero text load animation
+     Hero text load + CTA pulses
   -------------------- */
   const heroHeading = document.querySelector(".hero h1");
   const heroSubheading = document.querySelector(".hero p");
@@ -201,15 +288,13 @@ document.addEventListener("DOMContentLoaded", () => {
       heroCTA.style.transform = "translateY(0)";
     }, 800);
 
-    /* Auto shimmer once after load */
+    // Auto shimmer once after load
     setTimeout(() => {
       heroCTA.classList.add("shimmer");
-      setTimeout(() => {
-        heroCTA.classList.remove("shimmer");
-      }, 1200);
+      setTimeout(() => heroCTA.classList.remove("shimmer"), 1200);
     }, 1400);
 
-    /* NEW: Periodic CTA pulse every 10 seconds */
+    // Periodic CTA pulse
     setInterval(() => {
       heroCTA.classList.add("btn-pulse");
       setTimeout(() => heroCTA.classList.remove("btn-pulse"), 1500);
@@ -217,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* -------------------
-     Simple crossfade slideshow with manual controls
+     Hero crossfade slideshow with manual controls
   -------------------- */
   const hero = document.querySelector(".hero");
   const fader = document.querySelector(".hero .hero-fader");
@@ -234,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let timer = null;
     const INTERVAL = 8000;
 
-    // Set initial slide onto the base layer (::before via CSS var)
+    // initial slide onto the base layer (::before via CSS var)
     hero.style.setProperty("--hero-bg", `url('${slides[current]}')`);
 
     function goTo(index) {
@@ -253,8 +338,8 @@ document.addEventListener("DOMContentLoaded", () => {
         fader.removeEventListener("transitionend", onEnd);
         current = next;
       };
-      // Fallback if transitionend doesn’t fire
       fader.addEventListener("transitionend", onEnd, { once: true });
+      // Fallback if transitionend doesn’t fire
       setTimeout(onEnd, 1100);
     }
 
@@ -291,11 +376,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* -------------------
-     (Removed) Old background-rotation & parallax code to avoid conflicts
-  -------------------- */
-
-  /* -------------------
-     NEW: Staggered testimonial reveal
+     Staggered testimonial reveal
   -------------------- */
   const testimonialCards = document.querySelectorAll(".testimonial");
   if (testimonialCards.length) {
@@ -303,9 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           testimonialCards.forEach((card, index) => {
-            setTimeout(() => {
-              card.classList.add("visible");
-            }, index * 300);
+            setTimeout(() => card.classList.add("visible"), index * 300);
           });
           testimonialObserver.disconnect();
         }
@@ -314,5 +393,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     testimonialObserver.observe(testimonialCards[0]);
   }
+
+  /* -------------------
+     Optional: auto-highlight current nav item
+  -------------------- */
+  (function highlightCurrentNav() {
+    const currentPath = (location.pathname.replace(/\/$/, '') || '/index.html').toLowerCase();
+    document.querySelectorAll('#main-nav a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('#')) return;
+      const url = new URL(href, location.origin);
+      const path = (url.pathname.replace(/\/$/, '') || '/index.html').toLowerCase();
+      if (currentPath.endsWith(path)) {
+        a.setAttribute('aria-current', 'page');
+        a.classList.add('active');
+      }
+    });
+  })();
 
 });

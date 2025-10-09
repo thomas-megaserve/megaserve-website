@@ -198,6 +198,90 @@ img {
   color: var(--color-primary);
 }
 
+/* Inline grouping labels inside dropdowns */
+#main-nav .dropdown .menu-label {
+  padding: 8px 16px 4px;
+  font-size: 0.8rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  cursor: default;
+}
+#main-nav .dropdown .menu-label .badge {
+  display: inline-block;
+  border: 1px solid #e2e2e2;
+  border-radius: 999px;
+  padding: .15rem .5rem;
+  font-size: .75rem;
+  background: #fafafa;
+  color: #555;
+}
+
+/* -------------------
+   5b. Dropdown flyouts (level-2 menus)
+-------------------- */
+
+/* Parent item hosting a flyout */
+#main-nav .dropdown li.has-flyout { position: relative; }
+
+/* Caret shown next to the hub link */
+#main-nav .dropdown li.has-flyout > a .submenu-caret {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 0.9em;
+  line-height: 1;
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+/* Flyout panel (desktop) */
+#main-nav .dropdown .flyout {
+  position: absolute;
+  top: -10px;             /* align with parent */
+  left: 100%;             /* open to the right */
+  min-width: 260px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+  z-index: 1002;          /* above first dropdown */
+}
+
+/* Links inside the flyout */
+#main-nav .dropdown .flyout a {
+  display: block;
+  padding: 10px 16px;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+/* Reveal flyout on hover/focus (desktop) or when .open toggled (JS/mobile) */
+#main-nav .dropdown li.has-flyout:hover > .flyout,
+#main-nav .dropdown li.has-flyout:focus-within > .flyout,
+#main-nav .dropdown li.has-flyout.open > .flyout {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Keep the first dropdown visible while hovering the flyout */
+#main-nav li.has-dropdown:hover > .dropdown,
+#main-nav li.has-dropdown:focus-within > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Optional: open flyout to the left if near right edge */
+#main-nav .dropdown .flyout.align-right {
+  left: auto;
+  right: 100%;
+}
+
 /* Mobile nav toggle */
 #nav-toggle {
   display: none;
@@ -244,6 +328,32 @@ img {
 
   #main-nav li.has-dropdown.open > .dropdown { display: block; }
   #main-nav .dropdown a { padding: 10px 12px 10px 16px; }
+
+  /* Flyouts collapse under their parent item */
+  #main-nav .dropdown .flyout {
+    position: static;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none; /* hidden until .open */
+  }
+  #main-nav .dropdown li.has-flyout.open > .flyout { display: block; }
+
+  /* Indent flyout links for hierarchy */
+  #main-nav .dropdown .flyout a { padding-left: 28px; }
+
+  /* Caret rotates when a flyout is expanded */
+  #main-nav .dropdown li.has-flyout > a .submenu-caret {
+    margin-left: auto; /* push caret to the far right on mobile row */
+    transform: rotate(90deg);
+    transition: transform .2s ease;
+  }
+  #main-nav .dropdown li.has-flyout.open > a .submenu-caret {
+    transform: rotate(270deg);
+  }
 }
 
 /* medium screens where cramping happens most */
@@ -449,9 +559,6 @@ img {
   transform: skewX(-25deg);
   animation: shimmerMove 1.2s ease-out forwards;
 }
-@keyframes shimmerMove { to { left: 150%); } }
-
-/* fallback if previous keyframes typo */
 @keyframes shimmerMove { to { left: 150%; } }
 
 @keyframes pulseGlow {
@@ -834,5 +941,3 @@ body.sticky-cta-pad { /* padding added on small screens in media query */ }
   .fade-up { opacity: 1 !important; transform: none !important; }
   .hero .hero-fader { transition: none !important; }
 }
-
-/* (Legacy: slide-2/slide-3 CSS kept intentionally unused; can remove later) */
