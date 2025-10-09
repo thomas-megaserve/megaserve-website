@@ -3,14 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>Visitor Residency Permit Services — MegaServe Cyprus</title>
-  <meta name="description" content="Visitor (long‑stay) permits and extensions, done correctly.">
+  <meta name="description" content="Cyprus Visitor (long-stay) permits and extensions handled end-to-end: eligibility check, evidence pack, appointments/biometrics, submissions, and renewal tracking with clear timelines.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (kept consistent with other pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on a red/dark banner */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    .link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.75rem;margin-top:.5rem}
+    .link-grid a{display:block;border:1px solid #e5e5e5;border-radius:.5rem;padding:.7rem .8rem;background:#fff}
+    .badge{display:inline-block;background:var(--color-gold);color:#000;padding:.1rem .45rem;border-radius:.4rem;font-size:.75rem;margin-left:.4rem}
+  </style>
 </head>
 <body>
 
@@ -56,10 +92,31 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
+            <!-- Category hubs -->
             <li><a href="residency-by-employment-permit-services.html">Residency by Employment Permit Services</a></li>
             <li><a href="residency-by-investment-permit-services.html">Residency by Investment Permit Services</a></li>
-            <li><a href="visitor-residency-permit-services.html">Visitor Residency Permit Services</a></li>
+            <li><a aria-current="page" href="visitor-residency-permit-services.html">Visitor Residency Permit Services</a></li>
             <li><a href="naturalisation-citizenship-services.html">Naturalisation &amp; Citizenship Services</a></li>
+
+            <!-- Inline grouping + specific routes -->
+            <li class="menu-label"><span class="badge">Visitor</span></li>
+            <li><a href="visitors-permit.html">Visitors Permit</a></li>
+
+            <li class="menu-label"><span class="badge">Employment</span></li>
+            <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+            <li><a href="general-employment-permit.html">General Employment</a></li>
+            <li><a href="eu-blue-card.html">EU Blue Card</a></li>
+            <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
+            <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+
+            <li class="menu-label"><span class="badge">Investment</span></li>
+            <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+            <li><a href="categories-a-f.html">Categories A–F</a></li>
+            <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+
+            <li class="menu-label"><span class="badge">Citizenship</span></li>
+            <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+            <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
           </ul>
         </li>
 
@@ -95,6 +152,8 @@
           </ul>
         </li>
 
+        <!-- NEW: About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -102,24 +161,265 @@
 </header>
 
 <main>
-  <section class="fade-up" data-anim-delay="0.1">
+  <!-- HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
       <h1>Visitor Residency Permit Services</h1>
-      <p>We organise the process for long‑stay/visitor permits and necessary extensions.</p>
-      <ul><li>Eligibility and documentation review</li><li>Appointments and biometrics preparation</li><li>Submission and follow‑up with authorities</li><li>Renewal reminders and status tracking</li></ul>
+      <p class="content-narrow">Long-stay “Visitor” permits and extensions arranged end-to-end—eligibility, evidence, appointments, and follow-ups until decision.</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW / WHAT WE DO -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Handle</h2>
+      <ul class="feature-list">
+        <li>Eligibility triage (nationality, purpose, stay length, prior entries)</li>
+        <li>Evidence build: financial sufficiency, accommodation, insurance</li>
+        <li>Forms, translations/apostilles, certified copies as required</li>
+        <li>Appointment booking, biometrics preparation, attendance notes</li>
+        <li>Submission handling and liaison on authority clarifications</li>
+        <li>Extensions, re-entry planning, and renewal diary</li>
+        <li>Status letters for banks, landlords, and schools (where relevant)</li>
+        <li>Secure archive of receipts, reference numbers, and permits</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>Quick Link</h2>
+      <div class="link-grid">
+        <a href="visitors-permit.html">Visitors Permit — Requirements &amp; Timeline</a>
+      </div>
+      <p class="note">Route page will include detailed checklists, fees, and processing expectations.</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.2" id="process">
+    <div class="content-narrow">
+      <h2>Process &amp; Cadence</h2>
+      <ol class="process-steps">
+        <li><strong>Intake:</strong> confirm purpose of stay, travel history, and target timeline.</li>
+        <li><strong>Evidence Pack:</strong> compile funds, accommodation, insurance, and translations/apostilles.</li>
+        <li><strong>Submission &amp; Biometrics:</strong> lodge application, attend appointment, track references.</li>
+        <li><strong>Follow-ups:</strong> respond to queries, provide additional documents if requested.</li>
+        <li><strong>Decision &amp; Extension Plan:</strong> archive permits and set reminders for extensions/next steps.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- COMPARISON MATRIX -->
+  <section class="container fade-up" data-anim-delay="0.25" id="matrices">
+    <div class="content-narrow">
+      <h2>Stay Snapshot</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Typical Evidence</th>
+              <th>Length / Extensions</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Long-stay visitor (non-work)</td>
+              <td>Funds, private health cover, accommodation proof</td>
+              <td>Multi-month; extensions possible</td>
+              <td>No work rights; travel limits apply</td>
+            </tr>
+            <tr>
+              <td>Accompanying family member</td>
+              <td>Relationship proofs, insurance, co-habitation evidence</td>
+              <td>Aligned to principal’s status</td>
+              <td>School/bank letters on request</td>
+            </tr>
+            <tr>
+              <td>Repeat extension</td>
+              <td>Updated funds, insurance, clean stay history</td>
+              <td>Case-by-case</td>
+              <td>Timing depends on authority queues</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Exact eligibility and length depend on nationality, purpose, and stay history. We confirm specifics before filing.</p>
+    </div>
+  </section>
+
+  <!-- SERVICE LEVELS -->
+  <section class="container fade-up" data-anim-delay="0.3" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency/Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eligibility check &amp; route memo</td>
+              <td>At kickoff</td>
+              <td>1–2 business days</td>
+              <td>Assumes receipt of passport data and purpose of stay</td>
+            </tr>
+            <tr>
+              <td>Evidence pack assembly</td>
+              <td>Initial build</td>
+              <td>3–5 business days</td>
+              <td>Translations/apostilles may extend</td>
+            </tr>
+            <tr>
+              <td>Appointment booking</td>
+              <td>As slots open</td>
+              <td>Same–2 business days</td>
+              <td>Subject to authority calendars</td>
+            </tr>
+            <tr>
+              <td>Status updates &amp; follow-ups</td>
+              <td>Weekly until decision</td>
+              <td>Same day</td>
+              <td>Escalations coordinated where appropriate</td>
+            </tr>
+            <tr>
+              <td>Renewal/extension reminders</td>
+              <td>Per permit cycle</td>
+              <td>Auto-triggered</td>
+              <td>Diary maintained for future stays</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timings reflect typical handling; authority queues and enhanced checks may extend completion.</p>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.35" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Route memo with eligibility rationale &amp; requirements</li>
+        <li>Applicant document checklist &amp; evidence tracker</li>
+        <li>Appointment confirmations and attendance notes</li>
+        <li>Submission receipts and reference numbers</li>
+        <li>Permit/visa copies and status letters (on request)</li>
+        <li>Extension plan and renewal diary</li>
+        <li>Secure archive of all filings and correspondence</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="container fade-up" data-anim-delay="0.4" id="checklist">
+    <div class="content-narrow">
+      <h2>Documents Checklist (At Kickoff)</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Applicant</th>
+              <th>Financial &amp; Accommodation</th>
+              <th>Travel &amp; Insurance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <ul class="feature-list">
+                  <li>Passport bio page &amp; entry stamps/permits</li>
+                  <li>Purpose of stay statement</li>
+                  <li>Civil status docs (if family included)</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="feature-list">
+                  <li>Bank statements / funds evidence</li>
+                  <li>Tenancy agreement / property ownership</li>
+                  <li>Proof of address / utilities (if available)</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="feature-list">
+                  <li>Private health insurance policy</li>
+                  <li>Travel history/itinerary (if relevant)</li>
+                  <li>Recent photos meeting spec</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Formats: PDF/JPG scans acceptable; originals may be required at biometrics. Translation/apostille needs confirmed per case.</p>
+    </div>
+  </section>
+
+  <!-- CONTROLS / QUALITY -->
+  <section class="container fade-up" data-anim-delay="0.45" id="controls">
+    <div class="content-narrow">
+      <h2>Controls &amp; Quality</h2>
+      <ul class="feature-list">
+        <li>Two-person check on forms and translations</li>
+        <li>Assumptions &amp; deviations log per application</li>
+        <li>Restricted data room by role; audit trail on uploads</li>
+        <li>Renewal &amp; trigger event tracking (address, insurance, funds)</li>
+      </ul>
+      <p class="note">This page is informational and not immigration/legal advice. Final decisions rest with the competent authorities.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.5" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>Cyprus-based team coordinating daily with authorities, landlords, banks, and advisors. We keep long-stay filings predictable with clear documentation.</p>
+      <ul class="feature-list">
+        <li>EN/GR/RU service; other languages on request</li>
+        <li>Weekly status notes until decision; renewal diary maintained</li>
+        <li>Letters for banks/landlords/schools referencing status</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container fade-up" data-anim-delay="0.55" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <dl class="faq">
+        <dt>How long does a Visitor permit take?</dt>
+        <dd>Timing depends on office load and completeness. After a complete pack and appointment, decisions often run from several weeks to a few months. We provide current local estimates during intake.</dd>
+
+        <dt>Can I work on a Visitor permit?</dt>
+        <dd>No. Visitor routes do not grant work rights. If employment is intended, we will triage an appropriate employment-based route.</dd>
+
+        <dt>Can my family be included?</dt>
+        <dd>Often yes, subject to evidence of funds, accommodation, insurance, and relationship proofs. We prepare dependant packs alongside the principal filing.</dd>
+
+        <dt>What if I need an extension?</dt>
+        <dd>We track expiry dates and assemble the extension pack in advance. Updated funds/insurance and any change notes are typically required.</dd>
+
+        <dt>Do you handle translations and apostilles?</dt>
+        <dd>Yes—certified translations and legalisations are coordinated where required, with guidance on originals needed at biometrics.</dd>
+      </dl>
+      <p class="note">Nothing here is legal or immigration advice; positions are confirmed by your advisors and the competent authorities.</p>
     </div>
   </section>
 
   <!-- CONTACT CTA -->
-<section id="contact-cta" class="fade-up" data-anim-delay="0.2">
-  <div class="container">
-    <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
-  </div>
-</section>
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.6">
+    <div class="container">
+      <h2>Confirm Your Visitor Route</h2>
+      <p class="contact-intro">Email a short outline of your purpose of stay, nationality, travel history, accommodation and insurance—we’ll reply with a route memo and checklist.</p>
+      <a href="mailto:megaserve@megaserve.eu?subject=Visitor%20Permit%20Kickoff" class="btn-primary">Request Route Memo</a>
+      <p class="note">For fastest turnaround, email: passport bio page, purpose of stay, funds evidence, tenancy/host details, insurance cover, family members (if any), and target timeline.</p>
+    </div>
+  </section>
 </main>
 
 <!-- FOOTER -->
@@ -131,14 +431,29 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
+      <a href="index.html#services">Services</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
       <a href="index.html#contact-cta">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=11"></script>
+<!-- FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How long does a Visitor permit take?","acceptedAnswer":{"@type":"Answer","text":"Timing depends on office load and completeness. After a complete pack and appointment, decisions often run from several weeks to a few months. We provide current local estimates during intake."}},
+    {"@type":"Question","name":"Can I work on a Visitor permit?","acceptedAnswer":{"@type":"Answer","text":"No. Visitor routes do not grant work rights. If employment is intended, we will triage an appropriate employment-based route."}},
+    {"@type":"Question","name":"Can my family be included?","acceptedAnswer":{"@type":"Answer","text":"Often yes, subject to evidence of funds, accommodation, insurance, and relationship proofs. We prepare dependant packs alongside the principal filing."}},
+    {"@type":"Question","name":"What if I need an extension?","acceptedAnswer":{"@type":"Answer","text":"We track expiry dates and assemble the extension pack in advance. Updated funds/insurance and any change notes are typically required."}},
+    {"@type":"Question","name":"Do you handle translations and apostilles?","acceptedAnswer":{"@type":"Answer","text":"Yes—certified translations and legalisations are coordinated where required, with guidance on originals needed at biometrics."}}
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
 </body>
 </html>
