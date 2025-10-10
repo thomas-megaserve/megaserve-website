@@ -9,9 +9,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 
-  <!-- Page-local helpers (consistent with other service pages) -->
+  <!-- Page-local helpers (kept consistent with other service pages) -->
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
@@ -35,7 +35,7 @@
     table.packages th, table.service th{background:#fafafa}
     .badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.2rem .6rem;font-size:.8rem;margin:.15rem .35rem 0 0}
 
-    /* Keep CTA fine print readable on red strip */
+    /* Ensure CTA fine print is readable on darker/red banner variants */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
     .fade-up{opacity:0; transform: translateY(14px);}
@@ -50,7 +50,6 @@
     <a href="index.html" class="logo-link" aria-label="MegaServe Home">
       <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
-    <!-- Hamburger Button for Mobile -->
     <button id="nav-toggle" aria-label="Open Menu">
       <span></span><span></span><span></span>
     </button>
@@ -147,10 +146,10 @@
     <div class="content-narrow">
       <h2>What You Get</h2>
       <ul class="feature-list">
-        <li>Business correspondence address for non-statutory use (invoices, websites, counterparts)</li>
+        <li>Business correspondence address for non-statutory use (invoices, websites, counterparties)</li>
         <li>Dedicated local phone number with call handling and message forwarding</li>
         <li>Mail intake, scanning, and forwarding; tracked couriers with delivery proofs</li>
-        <li>Meeting room scheduling in Nicosia (hourly/half-day/day)</li>
+        <li>Meeting room scheduling in Nicosia (hourly / half-day / day)</li>
         <li>Guest reception, visitor logs, and basic hospitality (water/coffee)</li>
         <li>On-demand admin support: document packs, printing, certified copy coordination</li>
         <li>Optional integration with <a href="registered-address-services.html">Registered Address</a> and <a href="physical-office-rental-services.html">Physical Office</a></li>
@@ -160,7 +159,7 @@
 
       <h2>Packages (Indicative)</h2>
       <div class="table-wrap">
-        <table class="packages">
+        <table class="packages" aria-label="Virtual office package comparison">
           <thead>
             <tr>
               <th>Feature</th>
@@ -177,7 +176,7 @@
               <td>✔</td>
             </tr>
             <tr>
-              <td>Mail intake &amp; monthly scan pack</td>
+              <td>Mail intake &amp; scan pack</td>
               <td>✔ (monthly)</td>
               <td>✔ (bi-weekly)</td>
               <td>✔ (weekly)</td>
@@ -222,7 +221,7 @@
     <div class="content-narrow">
       <h2>Service Levels &amp; Targets</h2>
       <div class="table-wrap">
-        <table class="service">
+        <table class="service" aria-label="Virtual office service levels">
           <thead>
             <tr>
               <th>Activity</th>
@@ -371,6 +370,20 @@
   </div>
 </footer>
 
-<script src="script.js?v=12"></script>
+<!-- Optional: FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Can the virtual office be used as the company’s registered office?","acceptedAnswer":{"@type":"Answer","text":"No. Registered office is a separate statutory service. See Registered Address."}},
+    {"@type":"Question","name":"Do you provide a local phone number and answer calls in Greek/English?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide a local number and handle calls in EN/GR (RU on request), forwarding messages per your script."}},
+    {"@type":"Question","name":"How quickly do you forward urgent mail?","acceptedAnswer":{"@type":"Answer","text":"Urgent items are flagged on intake and can be dispatched the same day if confirmed before 14:00."}},
+    {"@type":"Question","name":"Can we bundle with board meeting facilities?","acceptedAnswer":{"@type":"Answer","text":"Yes. Combine with Directorship for substance (board meetings in Cyprus) and/or Physical Office for dedicated space."}}
+  ]
+}
+</script>
+
+<script src="script.js?v=13"></script>
 </body>
 </html>

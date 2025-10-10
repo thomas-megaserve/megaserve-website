@@ -9,10 +9,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=12">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <link rel="stylesheet" href="style.css?v=13">
 
-  <!-- Page-local helpers (kept consistent with your other service pages) -->
+  <!-- Page-local helpers (kept consistent with other service pages) -->
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
@@ -37,7 +36,7 @@
     table.matrix th, table.service th, table.packages th{background:#fafafa}
     .badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.2rem .6rem;font-size:.8rem;margin:.15rem .35rem 0 0}
 
-    /* Keep CTA fine print readable on red strip */
+    /* Keep CTA fine print readable on a dark/red strip */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
     .fade-up{opacity:0; transform: translateY(14px);}
@@ -149,7 +148,7 @@
     <div class="content-narrow">
       <h2>Space Types</h2>
       <div class="table-wrap">
-        <table class="matrix">
+        <table class="matrix" aria-label="Office space types">
           <thead>
             <tr>
               <th>Type</th>
@@ -209,7 +208,7 @@
     <div class="content-narrow">
       <h2>Service Levels &amp; Targets</h2>
       <div class="table-wrap">
-        <table class="service">
+        <table class="service" aria-label="Physical office service levels">
           <thead>
             <tr>
               <th>Activity</th>
@@ -240,7 +239,7 @@
             <tr>
               <td>Courier dispatch / mail handling</td>
               <td>Ad hoc</td>
-              <td>Same day if before 14:00</td>
+              <td>Same day if received before 14:00</td>
               <td>Tracked with delivery proofs</td>
             </tr>
             <tr>
@@ -268,7 +267,7 @@
         <li><strong>Move-In:</strong> handover checklist, welcome pack, building rules, escalation contacts.</li>
       </ol>
       <div class="table-wrap">
-        <table class="packages">
+        <table class="packages" aria-label="Physical office setup timelines">
           <thead>
             <tr>
               <th>Work Package</th>
@@ -428,6 +427,6 @@
 }
 </script>
 
-<script src="script.js?v=12"></script>
+<script src="script.js?v=13"></script>
 </body>
 </html>

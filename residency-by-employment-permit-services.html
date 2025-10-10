@@ -9,8 +9,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=12">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <link rel="stylesheet" href="style.css?v=13">
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <!-- Page-local helpers (kept consistent with other pages) -->
   <style>
@@ -217,7 +217,7 @@
     <div class="content-narrow">
       <h2>Route Snapshot</h2>
       <div class="table-wrap">
-        <table class="matrix">
+        <table class="matrix" aria-label="Employment-based residency routes">
           <thead>
             <tr>
               <th>Route</th>
@@ -275,7 +275,7 @@
     <div class="content-narrow">
       <h2>Service Levels &amp; Typical Timing</h2>
       <div class="table-wrap">
-        <table class="service">
+        <table class="service" aria-label="Employment permit service levels">
           <thead>
             <tr>
               <th>Activity</th>
@@ -343,7 +343,7 @@
     <div class="content-narrow">
       <h2>Documents Checklist (At Kickoff)</h2>
       <div class="table-wrap">
-        <table class="matrix">
+        <table class="matrix" aria-label="Employment permit kickoff checklist">
           <thead>
             <tr>
               <th>Applicant</th>
@@ -436,7 +436,7 @@
   </section>
 
   <!-- CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.6">
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.6" aria-label="Contact call to action">
     <div class="container">
       <h2>Get Your Route Confirmed</h2>
       <p class="contact-intro">Email the following to receive a route memo and checklist within typical timelines.</p>
@@ -478,6 +478,6 @@
 }
 </script>
 
-<script src="script.js?v=12"></script>
+<script src="script.js?v=13" defer></script>
 </body>
 </html>

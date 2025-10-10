@@ -8,9 +8,9 @@
 
   <!-- Fonts + Site CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="stylesheet" href="style.css?v=13" />
 
-  <!-- Page-local helpers (match your existing tokens) -->
+  <!-- Page-scoped helpers (light, non-destructive) -->
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
@@ -32,8 +32,6 @@
     table.pricing{width:100%;border-collapse:collapse}
     table.pricing th,table.pricing td{border:1px solid #e5e5e5;padding:.6rem;text-align:left}
     table.pricing th{background:#fafafa}
-    .fade-up{opacity:0; transform: translateY(14px);}
-    .fade-up.visible{opacity:1; transform: translateY(0);}
 
     /* Boost CTA note contrast on red banner */
     #contact-cta .note{
@@ -55,6 +53,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
 
+        <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
@@ -66,6 +65,7 @@
           </ul>
         </li>
 
+        <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
@@ -77,37 +77,60 @@
           </ul>
         </li>
 
+        <!-- Migration & Relocation Services with FLYOUTS -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Category hubs (existing pages) -->
-            <li><a href="residency-by-employment-permit-services.html">Residency by Employment Permit Services</a></li>
-            <li><a href="residency-by-investment-permit-services.html">Residency by Investment Permit Services</a></li>
-            <li><a href="visitor-residency-permit-services.html">Visitor Residency Permit Services</a></li>
-            <li><a href="naturalisation-citizenship-services.html">Naturalisation &amp; Citizenship Services</a></li>
+            <!-- Employment hub with flyout -->
+            <li class="has-flyout">
+              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Employment permit routes">
+                <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="general-employment-permit.html">General Employment</a></li>
+                <li><a href="eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+              </ul>
+            </li>
 
-            <!-- Specific routes (to be developed) -->
-            <li class="menu-label"><span class="badge">Employment</span></li>
-            <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-            <li><a href="general-employment-permit.html">General Employment</a></li>
-            <li><a href="eu-blue-card.html">EU Blue Card</a></li>
-            <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
-            <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+            <!-- Investment hub with flyout -->
+            <li class="has-flyout">
+              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Investment routes">
+                <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="categories-a-f.html">Categories A–F</a></li>
+                <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+              </ul>
+            </li>
 
-            <li class="menu-label"><span class="badge">Investment</span></li>
-            <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-            <li><a href="categories-a-f.html">Categories A–F</a></li>
-            <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+            <!-- Visitor hub with flyout -->
+            <li class="has-flyout">
+              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Visitor routes">
+                <li><a href="visitors-permit.html">Visitors Permit</a></li>
+              </ul>
+            </li>
 
-            <li class="menu-label"><span class="badge">Visitor</span></li>
-            <li><a href="visitors-permit.html">Visitors Permit</a></li>
-
-            <li class="menu-label"><span class="badge">Citizenship</span></li>
-            <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-            <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+            <!-- Citizenship hub with flyout -->
+            <li class="has-flyout">
+              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+                Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Citizenship routes">
+                <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
+        <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
@@ -117,6 +140,7 @@
           </ul>
         </li>
 
+        <!-- Corporate Consultancy -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
@@ -232,7 +256,6 @@
   </div>
 </section>
 
-<!-- Keep section id the same; 4 columns, no prices -->
 <section class="container fade-up" data-anim-delay="0.4" id="pricing">
   <div class="content-narrow">
     <h2>Indicative Timelines &amp; Scope</h2>
@@ -378,6 +401,6 @@
 }
 </script>
 
-<script src="script.js?v=12"></script>
+<script src="script.js?v=13"></script>
 </body>
 </html>
