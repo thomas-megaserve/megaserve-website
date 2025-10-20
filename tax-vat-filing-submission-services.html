@@ -14,6 +14,11 @@
 
   <!-- Page-local helpers (kept consistent with other pages) -->
   <style>
+    /* FORCE CONSISTENT LOGO SIZE ACROSS PAGES */
+    #site-header .logo-link{display:flex;align-items:center}
+    #site-header .site-logo{height:52px;width:auto;max-height:none;flex:0 0 auto}
+    @media (max-width:768px){#site-header .site-logo{height:44px}}
+
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
     .content-narrow{max-width:900px;margin:0 auto}
@@ -42,6 +47,9 @@
 
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    /* Optional small helper for submenu caret */
+    .submenu-caret{margin-left:.35rem}
   </style>
 </head>
 <body>
@@ -72,19 +80,7 @@
           </ul>
         </li>
 
-        <!-- Nominee & Fiduciary Services -->
-        <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="physical-office-rental-services.html">Physical Office Rental Services</a></li>
-          </ul>
-        </li>
-
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services with flyouts (exactly like your reference) -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
@@ -154,19 +150,7 @@
           </ul>
         </li>
 
-        <!-- Compliance Services -->
-        <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
-          <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
-          </ul>
-        </li>
-
-        <!-- About left of Contact -->
+        <!-- NEW: About placed to the left of Contact -->
         <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
