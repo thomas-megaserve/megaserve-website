@@ -6,11 +6,22 @@
   <meta name="description" content="Cyprus tax & VAT filing handled cleanly: data intake, reconciliations, e-Services submissions, payment references, authority liaison, and a rolling compliance calendar that auditors and banks can rely on.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
+  <!-- Canonical & Social -->
+  <link rel="canonical" href="https://www.megaserve.eu/tax-vat-filing-submission-services.html">
+  <meta property="og:title" content="Tax & VAT Filing / Submission Services — MegaServe Cyprus">
+  <meta property="og:description" content="Accurate, timely filings with clean audit trails for banks, auditors, and authorities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/tax-vat-filing-submission-services.html">
+  <meta property="og:site_name" content="MegaServe Cyprus">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Google Fonts (perf) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=12">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <link rel="stylesheet" href="style.css?v=13">
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <!-- Page-local helpers (kept consistent with other pages) -->
   <style>
@@ -42,18 +53,24 @@
 
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    /* a11y helpers */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,1px,1px);white-space:nowrap;border:0}
+    caption.sr-only{caption-side:top}
   </style>
 </head>
 <body>
+
+<a href="#main" class="sr-only">Skip to main content</a>
 
 <!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
     <a href="index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo" loading="lazy" decoding="async" width="140" height="36">
     </a>
     <!-- Hamburger Button for Mobile -->
-    <button id="nav-toggle" aria-label="Open Menu">
+    <button id="nav-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
     <nav id="main-nav" aria-label="Primary">
@@ -135,7 +152,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <!-- HERO -->
   <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
@@ -162,13 +179,14 @@
 
       <h2>Filing Calendar at a Glance</h2>
       <div class="table-wrap">
-        <table class="matrix">
+        <table class="matrix" aria-describedby="filing-calendar-note">
+          <caption class="sr-only">Summary of periodic filings, inputs, and outputs</caption>
           <thead>
             <tr>
-              <th>Filing</th>
-              <th>Typical Cycle</th>
-              <th>Inputs We Use</th>
-              <th>Output You Receive</th>
+              <th scope="col">Filing</th>
+              <th scope="col">Typical Cycle</th>
+              <th scope="col">Inputs We Use</th>
+              <th scope="col">Output You Receive</th>
             </tr>
           </thead>
           <tbody>
@@ -199,7 +217,7 @@
           </tbody>
         </table>
       </div>
-      <p class="note">We coordinate closely with your accountants. This page is informational and not tax advice.</p>
+      <p id="filing-calendar-note" class="note">We coordinate closely with your accountants. This page is informational and not tax advice.</p>
     </div>
   </section>
 
@@ -223,13 +241,14 @@
     <div class="content-narrow">
       <h2>Service Levels &amp; Typical Timing</h2>
       <div class="table-wrap">
-        <table class="service">
+        <table class="service" aria-describedby="service-levels-note">
+          <caption class="sr-only">Service levels showing activities, timing, responses, and notes</caption>
           <thead>
             <tr>
-              <th>Activity</th>
-              <th>Typical Timing</th>
-              <th>Target Response</th>
-              <th>Notes</th>
+              <th scope="col">Activity</th>
+              <th scope="col">Typical Timing</th>
+              <th scope="col">Target Response</th>
+              <th scope="col">Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -266,7 +285,7 @@
           </tbody>
         </table>
       </div>
-      <p class="note">Timings reflect typical handling; authority queues and enhanced checks may extend completion.</p>
+      <p id="service-levels-note" class="note">Timings reflect typical handling; authority queues and enhanced checks may extend completion.</p>
     </div>
   </section>
 
@@ -304,12 +323,13 @@
     <div class="content-narrow">
       <h2>Documents Checklist (Per Period)</h2>
       <div class="table-wrap">
-        <table class="matrix">
+        <table class="matrix" aria-label="Documents checklist for each period">
+          <caption class="sr-only">Sales, purchase, and bank/adjustment documents required per filing period</caption>
           <thead>
             <tr>
-              <th>Sales</th>
-              <th>Purchases</th>
-              <th>Bank &amp; Adjustments</th>
+              <th scope="col">Sales</th>
+              <th scope="col">Purchases</th>
+              <th scope="col">Bank &amp; Adjustments</th>
             </tr>
           </thead>
           <tbody>
@@ -378,11 +398,11 @@
   </section>
 
   <!-- CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55" aria-label="Contact call to action">
     <div class="container">
       <h2>Stay Compliant Every Period</h2>
       <p class="contact-intro">Send your latest ledgers and bank extracts—we’ll reply with a checklist and cut-off dates for the current cycle.</p>
-      <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Arrange Filing Support</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Arrange%20Filing%20Support&body=Hi%20MegaServe%2C%0A%0AEntity%3A%20%0APeriod%3A%20%0AVAT%20No.%3A%20%0ANotes%3A%20" class="btn-primary">Arrange Filing Support</a>
       <p class="note">Prefer a quick kickoff? Share your last filed return &amp; any open authority queries; we’ll incorporate them into the plan.</p>
     </div>
   </section>
@@ -405,7 +425,40 @@
   </div>
 </footer>
 
-<!-- Optional: FAQ Schema for SEO -->
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"MegaServe Ltd.",
+  "url":"https://www.megaserve.eu",
+  "logo":"https://www.megaserve.eu/assets/logo.svg",
+  "sameAs":[]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Tax & VAT Filing / Submission Services",
+  "provider":{"@type":"Organization","name":"MegaServe Ltd."},
+  "areaServed":{"@type":"Country","name":"Cyprus"},
+  "description":"Cyprus tax & VAT filing handled cleanly: data intake, reconciliations, e-Services submissions, payment references, authority liaison, and a rolling compliance calendar."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.megaserve.eu/"},
+    {"@type":"ListItem","position":2,"name":"Tax & VAT Administration","item":"https://www.megaserve.eu/#tax-vat"},
+    {"@type":"ListItem","position":3,"name":"Tax & VAT Filing / Submission Services","item":"https://www.megaserve.eu/tax-vat-filing-submission-services.html"}
+  ]
+}
+</script>
+
+<!-- FAQ Schema for SEO -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -419,6 +472,6 @@
 }
 </script>
 
-<script src="script.js?v=12"></script>
+<script src="script.js?v=13" defer></script>
 </body>
 </html>
