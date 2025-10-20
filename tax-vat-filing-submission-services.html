@@ -6,22 +6,11 @@
   <meta name="description" content="Cyprus tax & VAT filing handled cleanly: data intake, reconciliations, e-Services submissions, payment references, authority liaison, and a rolling compliance calendar that auditors and banks can rely on.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Canonical & Social -->
-  <link rel="canonical" href="https://www.megaserve.eu/tax-vat-filing-submission-services.html">
-  <meta property="og:title" content="Tax & VAT Filing / Submission Services — MegaServe Cyprus">
-  <meta property="og:description" content="Accurate, timely filings with clean audit trails for banks, auditors, and authorities.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.megaserve.eu/tax-vat-filing-submission-services.html">
-  <meta property="og:site_name" content="MegaServe Cyprus">
-  <meta name="twitter:card" content="summary">
-
-  <!-- Google Fonts (perf) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=13">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=12">
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
 
   <!-- Page-local helpers (kept consistent with other pages) -->
   <style>
@@ -53,24 +42,18 @@
 
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
-
-    /* a11y helpers */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,1px,1px);white-space:nowrap;border:0}
-    caption.sr-only{caption-side:top}
   </style>
 </head>
 <body>
-
-<a href="#main" class="sr-only">Skip to main content</a>
 
 <!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
     <a href="index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo" loading="lazy" decoding="async" width="140" height="36">
+      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
     <!-- Hamburger Button for Mobile -->
-    <button id="nav-toggle" aria-label="Open Menu" aria-expanded="false" aria-controls="main-nav">
+    <button id="nav-toggle" aria-label="Open Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="main-nav" aria-label="Primary">
@@ -105,10 +88,31 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
+            <!-- Category hubs -->
             <li><a href="residency-by-employment-permit-services.html">Residency by Employment Permit Services</a></li>
             <li><a href="residency-by-investment-permit-services.html">Residency by Investment Permit Services</a></li>
             <li><a href="visitor-residency-permit-services.html">Visitor Residency Permit Services</a></li>
             <li><a href="naturalisation-citizenship-services.html">Naturalisation &amp; Citizenship Services</a></li>
+
+            <!-- Inline grouping + specific routes -->
+            <li class="menu-label"><span class="badge">Visitor</span></li>
+            <li><a href="visitors-permit.html">Visitors Permit</a></li>
+
+            <li class="menu-label"><span class="badge">Employment</span></li>
+            <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+            <li><a href="general-employment-permit.html">General Employment</a></li>
+            <li><a href="eu-blue-card.html">EU Blue Card</a></li>
+            <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
+            <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+
+            <li class="menu-label"><span class="badge">Investment</span></li>
+            <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+            <li><a href="categories-a-f.html">Categories A–F</a></li>
+            <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+
+            <li class="menu-label"><span class="badge">Citizenship</span></li>
+            <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+            <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
           </ul>
         </li>
 
@@ -132,18 +136,6 @@
           </ul>
         </li>
 
-        <!-- Compliance Services -->
-        <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
-          <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
-          </ul>
-        </li>
-
         <!-- NEW: About placed to the left of Contact -->
         <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
@@ -152,7 +144,7 @@
   </div>
 </header>
 
-<main id="main">
+<main>
   <!-- HERO -->
   <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
@@ -179,14 +171,13 @@
 
       <h2>Filing Calendar at a Glance</h2>
       <div class="table-wrap">
-        <table class="matrix" aria-describedby="filing-calendar-note">
-          <caption class="sr-only">Summary of periodic filings, inputs, and outputs</caption>
+        <table class="matrix">
           <thead>
             <tr>
-              <th scope="col">Filing</th>
-              <th scope="col">Typical Cycle</th>
-              <th scope="col">Inputs We Use</th>
-              <th scope="col">Output You Receive</th>
+              <th>Filing</th>
+              <th>Typical Cycle</th>
+              <th>Inputs We Use</th>
+              <th>Output You Receive</th>
             </tr>
           </thead>
           <tbody>
@@ -217,7 +208,7 @@
           </tbody>
         </table>
       </div>
-      <p id="filing-calendar-note" class="note">We coordinate closely with your accountants. This page is informational and not tax advice.</p>
+      <p class="note">We coordinate closely with your accountants. This page is informational and not tax advice.</p>
     </div>
   </section>
 
@@ -241,14 +232,13 @@
     <div class="content-narrow">
       <h2>Service Levels &amp; Typical Timing</h2>
       <div class="table-wrap">
-        <table class="service" aria-describedby="service-levels-note">
-          <caption class="sr-only">Service levels showing activities, timing, responses, and notes</caption>
+        <table class="service">
           <thead>
             <tr>
-              <th scope="col">Activity</th>
-              <th scope="col">Typical Timing</th>
-              <th scope="col">Target Response</th>
-              <th scope="col">Notes</th>
+              <th>Activity</th>
+              <th>Typical Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -285,7 +275,7 @@
           </tbody>
         </table>
       </div>
-      <p id="service-levels-note" class="note">Timings reflect typical handling; authority queues and enhanced checks may extend completion.</p>
+      <p class="note">Timings reflect typical handling; authority queues and enhanced checks may extend completion.</p>
     </div>
   </section>
 
@@ -323,13 +313,12 @@
     <div class="content-narrow">
       <h2>Documents Checklist (Per Period)</h2>
       <div class="table-wrap">
-        <table class="matrix" aria-label="Documents checklist for each period">
-          <caption class="sr-only">Sales, purchase, and bank/adjustment documents required per filing period</caption>
+        <table class="matrix">
           <thead>
             <tr>
-              <th scope="col">Sales</th>
-              <th scope="col">Purchases</th>
-              <th scope="col">Bank &amp; Adjustments</th>
+              <th>Sales</th>
+              <th>Purchases</th>
+              <th>Bank &amp; Adjustments</th>
             </tr>
           </thead>
           <tbody>
@@ -398,11 +387,11 @@
   </section>
 
   <!-- CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.55" aria-label="Contact call to action">
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
     <div class="container">
       <h2>Stay Compliant Every Period</h2>
       <p class="contact-intro">Send your latest ledgers and bank extracts—we’ll reply with a checklist and cut-off dates for the current cycle.</p>
-      <a href="mailto:megaserve@megaserve.eu?subject=Arrange%20Filing%20Support&body=Hi%20MegaServe%2C%0A%0AEntity%3A%20%0APeriod%3A%20%0AVAT%20No.%3A%20%0ANotes%3A%20" class="btn-primary">Arrange Filing Support</a>
+      <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Arrange Filing Support</a>
       <p class="note">Prefer a quick kickoff? Share your last filed return &amp; any open authority queries; we’ll incorporate them into the plan.</p>
     </div>
   </section>
@@ -425,40 +414,7 @@
   </div>
 </footer>
 
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"MegaServe Ltd.",
-  "url":"https://www.megaserve.eu",
-  "logo":"https://www.megaserve.eu/assets/logo.svg",
-  "sameAs":[]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Service",
-  "name":"Tax & VAT Filing / Submission Services",
-  "provider":{"@type":"Organization","name":"MegaServe Ltd."},
-  "areaServed":{"@type":"Country","name":"Cyprus"},
-  "description":"Cyprus tax & VAT filing handled cleanly: data intake, reconciliations, e-Services submissions, payment references, authority liaison, and a rolling compliance calendar."
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.megaserve.eu/"},
-    {"@type":"ListItem","position":2,"name":"Tax & VAT Administration","item":"https://www.megaserve.eu/#tax-vat"},
-    {"@type":"ListItem","position":3,"name":"Tax & VAT Filing / Submission Services","item":"https://www.megaserve.eu/tax-vat-filing-submission-services.html"}
-  ]
-}
-</script>
-
-<!-- FAQ Schema for SEO -->
+<!-- Optional: FAQ Schema for SEO -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -472,6 +428,6 @@
 }
 </script>
 
-<script src="script.js?v=13" defer></script>
+<script src="script.js?v=12"></script>
 </body>
 </html>
