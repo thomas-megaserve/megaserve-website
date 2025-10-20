@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employment Permit for Non-E.U. Nationals — MegaServe Cyprus</title>
+  <meta name="description" content="End-to-end support for Non-E.U. employment permits in Cyprus: eligibility scoping, sponsor readiness, document pack, application filing, biometrics, and post-approval onboarding with renewals tracking.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=12">
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <!-- Page-local helpers (kept consistent with other pages) -->
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    .submenu-caret{margin-left:.35rem}
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="container header-flex">
+    <a href="index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    </a>
+    <!-- Hamburger Button for Mobile -->
+    <button id="nav-toggle" aria-label="Open Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <!-- Corporate Services -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
+          <ul class="dropdown" aria-label="Corporate Services Submenu">
+            <li><a href="company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="administrative-services.html">Administrative Services</a></li>
+            <li><a href="banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="escrow-assistance-services.html">Escrow Assistance Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Migration & Relocation Services with flyouts -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
+          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
+            <!-- Employment hub -->
+            <li class="has-flyout">
+              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Employment routes">
+                <li><a aria-current="page" href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="general-employment-permit.html">General Employment</a></li>
+                <li><a href="eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+              </ul>
+            </li>
+            <!-- Investment hub -->
+            <li class="has-flyout">
+              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Investment routes">
+                <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="categories-a-f.html">Categories A–F</a></li>
+                <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+              </ul>
+            </li>
+            <!-- Visitor hub -->
+            <li class="has-flyout">
+              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Visitor routes">
+                <li><a href="visitors-permit.html">Visitors Permit</a></li>
+              </ul>
+            </li>
+            <!-- Citizenship hub -->
+            <li class="has-flyout">
+              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+                Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Citizenship routes">
+                <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Tax & VAT Administration -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
+          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
+            <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Corporate Consultancy -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
+          <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
+            <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="project-management-services.html">Project Management Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Compliance Services -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
+          <ul class="dropdown" aria-label="Compliance Services Submenu">
+            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+          </ul>
+        </li>
+
+        <!-- About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- 1) HERO -->
+  <section class="page-hero fade-up" data-anim-delay="0.1">
+    <div class="container">
+      <h1>Employment Permit for Non-E.U. Nationals</h1>
+      <p class="content-narrow">From sponsor readiness to residence card in hand: eligibility scoping, document packs, filing appointments, biometrics, and onboarding—delivered with clear checklists and timelines.</p>
+    </div>
+  </section>
+
+  <!-- 2) OVERVIEW -->
+  <section class="container fade-up" data-anim-delay="0.15" id="overview">
+    <div class="content-narrow">
+      <h2>What We Do</h2>
+      <ul class="feature-list">
+        <li>Eligibility &amp; route selection (company type, role level, dependants, timelines).</li>
+        <li>Sponsor readiness: company documents, payroll/tax registration, premises proof.</li>
+        <li>Employment contract templates aligned to route requirements.</li>
+        <li>Document pack assembly: IDs, academic/professional proofs, police/medical (if required).</li>
+        <li>Application filing, fee guides, and appointment scheduling.</li>
+        <li>Biometrics &amp; residence card logistics; interim permits where applicable.</li>
+        <li>Family applications (spouse/children) and school/settling notes.</li>
+        <li>Renewals &amp; changes: role updates, employer change, address changes, re-entry.</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <h2>Route Matrix (At a Glance)</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Route</th>
+              <th>Typical Use</th>
+              <th>Key Employer Requirements</th>
+              <th>Applicant Essentials</th>
+              <th>Dependants</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Company-Sponsored Employment</td>
+              <td>Hiring Non-E.U. specialists/managers</td>
+              <td>Registered entity, payroll &amp; tax numbers, compliant contracts</td>
+              <td>Valid passport, CV/qualifications, clean police record*</td>
+              <td>Usually permitted; proof of relationship &amp; means</td>
+            </tr>
+            <tr>
+              <td>Intra-Group Transfer</td>
+              <td>Moves within the same corporate group</td>
+              <td>Intercompany relationship evidence, assignment letter</td>
+              <td>Employment history, group link proof</td>
+              <td>Often eligible; same process window</td>
+            </tr>
+            <tr>
+              <td>Start-up / Scale-up Hire</td>
+              <td>Fast-growing firms bringing talent</td>
+              <td>Active operations, funding/turnover evidence</td>
+              <td>Role relevance, skills proof</td>
+              <td>Case-by-case per policy</td>
+            </tr>
+            <tr>
+              <td>Family Members (of permit holder)</td>
+              <td>Spouse/children joining</td>
+              <td>Primary holder in good standing</td>
+              <td>Marriage/birth certificates (apostilled if required)</td>
+              <td>Yes—linked to main permit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">*Exact evidence and eligibility depend on the selected route and current authority guidance. We align files to prevailing standards.</p>
+    </div>
+  </section>
+
+  <!-- 3) PROCESS -->
+  <section class="container fade-up" data-anim-delay="0.2" id="process">
+    <div class="content-narrow">
+      <h2>Process</h2>
+      <ol class="process-steps">
+        <li><strong>Scope &amp; Readiness:</strong> Confirm route, employer status, role fit, and dependants. Issue tailored checklist.</li>
+        <li><strong>Collect &amp; Prepare:</strong> Assemble documents; certify/legalise where needed; draft employment contract.</li>
+        <li><strong>File &amp; Appointments:</strong> Prepare forms, submit application, schedule biometrics/collection.</li>
+        <li><strong>Follow-ups:</strong> Respond to queries, track status, and manage interim permissions as applicable.</li>
+        <li><strong>Issue &amp; Onboard:</strong> Receive decision/card; register addresses/SS/Tax where required.</li>
+        <li><strong>Maintain &amp; Renew:</strong> Diary key dates; process renewals, changes of role/employer, and dependant updates.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4) SERVICE LEVELS & TIMING -->
+  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
+    <div class="content-narrow">
+      <h2>Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency/Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eligibility &amp; Route Note</td>
+              <td>1–2 business days</td>
+              <td>24–48h iteration loop</td>
+              <td>Confirms pathway, evidence, and next steps.</td>
+            </tr>
+            <tr>
+              <td>Document Checklist &amp; Templates</td>
+              <td>Same/next business day</td>
+              <td>24–48h</td>
+              <td>Employer &amp; applicant variants; dependant pack if needed.</td>
+            </tr>
+            <tr>
+              <td>Application Filing</td>
+              <td>Upon file completeness</td>
+              <td>Same day submission where slots allow</td>
+              <td>Authority queues can affect dates.</td>
+            </tr>
+            <tr>
+              <td>Appointment Scheduling</td>
+              <td>On filing</td>
+              <td>Same–1 business day</td>
+              <td>Includes biometrics/collection where applicable.</td>
+            </tr>
+            <tr>
+              <td>Status Updates &amp; Queries</td>
+              <td>Weekly cadence</td>
+              <td>Next-day responses</td>
+              <td>Authority clarifications vary by case.</td>
+            </tr>
+            <tr>
+              <td>Renewal &amp; Change Diary</td>
+              <td>Rolling</td>
+              <td>Reminders 60/30/14 days</td>
+              <td>Includes dependants and address/employer changes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Processing times depend on authority workload, completeness, and any third-party certifications/legalisations.</p>
+    </div>
+  </section>
+
+  <!-- 5) DELIVERABLES -->
+  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Eligibility/route note and tailored document checklist.</li>
+        <li>Employer readiness pack (company docs, payroll/registrations templates).</li>
+        <li>Application forms set, fee guide, and appointment confirmations.</li>
+        <li>Certified/legalised document register and file index.</li>
+        <li>Status tracker and authority correspondence log.</li>
+        <li>Dependants pack (where applicable).</li>
+        <li>Renewal/change diary and reminders.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6) CHECKLIST -->
+  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
+    <div class="content-narrow">
+      <h2>Onboarding Documents Checklist</h2>
+      <div class="table-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Employer</th>
+              <th>Applicant</th>
+              <th>Dependants (if any)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Certificate set, tax/VAT numbers, bank/lease or premises proof.</td>
+              <td>Passport (valid), photos, CV, qualifications/certificates.</td>
+              <td>Passports, marriage/birth certificates (apostille/legalisation if required).</td>
+            </tr>
+            <tr>
+              <td>Employment contract draft; payroll plan.</td>
+              <td>Police clearance; medicals/insurance (where required).</td>
+              <td>Insurance proof and accommodation details.</td>
+            </tr>
+            <tr>
+              <td>Org chart/role description; board resolution (if needed).</td>
+              <td>Address proof; prior visas/permits (if any).</td>
+              <td>School letters (optional) and travel plan.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Sensitive documents should be shared via VDR only. We provide a structured index and permissioning at kickoff.</p>
+    </div>
+  </section>
+
+  <!-- 7) CONTROLS / QUALITY -->
+  <section class="container fade-up" data-anim-delay="0.4" id="controls">
+    <div class="content-narrow">
+      <h2>Controls &amp; Quality</h2>
+      <ul class="feature-list">
+        <li>Two-person review on filings and certified/legalised documents.</li>
+        <li>Version control with redlines and approval trails.</li>
+        <li>Role-based permissions in VDR; access register maintained.</li>
+        <li>Exceptions &amp; assumptions log with documented rationale.</li>
+        <li>Renewal/change calendar with reminders and status notes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 8) ABOUT -->
+  <section class="container fade-up" data-anim-delay="0.45" id="about">
+    <div class="content-narrow">
+      <h2>About MegaServe</h2>
+      <p>Cyprus-based team focused on practical, document-first execution. We coordinate employers, applicants, and authorities to keep applications clean and timelines realistic.</p>
+      <ul class="feature-list">
+        <li>Languages: EN/GR/RU; others on request.</li>
+        <li>Close coordination with employers, counsel, and banks/insurers.</li>
+        <li>Clear cadence: weekly status, queries log, and renewal diary.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 9) FAQ -->
+  <section class="container fade-up" data-anim-delay="0.5" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <p class="note" role="note">Information here is general and not legal or immigration advice. We coordinate with licensed professionals where required.</p>
+      <dl class="faq">
+        <dt>How long does an employment permit take?</dt>
+        <dd>Timelines vary with authority queues and completeness. We scope the route, file quickly once complete, and update you weekly on status.</dd>
+
+        <dt>Can my spouse and children join?</dt>
+        <dd>Typically yes, subject to eligibility and evidence (relationship, means, insurance). We prepare and file dependant applications alongside or after the main file.</dd>
+
+        <dt>Do I need to legalise documents?</dt>
+        <dd>Some documents require certification, apostille, or legalisation depending on origin and route. We confirm exact requirements in your checklist.</dd>
+
+        <dt>Can I change employer or role later?</dt>
+        <dd>Changes are usually possible but may require approvals or re-filing. We assess the impact and manage the process with a documented change note.</dd>
+
+        <dt>Do you guarantee approvals?</dt>
+        <dd>No. Decisions rest with the authorities. We reduce risk by aligning evidence to current standards and maintaining complete, audit-ready files.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 10) CONTACT CTA -->
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
+    <div class="container">
+      <h2>Start a Non-E.U. Employment Permit</h2>
+      <p class="contact-intro">Send us the role, employer details, and target start date—we’ll return a tailored checklist and filing plan within 24–48 hours.</p>
+      <a href="mailto:megaserve@megaserve.eu?subject=Employment%20Permit%20(Non-EU)%20Kickoff" class="btn-primary">Request Employment Permit Kickoff</a>
+      <p class="note">For fastest turnaround, email: company certificate set, role description/contract draft, applicant passport &amp; CV, dependant details (if any), and target timeline.</p>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <div class="container footer-flex">
+    <div class="footer-left">
+      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
+      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html#services">Services</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact-cta">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- 11) FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"How long does an employment permit take?",
+      "acceptedAnswer":{"@type":"Answer","text":"Timelines vary with authority queues and completeness. We scope the route, file quickly once complete, and update you weekly on status."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can my spouse and children join?",
+      "acceptedAnswer":{"@type":"Answer","text":"Typically yes, subject to eligibility and evidence. We prepare and file dependant applications alongside or after the main file."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do I need to legalise documents?",
+      "acceptedAnswer":{"@type":"Answer","text":"Some documents require certification, apostille, or legalisation depending on origin and route. We confirm exact requirements in your checklist."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can I change employer or role later?",
+      "acceptedAnswer":{"@type":"Answer","text":"Changes are usually possible but may require approvals or re-filing. We assess impact and manage the process with a documented change note."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do you guarantee approvals?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. Decisions rest with the authorities. We reduce risk by aligning evidence to current standards and maintaining complete, audit-ready files."}
+    }
+  ]
+}
+</script>
+
+<script src="script.js?v=12"></script>
+</body>
+</html>
