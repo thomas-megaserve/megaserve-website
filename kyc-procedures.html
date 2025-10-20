@@ -43,6 +43,9 @@
 
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    /* caret used in flyout submenus to match other pages */
+    .submenu-caret{margin-left:.35rem}
   </style>
 </head>
 <body>
@@ -85,14 +88,53 @@
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services -->
+        <!-- Migration & Relocation Services with flyouts -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <li><a href="residency-by-employment-permit-services.html">Residency by Employment Permit Services</a></li>
-            <li><a href="residency-by-investment-permit-services.html">Residency by Investment Permit Services</a></li>
-            <li><a href="visitor-residency-permit-services.html">Visitor Residency Permit Services</a></li>
-            <li><a href="naturalisation-citizenship-services.html">Naturalisation &amp; Citizenship Services</a></li>
+            <!-- Employment hub -->
+            <li class="has-flyout">
+              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Employment routes">
+                <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="general-employment-permit.html">General Employment</a></li>
+                <li><a href="eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+              </ul>
+            </li>
+            <!-- Investment hub -->
+            <li class="has-flyout">
+              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Investment routes">
+                <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="categories-a-f.html">Categories A–F</a></li>
+                <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+              </ul>
+            </li>
+            <!-- Visitor hub -->
+            <li class="has-flyout">
+              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Visitor routes">
+                <li><a href="visitors-permit.html">Visitors Permit</a></li>
+              </ul>
+            </li>
+            <!-- Citizenship hub -->
+            <li class="has-flyout">
+              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+                Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Citizenship routes">
+                <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
