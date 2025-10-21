@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visitors Permit — MegaServe Cyprus</title>
+  <meta name="description" content="End-to-end coordination for Cyprus Visitors Permits: eligibility check, documentation, application preparation, submission, and renewals for long-stay visitors and family members.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=12">
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+
+  <style>
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .content-narrow{max-width:900px;margin:0 auto}
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+    .process-steps{counter-reset:step;list-style:none;padding:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+    .note{font-size:.95rem;color:#666}
+    .table-wrap{overflow-x:auto}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+    .faq dt{font-weight:700;margin-top:1rem}
+    .faq dd{margin:0 0 1rem 0}
+    .fade-up{opacity:0;transform:translateY(14px)}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+    .submenu-caret{margin-left:.35rem}
+  </style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="container header-flex">
+    <a href="index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    </a>
+    <button id="nav-toggle" aria-label="Open Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <!-- Corporate Services -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
+          <ul class="dropdown" aria-label="Corporate Services Submenu">
+            <li><a href="company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="administrative-services.html">Administrative Services</a></li>
+            <li><a href="banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="escrow-assistance-services.html">Escrow Assistance Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Nominee & Fiduciary Services -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
+          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
+            <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Migration & Relocation Services with flyouts -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
+          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
+            <!-- Employment hub -->
+            <li class="has-flyout">
+              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Employment routes">
+                <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="general-employment-permit.html">General Employment</a></li>
+                <li><a href="eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+              </ul>
+            </li>
+            <!-- Investment hub -->
+            <li class="has-flyout">
+              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Investment routes">
+                <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="categories-a-f.html">Categories A–F</a></li>
+                <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+              </ul>
+            </li>
+            <!-- Visitor hub -->
+            <li class="has-flyout">
+              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Visitor routes">
+                <li><a href="visitors-permit.html" aria-current="page">Visitors Permit</a></li>
+              </ul>
+            </li>
+            <!-- Citizenship hub -->
+            <li class="has-flyout">
+              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+                Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Citizenship routes">
+                <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Tax & VAT Administration -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
+          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
+            <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Corporate Consultancy -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
+          <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
+            <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="project-management-services.html">Project Management Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Compliance Services -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
+          <ul class="dropdown" aria-label="Compliance Services Submenu">
+            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+          </ul>
+        </li>
+
+        <!-- About placed to the left of Contact -->
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container content-narrow">
+      <h1 class="fade-up" data-anim-delay="0ms">Visitors Permit</h1>
+      <p class="fade-up" data-anim-delay="80ms">For long-stay visitors, retirees, and family members of residents who wish to remain in Cyprus beyond standard entry durations. MegaServe manages every step — from eligibility scoping and documentation to submission, liaison, and renewal.</p>
+    </div>
+  </section>
+
+  <section class="container content-narrow">
+
+    <!-- Overview -->
+    <h2 class="fade-up" data-anim-delay="0ms">Overview</h2>
+    <p class="fade-up" data-anim-delay="60ms">The Visitors Permit allows non-EU nationals to stay in Cyprus for extended periods without engaging in employment. It is commonly used by family members of Cypriot or EU residents, retirees, and individuals with independent means of income. The permit is valid for up to 1 year and renewable.</p>
+    <ul class="feature-list fade-up" data-anim-delay="120ms" aria-label="Key features">
+      <li>Eligibility confirmation for visitor residency</li>
+      <li>Tailored checklist and document preparation</li>
+      <li>Application filing and tracking with Immigration Department</li>
+      <li>Authority liaison and renewal scheduling</li>
+      <li>Audit-ready record maintenance</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <!-- Eligibility -->
+    <h2 class="fade-up" data-anim-delay="0ms">Eligibility &amp; Requirements</h2>
+    <ul class="feature-list fade-up" data-anim-delay="80ms">
+      <li>Applicant must not engage in any employment or business in Cyprus</li>
+      <li>Proof of sufficient income from abroad (e.g. pensions, investments, or savings)</li>
+      <li>Valid health insurance policy</li>
+      <li>Rental agreement or proof of accommodation</li>
+      <li>Clean criminal record and valid passport</li>
+      <li>Proof of relationship if applying as family of a resident</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <!-- Process -->
+    <h2 class="fade-up" data-anim-delay="0ms">Process</h2>
+    <ol class="process-steps fade-up" data-anim-delay="80ms" aria-label="Process steps">
+      <li>Scoping — eligibility confirmation and route selection</li>
+      <li>Checklist issuance — document list, templates, and timeline</li>
+      <li>Evidence gathering — income, accommodation, and insurance proofs</li>
+      <li>Application build — preparation of forms and legalised documents</li>
+      <li>Submission &amp; liaison — filing, appointment, and tracking</li>
+      <li>Issuance — collection of residence permit card and renewal scheduling</li>
+    </ol>
+
+    <div class="keyline"></div>
+
+    <!-- Service Levels -->
+    <h2 class="fade-up" data-anim-delay="0ms">Service Levels &amp; Typical Timing</h2>
+    <div class="table-wrap fade-up" data-anim-delay="80ms">
+      <table class="service">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Includes</th>
+            <th>Typical Timing*</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Core</td>
+            <td>Eligibility check, checklist, and application assembly</td>
+            <td>2–4 weeks preparation</td>
+            <td>Single applicants with ready documentation</td>
+          </tr>
+          <tr>
+            <td>Plus</td>
+            <td>Core + translation/legalisation handling and authority appointments</td>
+            <td>3–6 weeks preparation</td>
+            <td>Applicants abroad or with dependants</td>
+          </tr>
+          <tr>
+            <td>Complete</td>
+            <td>Plus + renewals management and long-term monitoring</td>
+            <td>Ongoing</td>
+            <td>Retirees and families seeking stable residency</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note fade-up" data-anim-delay="140ms">*Dependent on document readiness, legalisation requirements, and authority scheduling.</p>
+
+    <div class="keyline"></div>
+
+    <!-- Deliverables -->
+    <h2 class="fade-up" data-anim-delay="0ms">Deliverables</h2>
+    <ul class="feature-list fade-up" data-anim-delay="80ms">
+      <li>Eligibility memo and income verification summary</li>
+      <li>Checklist and document templates</li>
+      <li>Completed application pack with submission receipt</li>
+      <li>Authority correspondence and renewal log</li>
+      <li>Secure, audit-ready archive</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <!-- Controls -->
+    <h2 class="fade-up" data-anim-delay="0ms">Controls &amp; Quality</h2>
+    <ul class="feature-list fade-up" data-anim-delay="80ms">
+      <li>Dual verification on all submission packs</li>
+      <li>Document control and encryption during transfer</li>
+      <li>Renewal reminders and status monitoring</li>
+      <li>Conformance to current immigration circulars</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <!-- FAQ -->
+    <h2 class="fade-up" data-anim-delay="0ms">FAQ</h2>
+    <dl class="faq fade-up" data-anim-delay="80ms">
+      <dt>Who can apply for a Visitors Permit?</dt>
+      <dd>Any non-EU national who wishes to reside in Cyprus without employment, including retirees or family members of residents.</dd>
+
+      <dt>How long is the Visitors Permit valid?</dt>
+      <dd>It is typically issued for up to 1 year and can be renewed annually.</dd>
+
+      <dt>Can I work under a Visitors Permit?</dt>
+      <dd>No, employment is not permitted under this permit type.</dd>
+
+      <dt>What if my income is from abroad?</dt>
+      <dd>That is acceptable as long as it covers your living expenses in Cyprus.</dd>
+
+      <dt>How long does processing take?</dt>
+      <dd>Preparation can take 2–6 weeks, while Immigration Department processing time varies by case.</dd>
+    </dl>
+    <p class="note fade-up" data-anim-delay="140ms">Information is indicative and subject to updates by the Civil Registry &amp; Migration Department.</p>
+
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact-cta" class="cta-band" style="background:var(--color-primary);color:#fff">
+    <div class="container content-narrow">
+      <h2 class="fade-up" data-anim-delay="0ms">Start Your Visitors Permit Application</h2>
+      <p class="fade-up" data-anim-delay="60ms">Send us your details and intended stay duration to receive a tailored checklist and target submission window.</p>
+      <p class="fade-up" data-anim-delay="120ms">
+        <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=Visitors%20Permit%20Application">Email MegaServe</a>
+      </p>
+      <p class="note fade-up" data-anim-delay="180ms">Fastest turnaround — include passport scan, proof of funds, rental agreement, and health insurance policy.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer
