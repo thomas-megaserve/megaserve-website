@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Cyprus Start-Up Visa — MegaServe Cyprus</title>
-  <meta name="description" content="Full-service coordination for Cyprus Start-Up Visa: eligibility assessment, business plan build, investment evidence, and submission to innovation authority for founders and teams.">
+  <meta name="description" content="Full-service coordination for Cyprus Start-Up Visa: eligibility assessment, business plan build, investment evidence, and submission to the innovation authority for founders and teams.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
@@ -25,15 +25,16 @@
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
     .table-wrap{overflow-x:auto}
-    table.service{width:100%;border-collapse:collapse}
-    table.service th, table.service td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
-    table.service th{background:#fafafa}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
     #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
     .faq dt{font-weight:700;margin-top:1rem}
     .faq dd{margin:0 0 1rem 0}
     .fade-up{opacity:0;transform:translateY(14px)}
     .fade-up.visible{opacity:1;transform:translateY(0)}
+    .submenu-caret{margin-left:.35rem}
   </style>
 </head>
 <body>
@@ -52,8 +53,8 @@
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
-          <a href="#">Corporate Services</a>
-          <ul class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
+          <ul class="dropdown" aria-label="Corporate Services Submenu">
             <li><a href="company-formation-services.html">Company Formation Services</a></li>
             <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
             <li><a href="administrative-services.html">Administrative Services</a></li>
@@ -64,8 +65,8 @@
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
-          <a href="#">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
+          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
             <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
             <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
             <li><a href="registered-address-services.html">Registered Address Services</a></li>
@@ -74,13 +75,16 @@
           </ul>
         </li>
 
-        <!-- Migration & Relocation -->
+        <!-- Migration & Relocation Services with flyouts -->
         <li class="has-dropdown">
-          <a href="#">Migration &amp; Relocation Services</a>
-          <ul class="dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
+          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
+            <!-- Employment hub -->
             <li class="has-flyout">
-              <a href="residency-by-employment-permit-services.html">Residency by Employment Permit Services ›</a>
-              <ul class="flyout">
+              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Employment routes">
                 <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
                 <li><a href="general-employment-permit.html">General Employment</a></li>
                 <li><a href="eu-blue-card.html">EU Blue Card</a></li>
@@ -88,23 +92,32 @@
                 <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
+            <!-- Investment hub -->
             <li class="has-flyout">
-              <a href="residency-by-investment-permit-services.html">Residency by Investment Permit Services ›</a>
-              <ul class="flyout">
+              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Investment routes">
                 <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
                 <li><a href="categories-a-f.html">Categories A–F</a></li>
                 <li><a href="cyprus-startup-visa.html" aria-current="page">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
+            <!-- Visitor hub -->
             <li class="has-flyout">
-              <a href="visitor-residency-permit-services.html">Visitor Residency Permit Services ›</a>
-              <ul class="flyout">
+              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Visitor routes">
                 <li><a href="visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
+            <!-- Citizenship hub -->
             <li class="has-flyout">
-              <a href="naturalisation-citizenship-services.html">Naturalisation &amp; Citizenship Services ›</a>
-              <ul class="flyout">
+              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+                Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Citizenship routes">
                 <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
                 <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
@@ -112,6 +125,39 @@
           </ul>
         </li>
 
+        <!-- Tax & VAT Administration -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
+          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
+            <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Corporate Consultancy -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
+          <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
+            <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="project-management-services.html">Project Management Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Compliance Services -->
+        <li class="has-dropdown">
+          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
+          <ul class="dropdown" aria-label="Compliance Services Submenu">
+            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+          </ul>
+        </li>
+
+        <!-- About placed to the left of Contact -->
         <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
@@ -134,87 +180,203 @@
     <!-- Overview -->
     <h2 class="fade-up" data-anim-delay="0ms">Overview</h2>
     <p class="fade-up" data-anim-delay="60ms">The Cyprus Start-Up Visa supports entrepreneurs from non-EU countries wishing to create and operate innovative businesses in Cyprus. The scheme accepts individual founders and teams, granting residence and work rights conditioned on innovation potential and funding capacity.</p>
-    <ul class="feature-list fade-up" data-anim-delay="120ms">
+    <ul class="feature-list fade-up" data-anim-delay="120ms" aria-label="Key features">
       <li>Eligibility evaluation for individual or team application</li>
       <li>Innovation authority approval preparation</li>
       <li>Business plan drafting and financial model validation</li>
       <li>Application assembly, submission, and follow-up</li>
-      <li>Post-approval residence and renewal management</li>
+      <li>Post-approval residence management and renewal calendar</li>
     </ul>
 
     <div class="keyline"></div>
 
-    <!-- Key Criteria -->
-    <h2 class="fade-up" data-anim-delay="0ms">Key Eligibility Criteria</h2>
-    <ul class="feature-list fade-up" data-anim-delay="80ms">
-      <li>Non-EU national over 18 years of age</li>
-      <li>Innovative business concept with potential for growth and export</li>
-      <li>Minimum capital requirement — €20,000 (subject to change)</li>
-      <li>Proof of sufficient funds to cover living expenses</li>
-      <li>Comprehensive business plan and CVs of founders</li>
-    </ul>
+    <!-- Eligibility Matrix -->
+    <h2 class="fade-up" data-anim-delay="0ms">Eligibility &amp; Evidence Matrix (Guide)</h2>
+    <div class="table-wrap fade-up" data-anim-delay="80ms">
+      <table class="matrix" aria-describedby="matrix-note">
+        <thead>
+          <tr>
+            <th scope="col">Factor</th>
+            <th scope="col">Baseline Expectation</th>
+            <th scope="col">Evidence Examples</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Founder Profile</td>
+            <td>Non-EU; age 18+; relevant track record</td>
+            <td>CVs, references, portfolio</td>
+            <td>Team applications allowed</td>
+          </tr>
+          <tr>
+            <td>Innovation</td>
+            <td>Tech/R&amp;D product with scale potential</td>
+            <td>Pitch deck, product demo, IP docs</td>
+            <td>Innovation Authority review</td>
+          </tr>
+          <tr>
+            <td>Capital</td>
+            <td>Min. funding (e.g., €20k)</td>
+            <td>Bank statements, investor letters</td>
+            <td>We confirm current threshold at scoping</td>
+          </tr>
+          <tr>
+            <td>Sustenance</td>
+            <td>Funds for living costs</td>
+            <td>Bank statements, sponsorship letters</td>
+            <td>Amounts vary with household size</td>
+          </tr>
+          <tr>
+            <td>Compliance</td>
+            <td>Clean record, health insurance</td>
+            <td>Police cert, policy schedule</td>
+            <td>Legalisation/translation may apply</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p id="matrix-note" class="note fade-up" data-anim-delay="140ms">Matrix is indicative; precise criteria and documents are validated during scoping.</p>
 
     <div class="keyline"></div>
 
     <!-- Process -->
     <h2 class="fade-up" data-anim-delay="0ms">Process</h2>
-    <ol class="process-steps fade-up" data-anim-delay="80ms">
-      <li>Scoping call — evaluate business concept, structure, and eligibility.</li>
-      <li>Document & plan preparation — compile pitch deck, financial projections, and application forms.</li>
-      <li>Submission to Innovation Authority — receive approval for innovative status.</li>
-      <li>Immigration filing — residence and work permit application lodged.</li>
-      <li>Permit issuance — founder and team receive Cyprus residence cards.</li>
-      <li>Monitoring & renewal — performance reporting and extension assistance.</li>
+    <ol class="process-steps fade-up" data-anim-delay="80ms" aria-label="Application process steps">
+      <li>Scoping — evaluate concept, team, and route; confirm capital and timelines.</li>
+      <li>Document build — pitch deck, plan &amp; model, evidence pack, translations/legalisations.</li>
+      <li>Innovation approval — submit to the authority; manage queries.</li>
+      <li>Immigration filing — residence/work permits; appointment coordination.</li>
+      <li>Issuance &amp; onboarding — cards, TIC/TIN, banking and practical setup.</li>
+      <li>Monitoring &amp; renewal — KPI tracking, reports, and extension preparation.</li>
     </ol>
 
     <div class="keyline"></div>
 
     <!-- Service Levels -->
-    <h2 class="fade-up" data-anim-delay="0ms">Service Levels &amp; Timing</h2>
+    <h2 class="fade-up" data-anim-delay="0ms">Service Levels &amp; Typical Timing</h2>
     <div class="table-wrap fade-up" data-anim-delay="80ms">
-      <table class="service">
+      <table class="service" aria-label="Service levels">
         <thead>
           <tr>
-            <th>Level</th>
-            <th>Includes</th>
-            <th>Typical Timing*</th>
-            <th>Best For</th>
+            <th scope="col">Level</th>
+            <th scope="col">Includes</th>
+            <th scope="col">Typical Timing*</th>
+            <th scope="col">Best For</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Core</td>
-            <td>Eligibility memo, checklist, business plan review &amp; submission to Innovation Authority</td>
-            <td>3 – 5 weeks prep + authority decision window</td>
+            <td>Eligibility memo, checklist, plan review, innovation submission</td>
+            <td>3–5 weeks prep; authority timelines vary</td>
             <td>Solo founders with ready materials</td>
           </tr>
           <tr>
             <td>Plus</td>
-            <td>Core + business plan co-authoring, financial model, and translations</td>
-            <td>4 – 7 weeks prep + decision window</td>
+            <td>Core + co-authoring plan &amp; model, translations, appointment booking</td>
+            <td>4–7 weeks prep; authority timelines vary</td>
             <td>Founders needing documentation support</td>
           </tr>
           <tr>
             <td>Complete</td>
-            <td>Plus + team coordination (2–5 members), immigration filings &amp; renewal calendar</td>
-            <td>6 – 9 weeks prep + decision window</td>
+            <td>Plus + team coordination (2–5), immigration filings, renewal calendar</td>
+            <td>6–9 weeks prep; authority timelines vary</td>
             <td>Start-ups with multi-member teams</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="note fade-up" data-anim-delay="140ms">*Preparation depends on business plan complexity, translation needs, and appointment availability.</p>
+    <p class="note fade-up" data-anim-delay="140ms">*Preparation depends on plan complexity, translation/legalisation, and booking availability. Decisions are at authority discretion.</p>
 
     <div class="keyline"></div>
 
     <!-- Deliverables -->
     <h2 class="fade-up" data-anim-delay="0ms">Deliverables</h2>
     <ul class="feature-list fade-up" data-anim-delay="80ms">
-      <li>Eligibility memo &amp; program route confirmation</li>
-      <li>Business plan and financial model template pack</li>
-      <li>Complete application forms and submission receipts</li>
-      <li>Authority correspondence log and updates</li>
-      <li>Renewal calendar and audit-ready repository</li>
+      <li>Eligibility memo &amp; route confirmation</li>
+      <li>Plan &amp; model templates, filing-ready forms</li>
+      <li>Submission receipts and correspondence log</li>
+      <li>Onboarding confirmations and renewal schedule</li>
+      <li>Secure, audit-ready document repository</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <!-- Checklist -->
+    <h2 class="fade-up" data-anim-delay="0ms">Founder &amp; Team Checklist</h2>
+    <div class="table-wrap fade-up" data-anim-delay="80ms">
+      <table class="matrix" aria-label="Checklist table">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Owner</th>
+            <th scope="col">Provided</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Passports (validity &gt;= 6 months)</td>
+            <td>Founder/Team</td>
+            <td>Yes / No</td>
+            <td>Certified copies as required</td>
+          </tr>
+          <tr>
+            <td>Pitch deck &amp; business plan</td>
+            <td>Founder</td>
+            <td>Yes / No</td>
+            <td>Template provided; co-authoring available</td>
+          </tr>
+          <tr>
+            <td>Funding evidence</td>
+            <td>Founder/Investors</td>
+            <td>Yes / No</td>
+            <td>Bank statements; investor letters</td>
+          </tr>
+          <tr>
+            <td>Police clearance &amp; insurance</td>
+            <td>All applicants</td>
+            <td>Yes / No</td>
+            <td>Legalisation &amp; certified translation</td>
+          </tr>
+          <tr>
+            <td>Team CVs &amp; roles</td>
+            <td>Team</td>
+            <td>Yes / No</td>
+            <td>Highlight technical/commercial skills</td>
+          </tr>
+          <tr>
+            <td>Accommodation proof</td>
+            <td>Household</td>
+            <td>Yes / No</td>
+            <td>Lease/title; utility confirmation</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="keyline"></div>
+
+    <!-- Controls -->
+    <h2 class="fade-up" data-anim-delay="0ms">Controls &amp; Quality</h2>
+    <ul class="feature-list fade-up" data-anim-delay="80ms" aria-label="Controls list">
+      <li>Two-person review on every submission pack</li>
+      <li>Version-controlled document set with immutable archive</li>
+      <li>Tracked authority queries with response SLAs</li>
+      <li>Renewal reminders and KPI monitoring</li>
+      <li>Data minimisation and secure transfer standards</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <!-- About -->
+    <h2 class="fade-up" data-anim-delay="0ms">About MegaServe</h2>
+    <p class="fade-up" data-anim-delay="60ms">We are a Cyprus corporate services provider delivering end-to-end coordination across company formation, banking, compliance, and mobility. Our start-up desk integrates with compliance and tax so every file stays aligned with audit standards.</p>
+    <ul class="feature-list fade-up" data-anim-delay="120ms">
+      <li>Single point of contact from concept to card issuance</li>
+      <li>Local partner network for banking, office, and hiring</li>
+      <li>Transparent timelines and proactive status reporting</li>
     </ul>
 
     <div class="keyline"></div>
@@ -223,21 +385,21 @@
     <h2 class="fade-up" data-anim-delay="0ms">FAQ</h2>
     <dl class="faq fade-up" data-anim-delay="80ms">
       <dt>Can I apply as an individual founder?</dt>
-      <dd>Yes. The Start-Up Visa accepts both individual and team applications. Teams may include up to five founders.</dd>
+      <dd>Yes. The Start-Up Visa accepts both individual and team applications (commonly up to five members). We confirm current limits at scoping.</dd>
 
-      <dt>Do I need to have a company incorporated before applying?</dt>
-      <dd>No, the company can be incorporated after Innovation Authority approval, with assistance from MegaServe.</dd>
+      <dt>Do I need a Cyprus company before applying?</dt>
+      <dd>No. Incorporation can follow Innovation Authority approval; we handle set-up and banking coordination.</dd>
 
-      <dt>What happens if the start-up fails?</dt>
-      <dd>Permit renewal depends on performance criteria. If the business ceases, residence status may expire unless transitioned to another permit.</dd>
+      <dt>What if the start-up underperforms?</dt>
+      <dd>Renewal depends on meeting program KPIs. If operations cease, we can assess alternative visa routes.</dd>
 
-      <dt>Is there a path to permanent residence?</dt>
-      <dd>Continuous residence for five years may qualify you for long-term residence under EU Directive 2003/109/EC.</dd>
+      <dt>Is there a pathway to long-term residence?</dt>
+      <dd>Continuous lawful residence may count toward long-term residence eligibility under applicable rules.</dd>
 
-      <dt>Can dependants join the founder?</dt>
-      <dd>Yes, spouse and minor children may apply for residence under family reunification rules after initial approval.</dd>
+      <dt>Can dependants join?</dt>
+      <dd>Yes, spouse/partner and minor children can generally join on linked routes. We coordinate their packs and appointments.</dd>
     </dl>
-    <p class="note fade-up" data-anim-delay="140ms">Information subject to policy updates by the Cyprus Ministry of Interior and the Research &amp; Innovation Authority.</p>
+    <p class="note fade-up" data-anim-delay="140ms">This page is practical guidance. Exact requirements depend on current regulations and your case specifics.</p>
 
   </section>
 
@@ -245,11 +407,11 @@
   <section id="contact-cta" class="cta-band" style="background:var(--color-primary);color:#fff">
     <div class="container content-narrow">
       <h2 class="fade-up" data-anim-delay="0ms">Start Your Cyprus Start-Up Visa Assessment</h2>
-      <p class="fade-up" data-anim-delay="60ms">Submit your business concept and team details to receive a tailored eligibility memo and document checklist within 48 hours.</p>
+      <p class="fade-up" data-anim-delay="60ms">Email your pitch deck, founder CV(s), and funding summary. We’ll reply with an eligibility memo, a tailored checklist, and a target submission window.</p>
       <p class="fade-up" data-anim-delay="120ms">
-        <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=Cyprus%20Start-Up%20Visa%20Assessment">Email MegaServe</a>
+        <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=Cyprus%20Start-Up%20Visa%20—%20Assessment">Email MegaServe</a>
       </p>
-      <p class="note fade-up" data-anim-delay="180ms">Fastest turnaround — include pitch deck, CVs of founders, and funding evidence with your email.</p>
+      <p class="note fade-up" data-anim-delay="180ms">Fastest turnaround: include passport scans, pitch deck, and proof of funds.</p>
     </div>
   </section>
 
@@ -259,7 +421,7 @@
   <div class="container">
     <div class="footer-flex">
       <div>
-        <p><strong>MegaServe Cyprus</strong><br>Corporate, Compliance &amp; Migration Services</p>
+        <p><strong>MegaServe Cyprus</strong><br> Corporate, Compliance &amp; Migration Services</p>
       </div>
       <div>
         <p><a href="mailto:hello@megaserve.eu">hello@megaserve.eu</a></p>
@@ -271,16 +433,46 @@
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 <script src="script.js?v=12"></script>
 
 <!-- FAQ JSON-LD -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"Can I apply as an individual founder?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Start-Up Visa accepts both individual and team applications."}},
-    {"@type":"Question","name":"Do I need to have a company incorporated before applying?","acceptedAnswer":{"@type":"Answer","text":"No, incorporation can occur after Innovation Authority approval."}},
-    {"@type":"Question","name":"What happens if the start-up fails?","acceptedAnswer":{"@type":"Answer","text":"Permit renewal depends on performance criteria; residence may expire if operations cease."}},
-    {"@type":"Question","name":"
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Can I apply as an individual founder?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. The Start-Up Visa accepts both individual and team applications (commonly up to five members). We confirm current limits at scoping."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do I need a Cyprus company before applying?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. Incorporation can follow Innovation Authority approval; we handle set-up and banking coordination."}
+    },
+    {
+      "@type":"Question",
+      "name":"What if the start-up underperforms?",
+      "acceptedAnswer":{"@type":"Answer","text":"Renewal depends on meeting program KPIs. If operations cease, we can assess alternative visa routes."}
+    },
+    {
+      "@type":"Question",
+      "name":"Is there a pathway to long-term residence?",
+      "acceptedAnswer":{"@type":"Answer","text":"Continuous lawful residence may count toward long-term residence eligibility under applicable rules."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can dependants join?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes, spouse/partner and minor children can generally join on linked routes. We coordinate their packs and appointments."}
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
