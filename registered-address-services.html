@@ -6,8 +6,33 @@
   <meta name="description" content="Compliant Cyprus registered office with secure mail handling, statutory display, document custody, and audit-ready trails—integrated with your secretarial & banking workflows.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Performance: preconnect for faster font loads -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.megaserve.eu/registered-address-services.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Registered Address Services — MegaServe Cyprus">
+  <meta property="og:description" content="Compliant registered office address with secure mail/document handling, statutory display, and clean audit trails—integrated with secretarial & banking workflows.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/registered-address-services.html">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/registered-address-og.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Registered Address Services — MegaServe Cyprus">
+  <meta name="twitter:description" content="Compliant registered office address with secure mail/document handling, statutory display, and clean audit trails—integrated with secretarial & banking workflows.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/registered-address-og.jpg">
+
+  <!-- Favicons / theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
 
   <link rel="stylesheet" href="style.css?v=13">
 
@@ -15,6 +40,7 @@
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
     .content-narrow{max-width:900px;margin:0 auto}
     .muted{color:#666}
 
@@ -36,15 +62,22 @@
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
 
-    /* Keep CTA fine print legible if banner is dark/red */
+    /* CTA fine print legible on dark strip */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
-    /* Fallback animation */
+    /* Anchor sub-nav */
+    .anchor-nav{position:sticky;top:var(--header-height,64px);z-index:9;background:#fff;border-bottom:1px solid #eee}
+    .anchor-nav .container{display:flex;gap:.85rem;flex-wrap:wrap;justify-content:center;padding:.6rem 0}
+    .anchor-nav a{font-size:.95rem;text-decoration:none;color:var(--color-text);padding:.35rem .6rem;border-radius:6px}
+    .anchor-nav a:hover{background:#f7f7f7}
+
+    /* Motion */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
   </style>
 </head>
-<body>
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
 <header id="site-header">
@@ -166,7 +199,7 @@
           </ul>
         </li>
 
-        <!-- NEW: About placed to the left of Contact -->
+        <!-- Simple pages -->
         <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
@@ -174,7 +207,20 @@
   </div>
 </header>
 
-<main>
+<!-- Anchor sub-nav -->
+<nav class="anchor-nav" aria-label="Section navigation">
+  <div class="container">
+    <a href="#overview">Overview</a>
+    <a href="#handling">Mail & Compliance</a>
+    <a href="#service-levels">Service Levels</a>
+    <a href="#onboarding">Onboarding</a>
+    <a href="#related">Related</a>
+    <a href="#faq">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
+<main id="main-content">
   <!-- HERO -->
   <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container content-narrow">
@@ -200,14 +246,15 @@
       <div class="keyline"></div>
 
       <h2>Address Options</h2>
-      <div class="table-wrap">
-        <table class="matrix" aria-label="Registered address options">
+      <div class="table-wrap" role="region" aria-labelledby="addr-caption">
+        <table class="matrix" aria-describedby="addr-caption">
+          <caption id="addr-caption" class="sr-only">Registered address options, uses, inclusions, and notes</caption>
           <thead>
             <tr>
-              <th>Option</th>
-              <th>Use Case</th>
-              <th>What You Get</th>
-              <th>Notes</th>
+              <th scope="col">Option</th>
+              <th scope="col">Use Case</th>
+              <th scope="col">What You Get</th>
+              <th scope="col">Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -255,14 +302,15 @@
   <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
     <div class="content-narrow">
       <h2>Service Levels &amp; Turnaround</h2>
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" aria-labelledby="sl-caption">
         <table class="service">
+          <caption id="sl-caption" class="sr-only">Service levels and typical turnaround times</caption>
           <thead>
             <tr>
-              <th>Activity</th>
-              <th>Typical Frequency</th>
-              <th>Target Response</th>
-              <th>Notes</th>
+              <th scope="col">Activity</th>
+              <th scope="col">Typical Frequency</th>
+              <th scope="col">Target Response</th>
+              <th scope="col">Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -392,14 +440,34 @@
 <!-- Optional: FAQ Schema -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"Is the registered office enough for banking and auditors?","acceptedAnswer":{"@type":"Answer","text":"It meets statutory requirements. Some banks/auditors may expect substance (board activity, premises, staff). Related services can be added."}},
-    {"@type":"Question","name":"Can multiple entities share the same registered office?","acceptedAnswer":{"@type":"Answer","text":"Yes, with clear mail rules and separate indices. Group discounts may apply depending on volume."}},
-    {"@type":"Question","name":"What happens with sensitive mail?","acceptedAnswer":{"@type":"Answer","text":"We follow your rules: scan subject/cover only, scan nothing, or scan everything. Sensitive items default to “no scan” unless authorised."}},
-    {"@type":"Question","name":"Do you hold minute books and originals?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dedicated custody provides an inventory and chain-of-custody receipts for checkouts."}},
-    {"@type":"Question","name":"How fast can you switch our registered office?","acceptedAnswer":{"@type":"Answer","text":"Often within 2–5 business days from receipt of documents and approvals; banks/authorities updates may vary by institution."}}
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Is the registered office enough for banking and auditors?",
+      "acceptedAnswer":{"@type":"Answer","text":"It meets statutory requirements. Some banks/auditors may expect substance (board activity, premises, staff). Related services can be added."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can multiple entities share the same registered office?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes, with clear mail rules and separate indices. Group discounts may apply depending on volume."}
+    },
+    {
+      "@type":"Question",
+      "name":"What happens with sensitive mail?",
+      "acceptedAnswer":{"@type":"Answer","text":"We follow your rules: scan subject/cover only, scan nothing, or scan everything. Sensitive items default to “no scan” unless authorised."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do you hold minute books and originals?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. Dedicated custody provides an inventory and chain-of-custody receipts for checkouts."}
+    },
+    {
+      "@type":"Question",
+      "name":"How fast can you switch our registered office?",
+      "acceptedAnswer":{"@type":"Answer","text":"Often within 2–5 business days from receipt of documents and approvals; banks/authorities updates may vary by institution."}
+    }
   ]
 }
 </script>
