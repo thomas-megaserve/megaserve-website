@@ -6,8 +6,33 @@
   <meta name="description" content="Move-in-ready private offices and dedicated desks in Cyprus with meeting rooms, reception, connectivity, and flexible terms—set up for operational substance and bankable governance.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.megaserve.eu/physical-office-rental-services.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Physical Office Rental Services — MegaServe Cyprus">
+  <meta property="og:description" content="Move-in-ready private offices and dedicated desks in Cyprus with meeting rooms, reception, connectivity, and flexible terms.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/physical-office-rental-services.html">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/physical-office-og.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Physical Office Rental Services — MegaServe Cyprus">
+  <meta name="twitter:description" content="Private offices and dedicated desks in Cyprus—meeting rooms, reception, secure connectivity, flexible terms.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/physical-office-og.jpg">
+
+  <!-- Favicons / theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
 
   <link rel="stylesheet" href="style.css?v=13">
 
@@ -15,6 +40,7 @@
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
     .content-narrow{max-width:900px;margin:0 auto}
 
     .feature-list{list-style:none;padding-left:0}
@@ -39,11 +65,18 @@
     /* Keep CTA fine print readable on a dark/red strip */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
+    /* Anchor sub-nav */
+    .anchor-nav{position:sticky;top:var(--header-height,64px);z-index:9;background:#fff;border-bottom:1px solid #eee}
+    .anchor-nav .container{display:flex;gap:.85rem;flex-wrap:wrap;justify-content:center;padding:.6rem 0}
+    .anchor-nav a{font-size:.95rem;text-decoration:none;color:var(--color-text);padding:.35rem .6rem;border-radius:6px}
+    .anchor-nav a:hover{background:#f7f7f7}
+
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
 <header id="site-header">
@@ -173,7 +206,21 @@
   </div>
 </header>
 
-<main>
+<!-- Anchor sub-nav -->
+<nav class="anchor-nav" aria-label="Section navigation">
+  <div class="container">
+    <a href="#space-types">Space Types</a>
+    <a href="#service-levels">Service Levels</a>
+    <a href="#onboarding">Onboarding</a>
+    <a href="#compliance">Compliance</a>
+    <a href="#checklist">Checklist</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
+<main id="main-content">
   <!-- HERO -->
   <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
@@ -186,14 +233,15 @@
   <section class="container fade-up" data-anim-delay="0.15" id="space-types">
     <div class="content-narrow">
       <h2>Space Types</h2>
-      <div class="table-wrap">
-        <table class="matrix" aria-label="Office space types">
+      <div class="table-wrap" role="region" aria-labelledby="space-types-caption">
+        <table class="matrix" aria-describedby="space-types-caption">
+          <caption id="space-types-caption" class="sr-only">Office space types, capacities, inclusions, and best uses</caption>
           <thead>
             <tr>
-              <th>Type</th>
-              <th>Typical Capacity</th>
-              <th>Includes</th>
-              <th>Best For</th>
+              <th scope="col">Type</th>
+              <th scope="col">Typical Capacity</th>
+              <th scope="col">Includes</th>
+              <th scope="col">Best For</th>
             </tr>
           </thead>
           <tbody>
@@ -246,14 +294,15 @@
   <section class="container fade-up" data-anim-delay="0.2" id="service-levels">
     <div class="content-narrow">
       <h2>Service Levels &amp; Targets</h2>
-      <div class="table-wrap">
-        <table class="service" aria-label="Physical office service levels">
+      <div class="table-wrap" role="region" aria-labelledby="sl-caption">
+        <table class="service" aria-describedby="sl-caption">
+          <caption id="sl-caption" class="sr-only">Service activities, typical frequency, targets, and notes</caption>
           <thead>
             <tr>
-              <th>Activity</th>
-              <th>Typical Frequency</th>
-              <th>Target Response</th>
-              <th>Notes</th>
+              <th scope="col">Activity</th>
+              <th scope="col">Typical Frequency</th>
+              <th scope="col">Target Response</th>
+              <th scope="col">Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -305,14 +354,15 @@
         <li><strong>Fit-Out &amp; IT:</strong> furniture plan, VLAN/static IP (optional), access badges, test prints/VC.</li>
         <li><strong>Move-In:</strong> handover checklist, welcome pack, building rules, escalation contacts.</li>
       </ol>
-      <div class="table-wrap">
-        <table class="packages" aria-label="Physical office setup timelines">
+      <div class="table-wrap" role="region" aria-labelledby="pkg-caption">
+        <table class="packages" aria-describedby="pkg-caption">
+          <caption id="pkg-caption" class="sr-only">Work packages, typical timelines, outputs, and notes</caption>
           <thead>
             <tr>
-              <th>Work Package</th>
-              <th>Typical Timeline</th>
-              <th>Outputs</th>
-              <th>Notes</th>
+              <th scope="col">Work Package</th>
+              <th scope="col">Typical Timeline</th>
+              <th scope="col">Outputs</th>
+              <th scope="col">Notes</th>
             </tr>
           </thead>
           <tbody>
