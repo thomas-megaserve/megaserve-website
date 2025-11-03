@@ -6,8 +6,33 @@
   <meta name="description" content="Virtual office presence in Cyprus: business address, call handling, meeting rooms, mail/courier management, and coordinated admin support—bankable, compliant, and scalable.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.megaserve.eu/virtual-office-services.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Virtual Office Services — MegaServe Cyprus">
+  <meta property="og:description" content="Flexible Cyprus presence without full-time premises—bankable address, local call handling, meeting rooms, mail/courier management, and on-demand admin support.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/virtual-office-services.html">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/virtual-office-og.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Virtual Office Services — MegaServe Cyprus">
+  <meta name="twitter:description" content="Flexible Cyprus presence without full-time premises—address, call handling, rooms, mail/courier, and admin support.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/virtual-office-og.jpg">
+
+  <!-- Favicons / theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
 
   <link rel="stylesheet" href="style.css?v=13">
 
@@ -15,6 +40,7 @@
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
     .content-narrow{max-width:900px;margin:0 auto}
 
     .feature-list{list-style:none;padding-left:0}
@@ -38,11 +64,18 @@
     /* Ensure CTA fine print is readable on darker/red banner variants */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
+    /* Anchor sub-nav */
+    .anchor-nav{position:sticky;top:var(--header-height,64px);z-index:9;background:#fff;border-bottom:1px solid #eee}
+    .anchor-nav .container{display:flex;gap:.85rem;flex-wrap:wrap;justify-content:center;padding:.6rem 0}
+    .anchor-nav a{font-size:.95rem;text-decoration:none;color:var(--color-text);padding:.35rem .6rem;border-radius:6px}
+    .anchor-nav a:hover{background:#f7f7f7}
+
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
 <header id="site-header">
@@ -172,7 +205,22 @@
   </div>
 </header>
 
-<main>
+<!-- Anchor sub-nav -->
+<nav class="anchor-nav" aria-label="Section navigation">
+  <div class="container">
+    <a href="#overview">Overview</a>
+    <a href="#packages">Packages</a>
+    <a href="#service-levels">Service Levels</a>
+    <a href="#onboarding">Onboarding</a>
+    <a href="#compliance">Compliance</a>
+    <a href="#use-cases">Use Cases</a>
+    <a href="#checklist">Checklist</a>
+    <a href="#faq">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
+<main id="main-content">
   <!-- HERO -->
   <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
@@ -197,15 +245,16 @@
 
       <div class="keyline"></div>
 
-      <h2>Packages (Indicative)</h2>
-      <div class="table-wrap">
-        <table class="packages" aria-label="Virtual office package comparison">
+      <h2 id="packages">Packages (Indicative)</h2>
+      <div class="table-wrap" role="region" aria-labelledby="pkg-caption">
+        <table class="packages" aria-describedby="pkg-caption">
+          <caption id="pkg-caption" class="sr-only">Virtual office package comparison by feature and tier</caption>
           <thead>
             <tr>
-              <th>Feature</th>
-              <th>Standard</th>
-              <th>Enhanced</th>
-              <th>Premium</th>
+              <th scope="col">Feature</th>
+              <th scope="col">Standard</th>
+              <th scope="col">Enhanced</th>
+              <th scope="col">Premium</th>
             </tr>
           </thead>
           <tbody>
@@ -260,14 +309,15 @@
   <section class="container fade-up" data-anim-delay="0.2" id="service-levels">
     <div class="content-narrow">
       <h2>Service Levels &amp; Targets</h2>
-      <div class="table-wrap">
-        <table class="service" aria-label="Virtual office service levels">
+      <div class="table-wrap" role="region" aria-labelledby="sl-caption">
+        <table class="service" aria-describedby="sl-caption">
+          <caption id="sl-caption" class="sr-only">Virtual office service levels and typical target responses</caption>
           <thead>
             <tr>
-              <th>Activity</th>
-              <th>Typical Frequency</th>
-              <th>Target Response</th>
-              <th>Notes</th>
+              <th scope="col">Activity</th>
+              <th scope="col">Typical Frequency</th>
+              <th scope="col">Target Response</th>
+              <th scope="col">Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -416,10 +466,26 @@
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"Can the virtual office be used as the company’s registered office?","acceptedAnswer":{"@type":"Answer","text":"No. Registered office is a separate statutory service. See Registered Address."}},
-    {"@type":"Question","name":"Do you provide a local phone number and answer calls in Greek/English?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide a local number and handle calls in EN/GR (RU on request), forwarding messages per your script."}},
-    {"@type":"Question","name":"How quickly do you forward urgent mail?","acceptedAnswer":{"@type":"Answer","text":"Urgent items are flagged on intake and can be dispatched the same day if confirmed before 14:00."}},
-    {"@type":"Question","name":"Can we bundle with board meeting facilities?","acceptedAnswer":{"@type":"Answer","text":"Yes. Combine with Directorship for substance (board meetings in Cyprus) and/or Physical Office for dedicated space."}}
+    {
+      "@type":"Question",
+      "name":"Can the virtual office be used as the company’s registered office?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. Registered office is a separate statutory service. See Registered Address."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do you provide a local phone number and answer calls in Greek/English?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. We provide a local number and handle calls in EN/GR (RU on request), forwarding messages per your script."}
+    },
+    {
+      "@type":"Question",
+      "name":"How quickly do you forward urgent mail?",
+      "acceptedAnswer":{"@type":"Answer","text":"Urgent items are flagged on intake and can be dispatched the same day if confirmed before 14:00."}
+    },
+    {
+      "@type":"Question",
+      "name":"Can we bundle with board meeting facilities?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. Combine with Directorship for substance (board meetings in Cyprus) and/or Physical Office for dedicated space."}
+    }
   ]
 }
 </script>
