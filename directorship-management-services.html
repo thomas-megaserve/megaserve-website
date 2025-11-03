@@ -6,8 +6,33 @@
   <meta name="description" content="Resident professional directors and corporate officers in Cyprus. Governance setup, board management, substance support, decision records, risk oversight, and bankable operations.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Performance: speed up Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.megaserve.eu/directorship-management-services.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Directorship &amp; Management Services — MegaServe Cyprus">
+  <meta property="og:description" content="Resident professional directors and corporate officers in Cyprus: governance setup, board management, substance support, and bankable operations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/directorship-management-services.html">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/directorship-og.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Directorship &amp; Management Services — MegaServe Cyprus">
+  <meta name="twitter:description" content="Resident professional directors and corporate officers in Cyprus. Governance setup, board management, substance support, and bankable operations.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/directorship-og.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
 
   <link rel="stylesheet" href="style.css?v=13">
 
@@ -15,6 +40,8 @@
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
 
     .feature-list{list-style:none;padding-left:0}
@@ -35,11 +62,18 @@
     /* CTA fine print legible on dark strip */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
+    /* Anchor sub-nav under hero */
+    .anchor-nav{position:sticky;top:var(--header-height,64px);z-index:9;background:#fff;border-bottom:1px solid #eee}
+    .anchor-nav .container{display:flex;gap:.85rem;flex-wrap:wrap;justify-content:center;padding:.6rem 0}
+    .anchor-nav a{font-size:.95rem;text-decoration:none;color:var(--color-text);padding:.35rem .6rem;border-radius:6px}
+    .anchor-nav a:hover{background:#f7f7f7}
+
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
   </style>
 </head>
-<body>
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
 <header id="site-header">
@@ -169,7 +203,22 @@
   </div>
 </header>
 
-<main>
+<!-- Anchor sub-nav -->
+<nav class="anchor-nav" aria-label="Section navigation">
+  <div class="container">
+    <a href="#overview">Overview</a>
+    <a href="#governance">Governance</a>
+    <a href="#onboarding">Onboarding</a>
+    <a href="#service-levels">Service Levels</a>
+    <a href="#substance">Substance</a>
+    <a href="#deliverables">Deliverables</a>
+    <a href="#checklist">Checklist</a>
+    <a href="#faq">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
+<main id="main-content">
   <!-- HERO -->
   <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
@@ -195,13 +244,14 @@
       <div class="keyline"></div>
 
       <h2>Roles &amp; Responsibilities</h2>
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" aria-labelledby="roles-table-caption">
         <table class="matrix">
+          <caption id="roles-table-caption" class="sr-only">Roles, scope of work, and boundaries for directorship & management services</caption>
           <thead>
             <tr>
-              <th>Role</th>
-              <th>What We Do</th>
-              <th>Boundaries</th>
+              <th scope="col">Role</th>
+              <th scope="col">What We Do</th>
+              <th scope="col">Boundaries</th>
             </tr>
           </thead>
           <tbody>
@@ -260,14 +310,15 @@
   <section class="container fade-up" data-anim-delay="0.3" id="service-levels">
     <div class="content-narrow">
       <h2>Service Levels &amp; Frequency</h2>
-      <div class="table-wrap">
+      <div class="table-wrap" role="region" aria-labelledby="sl-table-caption">
         <table class="service">
+          <caption id="sl-table-caption" class="sr-only">Service levels, frequency, target response times, and notes</caption>
           <thead>
             <tr>
-              <th>Activity</th>
-              <th>Typical Frequency</th>
-              <th>Target Response</th>
-              <th>Notes</th>
+              <th scope="col">Activity</th>
+              <th scope="col">Typical Frequency</th>
+              <th scope="col">Target Response</th>
+              <th scope="col">Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -421,7 +472,7 @@
       "name": "How are conflicts of interest handled?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Conflicts are declared in advance; conflicted directors recuse from decisions as needed. A conflicts register is maintained."
+        "text": "Conflicts are declared in advance; conflicted directors recuse from decisions as needed. We maintain a conflicts register."
       }
     },
     {
@@ -429,7 +480,7 @@
       "name": "Do you provide bank signatories?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, within board-approved mandates. Dual control is used and an up-to-date access list is maintained."
+        "text": "Yes, within board-approved mandates. We operate dual control and maintain an up-to-date access list."
       }
     },
     {
