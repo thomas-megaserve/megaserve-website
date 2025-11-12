@@ -5,133 +5,98 @@
   <title>MegaServe – Corporate Services Cyprus</title>
   <meta name="description" content="MegaServe provides expert corporate, banking, accounting, and immigration services in Cyprus and CEE markets. Trusted advisors with 15+ years' experience.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- RELATIVE includes (work from any folder depth if copied consistently) -->
   <link rel="stylesheet" href="style.css?v=13">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
-
-  <!-- Minimal scoped tweaks -->
   <style>
-    /* Center the 2nd services row */
-    #services .centered-row {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 2rem; margin-top: 2rem;
-    }
-    #services .centered-row .service-card { flex: 1 1 250px; max-width: 420px; }
-
-    /* Tight tick alignment ONLY for the bottom "Trusted by Industry Leaders" list */
-    #trust .trust-points { text-align: center; }
-    #trust .trust-points li {
-      padding-left: 0; display: flex; align-items: baseline; justify-content: center;
-      gap: .4rem; text-align: center;
-    }
-    #trust .trust-points li::before { content: none; }
-    #trust .trust-points .tick { color: var(--color-gold); line-height: 1; }
-
-    /* --- NAV CTA: high-contrast red button --- */
-    #main-nav .nav-cta a.btn-primary{
-      background: #c1121f; /* strong red */
-      color: #fff !important;
-      border: none;
-      padding: .6rem 1rem;
-      border-radius: .5rem;
-      font-weight: 700;
-      letter-spacing: .02em;
-      display:inline-block;
-      box-shadow: 0 1px 0 rgba(0,0,0,.15);
-    }
-    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
-
-    /* Ensure header logo area doesn’t collapse if button gets wide */
-    #site-header .header-flex { align-items: center; }
+    #services .centered-row{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin-top:2rem}
+    #services .centered-row .service-card{flex:1 1 250px;max-width:420px}
+    #trust .trust-points{text-align:center}
+    #trust .trust-points li{padding-left:0;display:flex;align-items:baseline;justify-content:center;gap:.4rem;text-align:center}
+    #trust .trust-points li::before{content:none}
+    #trust .trust-points .tick{color:var(--color-gold);line-height:1}
+    /* High-contrast Start Now */
+    #main-nav .nav-cta a.btn-primary{background:#c1121f;color:#fff!important;border:none;padding:.6rem 1rem;border-radius:.5rem;font-weight:700;letter-spacing:.02em;display:inline-block;box-shadow:0 1px 0 rgba(0,0,0,.15)}
+    #main-nav .nav-cta a.btn-primary:hover{background:#9e0f1a}
+    #site-header .header-flex{align-items:center}
   </style>
 </head>
 <body>
-
-<!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
     <a href="index.html" class="logo-link" aria-label="MegaServe Home">
       <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
-    <!-- Hamburger Button for Mobile -->
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
-
-    <!-- DROPDOWNS (paths corrected to your actual folders) -->
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
-          <a href="services/corporate-services/" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
+          <a href="services/corporate-services/index.html" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="services/corporate-services/">Company Formation Services</a></li>
-            <li><a href="services/corporate-services/">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="services/corporate-services/">Administrative Services</a></li>
-            <li><a href="services/corporate-services/">Banking Administration Services</a></li>
-            <li><a href="services/corporate-services/">Escrow Assistance Services</a></li>
+            <li><a href="services/corporate-services/index.html">Company Formation Services</a></li>
+            <li><a href="services/corporate-services/index.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="services/corporate-services/index.html">Administrative Services</a></li>
+            <li><a href="services/corporate-services/index.html">Banking Administration Services</a></li>
+            <li><a href="services/corporate-services/index.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
-          <a href="services/nominee-and-fiduciary-services/" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
+          <a href="services/nominee-and-fiduciary-services/index.html" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="services/nominee-and-fiduciary-services/">Directorship &amp; Management Services</a></li>
-            <li><a href="services/nominee-and-fiduciary-services/">Corporate Secretarial Services</a></li>
-            <li><a href="services/nominee-and-fiduciary-services/">Registered Address Services</a></li>
-            <li><a href="services/nominee-and-fiduciary-services/">Virtual Office Services</a></li>
-            <li><a href="services/nominee-and-fiduciary-services/">Physical Office Rental Services</a></li>
+            <li><a href="services/nominee-and-fiduciary-services/index.html">Directorship &amp; Management Services</a></li>
+            <li><a href="services/nominee-and-fiduciary-services/index.html">Corporate Secretarial Services</a></li>
+            <li><a href="services/nominee-and-fiduciary-services/index.html">Registered Address Services</a></li>
+            <li><a href="services/nominee-and-fiduciary-services/index.html">Virtual Office Services</a></li>
+            <li><a href="services/nominee-and-fiduciary-services/index.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
         <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
-          <a href="services/migration-and-relocation-services/" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
+          <a href="services/migration-and-relocation-services/index.html" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
             <li class="has-flyout">
-              <a href="services/migration-and-relocation-services/" aria-haspopup="true" aria-expanded="false">
+              <a href="services/migration-and-relocation-services/index.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment permit routes">
-                <li><a href="services/migration-and-relocation-services/">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="services/migration-and-relocation-services/">General Employment</a></li>
-                <li><a href="services/migration-and-relocation-services/">EU Blue Card</a></li>
-                <li><a href="services/migration-and-relocation-services/">Digital Nomad Visa</a></li>
-                <li><a href="services/migration-and-relocation-services/">EU Citizen &amp; Family Members</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">General Employment</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">EU Blue Card</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">Digital Nomad Visa</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
             <li class="has-flyout">
-              <a href="services/migration-and-relocation-services/" aria-haspopup="true" aria-expanded="false">
+              <a href="services/migration-and-relocation-services/index.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="services/migration-and-relocation-services/">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="services/migration-and-relocation-services/">Categories A–F</a></li>
-                <li><a href="services/migration-and-relocation-services/">Cyprus Start-Up Visa</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">Categories A–F</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
             <li class="has-flyout">
-              <a href="services/migration-and-relocation-services/" aria-haspopup="true" aria-expanded="false">
+              <a href="services/migration-and-relocation-services/index.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="services/migration-and-relocation-services/">Visitors Permit</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">Visitors Permit</a></li>
               </ul>
             </li>
             <li class="has-flyout">
-              <a href="services/migration-and-relocation-services/" aria-haspopup="true" aria-expanded="false">
+              <a href="services/migration-and-relocation-services/index.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="services/migration-and-relocation-services/">Naturalisation — Years of Residence</a></li>
-                <li><a href="services/migration-and-relocation-services/">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="services/migration-and-relocation-services/index.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -139,33 +104,33 @@
 
         <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
-          <a href="services/tax-and-vat-administration/" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
+          <a href="services/tax-and-vat-administration/index.html" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="services/tax-and-vat-administration/">TIC / TIN Registration Services</a></li>
-            <li><a href="services/tax-and-vat-administration/">VAT Registration Services</a></li>
-            <li><a href="services/tax-and-vat-administration/">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a href="services/tax-and-vat-administration/index.html">TIC / TIN Registration Services</a></li>
+            <li><a href="services/tax-and-vat-administration/index.html">VAT Registration Services</a></li>
+            <li><a href="services/tax-and-vat-administration/index.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
         <!-- Corporate Consultancy -->
         <li class="has-dropdown">
-          <a href="services/corporate-consultancy/" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
+          <a href="services/corporate-consultancy/index.html" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="services/corporate-consultancy/">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="services/corporate-consultancy/">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="services/corporate-consultancy/">Project Management Services</a></li>
+            <li><a href="services/corporate-consultancy/index.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="services/corporate-consultancy/index.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="services/corporate-consultancy/index.html">Project Management Services</a></li>
           </ul>
         </li>
 
         <!-- Compliance Services -->
         <li class="has-dropdown">
-          <a href="services/compliance-services/" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
+          <a href="services/compliance-services/index.html" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="services/compliance-services/">Client Onboarding Assistance Services</a></li>
-            <li><a href="services/compliance-services/">Client Screening Services</a></li>
-            <li><a href="services/compliance-services/">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="services/compliance-services/">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="services/compliance-services/">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="services/compliance-services/index.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="services/compliance-services/index.html">Client Screening Services</a></li>
+            <li><a href="services/compliance-services/index.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="services/compliance-services/index.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="services/compliance-services/index.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
@@ -175,7 +140,7 @@
 
         <!-- CTA: Start Now -->
         <li class="nav-cta">
-          <a href="start/" class="btn-primary">Start Now</a>
+          <a href="start/index.html" class="btn-primary">Start Now</a>
         </li>
       </ul>
     </nav>
@@ -186,7 +151,6 @@
 <section class="hero fade-up" data-anim-delay="0.1" aria-label="Hero slideshow">
   <div class="hero-fader" aria-hidden="true"></div>
   <div class="hero-overlay"></div>
-
   <div class="container">
     <h1>
       <span class="hero-heading-main">Strategic Corporate Solutions</span>
@@ -196,13 +160,11 @@
     <p>Multilingual in-house advisors for company establishment, compliance, banking and financial consulting.</p>
     <a class="btn-primary" href="#contact-cta">Get in Touch</a>
   </div>
-
-  <!-- Manual controls -->
   <button class="hero-nav prev" aria-label="Previous slide">‹</button>
   <button class="hero-nav next" aria-label="Next slide">›</button>
 </section>
 
-<!-- TRUST LOGOS – new above-the-fold row -->
+<!-- TRUST LOGOS -->
 <section id="trust-logos-top" class="fade-up" data-anim-delay="0.15">
   <div class="container trust-logos-row">
     <img src="assets/logo-boc.png" alt="Bank of Cyprus" loading="lazy">
@@ -228,44 +190,28 @@
     <div class="stats-grid">
       <div class="stat">
         <div class="stat-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 0 0-3-3.87"></path>
-            <path d="M7 21v-2a4 4 0 0 1 3-3.87"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-            <path d="M17 7a4 4 0 1 1 0 8"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-3-3.87"></path><path d="M7 21v-2a4 4 0 0 1 3-3.87"></path><circle cx="12" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M17 7a4 4 0 1 1 0 8"></path></svg>
         </div>
         <div id="clients" class="stat-number">0</div>
         <div class="stat-label">Happy Clients</div>
       </div>
       <div class="stat">
         <div class="stat-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-            <path d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5"></path>
-            <path d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5"></path><path d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3"></path></svg>
         </div>
         <div id="assets" class="stat-number">0</div>
         <div class="stat-label">Assets Under Administration</div>
       </div>
       <div class="stat">
         <div class="stat-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
         </div>
         <div id="projects" class="stat-number">0</div>
         <div class="stat-label">Corporate Structures Delivered</div>
       </div>
       <div class="stat">
         <div class="stat-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
         </div>
         <div id="companies" class="stat-number">0</div>
         <div class="stat-label">Companies Incorporated</div>
@@ -279,83 +225,74 @@
   <div class="container">
     <h2>Our Services</h2>
 
-    <!-- Row 1: Four cards -->
     <div class="services-grid">
-      <!-- Corporate Services -->
       <div class="service-card hover-card">
-        <h3><a href="services/corporate-services/">Corporate Services</a></h3>
+        <h3><a href="services/corporate-services/index.html">Corporate Services</a></h3>
         <ul>
-          <li><a href="services/corporate-services/">Company Formation Services</a></li>
-          <li><a href="services/corporate-services/">Company Structuring &amp; Re-Structuring Services</a></li>
-          <li><a href="services/corporate-services/">Administrative Services</a></li>
-          <li><a href="services/corporate-services/">Banking Administration Services</a></li>
-          <li><a href="services/corporate-services/">Escrow Assistance Services</a></li>
+          <li><a href="services/corporate-services/index.html">Company Formation Services</a></li>
+          <li><a href="services/corporate-services/index.html">Company Structuring &amp; Re-Structuring Services</a></li>
+          <li><a href="services/corporate-services/index.html">Administrative Services</a></li>
+          <li><a href="services/corporate-services/index.html">Banking Administration Services</a></li>
+          <li><a href="services/corporate-services/index.html">Escrow Assistance Services</a></li>
         </ul>
       </div>
 
-      <!-- Nominee & Fiduciary Services -->
       <div class="service-card hover-card">
-        <h3><a href="services/nominee-and-fiduciary-services/">Nominee &amp; Fiduciary Services</a></h3>
+        <h3><a href="services/nominee-and-fiduciary-services/index.html">Nominee &amp; Fiduciary Services</a></h3>
         <ul>
-          <li><a href="services/nominee-and-fiduciary-services/">Directorship &amp; Management Services</a></li>
-          <li><a href="services/nominee-and-fiduciary-services/">Corporate Secretarial Services</a></li>
-          <li><a href="services/nominee-and-fiduciary-services/">Registered Address Services</a></li>
-          <li><a href="services/nominee-and-fiduciary-services/">Virtual Office Services</a></li>
-          <li><a href="services/nominee-and-fiduciary-services/">Physical Office Rental Services</a></li>
+          <li><a href="services/nominee-and-fiduciary-services/index.html">Directorship &amp; Management Services</a></li>
+          <li><a href="services/nominee-and-fiduciary-services/index.html">Corporate Secretarial Services</a></li>
+          <li><a href="services/nominee-and-fiduciary-services/index.html">Registered Address Services</a></li>
+          <li><a href="services/nominee-and-fiduciary-services/index.html">Virtual Office Services</a></li>
+          <li><a href="services/nominee-and-fiduciary-services/index.html">Physical Office Rental Services</a></li>
         </ul>
       </div>
 
-      <!-- Migration & Relocation Services -->
       <div class="service-card hover-card">
-        <h3><a href="services/migration-and-relocation-services/">Migration &amp; Relocation Services</a></h3>
+        <h3><a href="services/migration-and-relocation-services/index.html">Migration &amp; Relocation Services</a></h3>
         <ul>
-          <li><a href="services/migration-and-relocation-services/">Residency by Employment Permit Services</a></li>
-          <li><a href="services/migration-and-relocation-services/">Residency by Investment Permit Services</a></li>
-          <li><a href="services/migration-and-relocation-services/">Visitor Residency Permit Services</a></li>
-          <li><a href="services/migration-and-relocation-services/">Naturalisation &amp; Citizenship Services</a></li>
+          <li><a href="services/migration-and-relocation-services/index.html">Residency by Employment Permit Services</a></li>
+          <li><a href="services/migration-and-relocation-services/index.html">Residency by Investment Permit Services</a></li>
+          <li><a href="services/migration-and-relocation-services/index.html">Visitor Residency Permit Services</a></li>
+          <li><a href="services/migration-and-relocation-services/index.html">Naturalisation &amp; Citizenship Services</a></li>
         </ul>
       </div>
 
-      <!-- Tax & VAT Administration -->
       <div class="service-card hover-card">
-        <h3><a href="services/tax-and-vat-administration/">Tax &amp; VAT Administration</a></h3>
+        <h3><a href="services/tax-and-vat-administration/index.html">Tax &amp; VAT Administration</a></h3>
         <ul>
-          <li><a href="services/tax-and-vat-administration/">TIC / TIN Registration Services</a></li>
-          <li><a href="services/tax-and-vat-administration/">VAT Registration Services</a></li>
-          <li><a href="services/tax-and-vat-administration/">Tax &amp; VAT Filing / Submission Services</a></li>
+          <li><a href="services/tax-and-vat-administration/index.html">TIC / TIN Registration Services</a></li>
+          <li><a href="services/tax-and-vat-administration/index.html">VAT Registration Services</a></li>
+          <li><a href="services/tax-and-vat-administration/index.html">Tax &amp; VAT Filing / Submission Services</a></li>
         </ul>
       </div>
     </div>
 
-    <!-- Row 2: Two centered cards -->
     <div class="centered-row">
-      <!-- Corporate Consultancy -->
       <div class="service-card hover-card">
-        <h3><a href="services/corporate-consultancy/">Corporate Consultancy</a></h3>
+        <h3><a href="services/corporate-consultancy/index.html">Corporate Consultancy</a></h3>
         <ul>
-          <li><a href="services/corporate-consultancy/">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-          <li><a href="services/corporate-consultancy/">Business Synergy Development &amp; Integration Services</a></li>
-          <li><a href="services/corporate-consultancy/">Project Management Services</a></li>
+          <li><a href="services/corporate-consultancy/index.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+          <li><a href="services/corporate-consultancy/index.html">Business Synergy Development &amp; Integration Services</a></li>
+          <li><a href="services/corporate-consultancy/index.html">Project Management Services</a></li>
         </ul>
       </div>
 
-      <!-- Compliance Services -->
       <div class="service-card hover-card">
-        <h3><a href="services/compliance-services/">Compliance Services</a></h3>
+        <h3><a href="services/compliance-services/index.html">Compliance Services</a></h3>
         <ul>
-          <li><a href="services/compliance-services/">Client Onboarding Assistance Services</a></li>
-          <li><a href="services/compliance-services/">Client Screening Services</a></li>
-          <li><a href="services/compliance-services/">Know Your Client (KYC) Procedures</a></li>
-          <li><a href="services/compliance-services/">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-          <li><a href="services/compliance-services/">Sanctions Manuals &amp; Compliance Guides</a></li>
+          <li><a href="services/compliance-services/index.html">Client Onboarding Assistance Services</a></li>
+          <li><a href="services/compliance-services/index.html">Client Screening Services</a></li>
+          <li><a href="services/compliance-services/index.html">Know Your Client (KYC) Procedures</a></li>
+          <li><a href="services/compliance-services/index.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+          <li><a href="services/compliance-services/index.html">Sanctions Manuals &amp; Compliance Guides</a></li>
         </ul>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- TRUST SECTION -->
+<!-- TRUST -->
 <section id="trust" class="fade-up" data-anim-delay="0.5">
   <div class="container">
     <h2>Trusted by Industry Leaders</h2>
@@ -401,9 +338,7 @@
 <section id="contact-cta" class="fade-up" data-anim-delay="0.7">
   <div class="container">
     <h2>Start Your Cyprus Business Journey</h2>
-    <p class="contact-intro">
-      Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.
-    </p>
+    <p class="contact-intro">Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.</p>
     <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Contact Us Now</a>
   </div>
 </section>
@@ -418,19 +353,18 @@
     </div>
     <div class="footer-nav">
       <a href="about.html">About</a>
-      <a href="services/corporate-services/">Corporate Services</a>
-      <a href="services/nominee-and-fiduciary-services/">Nominee &amp; Fiduciary</a>
-      <a href="services/migration-and-relocation-services/">Migration &amp; Relocation</a>
-      <a href="services/tax-and-vat-administration/">Tax &amp; VAT</a>
-      <a href="services/corporate-consultancy/">Consultancy</a>
-      <a href="services/compliance-services/">Compliance</a>
-      <a href="start/">Start Now</a>
+      <a href="services/corporate-services/index.html">Corporate Services</a>
+      <a href="services/nominee-and-fiduciary-services/index.html">Nominee &amp; Fiduciary</a>
+      <a href="services/migration-and-relocation-services/index.html">Migration &amp; Relocation</a>
+      <a href="services/tax-and-vat-administration/index.html">Tax &amp; VAT</a>
+      <a href="services/corporate-consultancy/index.html">Consultancy</a>
+      <a href="services/compliance-services/index.html">Compliance</a>
+      <a href="start/index.html">Start Now</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- RELATIVE script include -->
 <script src="script.js?v=13"></script>
 </body>
 </html>
