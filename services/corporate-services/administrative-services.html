@@ -14,38 +14,32 @@
 
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{
-      padding:2.5rem 0 1.5rem;
-      text-align:center;
-    }
-    .page-hero h1{
-      margin:0 0 .75rem;
-    }
+    .page-hero .container{padding:2.5rem 0 1.5rem}
 
     .content-narrow{max-width:900px;margin:0 auto}
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
 
-    /* New helpers for this page */
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
+
     .process-steps{counter-reset: step;list-style:none;padding-left:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
     .table-wrap{overflow-x:auto}
     table.service{width:100%;border-collapse:collapse}
     table.service th,table.service td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th{background:#fafafa}
+
     .doc-list{list-style:none;padding-left:0}
     .doc-list li{padding:.35rem 0}
+
     .faq dt{font-weight:700;margin-top:1rem}
     .faq dd{margin:0 0 1rem 0}
 
-    /* Ensure CTA fine print is legible if banner uses a dark/red background */
-    #contact-cta{
-      text-align:center;
-    }
+    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
     #contact-cta .note{
       color:#fff;
       opacity:1;
@@ -210,161 +204,163 @@
   </div>
 </header>
 
-<section class="page-hero fade-up" data-anim-delay="0.1">
-  <div class="container">
-    <h1>Administrative Services</h1>
-    <p class="content-narrow">Day-to-day corporate administration so your Cyprus entity stays organised, compliant, bankable, and responsive to counterparties and authorities.</p>
-  </div>
-</section>
-
-<section class="container fade-up" data-anim-delay="0.15" id="scope">
-  <div class="content-narrow">
-    <h2>Scope</h2>
-    <ul class="feature-list">
-      <li>Corporate record-keeping &amp; minute books (digital + physical, where required)</li>
-      <li>Board &amp; shareholder resolutions, PoAs, incumbency &amp; good-standing docs</li>
-      <li>Registrar updates (officers, UBO/BoR, share capital), annual returns &amp; renewals</li>
-      <li>Liaison with banks/EMIs, auditors, notaries, and authorities (Tax/VAT/Registrar)</li>
-      <li>Certifications, apostilles, legalised translations, couriering and document routing</li>
-      <li>Register management: directors, shareholders, charges, significant controllers</li>
-      <li>KYC refresh cycles, policy implementation, and light compliance housekeeping</li>
-    </ul>
-
-    <div class="keyline"></div>
-
-    <h2>Service Levels &amp; Frequency</h2>
-    <div class="table-wrap">
-      <table class="service">
-        <thead>
-          <tr>
-            <th>Activity</th>
-            <th>Typical Frequency</th>
-            <th>Target Response</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Routine corporate certificates / extracts</td>
-            <td>As requested</td>
-            <td>1–3 business days</td>
-            <td>Dependent on registrar queues and courier selection</td>
-          </tr>
-          <tr>
-            <td>Board / shareholder resolution drafting</td>
-            <td>Ad hoc</td>
-            <td>1–2 business days</td>
-            <td>Same-day available for straightforward templates</td>
-          </tr>
-          <tr>
-            <td>Registrar change filings</td>
-            <td>Ad hoc</td>
-            <td>2–5 business days</td>
-            <td>Processing time varies by change type and workload</td>
-          </tr>
-          <tr>
-            <td>KYC refresh / information requests</td>
-            <td>Quarterly / Annual</td>
-            <td>Same–2 business days</td>
-            <td>Aligned to bank/auditor cycles to avoid repetition</td>
-          </tr>
-          <tr>
-            <td>Authority liaison (Tax/VAT/Registrar)</td>
-            <td>Ad hoc</td>
-            <td>Same–2 business days</td>
-            <td>We provide status notes until matter is closed</td>
-          </tr>
-        </tbody>
-      </table>
+<main>
+  <section class="page-hero fade-up" data-anim-delay="0.1">
+    <div class="container">
+      <h1>Administrative Services</h1>
+      <p class="content-narrow">Day-to-day corporate administration so your Cyprus entity stays organised, compliant, bankable, and responsive to counterparties and authorities.</p>
     </div>
-    <p class="note">Targets reflect typical handling; statutory or third-party turnaround can affect completion time.</p>
-  </div>
-</section>
+  </section>
 
-<section class="container fade-up" data-anim-delay="0.2" id="handover">
-  <div class="content-narrow">
-    <h2>Handover &amp; Onboarding</h2>
-    <ol class="process-steps">
-      <li><strong>Intake:</strong> short call to map entities, signatories, banks, auditors, and current issues.</li>
-      <li><strong>Data Room:</strong> we create a secure folder structure and import key corporate records.</li>
-      <li><strong>Access:</strong> read-only access to banking/auditor portals where applicable (or proxy via PDFs).</li>
-      <li><strong>Calendar:</strong> we build a filings/renewals calendar (annual return, UBO/BoR, VAT/TIC, licenses).</li>
-      <li><strong>Templates:</strong> resolution/PoA templates aligned to your decision rights and governance style.</li>
-      <li><strong>Go-Live:</strong> confirm points of contact; begin handling daily requests under agreed targets.</li>
-    </ol>
-  </div>
-</section>
+  <section class="container fade-up" data-anim-delay="0.15" id="scope">
+    <div class="content-narrow">
+      <h2>Scope</h2>
+      <ul class="feature-list">
+        <li>Corporate record-keeping &amp; minute books (digital + physical, where required)</li>
+        <li>Board &amp; shareholder resolutions, PoAs, incumbency &amp; good-standing docs</li>
+        <li>Registrar updates (officers, UBO/BoR, share capital), annual returns &amp; renewals</li>
+        <li>Liaison with banks/EMIs, auditors, notaries, and authorities (Tax/VAT/Registrar)</li>
+        <li>Certifications, apostilles, legalised translations, couriering and document routing</li>
+        <li>Register management: directors, shareholders, charges, significant controllers</li>
+        <li>KYC refresh cycles, policy implementation, and light compliance housekeeping</li>
+      </ul>
 
-<section class="container fade-up" data-anim-delay="0.25" id="deliverables">
-  <div class="content-narrow">
-    <h2>Deliverables</h2>
-    <ul class="feature-list">
-      <li>Up-to-date corporate registers and minute books (verifiable trail)</li>
-      <li>Resolution and PoA template pack customised to your structure</li>
-      <li>Annual filings &amp; renewals calendar with reminders</li>
-      <li>Authority correspondences archived and indexed</li>
-      <li>Banking dossier folder (KYC basics, activity narrative, signatory map)</li>
-      <li>Quarterly status note (open items, risks, upcoming renewals)</li>
-    </ul>
-  </div>
-</section>
+      <div class="keyline"></div>
 
-<section class="container fade-up" data-anim-delay="0.3" id="coverage">
-  <div class="content-narrow">
-    <h2>Authorities &amp; Systems We Handle</h2>
-    <ul class="feature-list">
-      <li>Registrar of Companies (officer changes, annual return, BoR/UBO submissions)</li>
-      <li>Tax Department (TIC/TIN changes, basic communications)</li>
-      <li>VAT Service (registrations/updates coordination with your tax advisor)</li>
-      <li>Banks/EMIs (KYC refresh, signatory updates, reference letters, basic onboarding support)</li>
-      <li>Auditors &amp; accountants (requests, confirmations, document packs)</li>
-      <li>Notaries / Ministry of Justice / MFA for apostilles and legalisations</li>
-      <li>Certified translations and couriering (tracked, with delivery proofs)</li>
-    </ul>
-  </div>
-</section>
+      <h2>Service Levels &amp; Frequency</h2>
+      <div class="table-wrap">
+        <table class="service">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Routine corporate certificates / extracts</td>
+              <td>As requested</td>
+              <td>1–3 business days</td>
+              <td>Dependent on registrar queues and courier selection</td>
+            </tr>
+            <tr>
+              <td>Board / shareholder resolution drafting</td>
+              <td>Ad hoc</td>
+              <td>1–2 business days</td>
+              <td>Same-day available for straightforward templates</td>
+            </tr>
+            <tr>
+              <td>Registrar change filings</td>
+              <td>Ad hoc</td>
+              <td>2–5 business days</td>
+              <td>Processing time varies by change type and workload</td>
+            </tr>
+            <tr>
+              <td>KYC refresh / information requests</td>
+              <td>Quarterly / Annual</td>
+              <td>Same–2 business days</td>
+              <td>Aligned to bank/auditor cycles to avoid repetition</td>
+            </tr>
+            <tr>
+              <td>Authority liaison (Tax/VAT/Registrar)</td>
+              <td>Ad hoc</td>
+              <td>Same–2 business days</td>
+              <td>We provide status notes until matter is closed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Targets reflect typical handling; statutory or third-party turnaround can affect completion time.</p>
+    </div>
+  </section>
 
-<section class="container fade-up" data-anim-delay="0.35" id="checklist">
-  <div class="content-narrow">
-    <h2>Documents Checklist (Onboarding)</h2>
-    <ul class="doc-list">
-      <li>Certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
-      <li>Memorandum &amp; Articles, current registers, minute book snapshots</li>
-      <li>IDs/PoAs for directors and UBOs; proof of address</li>
-      <li>Latest annual return and any recent registrar filings</li>
-      <li>Auditor details, bank details, and recent KYC requests (if any)</li>
-    </ul>
-  </div>
-</section>
+  <section class="container fade-up" data-anim-delay="0.2" id="handover">
+    <div class="content-narrow">
+      <h2>Handover &amp; Onboarding</h2>
+      <ol class="process-steps">
+        <li><strong>Intake:</strong> short call to map entities, signatories, banks, auditors, and current issues.</li>
+        <li><strong>Data Room:</strong> we create a secure folder structure and import key corporate records.</li>
+        <li><strong>Access:</strong> read-only access to banking/auditor portals where applicable (or proxy via PDFs).</li>
+        <li><strong>Calendar:</strong> we build a filings/renewals calendar (annual return, UBO/BoR, VAT/TIC, licenses).</li>
+        <li><strong>Templates:</strong> resolution/PoA templates aligned to your decision rights and governance style.</li>
+        <li><strong>Go-Live:</strong> confirm points of contact; begin handling daily requests under agreed targets.</li>
+      </ol>
+    </div>
+  </section>
 
-<section class="container fade-up" data-anim-delay="0.4" id="faq">
-  <div class="content-narrow">
-    <h2>FAQ</h2>
-    <dl class="faq">
-      <dt>Can you work alongside our existing accountants and auditors?</dt>
-      <dd>Yes. We coordinate documents and requests so your advisors receive what they need on time.</dd>
+  <section class="container fade-up" data-anim-delay="0.25" id="deliverables">
+    <div class="content-narrow">
+      <h2>Deliverables</h2>
+      <ul class="feature-list">
+        <li>Up-to-date corporate registers and minute books (verifiable trail)</li>
+        <li>Resolution and PoA template pack customised to your structure</li>
+        <li>Annual filings &amp; renewals calendar with reminders</li>
+        <li>Authority correspondences archived and indexed</li>
+        <li>Banking dossier folder (KYC basics, activity narrative, signatory map)</li>
+        <li>Quarterly status note (open items, risks, upcoming renewals)</li>
+      </ul>
+    </div>
+  </section>
 
-      <dt>Do you provide certified copies and apostilles?</dt>
-      <dd>Yes. We arrange certifications and apostilles/legalisations and manage couriering end-to-end.</dd>
+  <section class="container fade-up" data-anim-delay="0.3" id="coverage">
+    <div class="content-narrow">
+      <h2>Authorities &amp; Systems We Handle</h2>
+      <ul class="feature-list">
+        <li>Registrar of Companies (officer changes, annual return, BoR/UBO submissions)</li>
+        <li>Tax Department (TIC/TIN changes, basic communications)</li>
+        <li>VAT Service (registrations/updates coordination with your tax advisor)</li>
+        <li>Banks/EMIs (KYC refresh, signatory updates, reference letters, basic onboarding support)</li>
+        <li>Auditors &amp; accountants (requests, confirmations, document packs)</li>
+        <li>Notaries / Ministry of Justice / MFA for apostilles and legalisations</li>
+        <li>Certified translations and couriering (tracked, with delivery proofs)</li>
+      </ul>
+    </div>
+  </section>
 
-      <dt>What if our records are incomplete?</dt>
-      <dd>We can reconstruct minute books and registers from registrar records and historical documents.</dd>
+  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
+    <div class="content-narrow">
+      <h2>Documents Checklist (Onboarding)</h2>
+      <ul class="doc-list">
+        <li>Certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
+        <li>Memorandum &amp; Articles, current registers, minute book snapshots</li>
+        <li>IDs/PoAs for directors and UBOs; proof of address</li>
+        <li>Latest annual return and any recent registrar filings</li>
+        <li>Auditor details, bank details, and recent KYC requests (if any)</li>
+      </ul>
+    </div>
+  </section>
 
-      <dt>Can you manage multiple Cyprus entities?</dt>
-      <dd>Yes. We maintain separate calendars and registers, and provide consolidated status updates.</dd>
-    </dl>
-    <p class="note">Have an unusual requirement? Include a short background when you contact us—we’ll factor it into onboarding.</p>
-  </div>
-</section>
+  <section class="container fade-up" data-anim-delay="0.4" id="faq">
+    <div class="content-narrow">
+      <h2>FAQ</h2>
+      <dl class="faq">
+        <dt>Can you work alongside our existing accountants and auditors?</dt>
+        <dd>Yes. We coordinate documents and requests so your advisors receive what they need on time.</dd>
 
-<section id="contact-cta" class="fade-up" data-anim-delay="0.45">
-  <div class="container">
-    <h2>Outsource Your Admin</h2>
-    <p class="contact-intro">We can take over immediately with a simple handover checklist.</p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Get an Admin Quote</a>
-    <p class="note">Prefer a quick kickoff? Email the certificate set + current issues, and we’ll reply with an intake slot.</p>
-  </div>
-</section>
+        <dt>Do you provide certified copies and apostilles?</dt>
+        <dd>Yes. We arrange certifications and apostilles/legalisations and manage couriering end-to-end.</dd>
+
+        <dt>What if our records are incomplete?</dt>
+        <dd>We can reconstruct minute books and registers from registrar records and historical documents.</dd>
+
+        <dt>Can you manage multiple Cyprus entities?</dt>
+        <dd>Yes. We maintain separate calendars and registers, and provide consolidated status updates.</dd>
+      </dl>
+      <p class="note">Have an unusual requirement? Include a short background when you contact us—we’ll factor it into onboarding.</p>
+    </div>
+  </section>
+
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.45">
+    <div class="container">
+      <h2>Outsource Your Admin</h2>
+      <p class="contact-intro">We can take over immediately with a simple handover checklist.</p>
+      <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Get an Admin Quote</a>
+      <p class="note">Prefer a quick kickoff? Email the certificate set + current issues, and we’ll reply with an intake slot.</p>
+    </div>
+  </section>
+</main>
 
 <footer id="site-footer">
   <div class="container footer-flex">
