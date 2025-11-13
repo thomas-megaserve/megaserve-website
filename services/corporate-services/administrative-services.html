@@ -7,13 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=13" />
+  <!-- Global styles (keep consistent across site) -->
+  <link rel="stylesheet" href="style.css?v=14" />
 
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem}
-    /* Center only the page title */
-    .page-hero h1{text-align:center}
+    .page-hero .container{
+      padding:2.5rem 0 1.5rem;
+      text-align:center;
+    }
+    .page-hero h1{
+      margin:0 0 .75rem;
+    }
 
     .content-narrow{max-width:900px;margin:0 auto}
     .feature-list{list-style:none;padding-left:0}
@@ -36,16 +41,50 @@
     .faq dd{margin:0 0 1rem 0}
 
     /* Ensure CTA fine print is legible if banner uses a dark/red background */
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta{
+      text-align:center;
+    }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+    #contact-cta .container{
+      position:relative;
+      z-index:1;
+      padding-bottom:2rem;
+    }
 
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    .submenu-caret{margin-left:.35rem}
+
+    /* Header nav CTA */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{
+      background:#9e0f1a;
+    }
   </style>
 </head>
 <body>
 <header id="site-header">
   <div class="container header-flex">
-    <a href="index.html" class="logo-link" aria-label="MegaServe Home"><img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo" /></a>
+    <a href="index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
+    </a>
     <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
@@ -156,9 +195,10 @@
           </ul>
         </li>
 
-        <!-- Simple pages -->
+        <!-- Simple pages + header CTA -->
         <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="start/index.html">Start Now</a></li>
       </ul>
     </nav>
   </div>
@@ -378,6 +418,6 @@
 }
 </script>
 
-<script src="script.js?v=13"></script>
+<script src="script.js?v=14"></script>
 </body>
 </html>
