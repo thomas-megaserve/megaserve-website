@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <title>Administrative Services – MegaServe Cyprus</title>
-  <meta name="description" content="Day-to-day Cyprus corporate administration done cleanly: records, resolutions, filings, renewals, banking and authority liaison, certifications, apostilles, and an ongoing compliance schedule." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Day-to-day Cyprus corporate administration done cleanly: records, resolutions, filings, renewals, banking and authority liaison, certifications, apostilles, and an ongoing compliance schedule.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Global styles (keep consistent across site) -->
-  <link rel="stylesheet" href="style.css?v=14" />
+  <!-- Global styles (keep filename and path EXACTLY matching your actual CSS) -->
+  <link rel="stylesheet" href="style.css">
 
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
@@ -24,7 +24,7 @@
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
 
-    .process-steps{counter-reset: step;list-style:none;padding-left:0}
+    .process-steps{counter-reset:step;list-style:none;padding-left:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
 
@@ -39,7 +39,7 @@
     .faq dt{font-weight:700;margin-top:1rem}
     .faq dd{margin:0 0 1rem 0}
 
-    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
+    /* CTA band helpers */
     #contact-cta .note{
       color:#fff;
       opacity:1;
@@ -53,8 +53,15 @@
       padding-bottom:2rem;
     }
 
-    .fade-up{opacity:0; transform: translateY(14px);}
-    .fade-up.visible{opacity:1; transform: translateY(0);}
+    /* Keep fade-up harmless even if JS fails */
+    .fade-up{
+      opacity:1;
+      transform:none;
+    }
+    .fade-up.visible{
+      opacity:1;
+      transform:none;
+    }
 
     .submenu-caret{margin-left:.35rem}
 
@@ -79,7 +86,7 @@
 <header id="site-header">
   <div class="container header-flex">
     <a href="index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
+      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
     <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
     <nav id="main-nav" aria-label="Primary">
@@ -114,7 +121,7 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub with flyout -->
+            <!-- Employment hub -->
             <li class="has-flyout">
               <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -128,7 +135,7 @@
               </ul>
             </li>
 
-            <!-- Investment hub with flyout -->
+            <!-- Investment hub -->
             <li class="has-flyout">
               <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -140,7 +147,7 @@
               </ul>
             </li>
 
-            <!-- Visitor hub with flyout -->
+            <!-- Visitor hub -->
             <li class="has-flyout">
               <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -150,7 +157,7 @@
               </ul>
             </li>
 
-            <!-- Citizenship hub with flyout -->
+            <!-- Citizenship hub -->
             <li class="has-flyout">
               <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -420,6 +427,6 @@
 }
 </script>
 
-<script src="script.js?v=14"></script>
+<script src="script.js"></script>
 </body>
 </html>
