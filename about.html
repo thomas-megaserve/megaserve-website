@@ -9,32 +9,86 @@
   <!-- Google Fonts (Inter + Merriweather) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=12">
+  <!-- Global styles (ROOT: /style.css) -->
+  <link rel="stylesheet" href="style.css?v=14">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
 
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero{
+      background:#fafafa;
+      border-bottom:2px solid var(--color-gold);
+    }
+    .page-hero .container{
+      padding:2.5rem 0 1.5rem;
+      text-align:center;
+    }
+    .page-hero h1{
+      margin:0 0 .75rem;
+    }
+
     .content-narrow{max-width:900px;margin:0 auto}
+
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
     .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
+
     .table-wrap{overflow-x:auto}
     table.service, table.matrix{width:100%;border-collapse:collapse}
-    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.service td, table.matrix th, table.matrix td{
+      border:1px solid #e5e5e5;
+      padding:.6rem;
+      text-align:left;
+      vertical-align:top;
+    }
     table.service th, table.matrix th{background:#fafafa}
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
-    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+
+    /* Keep CTA fine print readable and centered */
+    #contact-cta{
+      text-align:center;
+    }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+    #contact-cta .container{
+      position:relative;
+      z-index:1;
+      padding-bottom:2rem;
+    }
+
     .faq dt{font-weight:700;margin-top:1rem}
     .faq dd{margin:0 0 1rem 0}
+
     .fade-up{opacity:0;transform:translateY(14px)}
     .fade-up.visible{opacity:1;transform:translateY(0)}
+
     .submenu-caret{margin-left:.35rem}
+
+    /* High-contrast Start Now button in header nav */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{
+      background:#9e0f1a;
+    }
   </style>
 </head>
 <body>
@@ -157,9 +211,10 @@
           </ul>
         </li>
 
-        <!-- About placed to the left of Contact -->
+        <!-- About + Contact + Start Now CTA -->
         <li><a href="about.html" aria-current="page">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="start/index.html">Start Now</a></li>
       </ul>
     </nav>
   </div>
@@ -427,7 +482,7 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-<script src="script.js?v=12"></script>
+<script src="script.js?v=14"></script>
 
 </body>
 </html>
