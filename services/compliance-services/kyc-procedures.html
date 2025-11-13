@@ -9,11 +9,11 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Global styles (same folder as index.html) -->
-  <link rel="stylesheet" href="style.css?v=13">
+  <!-- Global styles (ROOT: /megaserve-website/style.css) -->
+  <link rel="stylesheet" href="../../style.css?v=14">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
 
-  <!-- Page-local helpers (kept consistent with other pages) -->
+  <!-- Page-local helpers (kept consistent with other fixed pages) -->
   <style>
     .page-hero{
       background:#fafafa;
@@ -50,9 +50,21 @@
     table.service th, table.matrix th{background:#fafafa}
 
     /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
-    #contact-cta{ text-align:center; }
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
-    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+    #contact-cta{
+      text-align:center;
+    }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+    #contact-cta .container{
+      position:relative;
+      z-index:1;
+      padding-bottom:2rem;
+    }
 
     .faq dt{font-weight:700;margin-top:1rem}
     .faq dd{margin:0 0 1rem 0}
@@ -63,8 +75,8 @@
     /* caret used in flyout submenus to match other pages */
     .submenu-caret{margin-left:.35rem}
 
-    /* High-contrast Start Now button in header nav (same as other fixed pages) */
-    #main-nav .nav-cta a.btn-primary {
+    /* High-contrast Start Now button in header nav */
+    #main-nav .nav-cta a.btn-primary{
       background:#c1121f;
       color:#fff !important;
       border:none;
@@ -86,7 +98,7 @@
 <header id="site-header">
   <div class="container header-flex">
     <a href="index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+      <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
     <!-- Hamburger Button for Mobile -->
     <button id="nav-toggle" aria-label="Open Menu">
@@ -564,7 +576,7 @@
 }
 </script>
 
-<!-- Global nav / dropdown JS (same folder as index.html) -->
-<script src="script.js?v=13"></script>
+<!-- Global nav / dropdown JS (ROOT: /megaserve-website/script.js) -->
+<script src="../../script.js?v=14"></script>
 </body>
 </html>
