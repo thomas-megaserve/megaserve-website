@@ -9,13 +9,28 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=12">
+  <!-- Global styles (same folder as index.html) -->
+  <link rel="stylesheet" href="style.css?v=13">
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
 
   <!-- Page-local helpers (kept consistent with other pages) -->
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero{
+      background:#fafafa;
+      border-bottom:2px solid var(--color-gold);
+    }
+    .page-hero .container{
+      padding:2.5rem 0 1.5rem;
+      text-align:center; /* center heading + intro text */
+    }
+    .page-hero h1{
+      margin:0 0 .75rem;
+    }
+    .page-hero .content-narrow{
+      margin-left:auto;
+      margin-right:auto;
+    }
+
     .content-narrow{max-width:900px;margin:0 auto}
 
     .feature-list{list-style:none;padding-left:0}
@@ -35,6 +50,7 @@
     table.service th, table.matrix th{background:#fafafa}
 
     /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
+    #contact-cta{ text-align:center; }
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
     #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
 
@@ -46,6 +62,22 @@
 
     /* caret used in flyout submenus to match other pages */
     .submenu-caret{margin-left:.35rem}
+
+    /* High-contrast Start Now button in header nav (same as other fixed pages) */
+    #main-nav .nav-cta a.btn-primary {
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{
+      background:#9e0f1a;
+    }
   </style>
 </head>
 <body>
@@ -170,9 +202,10 @@
           </ul>
         </li>
 
-        <!-- About placed to the left of Contact -->
+        <!-- About + Contact + Start Now CTA -->
         <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="start/index.html">Start Now</a></li>
       </ul>
     </nav>
   </div>
@@ -531,6 +564,7 @@
 }
 </script>
 
-<script src="script.js?v=12"></script>
+<!-- Global nav / dropdown JS (same folder as index.html) -->
+<script src="script.js?v=13"></script>
 </body>
 </html>
