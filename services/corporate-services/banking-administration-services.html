@@ -6,6 +6,7 @@
   <meta name="description" content="Cyprus & EU banking administration: bank/EMI selection, account opening, KYC/KYB dossiers, relationship management, payment rails, user access, reviews, and ongoing compliance scheduling." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
   <!-- Global styles (root-level) -->
   <link rel="stylesheet" href="../../style.css?v=14" />
@@ -37,6 +38,22 @@
 
     .submenu-caret{margin-left:.35rem}
 
+    /* HEADER: top-right Start Now button */
+    .header-cta{
+      margin-left:auto;
+      margin-right:1rem;
+      display:none;
+    }
+    @media (min-width:900px){
+      .header-cta{
+        display:block;
+      }
+    }
+    .btn-small{
+      padding:0.55rem 1rem;
+      font-size:0.9rem;
+    }
+
     /* Ensure CTA note is legible on red/dark banner and layout is consistent */
     #contact-cta{
       text-align:center;
@@ -64,6 +81,12 @@
     <a href="https://megaserve.netlify.app/index.html" class="logo-link" aria-label="MegaServe Home">
       <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
+
+    <!-- TOP-RIGHT START NOW BUTTON -->
+    <div class="header-cta">
+      <a href="https://megaserve.netlify.app/start/index.html" class="btn-primary btn-small">Start Now</a>
+    </div>
+
     <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
@@ -398,30 +421,7 @@
   <div class="container">
     <h2>Need Banking Support?</h2>
     <p class="contact-intro">We’ll shortlist suitable banks/EMIs and guide you through approval and activation.</p>
-
-    <div class="cta-row">
-      <a href="mailto:megaserve@megaserve.eu?subject=Banking%20Administration%20-%20Proposal%20Request"
-         class="btn-primary"
-         data-cta="proposal"
-         data-page="banking-admin">
-        Request Proposal
-      </a>
-
-      <a href="mailto:megaserve@megaserve.eu?subject=Banking%20Administration%20-%20Book%20a%20Call"
-         class="btn-secondary"
-         data-cta="book-call"
-         data-page="banking-admin">
-        Book a Call
-      </a>
-
-      <a href="mailto:megaserve@megaserve.eu?subject=Start%20Banking%20Setup"
-         class="btn-secondary"
-         data-cta="start-now"
-         data-page="banking-admin">
-        Start Now
-      </a>
-    </div>
-
+    <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Start Banking Setup</a>
     <p class="note">Prefer a quick kickoff? Email your certificate set + activity narrative draft; we’ll reply with an intake slot.</p>
   </div>
 </section>
