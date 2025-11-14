@@ -6,12 +6,15 @@
   <meta name="description" content="Cyprus & EU banking administration: bank/EMI selection, account opening, KYC/KYB dossiers, relationship management, payment rails, user access, reviews, and ongoing compliance scheduling." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
   <!-- Global styles (root-level) -->
   <link rel="stylesheet" href="../../style.css?v=14" />
 
   <style>
+    #site-header{
+      position:relative;
+    }
+
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
     /* Center the page title */
@@ -38,15 +41,16 @@
 
     .submenu-caret{margin-left:.35rem}
 
-    /* HEADER: top-right Start Now button */
-    .header-cta{
-      margin-left:auto;
-      margin-right:1rem;
+    /* HEADER: absolutely top-right Start Now button (desktop only) */
+    .header-start{
+      position:absolute;
+      top:0.75rem;
+      right:1rem;
       display:none;
     }
     @media (min-width:900px){
-      .header-cta{
-        display:block;
+      .header-start{
+        display:inline-block;
       }
     }
     .btn-small{
@@ -82,12 +86,8 @@
       <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
 
-    <!-- TOP-RIGHT START NOW BUTTON -->
-    <div class="header-cta">
-      <a href="https://megaserve.netlify.app/start/index.html" class="btn-primary btn-small">Start Now</a>
-    </div>
-
     <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
         <li><a href="https://megaserve.netlify.app/index.html">Home</a></li>
@@ -199,6 +199,9 @@
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- ABSOLUTE TOP-RIGHT START BUTTON -->
+    <a href="https://megaserve.netlify.app/start/index.html" class="btn-primary btn-small header-start">Start Now</a>
   </div>
 </header>
 
