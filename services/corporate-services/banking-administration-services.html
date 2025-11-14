@@ -11,10 +11,6 @@
   <link rel="stylesheet" href="../../style.css?v=14" />
 
   <style>
-    #site-header{
-      position:relative;
-    }
-
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
     /* Center the page title */
@@ -41,21 +37,23 @@
 
     .submenu-caret{margin-left:.35rem}
 
-    /* HEADER: absolutely top-right Start Now button (desktop only) */
-    .header-start{
-      position:absolute;
-      top:0.75rem;
-      right:1rem;
-      display:none;
+    /* High-contrast Start Now button in main nav (right of Contact) */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    @media (min-width:900px){
-      .header-start{
-        display:inline-block;
-      }
+    #main-nav .nav-cta a.btn-primary:hover{
+      background:#9e0f1a;
     }
-    .btn-small{
-      padding:0.55rem 1rem;
-      font-size:0.9rem;
+    #site-header .header-flex{
+      align-items:center;
     }
 
     /* Ensure CTA note is legible on red/dark banner and layout is consistent */
@@ -85,9 +83,7 @@
     <a href="https://megaserve.netlify.app/index.html" class="logo-link" aria-label="MegaServe Home">
       <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-
     <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
-
     <nav id="main-nav" aria-label="Primary">
       <ul>
         <li><a href="https://megaserve.netlify.app/index.html">Home</a></li>
@@ -197,11 +193,9 @@
         <!-- About before Contact -->
         <li><a href="https://megaserve.netlify.app/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="https://megaserve.netlify.app/start/">Start Now</a></li>
       </ul>
     </nav>
-
-    <!-- ABSOLUTE TOP-RIGHT START BUTTON -->
-    <a href="https://megaserve.netlify.app/start/index.html" class="btn-primary btn-small header-start">Start Now</a>
   </div>
 </header>
 
