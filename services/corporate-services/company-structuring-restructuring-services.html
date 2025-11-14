@@ -8,7 +8,8 @@
 
   <!-- Fonts + Site CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=13" />
+  <!-- Root-level stylesheet from subfolder -->
+  <link rel="stylesheet" href="../../style.css?v=14" />
 
   <!-- Page-scoped helpers (light, non-destructive) -->
   <style>
@@ -45,16 +46,24 @@
       display:block;
       margin-top:.75rem;
     }
+
+    /* Fallback fade-up animation if not defined globally */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    .submenu-caret{margin-left:.35rem}
   </style>
 </head>
 <body>
 <header id="site-header">
   <div class="container header-flex">
-    <a href="index.html" class="logo-link" aria-label="MegaServe Home"><img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo" /></a>
+    <a href="https://megaserve.netlify.app/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
+    </a>
     <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="https://megaserve.netlify.app/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
@@ -166,7 +175,7 @@
         </li>
 
         <!-- Simple pages -->
-        <li><a href="about.html">About</a></li>
+        <li><a href="https://megaserve.netlify.app/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
     </nav>
@@ -354,10 +363,9 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
-      <a href="index.html#services">Services</a>
-      <a href="about.html">About</a>
-      <a href="index.html#contact-cta">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://megaserve.netlify.app/index.html#services">Services</a>
+      <a href="https://megaserve.netlify.app/index.html#contact-cta">Contact</a>
+      <a href="https://megaserve.netlify.app/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
@@ -404,6 +412,6 @@
 }
 </script>
 
-<script src="script.js?v=13"></script>
+<script src="../../script.js?v=14"></script>
 </body>
 </html>
