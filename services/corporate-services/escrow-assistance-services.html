@@ -7,12 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=13" />
+  <!-- Global stylesheet is at the site root -->
+  <link rel="stylesheet" href="/style.css?v=13" />
 
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem}
-    .page-hero h1{text-align:center}
+    /* Align the page title consistently with other service pages */
+    .page-hero h1{ text-align:center; }
 
     .content-narrow{max-width:900px;margin:0 auto}
 
@@ -20,20 +22,21 @@
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
 
-    .process-steps{counter-reset:step;list-style:none;padding:0}
+    .process-steps{counter-reset: step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
 
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .table-wrap{overflow-x:auto}
-    table.matrix,table.service{width:100%;border-collapse:collapse}
+    table.matrix, table.service{width:100%;border-collapse:collapse}
     table.matrix th,table.matrix td,table.service th,table.service td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.matrix th,table.service th{background:#fafafa}
 
+    /* Keep note text legible on the red CTA strip */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
-    /* Start Now nav button – identical style to homepage */
-    #main-nav .nav-cta a.btn-primary{
+    /* High-contrast Start Now button in header nav (top-right) */
+    #main-nav .nav-cta a.btn-primary {
       background:#c1121f;
       color:#fff !important;
       border:none;
@@ -47,20 +50,18 @@
     #main-nav .nav-cta a.btn-primary:hover{
       background:#9e0f1a;
     }
-    #site-header .header-flex{
+    #site-header .header-flex {
       align-items:center;
     }
 
-    .fade-up{opacity:0;transform:translateY(14px);}
-    .fade-up.visible{opacity:1;transform:translateY(0);}
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
   </style>
 </head>
 <body>
 <header id="site-header">
   <div class="container header-flex">
-    <a href="index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
-    </a>
+    <a href="index.html" class="logo-link" aria-label="MegaServe Home"><img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo" /></a>
     <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
@@ -88,9 +89,11 @@
           </ul>
         </li>
 
+        <!-- Migration & Relocation Services with flyouts -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
+            <!-- Employment hub -->
             <li class="has-flyout">
               <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -103,6 +106,7 @@
                 <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
+            <!-- Investment hub -->
             <li class="has-flyout">
               <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -113,6 +117,7 @@
                 <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
+            <!-- Visitor hub -->
             <li class="has-flyout">
               <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -121,6 +126,7 @@
                 <li><a href="visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
+            <!-- Citizenship hub -->
             <li class="has-flyout">
               <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -151,6 +157,7 @@
           </ul>
         </li>
 
+        <!-- Compliance Services (site-wide) -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
@@ -162,9 +169,11 @@
           </ul>
         </li>
 
+        <!-- About before Contact -->
         <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="start/">Start Now</a></li>
+        <!-- CTA: Start Now button to /start/ page, right of Contact -->
+        <li class="nav-cta"><a href="start/" class="btn-primary">Start Now</a></li>
       </ul>
     </nav>
   </div>
@@ -173,9 +182,7 @@
 <section class="page-hero fade-up" data-anim-delay="0.1">
   <div class="container">
     <h1>Escrow Assistance Services</h1>
-    <p class="content-narrow">
-      Independent, neutral coordination of escrow accounts and releases for M&amp;A, project milestones, and high-value transactions—bankable processes, clear triggers, and complete audit trails.
-    </p>
+    <p class="content-narrow">Independent, neutral coordination of escrow accounts and releases for M&amp;A, project milestones, and high-value transactions—bankable processes, clear triggers, and complete audit trails.</p>
   </div>
 </section>
 
@@ -388,6 +395,7 @@
   </div>
 </footer>
 
+<!-- Optional: FAQ Schema for SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -429,6 +437,7 @@
 }
 </script>
 
-<script src="script.js?v=13"></script>
+<!-- Global script from site root -->
+<script src="/script.js?v=13"></script>
 </body>
 </html>
