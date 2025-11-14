@@ -52,6 +52,22 @@
     .fade-up.visible{opacity:1; transform: translateY(0);}
 
     .submenu-caret{margin-left:.35rem}
+
+    /* Header nav CTA */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{
+      background:#9e0f1a;
+    }
   </style>
 </head>
 <body>
@@ -174,9 +190,12 @@
           </ul>
         </li>
 
-        <!-- Simple pages -->
+        <!-- Simple pages + header CTA -->
         <li><a href="https://megaserve.netlify.app/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta">
+          <a class="btn-primary" href="https://megaserve.netlify.app/start/index.html">Start Now</a>
+        </li>
       </ul>
     </nav>
   </div>
