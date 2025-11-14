@@ -34,6 +34,25 @@
     /* Keep note text legible on the red CTA strip */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
+    /* High-contrast Start Now button in main nav (right of Contact) */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{
+      background:#9e0f1a;
+    }
+    #site-header .header-flex{
+      align-items:center;
+    }
+
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
   </style>
@@ -152,6 +171,7 @@
         <!-- About before Contact -->
         <li><a href="about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
