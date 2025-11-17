@@ -34,7 +34,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
   <meta name="theme-color" content="#a00000">
 
-  <link rel="stylesheet" href="style.css?v=13">
+  <!-- Global stylesheet (root-level) -->
+  <link rel="stylesheet" href="../../style.css?v=14">
 
   <!-- Page-scoped helpers -->
   <style>
@@ -65,15 +66,31 @@
     /* CTA fine print legible on dark strip */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
-    /* Anchor sub-nav */
-    .anchor-nav{position:sticky;top:var(--header-height,64px);z-index:9;background:#fff;border-bottom:1px solid #eee}
-    .anchor-nav .container{display:flex;gap:.85rem;flex-wrap:wrap;justify-content:center;padding:.6rem 0}
-    .anchor-nav a{font-size:.95rem;text-decoration:none;color:var(--color-text);padding:.35rem .6rem;border-radius:6px}
-    .anchor-nav a:hover{background:#f7f7f7}
-
     /* Motion */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    .submenu-caret{margin-left:.35rem}
+
+    /* Header nav CTA */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{
+      background:#9e0f1a;
+    }
+
+    #site-header .header-flex{
+      align-items:center;
+    }
   </style>
 </head>
 <body class="sticky-cta-pad">
@@ -82,8 +99,8 @@
 <!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
-    <a href="index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="../../index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
     <!-- Hamburger Button for Mobile -->
     <button id="nav-toggle" aria-label="Open Menu">
@@ -91,17 +108,17 @@
     </button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="../../index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="administrative-services.html">Administrative Services</a></li>
-            <li><a href="banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="../corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="../corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
@@ -123,45 +140,45 @@
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
             <!-- Employment hub -->
             <li class="has-flyout">
-              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="general-employment-permit.html">General Employment</a></li>
-                <li><a href="eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
             <!-- Investment hub -->
             <li class="has-flyout">
-              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="categories-a-f.html">Categories A–F</a></li>
-                <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
             <!-- Visitor hub -->
             <li class="has-flyout">
-              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="../migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
             <!-- Citizenship hub -->
             <li class="has-flyout">
-              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -171,9 +188,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a href="../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -181,9 +198,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="project-management-services.html">Project Management Services</a></li>
+            <li><a href="../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -191,34 +208,22 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="../compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- Simple pages -->
-        <li><a href="about.html">About</a></li>
+        <!-- Simple pages + header CTA -->
+        <li><a href="../../about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="../../start/index.html">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
-<!-- Anchor sub-nav -->
-<nav class="anchor-nav" aria-label="Section navigation">
-  <div class="container">
-    <a href="#overview">Overview</a>
-    <a href="#handling">Mail & Compliance</a>
-    <a href="#service-levels">Service Levels</a>
-    <a href="#onboarding">Onboarding</a>
-    <a href="#related">Related</a>
-    <a href="#faq">FAQs</a>
-    <a href="#contact-cta">Start</a>
-  </div>
-</nav>
 
 <main id="main-content">
   <!-- HERO -->
@@ -426,13 +431,13 @@
     <div class="footer-left">
       <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
       <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
-      <a href="index.html#services">Services</a>
-      <a href="about.html">About</a>
-      <a href="index.html#contact-cta">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="../../index.html#services">Services</a>
+      <a href="../../about.html">About</a>
+      <a href="../../index.html#contact-cta">Contact</a>
+      <a href="../../privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
@@ -472,6 +477,6 @@
 }
 </script>
 
-<script src="script.js?v=13"></script>
+<script src="../../script.js?v=14"></script>
 </body>
 </html>
