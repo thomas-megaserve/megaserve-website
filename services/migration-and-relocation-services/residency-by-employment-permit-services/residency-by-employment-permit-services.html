@@ -29,16 +29,16 @@
   <meta name="twitter:description" content="Route selection, employer onboarding, filings, biometrics, family joiners—clear timelines and document packs." />
   <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/employment-permit-og.jpg" />
 
-  <!-- Favicons / theme (root at ../) -->
+  <!-- Favicons / theme (assets live in root /assets) -->
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16.png" />
   <meta name="theme-color" content="#a00000" />
 
   <!-- Global stylesheet in project root -->
-  <link rel="stylesheet" href="../style.css?v=14" />
+  <link rel="stylesheet" href="../style.css?v=13" />
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
-  <!-- Page-local helpers -->
+  <!-- Page-local helpers (kept consistent with other pages) -->
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem; text-align:center;}
@@ -60,6 +60,7 @@
     table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th, table.matrix th{background:#fafafa}
 
+    /* CTA fine print on dark/red strip */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
     .faq dt{font-weight:700;margin-top:1rem}
@@ -72,16 +73,11 @@
     .link-grid a{display:block;border:1px solid #e5e5e5;border-radius:.5rem;padding:.7rem .8rem;background:#fff}
     .badge{display:inline-block;background:var(--color-gold);color:#000;padding:.1rem .45rem;border-radius:.4rem;font-size:.75rem;margin-left:.4rem}
 
+    /* Small stat band */
     .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1rem auto 0;max-width:900px}
     .stat{border:1px solid #eee;border-radius:.75rem;padding:1rem;background:#fff;text-align:center}
     .stat .num{font-size:1.6rem;font-weight:700}
     .sr-only{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-
-    .submenu-caret{margin-left:.35rem}
-
-    #site-header .header-flex{
-      align-items:center;
-    }
   </style>
 </head>
 <body>
@@ -207,6 +203,7 @@
           </ul>
         </li>
 
+        <!-- NEW: About placed to the left of Contact -->
         <li><a href="../about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
       </ul>
@@ -223,6 +220,7 @@
       <h1>Residency by Employment Permit Services</h1>
       <p class="content-narrow">End-to-end support for employment-based stays in Cyprus—route selection, employer onboarding, filings, biometrics, and family joiners.</p>
 
+      <!-- Small stat band (non-critical, enhances trust) -->
       <div class="stats" aria-label="Operational stats (illustrative)">
         <div class="stat">
           <div class="num" data-countup="320">320+</div>
@@ -565,17 +563,16 @@
 }
 </script>
 
-<!-- Light CountUp init -->
+<!-- Light CountUp init (progressive enhancement; safe if JS blocked) -->
 <script defer>
   window.addEventListener('DOMContentLoaded', function () {
     if (!window.CountUp) return;
     document.querySelectorAll('[data-countup]').forEach(function(el){
       const endVal = parseFloat(el.getAttribute('data-countup')) || 0;
-      const isPercent = el.textContent.trim().endsWith('%');
       const cu = new CountUp.CountUp(el, endVal, {
-        duration: 1.2,
+        duration:1.2,
         separator: ',',
-        suffix: isPercent ? '%' : '+'
+        suffix: el.textContent.trim().endsWith('%') ? '%' : '+'
       });
       if (!cu.error) cu.start();
     });
@@ -583,6 +580,6 @@
 </script>
 
 <!-- Global script in project root -->
-<script src="../script.js?v=14" defer></script>
+<script src="../script.js?v=13" defer></script>
 </body>
 </html>
