@@ -6,15 +6,43 @@
   <meta name="description" content="End-to-end coordination for Cyprus Digital Nomad Visa: eligibility scoping, document prep & filing, authority liaison, and onboarding for remote workers relocating to Cyprus.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=12">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.megaserve.eu/digital-nomad-visa.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Digital Nomad Visa — MegaServe Cyprus">
+  <meta property="og:description" content="End-to-end coordination for Cyprus Digital Nomad Visa: eligibility scoping, document prep & filing, authority liaison, and onboarding for remote workers relocating to Cyprus.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/digital-nomad-visa.html">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/digital-nomad-visa-og.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Nomad Visa — MegaServe Cyprus">
+  <meta name="twitter:description" content="Eligibility scoping, document prep & filing, authority liaison, and onboarding for remote workers relocating to Cyprus on the Digital Nomad Visa.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/digital-nomad-visa-og.jpg">
+
+  <!-- Favicons / theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
+
+  <!-- Global stylesheet (root-level) -->
+  <link rel="stylesheet" href="../../../style.css?v=14">
+
+  <!-- CountUp (kept consistent even if not used directly) -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem; text-align:center;} /* center hero heading & intro */
+    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center}
     .content-narrow{max-width:900px;margin:0 auto}
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
@@ -25,9 +53,9 @@
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
     .table-wrap{overflow-x:auto}
-    table.service, table.matrix{width:100%;border-collapse:collapse}
-    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
-    table.service th, table.matrix th{background:#fafafa}
+    table.service,table.matrix{width:100%;border-collapse:collapse}
+    table.service th,table.service td,table.matrix th,table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th,table.matrix th{background:#fafafa}
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
     #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
     .faq dt{font-weight:700;margin-top:1rem}
@@ -35,31 +63,51 @@
     .fade-up{opacity:0;transform:translateY(14px)}
     .fade-up.visible{opacity:1;transform:translateY(0)}
     .submenu-caret{margin-left:.35rem}
+
+    /* Header nav CTA */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{
+      background:#9e0f1a;
+    }
+    #site-header .header-flex{
+      align-items:center;
+    }
   </style>
 </head>
-<body>
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <header id="site-header">
   <div class="container header-flex">
-    <a href="index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="../../../index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
     <button id="nav-toggle" aria-label="Open Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="../../../index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="administrative-services.html">Administrative Services</a></li>
-            <li><a href="banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="../../corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="../../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="../../corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="../../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="../../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
@@ -67,11 +115,11 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="physical-office-rental-services.html">Physical Office Rental Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
@@ -94,32 +142,32 @@
             </li>
             <!-- Investment hub -->
             <li class="has-flyout">
-              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="categories-a-f.html">Categories A–F</a></li>
-                <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="../residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="../residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="../residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
             <!-- Visitor hub -->
             <li class="has-flyout">
-              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="../visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
             <!-- Citizenship hub -->
             <li class="has-flyout">
-              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="../naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="../naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -129,9 +177,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a href="../../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="../../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="../../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -139,9 +187,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="project-management-services.html">Project Management Services</a></li>
+            <li><a href="../../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="../../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="../../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -149,17 +197,18 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="../../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="../../compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="../../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="../../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="../../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- About placed to the left of Contact -->
-        <li><a href="about.html">About</a></li>
+        <!-- Simple pages + header CTA -->
+        <li><a href="../../../about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
       </ul>
     </nav>
   </div>
@@ -168,272 +217,267 @@
 <main id="main-content">
 
   <!-- Hero -->
-  <section class="page-hero">
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container content-narrow">
-      <h1 class="fade-up" data-anim-delay="0ms">Digital Nomad Visa — Cyprus</h1>
-      <p class="fade-up" data-anim-delay="80ms">Move to Cyprus while working remotely for an overseas employer or your own company abroad. We confirm eligibility, prepare filings, and coordinate every step through approval and onboarding.</p>
+      <h1>Digital Nomad Visa — Cyprus</h1>
+      <p>Move to Cyprus while working remotely for an overseas employer or your own company abroad. We confirm eligibility, prepare filings, and coordinate every step through approval and onboarding.</p>
     </div>
   </section>
 
-  <section class="container content-narrow">
-    <!-- Overview -->
-    <h2 class="fade-up" data-anim-delay="0ms">Overview</h2>
-    <p class="fade-up" data-anim-delay="60ms">Cyprus’ Digital Nomad Visa provides a streamlined residency option for remote workers whose income is earned from outside Cyprus. MegaServe validates your route, curates your evidence pack, files your application, and keeps an audit-ready trail for renewals.</p>
-    <ul class="feature-list fade-up" data-anim-delay="120ms" aria-label="Key features">
-      <li>Eligibility scoping: remote-work status, income proofs, and insurance</li>
-      <li>Tailored document checklist with templates and translation guidance</li>
-      <li>End-to-end filing and authority liaison, including appointment booking</li>
-      <li>Family member add-ons (where eligible)</li>
-      <li>Onboarding coordination: Social Insurance (if applicable) and TIC/TIN</li>
-      <li>Renewal reminders and secure document repository</li>
-    </ul>
+  <section class="container">
+    <div class="content-narrow">
 
-    <div class="keyline"></div>
+      <!-- Overview -->
+      <h2 class="fade-up" data-anim-delay="0.15">Overview</h2>
+      <p class="fade-up" data-anim-delay="0.2">Cyprus’ Digital Nomad Visa provides a streamlined residency option for remote workers whose income is earned from outside Cyprus. MegaServe validates your route, curates your evidence pack, files your application, and keeps an audit-ready trail for renewals.</p>
+      <ul class="feature-list fade-up" data-anim-delay="0.25" aria-label="Key features">
+        <li>Eligibility scoping: remote-work status, income proofs, and insurance</li>
+        <li>Tailored document checklist with templates and translation guidance</li>
+        <li>End-to-end filing and authority liaison, including appointment booking</li>
+        <li>Family member add-ons (where eligible)</li>
+        <li>Onboarding coordination: Social Insurance (if applicable) and TIC/TIN</li>
+        <li>Renewal reminders and secure document repository</li>
+      </ul>
 
-    <!-- Matrix -->
-    <h2 class="fade-up" data-anim-delay="0ms">Eligibility Matrix (Guide)</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
-      <table class="matrix" aria-describedby="matrix-note">
-        <thead>
-          <tr>
-            <th scope="col">Factor</th>
-            <th scope="col">Baseline Expectation</th>
-            <th scope="col">Evidence Examples</th>
-            <th scope="col">Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Remote Work</td>
-            <td>Employer/company located outside Cyprus</td>
-            <td>Employment letter, contracts, client invoices</td>
-            <td>No local employment in Cyprus under this route</td>
-          </tr>
-          <tr>
-            <td>Income</td>
-            <td>Meets or exceeds current minimum threshold</td>
-            <td>Bank statements, payslips, tax returns</td>
-            <td>We confirm the latest threshold at scoping</td>
-          </tr>
-          <tr>
-            <td>Accommodation &amp; Insurance</td>
-            <td>Proof of residence &amp; compliant medical cover</td>
-            <td>Lease/ownership docs; insurance policy</td>
-            <td>Family add-ons may need extra cover</td>
-          </tr>
-          <tr>
-            <td>Clean Record</td>
-            <td>Valid passport &amp; police clearance</td>
-            <td>Passport copies, police cert (legalised)</td>
-            <td>Translations by certified translators</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="keyline"></div>
+
+      <!-- Matrix -->
+      <h2 class="fade-up" data-anim-delay="0.3">Eligibility Matrix (Guide)</h2>
+      <div class="table-wrap fade-up" data-anim-delay="0.35">
+        <table class="matrix" aria-describedby="matrix-note">
+          <thead>
+            <tr>
+              <th scope="col">Factor</th>
+              <th scope="col">Baseline Expectation</th>
+              <th scope="col">Evidence Examples</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Remote Work</td>
+              <td>Employer/company located outside Cyprus</td>
+              <td>Employment letter, contracts, client invoices</td>
+              <td>No local employment in Cyprus under this route</td>
+            </tr>
+            <tr>
+              <td>Income</td>
+              <td>Meets or exceeds current minimum threshold</td>
+              <td>Bank statements, payslips, tax returns</td>
+              <td>We confirm the latest threshold at scoping</td>
+            </tr>
+            <tr>
+              <td>Accommodation &amp; Insurance</td>
+              <td>Proof of residence &amp; compliant medical cover</td>
+              <td>Lease/ownership docs; insurance policy</td>
+              <td>Family add-ons may need extra cover</td>
+            </tr>
+            <tr>
+              <td>Clean Record</td>
+              <td>Valid passport &amp; police clearance</td>
+              <td>Passport copies, police cert (legalised)</td>
+              <td>Translations by certified translators</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="matrix-note" class="note fade-up" data-anim-delay="0.4">Matrix is indicative; precise requirements are validated during scoping against current practice.</p>
+
+      <div class="keyline"></div>
+
+      <!-- Process -->
+      <h2 class="fade-up" data-anim-delay="0.45">Process</h2>
+      <ol class="process-steps fade-up" data-anim-delay="0.5" aria-label="Application process steps">
+        <li>Discovery &amp; route check — confirm digital nomad eligibility and timing.</li>
+        <li>Checklist issue — gather income proofs, insurance, and police certificate; legalisation/translation where needed.</li>
+        <li>Application build — forms, affidavits, and evidence pack.</li>
+        <li>Submission &amp; liaison — file, track, and coordinate appointments.</li>
+        <li>Decision &amp; collections — approvals, biometrics/permit issuance as applicable.</li>
+        <li>Onboarding — TIC/TIN and practical setup (as relevant for your case).</li>
+        <li>Renewals — reminders and document refresh schedule.</li>
+      </ol>
+
+      <div class="keyline"></div>
+
+      <!-- Service Levels -->
+      <h2 class="fade-up" data-anim-delay="0.55">Service Levels &amp; Typical Timing</h2>
+      <div class="table-wrap fade-up" data-anim-delay="0.6">
+        <table class="service" aria-label="Service levels">
+          <thead>
+            <tr>
+              <th scope="col">Level</th>
+              <th scope="col">Includes</th>
+              <th scope="col">Typical Timing*</th>
+              <th scope="col">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Core</td>
+              <td>Eligibility memo, checklist, application build &amp; filing, liaison</td>
+              <td>2–4 weeks prep; authority timelines vary</td>
+              <td>Solo applicants with ready documents</td>
+            </tr>
+            <tr>
+              <td>Plus</td>
+              <td>Core + translations orchestration, appointment booking, renewal calendar</td>
+              <td>3–6 weeks prep; authority timelines vary</td>
+              <td>Applicants needing admin support</td>
+            </tr>
+            <tr>
+              <td>Complete</td>
+              <td>Plus + onboarding coordination &amp; family add-ons</td>
+              <td>4–8 weeks prep; authority timelines vary</td>
+              <td>Families or first-time movers</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note fade-up" data-anim-delay="0.65">*Preparation time depends on document readiness, legalisation, and booking availability. Decision times are at authority discretion.</p>
+
+      <div class="keyline"></div>
+
+      <!-- Deliverables -->
+      <h2 class="fade-up" data-anim-delay="0.7">Deliverables</h2>
+      <ul class="feature-list fade-up" data-anim-delay="0.75">
+        <li>Eligibility memo confirming Digital Nomad route and threshold fit</li>
+        <li>Tailored document checklist with templates and translation instructions</li>
+        <li>Completed application pack and submission receipts</li>
+        <li>Authority correspondence log and milestone updates</li>
+        <li>Onboarding confirmations (where included) and renewal schedule</li>
+        <li>Audit-ready repository of all filings and evidence</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <!-- Checklist -->
+      <h2 class="fade-up" data-anim-delay="0.8">Applicant Checklist</h2>
+      <div class="table-wrap fade-up" data-anim-delay="0.85">
+        <table class="matrix" aria-label="Checklist table">
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Owner</th>
+              <th scope="col">Provided</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Passport (validity &gt;= 6 months)</td>
+              <td>Applicant</td>
+              <td>Yes / No</td>
+              <td>Certified copy may be required</td>
+            </tr>
+            <tr>
+              <td>Remote-work proof</td>
+              <td>Applicant</td>
+              <td>Yes / No</td>
+              <td>Employer letter / client contracts</td>
+            </tr>
+            <tr>
+              <td>Income proof</td>
+              <td>Applicant</td>
+              <td>Yes / No</td>
+              <td>Bank statements / payslips meeting threshold</td>
+            </tr>
+            <tr>
+              <td>Police clearance &amp; medicals</td>
+              <td>Applicant</td>
+              <td>Yes / No</td>
+              <td>Legalisation &amp; certified translation</td>
+            </tr>
+            <tr>
+              <td>Accommodation &amp; insurance</td>
+              <td>Applicant</td>
+              <td>Yes / No</td>
+              <td>Lease/ownership + medical insurance policy</td>
+            </tr>
+            <tr>
+              <td>Family member docs (if applicable)</td>
+              <td>Applicant</td>
+              <td>Yes / No</td>
+              <td>Marriage/birth certs, legalised &amp; translated</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="keyline"></div>
+
+      <!-- Controls -->
+      <h2 class="fade-up" data-anim-delay="0.9">Controls &amp; Quality</h2>
+      <ul class="feature-list fade-up" data-anim-delay="0.95" aria-label="Controls list">
+        <li>Two-person review on every submission pack</li>
+        <li>Version-controlled document set with immutable evidence archive</li>
+        <li>Tracked authority queries with response SLAs</li>
+        <li>Renewal reminders and expiry dashboards</li>
+        <li>Data minimisation and secure transfer standards</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <!-- About -->
+      <h2 class="fade-up" data-anim-delay="1.0">About MegaServe</h2>
+      <p class="fade-up" data-anim-delay="1.05">We are a Cyprus corporate services provider delivering end-to-end coordination across company administration, banking, compliance, and mobility. Our migration desk integrates with compliance and tax so every file stays aligned with audit standards.</p>
+      <ul class="feature-list fade-up" data-anim-delay="1.1">
+        <li>Single point of contact throughout your move</li>
+        <li>Templates tuned to current local practice</li>
+        <li>Transparent timelines and status reporting</li>
+      </ul>
+
+      <div class="keyline"></div>
+
+      <!-- FAQ -->
+      <h2 class="fade-up" data-anim-delay="1.15">FAQ</h2>
+      <dl class="faq fade-up" data-anim-delay="1.2">
+        <dt>Who qualifies for the Digital Nomad Visa in Cyprus?</dt>
+        <dd>Remote workers earning income from outside Cyprus with sufficient income, suitable accommodation, valid insurance, and clean records.</dd>
+
+        <dt>Can I work for Cypriot employers on this visa?</dt>
+        <dd>No. This route is for remote work with an employer or business established outside Cyprus.</dd>
+
+        <dt>How long does preparation and decision take?</dt>
+        <dd>Preparation typically takes 2–6 weeks depending on document readiness and legalisation. Decision times are set by authorities and vary by season and workload.</dd>
+
+        <dt>Can family members join me?</dt>
+        <dd>Yes, eligible dependants can be included on linked routes. We confirm eligibility at scoping and coordinate their filings.</dd>
+
+        <dt>Do my documents need legalisation or apostille?</dt>
+        <dd>Yes, most foreign-issued documents require legalisation/apostille and certified translation. We provide country-specific guidance.</dd>
+      </dl>
+      <p class="note fade-up" data-anim-delay="1.25">This page is practical guidance. Exact requirements depend on current regulations and your case specifics.</p>
+
     </div>
-    <p id="matrix-note" class="note fade-up" data-anim-delay="140ms">Matrix is indicative; precise requirements are validated during scoping against current practice.</p>
-
-    <div class="keyline"></div>
-
-    <!-- Process -->
-    <h2 class="fade-up" data-anim-delay="0ms">Process</h2>
-    <ol class="process-steps fade-up" data-anim-delay="80ms" aria-label="Application process steps">
-      <li>Discovery &amp; route check — confirm digital nomad eligibility and timing.</li>
-      <li>Checklist issue — gather income proofs, insurance, and police certificate; legalisation/translation where needed.</li>
-      <li>Application build — forms, affidavits, and evidence pack.</li>
-      <li>Submission &amp; liaison — file, track, and coordinate appointments.</li>
-      <li>Decision &amp; collections — approvals, biometrics/permit issuance as applicable.</li>
-      <li>Onboarding — TIC/TIN and practical setup (as relevant for your case).</li>
-      <li>Renewals — reminders and document refresh schedule.</li>
-    </ol>
-
-    <div class="keyline"></div>
-
-    <!-- Service Levels -->
-    <h2 class="fade-up" data-anim-delay="0ms">Service Levels &amp; Typical Timing</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
-      <table class="service" aria-label="Service levels">
-        <thead>
-          <tr>
-            <th scope="col">Level</th>
-            <th scope="col">Includes</th>
-            <th scope="col">Typical Timing*</th>
-            <th scope="col">Best For</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Core</td>
-            <td>Eligibility memo, checklist, application build &amp; filing, liaison</td>
-            <td>2–4 weeks prep; authority timelines vary</td>
-            <td>Solo applicants with ready documents</td>
-          </tr>
-          <tr>
-            <td>Plus</td>
-            <td>Core + translations orchestration, appointment booking, renewal calendar</td>
-            <td>3–6 weeks prep; authority timelines vary</td>
-            <td>Applicants needing admin support</td>
-          </tr>
-          <tr>
-            <td>Complete</td>
-            <td>Plus + onboarding coordination &amp; family add-ons</td>
-            <td>4–8 weeks prep; authority timelines vary</td>
-            <td>Families or first-time movers</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note fade-up" data-anim-delay="140ms">*Preparation time depends on document readiness, legalisation, and booking availability. Decision times are at authority discretion.</p>
-
-    <div class="keyline"></div>
-
-    <!-- Deliverables -->
-    <h2 class="fade-up" data-anim-delay="0ms">Deliverables</h2>
-    <ul class="feature-list fade-up" data-anim-delay="80ms">
-      <li>Eligibility memo confirming Digital Nomad route and threshold fit</li>
-      <li>Tailored document checklist with templates and translation instructions</li>
-      <li>Completed application pack and submission receipts</li>
-      <li>Authority correspondence log and milestone updates</li>
-      <li>Onboarding confirmations (where included) and renewal schedule</li>
-      <li>Audit-ready repository of all filings and evidence</li>
-    </ul>
-
-    <div class="keyline"></div>
-
-    <!-- Checklist -->
-    <h2 class="fade-up" data-anim-delay="0ms">Applicant Checklist</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
-      <table class="matrix" aria-label="Checklist table">
-        <thead>
-          <tr>
-            <th scope="col">Item</th>
-            <th scope="col">Owner</th>
-            <th scope="col">Provided</th>
-            <th scope="col">Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Passport (validity &gt;= 6 months)</td>
-            <td>Applicant</td>
-            <td>Yes / No</td>
-            <td>Certified copy may be required</td>
-          </tr>
-          <tr>
-            <td>Remote-work proof</td>
-            <td>Applicant</td>
-            <td>Yes / No</td>
-            <td>Employer letter / client contracts</td>
-          </tr>
-          <tr>
-            <td>Income proof</td>
-            <td>Applicant</td>
-            <td>Yes / No</td>
-            <td>Bank statements / payslips meeting threshold</td>
-          </tr>
-          <tr>
-            <td>Police clearance &amp; medicals</td>
-            <td>Applicant</td>
-            <td>Yes / No</td>
-            <td>Legalisation &amp; certified translation</td>
-          </tr>
-          <tr>
-            <td>Accommodation &amp; insurance</td>
-            <td>Applicant</td>
-            <td>Yes / No</td>
-            <td>Lease/ownership + medical insurance policy</td>
-          </tr>
-          <tr>
-            <td>Family member docs (if applicable)</td>
-            <td>Applicant</td>
-            <td>Yes / No</td>
-            <td>Marriage/birth certs, legalised &amp; translated</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="keyline"></div>
-
-    <!-- Controls -->
-    <h2 class="fade-up" data-anim-delay="0ms">Controls &amp; Quality</h2>
-    <ul class="feature-list fade-up" data-anim-delay="80ms" aria-label="Controls list">
-      <li>Two-person review on every submission pack</li>
-      <li>Version-controlled document set with immutable evidence archive</li>
-      <li>Tracked authority queries with response SLAs</li>
-      <li>Renewal reminders and expiry dashboards</li>
-      <li>Data minimisation and secure transfer standards</li>
-    </ul>
-
-    <div class="keyline"></div>
-
-    <!-- About -->
-    <h2 class="fade-up" data-anim-delay="0ms">About MegaServe</h2>
-    <p class="fade-up" data-anim-delay="60ms">We are a Cyprus corporate services provider delivering end-to-end coordination across company administration, banking, compliance, and mobility. Our migration desk integrates with compliance and tax so every file stays aligned with audit standards.</p>
-    <ul class="feature-list fade-up" data-anim-delay="120ms">
-      <li>Single point of contact throughout your move</li>
-      <li>Templates tuned to current local practice</li>
-      <li>Transparent timelines and status reporting</li>
-    </ul>
-
-    <div class="keyline"></div>
-
-    <!-- FAQ -->
-    <h2 class="fade-up" data-anim-delay="0ms">FAQ</h2>
-    <dl class="faq fade-up" data-anim-delay="80ms">
-      <dt>Who qualifies for the Digital Nomad Visa in Cyprus?</dt>
-      <dd>Remote workers earning income from outside Cyprus with sufficient income, suitable accommodation, valid insurance, and clean records.</dd>
-
-      <dt>Can I work for Cypriot employers on this visa?</dt>
-      <dd>No. This route is for remote work with an employer or business established outside Cyprus.</dd>
-
-      <dt>How long does preparation and decision take?</dt>
-      <dd>Preparation typically takes 2–6 weeks depending on document readiness and legalisation. Decision times are set by authorities and vary by season and workload.</dd>
-
-      <dt>Can family members join me?</dt>
-      <dd>Yes, eligible dependants can be included on linked routes. We confirm eligibility at scoping and coordinate their filings.</dd>
-
-      <dt>Do my documents need legalisation or apostille?</dt>
-      <dd>Yes, most foreign-issued documents require legalisation/apostille and certified translation. We provide country-specific guidance.</dd>
-    </dl>
-    <p class="note fade-up" data-anim-delay="140ms">This page is practical guidance. Exact requirements depend on current regulations and your case specifics.</p>
-
   </section>
 
   <!-- Contact CTA -->
-  <section id="contact-cta" class="cta-band" style="background:var(--color-primary);color:#fff">
+  <section id="contact-cta" class="fade-up" data-anim-delay="1.3">
     <div class="container content-narrow">
-      <h2 class="fade-up" data-anim-delay="0ms">Start Your Digital Nomad Visa Filing</h2>
-      <p class="fade-up" data-anim-delay="60ms">Send your remote-work summary, income level, insurance status, and target move date. We’ll confirm eligibility, checklist, and a target submission week.</p>
-      <p class="fade-up" data-anim-delay="120ms">
-        <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=Digital%20Nomad%20Visa%20—%20New%20Application">Email MegaServe</a>
-      </p>
-      <p class="note fade-up" data-anim-delay="180ms">Fastest turnaround: provide passport scan, employer letter/client contracts, and recent bank statements.</p>
+      <h2>Start Your Digital Nomad Visa Filing</h2>
+      <p class="contact-intro">Send your remote-work summary, income level, insurance status, and target move date. We’ll confirm eligibility, checklist, and a target submission week.</p>
+      <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=Digital%20Nomad%20Visa%20%E2%80%94%20New%20Application">Email MegaServe</a>
+      <p class="note">Fastest turnaround: provide passport scan, employer letter/client contracts, and recent bank statements.</p>
     </div>
   </section>
 
 </main>
 
 <footer id="site-footer">
-  <div class="container">
-    <div class="footer-flex">
-      <div>
-        <p><strong>MegaServe Cyprus</strong><br> Corporate, Compliance &amp; Migration Services</p>
-      </div>
-      <div>
-        <p><a href="mailto:hello@megaserve.eu">hello@megaserve.eu</a></p>
-      </div>
+  <div class="container footer-flex">
+    <div class="footer-left">
+      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
+      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> MegaServe. All rights reserved.</p>
+    <div class="footer-nav">
+      <a href="../../../index.html#services">Services</a>
+      <a href="../../../about.html">About</a>
+      <a href="../../../index.html#contact-cta">Contact</a>
+      <a href="../../../privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
-<script src="script.js?v=12"></script>
 
 <!-- FAQ JSON-LD -->
 <script type="application/ld+json">
@@ -485,5 +529,21 @@
 }
 </script>
 
+<!-- Optional CountUp helper (no-op if no [data-countup] elements) -->
+<script defer>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!window.CountUp) return;
+    document.querySelectorAll('[data-countup]').forEach(function (el) {
+      var text = el.textContent.trim();
+      var hasPercent = text.endsWith('%');
+      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
+      var opts = { duration: 1.2, separator: ',', suffix: hasPercent ? '%' : '+' };
+      var cu = new CountUp.CountUp(el, endVal, opts);
+      if (!cu.error) cu.start();
+    });
+  });
+</script>
+
+<script src="../../../script.js?v=14"></script>
 </body>
 </html>
