@@ -6,18 +6,46 @@
   <meta name="description" content="End-to-end coordination for Cyprus employment permits for non-EU nationals: eligibility scoping, document checklist, application prep & filing, authority liaison, and arrival onboarding with audit-ready records.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=12">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.megaserve.eu/employment-permit-non-eu.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Employment Permit for Non-E.U. Nationals — MegaServe Cyprus">
+  <meta property="og:description" content="End-to-end coordination for Cyprus employment permits for non-EU nationals: eligibility scoping, document checklist, application prep & filing, authority liaison, and arrival onboarding.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/employment-permit-non-eu.html">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/employment-permit-non-eu-og.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Employment Permit for Non-E.U. Nationals — MegaServe Cyprus">
+  <meta name="twitter:description" content="Eligibility scoping, document prep, filings, liaison, and onboarding for Cyprus employment permits for non-EU nationals.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/employment-permit-non-eu-og.jpg">
+
+  <!-- Favicons / theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
+
+  <!-- Global stylesheet (root-level) -->
+  <link rel="stylesheet" href="../../../style.css?v=14">
+
+  <!-- CountUp (even if not used here, harmless + consistent) -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <!-- Page-local helpers (kept consistent with other pages) -->
   <style>
     /* NOTE: no per-page .site-logo sizing here — inherits from style.css so it matches other pages */
 
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem; text-align:center;} /* centered */
+    .page-hero .container{padding:2.5rem 0 1.5rem; text-align:center;}
     .content-narrow{max-width:900px;margin:0 auto}
 
     .feature-list{list-style:none;padding-left:0}
@@ -46,15 +74,36 @@
     .fade-up.visible{opacity:1; transform: translateY(0);}
 
     .submenu-caret{margin-left:.35rem}
+
+    /* Header nav CTA */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{
+      background:#9e0f1a;
+    }
+
+    #site-header .header-flex{
+      align-items:center;
+    }
   </style>
 </head>
-<body>
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
-    <a href="index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="../../../index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
     <!-- Hamburger Button for Mobile -->
     <button id="nav-toggle" aria-label="Open Menu">
@@ -62,17 +111,17 @@
     </button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="../../../index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="administrative-services.html">Administrative Services</a></li>
-            <li><a href="banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="../../corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="../../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="../../corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="../../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="../../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
@@ -80,11 +129,11 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="physical-office-rental-services.html">Physical Office Rental Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
@@ -107,32 +156,32 @@
             </li>
             <!-- Investment hub -->
             <li class="has-flyout">
-              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="categories-a-f.html">Categories A–F</a></li>
-                <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="../residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="../residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="../residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
             <!-- Visitor hub -->
             <li class="has-flyout">
-              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="../visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
             <!-- Citizenship hub -->
             <li class="has-flyout">
-              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="../naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="../naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -142,9 +191,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a href="../../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="../../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="../../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -152,9 +201,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="project-management-services.html">Project Management Services</a></li>
+            <li><a href="../../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="../../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="../../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -162,23 +211,24 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="../../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="../../compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="../../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="../../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="../../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- About placed to the left of Contact -->
-        <li><a href="about.html">About</a></li>
+        <!-- Simple pages + header CTA -->
+        <li><a href="../../../about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main-content">
   <!-- HERO -->
   <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
@@ -395,7 +445,7 @@
   <section class="container fade-up" data-anim-delay="0.5" id="faq">
     <div class="content-narrow">
       <h2>FAQ</h2>
-    <p class="note" role="note">Informational only—this is not legal or immigration advice. We coordinate with licensed professionals where required.</p>
+      <p class="note" role="note">Informational only—this is not legal or immigration advice. We coordinate with licensed professionals where required.</p>
       <dl class="faq">
         <dt>Do you replace immigration lawyers?</dt>
         <dd>No. We operate the PMO and documentation. Legal interpretations and representations are handled by licensed counsel; we coordinate and prepare the file.</dd>
@@ -435,10 +485,10 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
-      <a href="index.html#services">Services</a>
-      <a href="about.html">About</a>
-      <a href="index.html#contact-cta">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="../../../index.html#services">Services</a>
+      <a href="../../../about.html">About</a>
+      <a href="../../../index.html#contact-cta">Contact</a>
+      <a href="../../../privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
@@ -458,6 +508,21 @@
 }
 </script>
 
-<script src="script.js?v=12"></script>
+<!-- Light CountUp init (progressive enhancement; safe if JS blocked) -->
+<script defer>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!window.CountUp) return;
+    document.querySelectorAll('[data-countup]').forEach(function(el){
+      var text = el.textContent.trim();
+      var hasPercent = text.endsWith('%');
+      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
+      var opts = { duration: 1.2, separator: ',', suffix: hasPercent ? '%' : '+' };
+      var cu = new CountUp.CountUp(el, endVal, opts);
+      if (!cu.error) cu.start();
+    });
+  });
+</script>
+
+<script src="../../../script.js?v=14"></script>
 </body>
 </html>
