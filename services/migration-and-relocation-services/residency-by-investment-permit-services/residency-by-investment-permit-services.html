@@ -6,23 +6,51 @@
   <meta name="description" content="Cyprus residency via investment handled end-to-end: route selection (Reg. 6.2, Categories A–F, Start-Up Visa), eligibility evidence, source-of-funds/KYC, filings, and renewals with bankable documentation and clear timelines.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=13">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.megaserve.eu/residency-by-investment-permit-services.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Residency by Investment Permit Services — MegaServe Cyprus">
+  <meta property="og:description" content="Cyprus residency via investment handled end-to-end: route selection (Reg. 6.2, Categories A–F, Start-Up Visa), eligibility evidence, source-of-funds/KYC, filings, and renewals with bankable documentation and clear timelines.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/residency-by-investment-permit-services.html">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/residency-by-investment-og.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Residency by Investment Permit Services — MegaServe Cyprus">
+  <meta name="twitter:description" content="Cyprus residency via investment handled end-to-end with clear documentation, KYC, and timelines.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/residency-by-investment-og.jpg">
+
+  <!-- Favicons / theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
+
+  <!-- Global stylesheet (root-level) -->
+  <link rel="stylesheet" href="../../../style.css?v=14">
+
+  <!-- CountUp -->
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <!-- Page-local helpers (kept consistent with other pages) -->
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem; text-align:center;} /* center hero */
+    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center}
     .content-narrow{max-width:900px;margin:0 auto}
 
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
 
-    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
 
@@ -30,31 +58,53 @@
     .note{font-size:.95rem;color:#666}
 
     .table-wrap{overflow-x:auto}
-    table.service, table.matrix{width:100%;border-collapse:collapse}
-    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
-    table.service th, table.matrix th{background:#fafafa}
+    table.service,table.matrix{width:100%;border-collapse:collapse}
+    table.service th,table.service td,table.matrix th,table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th,table.matrix th{background:#fafafa}
 
-    /* Keep CTA fine print readable on a red/dark banner */
+    /* CTA fine print readable on a coloured banner */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
 
     .faq dt{font-weight:700;margin-top:1rem}
     .faq dd{margin:0 0 1rem 0}
 
-    .fade-up{opacity:0; transform: translateY(14px);}
-    .fade-up.visible{opacity:1; transform: translateY(0);}
+    .fade-up{opacity:0;transform:translateY(14px)}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
 
     .link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.75rem;margin-top:.5rem}
     .link-grid a{display:block;border:1px solid #e5e5e5;border-radius:.5rem;padding:.7rem .8rem;background:#fff}
     .badge{display:inline-block;background:var(--color-gold);color:#000;padding:.1rem .45rem;border-radius:.4rem;font-size:.75rem;margin-left:.4rem}
+    .submenu-caret{margin-left:.35rem}
+
+    /* Header nav CTA */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{
+      background:#9e0f1a;
+    }
+    #site-header .header-flex{
+      align-items:center;
+    }
   </style>
 </head>
-<body>
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
-    <a href="index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="../../../index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
     <!-- Hamburger Button for Mobile -->
     <button id="nav-toggle" aria-label="Open Menu">
@@ -62,17 +112,17 @@
     </button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="../../../index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="administrative-services.html">Administrative Services</a></li>
-            <li><a href="banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="../../corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="../../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="../../corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="../../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="../../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
@@ -80,11 +130,11 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="physical-office-rental-services.html">Physical Office Rental Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="../../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
@@ -94,15 +144,15 @@
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
             <!-- Employment hub -->
             <li class="has-flyout">
-              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="general-employment-permit.html">General Employment</a></li>
-                <li><a href="eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="../residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="../residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="../residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="../residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="../residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
             <!-- Investment hub -->
@@ -118,21 +168,21 @@
             </li>
             <!-- Visitor hub -->
             <li class="has-flyout">
-              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="../visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
             <!-- Citizenship hub -->
             <li class="has-flyout">
-              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="../naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="../naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="../naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -142,9 +192,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a href="../../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="../../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="../../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -152,9 +202,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="project-management-services.html">Project Management Services</a></li>
+            <li><a href="../../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="../../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="../../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -162,28 +212,30 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="../../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="../../compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="../../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="../../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="../../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- NEW: About placed to the left of Contact -->
-        <li><a href="about.html">About</a></li>
+        <!-- Simple pages + header CTA -->
+        <li><a href="../../../about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main-content">
+
   <!-- HERO -->
   <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container">
+    <div class="container content-narrow">
       <h1>Residency by Investment Permit Services</h1>
-      <p class="content-narrow">Fixed-investment and entrepreneur routes to Cyprus residency with clear evidence, timing, and authority coordination.</p>
+      <p>Fixed-investment and entrepreneur routes to Cyprus residency with clear evidence, timing, and authority coordination.</p>
     </div>
   </section>
 
@@ -210,7 +262,7 @@
         <a href="categories-a-f.html">Categories A–F (self-employed / business owner / self-sufficient)</a>
         <a href="cyprus-startup-visa.html">Cyprus Start-Up Visa (founders &amp; key staff)</a>
       </div>
-      <p class="note">Each route page will include full checklists, fees, and timeline expectations.</p>
+      <p class="note">Each route page includes detailed checklists, fees, and timeline expectations.</p>
     </div>
   </section>
 
@@ -382,7 +434,7 @@
           </tbody>
         </table>
       </div>
-      <p class="note">Formats: PDF/JPG scans acceptable; originals may be required at appointments. Translation/apostille needs confirmed per case.</p>
+      <p class="note">Formats: PDF/JPG scans acceptable; originals may be required at appointments. Translation/apostille needs are confirmed per case.</p>
     </div>
   </section>
 
@@ -438,12 +490,14 @@
   </section>
 
   <!-- CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.6" aria-label="Contact call to action">
-    <div class="container">
+  <section id="contact-cta" class="cta-band fade-up" data-anim-delay="0.6" style="background:var(--color-primary);color:#fff" aria-label="Contact call to action">
+    <div class="container content-narrow">
       <h2>Confirm Your Investment Route</h2>
-      <p class="contact-intro">Email a short outline of your investment, family composition, and target timeline—we’ll respond with a route memo and checklist.</p>
-      <a href="mailto:megaserve@megaserve.eu?subject=Investment%20Residency%20Kickoff" class="btn-primary">Request Route Memo</a>
-      <p class="note">For fastest turnaround, email: investment outline &amp; amounts, property/share docs (if any), nationality, family members, funds source overview, and preferred timing.</p>
+      <p class="contact-intro">Email a short outline of your investment, family composition, and target timeline. We’ll respond with a route memo and checklist.</p>
+      <p>
+        <a href="mailto:hello@megaserve.eu?subject=Investment%20Residency%20Kickoff" class="btn-primary">Request Route Memo</a>
+      </p>
+      <p class="note">For fastest turnaround, include: investment outline &amp; amounts, property/share docs (if any), nationality, family members, funds source overview, and preferred timing.</p>
     </div>
   </section>
 </main>
@@ -457,10 +511,10 @@
       <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
-      <a href="index.html#services">Services</a>
-      <a href="about.html">About</a>
-      <a href="index.html#contact-cta">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="../../../index.html#services">Services</a>
+      <a href="../../../about.html">About</a>
+      <a href="../../../index.html#contact-cta">Contact</a>
+      <a href="../../../privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
@@ -471,15 +525,65 @@
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"How long does Regulation 6.2 take?","acceptedAnswer":{"@type":"Answer","text":"Timelines vary by office load and completeness. After a complete pack and appointment, decisions often run from weeks to a few months. We share current local estimates during intake."}},
-    {"@type":"Question","name":"Can family members be included?","acceptedAnswer":{"@type":"Answer","text":"Usually yes, subject to income, accommodation, and route rules. We confirm eligibility and prepare the dependant pack alongside your application."}},
-    {"@type":"Question","name":"What counts as acceptable source-of-funds?","acceptedAnswer":{"@type":"Answer","text":"Salary, business income, savings, or sale proceeds with documentary evidence. We compile a clear provenance trail with bank letters and statements."}},
-    {"@type":"Question","name":"Do you assist with translations and apostilles?","acceptedAnswer":{"@type":"Answer","text":"Yes. We coordinate certified translations and legalisations and confirm when originals will be checked at appointments."}},
-    {"@type":"Question","name":"If my investment changes after filing?","acceptedAnswer":{"@type":"Answer","text":"Some changes require updates or re-filing. We advise on implications and next steps."}}
+    {
+      "@type":"Question",
+      "name":"How long does Regulation 6.2 take?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Timelines vary by office load and completeness. After a complete pack and appointment, decisions often run from weeks to a few months. We share current local estimates during intake."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can family members be included?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Usually yes, subject to income, accommodation, and route rules. We confirm eligibility and prepare the dependant pack alongside your application."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What counts as acceptable source-of-funds?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Salary, business income, savings, or sale proceeds with documentary evidence. We compile a clear provenance trail with bank letters and statements."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Do you assist with translations and apostilles?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. We coordinate certified translations and legalisations and confirm when originals will be checked at appointments."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"If my investment changes after filing?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Some changes require updates or re-filing. We advise on implications and next steps."
+      }
+    }
   ]
 }
 </script>
 
-<script src="script.js?v=13" defer></script>
+<!-- Optional CountUp helper (no-op if no [data-countup] elements) -->
+<script defer>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!window.CountUp) return;
+    document.querySelectorAll('[data-countup]').forEach(function (el) {
+      var text = el.textContent.trim();
+      var hasPercent = text.endsWith('%');
+      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
+      var opts = { duration: 1.2, separator: ',', suffix: hasPercent ? '%' : '+' };
+      var cu = new CountUp.CountUp(el, endVal, opts);
+      if (!cu.error) cu.start();
+    });
+  });
+</script>
+
+<script src="../../../script.js?v=14" defer></script>
 </body>
 </html>
