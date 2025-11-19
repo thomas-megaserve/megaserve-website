@@ -29,19 +29,19 @@
   <meta name="twitter:description" content="Route selection, employer onboarding, filings, biometrics, family joiners—clear timelines and document packs." />
   <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/employment-permit-og.jpg" />
 
-  <!-- Favicons / theme (absolute like your working page) -->
+  <!-- Favicons / theme -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
   <meta name="theme-color" content="#a00000" />
 
-  <!-- Global stylesheet (root-level; this file is 3 levels deep) -->
+  <!-- Global stylesheet from site root (this file is 3 levels deep) -->
   <link rel="stylesheet" href="../../../style.css?v=14" />
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
-  <!-- Page-local helpers (mirroring Physical Office page styling) -->
+  <!-- Page-local helpers (kept consistent with other pages) -->
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center;}
+    .page-hero .container{padding:2.5rem 0 1.5rem; text-align:center;}
     .content-narrow{max-width:900px;margin:0 auto}
 
     .feature-list{list-style:none;padding-left:0}
@@ -60,6 +60,9 @@
     table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th, table.matrix th{background:#fafafa}
 
+    /* CTA fine print on dark/red strip */
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+
     .faq dt{font-weight:700;margin-top:1rem}
     .faq dd{margin:0 0 1rem 0}
 
@@ -70,15 +73,9 @@
     .link-grid a{display:block;border:1px solid #e5e5e5;border-radius:.5rem;padding:.7rem .8rem;background:#fff}
     .badge{display:inline-block;background:var(--color-gold);color:#000;padding:.1rem .45rem;border-radius:.4rem;font-size:.75rem;margin-left:.4rem}
 
-    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1rem auto 0;max-width:900px}
-    .stat{border:1px solid #eee;border-radius:.75rem;padding:1rem;background:#fff;text-align:center}
-    .stat .num{font-size:1.6rem;font-weight:700}
-
-    .sr-only{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-
     .submenu-caret{margin-left:.35rem}
 
-    /* Header nav CTA (copied from Physical Office page) */
+    /* Header nav CTA (same as Physical Office page) */
     #main-nav .nav-cta a.btn-primary{
       background:#c1121f;
       color:#fff !important;
@@ -97,6 +94,12 @@
     #site-header .header-flex{
       align-items:center;
     }
+
+    /* Small stat band */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1rem auto 0;max-width:900px}
+    .stat{border:1px solid #eee;border-radius:.75rem;padding:1rem;background:#fff;text-align:center}
+    .stat .num{font-size:1.6rem;font-weight:700}
+    .sr-only{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
   </style>
 </head>
 <body class="sticky-cta-pad">
@@ -106,7 +109,7 @@
 <header id="site-header">
   <div class="container header-flex">
     <a href="../../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
     <!-- Hamburger Button for Mobile -->
     <button id="nav-toggle" aria-label="Open Menu">
@@ -132,7 +135,7 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <!-- NOTE: from this file to nominee-and-fiduciary is ../../ -->
+            <!-- NOTE: up two levels to /services, then into nominee-and-fiduciary -->
             <li><a href="../../nominee-and-fiduciary/directorship-management-services.html">Directorship &amp; Management Services</a></li>
             <li><a href="../../nominee-and-fiduciary/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
             <li><a href="../../nominee-and-fiduciary/registered-address-services.html">Registered Address Services</a></li>
@@ -145,7 +148,7 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub (this page + sibling files) -->
+            <!-- Employment hub (this section) -->
             <li class="has-flyout">
               <a href="residency-by-employment-permit-services.html" aria-current="page" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -158,7 +161,7 @@
                 <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub (sibling folder) -->
+            <!-- Investment hub -->
             <li class="has-flyout">
               <a href="../residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -223,7 +226,7 @@
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA (identical pattern to Physical Office, but one level deeper) -->
+        <!-- Simple pages + header CTA (matching Physical Office) -->
         <li><a href="../../../about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
         <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
@@ -232,8 +235,6 @@
   </div>
 </header>
 
-<!-- NO anchor/tab nav under banner -->
-
 <main id="main-content">
   <!-- HERO -->
   <section class="page-hero fade-up" data-anim-delay="0.1">
@@ -241,7 +242,7 @@
       <h1>Residency by Employment Permit Services</h1>
       <p class="content-narrow">End-to-end support for employment-based stays in Cyprus—route selection, employer onboarding, filings, biometrics, and family joiners.</p>
 
-      <!-- Stats only (no extra hero Start button; Start is in header like your working page) -->
+      <!-- Small stat band (non-critical, enhances trust) -->
       <div class="stats" aria-label="Operational stats (illustrative)">
         <div class="stat">
           <div class="num" data-countup="320">320+</div>
@@ -600,7 +601,6 @@
   });
 </script>
 
-<!-- Global script in root -->
 <script src="../../../script.js?v=14" defer></script>
 </body>
 </html>
