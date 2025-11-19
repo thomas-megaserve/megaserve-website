@@ -34,21 +34,23 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
   <meta name="theme-color" content="#a00000" />
 
-  <!-- Global stylesheet from site root (this file is 3 levels deep) -->
+  <!-- Global stylesheet (root-level) -->
   <link rel="stylesheet" href="../../../style.css?v=14" />
+
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
-  <!-- Page-local helpers (kept consistent with other pages) -->
+  <!-- Page-local helpers (kept consistent with other service pages) -->
   <style>
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem; text-align:center;}
+    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center}
+    .page-hero h1{text-align:center}
     .content-narrow{max-width:900px;margin:0 auto}
 
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
 
-    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
 
@@ -60,22 +62,24 @@
     table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th, table.matrix th{background:#fafafa}
 
-    /* CTA fine print on dark/red strip */
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
-
     .faq dt{font-weight:700;margin-top:1rem}
     .faq dd{margin:0 0 1rem 0}
 
-    .fade-up{opacity:0; transform: translateY(14px);}
-    .fade-up.visible{opacity:1; transform: translateY(0);}
+    .fade-up{opacity:0;transform:translateY(14px)}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
 
     .link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem;margin-top:.5rem}
     .link-grid a{display:block;border:1px solid #e5e5e5;border-radius:.5rem;padding:.7rem .8rem;background:#fff}
     .badge{display:inline-block;background:var(--color-gold);color:#000;padding:.1rem .45rem;border-radius:.4rem;font-size:.75rem;margin-left:.4rem}
 
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1rem auto 0;max-width:900px}
+    .stat{border:1px solid #eee;border-radius:.75rem;padding:1rem;background:#fff;text-align:center}
+    .stat .num{font-size:1.6rem;font-weight:700}
+    .sr-only{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+
     .submenu-caret{margin-left:.35rem}
 
-    /* Header nav CTA (same as Physical Office page) */
+    /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
       background:#c1121f;
       color:#fff !important;
@@ -94,12 +98,6 @@
     #site-header .header-flex{
       align-items:center;
     }
-
-    /* Small stat band */
-    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1rem auto 0;max-width:900px}
-    .stat{border:1px solid #eee;border-radius:.75rem;padding:1rem;background:#fff;text-align:center}
-    .stat .num{font-size:1.6rem;font-weight:700}
-    .sr-only{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
   </style>
 </head>
 <body class="sticky-cta-pad">
@@ -135,7 +133,6 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <!-- NOTE: up two levels to /services, then into nominee-and-fiduciary -->
             <li><a href="../../nominee-and-fiduciary/directorship-management-services.html">Directorship &amp; Management Services</a></li>
             <li><a href="../../nominee-and-fiduciary/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
             <li><a href="../../nominee-and-fiduciary/registered-address-services.html">Registered Address Services</a></li>
@@ -148,7 +145,7 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub (this section) -->
+            <!-- Employment hub -->
             <li class="has-flyout">
               <a href="residency-by-employment-permit-services.html" aria-current="page" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -226,7 +223,7 @@
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA (matching Physical Office) -->
+        <!-- Simple pages + header CTA -->
         <li><a href="../../../about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
         <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
@@ -590,17 +587,23 @@
   window.addEventListener('DOMContentLoaded', function () {
     if (!window.CountUp) return;
     document.querySelectorAll('[data-countup]').forEach(function(el){
-      const endVal = parseFloat(el.getAttribute('data-countup')) || 0;
-      const cu = new CountUp.CountUp(el, endVal, {
+      var raw = el.getAttribute('data-countup') || '0';
+      var endVal = parseFloat(raw);
+      var hasPercent = el.textContent.trim().endsWith('%');
+      var hasPlus = el.textContent.trim().endsWith('+');
+      var suffix = '';
+      if (hasPercent) suffix = '%';
+      else if (hasPlus) suffix = '+';
+      var cu = new CountUp.CountUp(el, endVal, {
         duration:1.2,
-        separator: ',',
-        suffix: el.textContent.trim().endsWith('%') ? '%' : '+'
+        separator:',',
+        suffix:suffix
       });
       if (!cu.error) cu.start();
     });
   });
 </script>
 
-<script src="../../../script.js?v=14" defer></script>
+<script src="../../../script.js?v=14"></script>
 </body>
 </html>
