@@ -13,6 +13,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="../../../style.css?v=14">
+
   <!-- Canonical -->
   <link rel="canonical" href="https://www.megaserve.eu/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">
 
@@ -34,9 +37,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicons/favicon-16.png">
   <meta name="theme-color" content="#a00000">
 
-  <!-- Global stylesheet -->
-  <link rel="stylesheet" href="../../../style.css?v=14">
-
   <!-- CountUp -->
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
@@ -45,33 +45,24 @@
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
     .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center}
     .content-narrow{max-width:900px;margin:0 auto}
-
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
-
     .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
-
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
-
     .table-wrap{overflow-x:auto}
     table.service, table.matrix{width:100%;border-collapse:collapse}
     table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th, table.matrix th{background:#fafafa}
-
-    /* Keep CTA fine print readable on a red/dark banner */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
     #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
-
     .faq dt{font-weight:700;margin-top:1rem}
     .faq dd{margin:0 0 1rem 0}
-
     .fade-up{opacity:0;transform:translateY(14px)}
     .fade-up.visible{opacity:1;transform:translateY(0)}
-
     .submenu-caret{margin-left:.35rem}
 
     /* Header nav CTA */
@@ -228,10 +219,10 @@
 <main id="main-content">
 
   <!-- Hero (H1 + subhead) -->
-  <section class="page-hero">
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container">
-      <h1 class="fade-up" data-anim-delay="0ms">Visitors Permit</h1>
-      <p class="content-narrow fade-up" data-anim-delay="80ms">For non-EU nationals who wish to remain in Cyprus without employment. We scope eligibility, build the pack, file, liaise with authorities, and manage renewals for individuals and families.</p>
+      <h1>Visitors Permit</h1>
+      <p class="content-narrow">For non-EU nationals who wish to remain in Cyprus without employment. We scope eligibility, build the pack, file, liaise with authorities, and manage renewals for individuals and families.</p>
     </div>
   </section>
 
@@ -469,14 +460,14 @@
   </section>
 
   <!-- Contact CTA -->
-  <section id="contact-cta" class="cta-band fade-up" data-anim-delay="0.6" style="background:var(--color-primary);color:#fff">
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.6">
     <div class="container content-narrow">
-      <h2 class="fade-up" data-anim-delay="0ms">Start Your Visitors Permit Application</h2>
-      <p class="fade-up" data-anim-delay="60ms">Email your intended stay length, household details, and funding overview. We’ll reply with an eligibility memo, a tailored checklist, and a target submission window.</p>
-      <p class="fade-up" data-anim-delay="120ms">
+      <h2>Start Your Visitors Permit Application</h2>
+      <p class="contact-intro">Email your intended stay length, household details, and funding overview. We’ll reply with an eligibility memo, a tailored checklist, and a target submission window.</p>
+      <p>
         <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=Visitors%20Permit%20Application%20Coordination">Email MegaServe</a>
       </p>
-      <p class="note fade-up" data-anim-delay="180ms">Fastest turnaround — include passport scans, proof of funds/income, health insurance, and accommodation evidence.</p>
+      <p class="note">Fastest turnaround — include passport scans, proof of funds/income, health insurance, and accommodation evidence.</p>
     </div>
   </section>
 
