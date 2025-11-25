@@ -9,9 +9,9 @@
   <!-- Google Fonts (Inter + Merriweather) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Global styles (ROOT: /style.css) -->
+  <!-- Global styles (ROOT: /megaserve-website/style.css) -->
   <link rel="stylesheet" href="style.css?v=14">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <style>
     .page-hero{
@@ -89,9 +89,14 @@
     #main-nav .nav-cta a.btn-primary:hover{
       background:#9e0f1a;
     }
+
+    #site-header .header-flex{
+      align-items:center;
+    }
   </style>
 </head>
-<body>
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <header id="site-header">
   <div class="container header-flex">
@@ -109,11 +114,11 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="administrative-services.html">Administrative Services</a></li>
-            <li><a href="banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
@@ -121,11 +126,11 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="physical-office-rental-services.html">Physical Office Rental Services</a></li>
+            <li><a href="nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
@@ -135,45 +140,45 @@
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
             <!-- Employment hub -->
             <li class="has-flyout">
-              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="general-employment-permit.html">General Employment</a></li>
-                <li><a href="eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
             <!-- Investment hub -->
             <li class="has-flyout">
-              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="categories-a-f.html">Categories A–F</a></li>
-                <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
             <!-- Visitor hub -->
             <li class="has-flyout">
-              <a href="visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
             <!-- Citizenship hub -->
             <li class="has-flyout">
-              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of a Cypriot</a></li>
+                <li><a href="migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of a Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -183,9 +188,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a href="tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -193,9 +198,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="project-management-services.html">Project Management Services</a></li>
+            <li><a href="corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -203,11 +208,11 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
@@ -223,19 +228,19 @@
 <main id="main-content">
 
   <!-- Hero (H1 + subhead) -->
-  <section class="page-hero">
+  <section class="page-hero fade-up" data-anim-delay="0.1">
     <div class="container content-narrow">
-      <h1 class="fade-up" data-anim-delay="0ms">About MegaServe</h1>
-      <p class="fade-up" data-anim-delay="80ms">We combine corporate administration, compliance, and migration into one coordinated desk so your Cyprus footprint is clean, compliant, and easy to manage.</p>
+      <h1>About MegaServe</h1>
+      <p>We combine corporate administration, compliance, and migration into one coordinated desk so your Cyprus footprint is clean, compliant, and easy to manage.</p>
     </div>
   </section>
 
   <section class="container content-narrow">
 
     <!-- Overview -->
-    <h2 class="fade-up" data-anim-delay="0ms">Overview</h2>
-    <p class="fade-up" data-anim-delay="60ms">MegaServe supports growth companies, investors, and internationally mobile families establishing and operating in Cyprus. We orchestrate formations and governance, tax and VAT administration, banking coordination, nominee &amp; fiduciary functions, and full-spectrum migration and residency services—built on controls you can audit.</p>
-    <ul class="feature-list fade-up" data-anim-delay="120ms" aria-label="What we do">
+    <h2 class="fade-up" data-anim-delay="0.15">Overview</h2>
+    <p class="fade-up" data-anim-delay="0.2">MegaServe supports growth companies, investors, and internationally mobile families establishing and operating in Cyprus. We orchestrate formations and governance, tax and VAT administration, banking coordination, nominee &amp; fiduciary functions, and full-spectrum migration and residency services—built on controls you can audit.</p>
+    <ul class="feature-list fade-up" data-anim-delay="0.25" aria-label="What we do">
       <li>One team across corporate, compliance, banking coordination, and mobility</li>
       <li>Documented procedures and immutable evidence repositories</li>
       <li>Transparent timelines with proactive reporting and query tracking</li>
@@ -246,8 +251,8 @@
     <div class="keyline"></div>
 
     <!-- Optional Matrix/Table -->
-    <h2 class="fade-up" data-anim-delay="0ms">Coverage &amp; Update Cadence</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
+    <h2 class="fade-up" data-anim-delay="0.15">Coverage &amp; Update Cadence</h2>
+    <div class="table-wrap fade-up" data-anim-delay="0.2">
       <table class="matrix" aria-label="Coverage and update cadence">
         <thead>
           <tr>
@@ -295,8 +300,8 @@
     <div class="keyline"></div>
 
     <!-- Process -->
-    <h2 class="fade-up" data-anim-delay="0ms">How We Work</h2>
-    <ol class="process-steps fade-up" data-anim-delay="80ms" aria-label="Our process">
+    <h2 class="fade-up" data-anim-delay="0.15">How We Work</h2>
+    <ol class="process-steps fade-up" data-anim-delay="0.2" aria-label="Our process">
       <li>Scope &amp; map — confirm objectives, regulators, dependencies, and critical dates.</li>
       <li>Evidence build — collect proofs via secure channels; create checklists and templates.</li>
       <li>Submission &amp; liaison — file, track, and respond to authority queries with SLAs.</li>
@@ -307,8 +312,8 @@
     <div class="keyline"></div>
 
     <!-- Service Levels & Typical Timing -->
-    <h2 class="fade-up" data-anim-delay="0ms">Service Levels &amp; Typical Timing</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
+    <h2 class="fade-up" data-anim-delay="0.15">Service Levels &amp; Typical Timing</h2>
+    <div class="table-wrap fade-up" data-anim-delay="0.2">
       <table class="service" aria-label="Service levels">
         <thead>
           <tr>
@@ -340,13 +345,13 @@
         </tbody>
       </table>
     </div>
-    <p class="note fade-up" data-anim-delay="140ms">*Onboarding speed depends on document readiness, bank/KYC requirements, and registrar/authority scheduling.</p>
+    <p class="note fade-up" data-anim-delay="0.25">*Onboarding speed depends on document readiness, bank/KYC requirements, and registrar/authority scheduling.</p>
 
     <div class="keyline"></div>
 
     <!-- Deliverables -->
-    <h2 class="fade-up" data-anim-delay="0ms">Deliverables</h2>
-    <ul class="feature-list fade-up" data-anim-delay="80ms">
+    <h2 class="fade-up" data-anim-delay="0.15">Deliverables</h2>
+    <ul class="feature-list fade-up" data-anim-delay="0.2">
       <li>Eligibility/Scope memo and critical path plan</li>
       <li>Custom checklists, templates, and standard operating procedures</li>
       <li>Submission receipts, liaison logs, and decision archives</li>
@@ -357,8 +362,8 @@
     <div class="keyline"></div>
 
     <!-- Checklist -->
-    <h2 class="fade-up" data-anim-delay="0ms">Client Onboarding Checklist</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
+    <h2 class="fade-up" data-anim-delay="0.15">Client Onboarding Checklist</h2>
+    <div class="table-wrap fade-up" data-anim-delay="0.2">
       <table class="matrix" aria-label="Onboarding checklist">
         <thead>
           <tr>
@@ -406,8 +411,8 @@
     <div class="keyline"></div>
 
     <!-- Controls & Quality -->
-    <h2 class="fade-up" data-anim-delay="0ms">Controls &amp; Quality</h2>
-    <ul class="feature-list fade-up" data-anim-delay="80ms" aria-label="Quality controls">
+    <h2 class="fade-up" data-anim-delay="0.15">Controls &amp; Quality</h2>
+    <ul class="feature-list fade-up" data-anim-delay="0.2" aria-label="Quality controls">
       <li>Two-person review on submissions and statutory filings</li>
       <li>Immutable evidence archive and versioned templates</li>
       <li>Query tracking with defined response SLAs</li>
@@ -417,9 +422,9 @@
     <div class="keyline"></div>
 
     <!-- Team & Ethos -->
-    <h2 class="fade-up" data-anim-delay="0ms">Team &amp; Ethos</h2>
-    <p class="fade-up" data-anim-delay="60ms">We’re practitioners who value clarity. Every file is designed to be auditable, portable, and understandable by third parties—banks, regulators, counterparties, and future advisors. That’s how we reduce friction and keep your operations moving.</p>
-    <ul class="feature-list fade-up" data-anim-delay="120ms" aria-label="What clients value">
+    <h2 class="fade-up" data-anim-delay="0.15">Team &amp; Ethos</h2>
+    <p class="fade-up" data-anim-delay="0.2">We’re practitioners who value clarity. Every file is designed to be auditable, portable, and understandable by third parties—banks, regulators, counterparties, and future advisors. That’s how we reduce friction and keep your operations moving.</p>
+    <ul class="feature-list fade-up" data-anim-delay="0.25" aria-label="What clients value">
       <li>Single point of contact, backed by specialist desks</li>
       <li>Predictable timelines and proactive status reporting</li>
       <li>Bias to documentation and clean audit trails</li>
@@ -428,8 +433,8 @@
     <div class="keyline"></div>
 
     <!-- FAQ -->
-    <h2 class="fade-up" data-anim-delay="0ms">FAQ</h2>
-    <dl class="faq fade-up" data-anim-delay="80ms">
+    <h2 class="fade-up" data-anim-delay="0.15">FAQ</h2>
+    <dl class="faq fade-up" data-anim-delay="0.2">
       <dt>Who do you typically work with?</dt>
       <dd>International founders, investors, and families establishing operations or residency in Cyprus, plus established companies needing dependable compliance and governance.</dd>
 
@@ -445,44 +450,58 @@
       <dt>How quickly can we start?</dt>
       <dd>Core onboarding can begin within 1–2 weeks once ID/KYC and scope are confirmed.</dd>
     </dl>
-    <p class="note fade-up" data-anim-delay="140ms">This page summarises our approach. Engagement specifics are set out in your scope memo and letter of engagement.</p>
+    <p class="note fade-up" data-anim-delay="0.25">This page summarises our approach. Engagement specifics are set out in your scope memo and letter of engagement.</p>
 
   </section>
 
   <!-- Contact CTA -->
-  <section id="contact-cta" class="cta-band" style="background:var(--color-primary);color:#fff">
+  <section id="contact-cta" class="cta-band fade-up" data-anim-delay="0.3" style="background:var(--color-primary);color:#fff">
     <div class="container content-narrow">
-      <h2 class="fade-up" data-anim-delay="0ms">Talk to MegaServe</h2>
-      <p class="fade-up" data-anim-delay="60ms">Tell us your goals in Cyprus (company, banking, tax/VAT, residency), ideal timing, and current advisors. We’ll reply with a scope memo, checklist, and onboarding plan.</p>
-      <p class="fade-up" data-anim-delay="120ms">
-        <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=About%20MegaServe%20%E2%80%94%20Project%20Scope%20Request">Email MegaServe</a>
+      <h2>Talk to MegaServe</h2>
+      <p>Tell us your goals in Cyprus (company, banking, tax/VAT, residency), ideal timing, and current advisors. We’ll reply with a scope memo, checklist, and onboarding plan.</p>
+      <p>
+        <a class="btn-primary" href="mailto:megaserve@megaserve.eu?subject=About%20MegaServe%20%E2%80%94%20Project%20Scope%20Request">Email MegaServe</a>
       </p>
-      <p class="note fade-up" data-anim-delay="180ms">Fastest turnaround: include corporate docs or a short brief (who, what, where, by when).</p>
+      <p class="note">Fastest turnaround: include corporate docs or a short brief (who, what, where, by when).</p>
     </div>
   </section>
 
 </main>
 
 <footer id="site-footer">
-  <div class="container">
-    <div class="footer-flex">
-      <div>
-        <p><strong>MegaServe Cyprus</strong><br> Corporate, Compliance &amp; Migration Services</p>
-      </div>
-      <div>
-        <p><a href="mailto:hello@megaserve.eu">hello@megaserve.eu</a></p>
-      </div>
+  <div class="container footer-flex">
+    <div class="footer-left">
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> MegaServe. All rights reserved.</p>
+    <div class="footer-nav">
+      <a href="index.html#services">Services</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact-cta">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
+<!-- Year + CountUp helper -->
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!window.CountUp) return;
+    document.querySelectorAll('[data-countup]').forEach(function (el) {
+      var text = el.textContent.trim();
+      var hasPercent = text.endsWith('%');
+      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
+      var opts = { duration: 1.2, separator: ',', suffix: hasPercent ? '%' : '+' };
+      var cu = new CountUp.CountUp(el, endVal, opts);
+      if (!cu.error) cu.start();
+    });
+  });
 </script>
-<script src="script.js?v=14"></script>
+
+<script src="script.js?v=14" defer></script>
 
 </body>
 </html>
