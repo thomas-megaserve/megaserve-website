@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Global styles (same as homepage; note the ../) -->
-  <link rel="stylesheet" href="../style.css?v=13">
+  <link rel="stylesheet" href="../style.css?v=14">
 
   <!-- JSON-LD (Breadcrumbs) -->
   <script type="application/ld+json">
@@ -242,7 +242,24 @@
         <div class="bar" id="intakeProgress" style="width: 0%"></div>
       </div>
 
-      <form id="intakeForm" novalidate>
+      <!-- Netlify-enabled multi-step form -->
+      <form
+        id="intakeForm"
+        name="intake"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/start/thanks.html"
+        novalidate
+      >
+        <!-- Netlify form-name + honeypot -->
+        <input type="hidden" name="form-name" value="intake" />
+        <p style="display:none;">
+          <label>Don’t fill this out if you’re human:
+            <input name="bot-field" />
+          </label>
+        </p>
+
         <!-- STEP 1: Contact -->
         <fieldset class="step is-active" data-step="1" aria-label="Your details">
           <label class="field">
@@ -452,11 +469,13 @@
           <p class="tiny muted">We respond within 1 business day.</p>
         </fieldset>
 
-        <!-- Thank you state -->
+        <!-- If you later want an on-page thanks state, you can re-enable this and handle it via JS + custom endpoint -->
+        <!--
         <div class="thanks" id="intakeThanks" hidden>
           <h3>Thanks—got it.</h3>
           <p>We’ll review and get back to you shortly. A confirmation has been sent to your email.</p>
         </div>
+        -->
       </form>
     </div>
   </section>
@@ -485,17 +504,14 @@
 </footer>
 
 <!-- Global nav / dropdown JS (note ../) -->
-<script src="../script.js?v=13"></script>
+<script src="../script.js?v=14"></script>
 
-<!-- Intake form logic -->
+<!-- Intake form logic (multi-step only; submit falls through to Netlify) -->
 <script>
 (function(){
-  const FORM_ENDPOINT = "/api/intake"; // backend route / function; leave as-is until you wire it
-
   const form = document.getElementById("intakeForm");
   const steps = Array.from(form.querySelectorAll(".step"));
   const progress = document.getElementById("intakeProgress");
-  const thanks = document.getElementById("intakeThanks");
   let current = 0;
 
   // UTM/referrer capture
@@ -574,25 +590,14 @@
     if(btn.hasAttribute("data-prev")) { e.preventDefault(); prev(); }
   });
 
-  form.addEventListener("submit", async (e)=>{
-    e.preventDefault();
+  // Let Netlify handle the actual submission; only block if final step invalid
+  form.addEventListener("submit", (e)=>{
     const finalStep = steps[current];
-    if(!validateRequired(finalStep)) return;
-
-    const data = Object.fromEntries(new FormData(form).entries());
-
-    try{
-      const res = await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if(!res.ok) throw new Error("Submit failed");
-      form.querySelectorAll("fieldset").forEach(fs => fs.hidden = true);
-      thanks.hidden = false;
-    }catch(err){
-      alert("Submission error. Please try again or email info@megaserve.eu.");
+    if(!validateRequired(finalStep)){
+      e.preventDefault();
+      return;
     }
+    // If valid: no preventDefault => browser POSTs to action="/start/thanks.html" and Netlify records the submission.
   });
 
   // init
