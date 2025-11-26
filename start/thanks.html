@@ -2,100 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Start Now — MegaServe Cyprus</title>
-  <meta name="description" content="Begin your MegaServe intake — answer a few short questions so we can assess your eligibility, prepare your case, and connect you with the right specialist.">
+  <title>Thank You — MegaServe Cyprus</title>
+  <meta name="description" content="Your enquiry has been received. A MegaServe specialist will review your details and contact you within one business day.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://megaserve.eu/start/">
+  <link rel="canonical" href="https://megaserve.eu/start/thanks.html">
 
-  <!-- Favicons (adjust if/when you add them) -->
-  <link rel="icon" href="../assets/favicon.ico">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Global styles (same as homepage; note the ../) -->
+  <!-- Shared stylesheet -->
   <link rel="stylesheet" href="../style.css?v=14">
 
-  <!-- JSON-LD (Breadcrumbs) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://megaserve.eu/"},
-      {"@type":"ListItem","position":2,"name":"Start Now","item":"https://megaserve.eu/start/"}
-    ]
-  }
-  </script>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thank You — MegaServe Cyprus">
+  <meta property="og:description" content="Your enquiry has been received and is being reviewed by a MegaServe specialist.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://megaserve.eu/start/thanks.html">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/thank-you-og.jpg">
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Thank You — MegaServe Cyprus">
+  <meta name="twitter:description" content="Your enquiry has been received and is being reviewed by a MegaServe specialist.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/thank-you-og.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
+
+  <!-- Page-local style -->
   <style>
-    /* Page-local touch-ups (keep global tokens intact) */
-    .page-hero{
+    .page-hero {
       background:#fafafa;
-      border-bottom:2px solid var(--color-gold,#c9a227);
-      padding:2.5rem 0;
+      border-bottom:2px solid var(--color-gold);
+      padding:3rem 0;
+      text-align:center;
     }
-    .page-hero .container{
-      text-align:center; /* center breadcrumbs, eyebrow, h1, lead */
+    .page-hero h1 {
+      margin-bottom:0.75rem;
     }
-    .page-hero .breadcrumbs{font-size:.9rem;opacity:.85;margin-bottom:.5rem}
-    .page-hero .breadcrumbs a{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor}
-    .page-hero .eyebrow{letter-spacing:.08em;text-transform:uppercase;font-weight:600;opacity:.8;margin-bottom:.25rem}
-    .page-hero h1{margin:0 0 .5rem}
-    .lead{font-size:1.1rem;opacity:.9}
-    .section{padding:2.5rem 0}
-    .intake .progress{height:8px;background:#eee;border-radius:999px;margin:.5rem 0 1rem}
-    .intake .progress .bar{height:100%;background:var(--color-gold,#c9a227);border-radius:999px;transition:width .25s ease}
-    .intake .field{display:block;margin-bottom:1rem}
-    .intake .field > span{display:block;margin-bottom:.25rem;font-weight:600}
-    .intake .field input,
-    .intake .field select,
-    .intake .field textarea{
-      width:100%;
-      padding:.65rem .75rem;
-      border:1px solid #ccc;
-      border-radius:.5rem;
-      font:inherit;
+    .thank-box {
+      max-width:720px;
+      margin:3rem auto;
+      padding:2rem;
+      border:1px solid #e5e5e5;
+      border-radius:.75rem;
+      background:#fcfcfc;
+      text-align:center;
     }
-    .intake .checkbox{display:flex;gap:.5rem;align-items:flex-start;margin:.75rem 0}
-    .intake .checkbox input{margin-top:.2rem}
-    .intake .nav{display:flex;gap:.5rem;justify-content:flex-end;margin-top:.5rem}
-    .intake .error{color:#b00020;min-height:1em;display:block}
-    .intake fieldset{border:0;padding:0;margin:0}
-    .intake .step{display:none}
-    .intake .step.is-active{display:block}
-    .tiny{font-size:.85rem}
-    .muted{opacity:.8}
-    .thanks{padding:1rem;border:1px solid #e5e5e5;border-radius:.75rem;background:#fcfcfc}
-    .intake .container{max-width:760px}
-
-    /* High-contrast Start Now button in header (same as other pages) */
-    #main-nav .nav-cta a.btn-primary{
-      background:#c1121f;
-      color:#fff !important;
-      border:none;
-      padding:.6rem 1rem;
-      border-radius:.5rem;
-      font-weight:700;
-      letter-spacing:.02em;
-      display:inline-block;
-      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    .thank-box p {
+      margin:0.75rem 0;
+      opacity:.9;
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
+    .thank-box .btn-primary {
+      margin-top:1.25rem;
     }
   </style>
 </head>
 
-<body>
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
 
-<!-- HEADER (same structure as homepage, but with ../ paths) -->
+<!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
     <a href="../index.html" class="logo-link" aria-label="MegaServe Home">
       <img src="../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
+
     <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
 
     <nav id="main-nav" aria-label="Primary">
@@ -104,8 +83,8 @@
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
-          <ul class="dropdown" aria-label="Corporate Services Submenu">
+          <a href="#">Corporate Services</a>
+          <ul class="dropdown">
             <li><a href="../services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
             <li><a href="../services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
             <li><a href="../services/corporate-services/administrative-services.html">Administrative Services</a></li>
@@ -116,8 +95,8 @@
 
         <!-- Nominee & Fiduciary -->
         <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
+          <a href="#">Nominee &amp; Fiduciary Services</a>
+          <ul class="dropdown">
             <li><a href="../services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
             <li><a href="../services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
             <li><a href="../services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
@@ -128,14 +107,13 @@
 
         <!-- Migration & Relocation -->
         <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+          <a href="#">Migration &amp; Relocation Services</a>
+          <ul class="dropdown">
             <li class="has-flyout">
-              <a href="../services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
-                Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              <a href="../services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html">
+                Residency by Employment Permit Services <span class="submenu-caret">›</span>
               </a>
-              <ul class="flyout" aria-label="Employment permit routes">
+              <ul class="flyout">
                 <li><a href="../services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
                 <li><a href="../services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
                 <li><a href="../services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
@@ -144,34 +122,31 @@
               </ul>
             </li>
 
-            <!-- Investment hub -->
             <li class="has-flyout">
-              <a href="../services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
-                Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              <a href="../services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html">
+                Residency by Investment Permit Services <span class="submenu-caret">›</span>
               </a>
-              <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+              <ul class="flyout">
+                <li><a href="../services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2)</a></li>
                 <li><a href="../services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
                 <li><a href="../services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
 
-            <!-- Visitor hub -->
             <li class="has-flyout">
-              <a href="../services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
-                Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              <a href="../services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html">
+                Visitor Residency Permit Services <span class="submenu-caret">›</span>
               </a>
-              <ul class="flyout" aria-label="Visitor routes">
+              <ul class="flyout">
                 <li><a href="../services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
 
-            <!-- Citizenship hub -->
             <li class="has-flyout">
-              <a href="../services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
-                Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
+              <a href="../services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html">
+                Naturalisation &amp; Citizenship Services <span class="submenu-caret">›</span>
               </a>
-              <ul class="flyout" aria-label="Citizenship routes">
+              <ul class="flyout">
                 <li><a href="../services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
                 <li><a href="../services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
@@ -181,8 +156,8 @@
 
         <!-- Tax & VAT -->
         <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
-          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
+          <a href="#">Tax &amp; VAT Administration</a>
+          <ul class="dropdown">
             <li><a href="../services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
             <li><a href="../services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
             <li><a href="../services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
@@ -191,8 +166,8 @@
 
         <!-- Corporate Consultancy -->
         <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
-          <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
+          <a href="#">Corporate Consultancy</a>
+          <ul class="dropdown">
             <li><a href="../services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
             <li><a href="../services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
             <li><a href="../services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
@@ -201,8 +176,8 @@
 
         <!-- Compliance -->
         <li class="has-dropdown">
-          <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
-          <ul class="dropdown" aria-label="Compliance Services Submenu">
+          <a href="#">Compliance Services</a>
+          <ul class="dropdown">
             <li><a href="../services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
             <li><a href="../services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
             <li><a href="../services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
@@ -212,389 +187,61 @@
         </li>
 
         <li><a href="../about.html">About</a></li>
-        <li><a href="#intake">Contact</a></li>
+        <li><a href="../index.html#contact-cta">Contact</a></li>
 
-        <!-- CTA: on this page, scrolls to intake form -->
-        <li class="nav-cta"><a class="btn-primary" href="#intake">Start Now</a></li>
+        <li class="nav-cta">
+          <a class="btn-primary" href="../start/index.html">Start Now</a>
+        </li>
       </ul>
     </nav>
   </div>
 </header>
 
-<!-- PAGE HERO -->
+<!-- HERO -->
 <section class="page-hero">
   <div class="container">
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="../index.html">Home</a> / <span>Start Now</span>
-    </nav>
-    <div class="eyebrow">Client Intake</div>
-    <h1>Start Now</h1>
-    <p class="lead">Answer a few questions so we can route you correctly. Takes ~2 minutes.</p>
+    <h1>Thank You</h1>
+    <p>Your submission has been received.</p>
   </div>
 </section>
 
-<!-- MAIN: INTAKE FORM -->
-<main id="main" class="section">
-  <section class="intake" id="intake">
-    <div class="container">
-      <!-- Progress -->
-      <div class="progress" aria-hidden="true">
-        <div class="bar" id="intakeProgress" style="width: 0%"></div>
-      </div>
+<!-- MAIN -->
+<main id="main-content">
+  <div class="thank-box">
+    <h2>We’ve Got Your Details</h2>
+    <p>A MegaServe specialist is now reviewing your enquiry.</p>
+    <p>You’ll receive a reply within <strong>one business day</strong>.</p>
 
-      <!-- Netlify-enabled multi-step form -->
-      <form
-        id="intakeForm"
-        name="intake"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        action="thanks.html"
-        novalidate
-      >
-        <!-- Netlify form-name + honeypot -->
-        <input type="hidden" name="form-name" value="intake" />
-        <p style="display:none;">
-          <label>Don’t fill this out if you’re human:
-            <input name="bot-field" />
-          </label>
-        </p>
-
-        <!-- STEP 1: Contact -->
-        <fieldset class="step is-active" data-step="1" aria-label="Your details">
-          <label class="field">
-            <span>Full name *</span>
-            <input type="text" name="full_name" required autocomplete="name" />
-            <small class="error"></small>
-          </label>
-          <label class="field">
-            <span>Email *</span>
-            <input type="email" name="email" required autocomplete="email" />
-            <small class="error"></small>
-          </label>
-          <label class="field">
-            <span>Phone (with country code)</span>
-            <input type="tel" name="phone" inputmode="tel" autocomplete="tel" />
-            <small class="error"></small>
-          </label>
-          <div class="nav">
-            <button type="button" class="btn btn-primary" data-next>Next</button>
-          </div>
-        </fieldset>
-
-        <!-- STEP 2: What do you need? -->
-        <fieldset class="step" data-step="2" aria-label="Service">
-          <label class="field">
-            <span>What do you need help with? *</span>
-            <select name="service" required>
-              <option value="" hidden>Select one</option>
-              <option value="residence">Residence / PR in Cyprus</option>
-              <option value="company">Company setup / corporate admin</option>
-              <option value="tax">Personal / corporate tax planning</option>
-              <option value="property">Property purchase / relocation</option>
-              <option value="other">Other (describe next)</option>
-            </select>
-            <small class="error"></small>
-          </label>
-          <div class="nav">
-            <button type="button" class="btn" data-prev>Back</button>
-            <button type="button" class="btn btn-primary" data-next>Next</button>
-          </div>
-        </fieldset>
-
-        <!-- STEP 3A: Residence -->
-        <fieldset class="step" data-step="3" data-branch="residence" aria-label="Residence details">
-          <label class="field">
-            <span>Status *</span>
-            <select name="residence_status" required>
-              <option value="" hidden>Select one</option>
-              <option value="eu">EU citizen</option>
-              <option value="non-eu">Non-EU citizen</option>
-              <option value="family">Family member of EU citizen</option>
-            </select>
-            <small class="error"></small>
-          </label>
-          <label class="field">
-            <span>Target route</span>
-            <select name="residence_route">
-              <option value="" hidden>Select (optional)</option>
-              <option value="reg6-2">Permanent Residence Reg. 6(2)</option>
-              <option value="work-permit">Employment permit</option>
-              <option value="digit-nomad">Digital Nomad</option>
-            </select>
-          </label>
-          <div class="nav">
-            <button type="button" class="btn" data-prev>Back</button>
-            <button type="button" class="btn btn-primary" data-next>Next</button>
-          </div>
-        </fieldset>
-
-        <!-- STEP 3B: Company -->
-        <fieldset class="step" data-step="3" data-branch="company" aria-label="Company details">
-          <label class="field">
-            <span>Current situation *</span>
-            <select name="company_stage" required>
-              <option value="" hidden>Select one</option>
-              <option value="new">New Cyprus company</option>
-              <option value="redomicile">Redomicile to Cyprus</option>
-              <option value="admin">Ongoing corporate admin</option>
-            </select>
-            <small class="error"></small>
-          </label>
-          <label class="field">
-            <span>Industry (optional)</span>
-            <input type="text" name="industry" placeholder="e.g., SaaS, trading, holding" />
-          </label>
-          <div class="nav">
-            <button type="button" class="btn" data-prev>Back</button>
-            <button type="button" class="btn btn-primary" data-next>Next</button>
-          </div>
-        </fieldset>
-
-        <!-- STEP 3C: Tax -->
-        <fieldset class="step" data-step="3" data-branch="tax" aria-label="Tax details">
-          <label class="field">
-            <span>Scope *</span>
-            <select name="tax_scope" required>
-              <option value="" hidden>Select one</option>
-              <option value="personal">Personal tax</option>
-              <option value="corporate">Corporate tax</option>
-              <option value="both">Both</option>
-            </select>
-            <small class="error"></small>
-          </label>
-          <label class="field">
-            <span>Countries involved (comma-separated)</span>
-            <input type="text" name="tax_countries" placeholder="e.g., Cyprus, Germany" />
-          </label>
-          <div class="nav">
-            <button type="button" class="btn" data-prev>Back</button>
-            <button type="button" class="btn btn-primary" data-next>Next</button>
-          </div>
-        </fieldset>
-
-        <!-- STEP 3D: Property -->
-        <fieldset class="step" data-step="3" data-branch="property" aria-label="Property details">
-          <label class="field">
-            <span>Property intent *</span>
-            <select name="property_intent" required>
-              <option value="" hidden>Select one</option>
-              <option value="buy">Buy</option>
-              <option value="sell">Sell</option>
-              <option value="relocate">Relocate</option>
-            </select>
-            <small class="error"></small>
-          </label>
-          <label class="field">
-            <span>Locations of interest</span>
-            <input type="text" name="property_locations" placeholder="e.g., Nicosia, Limassol" />
-          </label>
-          <div class="nav">
-            <button type="button" class="btn" data-prev>Back</button>
-            <button type="button" class="btn btn-primary" data-next>Next</button>
-          </div>
-        </fieldset>
-
-        <!-- STEP 3E: Other -->
-        <fieldset class="step" data-step="3" data-branch="other" aria-label="Describe your case">
-          <label class="field">
-            <span>Brief description *</span>
-            <textarea name="message" rows="5" required placeholder="Give us the core facts."></textarea>
-            <small class="error"></small>
-          </label>
-          <div class="nav">
-            <button type="button" class="btn" data-prev>Back</button>
-            <button type="button" class="btn btn-primary" data-next>Next</button>
-          </div>
-        </fieldset>
-
-        <!-- STEP 4: Budget & urgency -->
-        <fieldset class="step" data-step="4" aria-label="Budget and timing">
-          <label class="field">
-            <span>Approximate budget *</span>
-            <select name="budget" required>
-              <option value="" hidden>Select one</option>
-              <option value="<1k">Under €1,000</option>
-              <option value="1-3k">€1,000–3,000</option>
-              <option value="3-10k">€3,000–10,000</option>
-              <option value=">10k">€10,000+</option>
-            </select>
-            <small class="error"></small>
-          </label>
-          <label class="field">
-            <span>Urgency *</span>
-            <select name="urgency" required>
-              <option value="" hidden>Select one</option>
-              <option value="asap">ASAP (this week)</option>
-              <option value="2-4w">2–4 weeks</option>
-              <option value="1-3m">1–3 months</option>
-              <option value=">3m">3+ months</option>
-            </select>
-            <small class="error"></small>
-          </label>
-          <div class="nav">
-            <button type="button" class="btn" data-prev>Back</button>
-            <button type="button" class="btn btn-primary" data-next>Next</button>
-          </div>
-        </fieldset>
-
-        <!-- STEP 5: Consent & submit -->
-        <fieldset class="step" data-step="5" aria-label="Consent and submit">
-          <label class="checkbox">
-            <input type="checkbox" name="consent" required />
-            <span>I agree to the Privacy Notice and to be contacted about my enquiry. *</span>
-          </label>
-          <label class="checkbox">
-            <input type="checkbox" name="marketing_ok" />
-            <span>Optional: keep me updated with relevant changes in law.</span>
-          </label>
-
-          <!-- Hidden tracking fields -->
-          <input type="hidden" name="utm_source" />
-          <input type="hidden" name="utm_medium" />
-          <input type="hidden" name="utm_campaign" />
-          <input type="hidden" name="utm_content" />
-          <input type="hidden" name="gclid" />
-          <input type="hidden" name="fbclid" />
-          <input type="hidden" name="referrer" />
-          <input type="hidden" name="page" />
-
-          <!-- Cloudflare Turnstile hook (optional) -->
-          <div id="turnstile-container" class="mt-2"></div>
-
-          <div class="nav">
-            <button type="button" class="btn" data-prev>Back</button>
-            <button type="submit" class="btn btn-primary">Send enquiry</button>
-          </div>
-          <p class="tiny muted">We respond within 1 business day.</p>
-        </fieldset>
-      </form>
-    </div>
-  </section>
+    <a href="../index.html" class="btn-primary">Return Home</a>
+  </div>
 </main>
 
-<!-- FOOTER (same layout, with ../ paths) -->
+<!-- FOOTER -->
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
       <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>Contact:
+        <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> |
+        Tel: +357 22 000000
+      </p>
     </div>
+
     <div class="footer-nav">
       <a href="../about.html">About</a>
-      <a href="../services/corporate-services/company-formation-services.html">Corporate Services</a>
-      <a href="../services/nominee-and-fiduciary-services/directorship-management-services.html">Nominee &amp; Fiduciary</a>
-      <a href="../services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html">Migration &amp; Relocation</a>
-      <a href="../services/tax-and-vat-administration/tic-tin-registration-services.html">Tax &amp; VAT</a>
-      <a href="../services/corporate-consultancy/ma-advisory-services.html">Consultancy</a>
-      <a href="../services/compliance-services/client-onboarding-assistance-services.html">Compliance</a>
-      <a href="#intake">Start Now</a>
+      <a href="../services/corporate-services/company-formation-services.html">Services</a>
+      <a href="../index.html#contact-cta">Contact</a>
       <a href="../privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- Global nav / dropdown JS (note ../) -->
-<script src="../script.js?v=14"></script>
-
-<!-- Intake form logic (multi-step only; submit falls through to Netlify) -->
 <script>
-(function(){
-  const form = document.getElementById("intakeForm");
-  const steps = Array.from(form.querySelectorAll(".step"));
-  const progress = document.getElementById("intakeProgress");
-  let current = 0;
-
-  // UTM/referrer capture
-  const params = new URLSearchParams(location.search);
-  form.elements["utm_source"].value = params.get("utm_source") || "";
-  form.elements["utm_medium"].value = params.get("utm_medium") || "";
-  form.elements["utm_campaign"].value = params.get("utm_campaign") || "";
-  form.elements["utm_content"].value = params.get("utm_content") || "";
-  form.elements["gclid"].value = params.get("gclid") || "";
-  form.elements["fbclid"].value = params.get("fbclid") || "";
-  form.elements["referrer"].value = document.referrer || "";
-  form.elements["page"].value = location.pathname;
-
-  function show(i){
-    steps.forEach(s => s.classList.remove("is-active"));
-    steps[i].classList.add("is-active");
-    current = i;
-    const pct = Math.round(((i+1)/steps.length)*100);
-    progress.style.width = pct + "%";
-    const first = steps[i].querySelector("input, select, textarea, button[data-next]");
-    if (first) first.focus({preventScroll:true});
-  }
-
-  function currentBranch(){
-    const service = form.elements["service"]?.value;
-    return service || "other";
-  }
-
-  function validateRequired(scope){
-    let ok = true;
-    scope.querySelectorAll("[required]").forEach(el=>{
-      const small = el.parentElement.querySelector(".error");
-      const missing = (el.type === "checkbox") ? !el.checked : !el.value;
-      if(missing){
-        ok = false;
-        if(small){ small.textContent = "This field is required."; }
-        el.setAttribute("aria-invalid","true");
-      }else{
-        if(small){ small.textContent = ""; }
-        el.removeAttribute("aria-invalid");
-      }
-    });
-    return ok;
-  }
-
-  function next(){
-    const step = steps[current];
-    if(!validateRequired(step)) return;
-
-    if(step.dataset.step === "2"){
-      const target = steps.findIndex(s => s.dataset.step === "3" && s.dataset.branch === currentBranch());
-      show(target >= 0 ? target : steps.findIndex(s => s.dataset.step === "3" && s.dataset.branch === "other"));
-      return;
-    }
-    if(step.dataset.step === "3"){
-      show(steps.findIndex(s=>s.dataset.step==="4"));
-      return;
-    }
-    if(current < steps.length - 1) show(current + 1);
-  }
-
-  function prev(){
-    const step = steps[current];
-    if(step.dataset.step === "4"){
-      const target = steps.findIndex(s => s.dataset.step === "3" && s.dataset.branch === currentBranch());
-      show(target >= 0 ? target : steps.findIndex(s => s.dataset.step === "3" && s.dataset.branch === "other"));
-      return;
-    }
-    if(current > 0) show(current - 1);
-  }
-
-  form.addEventListener("click", (e)=>{
-    const btn = e.target.closest("button");
-    if(!btn) return;
-    if(btn.hasAttribute("data-next")) { e.preventDefault(); next(); }
-    if(btn.hasAttribute("data-prev")) { e.preventDefault(); prev(); }
-  });
-
-  // Let Netlify handle the actual submission; only block if final step invalid
-  form.addEventListener("submit", (e)=>{
-    const finalStep = steps[current];
-    if(!validateRequired(finalStep)){
-      e.preventDefault();
-      return;
-    }
-    // No preventDefault here: browser posts to action="thanks.html"; Netlify records submission and redirects.
-  });
-
-  // init
-  show(0);
-})();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
+<script src="../script.js?v=14" defer></script>
+
 </body>
 </html>
