@@ -249,7 +249,7 @@
         method="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
-        action="/start/thanks.html"
+        action="thanks.html"
         novalidate
       >
         <!-- Netlify form-name + honeypot -->
@@ -597,7 +597,7 @@
       e.preventDefault();
       return;
     }
-    // If valid: no preventDefault => browser POSTs to action="/start/thanks.html" and Netlify records the submission.
+    // If valid: no preventDefault => browser POSTs to action="thanks.html" and Netlify records the submission.
   });
 
   // init
