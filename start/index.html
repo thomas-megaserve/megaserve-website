@@ -247,9 +247,10 @@
         id="intakeForm"
         name="intake"
         method="POST"
+        netlify
         data-netlify="true"
         netlify-honeypot="bot-field"
-        action="thanks.html"
+        action="/start/thanks.html"
         novalidate
       >
         <!-- Netlify form-name + honeypot -->
@@ -495,6 +496,13 @@
   </div>
 </footer>
 
+<!-- Hidden minimal form to force Netlify form detection at build time -->
+<form name="intake" netlify data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="full_name" />
+  <input type="email" name="email" />
+  <textarea name="message"></textarea>
+</form>
+
 <!-- Global nav / dropdown JS (note ../) -->
 <script src="../script.js?v=14"></script>
 
@@ -589,7 +597,8 @@
       e.preventDefault();
       return;
     }
-    // No preventDefault here: browser posts to action="thanks.html"; Netlify records submission and redirects.
+    // No preventDefault here: browser posts to action="/start/thanks.html";
+    // Netlify records the submission and redirects with a GET.
   });
 
   // init
