@@ -468,14 +468,6 @@
           </div>
           <p class="tiny muted">We respond within 1 business day.</p>
         </fieldset>
-
-        <!-- If you later want an on-page thanks state, you can re-enable this and handle it via JS + custom endpoint -->
-        <!--
-        <div class="thanks" id="intakeThanks" hidden>
-          <h3>Thanks—got it.</h3>
-          <p>We’ll review and get back to you shortly. A confirmation has been sent to your email.</p>
-        </div>
-        -->
       </form>
     </div>
   </section>
@@ -487,7 +479,7 @@
     <div class="footer-left">
       <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
       <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 000000</p>
     </div>
     <div class="footer-nav">
       <a href="../about.html">About</a>
@@ -597,7 +589,7 @@
       e.preventDefault();
       return;
     }
-    // If valid: no preventDefault => browser POSTs to action="thanks.html" and Netlify records the submission.
+    // No preventDefault here: browser posts to action="thanks.html"; Netlify records submission and redirects.
   });
 
   // init
