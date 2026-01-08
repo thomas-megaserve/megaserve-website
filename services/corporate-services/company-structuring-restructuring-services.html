@@ -62,8 +62,6 @@
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
 
-    .badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.2rem .6rem;font-size:.8rem;margin:.15rem 0}
-
     .doc-list{list-style:none;padding-left:0}
     .doc-list li{padding:.35rem 0}
 
@@ -76,7 +74,10 @@
     .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
     .case-study h3{margin:.25rem 0 .5rem}
 
-    /* Anchor nav (exists in global CSS; keep structure identical) */
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
     .section-spaced{margin-top:2rem}
     .submenu-caret{margin-left:.35rem}
 
@@ -245,11 +246,11 @@
   </div>
 </header>
 
-<!-- HERO (expanded like Company Formation: micro-trust + CTA buttons) -->
+<!-- HERO (keep CTA + micro trust like Company Formation) -->
 <section class="page-hero fade-up" data-anim-delay="0.1">
   <div class="container content-narrow">
     <h1>Company Structuring &amp; Re-Structuring</h1>
-    <p>Design or refine Cyprus-linked structures—holding, trading, SPVs—aligned with governance, tax efficiency, banking, and operational risk. We blueprint options, cost them, and deliver filings, contracts, banking, and substance—cleanly.</p>
+    <p>Design, optimise, or overhaul Cyprus structures—holding, trading, SPVs, re-domiciliations, governance, banking footprint, and operational substance. Practical, compliant, costed execution.</p>
     <div class="micro-trust">Cyprus-based team · <strong>30+ years’ experience</strong> · Multilingual corporate services</div>
 
     <div class="cta-row">
@@ -260,198 +261,177 @@
   </div>
 </section>
 
-<!-- Anchor sub-nav (explicit and immediately beneath hero, like Company Formation) -->
+<!-- Anchor sub-nav (mirror Company Formation pattern) -->
 <nav class="anchor-nav fade-up" aria-label="Section navigation">
   <div class="container content-narrow">
-    <a href="#overview">Overview</a>
-    <a href="#approach">Approach</a>
-    <a href="#deliverables">Deliverables</a>
-    <a href="#pricing">Timelines</a>
-    <a href="#documents-checklist">Checklist</a>
-    <a href="#faq">FAQs</a>
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#risk">Risk</a>
+    <a href="#faqs">FAQs</a>
     <a href="#contact-cta">Start</a>
   </div>
 </nav>
 
-<main id="main-content">
-  <section class="container fade-up" data-anim-delay="0.15" id="overview">
-    <div class="content-narrow">
-      <h2>What We Do</h2>
-      <ul class="feature-list">
-        <li>Holding &amp; trading architectures; IP/SPV vehicles; branch vs subsidiary analysis</li>
-        <li>Cross-border re-domiciliation, share capital changes, intercompany realignments</li>
-        <li>Board composition, governance policies, decision-rights, and delegations</li>
-        <li>Substance build-out: directors, staff, registered/physical office, VO/IT stack</li>
-        <li>Banking footprint optimisation (Cyprus &amp; EEA/UK/CH/ROW), payments pathways</li>
-        <li>Compliance scaffolding: KYC/AML, sanctions, tax/VAT registrations, reporting</li>
-      </ul>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
 
-      <div class="keyline"></div>
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>Groups requiring a clean holding/trading spine across subsidiaries, branches, and SPVs</li>
+      <li>Companies facing banking friction, de-risking requirements, or payment corridor instability</li>
+      <li>Owners preparing for acquisition, divestment, investor demands, or a governance uplift</li>
+    </ul>
 
-      <h2>When to Re-Structure</h2>
-      <ul class="feature-list">
-        <li>Acquisition, divestment, or group carve-out requires a new legal &amp; tax spine</li>
-        <li>Banking friction, de-risking, or payment corridor instability</li>
-        <li>Shareholder changes, investor demands, or governance uplift</li>
-        <li>Entering new markets; VAT/TIC &amp; permanent establishment considerations</li>
-        <li>Cost discipline: simplify entities, reduce advisors, automate reporting</li>
-      </ul>
+    <div class="keyline"></div>
 
-      <p class="note">We emphasise <em>operationally bankable</em> designs (i.e., credible to counterparties and banks)—not just diagrams.</p>
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>Structural options memo (diagram + decision brief)</li>
+      <li>Implementation plan (Gantt-style checkpoints, critical path, owners)</li>
+      <li>Registrar packs, resolutions, intercompany agreements, policy templates</li>
+      <li>Banking dossier (KYC package, activity narrative, cashflow map)</li>
+      <li>Compliance calendar (tax/VAT, UBO/BoR, filings, renewals)</li>
+      <li>Substance plan (roles, office, VO, vendors, IT stack)</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Discovery:</strong> commercial goals, current map, counterparty &amp; banking constraints, risk profile.</li>
+      <li><strong>Blueprint:</strong> 2–3 viable patterns with pros/cons, tax/compliance notes, time/cost, dependencies.</li>
+      <li><strong>Execution:</strong> registrar filings, intercompany contracts, banking onboarding, VAT/TIC, HR/substance.</li>
+      <li><strong>Stabilise:</strong> first-90-days monitoring, filings calendar, governance cadence, periodic tune-ups.</li>
+    </ol>
+
+    <div class="section-spaced table-wrap" id="timelines">
+      <table class="pricing" aria-label="Indicative timelines and scope">
+        <thead>
+          <tr>
+            <th>Work Package</th>
+            <th>Typical Timeline</th>
+            <th>Outputs</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Discovery &amp; Blueprint</td>
+            <td>1–2 weeks</td>
+            <td>Options memo, implementation plan, dependencies &amp; critical path</td>
+            <td>Kickoff doc set confirmed at start</td>
+          </tr>
+          <tr>
+            <td>Registrar Filings &amp; Contracts</td>
+            <td>1–4 weeks</td>
+            <td>Registrar packs, resolutions, share capital/log changes, intercompany suite</td>
+            <td>Timeline varies based on the number of entities and changes involved</td>
+          </tr>
+          <tr>
+            <td>Banking Onboarding</td>
+            <td>2–6 weeks</td>
+            <td>KYC pack, activity narrative, payment corridors &amp; cash-flow map</td>
+            <td>Subject to bank/EMI due-diligence cadence</td>
+          </tr>
+          <tr>
+            <td>Substance Build-Out</td>
+            <td>2–8 weeks</td>
+            <td>Directors, registered/physical office, VO/IT, HR vendors</td>
+            <td>Often phased across 2–3 sprints</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
+    <p class="note">Final scope and a fixed fee are confirmed after Discovery. We can bundle packages once dependencies are clear.</p>
 
-  <section class="container fade-up" data-anim-delay="0.2" id="approach">
-    <div class="content-narrow">
-      <h2>Our Approach</h2>
-      <ol class="process-steps">
-        <li><strong>Discovery:</strong> commercial goals, current map, counterparty &amp; banking constraints, risk profile.</li>
-        <li><strong>Blueprint:</strong> 2–3 viable patterns with pros/cons, tax/compliance notes, time/cost, dependencies.</li>
-        <li><strong>Execution:</strong> registrar filings, intercompany contracts, banking onboarding, VAT/TIC, HR/substance.</li>
-        <li><strong>Stabilise:</strong> first-90-days monitoring, filings calendar, governance cadence, periodic tune-ups.</li>
-      </ol>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>Multi-Entity Group Structuring (Oil &amp; Gas Services)</h3>
+      <p class="muted"><strong>Client:</strong> International oil &amp; gas services group (anonymised)</p>
+      <p>An international oil &amp; gas services group required a Cyprus-aligned structure capable of supporting multiple subsidiaries, branches, and registered offices, while remaining credible to banks and compliant with ongoing regulatory obligations.</p>
+      <p>MegaServe mapped the existing group, produced a target structure and governance framework, coordinated registered office and statutory alignments, and executed the required corporate actions and registrar filings end-to-end. The restructuring was completed <strong>in less than standard Cyprus timelines</strong>, with <strong>no registrar rework or resubmissions required</strong>, resulting in a clean, bankable group structure suitable for ongoing operations and compliance.</p>
     </div>
-  </section>
 
-  <section class="container fade-up" data-anim-delay="0.25" id="deliverables">
-    <div class="content-narrow">
-      <h2>Deliverables</h2>
-      <ul class="feature-list">
-        <li>Structural options memo (diagram + decision brief)</li>
-        <li>Implementation plan (Gantt-style checkpoints, critical path, owners)</li>
-        <li>Registrar packs, resolutions, intercompany agreements, policy templates</li>
-        <li>Banking dossier (KYC package, activity narrative, cashflow map)</li>
-        <li>Compliance calendar (tax/VAT, UBO/BoR, filings, renewals)</li>
-        <li>Substance plan (roles, office, VO, vendors, IT stack)</li>
-      </ul>
+    <div class="keyline"></div>
 
-      <h2 class="section-spaced">Case Study</h2>
-      <div class="case-study">
-        <h3>Multi-Entity Group Structuring (Oil &amp; Gas Services)</h3>
-        <p class="muted"><strong>Client:</strong> International oil &amp; gas services group (anonymised)</p>
-        <p>An international oil &amp; gas services group required a Cyprus-aligned structure capable of supporting multiple subsidiaries, branches, and registered offices, while remaining credible to banks and compliant with ongoing regulatory obligations.</p>
-        <p>MegaServe mapped the existing group, produced a target structure and governance framework, coordinated registered office and statutory alignments, and executed the required corporate actions and registrar filings end-to-end. The restructuring was completed <strong>in less than standard Cyprus timelines</strong>, with <strong>no registrar rework or resubmissions required</strong>, resulting in a clean, bankable group structure suitable for ongoing operations and compliance.</p>
-      </div>
+    <h2 id="requirements">Requirements (Client Checklist)</h2>
+    <ul class="doc-list">
+      <li>Group org chart &amp; cap table (current &amp; desired)</li>
+      <li>Recent financials &amp; key contracts (intercompany, major suppliers/customers)</li>
+      <li>Directors’ IDs/POAs; UBO IDs/POAs; proof of address</li>
+      <li>Business activity narrative &amp; projected cashflows</li>
+      <li>Existing bank details, pain points, onboarding feedback (if any)</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="risk">Risk &amp; Mitigations</h2>
+    <ul class="feature-list">
+      <li><strong>Banking cadence:</strong> onboarding timelines are subject to bank/EMI due diligence; we standardise the KYC narrative and cashflow map to reduce rework.</li>
+      <li><strong>Multi-entity coordination:</strong> we run an actions register (owners/dates/dependencies) to prevent missed filings during transition.</li>
+      <li><strong>Substance expectations:</strong> we phase substance build-out where required (directors/office/vendors) to keep the structure credible to counterparties.</li>
+      <li><strong>Cyprus levers:</strong> efficient holding/trading hub positioning for CEE/MEA flows; broad treaty network; familiar EU compliance baseline; predictable corporate maintenance cadence.</li>
+    </ul>
+    <p class="note">We can integrate non-Cyprus entities (EEA/UK/CH/UA/AE/US) into a coherent, bankable chain where needed.</p>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Can you support cross-border re-domiciliations?</summary>
+        <p>Yes. We coordinate counsel across sending/receiving registrars, migrate statutory books, and align banking &amp; tax/VAT.</p>
+      </details>
+
+      <details>
+        <summary>Do you provide directors and local office?</summary>
+        <p>Yes. We can provide nominee directors, registered address, and physical/virtual office options with appropriate controls.</p>
+      </details>
+
+      <details>
+        <summary>What about banking if a file has history?</summary>
+        <p>We prepare a <em>banking narrative</em> that addresses historic issues directly, updates KYC data, and maps clean payment flows.</p>
+      </details>
+
+      <details>
+        <summary>How do you ensure ongoing compliance?</summary>
+        <p>We install a filings calendar, policy set (KYC/AML, sanctions), and light-touch quarterly checks or an annual review.</p>
+      </details>
     </div>
-  </section>
+    <p class="note">If you have an unusual jurisdiction or complex legacy, include a short background when you contact us. We’ll factor it into the first options memo.</p>
 
-  <section class="container fade-up" data-anim-delay="0.3" id="cyprus-levers">
-    <div class="content-narrow">
-      <h2>Cyprus-Specific Levers</h2>
-      <ul class="feature-list">
-        <li>Efficient holding/trading hub positioning for CEE/MEA flows</li>
-        <li>Broad treaty network and familiar EU compliance baseline</li>
-        <li>Well-trodden registrar and banking practices for corporates</li>
-        <li>Predictable corporate maintenance and reporting cadence</li>
-      </ul>
-      <p class="note">We can integrate non-Cyprus entities (EEA/UK/CH/UA/AE/US) into a coherent, bankable chain where needed.</p>
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/corporate-services/banking-administration-services.html">Banking Administration</a> ·
+      <a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial</a> ·
+      <a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address</a> ·
+      <a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC/TIN Registration</a> ·
+      <a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration</a>
+    </p>
+
+    <h2 class="section-spaced">Other Jurisdictions (on request)</h2>
+    <p class="muted">We can integrate non-Cyprus entities (EEA/UK/CH/UA/AE/US) into a coherent, bankable chain where needed.</p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.55" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
+    <h2>Request a Structuring Blueprint</h2>
+    <p class="contact-intro">Get a concise, costed proposal with timelines and clear next steps.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Company%20Structuring%20%26%20Re-Structuring%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="company-structuring">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Structuring%20%26%20Re-Structuring" class="btn-secondary" data-cta="book-call" data-page="company-structuring">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Company%20Structuring%20%26%20Re-Structuring" class="btn-secondary" data-cta="book-visit" data-page="company-structuring">Book a Visit (Nicosia)</a>
     </div>
-  </section>
-
-  <section class="container fade-up" data-anim-delay="0.35" id="scenarios">
-    <div class="content-narrow">
-      <h2>Typical Scenarios We Execute</h2>
-      <ul class="feature-list">
-        <li><strong>Group Clean-Up:</strong> merge dormant entities, regularise share capital, and reduce annual costs.</li>
-        <li><strong>Banking Reset:</strong> pivot to alternative EMIs/banks; update narratives and documentation to pass onboarding.</li>
-        <li><strong>Expansion:</strong> add VAT registrations and PE controls for new markets without over-creating entities.</li>
-        <li><strong>Governance Uplift:</strong> re-compose boards, institute decision-rights/policy stack, improve audit readiness.</li>
-        <li><strong>M&amp;A Integration:</strong> align target with group chart, contracts, reporting, and cash management.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="container fade-up" data-anim-delay="0.4" id="pricing">
-    <div class="content-narrow">
-      <h2>Indicative Timelines &amp; Scope</h2>
-      <div class="table-wrap">
-        <table class="pricing">
-          <thead>
-            <tr>
-              <th>Work Package</th>
-              <th>Typical Timeline</th>
-              <th>Outputs</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Discovery &amp; Blueprint</td>
-              <td>1–2 weeks</td>
-              <td>Options memo, implementation plan, dependencies &amp; critical path</td>
-              <td>Kickoff doc set confirmed at start</td>
-            </tr>
-            <tr>
-              <td>Registrar Filings &amp; Contracts</td>
-              <td>1–4 weeks</td>
-              <td>Registrar packs, resolutions, share capital/log changes, intercompany suite</td>
-              <td>Timeline varies based on the number of entities and changes involved</td>
-            </tr>
-            <tr>
-              <td>Banking Onboarding</td>
-              <td>2–6 weeks</td>
-              <td>KYC pack, activity narrative, payment corridors &amp; cash-flow map</td>
-              <td>Subject to bank/EMI due-diligence cadence</td>
-            </tr>
-            <tr>
-              <td>Substance Build-Out</td>
-              <td>2–8 weeks</td>
-              <td>Directors, registered/physical office, VO/IT, HR vendors</td>
-              <td>Often phased across 2–3 sprints</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Final scope and a fixed fee are confirmed after Discovery. We can bundle packages once dependencies are clear.</p>
-    </div>
-  </section>
-
-  <section class="container fade-up" data-anim-delay="0.45" id="documents-checklist">
-    <div class="content-narrow">
-      <h2>Documents Checklist (Typical)</h2>
-      <ul class="doc-list">
-        <li>Group org chart &amp; cap table (current &amp; desired)</li>
-        <li>Recent financials &amp; key contracts (intercompany, major suppliers/customers)</li>
-        <li>Directors’ IDs/POAs; UBO IDs/POAs; proof of address</li>
-        <li>Business activity narrative &amp; projected cashflows</li>
-        <li>Existing bank details, pain points, onboarding feedback (if any)</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="container fade-up" data-anim-delay="0.5" id="faq">
-    <div class="content-narrow">
-      <h2>FAQ</h2>
-      <dl class="faq">
-        <dt>Can you support cross-border re-domiciliations?</dt>
-        <dd>Yes. We coordinate counsel across sending/receiving registrars, migrate statutory books, and align banking &amp; tax/VAT.</dd>
-
-        <dt>Do you provide directors and local office?</dt>
-        <dd>Yes. We can provide nominee directors, registered address, and physical/virtual office options with appropriate controls.</dd>
-
-        <dt>What about banking if a file has history?</dt>
-        <dd>We prepare a <em>banking narrative</em> that addresses historic issues directly, updates KYC data, and maps clean payment flows.</dd>
-
-        <dt>How do you ensure ongoing compliance?</dt>
-        <dd>We install a filings calendar, policy set (KYC/AML, sanctions), and light-touch quarterly checks or an annual review.</dd>
-      </dl>
-      <p class="note">If you have an unusual jurisdiction or complex legacy, include a short background when you contact us. We’ll factor it into the first options memo.</p>
-    </div>
-  </section>
-
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.55" style="background:var(--color-primary);color:#fff">
-    <div class="container content-narrow">
-      <h2>Request a Structuring Blueprint</h2>
-      <p class="contact-intro">Get a concise, costed proposal with timelines and clear next steps.</p>
-      <div class="cta-row">
-        <a href="mailto:megaserve@megaserve.eu?subject=Company%20Structuring%20%26%20Re-Structuring%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="company-structuring">Request Proposal</a>
-        <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Structuring%20%26%20Re-Structuring" class="btn-secondary" data-cta="book-call" data-page="company-structuring">Book a Call</a>
-        <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Company%20Structuring%20%26%20Re-Structuring" class="btn-secondary" data-cta="book-visit" data-page="company-structuring">Book a Visit (Nicosia)</a>
-      </div>
-      <span class="note">Prefer a quick kickoff? Email your org chart + 3 lines on objectives. We’ll reply with a Discovery slot.</span>
-    </div>
-  </section>
-</main>
+    <span class="note">Prefer a quick kickoff? Email your org chart + 3 lines on objectives. We’ll reply with a Discovery slot.</span>
+  </div>
+</section>
 
 <footer id="site-footer">
   <div class="container footer-flex">
@@ -479,7 +459,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
-<!-- FAQ Schema for SEO (preserved) -->
+<!-- FAQ Schema for SEO (updated to match visible FAQs) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
