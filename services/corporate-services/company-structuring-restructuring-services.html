@@ -6,45 +6,88 @@
   <meta name="description" content="Design, optimise, or overhaul Cyprus structures—holding, trading, SPVs, re-domiciliations, governance, banking footprint, and operational substance. Practical, compliant, costed execution." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fonts + Site CSS -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- Root-level stylesheet (root-relative, safe from any subfolder) -->
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/corporate-services/company-structuring-restructuring-services" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Company Structuring &amp; Re-Structuring – MegaServe Cyprus">
+  <meta property="og:description" content="Design, optimise, or overhaul Cyprus structures—holding, trading, SPVs, re-domiciliations, governance, banking footprint, and operational substance. Practical, compliant, costed execution.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/services/corporate-services/company-structuring-restructuring-services">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/company-structuring-restructuring-og.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Company Structuring &amp; Re-Structuring – MegaServe Cyprus">
+  <meta name="twitter:description" content="Design, optimise, or overhaul Cyprus structures—holding, trading, SPVs, re-domiciliations, governance, banking footprint, and operational substance. Practical, compliant, costed execution.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/company-structuring-restructuring-og.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
+
+  <!-- Global stylesheet -->
   <link rel="stylesheet" href="/style.css?v=14" />
 
-  <!-- Page-scoped helpers (light, non-destructive) -->
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    /* Match Company Formation page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
     .page-hero .container{padding:2.5rem 0 1.5rem}
-    /* Center only the page title */
     .page-hero h1{text-align:center}
 
     .content-narrow{max-width:900px;margin:0 auto}
+
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
+
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
     .process-steps{counter-reset: step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
+
     .badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.2rem .6rem;font-size:.8rem;margin:.15rem 0}
-    .faq dt{font-weight:700;margin-top:1rem}
-    .faq dd{margin:0 0 1rem 0}
+
     .doc-list{list-style:none;padding-left:0}
     .doc-list li{padding:.35rem 0}
+
     .table-wrap{overflow-x:auto}
     table.pricing{width:100%;border-collapse:collapse}
     table.pricing th,table.pricing td{border:1px solid #e5e5e5;padding:.6rem;text-align:left}
     table.pricing th{background:#fafafa}
 
-    .muted{color:#666}
-    .section-spaced{margin-top:2rem}
-
-    /* Case study (same visual pattern as Company Formation) */
+    /* Case study: same visual block */
     .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
     .case-study h3{margin:.25rem 0 .5rem}
 
-    /* Boost CTA note contrast on red banner */
+    /* Anchor nav (exists in global CSS; keep structure identical) */
+    .section-spaced{margin-top:2rem}
+    .submenu-caret{margin-left:.35rem}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
     #contact-cta .note{
       color:#fff;
       opacity:1;
@@ -54,11 +97,9 @@
       margin-top:.75rem;
     }
 
-    /* Fallback fade-up animation if not defined globally */
+    /* Fallback fade-up */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
-
-    .submenu-caret{margin-left:.35rem}
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -77,6 +118,7 @@
     }
   </style>
 </head>
+
 <body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
@@ -114,11 +156,10 @@
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with FLYOUTS -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub with flyout -->
             <li class="has-flyout">
               <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -132,7 +173,6 @@
               </ul>
             </li>
 
-            <!-- Investment hub with flyout -->
             <li class="has-flyout">
               <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -144,7 +184,6 @@
               </ul>
             </li>
 
-            <!-- Visitor hub with flyout -->
             <li class="has-flyout">
               <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -154,7 +193,6 @@
               </ul>
             </li>
 
-            <!-- Citizenship hub with flyout -->
             <li class="has-flyout">
               <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -167,7 +205,7 @@
           </ul>
         </li>
 
-        <!-- Tax & VAT Administration -->
+        <!-- Tax & VAT -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
@@ -187,7 +225,7 @@
           </ul>
         </li>
 
-        <!-- Compliance Services -->
+        <!-- Compliance -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
@@ -199,25 +237,43 @@
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA -->
         <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta">
-          <a class="btn-primary" href="/start/">Start Now</a>
-        </li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main-content">
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container">
-      <h1>Company Structuring &amp; Re-Structuring</h1>
-      <p class="content-narrow">Design or refine Cyprus-linked structures—holding, trading, SPVs—aligned with governance, tax efficiency, banking, and operational risk. We blueprint options, cost them, and deliver filings, contracts, banking, and substance—cleanly.</p>
-    </div>
-  </section>
+<!-- HERO (expanded like Company Formation: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Company Structuring &amp; Re-Structuring</h1>
+    <p>Design or refine Cyprus-linked structures—holding, trading, SPVs—aligned with governance, tax efficiency, banking, and operational risk. We blueprint options, cost them, and deliver filings, contracts, banking, and substance—cleanly.</p>
+    <div class="micro-trust">Cyprus-based team · <strong>30+ years’ experience</strong> · Multilingual corporate services</div>
 
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Company%20Structuring%20%26%20Re-Structuring%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="company-structuring">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Structuring%20%26%20Re-Structuring" class="btn-secondary" data-cta="book-call" data-page="company-structuring">Book a Call</a>
+      <a href="#documents-checklist" class="btn-secondary" data-cta="jump-checklist" data-page="company-structuring">Documents Checklist</a>
+    </div>
+  </div>
+</section>
+
+<!-- Anchor sub-nav (explicit and immediately beneath hero, like Company Formation) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#overview">Overview</a>
+    <a href="#approach">Approach</a>
+    <a href="#deliverables">Deliverables</a>
+    <a href="#pricing">Timelines</a>
+    <a href="#documents-checklist">Checklist</a>
+    <a href="#faq">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
+<main id="main-content">
   <section class="container fade-up" data-anim-delay="0.15" id="overview">
     <div class="content-narrow">
       <h2>What We Do</h2>
@@ -350,7 +406,7 @@
     </div>
   </section>
 
-  <section class="container fade-up" data-anim-delay="0.45" id="checklist">
+  <section class="container fade-up" data-anim-delay="0.45" id="documents-checklist">
     <div class="content-narrow">
       <h2>Documents Checklist (Typical)</h2>
       <ul class="doc-list">
@@ -384,11 +440,15 @@
   </section>
 
   <section id="contact-cta" class="fade-up" data-anim-delay="0.55" style="background:var(--color-primary);color:#fff">
-    <div class="container">
+    <div class="container content-narrow">
       <h2>Request a Structuring Blueprint</h2>
       <p class="contact-intro">Get a concise, costed proposal with timelines and clear next steps.</p>
-      <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Discuss Your Structure</a>
-      <p class="note">Prefer a quick kickoff? Email your org chart + 3 lines on objectives. We’ll reply with a Discovery slot.</p>
+      <div class="cta-row">
+        <a href="mailto:megaserve@megaserve.eu?subject=Company%20Structuring%20%26%20Re-Structuring%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="company-structuring">Request Proposal</a>
+        <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Structuring%20%26%20Re-Structuring" class="btn-secondary" data-cta="book-call" data-page="company-structuring">Book a Call</a>
+        <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Company%20Structuring%20%26%20Re-Structuring" class="btn-secondary" data-cta="book-visit" data-page="company-structuring">Book a Visit (Nicosia)</a>
+      </div>
+      <span class="note">Prefer a quick kickoff? Email your org chart + 3 lines on objectives. We’ll reply with a Discovery slot.</span>
     </div>
   </section>
 </main>
@@ -409,11 +469,17 @@
   </div>
 </footer>
 
+<!-- Mobile sticky CTA (same pattern as Company Formation) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Company%20Structuring%20%26%20Re-Structuring%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="company-structuring">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Company%20Structuring%20%26%20Re-Structuring" class="btn-secondary" data-cta="sticky-book-call" data-page="company-structuring">Book a Call</a>
+</div>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
-<!-- Optional: FAQ Schema for SEO -->
+<!-- FAQ Schema for SEO (preserved) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -455,7 +521,6 @@
 }
 </script>
 
-<!-- Global script (root-relative) -->
-<script src="/script.js?v=14" defer></script>
+<script src="/script.js?v=14"></script>
 </body>
 </html>
