@@ -6,38 +6,103 @@
   <meta name="description" content="Cyprus & EU banking administration: bank/EMI selection, account opening, KYC/KYB dossiers, relationship management, payment rails, user access, reviews, and ongoing compliance scheduling." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- Global styles (root-relative, safe from any subfolder) -->
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/corporate-services/banking-administration-services" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Banking Administration Services – MegaServe Cyprus">
+  <meta property="og:description" content="Cyprus & EU banking administration: bank/EMI selection, account opening, KYC/KYB dossiers, relationship management, payment rails, user access, reviews, and ongoing compliance scheduling.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.megaserve.eu/services/corporate-services/banking-administration-services">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/banking-administration-services-og.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Banking Administration Services – MegaServe Cyprus">
+  <meta name="twitter:description" content="Cyprus & EU banking administration: bank/EMI selection, account opening, KYC/KYB dossiers, relationship management, payment rails, user access, reviews, and ongoing compliance scheduling.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/banking-administration-services-og.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
+  <meta name="theme-color" content="#a00000">
+
+  <!-- Global stylesheet -->
   <link rel="stylesheet" href="/style.css?v=14" />
 
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
     .page-hero .container{padding:2.5rem 0 1.5rem}
-    /* Center the page title */
-    .page-hero h1{ text-align:center; }
+    .page-hero h1{text-align:center}
 
     .content-narrow{max-width:900px;margin:0 auto}
+
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
+
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
     .process-steps{counter-reset: step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
 
-    /* Page helpers */
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
+
     .table-wrap{overflow-x:auto}
     table.matrix, table.service, table.scope{width:100%;border-collapse:collapse}
     table.matrix th, table.matrix td,
     table.service th, table.service td,
     table.scope th, table.scope td {border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.matrix th, table.service th, table.scope th{background:#fafafa}
+
     .badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.2rem .6rem;font-size:.8rem;margin:.15rem .35rem 0 0}
 
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
+
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    .section-spaced{margin-top:2rem}
     .submenu-caret{margin-left:.35rem}
 
-    /* High-contrast Start Now button in main nav (right of Contact) */
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+
+    /* Fallback fade-up */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
       background:#c1121f;
       color:#fff !important;
@@ -52,32 +117,12 @@
     #main-nav .nav-cta a.btn-primary:hover{
       background:#9e0f1a;
     }
-    #site-header .header-flex{
-      align-items:center;
-    }
-
-    /* Ensure CTA note is legible on red/dark banner and layout is consistent */
-    #contact-cta{
-      text-align:center;
-    }
-    #contact-cta .note{
-      color:#fff;
-      opacity:1;
-      font-weight:600;
-      font-size:1rem;
-      margin-top:.75rem;
-    }
-    #contact-cta .container{
-      position:relative;
-      z-index:1;
-      padding-bottom:2rem;
-    }
-
-    .fade-up{opacity:0; transform: translateY(14px);}
-    .fade-up.visible{opacity:1; transform: translateY(0);}
   </style>
 </head>
-<body>
+
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
 <header id="site-header">
   <div class="container header-flex">
     <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
@@ -203,81 +248,48 @@
   </div>
 </header>
 
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
 <section class="page-hero fade-up" data-anim-delay="0.1">
-  <div class="container">
+  <div class="container content-narrow">
     <h1>Banking Administration Services</h1>
-    <p class="content-narrow">Open, maintain, and optimise your banking footprint in Cyprus and the EU. We handle selection, onboarding, KYC/KYB, user access, reviews, and ongoing relationship management.</p>
+    <p>Open, maintain, and optimise your banking footprint in Cyprus and the EU. We handle selection, onboarding, KYC/KYB, user access, reviews, and ongoing relationship management.</p>
+    <div class="micro-trust">Cyprus-based team · <strong>30+ years’ experience</strong> · Bank-ready documentation discipline</div>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Banking%20Administration%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="banking-administration">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Banking%20Administration" class="btn-secondary" data-cta="book-call" data-page="banking-administration">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="banking-administration">Documents Checklist</a>
+    </div>
   </div>
 </section>
 
-<section class="container fade-up" data-anim-delay="0.15" id="overview">
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#risk">Risk</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
   <div class="content-narrow">
-    <h2>What We Manage</h2>
+
+    <h2 id="who">Who It’s For</h2>
     <ul class="feature-list">
-      <li>Bank/EMI shortlist aligned to activity profile, jurisdictions, and counterparties</li>
-      <li>KYC/KYB dossier: corporate docs, activity narrative, flow mapping, beneficial ownership</li>
-      <li>Account opening: forms, portal uploads, interviews, clarifications, approvals</li>
-      <li>Payment rails: SEPA/SCT Inst, SWIFT, Faster Payments, local corridors where available</li>
-      <li>Merchant acquiring &amp; PSP introductions; gateway settings &amp; MCC alignment</li>
-      <li>User access &amp; controls: signatory matrix, roles, limits, and 2FA policy</li>
-      <li>Ongoing administration: signatory changes, reference letters, statements, attestations</li>
-      <li>Periodic reviews: KYC refresh cycles, alerts, remediation, and status notes</li>
+      <li>Cyprus companies that need bank/EMI onboarding support and clean KYC/KYB dossiers</li>
+      <li>International groups requiring a credible Cyprus/EU banking footprint with documented payment flows</li>
+      <li>Owners who want predictable reviews, user controls, and ongoing relationship management without rework</li>
     </ul>
 
     <div class="keyline"></div>
 
-    <h2>Footprint Options</h2>
-    <div class="table-wrap">
-      <table class="matrix">
-        <thead>
-          <tr>
-            <th>Channel</th>
-            <th>Typical Use</th>
-            <th>Strengths</th>
-            <th>Considerations</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cyprus / EU Bank</td>
-            <td>Primary operating account; payroll; vendor payments</td>
-            <td>Broad rails; credibility with auditors &amp; counterparties</td>
-            <td>More stringent onboarding; review cycles can be formal</td>
-          </tr>
-          <tr>
-            <td>EU EMI (E-money)</td>
-            <td>Multi-currency collections; fast onboarding adjunct</td>
-            <td>Speed; API-friendly; virtual IBANs</td>
-            <td>Limits/features vary; settlement and tiering policies apply</td>
-          </tr>
-          <tr>
-            <td>Merchant Acquirer / PSP</td>
-            <td>Card processing and gateway routing</td>
-            <td>Higher approval ratios; risk tools &amp; dashboards</td>
-            <td>MCC fit; chargeback handling; reserve/rolling terms</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">Final eligibility remains at the discretion of the bank/EMI/acquirer. We position the file to maximise acceptance probability.</p>
-  </div>
-</section>
-
-<section class="container fade-up" data-anim-delay="0.2" id="opening-flow">
-  <div class="content-narrow">
-    <h2>Opening Flow</h2>
-    <ol class="process-steps">
-      <li><strong>Fit Assessment:</strong> activity, jurisdictions, counterparties, projected volumes, and beneficial owners.</li>
-      <li><strong>Dossier Build:</strong> corporate certificates, registers, IDs/PoAs, activity narrative, flow &amp; corridor map.</li>
-      <li><strong>Submission &amp; Interviews:</strong> portal forms, clarifications, compliance interviews, risk notes.</li>
-      <li><strong>Activation:</strong> user setup, signatory matrix, limits, 2FA, test payments, card &amp; FX settings.</li>
-    </ol>
-  </div>
-</section>
-
-<section class="container fade-up" data-anim-delay="0.25" id="deliverables">
-  <div class="content-narrow">
-    <h2>Deliverables</h2>
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
     <ul class="feature-list">
       <li>Banking shortlist with pros/cons, dependencies, and sequence of applications</li>
       <li>KYC/KYB dossier ready for upload (structured file tree + PDFs)</li>
@@ -286,65 +298,56 @@
       <li>Merchant/PSP intake pack and gateway settings checklist</li>
       <li>Banking maintenance calendar (reviews, attestations, card/limit refresh dates)</li>
     </ul>
-  </div>
-</section>
 
-<section class="container fade-up" data-anim-delay="0.3" id="service-levels">
-  <div class="content-narrow">
-    <h2>Service Levels &amp; Frequency</h2>
-    <div class="table-wrap">
-      <table class="service">
-        <thead>
-          <tr>
-            <th>Activity</th>
-            <th>Typical Frequency</th>
-            <th>Target Response</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Beneficiary / user access updates</td>
-            <td>Ad hoc</td>
-            <td>Same–2 business days</td>
-            <td>Subject to bank portal processing/approvals</td>
-          </tr>
-          <tr>
-            <td>Bank reference letters / attestations</td>
-            <td>As requested</td>
-            <td>1–3 business days</td>
-            <td>Dependent on bank/EMI turnaround</td>
-          </tr>
-          <tr>
-            <td>KYC refresh &amp; periodic reviews</td>
-            <td>Annual / biennial</td>
-            <td>Same–2 business days</td>
-            <td>We stage documents to prevent back-and-forth</td>
-          </tr>
-          <tr>
-            <td>Limits / corridor adjustments</td>
-            <td>Ad hoc</td>
-            <td>1–5 business days</td>
-            <td>Requires usage data &amp; rationale; sometimes board resolution</td>
-          </tr>
-          <tr>
-            <td>Merchant/PSP onboarding support</td>
-            <td>Ad hoc</td>
-            <td>2–5 business days</td>
-            <td>MCC mapping and reserve terms can extend timelines</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Fit Assessment:</strong> activity, jurisdictions, counterparties, projected volumes, and beneficial owners.</li>
+      <li><strong>Dossier Build:</strong> corporate certificates, registers, IDs/PoAs, activity narrative, flow &amp; corridor map.</li>
+      <li><strong>Submission &amp; Interviews:</strong> portal forms, clarifications, compliance interviews, risk notes.</li>
+      <li><strong>Activation:</strong> user setup, signatory matrix, limits, 2FA, test payments, card &amp; FX settings.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>Footprint Options</h3>
+      <div class="table-wrap">
+        <table class="matrix" aria-label="Footprint options">
+          <thead>
+            <tr>
+              <th>Channel</th>
+              <th>Typical Use</th>
+              <th>Strengths</th>
+              <th>Considerations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cyprus / EU Bank</td>
+              <td>Primary operating account; payroll; vendor payments</td>
+              <td>Broad rails; credibility with auditors &amp; counterparties</td>
+              <td>More stringent onboarding; review cycles can be formal</td>
+            </tr>
+            <tr>
+              <td>EU EMI (E-money)</td>
+              <td>Multi-currency collections; fast onboarding adjunct</td>
+              <td>Speed; API-friendly; virtual IBANs</td>
+              <td>Limits/features vary; settlement and tiering policies apply</td>
+            </tr>
+            <tr>
+              <td>Merchant Acquirer / PSP</td>
+              <td>Card processing and gateway routing</td>
+              <td>Higher approval ratios; risk tools &amp; dashboards</td>
+              <td>MCC fit; chargeback handling; reserve/rolling terms</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Final eligibility remains at the discretion of the bank/EMI/acquirer. We position the file to maximise acceptance probability.</p>
     </div>
-    <p class="note">Targets reflect typical handling; third-party processing and enhanced due diligence may extend completion.</p>
-  </div>
-</section>
 
-<section class="container fade-up" data-anim-delay="0.35" id="scope-timelines">
-  <div class="content-narrow">
-    <h2>Indicative Timelines &amp; Scope</h2>
-    <div class="table-wrap">
-      <table class="scope">
+    <div class="section-spaced table-wrap" id="scope-timelines">
+      <table class="scope" aria-label="Indicative timelines and scope">
         <thead>
           <tr>
             <th>Work Package</th>
@@ -375,19 +378,27 @@
           <tr>
             <td>Ongoing Administration</td>
             <td>Quarterly / Ad hoc</td>
-            <td>Reviews, updates, letters, audits support, issue triage</td>
+            <td>Reviews, updates, letters, audit support, issue triage</td>
             <td>Calendar maintained with reminders</td>
           </tr>
         </tbody>
       </table>
     </div>
     <p class="note">Final scope is confirmed after initial assessment. We can bundle packages once dependencies are clear.</p>
-  </div>
-</section>
 
-<section class="container fade-up" data-anim-delay="0.4" id="checklist">
-  <div class="content-narrow">
-    <h2>Documents Checklist (Typical)</h2>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>Payment Administration for Time-Critical Maritime Operations</h3>
+      <p class="muted"><strong>Client:</strong> Ship repair and maintenance company with Cyprus banking relationships (anonymised)</p>
+      <p>The client’s operations required reliable, time-critical supplier and service payments, with clear documentation and consistent processing to avoid disruption. MegaServe maintained the payments administration workflow: compiling supporting documents, preparing payment instructions, coordinating bank requirements and references, and ensuring approvals and records were properly archived for audit and reconciliation.</p>
+      <p><strong>Result:</strong> time-critical payments were processed predictably with a documented trail, supporting uninterrupted operations.</p>
+    </div>
+
+    <div class="keyline"></div>
+
+    <h2 id="requirements">Requirements (Client Checklist)</h2>
     <ul class="feature-list">
       <li>Certificate set, registers, Memorandum &amp; Articles, minute book snapshots</li>
       <li>UBO/director IDs &amp; PoAs; proof of address; CVs if requested</li>
@@ -395,34 +406,66 @@
       <li>Projected volumes (monthly), currencies, and example invoices/contracts</li>
       <li>Existing accounts and pain points (if any); auditor details</li>
     </ul>
-  </div>
-</section>
 
-<section class="container fade-up" data-anim-delay="0.45" id="faq">
-  <div class="content-narrow">
-    <h2>FAQ</h2>
-    <dl class="faq">
-      <dt>Can you guarantee account opening?</dt>
-      <dd>No firm can guarantee approvals. We position the file, sequence applications, and escalate appropriately to maximise acceptance.</dd>
+    <div class="keyline"></div>
 
-      <dt>Do you work with both banks and EMIs?</dt>
-      <dd>Yes. We maintain options across Cyprus/EU banks and reputable EMIs to balance credibility, speed, and feature set.</dd>
+    <h2 id="risk">Risk &amp; Mitigations</h2>
+    <ul class="feature-list">
+      <li><strong>No guarantees:</strong> approvals and terms remain at the discretion of banks/EMIs/acquirers; we strengthen the dossier and sequence applications to reduce friction.</li>
+      <li><strong>EDD cadence:</strong> enhanced due diligence can extend timelines; we prepare supporting evidence up front and track clarifications to closure.</li>
+      <li><strong>Controls:</strong> we document user roles, limits, and dual-control options to reduce operational and audit risk.</li>
+      <li><strong>Review cycles:</strong> we maintain a banking maintenance calendar (KYC refresh, attestations, letters, limit reviews) to avoid last-minute scrambles.</li>
+    </ul>
 
-      <dt>What if our business has historical issues?</dt>
-      <dd>We prepare a candid compliance narrative, address past items directly, and propose clean payment flows and controls.</dd>
+    <div class="keyline"></div>
 
-      <dt>Can you support card acquiring and PSP setup?</dt>
-      <dd>Yes. We prepare merchant packs, map MCCs, and coordinate with PSPs/gateways for a smooth go-live.</dd>
-    </dl>
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Can you guarantee account opening?</summary>
+        <p>No firm can guarantee approvals. We position the file, sequence applications, and escalate appropriately to maximise acceptance.</p>
+      </details>
+
+      <details>
+        <summary>Do you work with both banks and EMIs?</summary>
+        <p>Yes. We maintain options across Cyprus/EU banks and reputable EMIs to balance credibility, speed, and feature set.</p>
+      </details>
+
+      <details>
+        <summary>What if our business has historical issues?</summary>
+        <p>We prepare a candid compliance narrative, address past items directly, and propose clean payment flows and controls.</p>
+      </details>
+
+      <details>
+        <summary>Can you support card acquiring and PSP setup?</summary>
+        <p>Yes. We prepare merchant packs, map MCCs, and coordinate with PSPs/gateways for a smooth go-live.</p>
+      </details>
+    </div>
     <p class="note">Share any unique aspects early (jurisdictions, counterparties, products). We’ll reflect them in the shortlist and narrative.</p>
+
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/corporate-services/administrative-services.html">Administrative Services</a> ·
+      <a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration</a> ·
+      <a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration</a> ·
+      <a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial</a>
+    </p>
+
+    <h2 class="section-spaced">Other Jurisdictions (on request)</h2>
+    <p class="muted">Where required, we coordinate introductions and onboarding support through vetted associates in selected jurisdictions.</p>
+
   </div>
 </section>
 
-<section id="contact-cta" class="fade-up" data-anim-delay="0.5">
-  <div class="container">
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
     <h2>Need Banking Support?</h2>
     <p class="contact-intro">We’ll shortlist suitable banks/EMIs and guide you through approval and activation.</p>
-    <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Start Banking Setup</a>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Banking%20Administration%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="banking-administration">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Banking%20Administration" class="btn-secondary" data-cta="book-call" data-page="banking-administration">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Banking%20Administration" class="btn-secondary" data-cta="book-visit" data-page="banking-administration">Book a Visit (Nicosia)</a>
+    </div>
     <p class="note">Prefer a quick kickoff? Email your certificate set + activity narrative draft; we’ll reply with an intake slot.</p>
   </div>
 </section>
@@ -430,9 +473,10 @@
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
       <a href="/index.html#services">Services</a>
@@ -443,7 +487,17 @@
   </div>
 </footer>
 
-<!-- Optional: FAQ Schema for SEO -->
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Banking%20Administration%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="banking-administration">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Banking%20Administration" class="btn-secondary" data-cta="sticky-book-call" data-page="banking-administration">Book a Call</a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- FAQ Schema for SEO (matches visible FAQs) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -485,7 +539,6 @@
 }
 </script>
 
-<!-- Global script (root-relative) -->
 <script src="/script.js?v=14"></script>
 </body>
 </html>
