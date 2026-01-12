@@ -98,6 +98,9 @@
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
 
+    /* FIX: ensure main content isn't invisible on initial load */
+    #main-content.fade-up{opacity:1;transform:none}
+
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
       background:#c1121f;
