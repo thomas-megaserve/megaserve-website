@@ -269,7 +269,11 @@
   </div>
 </nav>
 
-<section id="main-content" class="container fade-up visible" data-anim-delay="0.2">
+<!-- IMPORTANT FIX:
+     - Remove the hard-coded "visible" so it can animate
+     - Add a tiny DOMContentLoaded helper at the bottom to reveal above-the-fold fade-ups immediately
+-->
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
   <div class="content-narrow">
 
     <h2 id="who">Who It’s For</h2>
@@ -527,6 +531,16 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- FIX: ensure above-the-fold .fade-up elements become visible immediately on load (so they fade in without requiring scroll) -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.fade-up').forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < (window.innerHeight * 0.92)) el.classList.add('visible');
+    });
+  });
 </script>
 
 <!-- FAQ Schema for SEO (matches visible FAQs) -->
