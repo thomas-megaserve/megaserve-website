@@ -1,80 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Registered Address Services — MegaServe Cyprus</title>
-  <meta name="description" content="Compliant Cyprus registered office with secure mail handling, statutory display, document custody, and audit-ready trails—integrated with your secretarial & banking workflows.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compliant Cyprus registered office with secure mail handling, statutory display, document custody, and audit-ready trails—integrated with your secretarial & banking workflows." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Performance: preconnect for faster font loads -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Canonical (pretty URL, no .html) -->
-  <link rel="canonical" href="https://www.megaserve.eu/services/nominee-and-fiduciary-services/registered-address-services">
+  <link rel="canonical" href="https://www.megaserve.eu/services/nominee-and-fiduciary-services/registered-address-services" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Registered Address Services — MegaServe Cyprus">
-  <meta property="og:description" content="Compliant registered office address with secure mail/document handling, statutory display, and clean audit trails—integrated with secretarial & banking workflows.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.megaserve.eu/services/nominee-and-fiduciary-services/registered-address-services">
-  <meta property="og:image" content="https://www.megaserve.eu/assets/og/registered-address-og.jpg">
+  <meta property="og:title" content="Registered Address Services — MegaServe Cyprus" />
+  <meta property="og:description" content="Compliant registered office address with secure mail/document handling, statutory display, and clean audit trails—integrated with secretarial & banking workflows." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/nominee-and-fiduciary-services/registered-address-services" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/registered-address-og.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Registered Address Services — MegaServe Cyprus">
-  <meta name="twitter:description" content="Compliant registered office address with secure mail/document handling, statutory display, and clean audit trails—integrated with secretarial & banking workflows.">
-  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/registered-address-og.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Registered Address Services — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Compliant registered office address with secure mail/document handling, statutory display, and clean audit trails—integrated with secretarial & banking workflows." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/registered-address-og.jpg" />
 
-  <!-- Favicons / theme -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
-  <meta name="theme-color" content="#a00000">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
 
-  <!-- Global stylesheet (root-level) -->
-  <link rel="stylesheet" href="/style.css?v=14">
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="/style.css?v=14" />
 
-  <!-- Page-scoped helpers -->
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
     .page-hero .container{padding:2.5rem 0 1.5rem}
     .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
+
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
     .muted{color:#666}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
 
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
 
-    .process-steps{counter-reset: step;list-style:none;padding-left:0}
+    .process-steps{counter-reset: step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
-
-    .table-wrap{overflow-x:auto}
-    table.matrix, table.service{width:100%;border-collapse:collapse}
-    table.matrix th,table.matrix td,table.service th,table.service td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
-    table.matrix th,table.service th{background:#fafafa}
-
-    .badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.2rem .6rem;font-size:.8rem;margin:.15rem .35rem 0 0}
 
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
 
-    /* Case study: same visual block used on other pages */
+    .table-wrap{overflow-x:auto}
+    table.matrix, table.service{width:100%;border-collapse:collapse}
+    table.matrix th, table.matrix td,
+    table.service th, table.service td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.matrix th, table.service th{background:#fafafa}
+
+    /* Case study block */
     .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
     .case-study h3{margin:.25rem 0 .5rem}
 
-    /* CTA fine print legible on dark strip */
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
 
-    /* Motion */
+    .section-spaced{margin-top:2rem}
+    .submenu-caret{margin-left:.35rem}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+
+    /* Fallback fade-up */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
-
-    .submenu-caret{margin-left:.35rem}
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -88,28 +111,20 @@
       display:inline-block;
       box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
-    }
-
-    #site-header .header-flex{
-      align-items:center;
-    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
   </style>
 </head>
+
 <body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
-<!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
     <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <!-- Hamburger Button for Mobile -->
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
         <li><a href="/index.html">Home</a></li>
@@ -138,16 +153,15 @@
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
             <li class="has-flyout">
               <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
-              <ul class="flyout" aria-label="Employment routes">
+              <ul class="flyout" aria-label="Employment permit routes">
                 <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
                 <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
                 <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
@@ -155,7 +169,7 @@
                 <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
               <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -166,7 +180,7 @@
                 <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
               <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -175,7 +189,7 @@
                 <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
               <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
@@ -220,7 +234,6 @@
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA -->
         <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
         <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
@@ -229,32 +242,66 @@
   </div>
 </header>
 
-<main id="main-content">
-  <!-- HERO -->
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container content-narrow">
-      <h1>Registered Address Services</h1>
-      <p>A compliant registered office address with secure mail/document handling and statutory display—integrated with your corporate secretarial and banking workflows.</p>
-      <p class="muted">Note: A registered office alone does not constitute operational “substance”. For premises and staffing options, see <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental</a> and <a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office</a>.</p>
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Registered Address Services</h1>
+    <p>Compliant Cyprus registered office with secure mail handling, statutory display, document custody, and audit-ready trails—integrated with your secretarial &amp; banking workflows.</p>
+    <div class="micro-trust">Nicosia-based · <strong>Secure mail handling</strong> · Audit-ready indexing</div>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Registered%20Address%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="registered-address">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Registered%20Address" class="btn-secondary" data-cta="book-call" data-page="registered-address">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="registered-address">Documents Checklist</a>
     </div>
-  </section>
 
-  <!-- OVERVIEW -->
-  <section class="container fade-up" data-anim-delay="0.15" id="overview">
-    <div class="content-narrow">
-      <h2>What’s Included</h2>
-      <ul class="feature-list">
-        <li>Registered office address in Cyprus with name plate/statutory display</li>
-        <li>Mail handling: receipt, scanning (PDF/OCR), and forwarding per instructions</li>
-        <li>Courier management for originals; tracked dispatch with delivery proofs</li>
-        <li>Secure custody for corporate records and originals (optional dedicated storage)</li>
-        <li>Authority/bank correspondence handling with timestamped index</li>
-        <li>Integration with <a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial</a> for filings and registers</li>
-      </ul>
+    <p class="muted" style="margin-top:.75rem">
+      Note: A registered office alone does not constitute operational “substance”.
+      For premises and staffing options, see
+      <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental</a>
+      and <a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office</a>.
+    </p>
+  </div>
+</section>
 
-      <div class="keyline"></div>
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#risk">Risk</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
 
-      <h2>Address Options</h2>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
+
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>Cyprus entities needing a compliant registered office with reliable mail handling and documented trails</li>
+      <li>International owners who want clear routing rules for bank/authority correspondence and originals</li>
+      <li>Groups with multiple entities that need indexed, entity-separated handling and custody options</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>Registered office address in Cyprus with statutory display (name plate)</li>
+      <li>Mail receipt + logging (timestamped) and scanning/forwarding per your rules</li>
+      <li>Courier management for originals; tracked dispatch with delivery proofs</li>
+      <li>Optional custody: originals storage, inventory list, and chain-of-custody checkouts</li>
+      <li>Authority/bank correspondence handling with a searchable index</li>
+      <li>Integration with <a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial</a> for filings and registers</li>
+    </ul>
+
+    <div class="section-spaced">
+      <h3>Address Options</h3>
       <div class="table-wrap" role="region" aria-labelledby="addr-caption">
         <table class="matrix" aria-describedby="addr-caption">
           <caption id="addr-caption" class="sr-only">Registered address options, uses, inclusions, and notes</caption>
@@ -290,12 +337,19 @@
       </div>
       <p class="note">Meeting rooms and operational desks are available via <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a>.</p>
     </div>
-  </section>
 
-  <!-- MAIL & COMPLIANCE -->
-  <section class="container fade-up" data-anim-delay="0.2" id="handling">
-    <div class="content-narrow">
-      <h2>Mail Handling &amp; Compliance</h2>
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Intake:</strong> entity details, directors/UBOs, mail rules, forwarding addresses.</li>
+      <li><strong>Resolutions &amp; updates:</strong> registered office setup/change (if applicable) and bank/authority notifications.</li>
+      <li><strong>Signage &amp; setup:</strong> name plate installed; mail rules tested; index created.</li>
+      <li><strong>Go-live:</strong> mail handling begins; custody (if selected) inventory created.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>Mail Handling &amp; Compliance</h3>
       <ul class="feature-list">
         <li>Intake protocol with sender/recipient capture; oversized/secured items flagged</li>
         <li>Scanning standards: searchable PDFs, date-stamped; sensitive items by exception only</li>
@@ -305,144 +359,91 @@
         <li>Statutory display: company name and number; signage maintained and photographed on install</li>
       </ul>
     </div>
-  </section>
 
-  <!-- SERVICE LEVELS -->
-  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
-    <div class="content-narrow">
-      <h2>Service Levels &amp; Turnaround</h2>
-      <div class="table-wrap" role="region" aria-labelledby="sl-caption">
-        <table class="service">
-          <caption id="sl-caption" class="sr-only">Service levels and typical turnaround times</caption>
-          <thead>
-            <tr>
-              <th scope="col">Activity</th>
-              <th scope="col">Typical Frequency</th>
-              <th scope="col">Target Response</th>
-              <th scope="col">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Mail receipt &amp; logging</td>
-              <td>Daily (business days)</td>
-              <td>Same day</td>
-              <td>Timestamped in index; sender/subject captured where available</td>
-            </tr>
-            <tr>
-              <td>Standard scanning</td>
-              <td>Batch or per-rule</td>
-              <td>Same–1 business day</td>
-              <td>Searchable PDF to named recipients</td>
-            </tr>
-            <tr>
-              <td>Express forwarding</td>
-              <td>Ad hoc</td>
-              <td>Dispatch within 1 business day</td>
-              <td>Tracked courier; customs docs prepared if needed</td>
-            </tr>
-            <tr>
-              <td>Originals retrieval (custody)</td>
-              <td>Ad hoc</td>
-              <td>Same–2 business days</td>
-              <td>Chain-of-custody document issued</td>
-            </tr>
-            <tr>
-              <td>Signage/name plate</td>
-              <td>On setup / change</td>
-              <td>Within 3–5 business days</td>
-              <td>Photo confirmation on install</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Targets reflect typical handling; courier and third-party schedules can affect completion.</p>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>Central Nicosia Registered Office Supporting Practical Operations</h3>
+      <p class="muted"><strong>Client:</strong> International client with a Cyprus entity (anonymised)</p>
+      <p>The client required a registered office in a central Nicosia location, with reliable handling of bank and authority correspondence. MegaServe provided the registered address service with structured mail rules, indexing, and consistent routing—helping keep communications and document flows practical and responsive.</p>
+      <p><strong>Result:</strong> a central registered office with predictable handling supported smoother day-to-day administration and third-party correspondence.</p>
     </div>
-  </section>
 
-  <!-- ONBOARDING -->
-  <section class="container fade-up" data-anim-delay="0.3" id="onboarding">
-    <div class="content-narrow">
-      <h2>Onboarding Steps</h2>
-      <ol class="process-steps">
-        <li><strong>Intake:</strong> entity details, directors/UBOs, mail rules, forwarding addresses.</li>
-        <li><strong>Resolutions &amp; updates:</strong> registered office change (if applicable) and bank/authority notifications.</li>
-        <li><strong>Signage &amp; setup:</strong> name plate installed; mail rules tested; index created.</li>
-        <li><strong>Go-live:</strong> mail handling begins; custody (if selected) inventory created.</li>
-      </ol>
+    <div class="keyline"></div>
 
-      <h3>Documents Checklist</h3>
-      <ul class="feature-list">
-        <li>Certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
-        <li>Memorandum &amp; Articles; current registers</li>
-        <li>Authorised contacts &amp; forwarding addresses</li>
-        <li>Any bank/authority templates for address change (if required)</li>
-      </ul>
+    <h2 id="requirements">Requirements (Client Checklist)</h2>
+    <ul class="feature-list">
+      <li>Certificate set (Incorporation, Directors/Secretary, Shareholders, Registered Office)</li>
+      <li>Memorandum &amp; Articles; current registers</li>
+      <li>Authorised contacts &amp; forwarding addresses</li>
+      <li>Mail rules (scan/forward cadence + sensitive item handling)</li>
+      <li>Any bank/authority templates for address change (if required)</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="risk">Risk &amp; Mitigations</h2>
+    <ul class="feature-list">
+      <li><strong>Substance expectations:</strong> registered office meets statutory requirements; banks/auditors may require governance/premises depending on profile.</li>
+      <li><strong>Sensitive mail handling:</strong> defaults to controlled scanning unless you authorise broader scanning rules.</li>
+      <li><strong>Courier timing:</strong> dispatch times depend on courier schedules and (where applicable) customs/clearance.</li>
+      <li><strong>Access control:</strong> we restrict access to named contacts and log handling activity for audit trail.</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Is the registered office enough for banking and auditors?</summary>
+        <p>It meets statutory requirements. Some banks/auditors may expect substance (board activity, premises, staff). We can coordinate governance and premises if needed.</p>
+      </details>
+      <details>
+        <summary>Can multiple entities share the same registered office?</summary>
+        <p>Yes, with clear mail rules and separate indices. Group discounts may apply depending on volume.</p>
+      </details>
+      <details>
+        <summary>What happens with sensitive mail?</summary>
+        <p>We follow your rules: scan subject/cover only, scan nothing, or scan everything. Sensitive items default to “no scan” unless authorised.</p>
+      </details>
+      <details>
+        <summary>Do you hold minute books and originals?</summary>
+        <p>Yes. Dedicated custody provides an inventory and chain-of-custody receipts for checkouts.</p>
+      </details>
+      <details>
+        <summary>How fast can you switch our registered office?</summary>
+        <p>Often within 2–5 business days from receipt of documents and approvals; banks/authorities updates may vary by institution.</p>
+      </details>
     </div>
-  </section>
 
-  <!-- CASE STUDY -->
-  <section class="container fade-up" data-anim-delay="0.35" id="case-study">
-    <div class="content-narrow">
-      <h2>Case Study</h2>
-      <div class="case-study">
-        <h3>Time-Sensitive Bank &amp; Authority Correspondence Routed Without Delays</h3>
-        <p class="muted"><strong>Client:</strong> International services company with a Cyprus entity (anonymised)</p>
-        <p>The client required a registered office in Nicosia with reliable same-day receipt and scanning of bank and authority correspondence. Using MegaServe’s registered address and mail-handling workflow, time-sensitive letters were logged, scanned, and routed to decision-makers without delays, helping avoid missed deadlines and back-and-forth with third parties.</p>
-        <p><strong>Result:</strong> bank and authority correspondence was handled predictably with a documented trail and clear routing rules.</p>
-      </div>
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial</a> ·
+      <a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management</a> ·
+      <a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office</a> ·
+      <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental</a>
+    </p>
+
+    <h2 class="section-spaced">Other Jurisdictions (on request)</h2>
+    <p class="muted">Where required, we coordinate registered office and mail-handling workflows through vetted associates in selected jurisdictions.</p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
+    <h2>Set Up Your Cyprus Registered Office</h2>
+    <p class="contact-intro">Get a compliant address with reliable mail handling and clean audit trails—ready for banks and authorities.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Registered%20Address%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="registered-address">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Registered%20Address" class="btn-secondary" data-cta="book-call" data-page="registered-address">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Registered%20Address" class="btn-secondary" data-cta="book-visit" data-page="registered-address">Book a Visit (Nicosia)</a>
     </div>
-  </section>
+    <p class="note">Prefer a quick kickoff? Email your certificate set and forwarding rules; we’ll reply with a short intake slot.</p>
+  </div>
+</section>
 
-  <!-- RELATED / SEE ALSO -->
-  <section class="container fade-up" data-anim-delay="0.4" id="related">
-    <div class="content-narrow">
-      <h2>Related Services</h2>
-      <p class="muted">
-        <a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial</a> ·
-        <a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management</a> ·
-        <a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office</a> ·
-        <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="container fade-up" data-anim-delay="0.45" id="faq">
-    <div class="content-narrow">
-      <h2>FAQ</h2>
-      <div class="table-wrap" aria-hidden="true" style="display:none"></div>
-      <dl class="faq">
-        <dt>Is the registered office enough for banking and auditors?</dt>
-        <dd>It meets statutory requirements. Some banks/auditors may expect substance (board activity, premises, staff). We can coordinate <a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">governance</a> and <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">premises</a> if needed.</dd>
-
-        <dt>Can multiple entities share the same registered office?</dt>
-        <dd>Yes, with clear mail rules and separate indices. Group discounts may apply depending on volume.</dd>
-
-        <dt>What happens with sensitive mail?</dt>
-        <dd>We follow your rules: scan subject/cover only, scan nothing, or scan everything. Sensitive items default to “no scan” unless authorised.</dd>
-
-        <dt>Do you hold minute books and originals?</dt>
-        <dd>Yes. Dedicated custody provides an inventory and chain-of-custody receipts for checkouts.</dd>
-
-        <dt>How fast can you switch our registered office?</dt>
-        <dd>Often within 2–5 business days from receipt of documents and approvals; banks/authorities updates may vary by institution.</dd>
-      </dl>
-    </div>
-  </section>
-
-  <!-- CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
-    <div class="container">
-      <h2>Set Up Your Cyprus Registered Office</h2>
-      <p class="contact-intro">Get a compliant address with reliable mail handling and clean audit trails—ready for banks and authorities.</p>
-      <a href="mailto:megaserve@megaserve.eu?subject=Registered%20Address%20-%20Setup%20Request" class="btn-primary pulse-on-hover">Request Setup</a>
-      <p class="note">Prefer a quick kickoff? Email your certificate set and forwarding rules; we’ll reply with a short intake slot.</p>
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
@@ -459,6 +460,12 @@
     </div>
   </div>
 </footer>
+
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Registered%20Address%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="registered-address">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Registered%20Address" class="btn-secondary" data-cta="sticky-book-call" data-page="registered-address">Book a Call</a>
+</div>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
