@@ -98,9 +98,6 @@
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
 
-    /* FIX: ensure main content isn't invisible on initial load */
-    #main-content.fade-up{opacity:1;transform:none}
-
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
       background:#c1121f;
@@ -272,7 +269,7 @@
   </div>
 </nav>
 
-<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+<section id="main-content" class="container fade-up visible" data-anim-delay="0.2">
   <div class="content-narrow">
 
     <h2 id="who">Who It’s For</h2>
