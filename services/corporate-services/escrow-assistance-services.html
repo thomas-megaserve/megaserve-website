@@ -269,10 +269,6 @@
   </div>
 </nav>
 
-<!-- IMPORTANT FIX:
-     - Remove the hard-coded "visible" so it can animate
-     - Add a tiny DOMContentLoaded helper at the bottom to reveal above-the-fold fade-ups immediately
--->
 <section id="main-content" class="container fade-up" data-anim-delay="0.2">
   <div class="content-narrow">
 
@@ -533,14 +529,30 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
-<!-- FIX: ensure above-the-fold .fade-up elements become visible immediately on load (so they fade in without requiring scroll) -->
+<!-- FIX: trigger a true fade-in (after first paint), ONLY for above-the-fold .fade-up elements -->
 <script>
-  window.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.fade-up').forEach(function (el) {
+  (function () {
+    function inView(el) {
       var r = el.getBoundingClientRect();
-      if (r.top < (window.innerHeight * 0.92)) el.classList.add('visible');
+      return r.top < (window.innerHeight * 0.92);
+    }
+
+    function revealAboveFold() {
+      document.querySelectorAll('.fade-up').forEach(function (el) {
+        if (inView(el)) el.classList.add('visible');
+      });
+    }
+
+    // Wait until layout + first paint so the transition actually runs.
+    window.addEventListener('load', function () {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          // small delay helps avoid "no animation" when browsers coalesce style changes
+          setTimeout(revealAboveFold, 30);
+        });
+      });
     });
-  });
+  })();
 </script>
 
 <!-- FAQ Schema for SEO (matches visible FAQs) -->
