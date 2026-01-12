@@ -13,14 +13,14 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.megaserve.eu/registered-address-services.html">
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/nominee-and-fiduciary-services/registered-address-services">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Registered Address Services — MegaServe Cyprus">
   <meta property="og:description" content="Compliant registered office address with secure mail/document handling, statutory display, and clean audit trails—integrated with secretarial & banking workflows.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.megaserve.eu/registered-address-services.html">
+  <meta property="og:url" content="https://www.megaserve.eu/services/nominee-and-fiduciary-services/registered-address-services">
   <meta property="og:image" content="https://www.megaserve.eu/assets/og/registered-address-og.jpg">
 
   <!-- Twitter Card -->
@@ -35,7 +35,7 @@
   <meta name="theme-color" content="#a00000">
 
   <!-- Global stylesheet (root-level) -->
-  <link rel="stylesheet" href="../../style.css?v=14">
+  <link rel="stylesheet" href="/style.css?v=14">
 
   <!-- Page-scoped helpers -->
   <style>
@@ -62,6 +62,10 @@
 
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
+
+    /* Case study: same visual block used on other pages */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
 
     /* CTA fine print legible on dark strip */
     #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
@@ -99,8 +103,8 @@
 <!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo">
     </a>
     <!-- Hamburger Button for Mobile -->
     <button id="nav-toggle" aria-label="Open Menu">
@@ -108,17 +112,17 @@
     </button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
@@ -126,11 +130,11 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a aria-current="page" href="registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="physical-office-rental-services.html">Physical Office Rental Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a aria-current="page" href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
@@ -140,45 +144,45 @@
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
             <!-- Employment hub -->
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
             <!-- Investment hub -->
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
             <!-- Visitor hub -->
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
             <!-- Citizenship hub -->
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -188,9 +192,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -198,9 +202,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -208,18 +212,18 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="../compliance-services/client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
         <!-- Simple pages + header CTA -->
-        <li><a href="../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
@@ -231,7 +235,7 @@
     <div class="container content-narrow">
       <h1>Registered Address Services</h1>
       <p>A compliant registered office address with secure mail/document handling and statutory display—integrated with your corporate secretarial and banking workflows.</p>
-      <p class="muted">Note: A registered office alone does not constitute operational “substance”. For premises and staffing options, see <a href="physical-office-rental-services.html">Physical Office Rental</a> and <a href="virtual-office-services.html">Virtual Office</a>.</p>
+      <p class="muted">Note: A registered office alone does not constitute operational “substance”. For premises and staffing options, see <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental</a> and <a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office</a>.</p>
     </div>
   </section>
 
@@ -245,7 +249,7 @@
         <li>Courier management for originals; tracked dispatch with delivery proofs</li>
         <li>Secure custody for corporate records and originals (optional dedicated storage)</li>
         <li>Authority/bank correspondence handling with timestamped index</li>
-        <li>Integration with <a href="corporate-secretarial-services.html">Corporate Secretarial</a> for filings and registers</li>
+        <li>Integration with <a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial</a> for filings and registers</li>
       </ul>
 
       <div class="keyline"></div>
@@ -284,7 +288,7 @@
           </tbody>
         </table>
       </div>
-      <p class="note">Meeting rooms and operational desks are available via <a href="physical-office-rental-services.html">Physical Office Rental Services</a>.</p>
+      <p class="note">Meeting rooms and operational desks are available via <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a>.</p>
     </div>
   </section>
 
@@ -377,27 +381,40 @@
     </div>
   </section>
 
+  <!-- CASE STUDY -->
+  <section class="container fade-up" data-anim-delay="0.35" id="case-study">
+    <div class="content-narrow">
+      <h2>Case Study</h2>
+      <div class="case-study">
+        <h3>Time-Sensitive Bank &amp; Authority Correspondence Routed Without Delays</h3>
+        <p class="muted"><strong>Client:</strong> International services company with a Cyprus entity (anonymised)</p>
+        <p>The client required a registered office in Nicosia with reliable same-day receipt and scanning of bank and authority correspondence. Using MegaServe’s registered address and mail-handling workflow, time-sensitive letters were logged, scanned, and routed to decision-makers without delays, helping avoid missed deadlines and back-and-forth with third parties.</p>
+        <p><strong>Result:</strong> bank and authority correspondence was handled predictably with a documented trail and clear routing rules.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- RELATED / SEE ALSO -->
-  <section class="container fade-up" data-anim-delay="0.35" id="related">
+  <section class="container fade-up" data-anim-delay="0.4" id="related">
     <div class="content-narrow">
       <h2>Related Services</h2>
       <p class="muted">
-        <a href="corporate-secretarial-services.html">Corporate Secretarial</a> ·
-        <a href="directorship-management-services.html">Directorship &amp; Management</a> ·
-        <a href="virtual-office-services.html">Virtual Office</a> ·
-        <a href="physical-office-rental-services.html">Physical Office Rental</a>
+        <a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial</a> ·
+        <a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management</a> ·
+        <a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office</a> ·
+        <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental</a>
       </p>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="container fade-up" data-anim-delay="0.4" id="faq">
+  <section class="container fade-up" data-anim-delay="0.45" id="faq">
     <div class="content-narrow">
       <h2>FAQ</h2>
       <div class="table-wrap" aria-hidden="true" style="display:none"></div>
       <dl class="faq">
         <dt>Is the registered office enough for banking and auditors?</dt>
-        <dd>It meets statutory requirements. Some banks/auditors may expect substance (board activity, premises, staff). We can coordinate <a href="directorship-management-services.html">governance</a> and <a href="physical-office-rental-services.html">premises</a> if needed.</dd>
+        <dd>It meets statutory requirements. Some banks/auditors may expect substance (board activity, premises, staff). We can coordinate <a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">governance</a> and <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">premises</a> if needed.</dd>
 
         <dt>Can multiple entities share the same registered office?</dt>
         <dd>Yes, with clear mail rules and separate indices. Group discounts may apply depending on volume.</dd>
@@ -415,11 +432,11 @@
   </section>
 
   <!-- CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.45">
+  <section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
     <div class="container">
       <h2>Set Up Your Cyprus Registered Office</h2>
       <p class="contact-intro">Get a compliant address with reliable mail handling and clean audit trails—ready for banks and authorities.</p>
-      <a href="mailto:megaserve@megaserve.eu" class="btn-primary pulse-on-hover">Request Setup</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Registered%20Address%20-%20Setup%20Request" class="btn-primary pulse-on-hover">Request Setup</a>
       <p class="note">Prefer a quick kickoff? Email your certificate set and forwarding rules; we’ll reply with a short intake slot.</p>
     </div>
   </section>
@@ -429,18 +446,23 @@
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
-      <a href="../../index.html#services">Services</a>
-      <a href="../../about.html">About</a>
-      <a href="../../index.html#contact-cta">Contact</a>
-      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 <!-- Optional: FAQ Schema -->
 <script type="application/ld+json">
@@ -477,6 +499,6 @@
 }
 </script>
 
-<script src="../../script.js?v=14"></script>
+<script src="/script.js?v=14"></script>
 </body>
 </html>
