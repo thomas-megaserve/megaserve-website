@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Virtual Office Services — MegaServe Cyprus</title>
-  <meta name="description" content="Virtual office presence in Cyprus: business address, call handling, meeting rooms, mail/courier management, and coordinated admin support—bankable, compliant, and scalable.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Virtual office presence in Cyprus: business address, call handling, meeting rooms, mail/courier management, and coordinated admin support—bankable, compliant, and scalable." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.megaserve.eu/virtual-office-services.html">
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/nominee-and-fiduciary-services/virtual-office-services" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Virtual Office Services — MegaServe Cyprus">
-  <meta property="og:description" content="Flexible Cyprus presence without full-time premises—bankable address, local call handling, meeting rooms, mail/courier management, and on-demand admin support.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.megaserve.eu/virtual-office-services.html">
-  <meta property="og:image" content="https://www.megaserve.eu/assets/og/virtual-office-og.jpg">
+  <meta property="og:title" content="Virtual Office Services — MegaServe Cyprus" />
+  <meta property="og:description" content="Flexible Cyprus presence without full-time premises—bankable address, local call handling, meeting rooms, mail/courier management, and on-demand admin support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/nominee-and-fiduciary-services/virtual-office-services" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/virtual-office-services-og.jpg" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Virtual Office Services — MegaServe Cyprus">
-  <meta name="twitter:description" content="Flexible Cyprus presence without full-time premises—address, call handling, rooms, mail/courier, and admin support.">
-  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/virtual-office-og.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Virtual Office Services — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Flexible Cyprus presence without full-time premises—address, call handling, rooms, mail/courier, and admin support." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/virtual-office-services-og.jpg" />
 
-  <!-- Favicons / theme -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
-  <meta name="theme-color" content="#a00000">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
 
-  <!-- Global stylesheet (root-level) -->
-  <link rel="stylesheet" href="../../style.css?v=14">
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="/style.css?v=14" />
 
-  <!-- Page-local helpers (kept consistent with other service pages) -->
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
     .page-hero .container{padding:2.5rem 0 1.5rem}
     .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
+
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
 
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
@@ -58,17 +65,39 @@
     .table-wrap{overflow-x:auto}
     table.packages, table.service{width:100%;border-collapse:collapse}
     table.packages th, table.packages td,
-    table.service th, table.service td {border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.service td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.packages th, table.service th{background:#fafafa}
-    .badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.2rem .6rem;font-size:.8rem;margin:.15rem .35rem 0 0}
 
-    /* Ensure CTA fine print is readable on darker/red banner variants */
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
 
+    /* FAQs like Company Formation */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    .section-spaced{margin-top:2rem}
+    .submenu-caret{margin-left:.35rem}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+
+    /* Fallback fade-up */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
-
-    .submenu-caret{margin-left:.35rem}
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -85,98 +114,91 @@
     #main-nav .nav-cta a.btn-primary:hover{
       background:#9e0f1a;
     }
-
-    #site-header .header-flex{
-      align-items:center;
-    }
   </style>
 </head>
+
 <body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
-<!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <!-- Hamburger Button for Mobile -->
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="registered-address-services.html">Registered Address Services</a></li>
-            <li><a aria-current="page" href="virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a aria-current="page" href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
-              <ul class="flyout" aria-label="Employment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+              <ul class="flyout" aria-label="Employment permit routes">
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -186,9 +208,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -196,9 +218,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -206,49 +228,89 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="../compliance-services/client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA -->
-        <li><a href="../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main-content">
-  <!-- HERO -->
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container">
-      <h1>Virtual Office Services</h1>
-      <p class="content-narrow">Flexible Cyprus presence without full-time premises—bankable address, local call handling, meeting rooms, mail/courier management, and on-demand admin support aligned to substance expectations.</p>
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Virtual Office Services</h1>
+    <p>Flexible Cyprus presence without full-time premises—bankable address, local call handling, meeting rooms, mail/courier management, and on-demand admin support aligned to substance expectations.</p>
+    <div class="micro-trust">Cyprus-based team · <strong>30+ years’ experience</strong> · Structured correspondence &amp; comms handling</div>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Virtual%20Office%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="virtual-office">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Virtual%20Office" class="btn-secondary" data-cta="book-call" data-page="virtual-office">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="virtual-office">Onboarding Checklist</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- WHAT YOU GET -->
-  <section class="container fade-up" data-anim-delay="0.15" id="overview">
-    <div class="content-narrow">
-      <h2>What You Get</h2>
-      <ul class="feature-list">
-        <li>Business correspondence address for non-statutory use (invoices, websites, counterparties)</li>
-        <li>Dedicated local phone number with call handling and message forwarding</li>
-        <li>Mail intake, scanning, and forwarding; tracked couriers with delivery proofs</li>
-        <li>Meeting room scheduling in Nicosia (hourly / half-day / day)</li>
-        <li>Guest reception, visitor logs, and basic hospitality (water/coffee)</li>
-        <li>On-demand admin support: document packs, printing, certified copy coordination</li>
-        <li>Optional integration with <a href="registered-address-services.html">Registered Address</a> and <a href="physical-office-rental-services.html">Physical Office</a></li>
-      </ul>
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#risk">Risk</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
 
-      <div class="keyline"></div>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
 
-      <h2 id="packages">Packages (Indicative)</h2>
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>International owners who need a Cyprus communications presence without full-time premises</li>
+      <li>Cyprus entities that want predictable mail/courier handling and meeting room access during visits</li>
+      <li>Teams that need structured correspondence routing during bank/EMI or audit workflows</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>Business correspondence address for non-statutory use (invoices, websites, counterparties)</li>
+      <li>Dedicated local phone number with call handling and message forwarding</li>
+      <li>Mail intake, scanning, and forwarding; tracked couriers with delivery proofs</li>
+      <li>Meeting room scheduling in Nicosia (hourly / half-day / day)</li>
+      <li>Guest reception, visitor logs, and basic hospitality (water/coffee)</li>
+      <li>On-demand admin support: document packs, printing, certified copy coordination</li>
+      <li>Optional integration with <a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address</a> and <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office</a></li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <div class="section-spaced">
+      <h3>Onboarding Flow</h3>
+      <ol class="process-steps">
+        <li><strong>Intake:</strong> contact matrix, call script (if any), forwarding preferences, and access emails.</li>
+        <li><strong>Set-Up:</strong> local number provisioning, mailbox creation, shared folder, and escalation rules.</li>
+        <li><strong>Kick-Off:</strong> test calls, test scans, and a sample courier dispatch to confirm preferences.</li>
+        <li><strong>Go-Live:</strong> monthly cadence agreed; meeting room access details supplied.</li>
+      </ol>
+    </div>
+
+    <div class="section-spaced">
+      <h3>Packages (Indicative)</h3>
       <div class="table-wrap" role="region" aria-labelledby="pkg-caption">
         <table class="packages" aria-describedby="pkg-caption">
           <caption id="pkg-caption" class="sr-only">Virtual office package comparison by feature and tier</caption>
@@ -304,14 +366,11 @@
           </tbody>
         </table>
       </div>
-      <p class="note">We scope the package to your communication patterns. Registered office for statutory purposes is available separately via <a href="registered-address-services.html">Registered Address</a>.</p>
+      <p class="note">We scope the package to your communication patterns. Registered office for statutory purposes is available separately via <a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address</a>.</p>
     </div>
-  </section>
 
-  <!-- SERVICE LEVELS -->
-  <section class="container fade-up" data-anim-delay="0.2" id="service-levels">
-    <div class="content-narrow">
-      <h2>Service Levels &amp; Targets</h2>
+    <div class="section-spaced">
+      <h3>Service Levels &amp; Targets</h3>
       <div class="table-wrap" role="region" aria-labelledby="sl-caption">
         <table class="service" aria-describedby="sl-caption">
           <caption id="sl-caption" class="sr-only">Virtual office service levels and typical target responses</caption>
@@ -359,111 +418,143 @@
       </div>
       <p class="note">Targets reflect typical handling; third-party timelines (couriers, notaries) can affect completion.</p>
     </div>
-  </section>
 
-  <!-- ONBOARDING -->
-  <section class="container fade-up" data-anim-delay="0.25" id="onboarding">
-    <div class="content-narrow">
-      <h2>Onboarding Flow</h2>
-      <ol class="process-steps">
-        <li><strong>Intake:</strong> contact matrix, call script (if any), forwarding preferences, and access emails.</li>
-        <li><strong>Set-Up:</strong> local number provisioning, mailbox creation, shared folder, and escalation rules.</li>
-        <li><strong>Kick-Off:</strong> test calls, test scans, and a sample courier dispatch to confirm preferences.</li>
-        <li><strong>Go-Live:</strong> monthly cadence agreed; meeting room access details supplied.</li>
-      </ol>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>Bank/EMI KYB Support via Virtual Office Communications &amp; Audit Trail</h3>
+      <p class="muted"><strong>Client:</strong> International services company with a Cyprus entity (anonymised)</p>
+      <p>The client was undergoing bank/EMI KYB onboarding and needed a credible Cyprus-facing communications setup. The institution required timely responses to clarifications and a clean record of correspondence.</p>
+      <p>MegaServe implemented a Cyprus virtual office communications layer (business contact presence + structured escalation rules), logged inbound bank/authority correspondence, scanned and indexed documents, and routed clarifications to the client promptly, maintaining a consistent audit trail (timestamped items, searchable PDFs, delivery proofs where relevant).</p>
+      <p><strong>Result:</strong> clarification requests were handled without missed deadlines, and the client maintained a clean, bankable correspondence record during onboarding. Messages were forwarded within <strong>1 hour</strong> during business hours, and mail scans were delivered <strong>same day / next business day</strong> depending on intake time.</p>
     </div>
-  </section>
 
-  <!-- COMPLIANCE & LIMITS -->
-  <section class="container fade-up" data-anim-delay="0.3" id="compliance">
-    <div class="content-narrow">
-      <h2>Compliance Notes &amp; Practical Limits</h2>
-      <ul class="feature-list">
-        <li><strong>Statutory vs. business address:</strong> virtual office is for business correspondence. For statutory purposes, use our <a href="registered-address-services.html">Registered Address</a> service.</li>
-        <li><strong>Substance:</strong> virtual office supports communications and logistics; formal substance (board meetings, premises) is provided under <a href="directorship-management-services.html">Directorship</a> or <a href="physical-office-rental-services.html">Physical Office</a>.</li>
-        <li><strong>Call content:</strong> we do not provide legal/tax advice on calls; we route messages per your script and escalation rules.</li>
-        <li><strong>Data handling:</strong> mail scans are stored in a structured folder with access controls; retention periods can be configured.</li>
-      </ul>
+    <div class="keyline"></div>
+
+    <h2 id="requirements">Requirements (Onboarding)</h2>
+    <ul class="feature-list">
+      <li>Company details (name, registration no., contact matrix)</li>
+      <li>Forwarding addresses/emails and escalation rules</li>
+      <li>Call script (if applicable) and routing instructions</li>
+      <li>Any formatting or confidentiality requirements for scans</li>
+      <li>Meeting room preferences (capacity, equipment)</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="risk">Risk &amp; Practical Limits</h2>
+    <ul class="feature-list">
+      <li><strong>Statutory vs. business address:</strong> virtual office is for business correspondence. For statutory purposes, use our <a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address</a> service.</li>
+      <li><strong>Substance:</strong> virtual office supports communications and logistics; formal substance (board meetings, premises) is provided under <a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship</a> or <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office</a>.</li>
+      <li><strong>Call content:</strong> we do not provide legal/tax advice on calls; we route messages per your script and escalation rules.</li>
+      <li><strong>Data handling:</strong> mail scans are stored in a structured folder with access controls; retention periods can be configured.</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Can the virtual office be used as the company’s registered office?</summary>
+        <p>No. Registered office is a separate statutory service. See <a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address</a>.</p>
+      </details>
+
+      <details>
+        <summary>Do you provide a local phone number and answer calls in Greek/English?</summary>
+        <p>Yes. We provide a local number and handle calls in EN/GR (RU on request), forwarding messages per your script.</p>
+      </details>
+
+      <details>
+        <summary>How quickly do you forward urgent mail?</summary>
+        <p>We flag urgent items on intake and can dispatch same-day if confirmed before 14:00.</p>
+      </details>
+
+      <details>
+        <summary>Can we bundle with board meeting facilities?</summary>
+        <p>Yes. Combine with <a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship</a> for substance (board meetings in Cyprus) and/or <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office</a> for dedicated space.</p>
+      </details>
     </div>
-  </section>
 
-  <!-- USE CASES -->
-  <section class="container fade-up" data-anim-delay="0.35" id="use-cases">
-    <div class="content-narrow">
-      <h2>Typical Use Cases</h2>
-      <ul class="feature-list">
-        <li><strong>Market entry:</strong> establish a communication presence before hiring or leasing.</li>
-        <li><strong>Lean operations:</strong> keep costs tight while maintaining a Cyprus contact footprint.</li>
-        <li><strong>Team travel:</strong> coordinate meeting rooms and couriered documents during visits.</li>
-        <li><strong>Audit readiness:</strong> maintain a clear trail of inbound/outbound correspondence.</li>
-      </ul>
+    <p class="note">Unusual requirements (after-hours call cover, large consignments, confidentiality protocols)? Include them when you contact us—we’ll tailor the setup.</p>
+
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address</a> ·
+      <a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management</a> ·
+      <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental</a> ·
+      <a href="/services/corporate-services/administrative-services.html">Administrative Services</a>
+    </p>
+
+    <h2 class="section-spaced">Other Jurisdictions (on request)</h2>
+    <p class="muted">Where required, we coordinate virtual office and communications support through vetted associates in selected jurisdictions.</p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
+    <h2>Activate a Virtual Office</h2>
+    <p class="contact-intro">Tell us your forwarding rules, call script, and meeting room cadence. We’ll confirm a go-live plan within one business day.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Virtual%20Office%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="virtual-office">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Virtual%20Office" class="btn-secondary" data-cta="book-call" data-page="virtual-office">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Virtual%20Office" class="btn-secondary" data-cta="book-visit" data-page="virtual-office">Book a Visit (Nicosia)</a>
     </div>
-  </section>
+    <p class="note">Prefer a quick kickoff? Email a contact matrix + call script (if any) + forwarding address. We’ll reply with onboarding steps.</p>
+  </div>
+</section>
 
-  <!-- CHECKLIST -->
-  <section class="container fade-up" data-anim-delay="0.4" id="checklist">
-    <div class="content-narrow">
-      <h2>Documents &amp; Preferences (Onboarding)</h2>
-      <ul class="feature-list">
-        <li>Company details (name, registration no., contact matrix)</li>
-        <li>Forwarding addresses/emails and escalation rules</li>
-        <li>Call script (if applicable) and routing instructions</li>
-        <li>Any formatting or confidentiality requirements for scans</li>
-        <li>Meeting room preferences (capacity, equipment)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="container fade-up" data-anim-delay="0.45" id="faq">
-    <div class="content-narrow">
-      <h2>FAQ</h2>
-      <dl class="faq">
-        <dt>Can the virtual office be used as the company’s registered office?</dt>
-        <dd>No. Registered office is a separate statutory service. See <a href="registered-address-services.html">Registered Address</a>.</dd>
-
-        <dt>Do you provide a local phone number and answer calls in Greek/English?</dt>
-        <dd>Yes. We provide a local number and handle calls in EN/GR (RU on request), forwarding messages per your script.</dd>
-
-        <dt>How quickly do you forward urgent mail?</dt>
-        <dd>We flag urgent items on intake and can dispatch same-day if confirmed before 14:00.</dd>
-
-        <dt>Can we bundle with board meeting facilities?</dt>
-        <dd>Yes. Combine with <a href="directorship-management-services.html">Directorship</a> for substance (board meetings in Cyprus) and/or <a href="physical-office-rental-services.html">Physical Office</a> for dedicated space.</dd>
-      </dl>
-      <p class="note">Unusual requirements (after-hours call cover, large consignments, confidentiality protocols)? Include them when you contact us—we’ll tailor the setup.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.5">
-    <div class="container">
-      <h2>Activate a Virtual Office</h2>
-      <p class="contact-intro">Tell us your forwarding rules, call script, and meeting room cadence. We’ll confirm a go-live plan within one business day.</p>
-      <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Request Setup</a>
-      <p class="note">Prefer a quick kickoff? Email a contact matrix + call script (if any) + forwarding address. We’ll reply with onboarding steps.</p>
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
-      <a href="../../index.html#services">Services</a>
-      <a href="../../about.html">About</a>
-      <a href="../../index.html#contact-cta">Contact</a>
-      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- Optional: FAQ Schema for SEO -->
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Virtual%20Office%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="virtual-office">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Virtual%20Office" class="btn-secondary" data-cta="sticky-book-call" data-page="virtual-office">Book a Call</a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Trigger a true above-the-fold fade-in (same pattern used on other pages) -->
+<script>
+  (function () {
+    function inView(el) {
+      var r = el.getBoundingClientRect();
+      return r.top < (window.innerHeight * 0.92);
+    }
+    function revealAboveFold() {
+      document.querySelectorAll('.fade-up').forEach(function (el) {
+        if (inView(el)) el.classList.add('visible');
+      });
+    }
+    window.addEventListener('load', function () {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          setTimeout(revealAboveFold, 30);
+        });
+      });
+    });
+  })();
+</script>
+
+<!-- FAQ Schema for SEO (matches visible FAQs) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -493,6 +584,6 @@
 }
 </script>
 
-<script src="../../script.js?v=14"></script>
+<script src="/script.js?v=14"></script>
 </body>
 </html>
