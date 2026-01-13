@@ -13,14 +13,14 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.megaserve.eu/residency-by-employment-permit-services.html" />
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Residency by Employment Permit Services — MegaServe Cyprus" />
   <meta property="og:description" content="End-to-end support for Cyprus employment permits: route triage, employer onboarding, filings, biometrics, and family joiners." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.megaserve.eu/residency-by-employment-permit-services.html" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services" />
   <meta property="og:image" content="https://www.megaserve.eu/assets/og/employment-permit-og.jpg" />
 
   <!-- Twitter -->
@@ -35,16 +35,24 @@
   <meta name="theme-color" content="#a00000" />
 
   <!-- Global stylesheet (root-level) -->
-  <link rel="stylesheet" href="../../../style.css?v=14" />
+  <link rel="stylesheet" href="/style.css?v=14" />
 
   <!-- CountUp (for stats band; harmless if blocked) -->
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
-  <!-- Page-local helpers (kept consistent with other service pages) -->
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+    .section-spaced{margin-top:2rem}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
 
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
@@ -63,8 +71,9 @@
     table.matrix th,table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th,table.matrix th{background:#fafafa}
 
-    .faq dt{font-weight:700;margin-top:1rem}
-    .faq dd{margin:0 0 1rem 0}
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
 
     .fade-up{opacity:0;transform:translateY(14px)}
     .fade-up.visible{opacity:1;transform:translateY(0)}
@@ -74,6 +83,16 @@
     .badge{display:inline-block;background:var(--color-gold);color:#000;padding:.1rem .45rem;border-radius:.4rem;font-size:.75rem;margin-left:.4rem}
 
     .submenu-caret{margin-left:.35rem}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -87,110 +106,102 @@
       display:inline-block;
       box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
-    }
-
-    #site-header .header-flex{
-      align-items:center;
-    }
+    #main-nav .nav-cta a.btn-primary:hover{background:#9e0f1a}
 
     /* Small stat band */
     .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:1rem auto 0;max-width:900px}
     .stat{border:1px solid #eee;border-radius:.75rem;padding:1rem;background:#fff;text-align:center}
     .stat .num{font-size:1.6rem;font-weight:700}
-    .muted{font-size:.9rem;color:#666}
-
-    /* CTA fine print on dark/red strip */
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    .muted-sm{font-size:.9rem;color:#666}
   </style>
 </head>
+
 <body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <!-- Hamburger Button for Mobile -->
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="../../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
             <!-- Employment hub -->
             <li class="has-flyout">
-              <a href="residency-by-employment-permit-services.html" aria-current="page" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-current="page" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="general-employment-permit.html">General Employment</a></li>
-                <li><a href="eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
+
             <!-- Investment hub -->
             <li class="has-flyout">
-              <a href="../residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="../residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
-                <li><a href="../residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
+
             <!-- Visitor hub -->
             <li class="has-flyout">
-              <a href="../visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
+
             <!-- Citizenship hub -->
             <li class="has-flyout">
-              <a href="../naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -199,10 +210,10 @@
         <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
-          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          <ul class="dropdown" aria-label="Tax &amp; VAT Administration Submenu">
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -210,9 +221,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -220,95 +231,108 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="../../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="../../compliance-services/client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="../../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="../../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="../../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA -->
-        <li><a href="../../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main-content">
-  <!-- HERO -->
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container">
-      <h1>Residency by Employment Permit Services</h1>
-      <p class="content-narrow">End-to-end support for employment-based stays in Cyprus—route selection, employer onboarding, filings, biometrics, and family joiners.</p>
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Residency by Employment Permit Services</h1>
+    <p>End-to-end support for employment-based stays in Cyprus—route selection, employer onboarding, filings, biometrics, and family joiners.</p>
+    <div class="micro-trust">Cyprus-based team · <strong>Clear checklists</strong> · Weekly status notes until decision</div>
 
-      <!-- Small stat band (non-critical, enhances trust) -->
-      <div class="stats" aria-label="Operational stats (illustrative)">
-        <div class="stat">
-          <div class="num" data-countup="320">320+</div>
-          <div class="muted">Employment Filings</div>
-        </div>
-        <div class="stat">
-          <div class="num" data-countup="85">85%</div>
-          <div class="muted">First-Slot Booking Rate</div>
-        </div>
-        <div class="stat">
-          <div class="num" data-countup="140">140+</div>
-          <div class="muted">Family Joiners</div>
-        </div>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Employment%20Permit%20-%20Route%20Memo%20Request" class="btn-primary" data-cta="proposal" data-page="employment-permit">Request Route Memo</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Employment%20Permit%20Services" class="btn-secondary" data-cta="book-call" data-page="employment-permit">Book a Call</a>
+      <a href="#checklist" class="btn-secondary" data-cta="jump-checklist" data-page="employment-permit">Documents Checklist</a>
+    </div>
+
+    <!-- Small stat band (optional) -->
+    <div class="stats" aria-label="Operational stats (illustrative)">
+      <div class="stat">
+        <div class="num" data-countup="320">320+</div>
+        <div class="muted-sm">Employment Filings</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-countup="85">85%</div>
+        <div class="muted-sm">First-Slot Booking Rate</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-countup="140">140+</div>
+        <div class="muted-sm">Family Joiners</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- OVERVIEW / WHAT WE HANDLE -->
-  <section class="container fade-up" data-anim-delay="0.15" id="overview">
-    <div class="content-narrow">
-      <h2>What We Handle</h2>
-      <ul class="feature-list">
-        <li>Route triage: Non-EU permits, General Employment, EU Blue Card, Digital Nomad, EU/EEA registrations</li>
-        <li>Eligibility checks (role, salary bands, qualifications, remote/hybrid status)</li>
-        <li>Employer onboarding: company registration, vacancy approvals, letters &amp; undertakings</li>
-        <li>Applicant pack assembly: forms, translations, apostilles, health insurance, police certificates</li>
-        <li>Scheduling &amp; biometrics: appointment booking, attendance notes, queue handling</li>
-        <li>Dependants &amp; family reunification where eligible</li>
-        <li>Status tracking, renewals diary, and archive of receipts/permits</li>
-        <li>Bank, landlord, and school letters based on permit status</li>
-      </ul>
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#overview">Overview</a>
+    <a href="#routes">Routes</a>
+    <a href="#process">Process</a>
+    <a href="#service-levels">Timing</a>
+    <a href="#deliverables">Deliverables</a>
+    <a href="#checklist">Checklist</a>
+    <a href="#controls">Controls</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
 
-      <div class="keyline"></div>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
 
-      <h2>Quick Links to Specific Routes</h2>
-      <div class="link-grid" role="list">
-        <a href="employment-permit-non-eu.html" role="listitem">Employment Permit for Non-E.U. Nationals</a>
-        <a href="general-employment-permit.html" role="listitem">General Employment</a>
-        <a href="eu-blue-card.html" role="listitem">EU Blue Card</a>
-        <a href="digital-nomad-visa.html" role="listitem">Digital Nomad Visa</a>
-        <a href="eu-citizen-family-registration.html" role="listitem">EU Citizen &amp; Family Members <span class="badge">EU/EEA</span></a>
-      </div>
-      <p class="note">Each route page includes full checklists, forms, fees, and timeline expectations.</p>
+    <h2 id="overview">What We Handle</h2>
+    <ul class="feature-list">
+      <li>Route triage: Non-EU permits, General Employment, EU Blue Card, Digital Nomad, EU/EEA registrations</li>
+      <li>Eligibility checks (role, salary bands, qualifications, remote/hybrid status)</li>
+      <li>Employer onboarding: company registration, vacancy approvals, letters &amp; undertakings</li>
+      <li>Applicant pack assembly: forms, translations, apostilles, health insurance, police certificates</li>
+      <li>Scheduling &amp; biometrics: appointment booking, attendance notes, queue handling</li>
+      <li>Dependants &amp; family reunification where eligible</li>
+      <li>Status tracking, renewals diary, and archive of receipts/permits</li>
+      <li>Bank, landlord, and school letters based on permit status</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="routes">Quick Links to Specific Routes</h2>
+    <div class="link-grid" role="list">
+      <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html" role="listitem">Employment Permit for Non-E.U. Nationals</a>
+      <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html" role="listitem">General Employment</a>
+      <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html" role="listitem">EU Blue Card</a>
+      <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html" role="listitem">Digital Nomad Visa</a>
+      <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html" role="listitem">EU Citizen &amp; Family Members <span class="badge">EU/EEA</span></a>
     </div>
-  </section>
+    <p class="note">Each route page includes checklists, forms, and route-specific timing considerations.</p>
 
-  <!-- PROCESS -->
-  <section class="container fade-up" data-anim-delay="0.2" id="process">
-    <div class="content-narrow">
-      <h2>Process &amp; Cadence</h2>
-      <ol class="process-steps">
-        <li><strong>Intake &amp; Triage:</strong> capture role, salary, nationality, family; confirm the correct route and risks.</li>
-        <li><strong>Employer Setup:</strong> register/verify company where needed; draft employer letters and undertakings.</li>
-        <li><strong>Evidence Pack:</strong> compile forms, translations, insurance, police certs; book appointments.</li>
-        <li><strong>Submission &amp; Biometrics:</strong> lodge application, attend biometrics, track reference numbers.</li>
-        <li><strong>Decision &amp; Issuance:</strong> collect permits/cards; issue employment start notes and renewal reminders.</li>
-      </ol>
-    </div>
-  </section>
+    <div class="keyline"></div>
 
-  <!-- COMPARISON MATRIX -->
-  <section class="container fade-up" data-anim-delay="0.25" id="matrices">
-    <div class="content-narrow">
-      <h2>Route Snapshot</h2>
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Intake &amp; Triage:</strong> capture role, salary, nationality, family; confirm the correct route and risks.</li>
+      <li><strong>Employer Setup:</strong> register/verify company where needed; draft employer letters and undertakings.</li>
+      <li><strong>Evidence Pack:</strong> compile forms, translations, insurance, police certs; book appointments.</li>
+      <li><strong>Submission &amp; Biometrics:</strong> lodge application, attend biometrics, track reference numbers.</li>
+      <li><strong>Decision &amp; Issuance:</strong> collect permits/cards; issue employment start notes and renewal reminders.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>Route Snapshot</h3>
       <div class="table-wrap" role="region" aria-labelledby="routes-caption">
         <table class="matrix" aria-describedby="routes-caption">
           <caption id="routes-caption" class="sr-only">Employment-based residency routes: use cases and requirements</caption>
@@ -323,35 +347,35 @@
           </thead>
           <tbody>
             <tr>
-              <td><a href="employment-permit-non-eu.html">Non-EU Employment Permit</a></td>
+              <td><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Non-EU Employment Permit</a></td>
               <td>Local hires / transfers needing Cyprus work rights</td>
               <td>Yes — registered Cyprus employer</td>
               <td>Spouse/children (conditions apply)</td>
               <td>Yes — per contract &amp; authority rules</td>
             </tr>
             <tr>
-              <td><a href="general-employment-permit.html">General Employment</a></td>
+              <td><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></td>
               <td>Standard roles meeting salary/qualification bands</td>
               <td>Yes</td>
               <td>Possible (route-specific)</td>
               <td>Yes</td>
             </tr>
             <tr>
-              <td><a href="eu-blue-card.html">EU Blue Card</a></td>
+              <td><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></td>
               <td>Highly-skilled roles meeting salary thresholds</td>
               <td>Yes</td>
               <td>Yes</td>
               <td>Yes — favourable mobility in EU</td>
             </tr>
             <tr>
-              <td><a href="digital-nomad-visa.html">Digital Nomad Visa</a></td>
+              <td><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></td>
               <td>Remote workers employed abroad</td>
               <td>No Cyprus employer</td>
               <td>Yes (if income &amp; accommodation met)</td>
               <td>Yes — route-specific</td>
             </tr>
             <tr>
-              <td><a href="eu-citizen-family-registration.html">EU/EEA Registration</a></td>
+              <td><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU/EEA Registration</a></td>
               <td>EU citizens and qualifying family members</td>
               <td>Employment or self-sufficiency proof</td>
               <td>Yes — per EU free-movement rules</td>
@@ -362,217 +386,207 @@
       </div>
       <p class="note">Exact eligibility and documents depend on nationality, role, and employer status. We confirm requirements before filing.</p>
     </div>
-  </section>
 
-  <!-- SERVICE LEVELS -->
-  <section class="container fade-up" data-anim-delay="0.3" id="service-levels">
-    <div class="content-narrow">
-      <h2>Service Levels &amp; Typical Timing</h2>
-      <div class="table-wrap" role="region" aria-labelledby="svc-caption">
-        <table class="service" aria-describedby="svc-caption">
-          <caption id="svc-caption" class="sr-only">Service activities, timings, targets, and notes</caption>
-          <thead>
-            <tr>
-              <th scope="col">Activity</th>
-              <th scope="col">Typical Frequency/Timing</th>
-              <th scope="col">Target Response</th>
-              <th scope="col">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Route &amp; eligibility check</td>
-              <td>At kickoff</td>
-              <td>1–2 business days</td>
-              <td>Assumes receipt of role details and passport data</td>
-            </tr>
-            <tr>
-              <td>Employer registration pack</td>
-              <td>Once per employer/entity</td>
-              <td>2–5 business days</td>
-              <td>Dependent on company docs and signatories</td>
-            </tr>
-            <tr>
-              <td>Applicant evidence pack</td>
-              <td>Per applicant</td>
-              <td>3–7 business days</td>
-              <td>Translations/apostilles may extend timing</td>
-            </tr>
-            <tr>
-              <td>Appointment booking</td>
-              <td>As slots open</td>
-              <td>Same–2 business days</td>
-              <td>Subject to authority calendars</td>
-            </tr>
-            <tr>
-              <td>Status updates &amp; follow-ups</td>
-              <td>Weekly until decision</td>
-              <td>Same day</td>
-              <td>Escalations coordinated where appropriate</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Timings reflect typical handling; authority queues and enhanced checks may extend completion.</p>
+    <div class="keyline"></div>
+
+    <h2 id="service-levels">Service Levels &amp; Typical Timing</h2>
+    <div class="table-wrap" role="region" aria-labelledby="svc-caption">
+      <table class="service" aria-describedby="svc-caption">
+        <caption id="svc-caption" class="sr-only">Service activities, timings, targets, and notes</caption>
+        <thead>
+          <tr>
+            <th scope="col">Activity</th>
+            <th scope="col">Typical Frequency/Timing</th>
+            <th scope="col">Target Response</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Route &amp; eligibility check</td>
+            <td>At kickoff</td>
+            <td>1–2 business days</td>
+            <td>Assumes receipt of role details and passport data</td>
+          </tr>
+          <tr>
+            <td>Employer registration pack</td>
+            <td>Once per employer/entity</td>
+            <td>2–5 business days</td>
+            <td>Dependent on company docs and signatories</td>
+          </tr>
+          <tr>
+            <td>Applicant evidence pack</td>
+            <td>Per applicant</td>
+            <td>3–7 business days</td>
+            <td>Translations/apostilles may extend timing</td>
+          </tr>
+          <tr>
+            <td>Appointment booking</td>
+            <td>As slots open</td>
+            <td>Same–2 business days</td>
+            <td>Subject to authority calendars</td>
+          </tr>
+          <tr>
+            <td>Status updates &amp; follow-ups</td>
+            <td>Weekly until decision</td>
+            <td>Same day</td>
+            <td>Escalations coordinated where appropriate</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
+    <p class="note">Timings reflect typical handling; authority queues and enhanced checks may extend completion.</p>
 
-  <!-- DELIVERABLES -->
-  <section class="container fade-up" data-anim-delay="0.35" id="deliverables">
-    <div class="content-narrow">
-      <h2>Deliverables</h2>
-      <ul class="feature-list">
-        <li>Route memo with eligibility rationale &amp; risk notes</li>
-        <li>Employer registration/verification pack</li>
-        <li>Applicant document checklist &amp; evidence tracker</li>
-        <li>Appointment confirmations and attendance notes</li>
-        <li>Submission receipts, reference numbers, and permit copies</li>
-        <li>Renewal diary with reminders and required evidence</li>
-        <li>Letters for banks/landlords/schools referencing status</li>
-      </ul>
+    <div class="keyline"></div>
+
+    <h2 id="deliverables">Deliverables</h2>
+    <ul class="feature-list">
+      <li>Route memo with eligibility rationale &amp; risk notes</li>
+      <li>Employer registration/verification pack</li>
+      <li>Applicant document checklist &amp; evidence tracker</li>
+      <li>Appointment confirmations and attendance notes</li>
+      <li>Submission receipts, reference numbers, and permit copies</li>
+      <li>Renewal diary with reminders and required evidence</li>
+      <li>Letters for banks/landlords/schools referencing status</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="checklist">Documents Checklist (At Kickoff)</h2>
+    <div class="table-wrap" role="region" aria-labelledby="kickoff-caption">
+      <table class="matrix" aria-describedby="kickoff-caption">
+        <caption id="kickoff-caption" class="sr-only">Kickoff checklist by applicant, employer, and family</caption>
+        <thead>
+          <tr>
+            <th scope="col">Applicant</th>
+            <th scope="col">Employer</th>
+            <th scope="col">Family (if applicable)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul class="feature-list">
+                <li>Passport bio page &amp; current visa (if any)</li>
+                <li>CV, diplomas/qualifications (where relevant)</li>
+                <li>Police clearance &amp; health insurance</li>
+                <li>Proof of address / tenancy</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="feature-list">
+                <li>Company registration &amp; directors list</li>
+                <li>Employment contract / offer letter</li>
+                <li>Employer letters &amp; undertakings</li>
+                <li>Tax/VAT numbers (if applicable)</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="feature-list">
+                <li>Passports &amp; birth/marriage certificates</li>
+                <li>Proof of relationship and co-habitation</li>
+                <li>Insurance coverage</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
+    <p class="note">Formats: PDF/JPG scans acceptable; originals may be required at biometrics. We confirm translation/apostille needs case-by-case.</p>
 
-  <!-- CHECKLIST -->
-  <section class="container fade-up" data-anim-delay="0.4" id="checklist">
-    <div class="content-narrow">
-      <h2>Documents Checklist (At Kickoff)</h2>
-      <div class="table-wrap" role="region" aria-labelledby="kickoff-caption">
-        <table class="matrix" aria-describedby="kickoff-caption">
-          <caption id="kickoff-caption" class="sr-only">Kickoff checklist by applicant, employer, and family</caption>
-          <thead>
-            <tr>
-              <th scope="col">Applicant</th>
-              <th scope="col">Employer</th>
-              <th scope="col">Family (if applicable)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <ul class="feature-list">
-                  <li>Passport bio page &amp; current visa (if any)</li>
-                  <li>CV, diplomas/qualifications (where relevant)</li>
-                  <li>Police clearance &amp; health insurance</li>
-                  <li>Proof of address / tenancy</li>
-                </ul>
-              </td>
-              <td>
-                <ul class="feature-list">
-                  <li>Company registration &amp; directors list</li>
-                  <li>Employment contract / offer letter</li>
-                  <li>Employer letters &amp; undertakings</li>
-                  <li>Tax/VAT numbers (if applicable)</li>
-                </ul>
-              </td>
-              <td>
-                <ul class="feature-list">
-                  <li>Passports &amp; birth/marriage certificates</li>
-                  <li>Proof of relationship and co-habitation</li>
-                  <li>Insurance coverage</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Formats: PDF/JPG scans acceptable; originals may be required at biometrics. We’ll confirm translation/apostille needs case-by-case.</p>
+    <div class="keyline"></div>
+
+    <h2 id="controls">Controls &amp; Quality</h2>
+    <ul class="feature-list">
+      <li>Two-person check on forms, translations, and undertakings</li>
+      <li>Assumptions &amp; deviations log for each application</li>
+      <li>Restricted data room access by role; audit trail of uploads</li>
+      <li>Renewal &amp; trigger event tracking (role change, salary bands)</li>
+    </ul>
+    <p class="note">This page is informational and not immigration/legal advice. Final decisions rest with the competent authorities.</p>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>How long does an employment permit usually take?</summary>
+        <p>It varies by route and season. After a complete pack and appointment, decisions often run from a few weeks to several months. We share current local timelines during intake.</p>
+      </details>
+
+      <details>
+        <summary>Can family join on my permit?</summary>
+        <p>Often yes, subject to income, accommodation, and route rules. We confirm eligibility and prepare the dependant pack alongside your application.</p>
+      </details>
+
+      <details>
+        <summary>Do you handle translations and apostilles?</summary>
+        <p>Yes. We coordinate certified translations and legalisations where required, and confirm when originals will be checked at biometrics.</p>
+      </details>
+
+      <details>
+        <summary>What if my role or salary changes?</summary>
+        <p>Notify us. Some changes require an update or a new filing. We track trigger events and advise on steps and timing.</p>
+      </details>
+
+      <details>
+        <summary>Will you attend appointments?</summary>
+        <p>We arrange bookings and provide attendance notes. In-person accompaniment depends on venue policy; where allowed, we can attend or have a local representative meet you.</p>
+      </details>
     </div>
-  </section>
+    <p class="note">Nothing here is legal or immigration advice; positions are confirmed by your advisors and the competent authorities.</p>
 
-  <!-- CONTROLS / QUALITY -->
-  <section class="container fade-up" data-anim-delay="0.45" id="controls">
-    <div class="content-narrow">
-      <h2>Controls &amp; Quality</h2>
-      <ul class="feature-list">
-        <li>Two-person check on forms, translations, and undertakings</li>
-        <li>Assumptions &amp; deviations log for each application</li>
-        <li>Restricted data room access by role; audit trail of uploads</li>
-        <li>Renewal &amp; trigger event tracking (role change, salary bands)</li>
-      </ul>
-      <p class="note">This page is informational and not immigration/legal advice. Final decisions rest with the competent authorities.</p>
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff" aria-label="Contact call to action">
+  <div class="container content-narrow">
+    <h2>Get Your Route Confirmed</h2>
+    <p class="contact-intro">Email the following to receive a route memo and checklist.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Employment%20Permit%20-%20Route%20Memo%20Request" class="btn-primary" data-cta="proposal" data-page="employment-permit">Request Route Memo</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Employment%20Permit%20Services" class="btn-secondary" data-cta="book-call" data-page="employment-permit">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Employment%20Permit%20Kickoff%20-%20Documents%20Checklist" class="btn-secondary" data-cta="book-visit" data-page="employment-permit">Email Documents</a>
     </div>
-  </section>
+    <p class="note">For fastest turnaround, email: role &amp; salary band, nationality, start date, employer details (or remote status), family members, and any prior Cyprus permits.</p>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="container fade-up" data-anim-delay="0.5" id="about">
-    <div class="content-narrow">
-      <h2>About MegaServe</h2>
-      <p>Cyprus-based team coordinating daily with employers, advisors, and authorities. We keep permit filings predictable and documentation bankable.</p>
-      <ul class="feature-list">
-        <li>EN/GR/RU service; other languages on request</li>
-        <li>Close coordination with employer HR, counsel, and relocation agents</li>
-        <li>Status notes each week until decision; renewal diary maintained</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="container fade-up" data-anim-delay="0.55" id="faq">
-    <div class="content-narrow">
-      <h2>FAQ</h2>
-      <dl class="faq">
-        <dt>How long does an employment permit usually take?</dt>
-        <dd>It varies by route and season. After a complete pack and appointment, decisions often run from a few weeks to several months. We share current local timelines during intake.</dd>
-
-        <dt>Can family join on my permit?</dt>
-        <dd>Often yes, subject to income, accommodation, and route rules. We confirm eligibility and prepare the dependant pack alongside your application.</dd>
-
-        <dt>Do you handle translations and apostilles?</dt>
-        <dd>Yes. We coordinate certified translations and legalisations where required, and confirm when originals will be checked at biometrics.</dd>
-
-        <dt>What if my role or salary changes?</dt>
-        <dd>Notify us. Some changes require an update or a new filing. We track trigger events and advise on steps and timing.</dd>
-
-        <dt>Will you attend appointments?</dt>
-        <dd>We arrange bookings and provide attendance notes. In-person accompaniment depends on venue policy; where allowed, we can attend or have a local representative meet you.</dd>
-      </dl>
-      <p class="note">Nothing here is legal or immigration advice; positions are confirmed by your advisors and the competent authorities.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.6" aria-label="Contact call to action">
-    <div class="container">
-      <h2>Get Your Route Confirmed</h2>
-      <p class="contact-intro">Email the following to receive a route memo and checklist within typical timelines.</p>
-      <a href="mailto:megaserve@megaserve.eu?subject=Employment%20Permit%20Kickoff" class="btn-primary">Request Route Memo</a>
-      <p class="note">For fastest turnaround, email: role &amp; salary band, nationality, start date, employer details (or remote status), family members, and any prior Cyprus permits.</p>
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
-      <a href="../../../index.html#services">Services</a>
-      <a href="../../../about.html">About</a>
-      <a href="../../../index.html#contact-cta">Contact</a>
-      <a href="../../../privacy.html">Privacy Policy</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- Breadcrumbs (optional) -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Breadcrumbs -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"BreadcrumbList",
   "itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.megaserve.eu/"},
-    {"@type":"ListItem","position":2,"name":"Migration & Relocation Services","item":"https://www.megaserve.eu/#migration"},
-    {"@type":"ListItem","position":3,"name":"Residency by Employment Permit Services","item":"https://www.megaserve.eu/residency-by-employment-permit-services.html"}
+    {"@type":"ListItem","position":2,"name":"Migration & Relocation Services","item":"https://www.megaserve.eu/index.html#services"},
+    {"@type":"ListItem","position":3,"name":"Residency by Employment Permit Services","item":"https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services"}
   ]
 }
 </script>
 
-<!-- FAQ Schema for SEO -->
+<!-- FAQ Schema for SEO (matches visible FAQs) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -592,16 +606,22 @@
   window.addEventListener('DOMContentLoaded', function () {
     if (!window.CountUp) return;
     document.querySelectorAll('[data-countup]').forEach(function(el){
-      var text = el.textContent.trim();
+      var text = (el.textContent || '').trim();
       var hasPercent = text.endsWith('%');
       var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
-      var opts = { duration: 1.2, separator: ',', suffix: hasPercent ? '%' : '+' };
+
+      // If the visible text ends with "+", keep "+"; if it's a percent, keep "%"; else no suffix.
+      var suffix = '';
+      if (hasPercent) suffix = '%';
+      else if (text.endsWith('+')) suffix = '+';
+
+      var opts = { duration: 1.2, separator: ',', suffix: suffix };
       var cu = new CountUp.CountUp(el, endVal, opts);
       if (!cu.error) cu.start();
     });
   });
 </script>
 
-<script src="../../../script.js?v=14"></script>
+<script src="/script.js?v=14"></script>
 </body>
 </html>
