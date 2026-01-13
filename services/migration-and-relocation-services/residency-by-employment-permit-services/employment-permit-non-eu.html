@@ -94,6 +94,11 @@
     #site-header .header-flex{
       align-items:center;
     }
+
+    /* Case study block (consistent with other pages) */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
+    .muted{color:#666}
   </style>
 </head>
 <body class="sticky-cta-pad">
@@ -378,6 +383,19 @@
     </div>
   </section>
 
+  <!-- CASE STUDY (ADDED) -->
+  <section class="container fade-up" data-anim-delay="0.32" id="case-study">
+    <div class="content-narrow">
+      <h2>Case Study</h2>
+      <div class="case-study">
+        <h3>Large-Scale Workforce Relocation (150+ Employees + Families)</h3>
+        <p class="muted"><strong>Client:</strong> Global IT services company (anonymised)</p>
+        <p>The client required coordinated relocation of over 150 non-EU employees and accompanying family members to Cyprus as part of an operational expansion. MegaServe managed route scoping, employer-side preparation, phased document collection, appointment sequencing, filings, and follow-ups, maintaining a central query register and standardised evidence packs across cohorts.</p>
+        <p><strong>Result:</strong> a phased, low-friction transition with consistent documentation and tracking, allowing teams to onboard without unnecessary delays or compliance disruption.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- CHECKLIST -->
   <section class="container fade-up" data-anim-delay="0.35" id="checklist">
     <div class="content-narrow">
@@ -480,9 +498,10 @@
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; 2026 MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
       <a href="../../../index.html#services">Services</a>
@@ -506,21 +525,6 @@
     {"@type":"Question","name":"What if details change after filing?","acceptedAnswer":{"@type":"Answer","text":"We log changes (role, address, employer notes), notify the authority as required, and update the renewal tracker."}}
   ]
 }
-</script>
-
-<!-- Light CountUp init (progressive enhancement; safe if JS blocked) -->
-<script defer>
-  window.addEventListener('DOMContentLoaded', function () {
-    if (!window.CountUp) return;
-    document.querySelectorAll('[data-countup]').forEach(function(el){
-      var text = el.textContent.trim();
-      var hasPercent = text.endsWith('%');
-      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
-      var opts = { duration: 1.2, separator: ',', suffix: hasPercent ? '%' : '+' };
-      var cu = new CountUp.CountUp(el, endVal, opts);
-      if (!cu.error) cu.start();
-    });
-  });
 </script>
 
 <script src="../../../script.js?v=14"></script>
