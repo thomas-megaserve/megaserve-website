@@ -13,21 +13,21 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.megaserve.eu/physical-office-rental-services.html">
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/nominee-and-fiduciary-services/physical-office-rental-services">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Physical Office Rental Services — MegaServe Cyprus">
-  <meta property="og:description" content="Move-in-ready private offices and dedicated desks in Cyprus with meeting rooms, reception, connectivity, and flexible terms.">
+  <meta property="og:description" content="Move-in-ready private offices and dedicated desks in Cyprus with meeting rooms, reception, connectivity, and flexible terms—set up for operational substance and bankable governance.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.megaserve.eu/physical-office-rental-services.html">
-  <meta property="og:image" content="https://www.megaserve.eu/assets/og/physical-office-og.jpg">
+  <meta property="og:url" content="https://www.megaserve.eu/services/nominee-and-fiduciary-services/physical-office-rental-services">
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/physical-office-rental-services-og.jpg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Physical Office Rental Services — MegaServe Cyprus">
-  <meta name="twitter:description" content="Private offices and dedicated desks in Cyprus—meeting rooms, reception, secure connectivity, flexible terms.">
-  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/physical-office-og.jpg">
+  <meta name="twitter:description" content="Move-in-ready private offices and dedicated desks in Cyprus with meeting rooms, reception, connectivity, and flexible terms—set up for operational substance and bankable governance.">
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/physical-office-rental-services-og.jpg">
 
   <!-- Favicons / theme -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
@@ -35,14 +35,21 @@
   <meta name="theme-color" content="#a00000">
 
   <!-- Global stylesheet (root-level) -->
-  <link rel="stylesheet" href="../../style.css?v=14">
+  <link rel="stylesheet" href="/style.css?v=14">
 
-  <!-- Page-local helpers (kept consistent with other service pages) -->
+  <!-- Page-local helpers (canonical service-page shell) -->
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
     .page-hero .container{padding:2.5rem 0 1.5rem}
     .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
 
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
@@ -59,17 +66,41 @@
     table.matrix, table.service, table.packages{width:100%;border-collapse:collapse}
     table.matrix th, table.matrix td,
     table.service th, table.service td,
-    table.packages th, table.packages td {border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.packages th, table.packages td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.matrix th, table.service th, table.packages th{background:#fafafa}
+
     .badge{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.2rem .6rem;font-size:.8rem;margin:.15rem .35rem 0 0}
 
-    /* Keep CTA fine print readable on a dark/red strip */
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
 
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    .section-spaced{margin-top:2rem}
+    .submenu-caret{margin-left:.35rem}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+
+    /* Fallback fade-up */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
-
-    .submenu-caret{margin-left:.35rem}
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -83,101 +114,93 @@
       display:inline-block;
       box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
-    }
-
-    #site-header .header-flex{
-      align-items:center;
-    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
   </style>
 </head>
+
 <body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <!-- Hamburger Button for Mobile -->
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a aria-current="page" href="physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a aria-current="page" href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
-              <ul class="flyout" aria-label="Employment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+              <ul class="flyout" aria-label="Employment permit routes">
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -186,10 +209,10 @@
         <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
-          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          <ul class="dropdown" aria-label="Tax &amp; VAT Administration Submenu">
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -197,9 +220,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -207,36 +230,86 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="../compliance-services/client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA -->
-        <li><a href="../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main-content">
-  <!-- HERO -->
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container">
-      <h1>Physical Office Rental Services</h1>
-      <p class="content-narrow">Move-in-ready offices and dedicated desks in Cyprus—meeting rooms, reception, secure connectivity, and flexible terms—designed to support operational substance and bankable governance.</p>
-    </div>
-  </section>
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Physical Office Rental Services</h1>
+    <p>Move-in-ready offices and dedicated desks in Cyprus—meeting rooms, reception, secure connectivity, and flexible terms—designed to support operational substance and bankable governance.</p>
+    <div class="micro-trust">Nicosia-based · <strong>Move-in-ready</strong> · Meeting rooms &amp; reception</div>
 
-  <!-- SPACE TYPES -->
-  <section class="container fade-up" data-anim-delay="0.15" id="space-types">
-    <div class="content-narrow">
-      <h2>Space Types</h2>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Physical%20Office%20Rental%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="physical-office">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Physical%20Office%20Rental" class="btn-secondary" data-cta="book-call" data-page="physical-office">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="physical-office">Documents Checklist</a>
+    </div>
+  </div>
+</section>
+
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#risk">Risk</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
+
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>International companies needing practical Cyprus premises to support substance expectations and local operations</li>
+      <li>Teams that require meeting rooms, reception, and secure connectivity without long lease commitments</li>
+      <li>Owners who want a clean, bankable setup integrated with governance and corporate services</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>Move-in-ready office or dedicated desk with flexible terms</li>
+      <li>Meeting room access (hourly/half-day/day) and reception support</li>
+      <li>Business-grade connectivity (wired + Wi-Fi), with optional enhanced IT requests</li>
+      <li>Visitor logging and optional evidence trails for bank/audit comfort</li>
+      <li>Mail &amp; courier handling integrated with your administration workflows</li>
+      <li>Optional integration with <a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address</a> and <a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office</a></li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Discovery:</strong> headcount, privacy/IT needs, meeting cadence, signage, budget.</li>
+      <li><strong>Shortlist &amp; Viewings:</strong> 2–3 suitable options with plan/photos/specs; site tours if needed.</li>
+      <li><strong>Terms &amp; Docs:</strong> licence/lease draft, KYC, insurance certificates (if applicable).</li>
+      <li><strong>Fit-Out &amp; IT:</strong> furniture plan, VLAN/static IP (optional), access badges, test prints/VC.</li>
+      <li><strong>Move-In:</strong> handover checklist, welcome pack, building rules, escalation contacts.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>Space Types</h3>
       <div class="table-wrap" role="region" aria-labelledby="space-types-caption">
         <table class="matrix" aria-describedby="space-types-caption">
           <caption id="space-types-caption" class="sr-only">Office space types, capacities, inclusions, and best uses</caption>
@@ -277,9 +350,7 @@
         </table>
       </div>
 
-      <div class="keyline"></div>
-
-      <h2>Amenities &amp; Options</h2>
+      <h3 class="section-spaced">Amenities &amp; Options</h3>
       <ul class="feature-list">
         <li>Reception, visitor logging, and guest Wi-Fi</li>
         <li>Meeting rooms (hourly/half-day/day), video-conference kit</li>
@@ -292,205 +363,119 @@
       </ul>
       <p class="note">Inventory and specific amenities vary by building/location; we’ll confirm at proposal stage.</p>
     </div>
-  </section>
 
-  <!-- SERVICE LEVELS -->
-  <section class="container fade-up" data-anim-delay="0.2" id="service-levels">
-    <div class="content-narrow">
-      <h2>Service Levels &amp; Targets</h2>
-      <div class="table-wrap" role="region" aria-labelledby="sl-caption">
-        <table class="service" aria-describedby="sl-caption">
-          <caption id="sl-caption" class="sr-only">Service activities, typical frequency, targets, and notes</caption>
-          <thead>
-            <tr>
-              <th scope="col">Activity</th>
-              <th scope="col">Typical Frequency</th>
-              <th scope="col">Target Response</th>
-              <th scope="col">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Access badge creation</td>
-              <td>Onboarding / Ad hoc</td>
-              <td>Same–2 business days</td>
-              <td>ID verification required</td>
-            </tr>
-            <tr>
-              <td>Meeting room booking</td>
-              <td>Ad hoc</td>
-              <td>Confirm within 2 hours</td>
-              <td>After-hours/weekends on request</td>
-            </tr>
-            <tr>
-              <td>IT/connectivity requests</td>
-              <td>Ad hoc</td>
-              <td>1–3 business days</td>
-              <td>Complex changes may need building/vendor approval</td>
-            </tr>
-            <tr>
-              <td>Courier dispatch / mail handling</td>
-              <td>Ad hoc</td>
-              <td>Same day if received before 14:00</td>
-              <td>Tracked with delivery proofs</td>
-            </tr>
-            <tr>
-              <td>Incident / facilities ticket</td>
-              <td>As needed</td>
-              <td>Acknowledge within 2 hours</td>
-              <td>Priority for service-affecting issues</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Targets reflect typical handling; landlord/building or third-party vendor timetables can affect completion.</p>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>Rapid Move-In Office Setup Supporting Substance and Bank/Audit Comfort</h3>
+      <p class="muted"><strong>Client:</strong> International client with a Cyprus entity (anonymised)</p>
+      <p>The client required a physical Cyprus office quickly to support operational substance expectations and to handle in-person meetings with banks, auditors, and counterparties. MegaServe coordinated the office selection, onboarding documentation, access setup, and practical operational details (meeting room availability, reception flow, and day-to-day readiness), aligned with governance and corporate services where needed.</p>
+      <p><strong>Result:</strong> the client established a credible on-the-ground presence with a functional workspace and predictable meeting capability, supporting smoother third-party interactions and operational continuity.</p>
     </div>
-  </section>
 
-  <!-- ONBOARDING -->
-  <section class="container fade-up" data-anim-delay="0.25" id="onboarding">
-    <div class="content-narrow">
-      <h2>Onboarding &amp; Setup</h2>
-      <ol class="process-steps">
-        <li><strong>Discovery:</strong> headcount, privacy/IT needs, meeting cadence, signage, budget.</li>
-        <li><strong>Shortlist &amp; Viewings:</strong> 2–3 suitable options with plan/photos/specs; site tours if needed.</li>
-        <li><strong>Terms &amp; Docs:</strong> licence/lease draft, KYC, insurance certificates (if applicable).</li>
-        <li><strong>Fit-Out &amp; IT:</strong> furniture plan, VLAN/static IP (optional), access badges, test prints/VC.</li>
-        <li><strong>Move-In:</strong> handover checklist, welcome pack, building rules, escalation contacts.</li>
-      </ol>
-      <div class="table-wrap" role="region" aria-labelledby="pkg-caption">
-        <table class="packages" aria-describedby="pkg-caption">
-          <caption id="pkg-caption" class="sr-only">Work packages, typical timelines, outputs, and notes</caption>
-          <thead>
-            <tr>
-              <th scope="col">Work Package</th>
-              <th scope="col">Typical Timeline</th>
-              <th scope="col">Outputs</th>
-              <th scope="col">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Scouting &amp; Shortlist</td>
-              <td>2–5 business days</td>
-              <td>Options sheet, photos/plans, comparison matrix</td>
-              <td>Faster with clear headcount/specs</td>
-            </tr>
-            <tr>
-              <td>Terms &amp; Documentation</td>
-              <td>1–2 weeks</td>
-              <td>Heads of terms, licence/lease draft, KYC/insurance</td>
-              <td>Landlord/legal review drives timing</td>
-            </tr>
-            <tr>
-              <td>Fit-Out &amp; Connectivity</td>
-              <td>1–3 weeks</td>
-              <td>Furniture layout, badges, IT setup/tests</td>
-              <td>Custom cabling may extend</td>
-            </tr>
-            <tr>
-              <td>Move-In Day</td>
-              <td>1 day</td>
-              <td>Handover, welcome pack, orientation</td>
-              <td>We stay on call first week</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">We can coordinate temporary swing space while a larger suite is being prepared.</p>
+    <div class="keyline"></div>
+
+    <h2 id="requirements">Requirements (Client Checklist)</h2>
+    <ul class="feature-list">
+      <li>Company details (name, registration no., contact matrix)</li>
+      <li>Headcount by room/desk and privacy requirements</li>
+      <li>IT brief (VLAN/static IP, device policy, conferencing needs)</li>
+      <li>Signage/branding preferences (if any)</li>
+      <li>Insurance certificates (where required by landlord)</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="risk">Risk &amp; Mitigations</h2>
+    <ul class="feature-list">
+      <li><strong>Availability:</strong> inventory and pricing depend on building occupancy; we shortlist alternatives to avoid delays.</li>
+      <li><strong>Substance expectations:</strong> premises alone may not satisfy banks/auditors—governance and records matter; we coordinate directorship/secretarial if needed.</li>
+      <li><strong>IT changes:</strong> VLAN/static IP/cabling requests may require vendor approvals; we set expectations upfront.</li>
+      <li><strong>Access control:</strong> badges are individual; shared credentials aren’t permitted; logs can be maintained where required.</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Can you provide board-meeting suitable rooms and evidence?</summary>
+        <p>Yes. We can host in-person meetings, maintain attendance records, and coordinate minutes via our governance services.</p>
+      </details>
+
+      <details>
+        <summary>Do you handle IT hardening (VLAN, static IP, device rules)?</summary>
+        <p>Yes. We coordinate with building vendors to set up VLAN, static IPs, MAC registration, and conference kit as required.</p>
+      </details>
+
+      <details>
+        <summary>What lease terms are available?</summary>
+        <p>Licences for smaller offices/desks and short-form leases for larger suites. We propose options matched to your timeline and budget.</p>
+      </details>
+
+      <details>
+        <summary>Can we bundle Registered Address and Virtual Office?</summary>
+        <p>Yes. Most clients combine physical offices with Registered Address and a light Virtual Office plan for after-hours coverage.</p>
+      </details>
     </div>
-  </section>
+    <p class="note">Unusual requirements (secure storage, 24/7 access, enhanced privacy)? Add them to your inquiry—we’ll reflect them in the shortlist.</p>
 
-  <!-- COMPLIANCE & SUBSTANCE -->
-  <section class="container fade-up" data-anim-delay="0.3" id="compliance">
-    <div class="content-narrow">
-      <h2>Compliance &amp; Substance (Important)</h2>
-      <ul class="feature-list">
-        <li><strong>Substance expectations:</strong> board meetings held in Cyprus, records, and decision trails are available via our <a href="directorship-management-services.html">Directorship &amp; Management</a> and <a href="corporate-secretarial-services.html">Corporate Secretarial</a> services.</li>
-        <li><strong>Registered office:</strong> statutory registered address is provided separately via <a href="registered-address-services.html">Registered Address</a>.</li>
-        <li><strong>Bankability:</strong> we maintain visitor logs, meeting minutes (on request), and document custody to support auditor and bank comfort.</li>
-        <li><strong>Data &amp; access:</strong> access badges are individual; shared credentials are not permitted. Private lockups available for sensitive files.</li>
-      </ul>
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address</a> ·
+      <a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office</a> ·
+      <a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management</a> ·
+      <a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial</a>
+    </p>
+
+    <h2 class="section-spaced">Other Jurisdictions (on request)</h2>
+    <p class="muted">Where required, we coordinate office setup and vendor management through vetted associates in selected jurisdictions.</p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
+    <h2>Secure Your Cyprus Office</h2>
+    <p class="contact-intro">Tell us headcount, IT/privacy needs, and timeline. We’ll return a shortlist and a move-in plan within one business day.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Physical%20Office%20Rental%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="physical-office">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Physical%20Office%20Rental" class="btn-secondary" data-cta="book-call" data-page="physical-office">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Physical%20Office%20Rental" class="btn-secondary" data-cta="book-visit" data-page="physical-office">Book a Visit (Nicosia)</a>
     </div>
-  </section>
+    <p class="note">Prefer a quick kickoff? Email headcount + layout preference + IT brief. We’ll reply with viewing slots.</p>
+  </div>
+</section>
 
-  <!-- CHECKLIST -->
-  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
-    <div class="content-narrow">
-      <h2>Documents &amp; Preferences (Onboarding)</h2>
-      <ul class="feature-list">
-        <li>Company details (name, registration no., contact matrix)</li>
-        <li>Headcount by room/desk and privacy requirements</li>
-        <li>IT brief (VLAN/static IP, device policy, conferencing needs)</li>
-        <li>Signage/branding preferences (if any)</li>
-        <li>Insurance certificates (where required by landlord)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ABOUT MEGASERVE -->
-  <section class="container fade-up" data-anim-delay="0.4" id="about">
-    <div class="content-narrow">
-      <h2>About MegaServe</h2>
-      <p>Cyprus-based, multi-lingual team with 30+ years’ corporate services experience. We integrate space, governance, banking, and filings so your operations are credible to counterparties, banks, and auditors from day one.</p>
-      <ul class="feature-list">
-        <li>EN/GR/RU service; other languages on request</li>
-        <li>Clean handover to <a href="virtual-office-services.html">Virtual Office</a> or scale up to larger suites</li>
-        <li>One contact point coordinating landlords, IT vendors, and your advisors</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="container fade-up" data-anim-delay="0.45" id="faq">
-    <div class="content-narrow">
-      <h2>FAQ</h2>
-      <dl class="faq">
-        <dt>Can you provide board-meeting suitable rooms and evidence?</dt>
-        <dd>Yes. We can host in-person meetings, maintain attendance records, and coordinate minutes via our governance services.</dd>
-
-        <dt>Do you handle IT hardening (VLAN, static IP, device rules)?</dt>
-        <dd>Yes. We coordinate with building vendors to set up VLAN, static IPs, MAC registration, and conference kit as required.</dd>
-
-        <dt>What lease terms are available?</dt>
-        <dd>Licences for smaller offices/desks and short-form leases for larger suites. We propose options matched to your timeline and budget.</dd>
-
-        <dt>Can we bundle Registered Address and Virtual Office?</dt>
-        <dd>Yes. Most clients combine physical offices with <a href="registered-address-services.html">Registered Address</a> and a light <a href="virtual-office-services.html">Virtual Office</a> plan for after-hours coverage.</dd>
-      </dl>
-      <p class="note">Unusual requirements (secure storage, 24/7 access, enhanced privacy)? Add them to your inquiry—we’ll reflect them in the shortlist.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.5">
-    <div class="container">
-      <h2>Secure Your Cyprus Office</h2>
-      <p class="contact-intro">Tell us headcount, IT/privacy needs, and timeline. We’ll return a shortlist and a move-in plan within one business day.</p>
-      <a href="mailto:megaserve@megaserve.eu" class="btn-primary">Request Shortlist</a>
-      <p class="note">Prefer a quick kickoff? Email headcount + layout preference + IT brief. We’ll reply with viewing slots.</p>
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
-      <a href="../../index.html#services">Services</a>
-      <a href="../../about.html">About</a>
-      <a href="../../index.html#contact-cta">Contact</a>
-      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- Optional: FAQ Schema for SEO -->
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Physical%20Office%20Rental%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="physical-office">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Physical%20Office%20Rental" class="btn-secondary" data-cta="sticky-book-call" data-page="physical-office">Book a Call</a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- FAQ Schema for SEO -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -520,6 +505,6 @@
 }
 </script>
 
-<script src="../../script.js?v=14"></script>
+<script src="/script.js?v=14"></script>
 </body>
 </html>
