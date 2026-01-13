@@ -471,6 +471,32 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
+<!-- FIX: trigger a true fade-in (after first paint), matching the Virtual Office page -->
+<script>
+  (function () {
+    function inView(el) {
+      var r = el.getBoundingClientRect();
+      return r.top < (window.innerHeight * 0.92);
+    }
+
+    function revealAboveFold() {
+      document.querySelectorAll('.fade-up').forEach(function (el) {
+        if (inView(el)) el.classList.add('visible');
+      });
+    }
+
+    // Wait until layout + first paint so the transition actually runs.
+    window.addEventListener('load', function () {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          // small delay helps avoid "no animation" when browsers coalesce style changes
+          setTimeout(revealAboveFold, 30);
+        });
+      });
+    });
+  })();
+</script>
+
 <!-- Optional: FAQ Schema -->
 <script type="application/ld+json">
 {
