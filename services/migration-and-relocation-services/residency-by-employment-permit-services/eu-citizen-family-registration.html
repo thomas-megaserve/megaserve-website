@@ -1,68 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>EU Citizen &amp; Family Members — MegaServe Cyprus</title>
-  <meta name="description" content="End-to-end coordination for EU citizen and family member registration in Cyprus: eligibility scoping, document prep & filing, appointment booking, and audit-ready records for temporary and permanent residence stages.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="End-to-end coordination for EU citizen and family member registration in Cyprus: eligibility scoping, document prep & filing, appointment booking, and audit-ready records for temporary and permanent residence stages." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.megaserve.eu/eu-citizen-family-registration.html">
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="EU Citizen &amp; Family Members — MegaServe Cyprus">
-  <meta property="og:description" content="End-to-end coordination for EU citizen and family member registration in Cyprus: eligibility scoping, document prep & filing, appointment booking, and audit-ready records for temporary and permanent residence stages.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.megaserve.eu/eu-citizen-family-registration.html">
-  <meta property="og:image" content="https://www.megaserve.eu/assets/og/eu-citizen-family-og.jpg">
+  <meta property="og:title" content="EU Citizen &amp; Family Members — MegaServe Cyprus" />
+  <meta property="og:description" content="End-to-end coordination for EU citizen and family member registration in Cyprus: eligibility scoping, document prep & filing, appointment booking, and audit-ready records for temporary and permanent residence stages." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/eu-citizen-family-og.jpg" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EU Citizen &amp; Family Members — MegaServe Cyprus">
-  <meta name="twitter:description" content="Coordination for EU citizen and family member registration in Cyprus: eligibility scoping, document prep, filing, and appointment booking.">
-  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/eu-citizen-family-og.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EU Citizen &amp; Family Members — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Coordination for EU citizen and family member registration in Cyprus: eligibility scoping, document prep, filing, and appointment booking." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/eu-citizen-family-og.jpg" />
 
   <!-- Favicons / theme -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
-  <meta name="theme-color" content="#a00000">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
 
-  <!-- Global stylesheet (root-level) -->
-  <link rel="stylesheet" href="../../../style.css?v=14">
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="/style.css?v=14" />
 
-  <!-- CountUp (kept consistent even if not used directly) -->
+  <!-- CountUp (harmless if blocked; consistent) -->
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
+
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
     .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
+
     .table-wrap{overflow-x:auto}
-    table.service,table.matrix{width:100%;border-collapse:collapse}
-    table.service th,table.service td,table.matrix th,table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
-    table.service th,table.matrix th{background:#fafafa}
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
-    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
-    .faq dt{font-weight:700;margin-top:1rem}
-    .faq dd{margin:0 0 1rem 0}
-    .fade-up{opacity:0;transform:translateY(14px)}
-    .fade-up.visible{opacity:1;transform:translateY(0)}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td,
+    table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
+
+    .section-spaced{margin-top:2rem}
     .submenu-caret{margin-left:.35rem}
+
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    /* Fallback fade-up */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -76,110 +113,106 @@
       display:inline-block;
       box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
-    }
-    #site-header .header-flex{
-      align-items:center;
-    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
   </style>
 </head>
+
 <body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="../../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
+
             <li class="has-flyout">
-              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="general-employment-permit.html">General Employment</a></li>
-                <li><a href="eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="eu-citizen-family-registration.html" aria-current="page">EU Citizen &amp; Family Members</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html" aria-current="page">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
-              <a href="../residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="../residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
-                <li><a href="../residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
-              <a href="../visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
-              <a href="../naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
+
           </ul>
         </li>
 
-        <!-- Tax & VAT Administration -->
+        <!-- Tax & VAT -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -187,63 +220,99 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
-        <!-- Compliance Services -->
+        <!-- Compliance -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="../../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="../../compliance-services/client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="../../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="../../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="../../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA -->
-        <li><a href="../../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main-content">
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>EU Citizen &amp; Family Members — Registration</h1>
+    <p>Registration and residence documentation for EU citizens and their eligible family members relocating to Cyprus. We scope eligibility, prepare filings, book appointments, and keep every record audit-ready.</p>
+    <div class="micro-trust">Cyprus-based coordination · <strong>Clear checklists</strong> · Clean, usable records</div>
 
-  <!-- Hero -->
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container content-narrow">
-      <h1>EU Citizen &amp; Family Members — Registration</h1>
-      <p>Registration and residence documentation for EU citizens and their eligible family members relocating to Cyprus. We scope eligibility, prepare filings, book appointments, and keep every record audit-ready.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=EU%20Citizen%20%26%20Family%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="eu-citizen-family">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20EU%20Citizen%20%26%20Family" class="btn-secondary" data-cta="book-call" data-page="eu-citizen-family">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="eu-citizen-family">Documents Checklist</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="container">
-    <div class="content-narrow">
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#risk">Risk</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
 
-      <!-- Overview -->
-      <h2 class="fade-up" data-anim-delay="0.15">Overview</h2>
-      <p class="fade-up" data-anim-delay="0.2">EU citizens exercising free movement in Cyprus, and their eligible family members (EU or non-EU), complete local registration steps for lawful residence and access to services. MegaServe coordinates the evidence pack, submits applications, manages appointments, and handles follow-ups through issuance and renewals.</p>
-      <ul class="feature-list fade-up" data-anim-delay="0.25" aria-label="Key features">
-        <li>Eligibility scoping for EU citizens and qualifying family members</li>
-        <li>Tailored checklists with templates and translation/legalisation guidance</li>
-        <li>Application build, filing, appointment booking, and authority liaison</li>
-        <li>Linked filings for spouse/partner, children, and dependants</li>
-        <li>Onboarding coordination: TIC/TIN, health, banking (as applicable)</li>
-        <li>Renewal calendar and centralised, audit-ready repository</li>
-      </ul>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
 
-      <div class="keyline"></div>
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>EU citizens relocating to Cyprus for employment, self-employment, or self-sufficiency</li>
+      <li>Non-EU family members who require residence documentation linked to an EU sponsor</li>
+      <li>Households that want one point of contact for appointments, document packs, and follow-ups</li>
+    </ul>
 
-      <!-- Matrix -->
-      <h2 class="fade-up" data-anim-delay="0.3">Registration Routes (Guide)</h2>
-      <div class="table-wrap fade-up" data-anim-delay="0.35">
+    <div class="keyline"></div>
+
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>Eligibility confirmation (EU citizen route + each family member route)</li>
+      <li>Structured checklist and document pack prepared in the required format</li>
+      <li>Appointment booking and scheduling support</li>
+      <li>Submission receipts, reference numbers, and a tracked correspondence log</li>
+      <li>Document handling: certified translations/legalisations where required</li>
+      <li>A clean record pack suitable for employer/HR, banking, tenancy, and future upgrades</li>
+      <li>Where needed: coordinated immigration lawyers and/or our own representatives accompanying clients to Migration — through us as a single point of contact</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Discovery:</strong> confirm route (EU citizen + family members), timing, and dependencies.</li>
+      <li><strong>Checklist:</strong> gather IDs, relationship proofs, employment/resources, insurance, and address documents.</li>
+      <li><strong>Build:</strong> forms, declarations, and evidence pack compiled and reviewed (principal + each dependant).</li>
+      <li><strong>Submit &amp; Attend:</strong> file, schedule, and attend/coordinate appointments; respond to queries.</li>
+      <li><strong>Decision &amp; Records:</strong> collect confirmations/cards and store secure copies for ongoing use.</li>
+      <li><strong>Upgrades:</strong> track eligibility and prepare the switch to permanent status when applicable.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>Registration Routes (Guide)</h3>
+      <div class="table-wrap">
         <table class="matrix" aria-describedby="routes-note">
           <thead>
             <tr>
@@ -275,250 +344,173 @@
           </tbody>
         </table>
       </div>
-      <p id="routes-note" class="note fade-up" data-anim-delay="0.4">Matrix is indicative; exact documentation, forms, and timing are confirmed at scoping.</p>
-
-      <div class="keyline"></div>
-
-      <!-- Process -->
-      <h2 class="fade-up" data-anim-delay="0.45">Process</h2>
-      <ol class="process-steps fade-up" data-anim-delay="0.5" aria-label="Application process steps">
-        <li>Discovery &amp; route mapping — confirm eligibility, dependants, and timing.</li>
-        <li>Checklist issue — gather core IDs, relationship proofs, employment/resources, insurance, and address documents.</li>
-        <li>Application build — forms, declarations, and evidence compilation for principal and each dependant.</li>
-        <li>Submission &amp; appointments — file, schedule, and attend (or accompany) as needed; manage authority queries.</li>
-        <li>Decision &amp; issuance — collect confirmations/cards and provide secure copies.</li>
-        <li>Onboarding — TIC/TIN, payroll/benefits alignment, and practical setup where relevant.</li>
-        <li>Renewals &amp; upgrades — track expiries and switch to permanent status when eligible.</li>
-      </ol>
-
-      <div class="keyline"></div>
-
-      <!-- Service Levels -->
-      <h2 class="fade-up" data-anim-delay="0.55">Service Levels &amp; Typical Timing</h2>
-      <div class="table-wrap fade-up" data-anim-delay="0.6">
-        <table class="service" aria-label="Service levels">
-          <thead>
-            <tr>
-              <th scope="col">Level</th>
-              <th scope="col">Includes</th>
-              <th scope="col">Typical Timing*</th>
-              <th scope="col">Best For</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Core</td>
-              <td>Eligibility scoping, checklist, application build &amp; filing, appointment booking</td>
-              <td>2–4 weeks prep; authority timelines vary</td>
-              <td>Single applicants with straightforward cases</td>
-            </tr>
-            <tr>
-              <td>Plus</td>
-              <td>Core + translations/legalisations orchestration, attendance support, renewal calendar</td>
-              <td>3–6 weeks prep; authority timelines vary</td>
-              <td>Families or complex document sets</td>
-            </tr>
-            <tr>
-              <td>Complete</td>
-              <td>Plus + onboarding coordination (TIC/TIN, payroll/bank) and permanent-status upgrade tracking</td>
-              <td>4–8 weeks prep; authority timelines vary</td>
-              <td>Turnkey, multi-applicant households</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note fade-up" data-anim-delay="0.65">*Preparation time depends on document readiness, legalisation/translation, and appointment availability. Decision times are at authority discretion.</p>
-
-      <div class="keyline"></div>
-
-      <!-- Deliverables -->
-      <h2 class="fade-up" data-anim-delay="0.7">Deliverables</h2>
-      <ul class="feature-list fade-up" data-anim-delay="0.75">
-        <li>Eligibility memo confirming route for principal and each dependant</li>
-        <li>Custom checklist &amp; templates (relationship proofs, declarations, affidavits)</li>
-        <li>Completed application packs and submission receipts</li>
-        <li>Appointment schedule and attendance support</li>
-        <li>Authority correspondence log and milestone updates</li>
-        <li>Secure, audit-ready repository and renewal/upgrade calendar</li>
-      </ul>
-
-      <div class="keyline"></div>
-
-      <!-- Checklist -->
-      <h2 class="fade-up" data-anim-delay="0.8">Applicant &amp; Family Checklist</h2>
-      <div class="table-wrap fade-up" data-anim-delay="0.85">
-        <table class="matrix" aria-label="Checklist table">
-          <thead>
-            <tr>
-              <th scope="col">Item</th>
-              <th scope="col">Who</th>
-              <th scope="col">Provided</th>
-              <th scope="col">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Passport/ID (valid)</td>
-              <td>EU citizen &amp; family</td>
-              <td>Yes / No</td>
-              <td>Certified copies may be required</td>
-            </tr>
-            <tr>
-              <td>Relationship proof</td>
-              <td>Family members</td>
-              <td>Yes / No</td>
-              <td>Marriage/birth/adoption certs; legalised &amp; translated</td>
-            </tr>
-            <tr>
-              <td>Employment/self-employment or resources</td>
-              <td>EU citizen</td>
-              <td>Yes / No</td>
-              <td>Contract, payslips, invoices, or bank statements</td>
-            </tr>
-            <tr>
-              <td>Comprehensive health insurance (if required)</td>
-              <td>All applicants</td>
-              <td>Yes / No</td>
-              <td>Policy schedule &amp; proof of cover</td>
-            </tr>
-            <tr>
-              <td>Accommodation proof</td>
-              <td>Household</td>
-              <td>Yes / No</td>
-              <td>Lease/title; recent utility or municipal confirmation</td>
-            </tr>
-            <tr>
-              <td>Translations &amp; legalisations</td>
-              <td>As applicable</td>
-              <td>Yes / No</td>
-              <td>Certified translators; apostille/legalisation per country</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="keyline"></div>
-
-      <!-- Controls -->
-      <h2 class="fade-up" data-anim-delay="0.9">Controls &amp; Quality</h2>
-      <ul class="feature-list fade-up" data-anim-delay="0.95" aria-label="Controls list">
-        <li>Two-person review on every submission pack</li>
-        <li>Version-controlled documents with immutable evidence archive</li>
-        <li>Tracked authority queries with response SLAs</li>
-        <li>Renewal &amp; upgrade reminders with expiry dashboards</li>
-        <li>Data minimisation and encrypted transfer standards</li>
-      </ul>
-
-      <div class="keyline"></div>
-
-      <!-- About -->
-      <h2 class="fade-up" data-anim-delay="1.0">About MegaServe</h2>
-      <p class="fade-up" data-anim-delay="1.05">MegaServe is a Cyprus corporate services provider delivering end-to-end coordination across administration, banking, compliance, and mobility. Our mobility desk integrates with compliance and tax so your family’s file stays aligned with audit standards from day one.</p>
-      <ul class="feature-list fade-up" data-anim-delay="1.1">
-        <li>Single point of contact for the full household</li>
-        <li>Templates tuned to current local practice</li>
-        <li>Clear timelines and proactive status updates</li>
-      </ul>
-
-      <div class="keyline"></div>
-
-      <!-- FAQ -->
-      <h2 class="fade-up" data-anim-delay="1.15">FAQ</h2>
-      <dl class="faq fade-up" data-anim-delay="1.2">
-        <dt>Who qualifies as a family member of an EU citizen?</dt>
-        <dd>Typically a spouse/registered partner, dependent children, and in some cases dependent parents. We confirm eligibility and evidence at scoping.</dd>
-
-        <dt>Do relationship documents need apostille or legalisation?</dt>
-        <dd>Often yes. Foreign-issued certificates usually require apostille/legalisation and certified translation. We provide country-specific guidance.</dd>
-
-        <dt>How long does preparation and decision take?</dt>
-        <dd>Preparation is usually 2–6 weeks depending on document readiness and appointment availability. Decision times are set by authorities.</dd>
-
-        <dt>Can non-EU family members work in Cyprus?</dt>
-        <dd>Residence cards for qualifying non-EU family members generally permit residence; work permissions depend on the document type and current rules. We advise the correct path during scoping.</dd>
-
-        <dt>When can we apply for permanent residence?</dt>
-        <dd>After completing the qualifying continuous residence period and meeting continuity conditions. We track eligibility and prepare the upgrade pack.</dd>
-      </dl>
-      <p class="note fade-up" data-anim-delay="1.25">This page is practical guidance. Exact requirements depend on current regulations and your circumstances.</p>
-
+      <p id="routes-note" class="note">Indicative only — exact documentation, forms, and timing are confirmed at scoping.</p>
     </div>
-  </section>
 
-  <!-- Contact CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="1.3">
-    <div class="container content-narrow">
-      <h2>Start Your EU Family Registration</h2>
-      <p class="contact-intro">Send us the EU citizen’s status, family composition, and planned move date. We’ll confirm route, checklist, and a target appointment window.</p>
-      <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=EU%20Citizen%20%26%20Family%20%E2%80%94%20Registration%20Coordination">Email MegaServe</a>
-      <p class="note">Fastest turnaround: provide passport/ID scans, relationship certificates, address proof, and employment/resources evidence.</p>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>EU Employee Registration Completed First-Time (Anonymised)</h3>
+      <p class="muted"><strong>Client:</strong> EU citizen relocating to Cyprus for employment (anonymised)</p>
+      <p>The client needed Cyprus registration completed quickly and correctly to support employer onboarding and everyday administration (HR records, banking, tenancy). MegaServe confirmed the correct route, issued a clear checklist, booked and coordinated the appointment, and prepared the document pack in the required format.</p>
+      <p><strong>Result:</strong> registration completed on the first submission with a clean record pack for the employer and ongoing use.</p>
     </div>
-  </section>
 
-</main>
+    <div class="keyline"></div>
+
+    <h2 id="requirements">Requirements (Client Checklist)</h2>
+    <div class="table-wrap">
+      <table class="matrix" aria-label="EU citizen and family checklist">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Who</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Passport/ID (valid)</td>
+            <td>EU citizen &amp; family</td>
+            <td>Certified copies may be required</td>
+          </tr>
+          <tr>
+            <td>Relationship proof</td>
+            <td>Family members</td>
+            <td>Marriage/birth/adoption certs; legalised &amp; translated where required</td>
+          </tr>
+          <tr>
+            <td>Employment/self-employment or resources</td>
+            <td>EU citizen</td>
+            <td>Contract, payslips, invoices, or bank statements (route-dependent)</td>
+          </tr>
+          <tr>
+            <td>Comprehensive health insurance (if required)</td>
+            <td>All applicants</td>
+            <td>Policy schedule &amp; proof of cover</td>
+          </tr>
+          <tr>
+            <td>Accommodation proof</td>
+            <td>Household</td>
+            <td>Lease/title + supporting confirmation (utility/municipal where applicable)</td>
+          </tr>
+          <tr>
+            <td>Translations &amp; legalisations</td>
+            <td>As applicable</td>
+            <td>Certified translators; apostille/legalisation per country</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">We confirm exact formats (and any legalisation/translation requirements) before submission.</p>
+
+    <div class="keyline"></div>
+
+    <h2 id="risk">Risk &amp; Mitigations</h2>
+    <ul class="feature-list">
+      <li><strong>Appointment availability:</strong> timelines depend on authority calendars; we book quickly once the pack is complete.</li>
+      <li><strong>Relationship document standards:</strong> legalisation and translation are handled correctly to avoid rejection or re-visits.</li>
+      <li><strong>Evidence clarity:</strong> employment/resources and insurance evidence is structured to reduce queries.</li>
+      <li><strong>Upgrade timing:</strong> permanent status depends on continuity rules; we track eligibility and prepare the upgrade pack when due.</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <p class="note" role="note">Informational only — this is not legal advice. Final decisions rest with competent authorities.</p>
+    <div class="faq">
+      <details>
+        <summary>Who qualifies as a family member of an EU citizen?</summary>
+        <p>Typically a spouse/registered partner, dependent children, and in some cases dependent parents. We confirm eligibility and evidence at scoping.</p>
+      </details>
+      <details>
+        <summary>Do relationship documents need apostille or legalisation?</summary>
+        <p>Often yes. Foreign-issued certificates usually require apostille/legalisation and certified translation. We provide country-specific guidance.</p>
+      </details>
+      <details>
+        <summary>How long does preparation and decision take?</summary>
+        <p>Preparation is usually a few weeks depending on document readiness and appointment availability. Decision times are set by authorities.</p>
+      </details>
+      <details>
+        <summary>Can non-EU family members work in Cyprus?</summary>
+        <p>Residence cards for qualifying non-EU family members generally permit residence; work permissions depend on the document type and current rules. We advise the correct path during scoping.</p>
+      </details>
+      <details>
+        <summary>Will you attend appointments?</summary>
+        <p>We arrange bookings and provide attendance notes. Where permitted, we can attend or provide a representative. We can also coordinate immigration lawyers through us, if required.</p>
+      </details>
+      <details>
+        <summary>When can we apply for permanent residence?</summary>
+        <p>After completing the qualifying continuous residence period and meeting continuity conditions. We track eligibility and prepare the upgrade pack.</p>
+      </details>
+    </div>
+
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html">Employment Permit Services (Hub)</a> ·
+      <a href="/services/corporate-services/administrative-services.html">Administrative Services</a> ·
+      <a href="/services/corporate-services/banking-administration-services.html">Banking Administration</a>
+    </p>
+
+    <h2 class="section-spaced">Other Jurisdictions (on request)</h2>
+    <p class="muted">Where required, we coordinate registration and documentation workflows through vetted associates in selected jurisdictions.</p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
+    <h2>Start EU Citizen &amp; Family Registration</h2>
+    <p class="contact-intro">Send us the EU citizen’s status, family composition, and planned move date. We’ll confirm the route, checklist, and a target appointment window.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=EU%20Citizen%20%26%20Family%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="eu-citizen-family">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20EU%20Citizen%20%26%20Family" class="btn-secondary" data-cta="book-call" data-page="eu-citizen-family">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20EU%20Citizen%20%26%20Family" class="btn-secondary" data-cta="book-visit" data-page="eu-citizen-family">Book a Visit (Nicosia)</a>
+    </div>
+    <p class="note">Fastest turnaround: provide passport/ID scans, relationship certificates, address proof, and employment/resources evidence.</p>
+  </div>
+</section>
 
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; 2026 MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
-      <a href="../../../index.html#services">Services</a>
-      <a href="../../../about.html">About</a>
-      <a href="../../../index.html#contact-cta">Contact</a>
-      <a href="../../../privacy.html">Privacy Policy</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- FAQ JSON-LD -->
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=EU%20Citizen%20%26%20Family%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="eu-citizen-family">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20EU%20Citizen%20%26%20Family" class="btn-secondary" data-cta="sticky-book-call" data-page="eu-citizen-family">Book a Call</a>
+</div>
+
+<script>
+  document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+</script>
+
+<!-- FAQ Schema for SEO -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Who qualifies as a family member of an EU citizen?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Typically a spouse/registered partner, dependent children, and in some cases dependent parents. We confirm eligibility and evidence at scoping."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do relationship documents need apostille or legalisation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Often yes. Foreign-issued certificates usually require apostille/legalisation and certified translation. We provide country-specific guidance."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does preparation and decision take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Preparation is usually 2–6 weeks depending on document readiness and appointment availability. Decision times are set by authorities."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can non-EU family members work in Cyprus?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Residence cards for qualifying non-EU family members generally permit residence; work permissions depend on the document type and current rules. We advise the correct path during scoping."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When can we apply for permanent residence?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "After completing the qualifying continuous residence period and meeting continuity conditions. We track eligibility and prepare the upgrade pack."
-      }
-    }
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Who qualifies as a family member of an EU citizen?","acceptedAnswer":{"@type":"Answer","text":"Typically a spouse/registered partner, dependent children, and in some cases dependent parents. Eligibility and evidence are confirmed at scoping."}},
+    {"@type":"Question","name":"Do relationship documents need apostille or legalisation?","acceptedAnswer":{"@type":"Answer","text":"Often yes. Foreign-issued certificates usually require apostille/legalisation and certified translation. Country-specific guidance is provided during intake."}},
+    {"@type":"Question","name":"How long does preparation and decision take?","acceptedAnswer":{"@type":"Answer","text":"Preparation depends on document readiness and appointment availability. Decision times are set by authorities."}},
+    {"@type":"Question","name":"Can non-EU family members work in Cyprus?","acceptedAnswer":{"@type":"Answer","text":"Residence cards generally permit residence; work permissions depend on document type and current rules. The correct path is confirmed during scoping."}},
+    {"@type":"Question","name":"Will you attend appointments?","acceptedAnswer":{"@type":"Answer","text":"Bookings and attendance notes are coordinated. Where permitted, MegaServe can attend or provide a representative, and can also coordinate immigration lawyers through a single point of contact if required."}},
+    {"@type":"Question","name":"When can we apply for permanent residence?","acceptedAnswer":{"@type":"Answer","text":"After completing the qualifying continuous residence period and meeting continuity conditions. Eligibility is tracked and the upgrade pack is prepared when due."}}
   ]
 }
 </script>
@@ -528,16 +520,21 @@
   window.addEventListener('DOMContentLoaded', function () {
     if (!window.CountUp) return;
     document.querySelectorAll('[data-countup]').forEach(function (el) {
-      var text = el.textContent.trim();
+      var text = (el.textContent || '').trim();
       var hasPercent = text.endsWith('%');
       var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
-      var opts = { duration: 1.2, separator: ',', suffix: hasPercent ? '%' : '+' };
+
+      var suffix = '';
+      if (hasPercent) suffix = '%';
+      else if (text.endsWith('+')) suffix = '+';
+
+      var opts = { duration: 1.2, separator: ',', suffix: suffix };
       var cu = new CountUp.CountUp(el, endVal, opts);
       if (!cu.error) cu.start();
     });
   });
 </script>
 
-<script src="../../../script.js?v=14"></script>
+<script src="/script.js?v=14"></script>
 </body>
 </html>
