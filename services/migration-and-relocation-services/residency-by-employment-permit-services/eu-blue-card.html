@@ -1,68 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>EU Blue Card — MegaServe Cyprus</title>
-  <meta name="description" content="End-to-end coordination for Cyprus EU Blue Card: eligibility scoping, salary-threshold checks, document prep & filing, authority liaison, and onboarding with audit-ready records for highly skilled professionals.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="End-to-end coordination for Cyprus EU Blue Card: eligibility scoping, salary-threshold checks, document prep & filing, authority liaison, and onboarding with audit-ready records for highly skilled professionals." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.megaserve.eu/eu-blue-card.html">
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="EU Blue Card — MegaServe Cyprus">
-  <meta property="og:description" content="End-to-end coordination for Cyprus EU Blue Card: eligibility scoping, salary-threshold checks, document prep & filing, authority liaison, and onboarding with audit-ready records for highly skilled professionals.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.megaserve.eu/eu-blue-card.html">
-  <meta property="og:image" content="https://www.megaserve.eu/assets/og/eu-blue-card-og.jpg">
+  <meta property="og:title" content="EU Blue Card — MegaServe Cyprus" />
+  <meta property="og:description" content="End-to-end coordination for Cyprus EU Blue Card: eligibility scoping, salary-threshold checks, document prep & filing, authority liaison, and onboarding with audit-ready records for highly skilled professionals." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/eu-blue-card-og.jpg" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EU Blue Card — MegaServe Cyprus">
-  <meta name="twitter:description" content="Eligibility scoping, salary-threshold checks, document prep & filing, authority liaison, and onboarding for Cyprus EU Blue Card applications.">
-  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/eu-blue-card-og.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EU Blue Card — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Eligibility scoping, salary-threshold checks, document prep & filing, authority liaison, and onboarding for Cyprus EU Blue Card applications." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/eu-blue-card-og.jpg" />
 
-  <!-- Favicons / theme -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png">
-  <meta name="theme-color" content="#a00000">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
 
   <!-- Global stylesheet (root-level) -->
-  <link rel="stylesheet" href="../../../style.css?v=14">
+  <link rel="stylesheet" href="/style.css?v=14" />
 
   <!-- CountUp (kept consistent even if not used directly) -->
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+    .section-spaced{margin-top:2rem}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
+
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
     .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
+
     .table-wrap{overflow-x:auto}
     table.service,table.matrix{width:100%;border-collapse:collapse}
-    table.service th,table.service td,table.matrix th,table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th,table.service td,
+    table.matrix th,table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th,table.matrix th{background:#fafafa}
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
-    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
-    .faq dt{font-weight:700;margin-top:1rem}
-    .faq dd{margin:0 0 1rem 0}
-    .fade-up{opacity:0;transform:translateY(14px)}
-    .fade-up.visible{opacity:1;transform:translateY(0)}
+
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
+
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    /* Fallback fade-up */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
     .submenu-caret{margin-left:.35rem}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -79,95 +116,91 @@
     #main-nav .nav-cta a.btn-primary:hover{
       background:#9e0f1a;
     }
-    #site-header .header-flex{
-      align-items:center;
-    }
   </style>
 </head>
+
 <body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="../../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
             <li class="has-flyout">
-              <a href="residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="general-employment-permit.html">General Employment</a></li>
-                <li><a href="eu-blue-card.html" aria-current="page">EU Blue Card</a></li>
-                <li><a href="digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html" aria-current="page">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
-              <a href="../residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="../residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
-                <li><a href="../residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
-              <a href="../visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
-              <a href="../naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -177,9 +210,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
           <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -187,9 +220,9 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
@@ -197,52 +230,88 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="../../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="../../compliance-services/client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="../../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="../../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="../../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA -->
-        <li><a href="../../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main-content">
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>EU Blue Card — Cyprus</h1>
+    <p>Highly-skilled permits with salary thresholds and degree/experience criteria. We scope eligibility, prepare filings, and coordinate onboarding with an audit-ready record trail.</p>
+    <div class="micro-trust">Cyprus-based coordination · <strong>Threshold-fit checks</strong> · Clear checklists and tracking</div>
 
-  <!-- Hero -->
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container content-narrow">
-      <h1>EU Blue Card — Cyprus</h1>
-      <p>Highly-skilled permits with salary thresholds and degree/experience criteria. We scope eligibility, prepare filings, and coordinate onboarding with an audit-ready record trail.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=EU%20Blue%20Card%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="eu-blue-card">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20EU%20Blue%20Card" class="btn-secondary" data-cta="book-call" data-page="eu-blue-card">Book a Call</a>
+      <a href="#checklist" class="btn-secondary" data-cta="jump-checklist" data-page="eu-blue-card">Documents Checklist</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="container">
-    <div class="content-narrow">
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#checklist">Checklist</a>
+    <a href="#controls">Controls</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
 
-      <!-- Overview -->
-      <h2 class="fade-up" data-anim-delay="0.15">Overview</h2>
-      <p class="fade-up" data-anim-delay="0.2">The EU Blue Card enables non-EU highly skilled professionals to live and work in Cyprus under enhanced mobility and family re-grouping rights. MegaServe maps the role against current thresholds, validates qualifications and experience, builds the application, and manages every authority touchpoint.</p>
-      <ul class="feature-list fade-up" data-anim-delay="0.25" aria-label="Key features">
-        <li>Eligibility memo: role mapping, salary threshold, degree/experience checks</li>
-        <li>Jurisdiction-specific checklist, templates, and certified translation guidance</li>
-        <li>End-to-end filing &amp; liaison with authorities, appointment coordination</li>
-        <li>Family member add-ons and post-approval onboarding</li>
-        <li>Renewal scheduling, reminders, and immutable audit trail</li>
-      </ul>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
 
-      <div class="keyline"></div>
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>Cyprus employers hiring highly skilled non-EU professionals under the EU Blue Card route</li>
+      <li>Applicants who need salary-threshold and qualification checks confirmed before filing</li>
+      <li>Teams that want clean documentation, authority liaison, and predictable onboarding steps</li>
+    </ul>
 
-      <!-- Matrix -->
-      <h2 class="fade-up" data-anim-delay="0.3">Eligibility &amp; Salary Thresholds (Guide)</h2>
-      <div class="table-wrap fade-up" data-anim-delay="0.35">
+    <div class="keyline"></div>
+
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>Eligibility memo: role mapping, salary threshold, degree/experience checks</li>
+      <li>Jurisdiction-specific checklist, templates, and certified translation guidance</li>
+      <li>End-to-end filing &amp; liaison with authorities, appointment coordination</li>
+      <li>Family member add-ons and post-approval onboarding</li>
+      <li>Renewal scheduling, reminders, and immutable audit trail</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li>Discovery &amp; role mapping — confirm Blue Card route, salary band, timing.</li>
+      <li>Checklist issue — gather degree/experience proofs; legalisation/translation where needed.</li>
+      <li>Application build — forms, employer attestations, evidence pack.</li>
+      <li>Submission &amp; liaison — file, track, handle authority queries and appointments.</li>
+      <li>Decision &amp; collections — approvals, biometrics/permit issuance as applicable.</li>
+      <li>Onboarding — Social Insurance, TIC/TIN, payroll &amp; banking coordination.</li>
+      <li>Renewals — reminders and long-term compliance calendar.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>Eligibility &amp; Salary Thresholds (Guide)</h3>
+      <div class="table-wrap">
         <table class="matrix" aria-describedby="matrix-note">
           <thead>
             <tr>
@@ -280,27 +349,12 @@
           </tbody>
         </table>
       </div>
-      <p id="matrix-note" class="note fade-up" data-anim-delay="0.4">Matrix is indicative; precise requirements are validated during scoping against current practice.</p>
+      <p id="matrix-note" class="note">Matrix is indicative; precise requirements are validated during scoping against current practice.</p>
+    </div>
 
-      <div class="keyline"></div>
-
-      <!-- Process -->
-      <h2 class="fade-up" data-anim-delay="0.45">Process</h2>
-      <ol class="process-steps fade-up" data-anim-delay="0.5" aria-label="Application process steps">
-        <li>Discovery &amp; role mapping — confirm Blue Card route, salary band, timing.</li>
-        <li>Checklist issue — gather degree/experience proofs; legalisation/translation where needed.</li>
-        <li>Application build — forms, employer attestations, evidence pack.</li>
-        <li>Submission &amp; liaison — file, track, handle authority queries and appointments.</li>
-        <li>Decision &amp; collections — approvals, biometrics/permit issuance as applicable.</li>
-        <li>Onboarding — Social Insurance, TIC/TIN, payroll &amp; banking coordination.</li>
-        <li>Renewals — reminders and long-term compliance calendar.</li>
-      </ol>
-
-      <div class="keyline"></div>
-
-      <!-- Service Levels -->
-      <h2 class="fade-up" data-anim-delay="0.55">Service Levels &amp; Typical Timing</h2>
-      <div class="table-wrap fade-up" data-anim-delay="0.6">
+    <div class="section-spaced">
+      <h3>Service Levels &amp; Typical Timing</h3>
+      <div class="table-wrap">
         <table class="service" aria-label="Service levels">
           <thead>
             <tr>
@@ -332,151 +386,152 @@
           </tbody>
         </table>
       </div>
-      <p class="note fade-up" data-anim-delay="0.65">*Preparation time depends on document readiness, legalisation, and booking availability. Decision times are at authority discretion.</p>
-
-      <div class="keyline"></div>
-
-      <!-- Deliverables -->
-      <h2 class="fade-up" data-anim-delay="0.7">Deliverables</h2>
-      <ul class="feature-list fade-up" data-anim-delay="0.75">
-        <li>Eligibility memo confirming Blue Card route and salary band fit</li>
-        <li>Tailored document checklist with templates and translation instructions</li>
-        <li>Completed application pack and submission receipts</li>
-        <li>Authority correspondence log and milestone updates</li>
-        <li>Onboarding confirmations (where included) and renewal schedule</li>
-        <li>Audit-ready repository of all filings and evidence</li>
-      </ul>
-
-      <div class="keyline"></div>
-
-      <!-- Checklist -->
-      <h2 class="fade-up" data-anim-delay="0.8">Applicant &amp; Employer Checklist</h2>
-      <div class="table-wrap fade-up" data-anim-delay="0.85">
-        <table class="matrix" aria-label="Checklist table">
-          <thead>
-            <tr>
-              <th scope="col">Item</th>
-              <th scope="col">Owner</th>
-              <th scope="col">Provided</th>
-              <th scope="col">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Passport (validity &gt;= 6 months)</td>
-              <td>Applicant</td>
-              <td>Yes / No</td>
-              <td>Certified copy may be required</td>
-            </tr>
-            <tr>
-              <td>Degree / Experience proofs</td>
-              <td>Applicant</td>
-              <td>Yes / No</td>
-              <td>Legalisation &amp; certified translation as needed</td>
-            </tr>
-            <tr>
-              <td>Employment contract &amp; salary</td>
-              <td>Employer</td>
-              <td>Yes / No</td>
-              <td>At/above current Blue Card threshold</td>
-            </tr>
-            <tr>
-              <td>Company good standing &amp; tax status</td>
-              <td>Employer</td>
-              <td>Yes / No</td>
-              <td>HE extract, tax clearance</td>
-            </tr>
-            <tr>
-              <td>Police clearance &amp; medicals</td>
-              <td>Applicant</td>
-              <td>Yes / No</td>
-              <td>Jurisdiction-specific requirements apply</td>
-            </tr>
-            <tr>
-              <td>Accommodation &amp; insurance proof</td>
-              <td>Applicant / Employer</td>
-              <td>Yes / No</td>
-              <td>Lease/utilities; compliant insurance policy</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="keyline"></div>
-
-      <!-- Controls -->
-      <h2 class="fade-up" data-anim-delay="0.9">Controls &amp; Quality</h2>
-      <ul class="feature-list fade-up" data-anim-delay="0.95" aria-label="Controls list">
-        <li>Two-person review on every submission pack</li>
-        <li>Version-controlled document set with immutable evidence archive</li>
-        <li>Tracked authority queries with response SLAs</li>
-        <li>Renewal reminders and expiry dashboards</li>
-        <li>Data minimisation and secure transfer standards</li>
-      </ul>
-
-      <div class="keyline"></div>
-
-      <!-- About -->
-      <h2 class="fade-up" data-anim-delay="1.0">About MegaServe</h2>
-      <p class="fade-up" data-anim-delay="1.05">We are a Cyprus corporate services provider delivering end-to-end coordination across company administration, banking, compliance, and mobility. Our migration desk integrates with compliance and tax so every Blue Card file stays aligned with audit standards.</p>
-      <ul class="feature-list fade-up" data-anim-delay="1.1">
-        <li>Single point of contact for employer and applicant</li>
-        <li>Templates tuned to current local practice</li>
-        <li>Transparent timelines and status reporting</li>
-      </ul>
-
-      <div class="keyline"></div>
-
-      <!-- FAQ -->
-      <h2 class="fade-up" data-anim-delay="1.15">FAQ</h2>
-      <dl class="faq fade-up" data-anim-delay="1.2">
-        <dt>Who qualifies for the EU Blue Card in Cyprus?</dt>
-        <dd>Highly-skilled non-EU professionals with recognised qualifications or equivalent experience and a contract at/above the applicable salary threshold.</dd>
-
-        <dt>How long does preparation and decision take?</dt>
-        <dd>Preparation typically takes 3–7 weeks depending on document readiness and legalisation. Decision times are set by authorities and vary by season and workload.</dd>
-
-        <dt>Do my foreign documents need legalisation or apostille?</dt>
-        <dd>Yes, most foreign-issued documents require apostille or equivalent legalisation plus certified translation. We provide country-specific guidance.</dd>
-
-        <dt>Can family members join the principal applicant?</dt>
-        <dd>Yes, eligible dependants may apply on linked routes. We confirm eligibility at scoping and coordinate their filings end-to-end.</dd>
-
-        <dt>What if my salary or role changes after filing?</dt>
-        <dd>Material changes can impact eligibility and may require an update or re-filing. Notify us immediately for a compliant course of action.</dd>
-      </dl>
-      <p class="note fade-up" data-anim-delay="1.25">This page is practical guidance. Exact requirements depend on current regulations and your case specifics.</p>
-
+      <p class="note">*Preparation time depends on document readiness, legalisation, and booking availability. Decision times are at authority discretion.</p>
     </div>
-  </section>
 
-  <!-- Contact CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="1.3">
-    <div class="container content-narrow">
-      <h2>Start Your EU Blue Card Filing</h2>
-      <p class="contact-intro">Send the role description, degree/experience summary, and target start date. We will confirm threshold fit, checklist, and a target submission week.</p>
-      <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=EU%20Blue%20Card%20%E2%80%94%20New%20Hire%20Filing">Email MegaServe</a>
-      <p class="note">Fastest turnaround: provide passport scan, signed contract draft, and degree/experience proofs.</p>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>EU Blue Card Filing — Salary Threshold and Qualification Checks</h3>
+      <p class="muted"><strong>Client:</strong> Cyprus employer hiring a highly skilled non-EU professional (anonymised)</p>
+      <p>The employer needed to hire a non-EU specialist under the EU Blue Card route. The filing depended on clear proof that the role met the applicable salary threshold and that the applicant’s qualifications or experience met the Blue Card standard.</p>
+      <p>MegaServe confirmed threshold fit during scoping, assembled a complete evidence pack (including any required certifications and translations), and managed submission and authority follow-ups through to completion.</p>
+      <p><strong>Result:</strong> the file proceeded without avoidable rework, supported by a clean documentary trail suitable for onboarding and renewals.</p>
     </div>
-  </section>
 
-</main>
+    <div class="keyline"></div>
+
+    <h2 id="checklist">Applicant &amp; Employer Checklist</h2>
+    <div class="table-wrap">
+      <table class="matrix" aria-label="Checklist table">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Owner</th>
+            <th scope="col">Provided</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Passport (validity &gt;= 6 months)</td>
+            <td>Applicant</td>
+            <td>Yes / No</td>
+            <td>Certified copy may be required</td>
+          </tr>
+          <tr>
+            <td>Degree / Experience proofs</td>
+            <td>Applicant</td>
+            <td>Yes / No</td>
+            <td>Legalisation &amp; certified translation as needed</td>
+          </tr>
+          <tr>
+            <td>Employment contract &amp; salary</td>
+            <td>Employer</td>
+            <td>Yes / No</td>
+            <td>At/above current Blue Card threshold</td>
+          </tr>
+          <tr>
+            <td>Company good standing &amp; tax status</td>
+            <td>Employer</td>
+            <td>Yes / No</td>
+            <td>HE extract, tax clearance</td>
+          </tr>
+          <tr>
+            <td>Police clearance &amp; medicals</td>
+            <td>Applicant</td>
+            <td>Yes / No</td>
+            <td>Jurisdiction-specific requirements apply</td>
+          </tr>
+          <tr>
+            <td>Accommodation &amp; insurance proof</td>
+            <td>Applicant / Employer</td>
+            <td>Yes / No</td>
+            <td>Lease/utilities; compliant insurance policy</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="keyline"></div>
+
+    <h2 id="controls">Controls &amp; Quality</h2>
+    <ul class="feature-list">
+      <li>Two-person review on every submission pack</li>
+      <li>Version-controlled document set with immutable evidence archive</li>
+      <li>Tracked authority queries with response SLAs</li>
+      <li>Renewal reminders and expiry dashboards</li>
+      <li>Data minimisation and secure transfer standards</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Who qualifies for the EU Blue Card in Cyprus?</summary>
+        <p>Highly-skilled non-EU professionals with recognised qualifications or equivalent experience and a contract at/above the applicable salary threshold.</p>
+      </details>
+      <details>
+        <summary>How long does preparation and decision take?</summary>
+        <p>Preparation typically takes 3–7 weeks depending on document readiness and legalisation. Decision times are set by authorities and vary by season and workload.</p>
+      </details>
+      <details>
+        <summary>Do my foreign documents need legalisation or apostille?</summary>
+        <p>Yes, most foreign-issued documents require apostille or equivalent legalisation plus certified translation. We provide country-specific guidance.</p>
+      </details>
+      <details>
+        <summary>Can family members join the principal applicant?</summary>
+        <p>Yes, eligible dependants may apply on linked routes. We confirm eligibility at scoping and coordinate their filings end-to-end.</p>
+      </details>
+      <details>
+        <summary>What if my salary or role changes after filing?</summary>
+        <p>Material changes can impact eligibility and may require an update or re-filing. Notify us immediately for a compliant course of action.</p>
+      </details>
+    </div>
+    <p class="note">This page is practical guidance. Exact requirements depend on current regulations and your case specifics.</p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
+    <h2>Start Your EU Blue Card Filing</h2>
+    <p class="contact-intro">Send the role description, degree/experience summary, and target start date. We will confirm threshold fit, checklist, and a target submission week.</p>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=EU%20Blue%20Card%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="eu-blue-card">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20EU%20Blue%20Card" class="btn-secondary" data-cta="book-call" data-page="eu-blue-card">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20EU%20Blue%20Card" class="btn-secondary" data-cta="book-visit" data-page="eu-blue-card">Book a Visit (Nicosia)</a>
+    </div>
+
+    <p class="note">Fastest turnaround: provide passport scan, signed contract draft, and degree/experience proofs.</p>
+  </div>
+</section>
 
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; 2026 MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
-      <a href="../../../index.html#services">Services</a>
-      <a href="../../../about.html">About</a>
-      <a href="../../../index.html#contact-cta">Contact</a>
-      <a href="../../../privacy.html">Privacy Policy</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
+
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=EU%20Blue%20Card%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="eu-blue-card">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20EU%20Blue%20Card" class="btn-secondary" data-cta="sticky-book-call" data-page="eu-blue-card">Book a Call</a>
+</div>
 
 <!-- FAQ JSON-LD -->
 <script type="application/ld+json">
@@ -543,6 +598,6 @@
   });
 </script>
 
-<script src="../../../script.js?v=14"></script>
+<script src="/script.js?v=14"></script>
 </body>
 </html>
