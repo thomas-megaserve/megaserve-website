@@ -1,68 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Permanent Residence (Reg. 6.2) – Accelerated — MegaServe Cyprus</title>
-  <meta name="description" content="End-to-end coordination for Cyprus Permanent Residence (Reg. 6.2) — Accelerated: eligibility scoping, property/investment checks, document prep & filing, authority liaison, and audit-ready records for fast-track PR.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fast-track Cyprus Permanent Residence (Reg. 6.2) — Accelerated: eligibility scoping, qualifying property/investment checks, source-of-funds file, document prep & filing, authority liaison, and audit-ready records." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.megaserve.eu/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Permanent Residence (Reg. 6.2) – Accelerated — MegaServe Cyprus">
-  <meta property="og:description" content="Fast-track Cyprus PR via qualifying investment and clean-source income, handled end-to-end with audit-ready documentation.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.megaserve.eu/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">
-  <meta property="og:image" content="https://www.megaserve.eu/assets/og/permanent-residence-reg-6-2-og.jpg">
+  <meta property="og:title" content="Permanent Residence (Reg. 6.2) – Accelerated — MegaServe Cyprus" />
+  <meta property="og:description" content="Fast-track Cyprus PR via qualifying investment and clean-source income, handled end-to-end with audit-ready documentation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/permanent-residence-reg-6-2-og.jpg" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Permanent Residence (Reg. 6.2) – Accelerated — MegaServe Cyprus">
-  <meta name="twitter:description" content="Fast-track Cyprus PR via qualifying investment and clean-source income, handled end-to-end with audit-ready documentation.">
-  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/permanent-residence-reg-6-2-og.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Permanent Residence (Reg. 6.2) – Accelerated — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Fast-track Cyprus PR via qualifying investment and clean-source income, handled end-to-end with audit-ready documentation." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/permanent-residence-reg-6-2-og.jpg" />
 
-  <!-- Favicons / theme -->
-  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicons/favicon-16.png">
-  <meta name="theme-color" content="#a00000">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
 
-  <!-- Global stylesheet (root-level) -->
-  <link rel="stylesheet" href="../../../style.css?v=14">
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="/style.css?v=14" />
 
-  <!-- CountUp -->
+  <!-- CountUp (harmless if blocked; consistent with other pages) -->
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
+
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
     .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
+
     .table-wrap{overflow-x:auto}
-    table.service,table.matrix{width:100%;border-collapse:collapse}
-    table.service th,table.service td,table.matrix th,table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
-    table.service th,table.matrix th{background:#fafafa}
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
-    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
-    .faq dt{font-weight:700;margin-top:1rem}
-    .faq dd{margin:0 0 1rem 0}
-    .fade-up{opacity:0;transform:translateY(14px)}
-    .fade-up.visible{opacity:1;transform:translateY(0)}
+    table.service, table.matrix{width:100%;border-collapse:collapse}
+    table.service th, table.service td,
+    table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.matrix th{background:#fafafa}
+
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
+
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    .section-spaced{margin-top:2rem}
     .submenu-caret{margin-left:.35rem}
+
+    /* Fallback fade-up */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -76,98 +113,93 @@
       display:inline-block;
       box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
-    }
-    #site-header .header-flex{
-      align-items:center;
-    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
   </style>
 </head>
+
 <body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="../../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
           <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+
             <li class="has-flyout">
-              <a href="../residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="../residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="../residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
-                <li><a href="../residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="../residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="../residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
-              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="permanent-residence-reg-6-2.html" aria-current="page">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="categories-a-f.html">Categories A–F</a></li>
-                <li><a href="cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html" aria-current="page">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
-              <a href="../visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
-              <a href="../naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
           </ul>
@@ -176,10 +208,10 @@
         <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
-          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          <ul class="dropdown" aria-label="Tax &amp; VAT Administration Submenu">
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -187,379 +219,370 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
-        <!-- Compliance Services -->
+        <!-- Compliance -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="../../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="../../compliance-services/client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="../../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="../../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="../../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA -->
-        <li><a href="../../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main-content">
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Permanent Residence (Reg. 6.2) — Accelerated</h1>
+    <p>Fast-track Cyprus PR via qualifying investment and clean-source income. We validate eligibility, coordinate property/investment documentation, and manage the filing through approval with a clean evidence trail.</p>
+    <div class="micro-trust">Cyprus-based coordination · <strong>Source-of-funds discipline</strong> · Clean evidence packs</div>
 
-  <!-- Hero -->
-  <section class="page-hero">
-    <div class="container content-narrow">
-      <h1 class="fade-up" data-anim-delay="0ms">Permanent Residence (Reg. 6.2) — Accelerated</h1>
-      <p class="fade-up" data-anim-delay="80ms">Fast-track Cyprus PR via qualifying investment and clean-source income. We validate eligibility, coordinate property/investment documentation, file the application, and manage every authority touchpoint through approval.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Permanent%20Residence%20(Reg.%206.2)%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="permanent-residence-reg-6-2">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Permanent%20Residence%20(Reg.%206.2)" class="btn-secondary" data-cta="book-call" data-page="permanent-residence-reg-6-2">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="permanent-residence-reg-6-2">Documents Checklist</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="container content-narrow">
-    <!-- Overview -->
-    <h2 class="fade-up" data-anim-delay="0ms">Overview</h2>
-    <p class="fade-up" data-anim-delay="60ms">Under Regulation 6(2), eligible third-country nationals can obtain permanent residence on an accelerated basis by meeting investment and income criteria. MegaServe delivers end-to-end coordination — from investment evidence and KYC through submission, decision, and onboarding — with an audit-ready trail.</p>
-    <ul class="feature-list fade-up" data-anim-delay="120ms" aria-label="Key features">
-      <li>Eligibility memo covering investment route, income, and family dependants</li>
-      <li>Property/participation documentation review and source-of-funds pack</li>
-      <li>Complete application build, filing, and authority liaison</li>
-      <li>Dependants handling (spouse/partner, minor children; select adult children where eligible)</li>
-      <li>Onboarding coordination and renewal/conditions tracking</li>
-      <li>Secure repository with immutable evidence archive</li>
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#risk">Risk</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
+
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>Third-country nationals pursuing Cyprus permanent residence through a qualifying investment path</li>
+      <li>Applicants who want a clean source-of-funds narrative and bankable documentation structure</li>
+      <li>Households that need linked dependant packs and a predictable evidence/renewal trail</li>
     </ul>
 
     <div class="keyline"></div>
 
-    <!-- Matrix -->
-    <h2 class="fade-up" data-anim-delay="0ms">Eligibility Matrix (Guide)</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
-      <table class="matrix" aria-describedby="matrix-note">
-        <thead>
-          <tr>
-            <th scope="col">Factor</th>
-            <th scope="col">Baseline Expectation</th>
-            <th scope="col">Evidence Examples</th>
-            <th scope="col">Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Investment</td>
-            <td>Qualifying real estate or other approved investment</td>
-            <td>Sale agreement, receipts, title/assignment, developer confirmations</td>
-            <td>We confirm acceptable categories and documentation</td>
-          </tr>
-          <tr>
-            <td>Income</td>
-            <td>Stable income from abroad at/above accepted level</td>
-            <td>Bank statements, tax returns, payslips, dividends</td>
-            <td>Thresholds vary by household size</td>
-          </tr>
-          <tr>
-            <td>Source of Funds (SoF)</td>
-            <td>Lawful, documented funds trail</td>
-            <td>Banking trails, contracts, notarial attestations</td>
-            <td>Enhanced KYC may apply</td>
-          </tr>
-          <tr>
-            <td>Accommodation &amp; Insurance</td>
-            <td>Suitable residence; compliant cover</td>
-            <td>Lease/title; insurance policy</td>
-            <td>Family add-ons may need extra cover</td>
-          </tr>
-          <tr>
-            <td>Clean Record</td>
-            <td>Valid passport &amp; police clearance</td>
-            <td>Passport copies; legalised police cert</td>
-            <td>Certified translations where required</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p id="matrix-note" class="note fade-up" data-anim-delay="140ms">Matrix is indicative; precise criteria and evidence are validated during scoping against current practice.</p>
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>Eligibility memo covering investment path, income, and household scope</li>
+      <li>Structured source-of-funds file: bank letters, statements, provenance notes</li>
+      <li>Investment/property evidence pack (agreements, receipts, confirmations)</li>
+      <li>Submission receipts, reference numbers, and appointment coordination</li>
+      <li>Status notes and clarification log until decision</li>
+      <li>Secure archive of permits and an ongoing conditions/renewals diary</li>
+    </ul>
 
     <div class="keyline"></div>
 
-    <!-- Process -->
-    <h2 class="fade-up" data-anim-delay="0ms">Process</h2>
-    <ol class="process-steps fade-up" data-anim-delay="80ms" aria-label="Application process steps">
-      <li>Discovery &amp; route mapping — confirm investment option, income, dependants, and timing.</li>
-      <li>Checklist &amp; KYC — gather SoF, investment contracts, banking trails, and civil status documents.</li>
-      <li>Application build — forms, declarations, translations/legalisations, and evidence compilation.</li>
-      <li>Submission &amp; liaison — file, track progress, and manage authority queries.</li>
-      <li>Decision &amp; issuance — approvals and collection with secure record copies.</li>
-      <li>Onboarding — local registrations as needed; practical setup and renewals calendar.</li>
-      <li>Ongoing compliance — monitor conditions (e.g., property/coverage/absences) and update records.</li>
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Discovery:</strong> confirm investment route, income profile, dependants, and timing window.</li>
+      <li><strong>Checklist &amp; KYC:</strong> gather source-of-funds evidence, civil status documents, insurance, and address proofs.</li>
+      <li><strong>Build:</strong> forms, declarations, translations/legalisations, and evidence compilation.</li>
+      <li><strong>Submit &amp; Liaise:</strong> filing, tracking, and responses to authority queries.</li>
+      <li><strong>Decision &amp; Issuance:</strong> approvals/collections and secure copies for your records.</li>
+      <li><strong>Post-issue:</strong> conditions tracking (investment/coverage/absences) and renewal reminders.</li>
     </ol>
 
+    <div class="section-spaced">
+      <h3>Eligibility Matrix (Guide)</h3>
+      <div class="table-wrap">
+        <table class="matrix" aria-describedby="matrix-note">
+          <thead>
+            <tr>
+              <th scope="col">Factor</th>
+              <th scope="col">Baseline Expectation</th>
+              <th scope="col">Evidence Examples</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Investment</td>
+              <td>Qualifying real estate or other approved investment</td>
+              <td>Sale agreement, receipts, title/assignment, developer confirmations</td>
+              <td>Acceptable categories confirmed at scoping</td>
+            </tr>
+            <tr>
+              <td>Income</td>
+              <td>Stable income from abroad meeting accepted level</td>
+              <td>Bank statements, tax returns, payslips, dividends</td>
+              <td>Thresholds vary by household size</td>
+            </tr>
+            <tr>
+              <td>Source of funds</td>
+              <td>Lawful, documented funds trail</td>
+              <td>Banking trails, contracts, sale proceeds</td>
+              <td>Enhanced checks may apply</td>
+            </tr>
+            <tr>
+              <td>Accommodation &amp; insurance</td>
+              <td>Suitable residence; compliant cover</td>
+              <td>Lease/title; insurance policy</td>
+              <td>Family inclusion can affect insurance scope</td>
+            </tr>
+            <tr>
+              <td>Clean record</td>
+              <td>Valid passport &amp; police clearance</td>
+              <td>Passport copies; legalised police certificate</td>
+              <td>Certified translations where required</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="matrix-note" class="note">Indicative only — precise criteria and evidence are confirmed during scoping against current practice.</p>
+    </div>
+
+    <div class="section-spaced">
+      <h3>Service Levels &amp; Typical Timing</h3>
+      <div class="table-wrap">
+        <table class="service" aria-label="Service levels and typical timing">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Typical Frequency/Timing</th>
+              <th>Target Response</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eligibility memo</td>
+              <td>At kickoff</td>
+              <td>1–2 business days</td>
+              <td>Assumes receipt of investment outline and household details</td>
+            </tr>
+            <tr>
+              <td>Source-of-funds file assembly</td>
+              <td>Initial build</td>
+              <td>3–7 business days</td>
+              <td>Bank letters/translation timing can extend</td>
+            </tr>
+            <tr>
+              <td>Investment/property evidence pack</td>
+              <td>Per application</td>
+              <td>3–10 business days</td>
+              <td>Dependent on counterparties and registries</td>
+            </tr>
+            <tr>
+              <td>Submission &amp; appointment booking</td>
+              <td>Once pack complete</td>
+              <td>Same–2 business days</td>
+              <td>Subject to authority calendars</td>
+            </tr>
+            <tr>
+              <td>Status updates</td>
+              <td>Weekly until decision</td>
+              <td>Same day</td>
+              <td>Clarifications tracked to closure</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Timings reflect typical handling; authority queues and additional checks may extend completion.</p>
+    </div>
+
     <div class="keyline"></div>
 
-    <!-- Service Levels -->
-    <h2 class="fade-up" data-anim-delay="0ms">Service Levels &amp; Typical Timing</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
-      <table class="service" aria-label="Service levels">
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>Permanent Residence via Qualifying Property Purchase (Anonymised)</h3>
+      <p class="muted"><strong>Client:</strong> Third-country national business owner (anonymised)</p>
+      <p>The client sought permanent residence in Cyprus through a qualifying property purchase and required a clean, well-structured file covering investment evidence, income, and supporting civil status documents.</p>
+      <p>MegaServe coordinated the evidence pack, source-of-funds documentation, and filing workflow through submission and authority follow-ups.</p>
+      <p><strong>Result:</strong> secured permanent residence status in Cyprus, with family inclusion and long-term residence rights under Regulation 6(2).</p>
+      <p>Permanent residence was granted with the right to reside long-term in Cyprus, subject to the programme’s conditions.</p>
+    </div>
+
+    <div class="keyline"></div>
+
+    <h2 id="requirements">Requirements (Client Checklist)</h2>
+    <div class="table-wrap">
+      <table class="matrix" aria-label="Reg. 6.2 kickoff checklist">
         <thead>
           <tr>
-            <th scope="col">Level</th>
-            <th scope="col">Includes</th>
-            <th scope="col">Typical Timing*</th>
-            <th scope="col">Best For</th>
+            <th>Applicant</th>
+            <th>Investment Evidence</th>
+            <th>Family (if applicable)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Core</td>
-            <td>Eligibility memo, checklist &amp; KYC, application build &amp; filing, liaison</td>
-            <td>3–6 weeks prep; authority timelines vary</td>
-            <td>Applicants with ready investment and documents</td>
-          </tr>
-          <tr>
-            <td>Plus</td>
-            <td>Core + translations/legalisations orchestration, property-doc coordination, renewal calendar</td>
-            <td>4–8 weeks prep; authority timelines vary</td>
-            <td>Households needing admin bandwidth</td>
-          </tr>
-          <tr>
-            <td>Complete</td>
-            <td>Plus + onboarding coordination, dependants pack, and ongoing compliance monitoring</td>
-            <td>5–9 weeks prep; authority timelines vary</td>
-            <td>Turnkey multi-applicant families</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note fade-up" data-anim-delay="140ms">*Preparation time depends on document readiness, legalisation/translation, property paperwork, and appointment availability. Decision times are at authority discretion.</p>
-
-    <div class="keyline"></div>
-
-    <!-- Deliverables -->
-    <h2 class="fade-up" data-anim-delay="0ms">Deliverables</h2>
-    <ul class="feature-list fade-up" data-anim-delay="80ms">
-      <li>Eligibility memo detailing investment route, income fit, and dependant strategy</li>
-      <li>Custom checklist &amp; templates; SoF narrative and banking trail map</li>
-      <li>Completed application pack and submission receipts</li>
-      <li>Authority correspondence log with milestone updates</li>
-      <li>Onboarding confirmations (where relevant) and renewal/compliance calendar</li>
-      <li>Immutable, audit-ready repository of all filings and evidence</li>
-    </ul>
-
-    <div class="keyline"></div>
-
-    <!-- Checklist -->
-    <h2 class="fade-up" data-anim-delay="0ms">Applicant &amp; Investment Checklist</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
-      <table class="matrix" aria-label="Checklist table">
-        <thead>
-          <tr>
-            <th scope="col">Item</th>
-            <th scope="col">Owner</th>
-            <th scope="col">Provided</th>
-            <th scope="col">Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Passport (validity &gt;= 6 months)</td>
-            <td>Applicant</td>
-            <td>Yes / No</td>
-            <td>Certified copies may be required</td>
-          </tr>
-          <tr>
-            <td>Police clearance &amp; medicals</td>
-            <td>Applicant</td>
-            <td>Yes / No</td>
-            <td>Legalisation/apostille &amp; translations</td>
-          </tr>
-          <tr>
-            <td>Income proof (abroad)</td>
-            <td>Applicant</td>
-            <td>Yes / No</td>
-            <td>Tax returns, payslips, dividends, rental income</td>
-          </tr>
-          <tr>
-            <td>Source-of-funds (SoF) trail</td>
-            <td>Applicant</td>
-            <td>Yes / No</td>
-            <td>Bank statements, contracts, sale proceeds</td>
-          </tr>
-          <tr>
-            <td>Investment documentation</td>
-            <td>Applicant / Developer</td>
-            <td>Yes / No</td>
-            <td>Sale agreement, receipts, title/assignment</td>
-          </tr>
-          <tr>
-            <td>Accommodation &amp; insurance</td>
-            <td>Household</td>
-            <td>Yes / No</td>
-            <td>Lease/title; health insurance policy</td>
-          </tr>
-          <tr>
-            <td>Dependants’ civil status docs</td>
-            <td>Family members</td>
-            <td>Yes / No</td>
-            <td>Marriage/birth certs, legalised &amp; translated</td>
+            <td>
+              <ul class="feature-list">
+                <li>Passport bio page &amp; existing permits/visas</li>
+                <li>Income proofs (salary/dividends/rentals)</li>
+                <li>Bank statements &amp; source-of-funds notes</li>
+                <li>Police certificate &amp; health insurance</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="feature-list">
+                <li>Property sale agreement/title or assignment</li>
+                <li>Receipts and payment proofs</li>
+                <li>Developer confirmations (where relevant)</li>
+                <li>Valuations/receipts where applicable</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="feature-list">
+                <li>Passports &amp; birth/marriage certificates</li>
+                <li>Proof of relationship and co-habitation</li>
+                <li>Insurance and accommodation details</li>
+              </ul>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
+    <p class="note">Formats: PDF/JPG scans acceptable; originals may be required at appointments. Translation/apostille needs are confirmed per case.</p>
 
     <div class="keyline"></div>
 
-    <!-- Controls -->
-    <h2 class="fade-up" data-anim-delay="0ms">Controls &amp; Quality</h2>
-    <ul class="feature-list fade-up" data-anim-delay="80ms" aria-label="Controls list">
-      <li>Two-person legal/compliance review on every submission pack</li>
-      <li>Version-controlled documents and immutable evidence archive</li>
-      <li>Tracked authority queries with response SLAs</li>
-      <li>Renewal/condition monitoring (e.g., investment holding, absences)</li>
-      <li>Data minimisation and secure, encrypted transfers</li>
+    <h2 id="risk">Risk &amp; Mitigations</h2>
+    <ul class="feature-list">
+      <li><strong>Source-of-funds clarity:</strong> we structure provenance evidence to reduce authority queries and rework.</li>
+      <li><strong>Document legalisation:</strong> where required, we route apostille/legalisation and certified translation correctly.</li>
+      <li><strong>Authority queues:</strong> timelines are externally controlled; we keep tracking and status notes consistent.</li>
+      <li><strong>Conditions tracking:</strong> we maintain reminders around programme conditions (coverage/absences/investment holding) as relevant.</li>
     </ul>
 
     <div class="keyline"></div>
 
-    <!-- About -->
-    <h2 class="fade-up" data-anim-delay="0ms">About MegaServe</h2>
-    <p class="fade-up" data-anim-delay="60ms">We are a Cyprus corporate services provider integrating investment documentation, banking, and compliance with migration filings. Our team coordinates with developers, notaries, and authorities to keep each Reg. 6.2 file complete and audit-ready.</p>
-    <ul class="feature-list fade-up" data-anim-delay="120ms">
-      <li>Single point of contact for principal and dependants</li>
-      <li>Property and SoF documentation alignment with compliance standards</li>
-      <li>Transparent timelines and proactive reporting</li>
-    </ul>
-
-    <div class="keyline"></div>
-
-    <!-- FAQ -->
-    <h2 class="fade-up" data-anim-delay="0ms">FAQ</h2>
-    <dl class="faq fade-up" data-anim-delay="80ms">
-      <dt>What investments qualify under Reg. 6(2)?</dt>
-      <dd>Typically approved real estate or other permitted investments meeting the current criteria. We confirm acceptable categories and documentation during scoping.</dd>
-
-      <dt>How is stable income assessed?</dt>
-      <dd>We map your income streams (salary, dividends, rentals, etc.) against accepted thresholds for your household size and compile supporting evidence.</dd>
-
-      <dt>Do documents need legalisation and translation?</dt>
-      <dd>Yes, most foreign-issued documents require legalisation/apostille and certified translation. We provide country-specific instructions and templates.</dd>
-
-      <dt>Can my spouse and children be included?</dt>
-      <dd>Yes. Spouse/partner and minor children are typically eligible; select adult children may qualify subject to conditions. We confirm at scoping and build linked packs.</dd>
-
-      <dt>How long does the accelerated path take?</dt>
-      <dd>Preparation usually takes 3–8 weeks depending on property paperwork, SoF trails, and translations. Decision timing is at the discretion of authorities.</dd>
-    </dl>
-    <p class="note fade-up" data-anim-delay="140ms">This page is practical guidance. Exact requirements depend on current regulations and your specific case.</p>
-
-  </section>
-
-  <!-- Contact CTA -->
-  <section id="contact-cta" class="cta-band" style="background:var(--color-primary);color:#fff">
-    <div class="container content-narrow">
-      <h2 class="fade-up" data-anim-delay="0ms">Start Your Reg. 6(2) PR File</h2>
-      <p class="fade-up" data-anim-delay="60ms">Share your investment details, household composition, and target timeframe. We’ll confirm eligibility, checklist, and a target submission window.</p>
-      <p class="fade-up" data-anim-delay="120ms">
-        <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=Permanent%20Residence%20(Reg.%206.2)%20%E2%80%94%20Accelerated%20Application">Email MegaServe</a>
-      </p>
-      <p class="note fade-up" data-anim-delay="180ms">Fastest turnaround: provide passport scans, sale agreement/receipts, income proofs, and SoF banking trails.</p>
+    <h2 id="faqs">FAQs</h2>
+    <p class="note" role="note">Informational only — this is not legal or immigration advice. Final decisions rest with competent authorities.</p>
+    <div class="faq">
+      <details>
+        <summary>What investments qualify under Reg. 6(2)?</summary>
+        <p>Typically approved real estate or other permitted investments meeting the current criteria. We confirm acceptable categories and documentation during scoping.</p>
+      </details>
+      <details>
+        <summary>How is stable income assessed?</summary>
+        <p>We map your income streams (salary, dividends, rentals, etc.) against accepted thresholds for household size and compile supporting evidence.</p>
+      </details>
+      <details>
+        <summary>Do documents need legalisation and translation?</summary>
+        <p>Most foreign-issued documents require legalisation/apostille and certified translation. We provide country-specific instructions and templates.</p>
+      </details>
+      <details>
+        <summary>Can spouse and children be included?</summary>
+        <p>Spouse/partner and minor children are typically eligible. Other dependants can be route-specific. We confirm eligibility and build linked packs at scoping.</p>
+      </details>
+      <details>
+        <summary>How long does the accelerated path take?</summary>
+        <p>Preparation commonly takes several weeks depending on property paperwork, source-of-funds trails, and translations. Decision timing is at the discretion of authorities.</p>
+      </details>
     </div>
-  </section>
 
-</main>
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html">Residency by Investment Permit Services (Hub)</a> ·
+      <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a> ·
+      <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a>
+    </p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff" aria-label="Contact call to action">
+  <div class="container content-narrow">
+    <h2>Start Your Reg. 6(2) PR File</h2>
+    <p class="contact-intro">Share your investment details, household composition, and target timeframe. We’ll confirm eligibility, checklist, and a target submission window.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Permanent%20Residence%20(Reg.%206.2)%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="permanent-residence-reg-6-2">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Permanent%20Residence%20(Reg.%206.2)" class="btn-secondary" data-cta="book-call" data-page="permanent-residence-reg-6-2">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Permanent%20Residence%20(Reg.%206.2)" class="btn-secondary" data-cta="book-visit" data-page="permanent-residence-reg-6-2">Book a Visit (Nicosia)</a>
+    </div>
+    <p class="note">Fastest turnaround: passport scans, sale agreement/receipts, income proofs, and source-of-funds banking trails.</p>
+  </div>
+</section>
 
 <footer id="site-footer">
-  <div class="container">
-    <div class="footer-flex">
-      <div>
-        <p><strong>MegaServe Cyprus</strong><br> Corporate, Compliance &amp; Migration Services</p>
-      </div>
-      <div>
-        <p><a href="mailto:hello@megaserve.eu">hello@megaserve.eu</a></p>
-      </div>
+  <div class="container footer-flex">
+    <div class="footer-left">
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> MegaServe. All rights reserved.</p>
+    <div class="footer-nav">
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
+
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Permanent%20Residence%20(Reg.%206.2)%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="permanent-residence-reg-6-2">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Permanent%20Residence%20(Reg.%206.2)" class="btn-secondary" data-cta="sticky-book-call" data-page="permanent-residence-reg-6-2">Book a Call</a>
+</div>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
-<!-- Optional CountUp helper (no-op if no [data-countup] elements) -->
-<script defer>
-  window.addEventListener('DOMContentLoaded', function () {
-    if (!window.CountUp) return;
-    document.querySelectorAll('[data-countup]').forEach(function (el) {
-      var text = el.textContent.trim();
-      var hasPercent = text.endsWith('%');
-      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
-      var opts = { duration: 1.2, separator: ',', suffix: hasPercent ? '%' : '+' };
-      var cu = new CountUp.CountUp(el, endVal, opts);
-      if (!cu.error) cu.start();
-    });
-  });
-</script>
-
-<script src="../../../script.js?v=14" defer></script>
-
-<!-- FAQ JSON-LD -->
+<!-- FAQ JSON-LD (matches visible FAQs) -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
     {
-      "@type": "Question",
-      "name": "What investments qualify under Reg. 6(2)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Typically approved real estate or other permitted investments meeting the current criteria. We confirm acceptable categories and documentation during scoping."
-      }
+      "@type":"Question",
+      "name":"What investments qualify under Reg. 6(2)?",
+      "acceptedAnswer":{"@type":"Answer","text":"Typically approved real estate or other permitted investments meeting the current criteria. We confirm acceptable categories and documentation during scoping."}
     },
     {
-      "@type": "Question",
-      "name": "How is stable income assessed?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We map your income streams (salary, dividends, rentals, etc.) against accepted thresholds for your household size and compile supporting evidence."
-      }
+      "@type":"Question",
+      "name":"How is stable income assessed?",
+      "acceptedAnswer":{"@type":"Answer","text":"We map your income streams (salary, dividends, rentals, etc.) against accepted thresholds for household size and compile supporting evidence."}
     },
     {
-      "@type": "Question",
-      "name": "Do documents need legalisation and translation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, most foreign-issued documents require legalisation/apostille and certified translation. We provide country-specific instructions and templates."
-      }
+      "@type":"Question",
+      "name":"Do documents need legalisation and translation?",
+      "acceptedAnswer":{"@type":"Answer","text":"Most foreign-issued documents require legalisation/apostille and certified translation. We provide country-specific instructions and templates."}
     },
     {
-      "@type": "Question",
-      "name": "Can my spouse and children be included?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Spouse/partner and minor children are typically eligible; select adult children may qualify subject to conditions. We confirm at scoping and build linked packs."
-      }
+      "@type":"Question",
+      "name":"Can spouse and children be included?",
+      "acceptedAnswer":{"@type":"Answer","text":"Spouse/partner and minor children are typically eligible. Other dependants can be route-specific. We confirm eligibility and build linked packs at scoping."}
     },
     {
-      "@type": "Question",
-      "name": "How long does the accelerated path take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Preparation usually takes 3–8 weeks depending on property paperwork, SoF trails, and translations. Decision timing is at the discretion of authorities."
-      }
+      "@type":"Question",
+      "name":"How long does the accelerated path take?",
+      "acceptedAnswer":{"@type":"Answer","text":"Preparation commonly takes several weeks depending on property paperwork, source-of-funds trails, and translations. Decision timing is at the discretion of authorities."}
     }
   ]
 }
 </script>
 
+<script src="/script.js?v=14"></script>
 </body>
 </html>
