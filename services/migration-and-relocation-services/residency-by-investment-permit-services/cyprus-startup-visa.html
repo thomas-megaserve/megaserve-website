@@ -1,68 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Cyprus Start-Up Visa — MegaServe Cyprus</title>
-  <meta name="description" content="Full-service coordination for Cyprus Start-Up Visa: eligibility assessment, business plan build, investment evidence, and submission to the innovation authority for founders and teams.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Full-service coordination for Cyprus Start-Up Visa: eligibility assessment, business plan preparation support, funding evidence, and end-to-end submission coordination for founders and teams." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.megaserve.eu/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Cyprus Start-Up Visa — MegaServe Cyprus">
-  <meta property="og:description" content="Cyprus Start-Up Visa for innovative founders and teams, coordinated end-to-end with business plan, funding evidence, and authority liaison.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.megaserve.eu/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">
-  <meta property="og:image" content="https://www.megaserve.eu/assets/og/cyprus-startup-visa-og.jpg">
+  <meta property="og:title" content="Cyprus Start-Up Visa — MegaServe Cyprus" />
+  <meta property="og:description" content="Cyprus Start-Up Visa for innovative founders and teams, coordinated end-to-end with documentation, funding evidence, and authority liaison." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/cyprus-startup-visa-og.jpg" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cyprus Start-Up Visa — MegaServe Cyprus">
-  <meta name="twitter:description" content="Cyprus Start-Up Visa for innovative founders and teams, coordinated end-to-end with business plan, funding evidence, and authority liaison.">
-  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/cyprus-startup-visa-og.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cyprus Start-Up Visa — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Cyprus Start-Up Visa for innovative founders and teams, coordinated end-to-end with documentation, funding evidence, and authority liaison." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/cyprus-startup-visa-og.jpg" />
 
   <!-- Favicons / theme -->
-  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicons/favicon-16.png">
-  <meta name="theme-color" content="#a00000">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
 
   <!-- Global stylesheet -->
-  <link rel="stylesheet" href="../../../style.css?v=14">
+  <link rel="stylesheet" href="/style.css?v=14" />
 
-  <!-- CountUp -->
+  <!-- CountUp (harmless if blocked; consistent) -->
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+    .section-spaced{margin-top:2rem}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
+
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
     .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
+
     .table-wrap{overflow-x:auto}
     table.service, table.matrix{width:100%;border-collapse:collapse}
-    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.service td,
+    table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th, table.matrix th{background:#fafafa}
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
-    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
-    .faq dt{font-weight:700;margin-top:1rem}
-    .faq dd{margin:0 0 1rem 0}
-    .fade-up{opacity:0;transform:translateY(14px)}
-    .fade-up.visible{opacity:1;transform:translateY(0)}
+
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
+
+    /* FAQs like other canonical pages (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
     .submenu-caret{margin-left:.35rem}
+
+    /* Fallback fade-up */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -76,110 +113,106 @@
       display:inline-block;
       box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
-    }
-    #site-header .header-flex{
-      align-items:center;
-    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
   </style>
 </head>
+
 <body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="../../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
+
             <li class="has-flyout">
-              <a href="../residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="../residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="../residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
-                <li><a href="../residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="../residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="../residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
-              <a href="residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="categories-a-f.html">Categories A–F</a></li>
-                <li><a href="cyprus-startup-visa.html" aria-current="page">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a aria-current="page" href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
-              <a href="../visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
-              <a href="../naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
+
           </ul>
         </li>
 
         <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
-          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          <ul class="dropdown" aria-label="Tax &amp; VAT Administration Submenu">
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -187,323 +220,295 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
-        <!-- Compliance Services -->
+        <!-- Compliance -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="../../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="../../compliance-services/client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="../../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="../../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="../../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- Simple pages + header CTA -->
-        <li><a href="../../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main-content">
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Cyprus Start-Up Visa</h1>
+    <p>Innovation-led founder and team relocations: eligibility assessment, business-plan readiness, funding evidence, and end-to-end submission coordination.</p>
+    <div class="micro-trust">Cyprus-based coordination · <strong>Documentation discipline</strong> · Clear milestones and tracking</div>
 
-  <!-- Hero -->
-  <section class="page-hero">
-    <div class="container content-narrow">
-      <h1 class="fade-up" data-anim-delay="0ms">Cyprus Start-Up Visa</h1>
-      <p class="fade-up" data-anim-delay="80ms">A targeted program enabling innovative founders and qualified teams to establish and scale tech or R&amp;D-driven ventures in Cyprus. MegaServe coordinates eligibility scoping, business plan build, submission, and authority liaison until permit issuance.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Cyprus%20Start-Up%20Visa%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="cyprus-startup-visa">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Cyprus%20Start-Up%20Visa" class="btn-secondary" data-cta="book-call" data-page="cyprus-startup-visa">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="cyprus-startup-visa">Documents Checklist</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="container content-narrow">
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#risk">Risk</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
 
-    <!-- Overview -->
-    <h2 class="fade-up" data-anim-delay="0ms">Overview</h2>
-    <p class="fade-up" data-anim-delay="60ms">The Cyprus Start-Up Visa supports entrepreneurs from non-EU countries wishing to create and operate innovative businesses in Cyprus. The scheme accepts individual founders and teams, granting residence and work rights conditioned on innovation potential and funding capacity.</p>
-    <ul class="feature-list fade-up" data-anim-delay="120ms" aria-label="Key features">
-      <li>Eligibility evaluation for individual or team application</li>
-      <li>Innovation authority approval preparation</li>
-      <li>Business plan drafting and financial model validation</li>
-      <li>Application assembly, submission, and follow-up</li>
-      <li>Post-approval residence management and renewal calendar</li>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
+
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>Non-EU founders building innovation-led businesses who want clean, authority-ready documentation</li>
+      <li>Teams (commonly up to a small group) applying together with defined roles and funding evidence</li>
+      <li>Applicants who want a single point of contact coordinating company setup, compliance, and migration steps</li>
     </ul>
 
     <div class="keyline"></div>
 
-    <!-- Eligibility Matrix -->
-    <h2 class="fade-up" data-anim-delay="0ms">Eligibility &amp; Evidence Matrix (Guide)</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
-      <table class="matrix" aria-describedby="matrix-note">
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>Eligibility scoping memo (route fit, team structure, funding evidence checklist)</li>
+      <li>Structured checklist and evidence tracker (founder/team + business + funding)</li>
+      <li>Submission-ready documentation pack and correspondence log</li>
+      <li>Appointment coordination and post-approval filing support (where applicable)</li>
+      <li>Renewal calendar and secure repository of all filings and evidence</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Discovery:</strong> confirm route fit, founder/team roles, funding capacity, and timing.</li>
+      <li><strong>Checklist:</strong> gather pitch/business documents, funding evidence, IDs, insurance, and civil-status documents.</li>
+      <li><strong>Pack Build:</strong> compile and QA the full submission file; coordinate translations/legalisations where required.</li>
+      <li><strong>Submission &amp; Liaison:</strong> submit and manage follow-ups and clarification requests.</li>
+      <li><strong>Immigration Steps:</strong> coordinate the residence filing steps, appointments, and issuance workflow as applicable.</li>
+      <li><strong>Post-Issue:</strong> keep renewal reminders and maintain an audit-ready record set.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>Eligibility &amp; Evidence Snapshot</h3>
+      <div class="table-wrap">
+        <table class="matrix" aria-label="Start-Up Visa eligibility snapshot">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Baseline Expectation</th>
+              <th>Evidence Examples</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Founder/team</td>
+              <td>Non-EU; relevant background; defined roles</td>
+              <td>CVs, portfolios, references</td>
+              <td>Team structures vary; we confirm fit at scoping</td>
+            </tr>
+            <tr>
+              <td>Innovation</td>
+              <td>Product or R&amp;D with scale potential</td>
+              <td>Pitch deck, demo, IP materials (if any)</td>
+              <td>Assessment is made by the competent authority</td>
+            </tr>
+            <tr>
+              <td>Funding</td>
+              <td>Meets the current minimum / capacity expectations</td>
+              <td>Bank statements, investor letters</td>
+              <td>Thresholds and interpretations can change; confirmed at intake</td>
+            </tr>
+            <tr>
+              <td>Compliance</td>
+              <td>Clean record, insurance, civil-status documents</td>
+              <td>Police certs, policy schedule, certificates</td>
+              <td>Legalisation/translation may apply</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">This is a practical guide. Final eligibility and approval sit with the competent authority.</p>
+    </div>
+
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>Innovation-Led Founder Relocation — Process-Centric Coordination</h3>
+      <p class="muted"><strong>Profile:</strong> Non-EU founder preparing to relocate to Cyprus to establish an innovation-driven business (anonymised)</p>
+
+      <p>The client required a coordinated pathway across migration, company setup readiness, banking readiness, and compliance alignment. The application involved an additional approval layer beyond standard residence filings: the Innovation Authority assessment.</p>
+
+      <p>MegaServe coordinated the documentation framework around the application: confirming route suitability, structuring business and operational documentation into a coherent submission pack, coordinating supporting evidence (including funding and compliance documents), and keeping downstream steps ready to avoid sequencing delays after approval.</p>
+
+      <p><strong>Result:</strong> a fully aligned submission file with consistent documentation across corporate, compliance, and migration layers—maintaining a clean record suitable for authority review and future renewals.</p>
+
+      <p class="note">Innovation approval outcomes are determined by the competent authority. MegaServe’s role is procedural integrity, documentation coherence, and disciplined execution.</p>
+    </div>
+
+    <div class="keyline"></div>
+
+    <h2 id="requirements">Requirements (Client Checklist)</h2>
+    <div class="table-wrap">
+      <table class="matrix" aria-label="Start-Up Visa checklist">
         <thead>
           <tr>
-            <th scope="col">Factor</th>
-            <th scope="col">Baseline Expectation</th>
-            <th scope="col">Evidence Examples</th>
-            <th scope="col">Notes</th>
+            <th>Area</th>
+            <th>Typical Items</th>
+            <th>Notes</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Founder Profile</td>
-            <td>Non-EU; age 18+; relevant track record</td>
-            <td>CVs, references, portfolio</td>
-            <td>Team applications allowed</td>
+            <td>Founder / Team</td>
+            <td>Passports, CVs, role descriptions, supporting background</td>
+            <td>Team applications should show clear responsibilities</td>
           </tr>
           <tr>
-            <td>Innovation</td>
-            <td>Tech/R&amp;D product with scale potential</td>
-            <td>Pitch deck, product demo, IP docs</td>
-            <td>Innovation Authority review</td>
+            <td>Business / Innovation</td>
+            <td>Pitch deck, product description, market plan, roadmap</td>
+            <td>We help structure the pack for clarity and consistency</td>
           </tr>
           <tr>
-            <td>Capital</td>
-            <td>Min. funding (e.g., €20k)</td>
-            <td>Bank statements, investor letters</td>
-            <td>We confirm current threshold at scoping</td>
-          </tr>
-          <tr>
-            <td>Sustenance</td>
-            <td>Funds for living costs</td>
-            <td>Bank statements, sponsorship letters</td>
-            <td>Amounts vary with household size</td>
+            <td>Funding</td>
+            <td>Bank statements, investor letters, capital availability evidence</td>
+            <td>Minimums and expectations confirmed at intake</td>
           </tr>
           <tr>
             <td>Compliance</td>
-            <td>Clean record, health insurance</td>
-            <td>Police cert, policy schedule</td>
-            <td>Legalisation/translation may apply</td>
+            <td>Police clearances, health insurance, civil-status documents</td>
+            <td>Legalisation and certified translation may apply</td>
+          </tr>
+          <tr>
+            <td>Accommodation</td>
+            <td>Lease or accommodation proof (where required)</td>
+            <td>Requirements vary; we confirm per case</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p id="matrix-note" class="note fade-up" data-anim-delay="140ms">Matrix is indicative; precise criteria and documents are validated during scoping.</p>
+    <p class="note">We confirm exact requirements and formats at intake before submission.</p>
 
     <div class="keyline"></div>
 
-    <!-- Process -->
-    <h2 class="fade-up" data-anim-delay="0ms">Process</h2>
-    <ol class="process-steps fade-up" data-anim-delay="80ms" aria-label="Application process steps">
-      <li>Scoping — evaluate concept, team, and route; confirm capital and timelines.</li>
-      <li>Document build — pitch deck, plan &amp; model, evidence pack, translations/legalisations.</li>
-      <li>Innovation approval — submit to the authority; manage queries.</li>
-      <li>Immigration filing — residence/work permits; appointment coordination.</li>
-      <li>Issuance &amp; onboarding — cards, TIC/TIN, banking and practical setup.</li>
-      <li>Monitoring &amp; renewal — KPI tracking, reports, and extension preparation.</li>
-    </ol>
-
-    <div class="keyline"></div>
-
-    <!-- Service Levels -->
-    <h2 class="fade-up" data-anim-delay="0ms">Service Levels &amp; Typical Timing</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
-      <table class="service" aria-label="Service levels">
-        <thead>
-          <tr>
-            <th scope="col">Level</th>
-            <th scope="col">Includes</th>
-            <th scope="col">Typical Timing*</th>
-            <th scope="col">Best For</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Core</td>
-            <td>Eligibility memo, checklist, plan review, innovation submission</td>
-            <td>3–5 weeks prep; authority timelines vary</td>
-            <td>Solo founders with ready materials</td>
-          </tr>
-          <tr>
-            <td>Plus</td>
-            <td>Core + co-authoring plan &amp; model, translations, appointment booking</td>
-            <td>4–7 weeks prep; authority timelines vary</td>
-            <td>Founders needing documentation support</td>
-          </tr>
-          <tr>
-            <td>Complete</td>
-            <td>Plus + team coordination (2–5), immigration filings, renewal calendar</td>
-            <td>6–9 weeks prep; authority timelines vary</td>
-            <td>Start-ups with multi-member teams</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note fade-up" data-anim-delay="140ms">*Preparation depends on plan complexity, translation/legalisation, and booking availability. Decisions are at authority discretion.</p>
-
-    <div class="keyline"></div>
-
-    <!-- Deliverables -->
-    <h2 class="fade-up" data-anim-delay="0ms">Deliverables</h2>
-    <ul class="feature-list fade-up" data-anim-delay="80ms">
-      <li>Eligibility memo &amp; route confirmation</li>
-      <li>Plan &amp; model templates, filing-ready forms</li>
-      <li>Submission receipts and correspondence log</li>
-      <li>Onboarding confirmations and renewal schedule</li>
-      <li>Secure, audit-ready document repository</li>
+    <h2 id="risk">Risk &amp; Mitigations</h2>
+    <ul class="feature-list">
+      <li><strong>Authority discretion:</strong> approval depends on the competent authority; we reduce friction by ensuring a coherent, complete file.</li>
+      <li><strong>Weak documentation:</strong> many delays come from unclear packs; we standardise structure and track gaps to closure.</li>
+      <li><strong>Translations/legalisation:</strong> we route properly to avoid rejection for format issues.</li>
+      <li><strong>Sequencing:</strong> we prepare downstream steps early (company/banking/admin) to prevent post-approval bottlenecks.</li>
     </ul>
 
     <div class="keyline"></div>
 
-    <!-- Checklist -->
-    <h2 class="fade-up" data-anim-delay="0ms">Founder &amp; Team Checklist</h2>
-    <div class="table-wrap fade-up" data-anim-delay="80ms">
-      <table class="matrix" aria-label="Checklist table">
-        <thead>
-          <tr>
-            <th scope="col">Item</th>
-            <th scope="col">Owner</th>
-            <th scope="col">Provided</th>
-            <th scope="col">Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Passports (validity &gt;= 6 months)</td>
-            <td>Founder/Team</td>
-            <td>Yes / No</td>
-            <td>Certified copies as required</td>
-          </tr>
-          <tr>
-            <td>Pitch deck &amp; business plan</td>
-            <td>Founder</td>
-            <td>Yes / No</td>
-            <td>Template provided; co-authoring available</td>
-          </tr>
-          <tr>
-            <td>Funding evidence</td>
-            <td>Founder/Investors</td>
-            <td>Yes / No</td>
-            <td>Bank statements; investor letters</td>
-          </tr>
-          <tr>
-            <td>Police clearance &amp; insurance</td>
-            <td>All applicants</td>
-            <td>Yes / No</td>
-            <td>Legalisation &amp; certified translation</td>
-          </tr>
-          <tr>
-            <td>Team CVs &amp; roles</td>
-            <td>Team</td>
-            <td>Yes / No</td>
-            <td>Highlight technical/commercial skills</td>
-          </tr>
-          <tr>
-            <td>Accommodation proof</td>
-            <td>Household</td>
-            <td>Yes / No</td>
-            <td>Lease/title; utility confirmation</td>
-          </tr>
-        </tbody>
-      </table>
+    <h2 id="faqs">FAQs</h2>
+    <p class="note" role="note">Informational only — this is not legal or immigration advice. Final decisions rest with competent authorities.</p>
+
+    <div class="faq">
+      <details>
+        <summary>Can I apply as an individual founder?</summary>
+        <p>Yes. The Start-Up Visa can accept individual founders and also small teams. We confirm the current structure and requirements during intake.</p>
+      </details>
+
+      <details>
+        <summary>Do I need a Cyprus company before applying?</summary>
+        <p>Not always. Incorporation can be sequenced based on the route and authority workflow. We coordinate timing and documentation to avoid rework.</p>
+      </details>
+
+      <details>
+        <summary>Do you provide legal advice?</summary>
+        <p>No. We coordinate the process and documentation. Where legal input is required, we coordinate with specialist lawyers. We can also provide our own representatives to accompany clients to appointments where permitted.</p>
+      </details>
+
+      <details>
+        <summary>What if the start-up underperforms?</summary>
+        <p>Renewals depend on the program’s requirements and continued compliance. If the plan changes materially, we can assess alternative residence routes.</p>
+      </details>
+
+      <details>
+        <summary>Can dependants join?</summary>
+        <p>Often yes, subject to route rules and evidence. We confirm eligibility at scoping and coordinate dependant documentation.</p>
+      </details>
     </div>
 
-    <div class="keyline"></div>
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html">Residency by Investment Permit Services</a> ·
+      <a href="/services/corporate-services/company-formation-services.html">Company Formation</a> ·
+      <a href="/services/corporate-services/banking-administration-services.html">Banking Administration</a> ·
+      <a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental</a>
+    </p>
 
-    <!-- Controls -->
-    <h2 class="fade-up" data-anim-delay="0ms">Controls &amp; Quality</h2>
-    <ul class="feature-list fade-up" data-anim-delay="80ms" aria-label="Controls list">
-      <li>Two-person review on every submission pack</li>
-      <li>Version-controlled document set with immutable archive</li>
-      <li>Tracked authority queries with response SLAs</li>
-      <li>Renewal reminders and KPI monitoring</li>
-      <li>Data minimisation and secure transfer standards</li>
-    </ul>
+    <h2 class="section-spaced">Other Jurisdictions (on request)</h2>
+    <p class="muted">Where required, we coordinate founder documentation workflows through vetted associates in selected jurisdictions.</p>
 
-    <div class="keyline"></div>
+  </div>
+</section>
 
-    <!-- About -->
-    <h2 class="fade-up" data-anim-delay="0ms">About MegaServe</h2>
-    <p class="fade-up" data-anim-delay="60ms">We are a Cyprus corporate services provider delivering end-to-end coordination across company formation, banking, compliance, and mobility. Our start-up desk integrates with compliance and tax so every file stays aligned with audit standards.</p>
-    <ul class="feature-list fade-up" data-anim-delay="120ms">
-      <li>Single point of contact from concept to card issuance</li>
-      <li>Local partner network for banking, office, and hiring</li>
-      <li>Transparent timelines and proactive status reporting</li>
-    </ul>
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
+    <h2>Start Your Cyprus Start-Up Visa Assessment</h2>
+    <p class="contact-intro">Email your pitch summary, founder CV(s), and funding overview. We’ll reply with an intake checklist and a proposed submission plan.</p>
 
-    <div class="keyline"></div>
-
-    <!-- FAQ -->
-    <h2 class="fade-up" data-anim-delay="0ms">FAQ</h2>
-    <dl class="faq fade-up" data-anim-delay="80ms">
-      <dt>Can I apply as an individual founder?</dt>
-      <dd>Yes. The Start-Up Visa accepts both individual and team applications (commonly up to five members). We confirm current limits at scoping.</dd>
-
-      <dt>Do I need a Cyprus company before applying?</dt>
-      <dd>No. Incorporation can follow Innovation Authority approval; we handle set-up and banking coordination.</dd>
-
-      <dt>What if the start-up underperforms?</dt>
-      <dd>Renewal depends on meeting program KPIs. If operations cease, we can assess alternative visa routes.</dd>
-
-      <dt>Is there a pathway to long-term residence?</dt>
-      <dd>Continuous lawful residence may count toward long-term residence eligibility under applicable rules.</dd>
-
-      <dt>Can dependants join?</dt>
-      <dd>Yes, spouse/partner and minor children can generally join on linked routes. We coordinate their packs and appointments.</dd>
-    </dl>
-    <p class="note fade-up" data-anim-delay="140ms">This page is practical guidance. Exact requirements depend on current regulations and your case specifics.</p>
-
-  </section>
-
-  <!-- Contact CTA -->
-  <section id="contact-cta" class="cta-band" style="background:var(--color-primary);color:#fff">
-    <div class="container content-narrow">
-      <h2 class="fade-up" data-anim-delay="0ms">Start Your Cyprus Start-Up Visa Assessment</h2>
-      <p class="fade-up" data-anim-delay="60ms">Email your pitch deck, founder CV(s), and funding summary. We’ll reply with an eligibility memo, a tailored checklist, and a target submission window.</p>
-      <p class="fade-up" data-anim-delay="120ms">
-        <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=Cyprus%20Start-Up%20Visa%20%E2%80%94%20Assessment">Email MegaServe</a>
-      </p>
-      <p class="note fade-up" data-anim-delay="180ms">Fastest turnaround: include passport scans, pitch deck, and proof of funds.</p>
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Cyprus%20Start-Up%20Visa%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="cyprus-startup-visa">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Cyprus%20Start-Up%20Visa" class="btn-secondary" data-cta="book-call" data-page="cyprus-startup-visa">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Visit%20(Nicosia)%20-%20Cyprus%20Start-Up%20Visa" class="btn-secondary" data-cta="book-visit" data-page="cyprus-startup-visa">Book a Visit (Nicosia)</a>
     </div>
-  </section>
 
-</main>
+    <p class="note">Fastest turnaround: include passport scans, pitch deck/summary, funding evidence, and any existing legalisation/translation status.</p>
+  </div>
+</section>
 
 <footer id="site-footer">
-  <div class="container">
-    <div class="footer-flex">
-      <div>
-        <p><strong>MegaServe Cyprus</strong><br> Corporate, Compliance &amp; Migration Services</p>
-      </div>
-      <div>
-        <p><a href="mailto:hello@megaserve.eu">hello@megaserve.eu</a></p>
-      </div>
+  <div class="container footer-flex">
+    <div class="footer-left">
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> MegaServe. All rights reserved.</p>
+    <div class="footer-nav">
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
+
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Cyprus%20Start-Up%20Visa%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="cyprus-startup-visa">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Cyprus%20Start-Up%20Visa" class="btn-secondary" data-cta="sticky-book-call" data-page="cyprus-startup-visa">Book a Call</a>
+</div>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
-<!-- Optional CountUp helper (no-op if no [data-countup] elements) -->
-<script defer>
-  window.addEventListener('DOMContentLoaded', function () {
-    if (!window.CountUp) return;
-    document.querySelectorAll('[data-countup]').forEach(function (el) {
-      var text = el.textContent.trim();
-      var hasPercent = text.endsWith('%');
-      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
-      var opts = { duration: 1.2, separator: ',', suffix: hasPercent ? '%' : '+' };
-      var cu = new CountUp.CountUp(el, endVal, opts);
-      if (!cu.error) cu.start();
-    });
-  });
-</script>
-
-<script src="../../../script.js?v=14" defer></script>
-
-<!-- FAQ JSON-LD -->
+<!-- FAQ Schema for SEO (matches visible FAQs) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -512,31 +517,32 @@
     {
       "@type":"Question",
       "name":"Can I apply as an individual founder?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes. The Start-Up Visa accepts both individual and team applications (commonly up to five members). We confirm current limits at scoping."}
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. The Start-Up Visa can accept individual founders and also small teams. We confirm the current structure and requirements during intake."}
     },
     {
       "@type":"Question",
       "name":"Do I need a Cyprus company before applying?",
-      "acceptedAnswer":{"@type":"Answer","text":"No. Incorporation can follow Innovation Authority approval; we handle set-up and banking coordination."}
+      "acceptedAnswer":{"@type":"Answer","text":"Not always. Incorporation can be sequenced based on the route and authority workflow. We coordinate timing and documentation to avoid rework."}
+    },
+    {
+      "@type":"Question",
+      "name":"Do you provide legal advice?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. We coordinate the process and documentation. Where legal input is required, we coordinate with specialist lawyers. We can also provide our own representatives to accompany clients to appointments where permitted."}
     },
     {
       "@type":"Question",
       "name":"What if the start-up underperforms?",
-      "acceptedAnswer":{"@type":"Answer","text":"Renewal depends on meeting program KPIs. If operations cease, we can assess alternative visa routes."}
-    },
-    {
-      "@type":"Question",
-      "name":"Is there a pathway to long-term residence?",
-      "acceptedAnswer":{"@type":"Answer","text":"Continuous lawful residence may count toward long-term residence eligibility under applicable rules."}
+      "acceptedAnswer":{"@type":"Answer","text":"Renewals depend on the program’s requirements and continued compliance. If the plan changes materially, we can assess alternative residence routes."}
     },
     {
       "@type":"Question",
       "name":"Can dependants join?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes, spouse/partner and minor children can generally join on linked routes. We coordinate their packs and appointments."}
+      "acceptedAnswer":{"@type":"Answer","text":"Often yes, subject to route rules and evidence. We confirm eligibility at scoping and coordinate dependant documentation."}
     }
   ]
 }
 </script>
 
+<script src="/script.js?v=14"></script>
 </body>
 </html>
