@@ -1,71 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Naturalisation — Years of Residence — MegaServe Cyprus</title>
-  <meta name="description" content="End-to-end coordination for naturalisation by years of residence: eligibility scoping, residence history audit, documentation, filing, authority liaison, and oath scheduling in Cyprus.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyprus naturalisation by years of residence: eligibility mapping, residence history audit, document legalisation/translation, application compilation, authority liaison, and oath scheduling through decision." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Global stylesheet -->
-  <link rel="stylesheet" href="../../../style.css?v=14">
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.megaserve.eu/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Naturalisation — Years of Residence — MegaServe Cyprus">
-  <meta property="og:description" content="End-to-end coordination for naturalisation by years of residence: eligibility scoping, residence history audit, documentation, filing, authority liaison, and oath scheduling in Cyprus.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.megaserve.eu/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">
-  <meta property="og:image" content="https://www.megaserve.eu/assets/og/naturalisation-years-residence-og.jpg">
+  <meta property="og:title" content="Naturalisation — Years of Residence — MegaServe Cyprus" />
+  <meta property="og:description" content="Eligibility mapping, residence history audit, documentation, filing, authority liaison, and oath scheduling for Cyprus naturalisation by years of residence." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/naturalisation-years-residence-og.jpg" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Naturalisation — Years of Residence — MegaServe Cyprus">
-  <meta name="twitter:description" content="End-to-end coordination for naturalisation by years of residence: eligibility scoping, residence history audit, documentation, filing, authority liaison, and oath scheduling in Cyprus.">
-  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/naturalisation-years-residence-og.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Naturalisation — Years of Residence — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Eligibility mapping, residence history audit, documentation, filing, authority liaison, and oath scheduling for Cyprus naturalisation by years of residence." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/naturalisation-years-residence-og.jpg" />
 
   <!-- Favicons / theme -->
-  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicons/favicon-16.png">
-  <meta name="theme-color" content="#a00000">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
 
-  <!-- CountUp -->
+  <!-- Global stylesheet (root-level) -->
+  <link rel="stylesheet" href="/style.css?v=14" />
+
+  <!-- CountUp (harmless if blocked; consistent) -->
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
 
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+    .section-spaced{margin-top:2rem}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
+
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
     .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
     .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
     .note{font-size:.95rem;color:#666}
+
     .table-wrap{overflow-x:auto}
     table.service, table.matrix{width:100%;border-collapse:collapse}
-    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.service td,
+    table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th, table.matrix th{background:#fafafa}
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
-    .faq dt{font-weight:700;margin-top:1rem}
-    .faq dd{margin:0 0 1rem 0}
-    .fade-up{opacity:0;transform:translateY(14px)}
-    .fade-up.visible{opacity:1;transform:translateY(0)}
+
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
+
     .submenu-caret{margin-left:.35rem}
 
-    .link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.75rem;margin-top:.5rem}
-    .link-grid a{display:block;border:1px solid #e5e5e5;border-radius:.5rem;padding:.7rem .8rem;background:#fff}
-    .badge{display:inline-block;background:var(--color-gold);color:#000;padding:.1rem .45rem;border-radius:.4rem;font-size:.75rem;margin-left:.4rem}
+    /* Fallback fade-up */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -79,110 +113,106 @@
       display:inline-block;
       box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
-    }
-    #site-header .header-flex{
-      align-items:center;
-    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
   </style>
 </head>
+
 <body class="sticky-cta-pad">
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="../../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="../../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
+
             <li class="has-flyout">
-              <a href="../residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="../residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="../residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
-                <li><a href="../residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="../residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="../residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
-              <a href="../residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="../residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
-                <li><a href="../residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
-              <a href="../visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
-              <a href="naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="naturalisation-years-residence.html" aria-current="page">Naturalisation — Years of Residence</a></li>
-                <li><a href="naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a aria-current="page" href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
+
           </ul>
         </li>
 
         <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
-          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          <ul class="dropdown" aria-label="Tax &amp; VAT Administration Submenu">
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -190,60 +220,103 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
-        <!-- Compliance Services -->
+        <!-- Compliance -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="../../compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="../../compliance-services/client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="../../compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="../../compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="../../compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- About / Contact / CTA -->
-        <li><a href="../../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main-content">
-  <!-- HERO -->
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container">
-      <h1>Naturalisation — Years of Residence</h1>
-      <p class="content-narrow">We verify eligibility, audit your residence history, assemble the application, liaise with the authorities, and coordinate oath scheduling through to citizenship issuance.</p>
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Naturalisation — Years of Residence</h1>
+    <p>We verify eligibility, audit your residence history, assemble the application, liaise with the authorities, and coordinate oath scheduling through to citizenship issuance.</p>
+    <div class="micro-trust">Cyprus-based coordination · <strong>Residence-history audit</strong> · Structured packs and tracking</div>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Naturalisation%20(Years%20of%20Residence)%20-%20Eligibility%20Memo%20Request" class="btn-primary" data-cta="proposal" data-page="naturalisation-years-residence">Request Eligibility Memo</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Naturalisation%20(Years%20of%20Residence)" class="btn-secondary" data-cta="book-call" data-page="naturalisation-years-residence">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="naturalisation-years-residence">Documents Checklist</a>
     </div>
-  </section>
 
-  <!-- OVERVIEW -->
-  <section class="container fade-up" data-anim-delay="0.15" id="overview">
-    <div class="content-narrow">
-      <h2>Overview</h2>
-      <p>Naturalisation by years of residence suits long-term residents who meet the statutory stay and good character conditions. MegaServe de-risks the file by reconciling your entry/exit history, residence permits, and tax/insurance footprints before submission.</p>
-      <ul class="feature-list" aria-label="Key features">
-        <li>Eligibility memo with residence-days reconciliation</li>
-        <li>Document pack: police clearances, language/knowledge proof (where applicable), civil status</li>
-        <li>Application drafting, filing, and query handling</li>
-        <li>Oath scheduling, registry updates, and ID/passport follow-through</li>
-        <li>Secure evidence repository with audit trail</li>
-      </ul>
+    <p class="muted" style="margin-top:.75rem">
+      Note: Where legal input is required, we coordinate with immigration lawyers. Where the venue allows, we can also provide our own representatives to accompany clients to appointments—so you can keep MegaServe as the single point of contact.
+    </p>
+  </div>
+</section>
 
-      <div class="keyline"></div>
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#risk">Risk</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
 
-      <h2>Residence &amp; Evidence Matrix (Guide)</h2>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
+
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>Long-term residents who want a clear eligibility memo and a residence-history audit before filing</li>
+      <li>Applicants with multiple absences, passport changes, or complex residence timelines</li>
+      <li>Families who want structured document packs and predictable follow-ups until decision</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="deliverables">What You Get</h2>
+    <ul class="feature-list">
+      <li>Eligibility memo with a residence-days reconciliation (including risk notes and next steps)</li>
+      <li>Checklist and templates, with translation/legalisation routing where needed</li>
+      <li>Compiled filing pack and submission receipts/reference tracking</li>
+      <li>Authority liaison and a structured log of clarifications</li>
+      <li>Oath/registration step plan and post-approval handover notes</li>
+      <li>Secure, organised archive of evidence (useful for future banking and applications)</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">Process</h2>
+    <ol class="process-steps">
+      <li><strong>Scoping:</strong> confirm route assumptions, household, and target timeline.</li>
+      <li><strong>Residence history audit:</strong> reconcile entry/exit history against permits, passports, and supporting proofs.</li>
+      <li><strong>Evidence build:</strong> police clearances, civil status, residence proofs, and any route-specific certificates.</li>
+      <li><strong>Build &amp; file:</strong> complete forms, assemble the pack, submit, and log reference numbers.</li>
+      <li><strong>Follow-ups:</strong> respond to authority queries and supply additional evidence if requested.</li>
+      <li><strong>Decision &amp; oath:</strong> coordinate post-approval steps and provide a clear handover plan.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>Residence and Evidence Matrix</h3>
       <div class="table-wrap">
-        <table class="matrix" aria-describedby="matrix-note">
+        <table class="matrix" aria-label="Residence and evidence matrix">
           <thead>
             <tr>
               <th scope="col">Factor</th>
@@ -254,275 +327,210 @@
           </thead>
           <tbody>
             <tr>
-              <td>Years of Lawful Stay</td>
-              <td>Minimum continuous/aggregate years as per route</td>
-              <td>Permits/cards, stamps, residence confirmations</td>
-              <td>We reconcile entries/exits vs. permits</td>
+              <td>Lawful stay period</td>
+              <td>Meets the minimum stay requirement for the route</td>
+              <td>Permits/cards, confirmations, stamps</td>
+              <td>We reconcile permits and travel history</td>
             </tr>
             <tr>
               <td>Absences</td>
               <td>Within allowable limits</td>
-              <td>Travel history; airline statements</td>
-              <td>We flag long gaps and mitigate</td>
+              <td>Travel history, tickets/itineraries</td>
+              <td>We flag long gaps early</td>
             </tr>
             <tr>
-              <td>Integration</td>
-              <td>Language &amp; civic knowledge where required</td>
-              <td>Certificates, test results</td>
-              <td>Practice materials and scheduling</td>
+              <td>Good character</td>
+              <td>Clean record</td>
+              <td>Police certificates (Cyprus + home country where applicable)</td>
+              <td>Legalisation/translation may be required</td>
             </tr>
             <tr>
-              <td>Good Character</td>
-              <td>Clean criminal record</td>
-              <td>Police clearances (home &amp; Cyprus)</td>
-              <td>Legalisation/translation if foreign-issued</td>
+              <td>Residence footprint</td>
+              <td>Evidence consistent with continuous residence</td>
+              <td>Leases, utility bills, tax/social insurance proofs</td>
+              <td>Supports continuity where stamps are unclear</td>
             </tr>
             <tr>
-              <td>Financial Footprint</td>
-              <td>Evidence of stable residence</td>
-              <td>Tax/VAT receipts, social insurance, lease</td>
-              <td>Helps corroborate continuity</td>
-            </tr>
-            <tr>
-              <td>Civil Status</td>
-              <td>Consistent identity &amp; family records</td>
+              <td>Civil status</td>
+              <td>Consistent identity and civil records</td>
               <td>Birth/marriage certificates</td>
-              <td>Apostille/legalisation where applicable</td>
+              <td>Apostille/legalisation where required</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p id="matrix-note" class="note">Matrix is indicative; exact thresholds and proofs are confirmed during scoping against current practice.</p>
+      <p class="note">This matrix is indicative; exact requirements are confirmed during intake.</p>
     </div>
-  </section>
 
-  <!-- PROCESS -->
-  <section class="container fade-up" data-anim-delay="0.2" id="process">
-    <div class="content-narrow">
-      <h2>Process</h2>
-      <ol class="process-steps" aria-label="Application process steps">
-        <li>Discovery &amp; scoping — assess route, years of stay, and absences.</li>
-        <li>Residence audit — reconcile entry/exit logs, permits, tax/insurance records.</li>
-        <li>Evidence build — police clearances, civil status, translations/legalisations.</li>
-        <li>Application drafting &amp; filing — forms, declarations, fees, and submission.</li>
-        <li>Authority liaison — respond to queries; schedule interviews/tests if any.</li>
-        <li>Decision &amp; oath — coordinate oath ceremony, registry updates, ID/passport.</li>
-      </ol>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>Example Scenario: Residence Timeline Audit Before Filing (Illustrative)</h3>
+      <p class="muted"><strong>Client:</strong> Long-term resident with multiple trips abroad and multiple passport renewals (illustrative)</p>
+      <p>The client wanted to file for naturalisation by years of residence, but their travel history was spread across multiple passports and included several extended trips abroad. The key risk was filing too early (or with gaps) due to an incorrect residence-days calculation.</p>
+      <p>MegaServe would first reconcile the residence timeline (permits + stamps + supporting residence proofs), flag any problematic gaps, and produce an eligibility memo setting out the earliest clean filing window. Once eligible, we would assemble the full pack (police certificates, civil status, residence evidence, translations/legalisations where needed), submit, and manage follow-ups until decision and oath steps.</p>
+      <p><strong>Outcome goal:</strong> a clean, internally consistent file submitted at the right time, reducing avoidable queries and preventing a wasted filing.</p>
+      <p class="note">This is an illustrative scenario (not a claim about a specific client). It reflects the real workflow and the type of risk this service is designed to remove.</p>
     </div>
-  </section>
 
-  <!-- SERVICE LEVELS -->
-  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
-    <div class="content-narrow">
-      <h2>Service Levels &amp; Typical Timing</h2>
-      <div class="table-wrap">
-        <table class="service" aria-label="Service levels">
-          <thead>
-            <tr>
-              <th scope="col">Level</th>
-              <th scope="col">Includes</th>
-              <th scope="col">Typical Timing*</th>
-              <th scope="col">Best For</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Core</td>
-              <td>Eligibility memo, residence audit, application build &amp; filing</td>
-              <td>4–8 weeks prep; authority timelines vary</td>
-              <td>Applicants with straightforward histories</td>
-            </tr>
-            <tr>
-              <td>Plus</td>
-              <td>Core + translations/legalisations orchestration, test scheduling, gap mitigation</td>
-              <td>6–10 weeks prep; authority timelines vary</td>
-              <td>Applicants with multiple absences or complex histories</td>
-            </tr>
-            <tr>
-              <td>Complete</td>
-              <td>Plus + family member coordination, interview prep, oath &amp; post-issuance support</td>
-              <td>8–12 weeks prep; authority timelines vary</td>
-              <td>Turnkey household support</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">*Preparation depends on document readiness, police clearances, translations/legalisations, and appointment availability. Decision timing is at authority discretion.</p>
+    <div class="keyline"></div>
+
+    <h2 id="requirements">Requirements</h2>
+    <div class="table-wrap">
+      <table class="matrix" aria-label="Naturalisation checklist">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Provided</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>All passports covering the qualifying period</td>
+            <td>Yes / No</td>
+            <td>Include all travel pages</td>
+          </tr>
+          <tr>
+            <td>Residence permits/cards covering the period</td>
+            <td>Yes / No</td>
+            <td>Full sequence preferred</td>
+          </tr>
+          <tr>
+            <td>Travel history summary</td>
+            <td>Yes / No</td>
+            <td>Stamps/itineraries; airline statements if needed</td>
+          </tr>
+          <tr>
+            <td>Police certificates</td>
+            <td>Yes / No</td>
+            <td>Cyprus + any required foreign police certificates</td>
+          </tr>
+          <tr>
+            <td>Residence footprint proofs</td>
+            <td>Yes / No</td>
+            <td>Leases/utilities/tax or social insurance proofs (as applicable)</td>
+          </tr>
+          <tr>
+            <td>Civil status documents</td>
+            <td>Yes / No</td>
+            <td>Birth/marriage; legalisation/translation if required</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
+    <p class="note">We confirm translation/legalisation needs case-by-case before submission.</p>
 
-  <!-- DELIVERABLES -->
-  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
-    <div class="content-narrow">
-      <h2>Deliverables</h2>
-      <ul class="feature-list">
-        <li>Eligibility memo with residence-days calculation</li>
-        <li>Custom checklist &amp; templates</li>
-        <li>Completed application pack and submission receipts</li>
-        <li>Authority correspondence log and status updates</li>
-        <li>Oath coordination pack and post-approval steps</li>
-        <li>Audit-ready repository with version control</li>
-      </ul>
+    <div class="keyline"></div>
+
+    <h2 id="risk">Risk &amp; Mitigations</h2>
+    <ul class="feature-list">
+      <li><strong>Filing too early:</strong> we reconcile residence days and set the earliest clean filing window.</li>
+      <li><strong>Absence gaps:</strong> we flag gaps and propose the cleanest path (timing or supporting evidence).</li>
+      <li><strong>Document quality:</strong> we route legalisation/translation correctly to avoid rework and rejection.</li>
+      <li><strong>Authority timing:</strong> decision timing is controlled externally; we keep status clear and track queries to closure.</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>How are qualifying years calculated?</summary>
+        <p>We reconcile lawful stay and absences against permits and travel history, applying the current thresholds for the chosen route.</p>
+      </details>
+
+      <details>
+        <summary>What if I have long absences?</summary>
+        <p>We assess against allowable limits and, if necessary, propose mitigation such as waiting periods or alternative supporting evidence.</p>
+      </details>
+
+      <details>
+        <summary>Do you work with lawyers and accompany clients?</summary>
+        <p>Yes. We coordinate with immigration lawyers where legal input is required, and we can also provide our own representatives to accompany clients to appointments where permitted—so the client can keep MegaServe as the single point of contact.</p>
+      </details>
+
+      <details>
+        <summary>Do you handle translations and legalisations?</summary>
+        <p>Yes — certified translations and legalisations are coordinated and tracked in the evidence log.</p>
+      </details>
+
+      <details>
+        <summary>How long do decisions take?</summary>
+        <p>Timelines depend on office load and dossier completeness. We provide realistic expectations during intake and track the file through to decision.</p>
+      </details>
     </div>
-  </section>
 
-  <!-- CHECKLIST -->
-  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
-    <div class="content-narrow">
-      <h2>Applicant Checklist</h2>
-      <div class="table-wrap">
-        <table class="matrix" aria-label="Checklist table">
-          <thead>
-            <tr>
-              <th scope="col">Item</th>
-              <th scope="col">Owner</th>
-              <th scope="col">Provided</th>
-              <th scope="col">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Passports (current &amp; expired used in period)</td>
-              <td>Applicant</td>
-              <td>Yes / No</td>
-              <td>All travel pages included</td>
-            </tr>
-            <tr>
-              <td>Residence permits/cards</td>
-              <td>Applicant</td>
-              <td>Yes / No</td>
-              <td>Full series covering the qualifying years</td>
-            </tr>
-            <tr>
-              <td>Entry/exit history</td>
-              <td>Applicant / MegaServe</td>
-              <td>Yes / No</td>
-              <td>Border logs; airline statements where needed</td>
-            </tr>
-            <tr>
-              <td>Police clearances</td>
-              <td>Applicant</td>
-              <td>Yes / No</td>
-              <td>Home country &amp; Cyprus; legalised/translated</td>
-            </tr>
-            <tr>
-              <td>Tax/social insurance proofs</td>
-              <td>Applicant</td>
-              <td>Yes / No</td>
-              <td>Helps demonstrate continuity</td>
-            </tr>
-            <tr>
-              <td>Civil status documents</td>
-              <td>Applicant</td>
-              <td>Yes / No</td>
-              <td>Birth/marriage; apostille/legalisation</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html">Naturalisation &amp; Citizenship Services (Hub)</a> ·
+      <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a>
+    </p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
+    <h2>Start Your Naturalisation File</h2>
+    <p class="contact-intro">Email your residence timeline and travel history. We’ll reply with an eligibility memo, checklist, and the cleanest filing window.</p>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Naturalisation%20(Years%20of%20Residence)%20-%20Eligibility%20Memo%20Request" class="btn-primary" data-cta="proposal" data-page="naturalisation-years-residence">Request Eligibility Memo</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Naturalisation%20(Years%20of%20Residence)" class="btn-secondary" data-cta="book-call" data-page="naturalisation-years-residence">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Naturalisation%20(Years%20of%20Residence)%20-%20Documents" class="btn-secondary" data-cta="book-visit" data-page="naturalisation-years-residence">Email Documents</a>
     </div>
-  </section>
 
-  <!-- CONTROLS / QUALITY -->
-  <section class="container fade-up" data-anim-delay="0.4" id="controls">
-    <div class="content-narrow">
-      <h2>Controls &amp; Quality</h2>
-      <ul class="feature-list" aria-label="Controls list">
-        <li>Two-person review of residence-day calculations</li>
-        <li>Version-controlled evidence and immutable archive</li>
-        <li>Tracked authority queries with response SLAs</li>
-        <li>Data minimisation and encrypted document transfers</li>
-      </ul>
-    </div>
-  </section>
+    <p class="note">Fastest turnaround: include scans of all passports, all residence permits/cards, a travel history summary, and current police certificate status.</p>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="container fade-up" data-anim-delay="0.45" id="about">
-    <div class="content-narrow">
-      <h2>About MegaServe</h2>
-      <p>MegaServe integrates corporate, mobility, and compliance services. Our naturalisation desk focuses on residence-day accuracy and robust documentation so decisions proceed without avoidable delays.</p>
-      <ul class="feature-list">
-        <li>Dedicated coordinator and clear milestones</li>
-        <li>Templates aligned to current authority practice</li>
-        <li>Proactive reporting and timeline management</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="container fade-up" data-anim-delay="0.5" id="faq">
-    <div class="content-narrow">
-      <h2>FAQ</h2>
-      <dl class="faq">
-        <dt>How are qualifying years calculated?</dt>
-        <dd>We reconcile your lawful stay and absences against permits and border data, applying the current thresholds for the chosen route.</dd>
-
-        <dt>What happens if I have long absences?</dt>
-        <dd>We assess against allowable limits and, if necessary, propose mitigation such as waiting periods or alternative evidence.</dd>
-
-        <dt>Do I need police clearances from multiple countries?</dt>
-        <dd>Typically from your home country and Cyprus for the relevant period. Foreign-issued documents often require legalisation and translation.</dd>
-
-        <dt>Is a language or civic test required?</dt>
-        <dd>Where applicable, we provide practice resources and schedule the exam, including re-test planning if needed.</dd>
-
-        <dt>How long does the process take?</dt>
-        <dd>Preparation is usually 4–12 weeks depending on audits and clearances; authority decision times vary and are outside our control.</dd>
-      </dl>
-      <p class="note">This page provides practical guidance. Exact requirements depend on current regulations and your specific case.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT CTA -->
-  <section id="contact-cta" class="cta-band fade-up" data-anim-delay="0.55" style="background:var(--color-primary);color:#fff">
-    <div class="container content-narrow">
-      <h2>Start Your Naturalisation File</h2>
-      <p>Email your years of residence, known absences, and permit history. We’ll reply with an eligibility memo, a tailored checklist, and a target filing window.</p>
-      <p>
-        <a class="btn-primary" href="mailto:hello@megaserve.eu?subject=Naturalisation%20by%20Years%20of%20Residence%20%E2%80%94%20File%20Coordination">Email MegaServe</a>
-      </p>
-      <p class="note">Fastest turnaround: include scans of all passports, permits, and any travel history printouts.</p>
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
       <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
-      <a href="../../../index.html#services">Services</a>
-      <a href="../../../about.html">About</a>
-      <a href="../../../index.html#contact-cta">Contact</a>
-      <a href="../../../privacy.html">Privacy Policy</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- Year + CountUp helper -->
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Naturalisation%20(Years%20of%20Residence)%20-%20Eligibility%20Memo%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="naturalisation-years-residence">Request Eligibility Memo</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Naturalisation%20(Years%20of%20Residence)" class="btn-secondary" data-cta="sticky-book-call" data-page="naturalisation-years-residence">Book a Call</a>
+</div>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
   window.addEventListener('DOMContentLoaded', function () {
     if (!window.CountUp) return;
     document.querySelectorAll('[data-countup]').forEach(function (el) {
-      var text = el.textContent.trim();
+      var text = (el.textContent || '').trim();
       var hasPercent = text.endsWith('%');
       var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
-      var opts = { duration: 1.2, separator: ',', suffix: hasPercent ? '%' : '+' };
+
+      var suffix = '';
+      if (hasPercent) suffix = '%';
+      else if (text.endsWith('+')) suffix = '+';
+
+      var opts = { duration: 1.2, separator: ',', suffix: suffix };
       var cu = new CountUp.CountUp(el, endVal, opts);
       if (!cu.error) cu.start();
     });
   });
 </script>
 
-<script src="../../../script.js?v=14" defer></script>
-
-<!-- FAQ JSON-LD -->
+<!-- FAQ Schema for SEO (matches visible FAQs) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -531,45 +539,32 @@
     {
       "@type":"Question",
       "name":"How are qualifying years calculated?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"We reconcile your lawful stay and absences against permits and border data, applying the current thresholds for the chosen route."
-      }
+      "acceptedAnswer":{"@type":"Answer","text":"We reconcile lawful stay and absences against permits and travel history, applying the current thresholds for the chosen route."}
     },
     {
       "@type":"Question",
-      "name":"What happens if I have long absences?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"We assess against allowable limits and, if necessary, propose mitigation such as waiting periods or alternative evidence."
-      }
+      "name":"What if I have long absences?",
+      "acceptedAnswer":{"@type":"Answer","text":"We assess against allowable limits and, if necessary, propose mitigation such as waiting periods or alternative supporting evidence."}
     },
     {
       "@type":"Question",
-      "name":"Do I need police clearances from multiple countries?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Typically from your home country and Cyprus for the relevant period. Foreign-issued documents often require legalisation and translation."
-      }
+      "name":"Do you work with lawyers and accompany clients?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. We coordinate with immigration lawyers where legal input is required, and we can also provide our own representatives to accompany clients to appointments where permitted—so the client can keep MegaServe as the single point of contact."}
     },
     {
       "@type":"Question",
-      "name":"Is a language or civic test required?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Where applicable, we provide practice resources and schedule the exam, including re-test planning if needed."
-      }
+      "name":"Do you handle translations and legalisations?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes — certified translations and legalisations are coordinated and tracked in the evidence log."}
     },
     {
       "@type":"Question",
-      "name":"How long does the process take?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Preparation is usually 4–12 weeks depending on audits and clearances; authority decision times vary and are outside our control."
-      }
+      "name":"How long do decisions take?",
+      "acceptedAnswer":{"@type":"Answer","text":"Timelines depend on office load and dossier completeness. We provide realistic expectations during intake and track the file through to decision."}
     }
   ]
 }
 </script>
+
+<script src="/script.js?v=14"></script>
 </body>
 </html>
