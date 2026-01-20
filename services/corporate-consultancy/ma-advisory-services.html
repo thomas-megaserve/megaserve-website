@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Mergers &amp; Acquisitions (M&amp;A) Advisory Services — MegaServe Cyprus</title>
-  <meta name="description" content="Cyprus-based M&A advisory for buy-side and sell-side: target mapping, indicative valuation, VDR and Q&A coordination, SPA/APA coordination with counsel, closing mechanics, and day-1 integration for cross-border deals." />
+  <meta name="description" content="Cyprus-based M&amp;A advisory for buy-side and sell-side: target mapping, indicative valuation, VDR/Q&amp;A PMO, SPA/APA coordination with counsel, closing mechanics, and day-1 integration for cross-border deals." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Performance -->
@@ -18,7 +18,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Mergers &amp; Acquisitions (M&amp;A) Advisory Services — MegaServe Cyprus" />
-  <meta property="og:description" content="Buy-side and sell-side support from mandate to post-close: market mapping, indicative valuation, diligence coordination, SPA/APA coordination with counsel, and closing mechanics." />
+  <meta property="og:description" content="Cyprus-based M&amp;A advisory for buy-side and sell-side: target mapping, indicative valuation, VDR/Q&amp;A PMO, SPA/APA coordination with counsel, closing mechanics, and day-1 integration for cross-border deals." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.megaserve.eu/services/corporate-consultancy/ma-advisory-services" />
   <meta property="og:image" content="https://www.megaserve.eu/assets/og/ma-advisory-og.jpg" />
@@ -26,7 +26,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mergers &amp; Acquisitions (M&amp;A) Advisory Services — MegaServe Cyprus" />
-  <meta name="twitter:description" content="Buy-side and sell-side support: scope, valuation note, diligence coordination, issues list, closing mechanics, and post-close handover." />
+  <meta name="twitter:description" content="Buy-side and sell-side M&amp;A execution support: diligence PMO, VDR/Q&amp;A, SPA/APA coordination, closing mechanics, and integration planning." />
   <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/ma-advisory-og.jpg" />
 
   <!-- Favicons / theme -->
@@ -34,7 +34,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
   <meta name="theme-color" content="#a00000" />
 
-  <!-- Global stylesheet -->
+  <!-- Global stylesheet (root-level) -->
   <link rel="stylesheet" href="/style.css?v=14" />
 
   <!-- CountUp (harmless if blocked; consistent) -->
@@ -75,15 +75,15 @@
     .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
     .case-study h3{margin:.25rem 0 .5rem}
 
-    /* FAQs like Company Formation (details/summary) */
-    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
-    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+    .submenu-caret{margin-left:.35rem}
 
     /* Fallback fade-up */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
 
-    .submenu-caret{margin-left:.35rem}
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
 
     /* Bottom CTA contrast + centering */
     #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
@@ -93,7 +93,13 @@
     #contact-cta { text-align: center; }
     #contact-cta .container { max-width: 900px; margin: 0 auto; }
     #contact-cta .cta-row { justify-content: center; align-items: center; }
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
 
     /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
@@ -152,7 +158,7 @@
         <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
 
             <li class="has-flyout">
               <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
@@ -193,7 +199,7 @@
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
                 <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of a Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
 
@@ -203,7 +209,7 @@
         <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
-          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
+          <ul class="dropdown" aria-label="Tax &amp; VAT Administration Submenu">
             <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
             <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
             <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
@@ -243,19 +249,15 @@
 <!-- HERO (canonical: micro-trust + CTA buttons) -->
 <section class="page-hero fade-up" data-anim-delay="0.1">
   <div class="container content-narrow">
-    <h1>M&amp;A Advisory Services</h1>
-    <p>Buy-side and sell-side support from mandate to post-close: market mapping, valuation note, diligence coordination, document control with counsel, and closing mechanics.</p>
-    <div class="micro-trust">Cyprus-based coordination · <strong>Document-first execution</strong> · Clean closing files</div>
+    <h1>Mergers &amp; Acquisitions (M&amp;A) Advisory Services</h1>
+    <p>Buy-side and sell-side support from mandate to post-close: market mapping, indicative valuation, diligence PMO, SPA/APA coordination with counsel, and Cyprus-based execution for cross-border transactions.</p>
+    <div class="micro-trust">Cyprus-based coordination · <strong>Document control</strong> · Clean execution from diligence to closing</div>
 
     <div class="cta-row">
-      <a href="mailto:megaserve@megaserve.eu?subject=M%26A%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="ma-advisory">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=M%26A%20Advisory%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="ma-advisory">Request Proposal</a>
       <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20M%26A%20Advisory" class="btn-secondary" data-cta="book-call" data-page="ma-advisory">Book a Call</a>
-      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="ma-advisory">Onboarding Checklist</a>
+      <a href="#checklist" class="btn-secondary" data-cta="jump-checklist" data-page="ma-advisory">Onboarding Checklist</a>
     </div>
-
-    <p class="muted" style="margin-top:.75rem">
-      Note: We coordinate execution and documentation. Legal drafting remains with your counsel; we work alongside them to keep the process controlled and practical.
-    </p>
   </div>
 </section>
 
@@ -266,8 +268,8 @@
     <a href="#deliverables">What you get</a>
     <a href="#process">Process</a>
     <a href="#case-study">Case study</a>
-    <a href="#requirements">Requirements</a>
-    <a href="#risk">Risk</a>
+    <a href="#checklist">Checklist</a>
+    <a href="#controls">Controls</a>
     <a href="#faqs">FAQs</a>
     <a href="#contact-cta">Start</a>
   </div>
@@ -278,78 +280,50 @@
 
     <h2 id="who">Who It’s For</h2>
     <ul class="feature-list">
-      <li>Buyers who need disciplined diligence coordination, a clean issues list, and controlled closing mechanics</li>
-      <li>Sellers who want structured information flow (data room, Q&amp;A, version control) and fewer surprises late in the deal</li>
-      <li>Cross-border deals involving Cyprus entities, Cyprus assets, or Cyprus-based operations that need local coordination</li>
+      <li>Owner-managed businesses preparing for a sale or partial exit</li>
+      <li>Buyers acquiring assets or operations in Cyprus, including lease assignments</li>
+      <li>Groups needing disciplined VDR/Q&amp;A control and adviser coordination</li>
     </ul>
 
     <div class="keyline"></div>
 
     <h2 id="deliverables">What You Get (Deliverables)</h2>
     <ul class="feature-list">
-      <li>Mandate brief and critical path workplan</li>
-      <li>Information pack support (teaser/summary materials) and version control</li>
-      <li>Data room structure, indexing, permissions, and Q&amp;A tracking</li>
-      <li>Issues list and decision log for term sheet and SPA/APA negotiations (with your counsel)</li>
-      <li>Signing/closing checklists, settlement steps, and a closing binder</li>
-      <li>Post-close day-1 handover notes and first-90-days action list (where required)</li>
+      <li>Mandate brief &amp; critical path workplan</li>
+      <li>VDR build, permissions register, and Q&amp;A tracker</li>
+      <li>Issues list and decision log across workstreams</li>
+      <li>Closing checklist, filings tracker, and closing binder pack</li>
+      <li>Post-close day-1 and first-90-days integration plan (where requested)</li>
     </ul>
 
     <div class="keyline"></div>
 
     <h2 id="process">Process &amp; Typical Timeline</h2>
     <ol class="process-steps">
-      <li><strong>Scope &amp; readiness:</strong> define objectives, deal perimeter, roles, and document discipline.</li>
-      <li><strong>Information &amp; valuation note:</strong> collate management inputs and prepare an indicative valuation note (where requested).</li>
-      <li><strong>Diligence coordination:</strong> stand up data room and Q&amp;A tracker; coordinate workstreams with advisors.</li>
-      <li><strong>Docs &amp; approvals:</strong> maintain issues list and approvals gates alongside counsel’s drafting.</li>
-      <li><strong>Closing &amp; handover:</strong> run signing/closing checklists; compile closing binder; day-1 handover.</li>
+      <li><strong>Scope &amp; Readiness:</strong> objectives, constraints, deal perimeter, and data hygiene.</li>
+      <li><strong>Market &amp; Valuation:</strong> mapping, outreach tracking, indicative valuation notes.</li>
+      <li><strong>Diligence PMO:</strong> VDR + Q&amp;A workflow; adviser coordination; weekly status.</li>
+      <li><strong>Docs &amp; Approvals:</strong> issues list management with counsel; CPs and approvals.</li>
+      <li><strong>Closing:</strong> signing/closing checklist, filings, settlements, closing binder.</li>
+      <li><strong>Integration:</strong> day-1 controls, comms, access, and first-90-days actions.</li>
     </ol>
-
-    <div class="section-spaced">
-      <h3>Scope Matrix</h3>
-      <div class="table-wrap">
-        <table class="matrix" aria-label="Scope matrix">
-          <thead>
-            <tr>
-              <th>Activity</th>
-              <th>Buy-Side</th>
-              <th>Sell-Side</th>
-              <th>Primary Owner</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Mandate &amp; Critical Path</td><td>Lead</td><td>Lead</td><td>Client + MegaServe</td></tr>
-            <tr><td>Target/Bidder Mapping &amp; Outreach</td><td>Lead</td><td>Support</td><td>MegaServe</td></tr>
-            <tr><td>Indicative Valuation Note</td><td>Lead</td><td>Support</td><td>MegaServe (with finance advisor)</td></tr>
-            <tr><td>Information Pack Preparation</td><td>Support</td><td>Lead</td><td>Client + MegaServe</td></tr>
-            <tr><td>Data Room &amp; Q&amp;A Workflow</td><td>Lead</td><td>Lead</td><td>MegaServe</td></tr>
-            <tr><td>SPA/APA Redlines</td><td>Support</td><td>Support</td><td>External Counsel</td></tr>
-            <tr><td>Closing Mechanics &amp; Funds Flow</td><td>Lead</td><td>Lead</td><td>MegaServe + Counsel</td></tr>
-            <tr><td>Day-1 / Post-Close Integration</td><td>Lead</td><td>Lead</td><td>Client + MegaServe</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">We coordinate execution and document control. Counsel drafts legal instruments and specialist advisors author technical reports.</p>
-    </div>
 
     <div class="keyline"></div>
 
     <h2 id="case-study">Case Study</h2>
     <div class="case-study">
-      <h3>Asset Purchase with Lease Assignment and Day-1 Continuity (Anonymised)</h3>
-      <p class="muted"><strong>Client:</strong> International buyer acquiring operational assets and taking over premises via lease/assignment (anonymised)</p>
-      <p>The client was purchasing operational assets from a Cyprus-based business and needed the transaction to include the premises. The critical path was not only the asset list — it was getting the lease position clean, with the right landlord paperwork and a clear handover so operations could continue without disruption.</p>
-      <p>MegaServe coordinated the documentation pack and checklists around the asset schedule and the property side: lease documents, landlord requirements, consents/approvals, and the supporting evidence that needed to match the buyer’s onboarding and governance records.</p>
-      <p>We worked alongside legal counsel and the client’s advisors to keep the process practical: tracking open points, making sure the right documents were signed in the right order, and ensuring the handover file was complete for the buyer’s records and for any bank or auditor follow-up.</p>
-      <p><strong>Result:</strong> the asset transfer and lease handover were executed cleanly, with continuity at the premises and a complete closing file for future compliance and banking queries.</p>
+      <h3>Asset Purchase with Property Lease Assignment (Anonymised)</h3>
+      <p class="muted"><strong>Transaction:</strong> Asset purchase (non-share deal) with lease assignment for operating premises</p>
+      <p>The buyer acquired a set of operating assets and ongoing contracts, while needing continuity of the business location through a lease assignment and landlord consent. The transaction required tight sequencing across diligence, documentation, and completion steps so that operations could transition without disruption.</p>
+      <p>MegaServe coordinated the diligence workflow and VDR/Q&amp;A process, maintained an issues list across workstreams, and supported completion mechanics including the lease assignment steps and closing checklist. Documentation was kept controlled and indexed for a clean closing binder and post-close handover.</p>
+      <p><strong>Result:</strong> asset transfer and lease transition completed with controlled documentation and a clear handover pack.</p>
     </div>
 
     <div class="keyline"></div>
 
-    <h2 id="requirements">Requirements (Onboarding Checklist)</h2>
+    <h2 id="checklist">Onboarding Checklist</h2>
     <div class="table-wrap">
-      <table class="matrix" aria-label="M&A onboarding checklist">
+      <table class="matrix" aria-label="Onboarding checklist">
         <thead>
           <tr>
             <th>Corporate</th>
@@ -360,59 +334,68 @@
         <tbody>
           <tr>
             <td>Certificate set, articles, group chart, cap table</td>
-            <td>Last 2–3 years FS + YTD management pack, trial balance</td>
-            <td>Top customers/suppliers list &amp; key contracts</td>
+            <td>Last 3 years FS + YTD, trial balance, debt schedule</td>
+            <td>Top customer/supplier list &amp; contracts</td>
           </tr>
           <tr>
-            <td>Shareholder/beneficial owner registers, option plans (if any)</td>
-            <td>Debt schedule, cash, working capital profile</td>
-            <td>Key IP list, licences, renewals</td>
+            <td>Shareholders/BO registers, option plans</td>
+            <td>Cash flow &amp; working capital profile</td>
+            <td>Key IP list, licenses, and renewals</td>
           </tr>
           <tr>
             <td>Board minutes/resolutions (material items)</td>
-            <td>Tax/VAT filings status (summary)</td>
+            <td>Tax filings &amp; rulings (if any)</td>
             <td>Employment roster &amp; templates; open disputes</td>
           </tr>
           <tr>
-            <td>Bank/KYC contacts and account list</td>
-            <td>Budget/forecast (if available)</td>
+            <td>Bank/KYC contacts and account lists</td>
+            <td>Budget/forecast (12–24m) if available</td>
             <td>Litigation/claims log and insurance certificates</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="note">Sensitive data should be shared only via the data room once established. We set the index and permissions at kickoff.</p>
+    <p class="note">Sensitive data should be shared only via a VDR once established. We provide a structured index and access control model at kickoff.</p>
 
     <div class="keyline"></div>
 
-    <h2 id="risk">Risk &amp; Mitigations</h2>
+    <h2 id="controls">Controls &amp; Quality</h2>
     <ul class="feature-list">
-      <li><strong>Confidentiality leakage:</strong> we use structured access control and a single source of truth for documents and Q&amp;A.</li>
-      <li><strong>Version chaos:</strong> strict naming and approval gates prevent “draft drift” and contradictory attachments.</li>
-      <li><strong>Late closing delays:</strong> conditions precedent and sign-off dependencies are tracked early, not in the last week.</li>
-      <li><strong>Third-party responsiveness:</strong> we keep an owner-based tracker and escalate when blockers appear.</li>
+      <li>Dual control on critical filings, funds flow, and signature packets</li>
+      <li>Assumptions &amp; decision logs maintained for auditability</li>
+      <li>Role-based access in VDR with access logs</li>
+      <li>Redline discipline: version naming and approval gates</li>
+      <li>Weekly status with risks, owners, and due dates</li>
     </ul>
 
     <div class="keyline"></div>
 
     <h2 id="faqs">FAQs</h2>
-    <p class="note" role="note">Information here is general and not legal, tax, or investment advice. We coordinate with licensed professionals where required.</p>
+    <p class="note" role="note">Informational only — not legal, tax, or investment advice. Legal instruments are drafted by licensed counsel.</p>
     <div class="faq">
       <details>
         <summary>Do you replace legal counsel or investment banks?</summary>
-        <p>No. We coordinate execution and documentation. Counsel drafts legal instruments (term sheet, SPA/APA). Any regulated investment services are handled by licensed firms.</p>
+        <p>No. We act as an execution and coordination function (PMO). Counsel drafts legal instruments (term sheet, SPA/APA). Any regulated investment services are handled by licensed firms.</p>
       </details>
+
       <details>
-        <summary>What deal sizes do you support?</summary>
-        <p>Most commonly SME and mid-market transactions. The correct scope depends on complexity, number of stakeholders, and timeline.</p>
+        <summary>Do you support asset purchases as well as share deals?</summary>
+        <p>Yes. We coordinate both, including asset schedules, assumed liabilities tracking, and practical items like lease assignment and handover sequencing.</p>
       </details>
+
       <details>
         <summary>How do you protect confidentiality and data?</summary>
-        <p>Mutual NDAs, a segregated data room with role-based permissions, access logs, and controlled Q&amp;A. Sensitive documents are not shared by email.</p>
+        <p>Mutual NDAs, segregated VDR with role-based permissions and access logs, and structured Q&amp;A. Sensitive documents are shared only via the VDR.</p>
       </details>
+
+      <details>
+        <summary>What is a typical timeline?</summary>
+        <p>Indicative: 8–16 weeks from mandate to signing, plus 2–6 weeks to close depending on approvals and conditions precedent. Actual timing depends on diligence complexity and third-party responsiveness.</p>
+      </details>
+
       <details>
         <summary>How are fees structured?</summary>
-        <p>Fixed-fee modules or monthly retainer for coordination, with optional success components via separate agreement. Disbursements (filings, notarisation, translations) are billed at cost.</p>
+        <p>Fixed-fee modules or monthly retainer for PMO, with optional success components via separate agreement. Disbursements (filings, notarisation, translations) are billed at cost.</p>
       </details>
     </div>
 
@@ -422,13 +405,15 @@
 <section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff" aria-label="Contact call to action">
   <div class="container content-narrow">
     <h2>Kick Off Your M&amp;A Mandate</h2>
-    <p class="contact-intro">Set up a short scoping call and we’ll propose a workplan and first deliverables.</p>
+    <p class="contact-intro">Email your objective (buy/sell/asset purchase), timing, and what is being acquired. We’ll respond with a workplan and first deliverables.</p>
+
     <div class="cta-row">
-      <a href="mailto:megaserve@megaserve.eu?subject=M%26A%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="ma-advisory">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=M%26A%20Advisory%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="ma-advisory">Request Proposal</a>
       <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20M%26A%20Advisory" class="btn-secondary" data-cta="book-call" data-page="ma-advisory">Book a Call</a>
-      <a href="mailto:megaserve@megaserve.eu?subject=Send%20Documents%20-%20M%26A%20Kickoff" class="btn-secondary" data-cta="book-visit" data-page="ma-advisory">Email Documents</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=M%26A%20Kickoff%20-%20Documents" class="btn-secondary" data-cta="book-visit" data-page="ma-advisory">Email Documents</a>
     </div>
-    <p class="note">For fastest turnaround, email: objective (buy/sell/asset purchase), entity structure, latest management pack (or FS), key contracts/leases, and your advisor contacts.</p>
+
+    <p class="note">For fastest turnaround, include: objective, target timing, what’s being acquired (assets vs shares), premises/lease status, and adviser contacts.</p>
   </div>
 </section>
 
@@ -451,7 +436,7 @@
 
 <!-- Mobile sticky CTA (canonical) -->
 <div id="sticky-cta" aria-label="Quick contact">
-  <a href="mailto:megaserve@megaserve.eu?subject=M%26A%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="ma-advisory">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=M%26A%20Advisory%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="ma-advisory">Request Proposal</a>
   <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20M%26A%20Advisory" class="btn-secondary" data-cta="sticky-book-call" data-page="ma-advisory">Book a Call</a>
 </div>
 
@@ -468,22 +453,27 @@
     {
       "@type":"Question",
       "name":"Do you replace legal counsel or investment banks?",
-      "acceptedAnswer":{"@type":"Answer","text":"No. We coordinate execution and documentation. Counsel drafts legal instruments (term sheet, SPA/APA). Any regulated investment services are handled by licensed firms."}
+      "acceptedAnswer":{"@type":"Answer","text":"No. We act as an execution and coordination function (PMO). Counsel drafts legal instruments (term sheet, SPA/APA). Any regulated investment services are handled by licensed firms."}
     },
     {
       "@type":"Question",
-      "name":"What deal sizes do you support?",
-      "acceptedAnswer":{"@type":"Answer","text":"Most commonly SME and mid-market transactions. The correct scope depends on complexity, number of stakeholders, and timeline."}
+      "name":"Do you support asset purchases as well as share deals?",
+      "acceptedAnswer":{"@type":"Answer","text":"Yes. We coordinate both, including asset schedules, assumed liabilities tracking, and practical items like lease assignment and handover sequencing."}
     },
     {
       "@type":"Question",
       "name":"How do you protect confidentiality and data?",
-      "acceptedAnswer":{"@type":"Answer","text":"Mutual NDAs, a segregated data room with role-based permissions, access logs, and controlled Q&A. Sensitive documents are not shared by email."}
+      "acceptedAnswer":{"@type":"Answer","text":"Mutual NDAs, segregated VDR with role-based permissions and access logs, and structured Q&A. Sensitive documents are shared only via the VDR."}
+    },
+    {
+      "@type":"Question",
+      "name":"What is a typical timeline?",
+      "acceptedAnswer":{"@type":"Answer","text":"Indicative: 8–16 weeks from mandate to signing, plus 2–6 weeks to close depending on approvals and conditions precedent. Actual timing depends on diligence complexity and third-party responsiveness."}
     },
     {
       "@type":"Question",
       "name":"How are fees structured?",
-      "acceptedAnswer":{"@type":"Answer","text":"Fixed-fee modules or monthly retainer for coordination, with optional success components via separate agreement. Disbursements (filings, notarisation, translations) are billed at cost."}
+      "acceptedAnswer":{"@type":"Answer","text":"Fixed-fee modules or monthly retainer for PMO, with optional success components via separate agreement. Disbursements (filings, notarisation, translations) are billed at cost."}
     }
   ]
 }
