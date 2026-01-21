@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Anti-Money Laundering (AML) Procedures & Manuals — MegaServe Cyprus</title>
-  <meta name="description" content="Practical AML frameworks and manuals: business-wide ML/TF risk assessment, CDD/EDD procedures, screening linkages, SAR/STR playbooks, training with attestations, and audit-ready records aligned to your policy and jurisdictions.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Anti-Money Laundering (AML) Procedures &amp; Manuals — MegaServe Cyprus</title>
+  <meta name="description" content="Practical AML frameworks and manuals: business-wide ML/TF risk assessment, CDD/EDD procedures, screening linkages, SAR/STR playbooks, training with attestations, and audit-ready records aligned to your policy and jurisdictions." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- GLOBAL CSS (note the ../../ because this file is in /services/compliance-services/) -->
-  <link rel="stylesheet" href="../../style.css?v=13">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/compliance-services/aml-procedures-manuals" />
 
-  <!-- Page-local helpers (kept consistent with other pages) -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Anti-Money Laundering (AML) Procedures &amp; Manuals — MegaServe Cyprus" />
+  <meta property="og:description" content="Practical AML frameworks and manuals: ML/TF risk assessment, CDD/EDD procedures, screening linkages, SAR/STR playbooks, training with attestations, and audit-ready records." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/compliance-services/aml-procedures-manuals" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/aml-procedures-manuals-og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Anti-Money Laundering (AML) Procedures &amp; Manuals — MegaServe Cyprus" />
+  <meta name="twitter:description" content="AML frameworks and manuals with risk assessment, procedures, SAR playbooks, training logs, and audit-ready records." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/aml-procedures-manuals-og.jpg" />
+
+  <!-- Favicons / theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
+
+  <!-- Global stylesheet (root-level) -->
+  <link rel="stylesheet" href="/style.css?v=14" />
+
+  <!-- CountUp (harmless if blocked; consistent) -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
+
   <style>
-    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold)}
-    .page-hero .container{padding:2.5rem 0 1.5rem;text-align:center;}
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
+
     .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+    .section-spaced{margin-top:2rem}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
 
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
 
-    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
 
@@ -32,23 +67,41 @@
 
     .table-wrap{overflow-x:auto}
     table.service, table.matrix{width:100%;border-collapse:collapse}
-    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.service td,
+    table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th, table.matrix th{background:#fafafa}
 
-    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
-    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
 
-    .faq dt{font-weight:700;margin-top:1rem}
-    .faq dd{margin:0 0 1rem 0}
+    .submenu-caret{margin-left:.35rem}
 
+    /* Fallback fade-up */
     .fade-up{opacity:0; transform: translateY(14px);}
     .fade-up.visible{opacity:1; transform: translateY(0);}
 
-    /* caret used in flyout submenus to match other pages */
-    .submenu-caret{margin-left:.35rem}
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
 
-    /* High-contrast Start Now button in header */
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+
+    /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
       background:#c1121f;
       color:#fff !important;
@@ -60,108 +113,106 @@
       display:inline-block;
       box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
-    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
   </style>
 </head>
-<body>
 
-<!-- HEADER -->
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <!-- Hamburger Button for Mobile -->
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of a Cypriot</a></li>
               </ul>
             </li>
+
           </ul>
         </li>
 
         <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
-          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          <ul class="dropdown" aria-label="Tax &amp; VAT Administration Submenu">
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -169,64 +220,102 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
-        <!-- Compliance Services -->
+        <!-- Compliance -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a aria-current="page" href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a aria-current="page" href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- About & Contact -->
-        <li><a href="../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-
-        <!-- CTA -->
-        <li class="nav-cta"><a class="btn-primary" href="../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main>
-  <!-- 1) HERO -->
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container">
-      <h1>Anti-Money Laundering (AML) Procedures &amp; Manuals</h1>
-      <p class="content-narrow">Build or refresh an AML framework that teams actually use—risk assessment, procedures, SAR playbooks, training, and MI—documented and evidence-ready for banks, auditors, and regulators.</p>
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Anti-Money Laundering (AML) Procedures &amp; Manuals</h1>
+    <p>Build or refresh an AML framework that teams actually use—risk assessment, procedures, SAR playbooks, training, and MI—documented and evidence-ready for banks, auditors, and regulators.</p>
+    <div class="micro-trust">Cyprus-based coordination · <strong>Audit-ready templates</strong> · Practical governance and training logs</div>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=AML%20Procedures%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="aml-procedures">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20AML%20Procedures" class="btn-secondary" data-cta="book-call" data-page="aml-procedures">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="aml-procedures">Inputs Checklist</a>
     </div>
-  </section>
 
-  <!-- 2) OVERVIEW -->
-  <section class="container fade-up" data-anim-delay="0.15" id="overview">
-    <div class="content-narrow">
-      <h2>What We Do</h2>
-      <ul class="feature-list">
-        <li>Business-wide ML/TF Risk Assessment (BRA) methodology and heatmap.</li>
-        <li>CDD/EDD/SDD procedures with clear evidence thresholds and templates.</li>
-        <li>Ownership &amp; control (UBO) mapping rules and SoW/SoF documentation.</li>
-        <li>Screening linkages (sanctions/PEP/adverse media) and escalation routes.</li>
-        <li>Monitoring &amp; trigger events: what to review, when, and how to record.</li>
-        <li>SAR/STR workflow: suspicion tests, drafting notes, approvals, and filing steps.</li>
-        <li>Training packs by role with attestations register and pass/fail logs.</li>
-        <li>Record retention schedule, privacy notices, and MI for board/MLRO reports.</li>
-      </ul>
+    <p class="muted" style="margin-top:.75rem">
+      Note: We design documentation, templates, and operating workflows. Regulatory interpretations and final approvals remain with your designated Compliance/MLRO and licensed advisors.
+    </p>
+  </div>
+</section>
 
-      <div class="keyline"></div>
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#controls">Controls</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
 
-      <h2>AML Framework Components</h2>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
+
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>Law firms, corporate service providers, and regulated businesses that need an AML manual that is actually executable by staff</li>
+      <li>Teams preparing for bank onboarding, audits, regulator interactions, or client due diligence reviews</li>
+      <li>Organisations that want consistent CDD/EDD standards, documented escalation routes, and evidence-ready records</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>AML framework outline and Business Risk Assessment (BRA) structure (methodology + heatmap template)</li>
+      <li>CDD/EDD/SDD procedures manual with checklists and evidence thresholds</li>
+      <li>UBO + SoW/SoF documentation templates and escalation notes</li>
+      <li>SAR/STR playbook, internal workflow templates, and registers (as applicable)</li>
+      <li>Training deck, quiz, attendance/attestation logs, and review calendar</li>
+      <li>Audit-ready repository structure and version/change log discipline</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Baseline &amp; risk appetite:</strong> review current policies, products/services, jurisdictions, and counterpart expectations.</li>
+      <li><strong>Design:</strong> draft BRA approach, CDD/EDD/SDD procedures, screening linkage, and escalation routes.</li>
+      <li><strong>Build:</strong> manuals, checklists, playbooks, registers, and MI packs; align retention/privacy and access controls.</li>
+      <li><strong>Pilot &amp; train:</strong> run sample files, tune thresholds, deliver role-based training, collect attestations.</li>
+      <li><strong>Publish:</strong> versioned approvals, change log, go-live notes, and calendar of reviews.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>AML Framework Components</h3>
       <div class="table-wrap">
-        <table class="matrix">
+        <table class="matrix" aria-label="AML framework components">
           <thead>
             <tr>
               <th>Component</th>
@@ -275,7 +364,7 @@
             <tr>
               <td>Records &amp; Reporting</td>
               <td>Retention, access controls, board/MLRO MI</td>
-              <td>Retention schedule + monthly/annual MI pack</td>
+              <td>Retention schedule + MI pack</td>
               <td>Compliance / IT</td>
             </tr>
           </tbody>
@@ -283,213 +372,166 @@
       </div>
       <p class="note">We align manuals to your policy and counterpart expectations. This page is informational; it is not legal or regulatory advice.</p>
     </div>
-  </section>
 
-  <!-- 3) PROCESS -->
-  <section class="container fade-up" data-anim-delay="0.2" id="process">
-    <div class="content-narrow">
-      <h2>Process</h2>
-      <ol class="process-steps">
-        <li><strong>Baseline &amp; Risk Appetite:</strong> Review current policies, products, jurisdictions, and counterpart/bank expectations.</li>
-        <li><strong>Design:</strong> Draft BRA approach, CDD/EDD/SDD procedures, screening linkage, and SAR workflow with approvals.</li>
-        <li><strong>Build &amp; Templates:</strong> Produce manuals, checklists, playbooks, registers, and MI packs; align retention/privacy.</li>
-        <li><strong>Pilot &amp; Train:</strong> Run sample files, tune thresholds, deliver role-based training, collect attestations.</li>
-        <li><strong>Publish &amp; Implement:</strong> Versioned approvals, change log, go-live notes, and calendar of reviews.</li>
-        <li><strong>Review &amp; Improve:</strong> Quarterly/annual updates, exception/assumptions register, and audit support.</li>
-      </ol>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>AML Framework Refresh for a Cyprus Law Firm (Anonymised)</h3>
+      <p class="muted"><strong>Client:</strong> Cyprus law firm (anonymised)</p>
+      <p>The firm needed practical AML procedures that staff could follow consistently, with clear evidence standards and audit-ready records aligned to its client base and jurisdictions.</p>
+      <p>MegaServe assisted by mapping the firm’s risk profile, structuring an AML procedures manual (CDD/EDD, UBO/SoW/SoF evidence rules, screening linkages, and escalation routes), and providing template packs (checklists, registers, decision notes). We also supported training materials and an attestations register so implementation could be evidenced.</p>
+      <p><strong>Result:</strong> a clearer, more defensible AML operating framework with documented governance, improving readiness for bank, auditor, and regulator scrutiny.</p>
     </div>
-  </section>
 
-  <!-- 5) SERVICE LEVELS & TIMING -->
-  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
-    <div class="content-narrow">
-      <h2>Service Levels &amp; Typical Timing</h2>
-      <div class="table-wrap">
-        <table class="service">
-          <thead>
-            <tr>
-              <th>Activity</th>
-              <th>Typical Frequency/Timing</th>
-              <th>Target Response</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>AML Policy &amp; BRA Outline</td>
-              <td>1–3 business days</td>
-              <td>24–48h iterations</td>
-              <td>Requires risk appetite and product/customer list.</td>
-            </tr>
-            <tr>
-              <td>Procedures Manual Set (CDD/EDD/SDD, SAR, Records)</td>
-              <td>1–3 weeks</td>
-              <td>48–72h comments loop</td>
-              <td>Parallelised by workstream where possible.</td>
-            </tr>
-            <tr>
-              <td>Training Pack &amp; Attestations</td>
-              <td>Within manual timeline</td>
-              <td>Next-day roll-out plan</td>
-              <td>Role-based modules; quiz templates included.</td>
-            </tr>
-            <tr>
-              <td>SAR Playbook &amp; Register</td>
-              <td>On agreement of workflow</td>
-              <td>24–48h</td>
-              <td>Includes drafting guidance and internal escalation.</td>
-            </tr>
-            <tr>
-              <td>Annual MLRO/Board Report Pack</td>
-              <td>Yearly or on request</td>
-              <td>5 business days</td>
-              <td>MI, trends, remediation status.</td>
-            </tr>
-            <tr>
-              <td>Audit/Exam Evidence Pack</td>
-              <td>On request</td>
-              <td>2–5 business days</td>
-              <td>Indices, samples, approvals, and logs.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Timings assume tool access and clear scope. External certifications/legalisations and third-party queries may extend completion.</p>
+    <div class="keyline"></div>
+
+    <h2 id="requirements">Requirements (Inputs Checklist)</h2>
+    <div class="table-wrap">
+      <table class="matrix" aria-label="Inputs checklist">
+        <thead>
+          <tr>
+            <th>Policy &amp; Risk</th>
+            <th>Data &amp; Systems</th>
+            <th>Evidence &amp; History</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul class="feature-list">
+                <li>Risk appetite; customer types; products; jurisdictions</li>
+                <li>Counterparty/bank expectations (if relevant)</li>
+                <li>Approval matrix (line/compliance/MLRO/board)</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="feature-list">
+                <li>Screening tools and list coverage; access model</li>
+                <li>VDR structure; retention policy; privacy notices</li>
+                <li>Client master data fields and storage locations</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="feature-list">
+                <li>Last BRA/MLRO report (if any); internal audit findings</li>
+                <li>SAR/STR register (anonymised, if applicable); exception logs</li>
+                <li>Training records/attendance (if any)</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
+    <p class="note">Sensitive materials should be shared via the VDR only. We provide an index and permission model at kickoff.</p>
 
-  <!-- 6) DELIVERABLES -->
-  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
-    <div class="content-narrow">
-      <h2>Deliverables</h2>
-      <ul class="feature-list">
-        <li>AML Policy outline and Business Risk Assessment (BRA) pack.</li>
-        <li>CDD/EDD/SDD procedures manual with checklists and flowcharts.</li>
-        <li>Screening policy mapping and tuning sheet (sanctions/PEP/adverse media).</li>
-        <li>SAR/STR playbook, templates, and registers.</li>
-        <li>Training slides, quiz, and attestations log.</li>
-        <li>Record retention schedule and privacy notice annex.</li>
-        <li>Board/MLRO MI pack and review calendar.</li>
-      </ul>
+    <div class="keyline"></div>
+
+    <h2 id="controls">Controls &amp; Quality</h2>
+    <ul class="feature-list">
+      <li>Dual-control for EDD approvals and SAR decisions; documented rationale</li>
+      <li>Role-based access with least privilege across tools and VDR</li>
+      <li>Version control and change log for all manuals and templates</li>
+      <li>QA sampling (files, screenings, SARs) with corrective actions tracked</li>
+      <li>Complete audit trail: evidence captures, timestamps, approvers</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Are the AML manuals templates or fully tailored?</summary>
+        <p>Tailored. We start from proven structures and align to your risk appetite, products, jurisdictions, and counterpart expectations.</p>
+      </details>
+
+      <details>
+        <summary>Do you act as MLRO?</summary>
+        <p>No. We support your MLRO and team with drafting, training, and evidence packs. Designated roles and final decisions remain with your organisation.</p>
+      </details>
+
+      <details>
+        <summary>Can you guarantee regulator or bank approval?</summary>
+        <p>No guarantees. We align to policy and guidance, document decisions, and prepare audit-ready files to reduce friction during reviews.</p>
+      </details>
+
+      <details>
+        <summary>How often should the AML policy and BRA be reviewed?</summary>
+        <p>At least annually or on material change (products, jurisdictions, thresholds). We provide a review calendar and change log.</p>
+      </details>
+
+      <details>
+        <summary>Can you integrate procedures with screening and onboarding?</summary>
+        <p>Yes. We embed screening and KYC steps, link to onboarding files, and align evidence/approvals across functions.</p>
+      </details>
     </div>
-  </section>
 
-  <!-- 7) CHECKLIST -->
-  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
-    <div class="content-narrow">
-      <h2>Inputs Checklist</h2>
-      <div class="table-wrap">
-        <table class="matrix">
-          <thead>
-            <tr>
-              <th>Policy &amp; Risk</th>
-              <th>Data &amp; Systems</th>
-              <th>Evidence &amp; History</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Risk appetite; customer types; products; jurisdictions.</td>
-              <td>Screening tools, list coverage, access model.</td>
-              <td>Last BRA/MLRO report; internal audit findings.</td>
-            </tr>
-            <tr>
-              <td>Counterparty/bank requirements (if applicable).</td>
-              <td>VDR structure; retention policy; privacy notices.</td>
-              <td>SAR/STR register (anonymised); exception logs.</td>
-            </tr>
-            <tr>
-              <td>Approval matrix (line/compliance/MLRO/board).</td>
-              <td>Data fields available in client master.</td>
-              <td>Training records and attendance (if any).</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Sensitive materials should be shared via the VDR only. We provide an index and permission model at kickoff.</p>
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a> ·
+      <a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a> ·
+      <a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance</a>
+    </p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff" aria-label="Contact call to action">
+  <div class="container content-narrow">
+    <h2>Build or Refresh Your AML Framework</h2>
+    <p class="contact-intro">Email your current policy scope and risk profile—we’ll reply with a proposed outline, BRA approach, and first templates.</p>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=AML%20Procedures%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="aml-procedures">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20AML%20Procedures" class="btn-secondary" data-cta="book-call" data-page="aml-procedures">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=AML%20Procedures%20-%20Send%20Materials" class="btn-secondary" data-cta="book-visit" data-page="aml-procedures">Email Materials</a>
     </div>
-  </section>
 
-  <!-- 8) CONTROLS / QUALITY -->
-  <section class="container fade-up" data-anim-delay="0.4" id="controls">
-    <div class="content-narrow">
-      <h2>Controls &amp; Quality</h2>
-      <ul class="feature-list">
-        <li>Dual-control for EDD approvals and SAR decisions; documented rationale.</li>
-        <li>Role-based access with least privilege across tools and VDR.</li>
-        <li>Version control and change log for all manuals and templates.</li>
-        <li>QA sampling (files, screenings, SARs) with corrective actions tracked.</li>
-        <li>Complete audit trail: evidence captures, timestamps, approvers.</li>
-      </ul>
-    </div>
-  </section>
+    <p class="note">Fastest turnaround: send current policy (if any), products &amp; customer types, jurisdictions, risk appetite, last BRA/MLRO report, internal audit findings, screening/tool access, and sample (anonymised) KYC/SAR records.</p>
+  </div>
+</section>
 
-  <!-- 9) ABOUT -->
-  <section class="container fade-up" data-anim-delay="0.45" id="about">
-    <div class="content-narrow">
-      <h2>About MegaServe</h2>
-      <p>We craft AML procedures that are usable day-to-day and credible to banks, auditors, and regulators. Our Cyprus-based team coordinates owners, compliance, and counsel to keep standards clear and enforced.</p>
-      <ul class="feature-list">
-        <li>Languages: EN/GR/RU; others on request.</li>
-        <li>Coordination with Compliance/MLRO, counsel, auditors, and banks.</li>
-        <li>Cadence: weekly status, registers, and periodic MI to the board.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 10) FAQ -->
-  <section class="container fade-up" data-anim-delay="0.5" id="faq">
-    <div class="content-narrow">
-      <h2>FAQ</h2>
-      <p class="note" role="note">Informational only—this is not legal or regulatory advice. Final positions rest with your Compliance/MLRO and advisors.</p>
-      <dl class="faq">
-        <dt>Are the AML manuals templates or fully tailored?</dt>
-        <dd>Tailored. We start from proven structures and align to your risk appetite, products, jurisdictions, and counterpart expectations.</dd>
-
-        <dt>Do you act as MLRO?</dt>
-        <dd>No. We support your MLRO and team with drafting, training, and evidence packs. Designated roles and final decisions remain with your organisation.</dd>
-
-        <dt>Can you guarantee regulator or bank approval?</dt>
-        <dd>No guarantees. We align to policy and guidance, document decisions, and prepare audit-ready files to reduce friction during reviews.</dd>
-
-        <dt>How often should the AML policy and BRA be reviewed?</dt>
-        <dd>At least annually or on material change (products, jurisdictions, thresholds). We provide a review calendar and change log.</dd>
-
-        <dt>Can you integrate procedures with screening and onboarding?</dt>
-        <dd>Yes. We embed screening and KYC steps, link to onboarding files, and align evidence/approvals across functions.</dd>
-      </dl>
-    </div>
-  </section>
-
-  <!-- 11) CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
-    <div class="container">
-      <h2>Build or Refresh Your AML Framework</h2>
-      <p class="contact-intro">We’ll return a proposed outline, BRA approach, and first templates within 48 hours.</p>
-      <a href="mailto:megaserve@megaserve.eu?subject=AML%20Framework%20Kickoff" class="btn-primary">Request AML Manual Pack</a>
-      <p class="note">For fastest turnaround, email: current policy (if any), products &amp; customer types, jurisdictions, risk appetite, last BRA/MLRO report, internal audit findings, screening/tool access, and sample (anonymised) KYC/SAR records.</p>
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
-      <a href="../../index.html#services">Services</a>
-      <a href="../../about.html">About</a>
-      <a href="../../index.html#contact-cta">Contact</a>
-      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- 12) FAQ Schema for SEO -->
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=AML%20Procedures%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="aml-procedures">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20AML%20Procedures" class="btn-secondary" data-cta="sticky-book-call" data-page="aml-procedures">Book a Call</a>
+</div>
+
+<script>
+  document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!window.CountUp) return;
+    document.querySelectorAll('[data-countup]').forEach(function(el){
+      var text = (el.textContent || '').trim();
+      var hasPercent = text.endsWith('%');
+      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
+      var suffix = hasPercent ? '%' : (text.endsWith('+') ? '+' : '');
+      var opts = { duration: 1.2, separator: ',', suffix: suffix };
+      var cu = new CountUp.CountUp(el, endVal, opts);
+      if (!cu.error) cu.start();
+    });
+  });
+</script>
+
+<!-- FAQ JSON-LD (matches visible FAQs) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -524,7 +566,6 @@
 }
 </script>
 
-<!-- GLOBAL JS (note ../../) -->
-<script src="../../script.js?v=13"></script>
+<script src="/script.js?v=14"></script>
 </body>
 </html>
