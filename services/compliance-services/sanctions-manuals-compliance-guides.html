@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sanctions Manuals & Compliance Guides — MegaServe Cyprus</title>
-  <meta name="description" content="Practical sanctions manuals and guides: regime mapping (UN/EU/UK/OFAC & local), list update SOPs, 50% ownership rules, screening calibration, escalation/licensing workflows, and audit-ready records.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Sanctions Manuals &amp; Compliance Guides — MegaServe Cyprus</title>
+  <meta name="description" content="Practical sanctions manuals and guides: regime mapping (UN/EU/UK/OFAC &amp; local), list update SOPs, 50% ownership rules, screening calibration, escalation/licensing workflows, and audit-ready records." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Global styles (ROOT: /megaserve-website/style.css) -->
-  <link rel="stylesheet" href="../../style.css?v=14">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/compliance-services/sanctions-manuals-compliance-guides" />
 
-  <!-- Page-local helpers (kept consistent with other fixed pages) -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sanctions Manuals &amp; Compliance Guides — MegaServe Cyprus" />
+  <meta property="og:description" content="Practical sanctions controls: regime mapping, list-update SOPs, 50% ownership rules, calibrated screening, escalation/licensing workflows, and audit-ready records." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/compliance-services/sanctions-manuals-compliance-guides" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/sanctions-manuals-compliance-guides-og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sanctions Manuals &amp; Compliance Guides — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Regime mapping, list updates, 50% rule ownership logic, screening calibration, escalation workflows, and audit-ready records." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/sanctions-manuals-compliance-guides-og.jpg" />
+
+  <!-- Favicons / theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
+
+  <!-- Global stylesheet (root-level) -->
+  <link rel="stylesheet" href="/style.css?v=14" />
+
+  <!-- CountUp (harmless if blocked; consistent) -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
+
   <style>
-    .page-hero{
-      background:#fafafa;
-      border-bottom:2px solid var(--color-gold);
-    }
-    .page-hero .container{
-      padding:2.5rem 0 1.5rem;
-      text-align:center;
-    }
-    .page-hero h1{
-      margin:0 0 .75rem;
-    }
-    .page-hero .content-narrow{
-      margin-left:auto;
-      margin-right:auto;
-    }
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
 
     .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+    .section-spaced{margin-top:2rem}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
 
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
 
-    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
 
@@ -46,13 +67,32 @@
 
     .table-wrap{overflow-x:auto}
     table.service, table.matrix{width:100%;border-collapse:collapse}
-    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.service td,
+    table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th, table.matrix th{background:#fafafa}
 
-    /* CTA styling & fine print on red/dark banner */
-    #contact-cta{
-      text-align:center;
-    }
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
+
+    .submenu-caret{margin-left:.35rem}
+
+    /* Fallback fade-up */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
     #contact-cta .note{
       color:#fff;
       opacity:1;
@@ -60,22 +100,8 @@
       font-size:1rem;
       margin-top:.75rem;
     }
-    #contact-cta .container{
-      position:relative;
-      z-index:1;
-      padding-bottom:2rem;
-    }
 
-    .faq dt{font-weight:700;margin-top:1rem}
-    .faq dd{margin:0 0 1rem 0}
-
-    .fade-up{opacity:0; transform: translateY(14px);}
-    .fade-up.visible{opacity:1; transform: translateY(0);}
-
-    /* caret used in flyout submenus to match other pages */
-    .submenu-caret{margin-left:.35rem}
-
-    /* High-contrast Start Now button in header nav */
+    /* Header nav CTA */
     #main-nav .nav-cta a.btn-primary{
       background:#c1121f;
       color:#fff !important;
@@ -87,110 +113,106 @@
       display:inline-block;
       box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
-    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
   </style>
 </head>
-<body>
 
-<!-- HEADER -->
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
 <header id="site-header">
   <div class="container header-flex">
-    <!-- from /services/compliance-services/ back to root -->
-    <a href="../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <!-- Hamburger Button for Mobile -->
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <!-- ROOT -->
-        <li><a href="../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of a Cypriot</a></li>
               </ul>
             </li>
+
           </ul>
         </li>
 
         <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
-          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          <ul class="dropdown" aria-label="Tax &amp; VAT Administration Submenu">
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -198,62 +220,103 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
-        <!-- Compliance Services -->
+        <!-- Compliance -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a aria-current="page" href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a aria-current="page" href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- About + Contact + Start Now CTA -->
-        <li><a href="../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main>
-  <!-- 1) HERO -->
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container">
-      <h1>Sanctions Manuals &amp; Compliance Guides</h1>
-      <p class="content-narrow">Implement sanctions controls that teams can execute daily—clear regime coverage, list-update routines, 50% ownership rules, calibrated screening, and defensible escalation notes.</p>
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Sanctions Manuals &amp; Compliance Guides</h1>
+    <p>Implement sanctions controls that teams can execute daily—clear regime coverage, list-update routines, 50% ownership rules, calibrated screening, and defensible escalation notes.</p>
+    <div class="micro-trust">Practical controls · <strong>Defensible decisions</strong> · Audit-ready records</div>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Sanctions%20Manual%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="sanctions-manuals">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Sanctions%20Manual" class="btn-secondary" data-cta="book-call" data-page="sanctions-manuals">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="sanctions-manuals">Inputs Checklist</a>
     </div>
-  </section>
 
-  <!-- 2) OVERVIEW -->
-  <section class="container fade-up" data-anim-delay="0.15" id="overview">
-    <div class="content-narrow">
-      <h2>What We Do</h2>
-      <ul class="feature-list">
-        <li>Regime mapping: UN, EU, UK, OFAC, and local regimes relevant to your footprint.</li>
-        <li>List management SOPs: update sources, backfills, release handling, and proofs.</li>
-        <li>Name-matching calibration: thresholds, fuzzy/alias rules, transliteration (non-Latin).</li>
-        <li>Ownership &amp; control rules: 50% aggregation, acting-on-behalf, and control indicators.</li>
-        <li>Sectoral/territorial measures and circumvention red flags incorporated into flows.</li>
-        <li>Screening scope: customers, UBOs, signatories, counterparties, vessels/entities.</li>
-        <li>Escalation &amp; licensing: decision trees, counsel/bank coordination, and records.</li>
-        <li>Registers &amp; MI: hits, true positives, exceptions, change log, and board/MLRO reporting.</li>
-      </ul>
+    <p class="muted" style="margin-top:.75rem">
+      Note: We document and operate processes and evidence. Legal interpretations and licensing/derogation requests are handled by your counsel and authorities.
+    </p>
+  </div>
+</section>
 
-      <div class="keyline"></div>
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Checklist</a>
+    <a href="#controls">Controls</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
 
-      <h2>Coverage &amp; Update Cadence</h2>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
+
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>Organisations with cross-border counterparties that need sanctions coverage mapped clearly (UN/EU/UK/OFAC and relevant local/sectoral regimes)</li>
+      <li>Teams that need repeatable list-update routines, calibrated screening, and clean escalation notes</li>
+      <li>Firms that must demonstrate diligence to banks, auditors, and counterparties with an evidence-first audit trail</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>Regime mapping note (scope, applicability, refresh cadence)</li>
+      <li>List management SOP with update proofs and backfill routine</li>
+      <li>Name-matching tuning sheet (thresholds, alias/transliteration rules)</li>
+      <li>Ownership/control guidance (including 50% aggregation logic) with exceptions register</li>
+      <li>Escalation &amp; licensing workflow with decision templates and evidence standards</li>
+      <li>Registers: hits/TPs, exceptions, change log, and MI pack template</li>
+      <li>Audit-ready archive structure and retention guidance aligned to policy</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Scope &amp; Baseline:</strong> confirm regimes, jurisdictions, products, risk appetite, and current tooling.</li>
+      <li><strong>Map Obligations:</strong> translate regime requirements into screening, ownership, and monitoring controls.</li>
+      <li><strong>Configure &amp; Calibrate:</strong> tune lists, match thresholds, aliases/transliteration, and user roles.</li>
+      <li><strong>Operate:</strong> triage alerts, capture evidence, escalate potential true positives, and maintain registers.</li>
+      <li><strong>Review &amp; Update:</strong> periodic effectiveness testing, change log, and audit/exam support.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>Coverage &amp; Update Cadence</h3>
       <div class="table-wrap">
-        <table class="matrix">
+        <table class="matrix" aria-label="Coverage and update cadence">
           <thead>
             <tr>
               <th>Regime</th>
@@ -304,213 +367,166 @@
       </div>
       <p class="note">We align manuals to your policy and counterpart expectations. This page is informational; it is not legal or regulatory advice.</p>
     </div>
-  </section>
 
-  <!-- 3) PROCESS -->
-  <section class="container fade-up" data-anim-delay="0.2" id="process">
-    <div class="content-narrow">
-      <h2>Process</h2>
-      <ol class="process-steps">
-        <li><strong>Scope &amp; Baseline:</strong> Confirm regimes, jurisdictions, products, risk appetite, and current tooling.</li>
-        <li><strong>Map Obligations:</strong> Translate regime requirements into screening, ownership, and monitoring controls.</li>
-        <li><strong>Configure &amp; Calibrate:</strong> Tune lists, match thresholds, aliases/transliteration, and user roles.</li>
-        <li><strong>Train &amp; Roll Out:</strong> Playbooks, desk guides, and role-based training with attestations.</li>
-        <li><strong>Operate &amp; Report:</strong> Triage hits, escalate potential TPs, maintain registers and MI.</li>
-        <li><strong>Review &amp; Update:</strong> Periodic effectiveness testing, change log, and audit/exam support.</li>
-      </ol>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>Sanctions Monitoring &amp; Escalation Framework for an Overseas Organisation (Anonymised)</h3>
+      <p class="muted"><strong>Client:</strong> Overseas trading/services organisation with cross-border counterpart exposure (anonymised)</p>
+      <p>The organisation needed a defensible sanctions control model: clear regime coverage, consistent list updates, calibrated screening, and an escalation pathway that produced clean records for counterparties and banking reviews.</p>
+      <p>MegaServe mapped applicable regimes (UN/EU/UK/OFAC plus relevant local/sectoral measures), implemented a list-update SOP with proofs and trigger-driven portfolio sweeps, and calibrated name-matching (including alias and non-Latin transliteration rules) to reduce noise without weakening controls. We then defined a triage and escalation workflow for potential true positives (case pack → MLRO/counsel review → decision note), and established registers and MI so decisions stayed auditable and repeatable.</p>
+      <p><strong>Result:</strong> improved control consistency and a clean audit trail that strengthened the organisation’s ability to evidence diligence to counterparties, banks, and auditors.</p>
     </div>
-  </section>
 
-  <!-- 5) SERVICE LEVELS & TIMING -->
-  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
-    <div class="content-narrow">
-      <h2>Service Levels &amp; Typical Timing</h2>
-      <div class="table-wrap">
-        <table class="service">
-          <thead>
-            <tr>
-              <th>Activity</th>
-              <th>Typical Frequency/Timing</th>
-              <th>Target Response</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Regime Mapping Note</td>
-              <td>1–3 business days</td>
-              <td>24–48h iterations</td>
-              <td>Lists scope and applicability by product/jurisdiction.</td>
-            </tr>
-            <tr>
-              <td>List Management SOP &amp; Tuning</td>
-              <td>Within first week</td>
-              <td>24–48h</td>
-              <td>Includes thresholds, alias rules, and proofs of update.</td>
-            </tr>
-            <tr>
-              <td>Training &amp; Desk Guides</td>
-              <td>At go-live</td>
-              <td>Next-day slides &amp; attendance log</td>
-              <td>Role-based modules with quick-reference cards.</td>
-            </tr>
-            <tr>
-              <td>Alert Escalation (Standard)</td>
-              <td>As alerts arise</td>
-              <td>&lt;24h triage</td>
-              <td>Case pack with evidence and disposition note.</td>
-            </tr>
-            <tr>
-              <td>List Update Rollout</td>
-              <td>On change</td>
-              <td>Same day</td>
-              <td>Sync log, impact note, portfolio sweep where relevant.</td>
-            </tr>
-            <tr>
-              <td>Audit/Exam Evidence Pack</td>
-              <td>On request</td>
-              <td>2–5 business days</td>
-              <td>Registers, samples, approvals, and change logs.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Timings assume tool access and clear scope. External licensing/legal opinions and third-party queues may extend completion.</p>
+    <div class="keyline"></div>
+
+    <h2 id="requirements">Requirements (Inputs Checklist)</h2>
+    <div class="table-wrap">
+      <table class="matrix" aria-label="Inputs checklist">
+        <thead>
+          <tr>
+            <th>Policy &amp; Scope</th>
+            <th>Tools &amp; Data</th>
+            <th>Governance &amp; Records</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul class="feature-list">
+                <li>Risk appetite; regimes/jurisdictions; products &amp; channels</li>
+                <li>Counterparty/bank expectations (if any)</li>
+                <li>Known high-risk geographies/partners</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="feature-list">
+                <li>Screening tool access; list sources; match settings; user roles</li>
+                <li>Sample (anonymised) alerts/exports for tuning</li>
+                <li>VDR structure and naming standards (if you have one)</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="feature-list">
+                <li>Approval matrix; escalation contacts (Compliance/MLRO/counsel)</li>
+                <li>Registers (hits/TPs, exceptions) and retention rules</li>
+                <li>Change control owner and review cadence</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
+    <p class="note">Share sensitive materials via VDR only. We provide an index and permissions model at kickoff.</p>
 
-  <!-- 6) DELIVERABLES -->
-  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
-    <div class="content-narrow">
-      <h2>Deliverables</h2>
-      <ul class="feature-list">
-        <li>Sanctions policy mapping note (regimes, applicability, and refresh).</li>
-        <li>List management SOP with update proofs and backfill routine.</li>
-        <li>Name-matching tuning sheet (thresholds, alias/transliteration rules).</li>
-        <li>Escalation &amp; licensing workflow with decision trees and templates.</li>
-        <li>Registers: hits/TPs, exceptions, change log, and access register.</li>
-        <li>Training pack: slides, quick-reference guide, attendance/attestations.</li>
-        <li>Monthly MI pack: volumes, hit rates, ageing, QA findings.</li>
-      </ul>
+    <div class="keyline"></div>
+
+    <h2 id="controls">Controls &amp; Quality</h2>
+    <ul class="feature-list">
+      <li>Two-person control for list changes and true-positive decisions</li>
+      <li>Segregation of duties between configuration and dispositions</li>
+      <li>QA sampling on dispositions and effectiveness testing per schedule</li>
+      <li>Assumptions &amp; exceptions register with documented rationale</li>
+      <li>Role-based access, least privilege, and full audit trail in the VDR</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Which regimes do you cover?</summary>
+        <p>UN, EU, UK, OFAC (US), and any local or sectoral regimes relevant to your footprint—documented in the mapping note with refresh cadence.</p>
+      </details>
+
+      <details>
+        <summary>Do you provide legal advice or licensing services?</summary>
+        <p>No. We document and operate processes and evidence. Legal interpretations and licensing/derogation requests are handled by your counsel and authorities.</p>
+      </details>
+
+      <details>
+        <summary>How quickly are list updates deployed?</summary>
+        <p>Same day for major regimes where tools allow automated sync; manual proofs and impact notes are filed when automation isn’t available.</p>
+      </details>
+
+      <details>
+        <summary>Can you guarantee zero sanctions exposure?</summary>
+        <p>No. We implement risk-based controls, QA, and documentation to reduce error and demonstrate diligence, but cannot eliminate risk.</p>
+      </details>
+
+      <details>
+        <summary>How do you handle the “50% rule” and complex ownership?</summary>
+        <p>We apply aggregation and control tests per policy, capture rationale, and escalate edge cases with supporting evidence for MLRO or counsel review.</p>
+      </details>
     </div>
-  </section>
 
-  <!-- 7) CHECKLIST -->
-  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
-    <div class="content-narrow">
-      <h2>Inputs Checklist</h2>
-      <div class="table-wrap">
-        <table class="matrix">
-          <thead>
-            <tr>
-              <th>Policy &amp; Scope</th>
-              <th>Tools &amp; Data</th>
-              <th>Governance &amp; Records</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Risk appetite; regimes/jurisdictions; products &amp; channels.</td>
-              <td>Screening tool access; list sources; match settings; user roles.</td>
-              <td>Approval matrix; escalation contacts (Compliance/MLRO/counsel).</td>
-            </tr>
-            <tr>
-              <td>Counterparty/bank expectations (if any).</td>
-              <td>Sample (anonymised) alerts/exports for tuning.</td>
-              <td>Registers (hits/TPs, exceptions) and retention rules.</td>
-            </tr>
-            <tr>
-              <td>Known high-risk geographies/partners.</td>
-              <td>VDR structure and naming standards.</td>
-              <td>Change control owner and review cadence.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Share sensitive materials via VDR only. We provide an index and permissions model at kickoff.</p>
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a> ·
+      <a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a> ·
+      <a href="/services/compliance-services/aml-procedures-manuals.html">AML Procedures &amp; Manuals</a>
+    </p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff" aria-label="Contact call to action">
+  <div class="container content-narrow">
+    <h2>Request a Sanctions Manual Pack</h2>
+    <p class="contact-intro">We’ll reply with a regime mapping outline, list-update SOP draft, and an inputs checklist for calibration.</p>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Sanctions%20Manual%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="sanctions-manuals">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Sanctions%20Manual" class="btn-secondary" data-cta="book-call" data-page="sanctions-manuals">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Sanctions%20Manual%20-%20Send%20Inputs" class="btn-secondary" data-cta="book-visit" data-page="sanctions-manuals">Email Inputs</a>
     </div>
-  </section>
 
-  <!-- 8) CONTROLS / QUALITY -->
-  <section class="container fade-up" data-anim-delay="0.4" id="controls">
-    <div class="content-narrow">
-      <h2>Controls &amp; Quality</h2>
-      <ul class="feature-list">
-        <li>Two-person control for list changes and true-positive decisions.</li>
-        <li>Segregation of duties between configuration and dispositions.</li>
-        <li>QA sampling on dispositions and effectiveness testing per schedule.</li>
-        <li>Assumptions &amp; exceptions register with documented rationale.</li>
-        <li>Role-based access, least privilege, and full audit trail in the VDR.</li>
-      </ul>
-    </div>
-  </section>
+    <p class="note">Fastest turnaround: send policy/risk appetite, regimes/jurisdictions in scope, products/channels, tool access, sample (anonymised) alerts/exports, and your escalation/approver list.</p>
+  </div>
+</section>
 
-  <!-- 9) ABOUT -->
-  <section class="container fade-up" data-anim-delay="0.45" id="about">
-    <div class="content-narrow">
-      <h2>About MegaServe</h2>
-      <p>We build sanctions guides that are usable day-to-day and credible to banks, auditors, and regulators. Cyprus-based team coordinating with compliance, counsel, and counterpart banks to keep decisions defensible.</p>
-      <ul class="feature-list">
-        <li>Languages: EN/GR/RU; others on request.</li>
-        <li>Close coordination with Compliance/MLRO, counsel, and banks for escalations/licensing.</li>
-        <li>Clear cadence: weekly status, registers, and monthly MI.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 10) FAQ -->
-  <section class="container fade-up" data-anim-delay="0.5" id="faq">
-    <div class="content-narrow">
-      <h2>FAQ</h2>
-      <p class="note" role="note">Informational only—this is not legal or regulatory advice. Final positions rest with your Compliance/MLRO, counsel, and relevant authorities/banks.</p>
-      <dl class="faq">
-        <dt>Which regimes do you cover?</dt>
-        <dd>UN, EU, UK, OFAC (US), and any local/sectoral regimes relevant to your footprint—documented in the mapping note with refresh cadence.</dd>
-
-        <dt>Do you provide legal advice or licensing services?</dt>
-        <dd>No. We document and operate processes and evidence. Legal interpretations and licensing/derogation requests are handled by your counsel and authorities.</dd>
-
-        <dt>How quickly are list updates deployed?</dt>
-        <dd>Same day for major regimes where tools allow automated sync; manual proofs and impact notes are filed when automation isn’t available.</dd>
-
-        <dt>Can you guarantee zero sanctions exposure?</dt>
-        <dd>No. We implement risk-based controls, QA, and documentation to reduce error and demonstrate diligence, but cannot eliminate risk.</dd>
-
-        <dt>How do you handle the “50% rule” and complex ownership?</dt>
-        <dd>We apply aggregation and control tests per policy, capture rationale, and escalate edge cases with supporting evidence for MLRO/counsel review.</dd>
-      </dl>
-    </div>
-  </section>
-
-  <!-- 11) CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
-    <div class="container">
-      <h2>Request a Sanctions Manual Pack</h2>
-      <p class="contact-intro">We’ll return a regime mapping outline, list-update SOP draft, and first tuning sheet within 24–48 hours.</p>
-      <a href="mailto:megaserve@megaserve.eu?subject=Sanctions%20Manual%20Pack%20Request" class="btn-primary">Start Sanctions Manual</a>
-      <p class="note">For fastest turnaround, email: policy/risk appetite, regimes/jurisdictions in scope, products/channels, screening tool access, sample (anonymised) alerts/exports, bank/counterparty expectations, and escalation/approver list.</p>
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
-      <a href="../../index.html#services">Services</a>
-      <a href="../../about.html">About</a>
-      <a href="../../index.html#contact-cta">Contact</a>
-      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- 12) FAQ Schema for SEO -->
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Sanctions%20Manual%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="sanctions-manuals">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Sanctions%20Manual" class="btn-secondary" data-cta="sticky-book-call" data-page="sanctions-manuals">Book a Call</a>
+</div>
+
+<script>
+  document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!window.CountUp) return;
+    document.querySelectorAll('[data-countup]').forEach(function(el){
+      var text = (el.textContent || '').trim();
+      var hasPercent = text.endsWith('%');
+      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
+      var suffix = hasPercent ? '%' : (text.endsWith('+') ? '+' : '');
+      var opts = { duration: 1.2, separator: ',', suffix: suffix };
+      var cu = new CountUp.CountUp(el, endVal, opts);
+      if (!cu.error) cu.start();
+    });
+  });
+</script>
+
+<!-- FAQ Schema for SEO (matches visible FAQs) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -524,7 +540,7 @@
     {
       "@type":"Question",
       "name":"Do you provide legal advice or licensing services?",
-      "acceptedAnswer":{"@type":"Answer","text":"No. We document and operate processes and evidence. Legal interpretations and licensing or derogation requests are handled by your counsel and authorities."}
+      "acceptedAnswer":{"@type":"Answer","text":"No. We document and operate processes and evidence. Legal interpretations and licensing/derogation requests are handled by your counsel and authorities."}
     },
     {
       "@type":"Question",
@@ -545,7 +561,6 @@
 }
 </script>
 
-<!-- Global nav / dropdown JS (ROOT: /megaserve-website/script.js) -->
-<script src="../../script.js?v=14"></script>
+<script src="/script.js?v=14"></script>
 </body>
 </html>
