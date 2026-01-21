@@ -62,7 +62,7 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
           <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp &amp; Management Services</a></li>
             <li><a href="services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
             <li><a href="services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
             <li><a href="services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
@@ -378,7 +378,8 @@
   <div class="container">
     <h2>Start Your Cyprus Business Journey</h2>
     <p class="contact-intro">Whether you're establishing a company, opening accounts, or seeking multilingual compliance support — MegaServe is your partner on the ground.</p>
-    <a href="start/" class="btn-primary pulse-on-hover">Contact Us Now</a>
+    <a href="mailto:megaserve@megaserve.eu?subject=MegaServe%20Homepage%20%E2%80%94%20Contact%20Request" class="btn-primary pulse-on-hover">Email MegaServe</a>
+    <p class="note" style="margin-top:.75rem">Fastest turnaround: include a short brief (who, what, where, by when).</p>
   </div>
 </section>
 
@@ -386,9 +387,10 @@
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
       <a href="about.html">About</a>
@@ -404,6 +406,9 @@
   </div>
 </footer>
 
-<script src="script.js?v=13"></script>
+<script>
+  document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+</script>
+<script src="script.js?v=14"></script>
 </body>
 </html>
