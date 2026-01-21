@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Client Screening Services — MegaServe Cyprus</title>
-  <meta name="description" content="Design, calibrate, and operate sanctions, PEP, and adverse-media screening: list coverage, name-matching tuning, alert triage, escalation notes, and audit-ready records aligned to your policy and jurisdictions.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Design, calibrate, and operate sanctions, PEP, and adverse-media screening: list coverage, name-matching tuning, alert triage, escalation notes, and audit-ready records aligned to your policy and jurisdictions." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Global styles (two levels up from /services/compliance-services/) -->
-  <link rel="stylesheet" href="../../style.css?v=13">
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js"></script>
+  <!-- Canonical (pretty URL, no .html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/compliance-services/client-screening-services" />
 
-  <!-- Page-local helpers (kept consistent with other pages) -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Client Screening Services — MegaServe Cyprus" />
+  <meta property="og:description" content="Sanctions, PEP, and adverse-media screening run with calibrated matching, clear triage and escalation notes, and audit-ready records aligned to your policy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/compliance-services/client-screening-services" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/client-screening-services-og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Client Screening Services — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Sanctions, PEP, and adverse-media screening with calibrated matching, clear triage, escalation notes, and audit-ready records." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/client-screening-services-og.jpg" />
+
+  <!-- Favicons / theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
+
+  <!-- Global stylesheet (root-level) -->
+  <link rel="stylesheet" href="/style.css?v=14" />
+
+  <!-- CountUp (harmless if blocked; consistent) -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
+
   <style>
-    .page-hero{
-      background:#fafafa;
-      border-bottom:2px solid var(--color-gold);
-    }
-    .page-hero .container{
-      padding:2.5rem 0 1.5rem;
-      text-align:center; /* center heading + intro text */
-    }
-    .page-hero h1{
-      margin:0 0 .75rem;
-    }
-    .page-hero .content-narrow{
-      margin-left:auto;
-      margin-right:auto;
-    }
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
 
     .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+    .section-spaced{margin-top:2rem}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
 
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
 
-    .process-steps{counter-reset: step;list-style:none;padding:0}
+    .process-steps{counter-reset:step;list-style:none;padding:0}
     .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
     .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
 
@@ -46,24 +67,42 @@
 
     .table-wrap{overflow-x:auto}
     table.service, table.matrix{width:100%;border-collapse:collapse}
-    table.service th, table.service td, table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
+    table.service th, table.service td,
+    table.matrix th, table.matrix td{border:1px solid #e5e5e5;padding:.6rem;text-align:left;vertical-align:top}
     table.service th, table.matrix th{background:#fafafa}
 
-    /* Keep CTA fine print readable on a red/dark banner and ensure it's not overlapped */
-    #contact-cta{ text-align:center; }
-    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
-    #contact-cta .container{position:relative;z-index:1;padding-bottom:2rem}
-
-    .faq dt{font-weight:700;margin-top:1rem}
-    .faq dd{margin:0 0 1rem 0}
-
-    .fade-up{opacity:0; transform: translateY(14px);}
-    .fade-up.visible{opacity:1; transform: translateY(0);}
+    /* Case study block */
+    .case-study{background:#fcfcfc;border:1px solid #eee;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    .case-study h3{margin:.25rem 0 .5rem}
 
     .submenu-caret{margin-left:.35rem}
 
-    /* High-contrast Start Now button in header nav */
-    #main-nav .nav-cta a.btn-primary {
+    /* Fallback fade-up */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    /* FAQs like Company Formation (details/summary) */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+
+    /* Header nav CTA */
+    #main-nav .nav-cta a.btn-primary{
       background:#c1121f;
       color:#fff !important;
       border:none;
@@ -74,108 +113,106 @@
       display:inline-block;
       box-shadow:0 1px 0 rgba(0,0,0,.15);
     }
-    #main-nav .nav-cta a.btn-primary:hover{
-      background:#9e0f1a;
-    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
   </style>
 </head>
-<body>
 
-<!-- HEADER -->
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
 <header id="site-header">
   <div class="container header-flex">
-    <a href="../../index.html" class="logo-link" aria-label="MegaServe Home">
-      <img src="../../assets/logo.svg" alt="MegaServe Logo" class="site-logo">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
     </a>
-    <!-- Hamburger Button for Mobile -->
-    <button id="nav-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
     <nav id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../../index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
 
         <!-- Corporate Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
           <ul class="dropdown" aria-label="Corporate Services Submenu">
-            <li><a href="../corporate-services/company-formation-services.html">Company Formation Services</a></li>
-            <li><a href="../corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
-            <li><a href="../corporate-services/administrative-services.html">Administrative Services</a></li>
-            <li><a href="../corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
-            <li><a href="../corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
           </ul>
         </li>
 
         <!-- Nominee & Fiduciary Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
-          <ul class="dropdown" aria-label="Nominee & Fiduciary Services Submenu">
-            <li><a href="../nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
-            <li><a href="../nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
           </ul>
         </li>
 
-        <!-- Migration & Relocation Services with flyouts -->
+        <!-- Migration & Relocation Services -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
-          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
-            <!-- Employment hub -->
+          <ul class="dropdown" aria-label="Migration &amp; Relocation Services Submenu">
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Employment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
               </ul>
             </li>
-            <!-- Investment hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Investment routes">
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
-                <li><a href="../migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
               </ul>
             </li>
-            <!-- Visitor hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
                 Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Visitor routes">
-                <li><a href="../migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
               </ul>
             </li>
-            <!-- Citizenship hub -->
+
             <li class="has-flyout">
-              <a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
                 Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
               </a>
               <ul class="flyout" aria-label="Citizenship routes">
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
-                <li><a href="../migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
               </ul>
             </li>
+
           </ul>
         </li>
 
         <!-- Tax & VAT Administration -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
-          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
-            <li><a href="../tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
-            <li><a href="../tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          <ul class="dropdown" aria-label="Tax &amp; VAT Administration Submenu">
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
           </ul>
         </li>
 
@@ -183,62 +220,103 @@
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
           <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
-            <li><a href="../corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
-            <li><a href="../corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
-            <li><a href="../corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
           </ul>
         </li>
 
-        <!-- Compliance Services -->
+        <!-- Compliance -->
         <li class="has-dropdown">
           <a href="#" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
           <ul class="dropdown" aria-label="Compliance Services Submenu">
-            <li><a href="client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
-            <li><a aria-current="page" href="client-screening-services.html">Client Screening Services</a></li>
-            <li><a href="kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
-            <li><a href="aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
-            <li><a href="sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a aria-current="page" href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
           </ul>
         </li>
 
-        <!-- About + Contact + Start Now CTA -->
-        <li><a href="../../about.html">About</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#contact-cta">Contact</a></li>
-        <li class="nav-cta"><a class="btn-primary" href="../../start/index.html">Start Now</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main>
-  <!-- 1) HERO -->
-  <section class="page-hero fade-up" data-anim-delay="0.1">
-    <div class="container">
-      <h1>Client Screening Services</h1>
-      <p class="content-narrow">Stand up or optimise sanctions, PEP, and adverse-media screening with clear playbooks—reducing false positives while preserving control, documentation, and auditability.</p>
+<!-- HERO (canonical: micro-trust + CTA buttons) -->
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Client Screening Services</h1>
+    <p>Stand up or optimise sanctions, PEP, and adverse-media screening with clear playbooks—reducing false positives while preserving control, documentation, and auditability.</p>
+    <div class="micro-trust">Cyprus-based coordination · <strong>Defensible triage notes</strong> · Audit-ready registers</div>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Client%20Screening%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="client-screening">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Client%20Screening" class="btn-secondary" data-cta="book-call" data-page="client-screening">Book a Call</a>
+      <a href="#requirements" class="btn-secondary" data-cta="jump-checklist" data-page="client-screening">Documents Checklist</a>
     </div>
-  </section>
 
-  <!-- 2) OVERVIEW -->
-  <section class="container fade-up" data-anim-delay="0.15" id="overview">
-    <div class="content-narrow">
-      <h2>What We Do</h2>
-      <ul class="feature-list">
-        <li>Policy mapping to lists/jurisdictions (UN, EU, UK, OFAC, local, sectoral).</li>
-        <li>Name-matching calibration: thresholds, tokenisation, transliteration, fuzzy rules.</li>
-        <li>PEP classification and close-associate logic aligned to your risk tiers.</li>
-        <li>Adverse media queries, sources, and triage criteria with evidence capture.</li>
-        <li>Alert handling workflows: disposition notes, approvals, escalations, and QA.</li>
-        <li>Periodic refresh schedules by risk (12/24/36m) and event-driven triggers.</li>
-        <li>Vendor/tool administration: list updates, user roles, and change logs.</li>
-        <li>MI &amp; reporting: volumes, hit rates, ageing, and exceptions/registers.</li>
-      </ul>
+    <p class="muted" style="margin-top:.75rem">
+      Note: We operate the workflow, evidence capture, and documentation. Final regulatory positions and approvals remain with your Compliance/MLRO.
+    </p>
+  </div>
+</section>
 
-      <div class="keyline"></div>
+<!-- Anchor sub-nav (canonical) -->
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#who">Who it’s for</a>
+    <a href="#deliverables">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#case-study">Case study</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#controls">Controls</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
 
-      <h2>Screening Modes &amp; Triggers</h2>
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
+
+    <h2 id="who">Who It’s For</h2>
+    <ul class="feature-list">
+      <li>Firms that need consistent sanctions/PEP/adverse-media screening with documented decisions</li>
+      <li>Teams overwhelmed by false positives who still need defensible controls</li>
+      <li>Operators preparing for bank reviews, audits, or regulator requests</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="deliverables">What You Get (Deliverables)</h2>
+    <ul class="feature-list">
+      <li>Screening scope note (lists/jurisdictions, refresh frequency, approval limits)</li>
+      <li>Name-matching tuning sheet (thresholds, aliases, transliteration rules)</li>
+      <li>Templates for alert triage, escalation, and approval notes</li>
+      <li>Registers: exceptions, decisions, configuration changes</li>
+      <li>Audit pack structure and sample evidence files</li>
+      <li>Monthly reporting on volumes, hit rates, and ageing</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">Process &amp; Typical Timeline</h2>
+    <ol class="process-steps">
+      <li><strong>Scope:</strong> confirm lists, jurisdictions, risk tiers, and approval thresholds.</li>
+      <li><strong>Calibrate:</strong> tune matching rules (scores, aliases, transliteration), roles, and change control.</li>
+      <li><strong>Pilot:</strong> run sample cases, capture false positives, adjust and document the final settings.</li>
+      <li><strong>Operate:</strong> triage alerts, capture evidence, escalate credible items, and maintain registers.</li>
+      <li><strong>Refresh:</strong> periodic re-screen by risk tier and event-driven triggers.</li>
+      <li><strong>Audit:</strong> compile packs with evidence, decisions, timestamps, and approvers.</li>
+    </ol>
+
+    <div class="section-spaced">
+      <h3>Screening Modes &amp; Triggers</h3>
       <div class="table-wrap">
-        <table class="matrix">
+        <table class="matrix" aria-label="Screening modes and triggers">
           <thead>
             <tr>
               <th>Mode</th>
@@ -251,245 +329,198 @@
             <tr>
               <td>Onboarding</td>
               <td>Pre-approval for new clients/signatories/UBOs</td>
-              <td>IDs, names/aliases, DOB, nationality, addresses</td>
-              <td>Pass/Refer decision with memo &amp; evidence pack</td>
+              <td>IDs, names/aliases, date of birth, nationality, addresses</td>
+              <td>Pass/Refer decision with evidence and a short memo</td>
             </tr>
             <tr>
-              <td>Periodic Refresh</td>
+              <td>Periodic refresh</td>
               <td>Per policy by risk tier (12/24/36m)</td>
               <td>Client master + latest IDs</td>
-              <td>Refreshed screening report &amp; approvals</td>
+              <td>Refreshed report and approvals</td>
             </tr>
             <tr>
-              <td>Trigger-Based</td>
+              <td>Trigger-based</td>
               <td>Material change (ownership, geography, negative news)</td>
               <td>Change requests, monitoring alerts</td>
-              <td>Targeted re-screen note &amp; decision</td>
+              <td>Targeted re-screen note and decision</td>
             </tr>
             <tr>
-              <td>Bulk Portfolio Sweep</td>
+              <td>Bulk portfolio sweep</td>
               <td>List update or regulatory event</td>
               <td>Full portfolio extract</td>
-              <td>Exception list with dispositional actions</td>
+              <td>Exception list with disposition actions</td>
             </tr>
             <tr>
-              <td>Ongoing Adverse Media</td>
+              <td>Ongoing adverse media</td>
               <td>Continuous monitoring for defined sources</td>
-              <td>News feeds/DBs, watchwords</td>
+              <td>News feeds/databases, watchwords</td>
               <td>Hits triaged to cases with references</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="note">We align configuration and evidence standards to your policy and the receiving bank/authority expectations.</p>
+      <p class="note">Configuration and evidence standards are aligned to your policy and the receiving bank/authority expectations.</p>
     </div>
-  </section>
 
-  <!-- 3) PROCESS -->
-  <section class="container fade-up" data-anim-delay="0.2" id="process">
-    <div class="content-narrow">
-      <h2>Process</h2>
-      <ol class="process-steps">
-        <li><strong>Policy &amp; Scope:</strong> Confirm lists, jurisdictions, risk tiers, and approval thresholds; define records and retention.</li>
-        <li><strong>Calibrate:</strong> Configure vendor/tool settings (match scores, aliases, transliteration), user roles, and change control.</li>
-        <li><strong>Pilot &amp; QA:</strong> Run sample batches, tune thresholds, document exceptions, and approve the configuration.</li>
-        <li><strong>Operate:</strong> Triage alerts, capture evidence, escalate potential true positives, and maintain registers.</li>
-        <li><strong>Report:</strong> Weekly/Monthly MI on volumes, hit rates, ageing, and QA findings with actions.</li>
-        <li><strong>Refresh &amp; Audit:</strong> Schedule periodic reviews, perform portfolio sweeps, and compile exam/audit packs.</li>
-      </ol>
+    <div class="keyline"></div>
+
+    <h2 id="case-study">Case Study</h2>
+    <div class="case-study">
+      <h3>PEP Match on Prospective Partner UBO (Anonymised)</h3>
+      <p class="muted"><strong>Client:</strong> Services company screening a prospective partner where the ultimate owner triggered a PEP match (anonymised)</p>
+      <p>The prospective relationship raised a PEP alert against the partner’s ultimate owner. The key risk was mishandling a possible false match (or ignoring a credible one), leaving the business exposed and the file indefensible to banks or auditors.</p>
+      <p>MegaServe confirmed identifiers (name variants/aliases, date of birth, nationality), captured screening evidence and sources, and documented a clear triage note with the reasoning and next steps. The case was escalated where required, approvals were recorded, and the decision was logged in the register with timestamps and an evidence pack.</p>
+      <p><strong>Result:</strong> a defensible decision (pause/proceed/escalate) supported by a clean paper trail that a reviewer can audit quickly.</p>
     </div>
-  </section>
 
-  <!-- 5) SERVICE LEVELS & TIMING -->
-  <section class="container fade-up" data-anim-delay="0.25" id="service-levels">
-    <div class="content-narrow">
-      <h2>Service Levels &amp; Typical Timing</h2>
-      <div class="table-wrap">
-        <table class="service">
-          <thead>
-            <tr>
-              <th>Activity</th>
-              <th>Typical Frequency/Timing</th>
-              <th>Target Response</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Initial Calibration Note</td>
-              <td>1–3 business days</td>
-              <td>24–48h iterations</td>
-              <td>Based on policy and sample data set.</td>
-            </tr>
-            <tr>
-              <td>Onboarding Screening Result</td>
-              <td>Per new client</td>
-              <td>Same day (standard)</td>
-              <td>Complex/EDD cases add time.</td>
-            </tr>
-            <tr>
-              <td>Alert Triage (Standard Hit)</td>
-              <td>As alerts arise</td>
-              <td>&lt;24h</td>
-              <td>Evidence and disposition note filed.</td>
-            </tr>
-            <tr>
-              <td>Potential True Positive Escalation</td>
-              <td>Ad hoc</td>
-              <td>4–8 business hours</td>
-              <td>Escalate to Compliance/MLRO with dossier.</td>
-            </tr>
-            <tr>
-              <td>Periodic Portfolio Refresh</td>
-              <td>Monthly/Quarterly per risk tier</td>
-              <td>Within cycle window</td>
-              <td>Register and approvals updated.</td>
-            </tr>
-            <tr>
-              <td>Audit/Exam Response Pack</td>
-              <td>On request</td>
-              <td>2–5 business days</td>
-              <td>Scope dependent; includes logs and samples.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Timings assume tool access and complete inputs. Notarisation/legalisation and third-party response times can extend completion.</p>
+    <div class="keyline"></div>
+
+    <h2 id="requirements">Requirements (Kickoff Checklist)</h2>
+    <div class="table-wrap">
+      <table class="matrix" aria-label="Client screening kickoff checklist">
+        <thead>
+          <tr>
+            <th>Inputs</th>
+            <th>Access &amp; Tools</th>
+            <th>Evidence &amp; Records</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul class="feature-list">
+                <li>Policy/risk tiers, jurisdictions, list coverage expectations</li>
+                <li>Sample names/aliases (anonymised where possible) and typical data fields</li>
+                <li>Adverse media sources/keywords (if defined)</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="feature-list">
+                <li>Tool/vendor accounts and user roles</li>
+                <li>List update schedule and change approvals</li>
+                <li>VDR structure and naming standards</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="feature-list">
+                <li>Disposition templates and escalation paths</li>
+                <li>Approval limits and who signs off</li>
+                <li>Retention rules and privacy notices</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
+    <p class="note">Sensitive data should be shared via the VDR only. We provide an index and permissions model at kickoff.</p>
 
-  <!-- 6) DELIVERABLES -->
-  <section class="container fade-up" data-anim-delay="0.3" id="deliverables">
-    <div class="content-narrow">
-      <h2>Deliverables</h2>
-      <ul class="feature-list">
-        <li>Screening policy mapping note (lists, jurisdictions, frequencies).</li>
-        <li>Name-matching tuning sheet (thresholds, alias rules, transliteration).</li>
-        <li>PEP/adverse-media triage criteria and templates.</li>
-        <li>Case pack: evidence captures, disposition notes, and approvals.</li>
-        <li>Exceptions &amp; decision log with rationale.</li>
-        <li>Change log for configuration and list updates.</li>
-        <li>Monthly MI/dashboard: volumes, hit rates, SLA, QA findings.</li>
-      </ul>
+    <div class="keyline"></div>
+
+    <h2 id="controls">Controls &amp; Quality</h2>
+    <ul class="feature-list">
+      <li>Two-person control for configuration/list changes and credible match decisions</li>
+      <li>Role-based access with least privilege across tools and the VDR</li>
+      <li>QA sampling of dispositions with corrective actions tracked</li>
+      <li>Audit trail: evidence captures, timestamps, and approvers</li>
+      <li>Assumptions and exceptions register reviewed on a defined cadence</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Which lists do you screen against?</summary>
+        <p>We align to your policy (for example UN, EU, UK, OFAC) and any local or sectoral regimes you specify. Coverage and refresh schedules are documented in the scope note.</p>
+      </details>
+
+      <details>
+        <summary>Do you replace our Compliance/MLRO?</summary>
+        <p>No. We operate the workflow and documentation. Regulatory positions and final approvals remain with your designated officers.</p>
+      </details>
+
+      <details>
+        <summary>Can you guarantee zero false negatives?</summary>
+        <p>No. Screening is risk-based. We tune thresholds, enforce QA, and document assumptions to reduce error while avoiding excessive false positives.</p>
+      </details>
+
+      <details>
+        <summary>How do you handle adverse-media alerts?</summary>
+        <p>We apply defined sources and criteria, triage hits to cases with evidence references, and escalate material items per policy.</p>
+      </details>
+
+      <details>
+        <summary>What about data privacy?</summary>
+        <p>We follow your retention policy, minimise data shared, restrict access by role, and keep an audit trail of who accessed what and when.</p>
+      </details>
     </div>
-  </section>
 
-  <!-- 7) CHECKLIST -->
-  <section class="container fade-up" data-anim-delay="0.35" id="checklist">
-    <div class="content-narrow">
-      <h2>Onboarding Documents Checklist</h2>
-      <div class="table-wrap">
-        <table class="matrix">
-          <thead>
-            <tr>
-              <th>Inputs</th>
-              <th>Access &amp; Tools</th>
-              <th>Evidence &amp; Records</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Policy/risk tiers; jurisdictions; list coverage expectations.</td>
-              <td>Vendor/tool accounts; list update schedule; user roles.</td>
-              <td>Disposition templates; escalation paths; approval limits.</td>
-            </tr>
-            <tr>
-              <td>Sample client data (names, aliases, DOB, IDs).</td>
-              <td>VDR folder structure and naming standards.</td>
-              <td>Change log format; QA checklist; register templates.</td>
-            </tr>
-            <tr>
-              <td>Adverse media sources and keywords (if defined).</td>
-              <td>API/batch import details (if used).</td>
-              <td>Data retention rules and privacy notices.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Sensitive data should be shared via VDR only. We provide an index and permissions model at kickoff.</p>
+    <h3 class="section-spaced">See also</h3>
+    <p class="muted">
+      <a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a> ·
+      <a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a> ·
+      <a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a>
+    </p>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff" aria-label="Contact call to action">
+  <div class="container content-narrow">
+    <h2>Deploy a Screening Programme</h2>
+    <p class="contact-intro">We’ll return a calibration note and the first operating templates within 24–48 hours.</p>
+
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Client%20Screening%20-%20Proposal%20Request" class="btn-primary" data-cta="proposal" data-page="client-screening">Request Proposal</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Client%20Screening" class="btn-secondary" data-cta="book-call" data-page="client-screening">Book a Call</a>
+      <a href="mailto:megaserve@megaserve.eu?subject=Client%20Screening%20-%20Send%20Policy%20%26%20Samples" class="btn-secondary" data-cta="book-visit" data-page="client-screening">Email Documents</a>
     </div>
-  </section>
 
-  <!-- 8) CONTROLS / QUALITY -->
-  <section class="container fade-up" data-anim-delay="0.4">
-    <div class="content-narrow">
-      <h2>Controls &amp; Quality</h2>
-      <ul class="feature-list">
-        <li>Two-person control for configuration/list changes and true-positive decisions.</li>
-        <li>Role-based access; least-privilege enforced across tools and VDR.</li>
-        <li>QA sampling on dispositions with corrective actions tracked.</li>
-        <li>Comprehensive audit trail: evidence captures, timestamps, and approvers.</li>
-        <li>Assumptions &amp; exceptions register maintained and reviewed monthly.</li>
-      </ul>
-    </div>
-  </section>
+    <p class="note">Fastest kickoff: email your policy/risk tiers, jurisdictions, tool/vendor access, sample (anonymised) names/IDs, and your preferred escalation/approval limits.</p>
+  </div>
+</section>
 
-  <!-- 9) ABOUT -->
-  <section class="container fade-up" data-anim-delay="0.45" id="about">
-    <div class="content-narrow">
-      <h2>About MegaServe</h2>
-      <p>We run practical screening operations that withstand bank and auditor scrutiny. Our Cyprus-based team coordinates with your compliance function and vendors to keep files clean and decisions defensible.</p>
-      <ul class="feature-list">
-        <li>EN/GR/RU service; other languages on request.</li>
-        <li>Close coordination with compliance/MLRO, counsel, and banks.</li>
-        <li>Clear cadence: weekly status, registers, and monthly MI.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 10) FAQ -->
-  <section class="container fade-up" data-anim-delay="0.5" id="faq">
-    <div class="content-narrow">
-      <h2>FAQ</h2>
-      <p class="note" role="note">This page is informational and not legal or regulatory advice. Final decisions rest with your Compliance/MLRO and relevant authorities/banks.</p>
-      <dl class="faq">
-        <dt>Which lists do you screen against?</dt>
-        <dd>We align to your policy (e.g., UN, EU, UK, OFAC) and any local/sectoral regimes you specify. Coverage and refresh schedules are documented in the mapping note.</dd>
-
-        <dt>Do you replace our Compliance/MLRO?</dt>
-        <dd>No. We operate the workflow and documentation. Regulatory positions and final approvals remain with your designated officers.</dd>
-
-        <dt>Can you guarantee zero false negatives?</dt>
-        <dd>No. Screening is risk-based. We tune thresholds, enforce QA, and document assumptions to reduce error while avoiding excessive false positives.</dd>
-
-        <dt>How do you handle adverse-media alerts?</dt>
-        <dd>We apply defined sources/keywords, triage hits to cases with evidence links, and escalate material items per policy.</dd>
-
-        <dt>What about data privacy?</dt>
-        <dd>We work within your retention policy, minimise data shared, restrict access via roles, and keep an audit trail of who accessed what and when.</dd>
-      </dl>
-    </div>
-  </section>
-
-  <!-- 11) CONTACT CTA -->
-  <section id="contact-cta" class="fade-up" data-anim-delay="0.55">
-    <div class="container">
-      <h2>Deploy a Screening Programme</h2>
-      <p class="contact-intro">We’ll return a calibration note and first operating templates within 24–48 hours.</p>
-      <a href="mailto:megaserve@megaserve.eu?subject=Client%20Screening%20Programme%20Kickoff" class="btn-primary">Request Screening Kickoff</a>
-      <p class="note">For fastest turnaround, email: compliance policy &amp; risk tiers, jurisdictions, tool/vendor access, sample (anonymised) names/IDs, preferred match settings, adverse-media sources, and audit/MI expectations.</p>
-    </div>
-  </section>
-</main>
-
-<!-- FOOTER -->
 <footer id="site-footer">
   <div class="container footer-flex">
     <div class="footer-left">
-      <p>&copy; 2025 MegaServe Ltd. All rights reserved.</p>
-      <p>Registered in Cyprus | Company No. HEXXXXXX</p>
-      <p>Contact: <a href="mailto:info@megaserve.eu">info@megaserve.eu</a> | Tel: +357 22 000000</p>
+      <p>&copy; <span id="year"></span> MegaServe Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
     </div>
     <div class="footer-nav">
-      <a href="../../index.html#services">Services</a>
-      <a href="../../about.html">About</a>
-      <a href="../../index.html#contact-cta">Contact</a>
-      <a href="../../privacy.html">Privacy Policy</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/index.html#contact-cta">Contact</a>
+      <a href="/privacy.html">Privacy Policy</a>
     </div>
   </div>
 </footer>
 
-<!-- 12) FAQ Schema for SEO -->
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Client%20Screening%20-%20Proposal%20Request" class="btn-primary" data-cta="sticky-proposal" data-page="client-screening">Request Proposal</a>
+  <a href="mailto:megaserve@megaserve.eu?subject=Book%20a%20Call%20-%20Client%20Screening" class="btn-secondary" data-cta="sticky-book-call" data-page="client-screening">Book a Call</a>
+</div>
+
+<script>
+  document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!window.CountUp) return;
+    document.querySelectorAll('[data-countup]').forEach(function(el){
+      var text = (el.textContent || '').trim();
+      var hasPercent = text.endsWith('%');
+      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
+      var suffix = hasPercent ? '%' : (text.endsWith('+') ? '+' : '');
+      var opts = { duration: 1.2, separator: ',', suffix: suffix };
+      var cu = new CountUp.CountUp(el, endVal, opts);
+      if (!cu.error) cu.start();
+    });
+  });
+</script>
+
+<!-- FAQ JSON-LD (matches visible FAQs) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -498,7 +529,7 @@
     {
       "@type":"Question",
       "name":"Which lists do you screen against?",
-      "acceptedAnswer":{"@type":"Answer","text":"We align to your policy (e.g., UN, EU, UK, OFAC) and any local/sectoral regimes you specify. Coverage and refresh schedules are documented in the mapping note."}
+      "acceptedAnswer":{"@type":"Answer","text":"We align to your policy (for example UN, EU, UK, OFAC) and any local or sectoral regimes you specify. Coverage and refresh schedules are documented in the scope note."}
     },
     {
       "@type":"Question",
@@ -513,18 +544,17 @@
     {
       "@type":"Question",
       "name":"How do you handle adverse-media alerts?",
-      "acceptedAnswer":{"@type":"Answer","text":"We apply defined sources/keywords, triage hits to cases with evidence links, and escalate material items per policy."}
+      "acceptedAnswer":{"@type":"Answer","text":"We apply defined sources and criteria, triage hits to cases with evidence references, and escalate material items per policy."}
     },
     {
       "@type":"Question",
       "name":"What about data privacy?",
-      "acceptedAnswer":{"@type":"Answer","text":"We work within your retention policy, minimise data shared, restrict access via roles, and keep an audit trail of who accessed what and when."}
+      "acceptedAnswer":{"@type":"Answer","text":"We follow your retention policy, minimise data shared, restrict access by role, and keep an audit trail of who accessed what and when."}
     }
   ]
 }
 </script>
 
-<!-- Global nav / dropdown JS (two levels up) -->
-<script src="../../script.js?v=13"></script>
+<script src="/script.js?v=14"></script>
 </body>
 </html>
