@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Migration &amp; Relocation Services — MegaServe Cyprus</title>
+  <meta name="description" content="Cyprus migration and relocation handled end-to-end: employment permits, investment residency, visitor residency permits, naturalisation & citizenship—with clear checklists, appointment coordination, and a single point of contact." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Canonical (pretty URL, no index.html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/migration-and-relocation-services/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Migration &amp; Relocation Services — MegaServe Cyprus" />
+  <meta property="og:description" content="Cyprus migration and relocation handled end-to-end: employment permits, investment residency, visitor permits, and naturalisation & citizenship—with clear checklists and a single point of contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/migration-and-relocation-services/" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/migration-relocation-hub-og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Migration &amp; Relocation Services — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Employment permits, investment residency, visitor permits, and naturalisation & citizenship in Cyprus—clear checklists and end-to-end coordination." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/migration-relocation-hub-og.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
+
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="/style.css?v=14" />
+
+  <style>
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
+
+    .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+    .section-spaced{margin-top:2rem}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding-left:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .note{font-size:.95rem;color:#666}
+
+    /* Service cards grid */
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+    .service-card{
+      border:1px solid #e5e5e5;border-radius:.75rem;background:#fff;padding:1rem;
+      display:flex;flex-direction:column;gap:.5rem
+    }
+    .service-card h3{margin:.1rem 0 .25rem}
+    .service-card p{margin:0;color:#555}
+    .service-card a{margin-top:auto;align-self:flex-start}
+    .tag{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.15rem .55rem;font-size:.8rem;color:#444;background:#fafafa;margin-right:.35rem}
+
+    /* FAQs */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    /* Anchor nav */
+    .anchor-nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #eee}
+    .anchor-nav .container{display:flex;gap:1rem;flex-wrap:wrap;padding:.75rem 0}
+    .anchor-nav a{color:inherit;text-decoration:none;font-weight:600;font-size:.95rem}
+    .anchor-nav a:hover{text-decoration:underline}
+
+    /* Link grid (subroutes) */
+    .link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem;margin-top:.75rem}
+    .link-grid a{display:block;border:1px solid #e5e5e5;border-radius:.5rem;padding:.7rem .8rem;background:#fff}
+    .badge{display:inline-block;background:var(--color-gold);color:#000;padding:.1rem .45rem;border-radius:.4rem;font-size:.75rem;margin-left:.4rem}
+
+    /* Fallback fade-up */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    .submenu-caret{margin-left:.35rem}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+
+    /* Header nav CTA */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
+  </style>
+</head>
+
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header id="site-header">
+  <div class="container header-flex">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
+    </a>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
+    <nav id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+
+        <!-- Corporate Services -->
+        <li class="has-dropdown">
+          <a href="/services/corporate-services/" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
+          <ul class="dropdown" aria-label="Corporate Services Submenu">
+            <li><a href="/services/corporate-services/">Corporate Services Overview</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Nominee & Fiduciary Services -->
+        <li class="has-dropdown">
+          <a href="/services/nominee-and-fiduciary-services/" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/">Nominee &amp; Fiduciary Overview</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Migration & Relocation Services with flyouts -->
+        <li class="has-dropdown">
+          <a href="/services/migration-and-relocation-services/" aria-current="page" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
+          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
+            <li><a aria-current="page" href="/services/migration-and-relocation-services/">Migration &amp; Relocation Overview</a></li>
+
+            <li class="has-flyout">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Employment permit routes">
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+              </ul>
+            </li>
+
+            <li class="has-flyout">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Investment routes">
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+              </ul>
+            </li>
+
+            <li class="has-flyout">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Visitor routes">
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+              </ul>
+            </li>
+
+            <li class="has-flyout">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+                Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Citizenship routes">
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Tax & VAT Administration -->
+        <li class="has-dropdown">
+          <a href="/services/tax-and-vat-administration/" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
+          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
+            <li><a href="/services/tax-and-vat-administration/">Tax &amp; VAT Overview</a></li>
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Corporate Consultancy -->
+        <li class="has-dropdown">
+          <a href="/services/corporate-consultancy/" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
+          <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
+            <li><a href="/services/corporate-consultancy/">Corporate Consultancy Overview</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Compliance Services -->
+        <li class="has-dropdown">
+          <a href="/services/compliance-services/" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
+          <ul class="dropdown" aria-label="Compliance Services Submenu">
+            <li><a href="/services/compliance-services/">Compliance Overview</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+          </ul>
+        </li>
+
+        <!-- Simple pages + header CTA -->
+        <li><a href="/about.html">About</a></li>
+        <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Migration &amp; Relocation Services</h1>
+    <p>We coordinate the practical relocation process to Cyprus—route selection, document packs, bookings/appointments, submissions, and follow-ups—under one point of contact.</p>
+    <div class="micro-trust">Cyprus-based team · <strong>Clear checklists</strong> · Single point of contact (incl. lawyer coordination)</div>
+
+    <!-- OPTION A CTA TAXONOMY -->
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Migration%20%26%20Relocation%20Services%20-%20Initial%20Enquiry" class="btn-primary" data-cta="email" data-page="migration-relocation-hub">Email Us</a>
+      <a href="/start/" class="btn-secondary" data-cta="start-now" data-page="migration-relocation-hub">Start Now</a>
+    </div>
+  </div>
+</section>
+
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#overview">Overview</a>
+    <a href="#routes">Routes</a>
+    <a href="#process">Process</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
+
+    <h2 id="overview">Overview</h2>
+    <p class="muted">
+      Cyprus migration is mostly won or lost on logistics: correct route selection, complete documents, and disciplined appointment sequencing.
+      We run the process as a controlled workflow and keep a clear audit trail of submissions and communications.
+    </p>
+
+    <h3 class="section-spaced">Who It’s For</h3>
+    <ul class="feature-list">
+      <li>Employers hiring staff into Cyprus and needing end-to-end permit coordination</li>
+      <li>Individuals relocating for work, investment, or long-stay residence</li>
+      <li>Families joining a principal applicant with linked permits and appointment sequencing</li>
+      <li>Applicants who want a single point of contact (including lawyer coordination where required)</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="routes">Migration Routes (Index)</h2>
+    <div class="card-grid">
+
+      <div class="service-card">
+        <div>
+          <span class="tag">Work</span>
+          <span class="tag">Permits</span>
+        </div>
+        <h3>Residency by Employment Permit Services</h3>
+        <p>Route selection, employer onboarding, filings, biometrics, and family joiners—clear checklists and tracking.</p>
+        <a class="btn-secondary" href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html">View route hub</a>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <span class="tag">Investment</span>
+          <span class="tag">Residency</span>
+        </div>
+        <h3>Residency by Investment Permit Services</h3>
+        <p>Investment-linked residence options: eligibility, evidence packs, submissions, and renewal planning.</p>
+        <a class="btn-secondary" href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html">View route hub</a>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <span class="tag">Long-stay</span>
+          <span class="tag">Visitors</span>
+        </div>
+        <h3>Visitor Residency Permit Services</h3>
+        <p>Visitor (long-stay) permits and extensions: evidence packs, appointments, submissions, and renewals.</p>
+        <a class="btn-secondary" href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html">View route hub</a>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <span class="tag">Citizenship</span>
+          <span class="tag">Naturalisation</span>
+        </div>
+        <h3>Naturalisation &amp; Citizenship Services</h3>
+        <p>Eligibility mapping, documentary preparation, submissions, and tracking across citizenship routes.</p>
+        <a class="btn-secondary" href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html">View route hub</a>
+      </div>
+
+    </div>
+
+    <div class="section-spaced">
+      <h3>Quick Links (Popular)</h3>
+      <div class="link-grid" role="list">
+        <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html" role="listitem">Digital Nomad Visa</a>
+        <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html" role="listitem">EU Blue Card</a>
+        <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html" role="listitem">Employment Permit (Non-EU)</a>
+        <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html" role="listitem">Permanent Residence (Reg. 6.2) <span class="badge">Accelerated</span></a>
+      </div>
+      <p class="note">Not sure which route applies? Email nationality + job/income + family + timeline and we’ll reply with the correct route and checklist.</p>
+    </div>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">How We Work</h2>
+    <ol class="process-steps">
+      <li><strong>Triage:</strong> confirm the correct route and the risky points (documents, timing, eligibility).</li>
+      <li><strong>Checklist:</strong> issue a clean checklist + templates; map translation/legalisation needs.</li>
+      <li><strong>Bookings:</strong> coordinate appointment calendars and sequencing (principal + dependants).</li>
+      <li><strong>Submission:</strong> file complete packs, track references, log clarifications to closure.</li>
+      <li><strong>Onboarding:</strong> post-approval practical steps (where applicable) and renewal reminders.</li>
+    </ol>
+    <p class="note">Where legal representation is required, we coordinate immigration lawyers—while you still deal with MegaServe as your single point of contact. Where venue policy allows, a MegaServe representative can accompany clients to Migration appointments.</p>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Do you provide immigration legal advice?</summary>
+        <p>No. We provide practical coordination, document packs, bookings, and process management. Where legal advice is required, we coordinate with immigration lawyers.</p>
+      </details>
+      <details>
+        <summary>Can you handle family members and dependants?</summary>
+        <p>Yes. We sequence dependant packs and appointments alongside the principal applicant and track linked renewals where applicable.</p>
+      </details>
+      <details>
+        <summary>How long do Cyprus permits take?</summary>
+        <p>Processing times vary by route and authority workload. We share current local expectations during intake and keep weekly status notes until decision.</p>
+      </details>
+      <details>
+        <summary>Do you attend appointments?</summary>
+        <p>We coordinate bookings and provide attendance notes. Where venue policy allows, we can provide a MegaServe representative to accompany clients to Migration appointments.</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
+    <h2>Start Migration &amp; Relocation</h2>
+    <p class="contact-intro">Email a brief summary and we’ll reply with the correct route and checklist.</p>
+
+    <!-- OPTION A CTA TAXONOMY -->
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Migration%20%26%20Relocation%20Services%20-%20Initial%20Enquiry" class="btn-primary" data-cta="email" data-page="migration-relocation-hub">Email Us</a>
+      <a class="btn-secondary" href="/start/" data-cta="start-now" data-page="migration-relocation-hub">Start Now</a>
+    </div>
+
+    <p class="note">Fastest turnaround: include nationality, route target (work/investment/visitor/citizenship), family members, desired arrival date, and employer details (if applicable).</p>
+  </div>
+</section>
+
+<footer id="site-footer">
+  <div class="container footer-flex">
+    <div class="footer-left">
+      <p>&copy; <span id="year"></span> MegaServe Nominee Services Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
+    </div>
+
+    <div class="footer-nav">
+      <a href="/about.html">About</a>
+      <a href="/services/corporate-services/">Corporate Services</a>
+      <a href="/services/nominee-and-fiduciary-services/">Nominee &amp; Fiduciary</a>
+      <a href="/services/migration-and-relocation-services/">Migration &amp; Relocation</a>
+      <a href="/services/tax-and-vat-administration/">Tax &amp; VAT</a>
+      <a href="/services/corporate-consultancy/">Consultancy</a>
+      <a href="/services/compliance-services/">Compliance</a>
+      <a href="/start/">Start Now</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Migration%20%26%20Relocation%20Services%20-%20Initial%20Enquiry" class="btn-primary" data-cta="sticky-email" data-page="migration-relocation-hub">Email Us</a>
+  <a href="/start/" class="btn-secondary" data-cta="sticky-start-now" data-page="migration-relocation-hub">Start Now</a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Breadcrumbs -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.megaserve.eu/"},
+    {"@type":"ListItem","position":2,"name":"Migration & Relocation Services","item":"https://www.megaserve.eu/services/migration-and-relocation-services/"}
+  ]
+}
+</script>
+
+<!-- ItemList (category directory) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"Migration & Relocation Services",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"url":"https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html","name":"Residency by Employment Permit Services"},
+    {"@type":"ListItem","position":2,"url":"https://www.megaserve.eu/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html","name":"Residency by Investment Permit Services"},
+    {"@type":"ListItem","position":3,"url":"https://www.megaserve.eu/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html","name":"Visitor Residency Permit Services"},
+    {"@type":"ListItem","position":4,"url":"https://www.megaserve.eu/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html","name":"Naturalisation & Citizenship Services"}
+  ]
+}
+</script>
+
+<script src="/script.js?v=14"></script>
+</body>
+</html>
