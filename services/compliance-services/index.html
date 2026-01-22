@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Compliance Services — MegaServe Cyprus</title>
+  <meta name="description" content="Cyprus compliance services delivered with disciplined documentation: client onboarding assistance, screening, KYC procedures, AML manuals, and sanctions guides—structured for audit readiness and bank comfort." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Canonical (pretty URL, no index.html) -->
+  <link rel="canonical" href="https://www.megaserve.eu/services/compliance-services/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Compliance Services — MegaServe Cyprus" />
+  <meta property="og:description" content="Cyprus compliance services: onboarding assistance, screening, KYC procedures, AML manuals, and sanctions guides—structured documentation for audit readiness and bank comfort." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.megaserve.eu/services/compliance-services/" />
+  <meta property="og:image" content="https://www.megaserve.eu/assets/og/compliance-services-hub-og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Compliance Services — MegaServe Cyprus" />
+  <meta name="twitter:description" content="Client onboarding assistance, screening, KYC procedures, AML manuals, and sanctions guides in Cyprus—clean, auditable compliance documentation." />
+  <meta name="twitter:image" content="https://www.megaserve.eu/assets/og/compliance-services-hub-og.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16.png" />
+  <meta name="theme-color" content="#a00000" />
+
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="/style.css?v=14" />
+
+  <style>
+    /* Canonical service-page shell */
+    .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
+    .page-hero .container{padding:2.5rem 0 1.5rem}
+    .page-hero h1{text-align:center}
+
+    .content-narrow{max-width:900px;margin:0 auto}
+    .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
+    .muted{color:#666}
+    .section-spaced{margin-top:2rem}
+
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
+
+    .keyline{border-top:1px solid #e9e9e9;margin:2rem 0}
+
+    .feature-list{list-style:none;padding-left:0}
+    .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
+    .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
+
+    .process-steps{counter-reset: step;list-style:none;padding-left:0}
+    .process-steps li{counter-increment:step;margin:.6rem 0;padding-left:2.1rem;position:relative}
+    .process-steps li::before{content:counter(step) ".";position:absolute;left:0;color:var(--color-primary);font-weight:700}
+
+    .note{font-size:.95rem;color:#666}
+
+    /* Service cards grid */
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+    .service-card{
+      border:1px solid #e5e5e5;border-radius:.75rem;background:#fff;padding:1rem;
+      display:flex;flex-direction:column;gap:.5rem
+    }
+    .service-card h3{margin:.1rem 0 .25rem}
+    .service-card p{margin:0;color:#555}
+    .service-card a{margin-top:auto;align-self:flex-start}
+    .tag{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:.15rem .55rem;font-size:.8rem;color:#444;background:#fafafa;margin-right:.35rem}
+
+    /* FAQs */
+    .faq details{border:1px solid #eee;border-radius:6px;padding:.85rem 1rem;margin:.6rem 0;background:#fff}
+    .faq summary{cursor:pointer;font-weight:600;list-style:none}
+
+    /* Anchor nav */
+    .anchor-nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #eee}
+    .anchor-nav .container{display:flex;gap:1rem;flex-wrap:wrap;padding:.75rem 0}
+    .anchor-nav a{color:inherit;text-decoration:none;font-weight:600;font-size:.95rem}
+    .anchor-nav a:hover{text-decoration:underline}
+
+    /* Fallback fade-up */
+    .fade-up{opacity:0; transform: translateY(14px);}
+    .fade-up.visible{opacity:1; transform: translateY(0);}
+
+    .submenu-caret{margin-left:.35rem}
+
+    /* Bottom CTA contrast + centering */
+    #contact-cta .btn-primary{background:#fff;color:var(--color-primary);border:1px solid #fff}
+    #contact-cta .btn-primary:hover{background:#f7f7f7;border-color:#f7f7f7}
+    #contact-cta .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+    #contact-cta .btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff}
+    #contact-cta { text-align: center; }
+    #contact-cta .container { max-width: 900px; margin: 0 auto; }
+    #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{
+      color:#fff;
+      opacity:1;
+      font-weight:600;
+      font-size:1rem;
+      margin-top:.75rem;
+    }
+
+    /* Header nav CTA */
+    #main-nav .nav-cta a.btn-primary{
+      background:#c1121f;
+      color:#fff !important;
+      border:none;
+      padding:.6rem 1rem;
+      border-radius:.5rem;
+      font-weight:700;
+      letter-spacing:.02em;
+      display:inline-block;
+      box-shadow:0 1px 0 rgba(0,0,0,.15);
+    }
+    #main-nav .nav-cta a.btn-primary:hover{ background:#9e0f1a; }
+  </style>
+</head>
+
+<body class="sticky-cta-pad">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header id="site-header">
+  <div class="container header-flex">
+    <a href="/index.html" class="logo-link" aria-label="MegaServe Home">
+      <img src="/assets/logo.svg" alt="MegaServe Logo" class="site-logo" />
+    </a>
+    <button id="nav-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
+
+    <nav id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+
+        <!-- Corporate Services -->
+        <li class="has-dropdown">
+          <a href="/services/corporate-services/" aria-haspopup="true" aria-expanded="false">Corporate Services</a>
+          <ul class="dropdown" aria-label="Corporate Services Submenu">
+            <li><a href="/services/corporate-services/">Corporate Services Overview</a></li>
+            <li><a href="/services/corporate-services/company-formation-services.html">Company Formation Services</a></li>
+            <li><a href="/services/corporate-services/company-structuring-restructuring-services.html">Company Structuring &amp; Re-Structuring Services</a></li>
+            <li><a href="/services/corporate-services/administrative-services.html">Administrative Services</a></li>
+            <li><a href="/services/corporate-services/banking-administration-services.html">Banking Administration Services</a></li>
+            <li><a href="/services/corporate-services/escrow-assistance-services.html">Escrow Assistance Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Nominee & Fiduciary Services -->
+        <li class="has-dropdown">
+          <a href="/services/nominee-and-fiduciary-services/" aria-haspopup="true" aria-expanded="false">Nominee &amp; Fiduciary Services</a>
+          <ul class="dropdown" aria-label="Nominee &amp; Fiduciary Services Submenu">
+            <li><a href="/services/nominee-and-fiduciary-services/">Nominee &amp; Fiduciary Overview</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/directorship-management-services.html">Directorship &amp; Management Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/corporate-secretarial-services.html">Corporate Secretarial Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/registered-address-services.html">Registered Address Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/virtual-office-services.html">Virtual Office Services</a></li>
+            <li><a href="/services/nominee-and-fiduciary-services/physical-office-rental-services.html">Physical Office Rental Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Migration & Relocation Services with flyouts -->
+        <li class="has-dropdown">
+          <a href="/services/migration-and-relocation-services/" aria-haspopup="true" aria-expanded="false">Migration &amp; Relocation Services</a>
+          <ul class="dropdown" aria-label="Migration & Relocation Services Submenu">
+            <li><a href="/services/migration-and-relocation-services/">Migration &amp; Relocation Overview</a></li>
+
+            <li class="has-flyout">
+              <a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/residency-by-employment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Employment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Employment permit routes">
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/employment-permit-non-eu.html">Employment Permit for Non-E.U. Nationals</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/general-employment-permit.html">General Employment</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-blue-card.html">EU Blue Card</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/digital-nomad-visa.html">Digital Nomad Visa</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-employment-permit-services/eu-citizen-family-registration.html">EU Citizen &amp; Family Members</a></li>
+              </ul>
+            </li>
+
+            <li class="has-flyout">
+              <a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/residency-by-investment-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Residency by Investment Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Investment routes">
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/permanent-residence-reg-6-2.html">Permanent Residence (Reg. 6.2) – Accelerated</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/categories-a-f.html">Categories A–F</a></li>
+                <li><a href="/services/migration-and-relocation-services/residency-by-investment-permit-services/cyprus-startup-visa.html">Cyprus Start-Up Visa</a></li>
+              </ul>
+            </li>
+
+            <li class="has-flyout">
+              <a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitor-residency-permit-services.html" aria-haspopup="true" aria-expanded="false">
+                Visitor Residency Permit Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Visitor routes">
+                <li><a href="/services/migration-and-relocation-services/visitor-residency-permit-services/visitors-permit.html">Visitors Permit</a></li>
+              </ul>
+            </li>
+
+            <li class="has-flyout">
+              <a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-citizenship-services.html" aria-haspopup="true" aria-expanded="false">
+                Naturalisation &amp; Citizenship Services <span class="submenu-caret" aria-hidden="true">›</span>
+              </a>
+              <ul class="flyout" aria-label="Citizenship routes">
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-years-residence.html">Naturalisation — Years of Residence</a></li>
+                <li><a href="/services/migration-and-relocation-services/naturalisation-and-citizenship-services/naturalisation-spouse-cypriot.html">Naturalisation — Spouse of Cypriot</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Tax & VAT Administration -->
+        <li class="has-dropdown">
+          <a href="/services/tax-and-vat-administration/" aria-haspopup="true" aria-expanded="false">Tax &amp; VAT Administration</a>
+          <ul class="dropdown" aria-label="Tax & VAT Administration Submenu">
+            <li><a href="/services/tax-and-vat-administration/">Tax &amp; VAT Overview</a></li>
+            <li><a href="/services/tax-and-vat-administration/tic-tin-registration-services.html">TIC / TIN Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/vat-registration-services.html">VAT Registration Services</a></li>
+            <li><a href="/services/tax-and-vat-administration/tax-vat-filing-submission-services.html">Tax &amp; VAT Filing / Submission Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Corporate Consultancy -->
+        <li class="has-dropdown">
+          <a href="/services/corporate-consultancy/" aria-haspopup="true" aria-expanded="false">Corporate Consultancy</a>
+          <ul class="dropdown" aria-label="Corporate Consultancy Submenu">
+            <li><a href="/services/corporate-consultancy/">Corporate Consultancy Overview</a></li>
+            <li><a href="/services/corporate-consultancy/ma-advisory-services.html">Mergers &amp; Acquisitions (M&amp;A) Advisory Services</a></li>
+            <li><a href="/services/corporate-consultancy/business-synergy-development-integration-services.html">Business Synergy Development &amp; Integration Services</a></li>
+            <li><a href="/services/corporate-consultancy/project-management-services.html">Project Management Services</a></li>
+          </ul>
+        </li>
+
+        <!-- Compliance Services -->
+        <li class="has-dropdown">
+          <a href="/services/compliance-services/" aria-current="page" aria-haspopup="true" aria-expanded="false">Compliance Services</a>
+          <ul class="dropdown" aria-label="Compliance Services Submenu">
+            <li><a aria-current="page" href="/services/compliance-services/">Compliance Overview</a></li>
+            <li><a href="/services/compliance-services/client-onboarding-assistance-services.html">Client Onboarding Assistance Services</a></li>
+            <li><a href="/services/compliance-services/client-screening-services.html">Client Screening Services</a></li>
+            <li><a href="/services/compliance-services/kyc-procedures.html">Know Your Client (KYC) Procedures</a></li>
+            <li><a href="/services/compliance-services/aml-procedures-manuals.html">Anti-Money Laundering (AML) Procedures &amp; Manuals</a></li>
+            <li><a href="/services/compliance-services/sanctions-manuals-compliance-guides.html">Sanctions Manuals &amp; Compliance Guides</a></li>
+          </ul>
+        </li>
+
+        <!-- Simple pages + header CTA -->
+        <li><a href="/about.html">About</a></li>
+        <li><a href="#contact-cta">Contact</a></li>
+        <li class="nav-cta"><a class="btn-primary" href="/start/">Start Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero fade-up" data-anim-delay="0.1">
+  <div class="container content-narrow">
+    <h1>Compliance Services</h1>
+    <p>Practical, documentation-led compliance: onboarding, screening, KYC/AML procedures, and sanctions guidance—structured for audit readiness and bank comfort.</p>
+    <div class="micro-trust">Cyprus-based team · <strong>Clean evidence packs</strong> · Structured procedures and logs</div>
+
+    <!-- OPTION A CTA TAXONOMY -->
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Compliance%20Services%20-%20Initial%20Enquiry" class="btn-primary" data-cta="email" data-page="compliance-hub">Email Us</a>
+      <a href="/start/" class="btn-secondary" data-cta="start-now" data-page="compliance-hub">Start Now</a>
+    </div>
+  </div>
+</section>
+
+<nav class="anchor-nav fade-up" aria-label="Section navigation">
+  <div class="container content-narrow">
+    <a href="#overview">Overview</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#contact-cta">Start</a>
+  </div>
+</nav>
+
+<section id="main-content" class="container fade-up" data-anim-delay="0.2">
+  <div class="content-narrow">
+
+    <h2 id="overview">Overview</h2>
+    <p class="muted">
+      Compliance failures rarely come from a lack of “rules” — they come from poor documentation and inconsistent execution.
+      We help you build and run a clean, auditable compliance workflow: what was checked, when it was checked, and what evidence supports it.
+    </p>
+
+    <h3 class="section-spaced">Who It’s For</h3>
+    <ul class="feature-list">
+      <li>Corporate service providers and businesses needing structured onboarding and KYC evidence packs</li>
+      <li>Companies preparing for bank/EMI KYB reviews and ongoing monitoring</li>
+      <li>Teams needing AML/sanctions documentation and internal procedures to withstand audit scrutiny</li>
+      <li>Operators who want an organised compliance archive (clean, indexed, retrievable)</li>
+    </ul>
+
+    <div class="keyline"></div>
+
+    <h2 id="services">Compliance Services Directory</h2>
+    <div class="card-grid">
+
+      <div class="service-card">
+        <div>
+          <span class="tag">Onboarding</span>
+          <span class="tag">KYC</span>
+        </div>
+        <h3>Client Onboarding Assistance Services</h3>
+        <p>Structured onboarding workflows: evidence collection, file hygiene, indexing, and audit-ready packs for banks and auditors.</p>
+        <a class="btn-secondary" href="/services/compliance-services/client-onboarding-assistance-services.html">View service</a>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <span class="tag">Screening</span>
+          <span class="tag">Risk</span>
+        </div>
+        <h3>Client Screening Services</h3>
+        <p>Risk screening workflows and evidence logs, including watchlist/sanctions checks and structured decision notes.</p>
+        <a class="btn-secondary" href="/services/compliance-services/client-screening-services.html">View service</a>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <span class="tag">Procedure</span>
+          <span class="tag">KYC</span>
+        </div>
+        <h3>Know Your Client (KYC) Procedures</h3>
+        <p>Defined KYC standards: what you collect, how you verify, retention rules, and how to evidence decisions.</p>
+        <a class="btn-secondary" href="/services/compliance-services/kyc-procedures.html">View service</a>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <span class="tag">AML</span>
+          <span class="tag">Manuals</span>
+        </div>
+        <h3>Anti-Money Laundering (AML) Procedures &amp; Manuals</h3>
+        <p>Drafting and implementation support for AML policy sets, including logs, triggers, and practical operating guidance.</p>
+        <a class="btn-secondary" href="/services/compliance-services/aml-procedures-manuals.html">View service</a>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <span class="tag">Sanctions</span>
+          <span class="tag">Guides</span>
+        </div>
+        <h3>Sanctions Manuals &amp; Compliance Guides</h3>
+        <p>Sanctions policy and controls: screening rules, escalation paths, documentation standards, and training materials.</p>
+        <a class="btn-secondary" href="/services/compliance-services/sanctions-manuals-compliance-guides.html">View service</a>
+      </div>
+
+    </div>
+
+    <p class="note section-spaced">
+      Not sure which service applies? Email your industry, your onboarding volume, and whether you’re under bank/EMI audit pressure.
+      We’ll recommend the correct scope.
+    </p>
+
+    <div class="keyline"></div>
+
+    <h2 id="process">How We Work</h2>
+    <ol class="process-steps">
+      <li><strong>Scope:</strong> confirm your compliance objective (bank KYB, internal policy, audit remediation, onboarding flow).</li>
+      <li><strong>Evidence model:</strong> define what documents/logs you need and how they should be indexed.</li>
+      <li><strong>Procedure:</strong> implement checklists, decision notes, escalation rules, and retention standards.</li>
+      <li><strong>Execution:</strong> run onboarding/screening with a clean audit trail.</li>
+      <li><strong>Maintenance:</strong> refresh cycles, periodic reviews, and updates when rules change.</li>
+    </ol>
+    <p class="note">We coordinate and document. Where regulated legal advice is needed, we coordinate with your lawyers and keep evidence consistent.</p>
+
+    <div class="keyline"></div>
+
+    <h2 id="faqs">FAQs</h2>
+    <div class="faq">
+      <details>
+        <summary>Do you provide legal advice?</summary>
+        <p>No. We provide documentation-led compliance coordination and procedure implementation. For legal opinions, we coordinate with your lawyers.</p>
+      </details>
+      <details>
+        <summary>Can you help with bank/EMI KYB reviews?</summary>
+        <p>Yes. We structure files, standardise evidence packs, and maintain an audit-ready index to reduce back-and-forth.</p>
+      </details>
+      <details>
+        <summary>Do you implement a full KYC/AML manual?</summary>
+        <p>Yes. We can draft and help implement procedures, logs, triggers, and staff-facing operating guidance.</p>
+      </details>
+      <details>
+        <summary>How do you keep records audit-ready?</summary>
+        <p>We use structured folder conventions, consistent naming, version control, and logged decisions (what was checked, when, and why).</p>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact-cta" class="fade-up" data-anim-delay="0.5" style="background:var(--color-primary);color:#fff">
+  <div class="container content-narrow">
+    <h2>Start Compliance Services</h2>
+    <p class="contact-intro">Email a brief summary and we’ll reply with the correct scope and next steps.</p>
+
+    <!-- OPTION A CTA TAXONOMY -->
+    <div class="cta-row">
+      <a href="mailto:megaserve@megaserve.eu?subject=Compliance%20Services%20-%20Initial%20Enquiry" class="btn-primary" data-cta="email" data-page="compliance-hub">Email Us</a>
+      <a class="btn-secondary" href="/start/" data-cta="start-now" data-page="compliance-hub">Start Now</a>
+    </div>
+
+    <p class="note">Fastest turnaround: include your sector, onboarding volume, and what triggered the request (bank KYB, audit, internal policy, or remediation).</p>
+  </div>
+</section>
+
+<footer id="site-footer">
+  <div class="container footer-flex">
+    <div class="footer-left">
+      <p>&copy; <span id="year"></span> MegaServe Nominee Services Ltd. All rights reserved.</p>
+      <p>Registered in Cyprus | Company No. ΗΕ 178018</p>
+      <p>Address: 11, Kyriacou Matsi Str., Office 303<br>1082-Nicosia<br>Cyprus</p>
+      <p>Contact: <a href="mailto:megaserve@megaserve.eu">megaserve@megaserve.eu</a> | Tel: +357 22 767770</p>
+    </div>
+
+    <div class="footer-nav">
+      <a href="/about.html">About</a>
+      <a href="/services/corporate-services/">Corporate Services</a>
+      <a href="/services/nominee-and-fiduciary-services/">Nominee &amp; Fiduciary</a>
+      <a href="/services/migration-and-relocation-services/">Migration &amp; Relocation</a>
+      <a href="/services/tax-and-vat-administration/">Tax &amp; VAT</a>
+      <a href="/services/corporate-consultancy/">Consultancy</a>
+      <a href="/services/compliance-services/">Compliance</a>
+      <a href="/start/">Start Now</a>
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA (canonical) -->
+<div id="sticky-cta" aria-label="Quick contact">
+  <a href="mailto:megaserve@megaserve.eu?subject=Compliance%20Services%20-%20Initial%20Enquiry" class="btn-primary" data-cta="sticky-email" data-page="compliance-hub">Email Us</a>
+  <a href="/start/" class="btn-secondary" data-cta="sticky-start-now" data-page="compliance-hub">Start Now</a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Breadcrumbs -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.megaserve.eu/"},
+    {"@type":"ListItem","position":2,"name":"Compliance Services","item":"https://www.megaserve.eu/services/compliance-services/"}
+  ]
+}
+</script>
+
+<!-- ItemList (category directory) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"Compliance Services",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"url":"https://www.megaserve.eu/services/compliance-services/client-onboarding-assistance-services.html","name":"Client Onboarding Assistance Services"},
+    {"@type":"ListItem","position":2,"url":"https://www.megaserve.eu/services/compliance-services/client-screening-services.html","name":"Client Screening Services"},
+    {"@type":"ListItem","position":3,"url":"https://www.megaserve.eu/services/compliance-services/kyc-procedures.html","name":"Know Your Client (KYC) Procedures"},
+    {"@type":"ListItem","position":4,"url":"https://www.megaserve.eu/services/compliance-services/aml-procedures-manuals.html","name":"Anti-Money Laundering (AML) Procedures & Manuals"},
+    {"@type":"ListItem","position":5,"url":"https://www.megaserve.eu/services/compliance-services/sanctions-manuals-compliance-guides.html","name":"Sanctions Manuals & Compliance Guides"}
+  ]
+}
+</script>
+
+<script src="/script.js?v=14"></script>
+</body>
+</html>
