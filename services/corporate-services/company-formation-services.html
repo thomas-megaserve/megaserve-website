@@ -48,7 +48,6 @@
     .feature-list{list-style:none;padding-left:0}
     .feature-list li{position:relative;padding-left:1.25rem;margin:.5rem 0}
     .feature-list li::before{content:"✔";position:absolute;left:0;color:var(--color-gold)}
-    .cta-box{background:#f7f7f7;border:1px solid rgba(0,0,0,.05);border-left:3px solid var(--color-gold);padding:1rem 1.25rem;border-radius:6px}
     .micro-trust{font-size:.95rem;color:#555;margin-top:.5rem}
     .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
     .btn-secondary{display:inline-block;padding:.7rem 1rem;border:1px solid var(--color-primary);border-radius:6px;text-decoration:none}
@@ -73,6 +72,7 @@
     #contact-cta { text-align: center; }
     #contact-cta .container { max-width: 900px; margin: 0 auto; }
     #contact-cta .cta-row { justify-content: center; align-items: center; }
+    #contact-cta .note{color:#fff;opacity:1;font-weight:600;font-size:1rem;margin-top:.75rem}
 
     /* Fallback fade-up */
     .fade-up{opacity:0; transform: translateY(14px);}
@@ -239,11 +239,10 @@
     <p>We set up your Cyprus company and deliver the full document pack. We also help with banking onboarding and the next compliance steps.</p>
     <div class="micro-trust">Cyprus-based team · <strong>30+ years’ experience</strong> · Multilingual support</div>
 
-    <!-- OPTION A CTA TAXONOMY + keep checklist action -->
+    <!-- OPTION A CTA TAXONOMY -->
     <div class="cta-row">
       <a href="mailto:megaserve@megaserve.eu?subject=Cyprus%20Company%20Formation%20-%20Initial%20Enquiry" class="btn-primary" data-cta="email" data-page="company-formation">Email Us</a>
       <a href="/start/" class="btn-secondary" data-cta="start-now" data-page="company-formation">Start Now</a>
-      <a href="#download-checklist" class="btn-secondary" data-cta="download-checklist" data-page="company-formation">Download Checklist</a>
     </div>
   </div>
 </section>
@@ -289,7 +288,7 @@
     <div class="proof-strip" aria-label="Service proof points">
       <div class="proof-item">• Cyprus-first focus</div>
       <div class="proof-item">• Banking introductions + onboarding support*</div>
-      <div class="proof-item">• Checklists to avoid rework</div>
+      <div class="proof-item">• Clear steps and timelines</div>
     </div>
     <p class="muted" style="margin-top:-.5rem">*Banks always decide account approval. We prepare the file and support the process, but we cannot guarantee outcomes.</p>
 
@@ -311,7 +310,7 @@
       <p>MegaServe prepared the MoA/AoA, filed with the Registrar, and delivered the full certificate set within about <strong>72 hours</strong>. The client submitted the tender on time.</p>
     </div>
 
-    <h2 id="requirements" class="section-spaced">Requirements (Client Checklist)</h2>
+    <h2 id="requirements" class="section-spaced">Requirements</h2>
     <ul class="feature-list">
       <li>Certified passports/IDs for UBOs, directors, and shareholders</li>
       <li>Recent proof of address (last 3 months)</li>
@@ -321,9 +320,6 @@
       <li>Draft contracts or key customers/suppliers (if available)</li>
       <li>Power of Attorney (if needed for signing)</li>
     </ul>
-    <div id="download-checklist" class="cta-box">
-      Prefer a printable list? <a href="/assets/checklists/cyprus-ltd-formation-checklist.pdf" data-cta="download-checklist" data-page="company-formation">Download the one-page checklist (PDF)</a>.
-    </div>
 
     <h2 class="section-spaced">Risk &amp; Mitigations</h2>
     <ul class="feature-list">
@@ -387,7 +383,7 @@
 <section id="contact-cta" class="fade-up" data-anim-delay="0.3" style="background:var(--color-primary);color:#fff">
   <div class="container content-narrow">
     <h2>Start Your Incorporation</h2>
-    <p class="contact-intro">Email a short summary and we’ll reply with a checklist and timeline.</p>
+    <p class="contact-intro">Email a short summary and we’ll reply with the next steps and timing.</p>
 
     <!-- OPTION A CTA TAXONOMY -->
     <div class="cta-row">
@@ -395,9 +391,7 @@
       <a href="/start/" class="btn-secondary" data-cta="start-now" data-page="company-formation">Start Now</a>
     </div>
 
-    <p class="note" style="margin-top:.75rem;color:#fff;opacity:1;">
-      For a fast reply: include your business activity, countries involved, owners/directors, and your target timeline.
-    </p>
+    <p class="note">For a fast reply: include your business activity, countries involved, owners/directors, and your target timeline.</p>
   </div>
 </section>
 
