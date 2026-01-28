@@ -37,6 +37,9 @@
   <!-- Global stylesheet -->
   <link rel="stylesheet" href="/style.css?v=14" />
 
+  <!-- CountUp (harmless if blocked; consistent) -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.umd.js" defer></script>
+
   <style>
     /* Canonical service-page shell */
     .page-hero{background:#fafafa;border-bottom:2px solid var(--color-gold);}
@@ -263,7 +266,6 @@
     <p>Set up and run your Cyprus company with clean documents and clear steps. We handle formation, changes, admin, banking support, and escrow coordination.</p>
     <div class="micro-trust">Cyprus-based team · <strong>30+ years’ experience</strong> · Documents ready for banks and auditors</div>
 
-    <!-- OPTION A CTA TAXONOMY -->
     <div class="cta-row">
       <a href="mailto:megaserve@megaserve.eu?subject=Corporate%20Services%20-%20Initial%20Enquiry" class="btn-primary" data-cta="email" data-page="corporate-services-hub">Email Us</a>
       <a href="/start/" class="btn-secondary" data-cta="start-now" data-page="corporate-services-hub">Start Now</a>
@@ -396,7 +398,6 @@
     <h2>Start Corporate Services</h2>
     <p class="contact-intro">Email a short message and we’ll reply with the next steps.</p>
 
-    <!-- OPTION A CTA TAXONOMY -->
     <div class="cta-row">
       <a href="mailto:megaserve@megaserve.eu?subject=Corporate%20Services%20-%20Initial%20Enquiry" class="btn-primary" data-cta="email" data-page="corporate-services-hub">Email Us</a>
       <a class="btn-secondary" href="/start/" data-cta="start-now" data-page="corporate-services-hub">Start Now</a>
@@ -466,6 +467,26 @@
     {"@type":"ListItem","position":5,"url":"https://www.megaserve.eu/services/corporate-services/escrow-assistance-services.html","name":"Escrow Assistance Services"}
   ]
 }
+</script>
+
+<!-- Optional CountUp helper (no-op if no [data-countup] elements) -->
+<script defer>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!window.CountUp) return;
+    document.querySelectorAll('[data-countup]').forEach(function (el) {
+      var text = (el.textContent || '').trim();
+      var hasPercent = text.endsWith('%');
+      var endVal = parseFloat(el.getAttribute('data-countup')) || parseFloat(text) || 0;
+
+      var suffix = '';
+      if (hasPercent) suffix = '%';
+      else if (text.endsWith('+')) suffix = '+';
+
+      var opts = { duration: 1.2, separator: ',', suffix: suffix };
+      var cu = new CountUp.CountUp(el, endVal, opts);
+      if (!cu.error) cu.start();
+    });
+  });
 </script>
 
 <script src="/script.js?v=14"></script>
