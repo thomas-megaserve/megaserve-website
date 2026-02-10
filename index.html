@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Project-relative assets -->
   <link rel="stylesheet" href="style.css?v=14">
@@ -215,7 +215,7 @@
             <path d="M17 7a4 4 0 1 1 0 8"></path>
           </svg>
         </div>
-        <div id="clients" class="stat-number">0</div>
+        <div id="clients" class="stat-number">1,355</div>
         <div class="stat-label">Clients Supported</div>
       </div>
       <div class="stat">
@@ -226,8 +226,8 @@
             <path d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3"></path>
           </svg>
         </div>
-        <div id="assets" class="stat-number">0</div>
-        <div class="stat-label">€550M+ Assets Administered</div>
+        <div id="assets" class="stat-number">€550M+</div>
+        <div class="stat-label">Assets Administered</div>
       </div>
       <div class="stat">
         <div class="stat-icon">
@@ -236,7 +236,7 @@
             <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
           </svg>
         </div>
-        <div id="projects" class="stat-number">0</div>
+        <div id="projects" class="stat-number">110+</div>
         <div class="stat-label">Relocations Supported</div>
       </div>
       <div class="stat">
@@ -246,7 +246,7 @@
             <polyline points="14 2 14 8 20 8"></polyline>
           </svg>
         </div>
-        <div id="companies" class="stat-number">0</div>
+        <div id="companies" class="stat-number">475</div>
         <div class="stat-label">Companies Incorporated</div>
       </div>
     </div>
@@ -385,17 +385,6 @@
 <script>
   document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
 </script>
-
-<script>
-  // Updated counters
-  const clients = new countUp.CountUp('clients', 1355, { enableScrollSpy: true, duration: 2.2, separator: ',' });
-  const assets  = new countUp.CountUp('assets', 550,  { enableScrollSpy: true, duration: 2.2, separator: ',', suffix: 'M+' });
-  const projects = new countUp.CountUp('projects', 110, { enableScrollSpy: true, duration: 2.2, separator: ',' });
-  const companies = new countUp.CountUp('companies', 475, { enableScrollSpy: true, duration: 2.2, separator: ',' });
-
-  clients.start(); assets.start(); projects.start(); companies.start();
-</script>
-
 <script src="script.js?v=14"></script>
 </body>
 </html>
