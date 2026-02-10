@@ -185,45 +185,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* -------------------
      SAFE CountUp animations
+     - Must render EXACTLY:
+       1,355 | €550M+ | 110+ | 475
   -------------------- */
   try {
     const hasCountUp = typeof window.countUp !== "undefined" && typeof window.countUp.CountUp === "function";
     const options = { duration: 3 };
+
+    // Final display strings (exact)
     const stats = [
-      { id: 'clients', value: 832 },
-      { id: 'assets', value: 2.1, isCurrency: true, suffix: 'B' },
-      { id: 'projects', value: 2394 },
-      { id: 'companies', value: 470 }
+      { id: "clients",   value: 1355, finalText: "1,355",  useCountUp: true  },
+      { id: "assets",    finalText: "€550M+",              useCountUp: false },
+      { id: "projects",  finalText: "110+",                useCountUp: false },
+      { id: "companies", value: 475,  finalText: "475",    useCountUp: true  }
     ];
 
     stats.forEach(stat => {
       const el = document.getElementById(stat.id);
       if (!el) return;
 
-      if (hasCountUp) {
-        const counter = new countUp.CountUp(stat.id, stat.value, stat.isCurrency ? {
+      // Fallback: always show the final text if CountUp isn't available
+      if (!hasCountUp) {
+        el.textContent = stat.finalText;
+        return;
+      }
+
+      // Animate only numeric-only targets; force exact final formatting after animation
+      if (stat.useCountUp) {
+        const counter = new countUp.CountUp(stat.id, stat.value, {
           ...options,
-          prefix: '€',
-          suffix: stat.suffix || '',
-          decimalPlaces: 1
-        } : options);
+          separator: ",",
+          decimalPlaces: 0
+        });
 
         if (!counter.error) {
-          counter.start();
+          counter.start(() => {
+            el.textContent = stat.finalText; // force exact format (e.g., 1,355)
+          });
 
           // Gold glow effect on stat icon when count starts
-          const statEl = el.closest('.stat');
+          const statEl = el.closest(".stat");
           if (statEl) {
-            const icon = statEl.querySelector('svg');
+            const icon = statEl.querySelector("svg");
             if (icon) {
-              icon.style.color = 'var(--color-gold)';
-              setTimeout(() => { icon.style.color = 'var(--color-primary)'; }, 1500);
+              icon.style.color = "var(--color-gold)";
+              setTimeout(() => { icon.style.color = "var(--color-primary)"; }, 1500);
             }
           }
+        } else {
+          el.textContent = stat.finalText;
         }
       } else {
-        // Fallback text so page doesn’t look empty
-        el.textContent = stat.isCurrency ? `€${stat.value}${stat.suffix || ''}` : String(stat.value);
+        // String-based targets like "€550M+" and "110+"
+        el.textContent = stat.finalText;
       }
     });
   } catch { /* ignore */ }
