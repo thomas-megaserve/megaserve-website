@@ -598,7 +598,11 @@ img {
   transition: color 0.3s ease;
 }
 
-.stat:hover .stat-icon svg { color: var(--color-gold); }
+/* FORCE hover/keyboard focus to win even if JS sets inline styles */
+#stats .stat:hover .stat-icon svg,
+#stats .stat:focus-within .stat-icon svg {
+  color: var(--color-gold) !important;
+}
 
 .stat-number { font-size: 2.5rem; font-weight: bold; color: var(--color-primary); }
 
