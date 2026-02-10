@@ -192,6 +192,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const hasCountUp = typeof window.countUp !== "undefined" && typeof window.countUp.CountUp === "function";
     const options = { duration: 3 };
 
+    // Gold glow helper (applies to ALL stats, animated or not)
+    const glowStatIcon = (el) => {
+      const statEl = el?.closest(".stat");
+      if (!statEl) return;
+      const icon = statEl.querySelector("svg");
+      if (!icon) return;
+      icon.style.color = "var(--color-gold)";
+      setTimeout(() => { icon.style.color = "var(--color-primary)"; }, 1500);
+    };
+
     // Final display strings (exact)
     const stats = [
       { id: "clients",   value: 1355, finalText: "1,355",  useCountUp: true  },
@@ -203,6 +213,9 @@ document.addEventListener("DOMContentLoaded", () => {
     stats.forEach(stat => {
       const el = document.getElementById(stat.id);
       if (!el) return;
+
+      // Always trigger the glow for consistent visual behavior
+      glowStatIcon(el);
 
       // Fallback: always show the final text if CountUp isn't available
       if (!hasCountUp) {
@@ -222,16 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
           counter.start(() => {
             el.textContent = stat.finalText; // force exact format (e.g., 1,355)
           });
-
-          // Gold glow effect on stat icon when count starts
-          const statEl = el.closest(".stat");
-          if (statEl) {
-            const icon = statEl.querySelector("svg");
-            if (icon) {
-              icon.style.color = "var(--color-gold)";
-              setTimeout(() => { icon.style.color = "var(--color-primary)"; }, 1500);
-            }
-          }
         } else {
           el.textContent = stat.finalText;
         }
