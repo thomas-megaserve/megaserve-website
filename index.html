@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Project-relative assets -->
   <link rel="stylesheet" href="style.css?v=14">
@@ -197,7 +197,7 @@
     <div class="trust-item">✔ CySEC-regulated Administrative Service Provider in Cyprus</div>
     <div class="trust-item">✔ Clear internal procedures and audit-ready document packs</div>
     <div class="trust-item">✔ Banking onboarding support (document-led)</div>
-    <div class="trust-item">✔ 15+ years’ experience supporting CEE-facing clients</div>
+    <div class="trust-item">✔ 30+ years’ experience supporting cross-border clients across the Balkans (incl. Serbia), the UK, Greece, and DACH (incl. Austria).</div>
   </div>
 </section>
 
@@ -216,7 +216,7 @@
           </svg>
         </div>
         <div id="clients" class="stat-number">0</div>
-        <div class="stat-label">Happy Clients</div>
+        <div class="stat-label">Clients Supported</div>
       </div>
       <div class="stat">
         <div class="stat-icon">
@@ -227,7 +227,7 @@
           </svg>
         </div>
         <div id="assets" class="stat-number">0</div>
-        <div class="stat-label">Assets Under Administration</div>
+        <div class="stat-label">€550M+ Assets Administered</div>
       </div>
       <div class="stat">
         <div class="stat-icon">
@@ -237,7 +237,7 @@
           </svg>
         </div>
         <div id="projects" class="stat-number">0</div>
-        <div class="stat-label">Corporate Structures Delivered</div>
+        <div class="stat-label">Relocations Supported</div>
       </div>
       <div class="stat">
         <div class="stat-icon">
@@ -385,6 +385,17 @@
 <script>
   document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
 </script>
+
+<script>
+  // Updated counters
+  const clients = new countUp.CountUp('clients', 1355, { enableScrollSpy: true, duration: 2.2, separator: ',' });
+  const assets  = new countUp.CountUp('assets', 550,  { enableScrollSpy: true, duration: 2.2, separator: ',', suffix: 'M+' });
+  const projects = new countUp.CountUp('projects', 110, { enableScrollSpy: true, duration: 2.2, separator: ',' });
+  const companies = new countUp.CountUp('companies', 475, { enableScrollSpy: true, duration: 2.2, separator: ',' });
+
+  clients.start(); assets.start(); projects.start(); companies.start();
+</script>
+
 <script src="script.js?v=14"></script>
 </body>
 </html>
